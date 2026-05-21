@@ -1,0 +1,37 @@
+{
+  "step_id": "",
+
+  "region": "",
+
+  "goal": "",
+
+  "tool": {
+    "type": "",
+    "subtype": ""
+  },
+
+  "product": {
+    "category": "",
+    "color_family": "",
+    "finish": ""
+  },
+
+  "action": {
+    "type": "",
+    "direction": "",
+    "pressure": "",
+    "repeat": 1
+  },
+
+  "placement": {
+    "anchor": "",
+    "shape": "",
+    "size": 0
+  },
+
+  "effect": {
+    "contrast": 0,
+    "softness": 0,
+    "depth": 0
+  }
+}

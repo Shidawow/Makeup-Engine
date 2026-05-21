@@ -1,26 +1,50 @@
 import { create } from 'zustand';
 import { createDefaultTemplate } from '../data/defaultTemplate';
+import { isMakeupTemplate } from '../utils/templateValidation';
 import type {
+  AnyRegionParameters,
+  EyeParameters,
+  MakeupEffect,
+  MakeupPlacement,
+  MakeupProduct,
   MakeupRegion,
   MakeupStep,
   MakeupTemplate,
+  MakeupTool,
   TemplateStore,
 } from '../types/makeup';
 
+const STORAGE_KEY = 'makeup-engine:template:v0.1';
+
 const createStep = (region: MakeupRegion): MakeupStep => ({
-  id: `step-${Date.now()}-${Math.round(Math.random() * 1000)}`,
+  step_id: `step-${Date.now()}-${Math.round(Math.random() * 1000)}`,
   region,
-  visualGoal: '描述这个步骤想达到的视觉目标。',
-  tool: '化妆刷',
+  goal: '描述这个步骤想达到的视觉目标。',
+  tool: {
+    type: '化妆工具',
+    subtype: '细分工具',
+  },
+  product: {
+    category: '产品类别',
+    color_family: '色系',
+    finish: '妆效',
+  },
   action: {
     type: 'blend',
     direction: '向外',
     pressure: 'light',
     repeat: 1,
-    speed: 'steady',
   },
-  placement: '目标区域',
-  effect: '期望呈现的效果',
+  placement: {
+    anchor: '定位点',
+    shape: '形状',
+    size: 30,
+  },
+  effect: {
+    contrast: 30,
+    softness: 60,
+    depth: 30,
+  },
 });
 
 const stamp = (template: MakeupTemplate): MakeupTemplate => ({
@@ -31,10 +55,30 @@ const stamp = (template: MakeupTemplate): MakeupTemplate => ({
   },
 });
 
-export const useTemplateStore = create<TemplateStore>((set) => ({
+const saveToStorage = (template: MakeupTemplate) => {
+  window.localStorage.setItem(STORAGE_KEY, JSON.stringify(template, null, 2));
+};
+
+const readFromStorage = () => {
+  const raw = window.localStorage.getItem(STORAGE_KEY);
+
+  if (!raw) {
+    return null;
+  }
+
+  try {
+    const parsed = JSON.parse(raw) as unknown;
+    return isMakeupTemplate(parsed) ? parsed : null;
+  } catch {
+    return null;
+  }
+};
+
+export const useTemplateStore = create<TemplateStore>((set, get) => ({
   template: createDefaultTemplate(),
   selectedRegion: 'base',
   selectedStepId: 'step-base-1',
+  savedAt: null,
 
   setSelectedRegion: (region) => set({ selectedRegion: region }),
 
@@ -90,17 +134,44 @@ export const useTemplateStore = create<TemplateStore>((set) => ({
     })),
 
   updateRegionParameters: (region, updates) =>
+    set((state) => {
+      const currentParameters = state.template.regions[region].parameters as Record<
+        string,
+        unknown
+      >;
+
+      return {
+        template: stamp({
+          ...state.template,
+          regions: {
+            ...state.template.regions,
+            [region]: {
+              ...state.template.regions[region],
+              parameters: {
+                ...currentParameters,
+                ...(updates as Record<string, unknown>),
+              } as AnyRegionParameters,
+            },
+          },
+        }),
+      };
+    }),
+
+  updateEyeParameters: (section, updates) =>
     set((state) => ({
       template: stamp({
         ...state.template,
         regions: {
           ...state.template.regions,
-          [region]: {
-            ...state.template.regions[region],
+          eye: {
+            ...state.template.regions.eye,
             parameters: {
-              ...state.template.regions[region].parameters,
-              ...updates,
-            },
+              ...state.template.regions.eye.parameters,
+              [section]: {
+                ...state.template.regions.eye.parameters[section],
+                ...updates,
+              },
+            } as EyeParameters,
           },
         },
       }),
@@ -112,7 +183,7 @@ export const useTemplateStore = create<TemplateStore>((set) => ({
       const step = createStep(targetRegion);
 
       return {
-        selectedStepId: step.id,
+        selectedStepId: step.step_id,
         template: stamp({
           ...state.template,
           steps: [...state.template.steps, step],
@@ -125,7 +196,43 @@ export const useTemplateStore = create<TemplateStore>((set) => ({
       template: stamp({
         ...state.template,
         steps: state.template.steps.map((step) =>
-          step.id === stepId ? { ...step, ...updates } : step,
+          step.step_id === stepId ? { ...step, ...updates } : step,
+        ),
+      }),
+    })),
+
+  updateStepTool: (stepId, updates) =>
+    set((state) => ({
+      template: stamp({
+        ...state.template,
+        steps: state.template.steps.map((step) =>
+          step.step_id === stepId
+            ? {
+                ...step,
+                tool: {
+                  ...step.tool,
+                  ...(updates as MakeupTool),
+                },
+              }
+            : step,
+        ),
+      }),
+    })),
+
+  updateStepProduct: (stepId, updates) =>
+    set((state) => ({
+      template: stamp({
+        ...state.template,
+        steps: state.template.steps.map((step) =>
+          step.step_id === stepId
+            ? {
+                ...step,
+                product: {
+                  ...step.product,
+                  ...(updates as MakeupProduct),
+                },
+              }
+            : step,
         ),
       }),
     })),
@@ -135,7 +242,7 @@ export const useTemplateStore = create<TemplateStore>((set) => ({
       template: stamp({
         ...state.template,
         steps: state.template.steps.map((step) =>
-          step.id === stepId
+          step.step_id === stepId
             ? {
                 ...step,
                 action: {
@@ -148,10 +255,46 @@ export const useTemplateStore = create<TemplateStore>((set) => ({
       }),
     })),
 
+  updateStepPlacement: (stepId, updates) =>
+    set((state) => ({
+      template: stamp({
+        ...state.template,
+        steps: state.template.steps.map((step) =>
+          step.step_id === stepId
+            ? {
+                ...step,
+                placement: {
+                  ...step.placement,
+                  ...(updates as MakeupPlacement),
+                },
+              }
+            : step,
+        ),
+      }),
+    })),
+
+  updateStepEffect: (stepId, updates) =>
+    set((state) => ({
+      template: stamp({
+        ...state.template,
+        steps: state.template.steps.map((step) =>
+          step.step_id === stepId
+            ? {
+                ...step,
+                effect: {
+                  ...step.effect,
+                  ...(updates as MakeupEffect),
+                },
+              }
+            : step,
+        ),
+      }),
+    })),
+
   removeStep: (stepId) =>
     set((state) => {
-      const steps = state.template.steps.filter((step) => step.id !== stepId);
-      const fallbackStepId = steps[0]?.id ?? '';
+      const steps = state.template.steps.filter((step) => step.step_id !== stepId);
+      const fallbackStepId = steps[0]?.step_id ?? '';
 
       return {
         selectedStepId:
@@ -165,7 +308,7 @@ export const useTemplateStore = create<TemplateStore>((set) => ({
 
   moveStep: (stepId, direction) =>
     set((state) => {
-      const index = state.template.steps.findIndex((step) => step.id === stepId);
+      const index = state.template.steps.findIndex((step) => step.step_id === stepId);
       const targetIndex = direction === 'up' ? index - 1 : index + 1;
 
       if (index < 0 || targetIndex < 0 || targetIndex >= state.template.steps.length) {
@@ -188,8 +331,34 @@ export const useTemplateStore = create<TemplateStore>((set) => ({
     set({
       template: stamp(template),
       selectedRegion: 'base',
-      selectedStepId: template.steps[0]?.id ?? '',
+      selectedStepId: template.steps[0]?.step_id ?? '',
+      savedAt: null,
     }),
+
+  saveTemplate: () => {
+    const savedAt = new Date().toISOString();
+    const template = stamp(get().template);
+
+    saveToStorage(template);
+    set({ template, savedAt });
+    return savedAt;
+  },
+
+  loadSavedTemplate: () => {
+    const template = readFromStorage();
+
+    if (!template) {
+      return false;
+    }
+
+    set({
+      template,
+      selectedRegion: 'base',
+      selectedStepId: template.steps[0]?.step_id ?? '',
+      savedAt: template.metadata.updatedAt,
+    });
+    return true;
+  },
 
   resetTemplate: () => {
     const template = createDefaultTemplate();
@@ -197,7 +366,8 @@ export const useTemplateStore = create<TemplateStore>((set) => ({
     set({
       template,
       selectedRegion: 'base',
-      selectedStepId: template.steps[0]?.id ?? '',
+      selectedStepId: template.steps[0]?.step_id ?? '',
+      savedAt: null,
     });
   },
 }));

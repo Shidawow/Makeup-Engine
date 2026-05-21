@@ -5,8 +5,8 @@ export const toTemplateJson = (template: MakeupTemplate) =>
 
 export const downloadTemplateJson = (template: MakeupTemplate) => {
   const fileName = `${template.metadata.name
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, '-')
+    .trim()
+    .replace(/[\\/:*?"<>|]+/g, '-')
     .replace(/^-|-$/g, '') || 'makeup-template'}.json`;
   const blob = new Blob([toTemplateJson(template)], {
     type: 'application/json;charset=utf-8',

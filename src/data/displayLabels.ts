@@ -1,9 +1,4 @@
-import type {
-  ActionPressure,
-  ActionSpeed,
-  MakeupActionType,
-  MakeupRegion,
-} from '../types/makeup';
+import type { ActionPressure, MakeupActionType, MakeupRegion } from '../types/makeup';
 
 export const regionLabels: Record<MakeupRegion, string> = {
   base: '底妆',
@@ -27,10 +22,4 @@ export const pressureLabels: Record<ActionPressure, string> = {
   light: '轻',
   medium: '中',
   firm: '较重',
-};
-
-export const speedLabels: Record<ActionSpeed, string> = {
-  slow: '慢速',
-  steady: '匀速',
-  quick: '快速',
 };

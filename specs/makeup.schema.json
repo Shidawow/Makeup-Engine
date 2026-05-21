@@ -1,0 +1,469 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://makeup-engine.local/specs/makeup.schema.json",
+  "title": "Makeup Engine Template",
+  "description": "Schema for a structured Makeup Engine template export.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["metadata", "styleTags", "regions", "steps"],
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "name",
+        "version",
+        "author",
+        "description",
+        "createdAt",
+        "updatedAt"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "author": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "styleTags": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "regions": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["base", "brow", "eye", "contour", "blush", "lip"],
+      "properties": {
+        "base": {
+          "$ref": "#/$defs/baseRegion"
+        },
+        "brow": {
+          "$ref": "#/$defs/browRegion"
+        },
+        "eye": {
+          "$ref": "#/$defs/eyeRegion"
+        },
+        "contour": {
+          "$ref": "#/$defs/contourRegion"
+        },
+        "blush": {
+          "$ref": "#/$defs/blushRegion"
+        },
+        "lip": {
+          "$ref": "#/$defs/lipRegion"
+        }
+      }
+    },
+    "steps": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/step"
+      }
+    }
+  },
+  "$defs": {
+    "regionBase": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["region", "enabled", "goal", "parameters"],
+      "properties": {
+        "region": {
+          "$ref": "#/$defs/makeupRegion"
+        },
+        "enabled": {
+          "type": "boolean"
+        },
+        "goal": {
+          "type": "string",
+          "minLength": 1
+        },
+        "parameters": {
+          "type": "object"
+        }
+      }
+    },
+    "makeupRegion": {
+      "type": "string",
+      "enum": ["base", "brow", "eye", "contour", "blush", "lip"]
+    },
+    "number0To100": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "baseRegion": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/regionBase"
+        },
+        {
+          "properties": {
+            "region": {
+              "const": "base"
+            },
+            "parameters": {
+              "type": "object",
+              "additionalProperties": false
+            }
+          }
+        }
+      ]
+    },
+    "browRegion": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/regionBase"
+        },
+        {
+          "properties": {
+            "region": {
+              "const": "brow"
+            },
+            "parameters": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "shape",
+                "thickness",
+                "arch_height",
+                "tail_length",
+                "edge_softness"
+              ],
+              "properties": {
+                "shape": {
+                  "type": "string"
+                },
+                "thickness": {
+                  "$ref": "#/$defs/number0To100"
+                },
+                "arch_height": {
+                  "$ref": "#/$defs/number0To100"
+                },
+                "tail_length": {
+                  "$ref": "#/$defs/number0To100"
+                },
+                "edge_softness": {
+                  "$ref": "#/$defs/number0To100"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "eyeRegion": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/regionBase"
+        },
+        {
+          "properties": {
+            "region": {
+              "const": "eye"
+            },
+            "parameters": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["eye_shadow", "eye_liner", "lash"],
+              "properties": {
+                "eye_shadow": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "placement",
+                    "intensity",
+                    "edge_softness",
+                    "finish",
+                    "color_family"
+                  ],
+                  "properties": {
+                    "placement": {
+                      "type": "string"
+                    },
+                    "intensity": {
+                      "$ref": "#/$defs/number0To100"
+                    },
+                    "edge_softness": {
+                      "$ref": "#/$defs/number0To100"
+                    },
+                    "finish": {
+                      "type": "string"
+                    },
+                    "color_family": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "eye_liner": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": ["direction", "thickness", "length_ratio", "sharpness"],
+                  "properties": {
+                    "direction": {
+                      "type": "string"
+                    },
+                    "thickness": {
+                      "$ref": "#/$defs/number0To100"
+                    },
+                    "length_ratio": {
+                      "$ref": "#/$defs/number0To100"
+                    },
+                    "sharpness": {
+                      "$ref": "#/$defs/number0To100"
+                    }
+                  }
+                },
+                "lash": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": ["curl", "density", "length_focus"],
+                  "properties": {
+                    "curl": {
+                      "$ref": "#/$defs/number0To100"
+                    },
+                    "density": {
+                      "$ref": "#/$defs/number0To100"
+                    },
+                    "length_focus": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "contourRegion": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/regionBase"
+        },
+        {
+          "properties": {
+            "region": {
+              "const": "contour"
+            },
+            "parameters": {
+              "type": "object",
+              "additionalProperties": false
+            }
+          }
+        }
+      ]
+    },
+    "blushRegion": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/regionBase"
+        },
+        {
+          "properties": {
+            "region": {
+              "const": "blush"
+            },
+            "parameters": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["placement", "spread", "saturation", "finish"],
+              "properties": {
+                "placement": {
+                  "type": "string"
+                },
+                "spread": {
+                  "$ref": "#/$defs/number0To100"
+                },
+                "saturation": {
+                  "$ref": "#/$defs/number0To100"
+                },
+                "finish": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "lipRegion": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/regionBase"
+        },
+        {
+          "properties": {
+            "region": {
+              "const": "lip"
+            },
+            "parameters": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["shape", "overline", "texture", "color_depth"],
+              "properties": {
+                "shape": {
+                  "type": "string"
+                },
+                "overline": {
+                  "$ref": "#/$defs/number0To100"
+                },
+                "texture": {
+                  "type": "string"
+                },
+                "color_depth": {
+                  "$ref": "#/$defs/number0To100"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "step": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "step_id",
+        "region",
+        "goal",
+        "tool",
+        "product",
+        "action",
+        "placement",
+        "effect"
+      ],
+      "properties": {
+        "step_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "region": {
+          "$ref": "#/$defs/makeupRegion"
+        },
+        "goal": {
+          "type": "string",
+          "minLength": 1
+        },
+        "tool": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["type", "subtype"],
+          "properties": {
+            "type": {
+              "type": "string",
+              "minLength": 1
+            },
+            "subtype": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "product": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["category", "color_family", "finish"],
+          "properties": {
+            "category": {
+              "type": "string",
+              "minLength": 1
+            },
+            "color_family": {
+              "type": "string",
+              "minLength": 1
+            },
+            "finish": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "action": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["type", "direction", "pressure", "repeat"],
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": ["blend", "tap", "drag", "smudge", "line", "fill"]
+            },
+            "direction": {
+              "type": "string",
+              "minLength": 1
+            },
+            "pressure": {
+              "type": "string",
+              "enum": ["light", "medium", "firm"]
+            },
+            "repeat": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 99
+            }
+          }
+        },
+        "placement": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["anchor", "shape", "size"],
+          "properties": {
+            "anchor": {
+              "type": "string",
+              "minLength": 1
+            },
+            "shape": {
+              "type": "string",
+              "minLength": 1
+            },
+            "size": {
+              "$ref": "#/$defs/number0To100"
+            }
+          }
+        },
+        "effect": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["contrast", "softness", "depth"],
+          "properties": {
+            "contrast": {
+              "$ref": "#/$defs/number0To100"
+            },
+            "softness": {
+              "$ref": "#/$defs/number0To100"
+            },
+            "depth": {
+              "$ref": "#/$defs/number0To100"
+            }
+          }
+        }
+      }
+    }
+  }
+}
