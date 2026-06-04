@@ -1,0 +1,67 @@
+{
+  "commands": [
+    {
+      "name": "typecheck",
+      "command": "npm run typecheck",
+      "purpose": "Validate TypeScript project references.",
+      "lastStatus": "passed"
+    },
+    {
+      "name": "test",
+      "command": "npm run test",
+      "purpose": "Run Vitest regression coverage.",
+      "lastStatus": "passed",
+      "testFiles": 358,
+      "tests": 493
+    },
+    {
+      "name": "build",
+      "command": "npm run build",
+      "purpose": "Run TypeScript build and Vite production build.",
+      "lastStatus": "passed"
+    },
+    {
+      "name": "project-status",
+      "command": "npm run project:status",
+      "purpose": "Print human-readable project recovery status.",
+      "lastStatus": "passed"
+    },
+    {
+      "name": "project-status-json",
+      "command": "npm run project:status -- --json",
+      "fallbackCommand": "node scripts/project-status.mjs --json",
+      "purpose": "Print machine-readable project recovery status.",
+      "lastStatus": "passed"
+    },
+    {
+      "name": "project-context",
+      "command": "npm run project:context",
+      "purpose": "Print human-readable multi-provider context package.",
+      "lastStatus": "passed"
+    },
+    {
+      "name": "context-pack-json",
+      "command": "node scripts/context-pack.mjs --json",
+      "purpose": "Print machine-readable multi-provider context package.",
+      "lastStatus": "passed"
+    },
+    {
+      "name": "user-app-session-persistence-example",
+      "command": "Use the User App MVP Shell local state section to save, restore, clear template progress, reset preferences, clear all local state, and inspect recovery notices.",
+      "purpose": "Confirm Phase 7F local session persistence and recovery without accounts, backend sync, cloud sync, database storage, analytics, real photos, AR, training, production app storage, or unsafe durable payloads."
+    },
+    {
+      "name": "user-app-shell-http-smoke",
+      "command": "npm run dev -- --host 127.0.0.1 --port 5199; request http://127.0.0.1:5199",
+      "purpose": "Verify Vite local User App Shell / Template Studio page loads over HTTP.",
+      "lastStatus": "passed",
+      "statusCode": 200
+    },
+    {
+      "name": "user-app-readiness-gate-example",
+      "command": "Use the User App MVP Shell App 就绪度、移动端 QA、交互检查 sections to inspect readiness and mobile interaction reports.",
+      "purpose": "Confirm Phase 7G app readiness and mobile QA without production app scope, backend, camera, AR, training, external API calls, or unsafe durable payloads."
+    }
+  ],
+  "lastUpdatedPhase": "7G"
+}

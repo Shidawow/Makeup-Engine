@@ -1,0 +1,43 @@
+{
+  "fromPhase": "7G",
+  "toPhase": "7H",
+  "summary": "Phase 7G added deterministic User App mobile interaction QA and an App readiness gate for the local User App MVP Shell. The shell now exposes App 就绪度, 移动端 QA, and 交互检查 entries. Readiness reports cover template package, step guidance, onboarding, preferences, discovery, session persistence, privacy, mobile interaction, empty state, and blocked state. Mobile QA covers narrow viewport layout, touch targets, navigation, guidance usability, empty states, blocked states, local session controls, privacy copy, and default raw JSON hiding.",
+  "filesToReadFirst": [
+    "AGENTS.md",
+    "START_HERE.md",
+    "docs/prompts/MASTER_CODEX_CONTEXT.md",
+    "docs/prompts/PROVIDER_SWITCH_PROMPT.md",
+    "docs/status/CURRENT_PROJECT_STATUS.md",
+    "docs/status/NEXT_ACTION.md",
+    "docs/user-app/user-app-mvp-shell.md",
+    "docs/user-app/step-guidance-ux-hardening.md",
+    "docs/user-app/user-app-session-persistence.md",
+    "docs/user-app/user-app-mobile-interaction-qa.md",
+    "docs/user-app/user-app-readiness-gate.md",
+    "docs/user-app/user-app-readiness-checklist.md",
+    "docs/privacy/user-app-session-data-boundary.md",
+    "docs/phases/phase-7G.md",
+    "project-state/project-state.snapshot.json",
+    "project-state/provider-handoff.json",
+    "project-state/latest-handoff.json",
+    "project-state/skills.json",
+    "project-state/external-skills-registry.json"
+  ],
+  "nextAction": "Start Phase 7H User App Prototype Device/Browser QA Harness. Add local browser/device-like QA coverage for narrow viewport shell flows, readiness entries, local session controls, warning/blocked states, and privacy copy without adding production app scope, backend, database, cloud sync, analytics, camera, AR, training, online publication, native iOS scope, external APIs, or new runtime dependencies.",
+  "risks": [
+    "Letting Phase 7H become production app implementation, native iOS, backend, account, analytics, camera, AR, cloud sync, or training scope",
+    "Treating Phase 7G readiness gate as production release approval",
+    "Persisting object URLs, local absolute paths, image bytes, base64 image data, user photos, face embeddings, biometric identifiers, sensitive profile data, React state, recommendation result records, or training input",
+    "Mutating UserAppTemplatePackage from readiness, mobile QA, preferences, discovery, recommendations, or session recovery work",
+    "Expanding new mainline behavior into legacy runtime directories"
+  ],
+  "forbiddenActions": [
+    "Do not build the real user app in the admin Template Studio",
+    "Do not add real camera capture, selfie collection, file upload, AR, backend, database, account sync, cloud sync, analytics, training, native iOS scope, online publication, external API calls, or new runtime dependencies in Phase 7H",
+    "Do not treat readiness/mobile QA as production release approval",
+    "Do not train directly from SourceImagePackage or user photo/profile/preference/recommendation/session/readiness data",
+    "Do not persist BrowserArtifactResource object URLs, data:image strings, local absolute paths, user photo bytes, face embeddings, biometric identifiers, sensitive profile data, React state, real user preference records, real recommendation records, real session records, or readiness records",
+    "Do not let preferences, recommendations, session recovery, readiness, or mobile QA mutate UserAppTemplatePackage, enter training datasets, sync to backend/cloud, or write real user records into project-state",
+    "Do not expand legacy frozen modules"
+  ]
+}

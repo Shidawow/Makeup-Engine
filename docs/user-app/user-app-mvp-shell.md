@@ -1,0 +1,65 @@
+# User App MVP Shell
+
+Phase 7A adds a local, contract-driven User App MVP Shell.
+
+Phase 7B hardens the shell guidance UX with user-friendly step summaries, detailed instructions, checklists, warnings, blocked reasons, and mobile-friendly layout.
+
+It is not a production app, not an iOS native app, not a backend release, not an online publication, not camera capture, and not AR.
+
+## Purpose
+
+The shell verifies whether `UserAppTemplatePackage` can support user-facing makeup guidance:
+
+```text
+UserAppTemplatePackage
+-> User App Shell
+-> Template List
+-> Template Detail
+-> Step-by-step Guidance
+-> Region Instructions
+-> Tools / Products
+-> Local Progress
+-> Compatibility Warnings
+```
+
+## Scope
+
+The shell reads only app contract data:
+
+- package summary
+- template cards
+- template detail
+- ordered makeup steps
+- region instructions
+- required and optional tools
+- product suggestions
+- duration, difficulty, tags, occasions, and safety notes
+- compatibility warnings and blocking issues
+- local step progress
+- user-friendly step guidance and next actions
+
+## Boundaries
+
+- No backend.
+- No database.
+- No login or account system.
+- No online publishing.
+- No iOS native implementation.
+- No camera or selfie capture.
+- No AR overlay.
+- No OpenAI API.
+- No training pipeline changes.
+- No PyTorch, TensorFlow, ONNX Runtime, or new runtime dependency.
+- No durable object URLs, local absolute paths, large image bytes, or React state.
+
+## Relationship To Template Studio
+
+Template Studio remains the administrator workbench for production, library, package, and app-contract validation.
+
+`UserAppShell` is mounted in Template Studio only as a local preview surface. It helps administrators inspect the future user-side information architecture before a production app exists.
+
+Phase 7B keeps that same relationship. It improves the preview quality, but it does not turn Template Studio into the production user app.
+
+## Local-Only Status
+
+The shell keeps progress in local React memory only. It does not upload, sync, publish, create training data, or mutate durable contract exports.

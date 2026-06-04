@@ -1,0 +1,275 @@
+# Current Architecture
+
+Makeup Engine is a local template production system for a future makeup coaching app. It is organized as deterministic local modules with explicit boundaries between source images, browser artifact binding, vision analysis, human correction, review, training, and export.
+
+## System Layers
+
+### Source Image Import
+
+Admin-provided real photos enter through `scripts/import-source-images.mjs` and `src/training/import`. The output is a `SourceImagePackage` with manifest, checksums, import report, quarantine report, and optional normalized artifacts.
+
+### Source Image Artifact Binding
+
+`src/templates/storage/sourceImageArtifactBinding` owns the browser handoff boundary. It turns operator-selected normalized PNG or JSON RGBA artifacts into `BrowserArtifactResource` values and bound seed metadata. It does not turn manifest paths into browser files.
+
+### Source Image Production Batch
+
+`src/templates/storage/sourceImagePackageStorage` and `src/template-engine/production` now cooperate on batch seed creation, batch task status, and local review lifecycle. Source image packages can create production batches, but they still do not become training datasets.
+
+### Production Batch QA / Review Hardening
+
+`src/templates/schema/template-production-qa.schema.ts` defines the QA report, issue severity, review reason taxonomy, publish confirmation, and operator checklist. `src/template-engine/production/templateProductionQaRules.ts` evaluates task and batch readiness. `templateReviewLifecycle.ts` enforces reject reason capture and publish confirmation. `templateProductionRebinding.ts` detects session-restored tasks whose temporary browser artifact resource must be rebound. `templateProductionSmokeChecklist.ts` provides deterministic local smoke coverage.
+
+### Template Library Management
+
+`src/templates/schema/template-library.schema.ts` defines `TemplateLibrary`, `TemplateLibraryEntry`, entry lifecycle status, source lineage, evidence summary, quality summary, version history, manifest, and validation result. `src/template-engine/library/productionToLibrary.ts` converts only approved or locally published production tasks into library entries. `templateLibraryLifecycle.ts` enforces review, ready for package, packaged, local published, archive, deprecate, and reject transitions.
+
+### Template Publish Package
+
+`src/templates/schema/template-publish-package.schema.ts` defines the local publish package, package manifest, package entries, compatibility metadata, readiness, checksums, and export options. `src/templates/storage/templatePublishPackageBuilder.ts` and `templatePublishPackageExport.ts` build and export package JSON without object URLs, local absolute paths, large image bytes, or React state.
+
+### User App Template Consumption Contract
+
+`src/templates/schema/user-app-template-contract.schema.ts` defines `UserAppTemplatePackage`, `UserAppTemplate`, app-facing makeup steps, region instructions, product suggestions, tool suggestions, compatibility, readiness, and validation. `src/template-engine/app-contract` adapts validated `TemplatePublishPackage` records into app-facing contract data and validates that consumption exports contain no object URLs, local absolute paths, large image bytes, or React state. `src/templates/storage/userAppConsumptionExport.ts` creates consumption manifests, checksums, JSON exports, and handoff summaries.
+
+### User App Prototype Contract Consumer
+
+`src/template-engine/app-contract/userAppPrototypeConsumer.ts` derives read-only prototype consumer view models from `UserAppTemplatePackage`. It creates package summary, app-facing template list, selected template detail, ordered step guidance, region instruction summaries, tool/product summaries, lineage summaries, and validation panel data. `src/components/template-studio/user-app-prototype-consumer-panel` renders the admin-only prototype consumer and example package smoke preview. It is not the real user app.
+
+### User App MVP Shell
+
+`src/user-app` derives local user-side shell view models, navigation state, progress state, and shell summaries from `UserAppTemplatePackage`. `src/components/user-app` renders the local MVP shell: package summary, template list, template detail, step-by-step guidance, region instructions, tools/products, compatibility banner, and local progress. It is a Phase 7A prototype shell, not a production app, not backend publication, not iOS native, not camera capture, and not AR.
+
+### Step-by-step Guidance UX Hardening
+
+Phase 7B extends the shell with user-facing guidance view models and copy. Step guidance now exposes progress labels, step categories, friendly summaries, detailed instructions, region guidance, tool/product checklists, common mistakes, correction tips, warning messages, blocked reasons, and next actions. This remains local UX hardening over `UserAppTemplatePackage`; it is not backend publication, camera capture, AR, native iOS, training, or production app behavior.
+
+### User Photo Intake Placeholder / Personalization Boundary
+
+Phase 7C adds placeholder-only user photo and personalization boundaries. `src/user-app/userPhotoIntake.ts` defines disabled future photo intake state and readiness. `src/user-app/userPersonalization.ts` defines non-sensitive local personalization hints. `src/user-app/userPhotoPrivacy.ts` blocks object URLs, `data:image/`, base64 image-like strings, local absolute paths, image/photo bytes, face embeddings, biometric identifiers, training inputs, and persistent photo references. `src/components/user-app` renders disabled photo intake controls, personalization placeholders, and privacy notices inside the local shell. It does not add real camera capture, upload, AR, backend, database, training, or native iOS scope.
+
+### User App Local Preferences & Onboarding
+
+Phase 7D adds local-only onboarding and non-sensitive preferences. `src/user-app/userOnboarding.ts` owns optional onboarding state and progress. `src/user-app/userLocalPreferences.ts` owns local preference state, readiness, summaries, and display-only guidance hints. `src/user-app/userPreferencePrivacy.ts` blocks object URLs, `data:image/`, base64 image-like strings, local absolute paths, image/photo bytes, face embeddings, biometric identifiers, sensitive fields, and training input markers from preference data. `src/components/user-app` renders onboarding, preference setup, preference summary, and guidance hint preview inside the local shell. It does not add login, backend, database, cloud sync, real camera capture, upload, AR, training, or native iOS scope.
+
+### User App Template Discovery / Recommendation Placeholder
+
+Phase 7E adds local-only discovery and recommendation placeholders. `src/user-app/userTemplateDiscovery.ts` owns deterministic filters, sorting, and discovery summaries over `UserAppTemplatePackage`. `src/user-app/userTemplateRecommendation.ts` owns rule-based recommendation scoring, ranking, summaries, and boundary validation using only template metadata and non-sensitive local preferences. `src/user-app/userRecommendationReasons.ts` converts recommendation reasons into user-facing copy. `src/components/user-app` renders discovery filters, recommended templates, all templates, reason panels, and blocked-template explanations inside the local shell. It does not add real AI recommendation, backend services, account systems, database storage, cloud sync, analytics, advertising, ecommerce, training, external APIs, or new runtime dependencies.
+
+### User App Session Persistence / Local State Hardening
+
+Phase 7F adds local-only session boundaries for the User App MVP Shell. `src/user-app/userAppSession.ts` owns versioned session snapshots and summaries. `src/user-app/userAppSessionStorage.ts` owns testable memory/localStorage adapters, sanitization, save/load/clear, and import/export helpers. `src/user-app/userAppSessionRecovery.ts` reconciles selected template, active step, stale progress ids, discovery filters, blocked-package restore state, and version mismatch. `src/user-app/userAppSessionPrivacy.ts` blocks photos, object URLs, local paths, base64 images, image bytes, biometrics, sensitive fields, React state, non-serializable values, recommendation user records, and training markers. `src/components/user-app` renders session controls and recovery notices. It does not add account systems, login, backend session sync, cloud sync, database persistence, analytics, production app storage, camera, AR, training, external APIs, or new runtime dependencies.
+
+### User App Mobile QA / Readiness Gate
+
+Phase 7G adds local app prototype readiness gating for the User App MVP Shell. `src/user-app/userAppMobileQa.ts` owns deterministic mobile viewport and interaction checklist reports. `src/user-app/userAppReadiness.ts` owns `UserAppReadinessReport` across template package, step guidance, onboarding, preferences, discovery, local session, privacy, mobile interaction, empty state, and blocked state. `src/components/user-app` renders App readiness, mobile QA, interaction checklist, and readiness gate panels inside the local shell. It does not add production app scope, native iOS, backend, database, accounts, cloud sync, analytics, camera, AR, training, external APIs, or new runtime dependencies.
+
+### Vision Analysis
+
+`src/vision` owns local face, cosmetic, pixel, region, quality, provider, and pipeline logic. It consumes `TemplateAnalysisSeed` records when they are ready for Vision Analysis.
+
+### Segmentation / Mask Editing
+
+`src/vision/segmentation` owns segmentation boundaries, masks, editing, refinement, debug artifacts, and providers. Human-editable masks are not replaced by source image package metadata.
+
+### Template Engine
+
+`src/template-engine` owns template parsing, extraction, production, convergence, inference, region taxonomy, and validation contracts.
+
+### Template Evidence
+
+`src/templates/schema` and `src/templates/storage` represent evidence, correction, review, audit, dataset, and storage contracts. Evidence helps justify templates and supports later review.
+
+### Dataset Review
+
+Dataset review queues and decisions live in `src/templates/storage` and `src/templates/schema`. Review is required before training-ready materialization.
+
+### Training Dataset
+
+Materialized training datasets are produced only after masks, human corrections, review decisions, and split/package metadata exist. A source image package is an upstream input, not training data.
+
+### Lightweight Training
+
+`src/training` contains deterministic local trainers, loaders, evaluators, predictors, tensor readers, config schemas, and runtime adapters.
+
+### Export Package
+
+`src/training/export` and export scripts prepare local model packages, runtime compatibility reports, provider specs, manifests, checksums, and smoke reports.
+
+### Template Studio UI
+
+`src/components/template-studio` is an operator UI for inspection, binding, correction, batch production, review, and export workflows. It must not directly write training datasets from UI state.
+
+## Current Module Relationships
+
+```text
+src/training/import
+-> SourceImagePackage
+
+src/templates/storage/sourceImagePackageStorage
+-> SourceImageEntry / TemplateAnalysisSeed
+
+src/templates/storage/sourceImageArtifactBinding
+-> BrowserArtifactResource
+
+src/components/template-studio/source-image-intake-panel
+-> artifact binding
+-> seed creation
+
+src/templates/storage/sourceImagePackageStorage
+-> batch seed creation
+-> TemplateProductionBatch tasks
+
+src/template-engine/production
+-> TemplateProductionBatch / TemplateProductionTask
+-> queue / state machine / QA rules / rebinding recovery / review lifecycle
+
+src/components/template-studio/template-production-batch-panel
+-> batch creation
+-> QA summary / issue filtering
+-> reject reason capture
+-> publish confirmation
+-> rebinding recovery prompts
+-> task handoff
+
+src/template-engine/library
+-> ProductionTask -> TemplateLibraryEntry conversion
+-> TemplateLibrary lifecycle
+-> Template versioning
+
+src/templates/storage/templateLibraryStorage
+-> local TemplateLibrary storage / import / export
+
+src/templates/storage/templatePublishPackageBuilder
+-> TemplatePublishPackage manifest / checksums / readiness
+
+src/components/template-studio/template-library-panel
+-> Template Library management
+-> Publish Package build / export
+
+src/components/template-studio/template-package-preview
+-> package summary / evidence / lineage preview
+
+src/template-engine/app-contract
+-> TemplatePublishPackage -> UserAppTemplatePackage conversion
+-> makeup step normalization
+-> app compatibility validation
+
+src/templates/storage/userAppConsumptionExport
+-> consumption manifest / checksums / handoff export
+
+src/components/template-studio/user-app-template-preview
+-> app-facing step / region / compatibility preview
+
+src/template-engine/app-contract/userAppPrototypeConsumer
+-> read-only prototype consumer view models
+
+src/components/template-studio/user-app-prototype-consumer-panel
+-> prototype template list / detail / validation preview
+
+src/user-app
+-> User App Shell view model / navigation / progress / guidance UX / photo intake placeholder / personalization boundary / local onboarding / local preferences / local template discovery / recommendation placeholders / local session persistence and recovery / mobile QA / readiness gate
+
+src/components/user-app
+-> local User App MVP Shell preview / step guidance UX hardening / disabled photo intake and privacy placeholder UI / onboarding and preference setup UI / discovery and recommendation placeholder UI / session controls and recovery notice / App readiness panel / mobile QA panel / interaction checklist
+
+src/components/demo/vision-analysis-demo
+-> seed analysis
+```
+
+## Phase 6J Additions
+
+- Source Image Artifact Binding remains the only browser bridge from manifest references to analysis-ready resources.
+- `BrowserArtifactResource` remains runtime-only; object URLs disappear after restore and must be rebound.
+- `TemplateAnalysisSeed` readiness now feeds production task QA diagnostics.
+- Template Studio artifact handoff is paired with batch QA summary and operator handoff export.
+- Production task local `published` can be converted into Template Library `local_published`, but neither state implies backend publication.
+- Template Library entries preserve production task lineage, template version history, evidence summary, quality summary, style tags, and publish confirmation summary.
+- Template Publish Package is a local export package for future template consumers; it is not online publication and cannot contain object URLs, local absolute paths, or large image bytes.
+
+## Phase 6K Additions
+
+- User App Template Consumption Contract defines how a future iOS/Web/service consumer can read template package data.
+- `UserAppTemplatePackage` and consumption manifests are local/export contract data, not the user app and not online publication.
+- App-facing makeup steps preserve step order, region, instruction text, technique, target effect, intensity, duration, tool/product references, correction tips, and evidence references.
+- Region instructions preserve normalized region references, intensity range, blend direction, edge softness, symmetry hints, and user guidance text.
+- The adapter preserves source lineage from publish package, library entry, production task, and source image id.
+- Compatibility validation blocks object URLs, local absolute paths, large image bytes, and React state from app contract exports.
+
+## Phase 6L Additions
+
+- User App Prototype Contract Consumer proves `UserAppTemplatePackage` can drive a read-only app-facing preview without building the real user app.
+- Prototype view models expose template list, selected template detail, step-by-step guidance, region instructions, tools, products, duration, difficulty, style tags, lineage, and validation.
+- Prototype readiness reports `ready`, `warning`, or `blocked` using the app contract validation boundary.
+- Template Studio includes `UserAppPrototypeConsumerPanel` after `UserAppTemplatePreview`.
+- The prototype panel can render the example app package as a smoke preview when no active package exists.
+- The prototype remains local-only admin validation and cannot contain object URLs, local absolute paths, large image bytes, or React state.
+
+## Phase 6L-1 Additions
+
+- Prototype consumer QA now covers multi-template packages, empty packages, empty templates, warning states, blocked states, and selected-template fallback.
+- `userAppPrototypeConsumer` exposes detailed validation issues, readiness checks, empty-state diagnostics, and JSON round-trip readiness reports.
+- App compatibility validation now blocks packages with no templates, templates with no region instructions, steps without matching region instructions, invalid step order, unknown compatibility targets, and runtime-only references.
+- Missing tools and product suggestions are visible warnings so operator QA can decide whether to fix the package before App MVP work.
+- Template Studio prototype panel now renders no-package, no-template, no-step, no-region, no-tool, no-product, warning, and blocked states without becoming a real user app.
+
+## Phase 7A Additions
+
+- `src/user-app` adds deterministic shell view model, navigation, progress, and local state helpers.
+- `src/components/user-app` adds a local User App MVP Shell with package summary, template list, template detail, step guidance, region instruction view, tool/product panel, compatibility banner, and progress panel.
+- Template Studio includes the shell as a local preview after the prototype consumer panel.
+- The shell consumes `UserAppTemplatePackage` only; it does not consume `SourceImagePackage` directly.
+- Blocked packages cannot enter step guide and must resolve compatibility issues first.
+- Shell progress is local UI state only and is not durable app storage, training input, backend sync, or online publication.
+
+## Phase 7B Additions
+
+- Step guidance view models now expose user-friendly summaries, detailed instructions, region guidance, tool/product checklists, mistakes, correction tips, warning messages, blocked reasons, and next actions.
+- Internal compatibility issues are translated into user-facing copy for missing instructions, missing regions, runtime-only references, and invalid step order.
+- User App Shell components have mobile-friendly stacked layouts and clearer empty, warning, and blocked states.
+- `userAppGuidanceUxExamplePackage` covers complete, warning, blocked, long-flow, and short-flow guidance cases.
+- 7B remains local UX hardening only; it does not add backend, database, camera, AR, native iOS, online publication, training, or new runtime dependencies.
+
+## Phase 7C Additions
+
+- User photo intake is represented as placeholder-only state and disabled future UI controls.
+- Personalization is represented as non-sensitive local display hints only.
+- The shell now explains that template guidance works without a user photo.
+- Privacy validators block object URLs, `data:image/`, base64 image-like strings, local absolute paths, image/photo bytes, face embeddings, biometric identifiers, training inputs, and persistent photo references.
+- User photo placeholders, personalization hints, and privacy notices cannot enter durable exports, training datasets, model artifacts, or project-state.
+- `SourceImagePackage` remains an admin production input and cannot directly become user photo intake.
+
+## Phase 7D Additions
+
+- Local onboarding is optional and covers welcome, skill level, guidance style, available time, tools, preferred styles, privacy reminder, skip, complete, and reset states.
+- Local preferences cover only non-sensitive values: skill level, verbosity, available time, available tools, preferred style tags, occasion, and comfort level.
+- Preference hints can change display copy for pacing, verbosity, tool availability, style, comfort level, and time constraints, but cannot mutate `UserAppTemplatePackage`.
+- Preference privacy validation blocks object URLs, `data:image/`, base64 image-like strings, local absolute paths, image/photo bytes, face embeddings, biometric identifiers, sensitive fields, and training input markers.
+- Phase 7D does not add login, account systems, backend sync, cloud sync, database storage, real photo capture, camera APIs, AR, training, native iOS scope, OpenAI API, external CV API, or new runtime dependencies.
+
+## Phase 7E Additions
+
+- Template discovery filters and sorts `UserAppTemplatePackage` templates by difficulty, duration, style tags, occasions, tools, step count, warning/blocked status, and compatibility target.
+- Recommendation placeholder ranking is deterministic, local-only, rule-based, and explainable.
+- Recommendation inputs are limited to `UserAppTemplatePackage` metadata and non-sensitive local preferences.
+- Blocked templates are excluded from recommendation lists but can be shown with blocked reasons.
+- Warning templates can appear in recommendations with visible warning messages.
+- User-facing recommendation reasons explain why a template is prioritized without exposing internal score details.
+- Phase 7E does not add real AI recommendation, backend recommendation APIs, accounts, cloud sync, database storage, analytics, advertising, ecommerce, training, native iOS scope, OpenAI API, external CV API, or new runtime dependencies.
+
+## Phase 7F Additions
+
+- Local User App session snapshots are versioned, deterministic, local-only, and schema-aware.
+- Session storage can use browser `localStorage` or a memory adapter, but all payloads are sanitized and validated before storage.
+- Recovery reconciles selected template, active step, stale completed/skipped step ids, discovery filters, blocked packages, and version mismatch without mutating `UserAppTemplatePackage`.
+- Session privacy guards block object URLs, local absolute paths, base64 image data, image/photo bytes, face embeddings, biometric identifiers, sensitive fields, React state, non-serializable values, recommendation user records, and training input markers.
+- The shell exposes local session save, restore, clear progress, reset preferences, clear all local state, and recovery notices.
+- Phase 7F does not add account systems, login, backend sync, cloud sync, database storage, analytics, real camera capture, user photo upload, AR, training, native iOS scope, online publication, external APIs, or new runtime dependencies.
+
+## Phase 7G Additions
+
+- Mobile QA is represented as deterministic local viewport/checklist data, not real browser automation or native iOS QA.
+- App readiness reports combine template package, step guidance, onboarding, preferences, discovery, session, privacy, mobile interaction, empty state, and blocked state checks.
+- The shell exposes `App 就绪度`, `移动端 QA`, and `交互检查` entries.
+- Readiness and mobile QA panels are product/admin QA surfaces; they are not production release approval.
+- Phase 7G does not add backend, database, accounts, cloud sync, analytics, camera, AR, training, external APIs, native iOS scope, online publication, or new runtime dependencies.

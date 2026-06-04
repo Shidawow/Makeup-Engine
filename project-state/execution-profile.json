@@ -1,0 +1,60 @@
+{
+  "schemaVersion": "execution-profile.v1",
+  "recommendedProfile": "native-gpt-codex-daily",
+  "allowedProfiles": [
+    "chatgpt-planning",
+    "native-gpt-codex-daily",
+    "packyapi-cli-heavy",
+    "emergency-fix",
+    "docs-only"
+  ],
+  "profileSelectionRules": [
+    {
+      "profile": "native-gpt-codex-daily",
+      "useWhen": [
+        "small feature",
+        "UI wiring",
+        "test fix"
+      ]
+    },
+    {
+      "profile": "packyapi-cli-heavy",
+      "useWhen": [
+        "large refactor",
+        "batch generation",
+        "long-running task"
+      ]
+    },
+    {
+      "profile": "chatgpt-planning",
+      "useWhen": [
+        "phase planning",
+        "acceptance criteria",
+        "prompt design"
+      ]
+    },
+    {
+      "profile": "emergency-fix",
+      "useWhen": [
+        "broken build",
+        "blocking test failure",
+        "corrupt state file"
+      ]
+    },
+    {
+      "profile": "docs-only",
+      "useWhen": [
+        "documentation phase",
+        "handoff update",
+        "project-state maintenance"
+      ]
+    }
+  ],
+  "completionUpdateFiles": [
+    "project-state/provider-handoff.json",
+    "project-state/active-task.json",
+    "project-state/latest-handoff.json",
+    "project-state/command-log.json",
+    "project-state/test-status.json"
+  ]
+}

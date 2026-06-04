@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "active-task.v1",
+  "taskId": "7H",
+  "title": "User App Prototype Device/Browser QA Harness",
+  "status": "recommended",
+  "ownerRole": "Codex",
+  "createdBy": "Codex",
+  "phase": "7H",
+  "recommendedProfile": "native-gpt-codex-daily",
+  "allowedDirectories": [
+    "src/user-app",
+    "src/components/user-app",
+    "src/templates/examples",
+    "docs",
+    "project-state",
+    "tests"
+  ],
+  "forbiddenDirectories": [
+    "src/engine",
+    "src/runtime",
+    "src/intelligence/runtime"
+  ],
+  "validationCommands": [
+    "npm run typecheck",
+    "npm run test",
+    "npm run build",
+    "npm run project:status",
+    "npm run project:context",
+    "node scripts/project-status.mjs --json",
+    "node scripts/context-pack.mjs --json"
+  ],
+  "completionDefinition": [
+    "Phase 7H should add browser/device-like QA harness coverage for the local User App Shell readiness and mobile interaction flows.",
+    "7H must not add production app scope, backend, database, cloud sync, analytics, real camera capture, AR, training, online publication, native iOS scope, external APIs, or new runtime dependencies.",
+    "Browser/device QA must preserve local-only, non-sensitive, deterministic boundaries.",
+    "Docs and project-state must remain recoverable.",
+    "Tests passed."
+  ],
+  "dependsOn": [
+    "7G User App Mobile Interaction QA / App Readiness Gate"
+  ]
+}

@@ -1,0 +1,208 @@
+{
+  "schemaVersion": "external-skills-registry.v1",
+  "lastUpdatedPhase": "OPS-2",
+  "policy": {
+    "defaultStatus": "candidate",
+    "defaultAllowedInvocation": "explicit-only",
+    "defaultInstructionOnly": true,
+    "defaultScriptsAllowed": false,
+    "approvalRequiredForImplicitInvocation": true,
+    "sourceOfTruth": [
+      "AGENTS.md",
+      "docs/skills/EXTERNAL_SKILL_VETTING.md",
+      "docs/skills/EXTERNAL_SKILL_REGISTRY.md",
+      "project-state/guardrails.json"
+    ]
+  },
+  "skills": [
+    {
+      "skillId": "react-ui-accessibility-qa",
+      "name": "React UI / Accessibility QA skill",
+      "source": "recommended-candidate",
+      "sourceType": "proposal",
+      "status": "candidate",
+      "allowedInvocation": "explicit-only",
+      "instructionOnly": true,
+      "scriptsAllowed": false,
+      "appliesTo": [
+        "Template Studio panels",
+        "User App Prototype Consumer",
+        "component render tests",
+        "accessibility review",
+        "empty and error states"
+      ],
+      "doNotUseFor": [
+        "backend work",
+        "database work",
+        "training runtime",
+        "legacy runtime edits",
+        "external API calls"
+      ],
+      "requiredReview": [
+        "Confirm instruction-only usage.",
+        "Confirm no scripts, dependencies, backend calls, or external APIs are required."
+      ],
+      "approvedBy": null,
+      "approvedAt": null,
+      "relatedGuardrails": [
+        "external_skills_must_be_registered",
+        "external_skills_default_explicit_only",
+        "external_skills_scripts_disabled_by_default",
+        "external_skills_must_not_override_project_guardrails",
+        "legacy-frozen"
+      ],
+      "notes": "Candidate only. Useful for future UI hardening phases when explicitly requested."
+    },
+    {
+      "skillId": "typescript-contract-schema-review",
+      "name": "TypeScript Contract / Schema Review skill",
+      "source": "recommended-candidate",
+      "sourceType": "proposal",
+      "status": "candidate",
+      "allowedInvocation": "explicit-only",
+      "instructionOnly": true,
+      "scriptsAllowed": false,
+      "appliesTo": [
+        "schema review",
+        "contract review",
+        "state machine review",
+        "TemplatePublishPackage",
+        "UserAppTemplatePackage",
+        "ProductionTask",
+        "LibraryEntry",
+        "durable export"
+      ],
+      "doNotUseFor": [
+        "runtime model training",
+        "backend schema migration",
+        "database schema migration",
+        "legacy runtime edits"
+      ],
+      "requiredReview": [
+        "Confirm schema-first boundaries.",
+        "Confirm durable exports exclude object URLs, local paths, large image bytes, and React state."
+      ],
+      "approvedBy": null,
+      "approvedAt": null,
+      "relatedGuardrails": [
+        "require_contract_schema_guard_for_contract_changes",
+        "consumption-export-boundary",
+        "publish-package-boundary",
+        "source-image-not-training-data",
+        "external_skills_must_not_override_project_guardrails"
+      ],
+      "notes": "Candidate only. Pair with CONTRACT_SCHEMA_GUARD_SKILL.md if explicitly invoked."
+    },
+    {
+      "skillId": "vitest-deterministic-testing",
+      "name": "Vitest Deterministic Testing skill",
+      "source": "recommended-candidate",
+      "sourceType": "proposal",
+      "status": "candidate",
+      "allowedInvocation": "explicit-only",
+      "instructionOnly": true,
+      "scriptsAllowed": false,
+      "appliesTo": [
+        "state machine tests",
+        "component render tests",
+        "fixtures",
+        "deterministic assertions",
+        "snapshot review"
+      ],
+      "doNotUseFor": [
+        "remote resource tests",
+        "API-key tests",
+        "disabled tests",
+        "nondeterministic test runners",
+        "legacy runtime edits"
+      ],
+      "requiredReview": [
+        "Confirm tests are deterministic.",
+        "Confirm no scripts run unless local and manually reviewed."
+      ],
+      "approvedBy": null,
+      "approvedAt": null,
+      "relatedGuardrails": [
+        "external_skills_must_be_registered",
+        "external_skills_default_explicit_only",
+        "external_skills_scripts_disabled_by_default",
+        "quality-gate-required"
+      ],
+      "notes": "Candidate only. Scripts remain disabled unless separately reviewed."
+    },
+    {
+      "skillId": "security-supply-chain-review",
+      "name": "Security / Supply Chain Review skill",
+      "source": "recommended-candidate",
+      "sourceType": "proposal",
+      "status": "candidate",
+      "allowedInvocation": "explicit-only",
+      "instructionOnly": true,
+      "scriptsAllowed": false,
+      "appliesTo": [
+        "dependency review",
+        "external API review",
+        "file path review",
+        "secret handling",
+        "artifact export",
+        "package export"
+      ],
+      "doNotUseFor": [
+        "automatic dependency installation",
+        "remote API calls",
+        "backend deployment",
+        "database provisioning",
+        "legacy runtime edits"
+      ],
+      "requiredReview": [
+        "Confirm no production dependencies are installed without approval.",
+        "Confirm no external APIs are called unless the phase allows them."
+      ],
+      "approvedBy": null,
+      "approvedAt": null,
+      "relatedGuardrails": [
+        "external_skills_no_production_dependencies_without_approval",
+        "external_skills_scripts_disabled_by_default",
+        "consumption-export-boundary",
+        "publish-package-boundary"
+      ],
+      "notes": "Candidate only. Useful for dependency, path, secret, and export safety reviews."
+    },
+    {
+      "skillId": "git-pr-review",
+      "name": "Git / PR Review skill",
+      "source": "recommended-candidate",
+      "sourceType": "proposal",
+      "status": "candidate",
+      "allowedInvocation": "explicit-only",
+      "instructionOnly": true,
+      "scriptsAllowed": false,
+      "appliesTo": [
+        "large PackyAPI tasks",
+        "phase completion",
+        "diff summary",
+        "PR handoff",
+        "risk check"
+      ],
+      "doNotUseFor": [
+        "destructive git operations",
+        "history rewrite",
+        "unrequested rollback",
+        "legacy runtime expansion"
+      ],
+      "requiredReview": [
+        "Confirm no destructive git command is requested.",
+        "Confirm existing user changes are preserved."
+      ],
+      "approvedBy": null,
+      "approvedAt": null,
+      "relatedGuardrails": [
+        "external_skills_must_be_registered",
+        "external_skills_default_explicit_only",
+        "prefer_compact_report",
+        "prefer_repo_docs_as_context"
+      ],
+      "notes": "Candidate only. Useful for final review and handoff summaries when explicitly requested."
+    }
+  ]
+}

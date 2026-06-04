@@ -1,0 +1,39 @@
+# Known Limitations
+
+- JPEG pixel decode is unsupported. JPEG remains a metadata-only boundary.
+- `SourceImagePackage` is not a training dataset and cannot skip correction, review queue, or dataset materialization.
+- Browser UI cannot directly write CLI source image packages.
+- Browser UI cannot auto-read CLI package relative paths from `source-image-manifest.json`.
+- Artifact object URLs are temporary and require rebinding after page refresh.
+- Production batch, library, package, app contract, and shell exports strip runtime-only references.
+- Production `published` and Template Library `local_published` are local state only; there is no backend or online publish.
+- `UserAppTemplatePackage` is a local consumption contract, not a real user app, backend publication, or online release.
+- The app contract has compatibility targets, but no real iOS/Web production app has been implemented yet.
+- The Phase 6L prototype consumer is read-only admin validation, not the real user app.
+- Phase 7A builds only a local contract-driven MVP shell; it is not a production app.
+- Phase 7B hardens guidance UX only; it is still not a production app.
+- Phase 7C defines user photo intake and personalization placeholders only; it does not collect, upload, analyze, preview, store, or train on real user photos.
+- Phase 7C disabled upload/camera controls are not real file inputs and do not request camera permission.
+- User photo placeholders must reject object URLs, `data:image/`, base64 image-like strings, local absolute paths, image/photo bytes, face embeddings, biometric identifiers, training input markers, and persistent photo references.
+- Personalization is non-sensitive and local-only; it can affect display hints only and cannot mutate templates, export user profiles, or create training data.
+- Phase 7D onboarding and preferences are local-only MVP shell features; they are not account onboarding, backend sync, cloud sync, database persistence, analytics, or production profile storage.
+- Local preferences can only affect guidance hints and cannot mutate `UserAppTemplatePackage`, write templates, enter training datasets, or write user preference records into `project-state`.
+- Preference boundary validation must reject object URLs, `data:image/`, base64 image-like strings, local absolute paths, image/photo bytes, face embeddings, biometric identifiers, health information, sensitive identity fields, and training input markers.
+- Phase 7E discovery and recommendations are local-only placeholders; they are not real AI recommendation, backend personalization, analytics, advertising, ecommerce, or user profiling.
+- Recommendation ranking is deterministic and rule-based, using only `UserAppTemplatePackage` plus non-sensitive local preferences.
+- Recommendation results cannot mutate `UserAppTemplatePackage`, call external APIs, enter training datasets, sync to backend/cloud, or write real user records into `project-state`.
+- Phase 7F local session persistence is local-only MVP shell behavior; it is not account storage, backend sync, cloud sync, database persistence, analytics, or production app storage.
+- Session payloads can store only selected template, active step, progress ids, onboarding summary, non-sensitive preferences, discovery filters, sort mode, last visited section, and dismissed local warning ids.
+- Session payloads must reject object URLs, `data:image/`, base64 image-like strings, local absolute paths, image/photo bytes, face embeddings, biometric identifiers, health information, sensitive identity fields, React state, recommendation result records, and training input markers.
+- Session recovery reconciles against the current `UserAppTemplatePackage` but cannot modify the package.
+- Phase 7G readiness gate is local product/QA gating only; it is not production release approval, native iOS QA, backend readiness, app store readiness, camera readiness, AR readiness, or training readiness.
+- Phase 7G mobile QA is deterministic checklist/DOM-level readiness; it does not replace future real browser/device pointer, screenshot, or accessibility QA.
+- App readiness reports and mobile QA reports cannot store real user photos, object URLs, local paths, base64 images, biometric fields, sensitive profile fields, React state, recommendation records, or training input.
+- `SourceImagePackage` still cannot directly become user photo intake, User App Shell state, `TemplateLibraryEntry`, `UserAppTemplatePackage`, or training data.
+- Full real photo distribution coverage is not established.
+- A real deep segmentation model has not been trained yet.
+- The ONNX writer is not real yet; export readiness is preparation-oriented.
+- Makeup Engine is not the user-facing production app.
+- External skill governance exists, but no external skill is installed or broadly approved by OPS-2.
+- Candidate external skills remain explicit-only and cannot run scripts or install dependencies by default.
+- `src/engine`, `src/runtime`, and `src/intelligence/runtime` are frozen compatibility areas, not the center for new mainline features.

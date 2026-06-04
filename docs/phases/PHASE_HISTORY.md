@@ -1,0 +1,455 @@
+# Phase History
+
+This history is a recovery summary based on current project reports, current source layout, tests, and documentation. Earlier phase details are summarized when exact original phase reports are not available.
+
+## Phase 4A
+
+Focused on the first stable template and engine foundation: schema-driven makeup templates, validation, editor surfaces, and deterministic local behaviors.
+
+## Phase 5
+
+Expanded local intelligence and Template Studio behavior: template parsing, production flow, demo workflows, and stronger boundaries between UI, intelligence, and engine/runtime compatibility layers.
+
+## Phase 6A
+
+Established dataset and correction foundations: human correction records, template evidence, review concepts, and materialized training data boundaries.
+
+## Phase 6B
+
+Extended training preflight, dataset validation, artifact path resolution, auditability, and CLI-driven training readiness checks.
+
+## Phase 6C
+
+Added baseline training and evaluation flows, including baseline segmentation artifacts, trainer adapters, model schema checks, and evaluation reports.
+
+## Phase 6D
+
+Expanded image-conditioned and lightweight segmentation work, including local model artifacts, predictors, evaluators, and package validation.
+
+## Phase 6E
+
+Strengthened export preparation, runtime smoke checks, provider compatibility, failed-sample quarantine, and export package boundaries.
+
+## Phase 6F
+
+Hardened real image and PNG artifact handling: PNG mask/image readiness, raw RGBA artifacts, pixel resolvers, codec reports, and materialized dataset codec support.
+
+## Phase 6H-0
+
+Made binary file reading and PNG alpha mask artifacts first-class enough for deterministic local training and export checks.
+
+## Phase 6H-1
+
+Hardened PNG image decode and real PNG image integration while keeping JPEG pixel decode intentionally unsupported.
+
+## Phase 6H-2
+
+Added source image import, `SourceImagePackage`, source image manifest schema, quality gate, quarantine, storage boundary, and the guardrail that blocks source image packages from directly becoming training data.
+
+## Phase 6H-4
+
+Resolved the breakpoint where CLI source image package artifact references could not be read directly by the browser.
+
+What changed:
+
+- Operators can explicitly bind normalized PNG or JSON RGBA artifacts to source image entries.
+- The binding layer produces browser-safe `BrowserArtifactResource` values.
+- `TemplateAnalysisSeed` can become ready for Vision Analysis from a bound artifact.
+- Template Studio source image intake now hands bound artifacts into Vision Analysis and preview flows.
+
+What still cannot happen:
+
+- Manifest references cannot be read as browser files automatically.
+- `SourceImagePackage` cannot directly become a training dataset.
+- raw RGBA remains summary-only.
+- JPEG pixel decode remains unsupported.
+- Browser object URLs remain temporary runtime resources.
+
+Why Phase 6I follows:
+
+Single-image source-to-analysis handoff is now in place. The next bottleneck is batch template production, so Phase 6I builds a local administrator queue for batches of source images, analysis seeds, and review states.
+
+## Phase 6I
+
+Added the local admin template production batch workflow.
+
+What changed:
+
+- `TemplateProductionBatch` and `TemplateProductionTask` schema now exist.
+- Batch seed creation can produce deterministic task queues from ready, blocked, and failed source image entries.
+- Production tasks track artifact binding, analysis, mask review, evidence, review, and local publish state.
+- Template Studio now has a production batch panel for batch creation, filtering, task selection, import/export, and seed handoff to Vision Analysis.
+- Batch storage and batch handoff/export helpers strip long-lived runtime-only references.
+
+What still cannot happen:
+
+- `SourceImagePackage` cannot directly become a training dataset.
+- `training-ready` is not a production task state.
+- local `published` is not backend publication.
+- object URLs remain temporary runtime resources.
+
+Why Phase 6I-1 follows:
+
+The batch workflow exists, so the next bottleneck is QA and review hardening around batch-level operator decisions.
+
+## Phase 6I-1
+
+Hardened the production batch workflow into an operator QA and review workbench.
+
+What changed:
+
+- Added `TemplateProductionQaReport`, QA issue severity, fixed review reason taxonomy, publish confirmation schema, and operator checklist.
+- Added deterministic QA rules for missing artifacts, blocked source images, failed analysis, missing evidence, rejected tasks, publish confirmation, and rebinding recovery.
+- Rejection now requires a taxonomy reason and can include a note, timestamp, and operator identity.
+- Local publish now requires explicit confirmation that the state is local-only, not online release, does not upload a server artifact, and does not create a training dataset.
+- Session-restored tasks whose `BrowserArtifactResource` object URL is gone can be detected, marked for rebinding, and restored after explicit operator rebinding.
+- Template Studio Production Batch Panel now shows QA summary, issue filters, per-task diagnostics, reject reason controls, publish confirmation controls, and rebinding recovery hints.
+- Batch export / handoff now includes QA summary, blocking issues, warnings, next operator actions, reject reasons, publish confirmations, rebinding-needed tasks, local publish disclaimer, and next recommended phase.
+
+What still cannot happen:
+
+- `SourceImagePackage` cannot directly become a training dataset.
+- local `published` is not backend or online publication.
+- object URLs are still runtime-only and cannot be persisted as durable artifacts.
+- rejected tasks cannot publish.
+- approved tasks cannot publish without confirmation.
+
+Why Phase 6J follows:
+
+The batch QA and local review lifecycle are now stable enough to design template library management and publish-package preparation. If future UI smoke or operator QA finds gaps, use a targeted Phase 6I-2 before entering 6J.
+
+## Phase 6J
+
+Added local Template Library management and Publish Package export.
+
+What changed:
+
+- `TemplateLibrary`, `TemplateLibraryEntry`, `TemplateLibraryManifest`, and validation schemas now exist.
+- `TemplatePublishPackage`, package manifest, compatibility, readiness, checksums, and export schema now exist.
+- Approved or locally published production tasks can convert into library entries through the library converter, preserving source production task, source image, seed, analysis, evidence, review, version, and publish confirmation lineage.
+- Library lifecycle supports imported, needs review, ready for package, packaged, local published, archived, deprecated, and rejected states.
+- Template versioning starts at `0.1.0`; patch/minor/major bumps are deterministic and recorded in version history.
+- Local storage, JSON export, package builder/export, and library handoff helpers strip object URLs, local absolute paths, large image bytes, and React state.
+- Template Studio now includes a Template Library Panel and Template Package Preview after the Production Batch Panel.
+
+What still cannot happen:
+
+- `SourceImagePackage` cannot directly become a `TemplateLibraryEntry`.
+- `SourceImagePackage` cannot directly become a training dataset.
+- Template Library `local_published` is not backend or online publication.
+- Publish Package export is local handoff metadata, not a server upload.
+- Package export cannot contain object URLs, large image bytes, or local absolute paths.
+
+Why Phase 6K follows:
+
+The local template library and publish-package layer is now in place. The next step is defining the stable user-app template consumption contract. If operator QA finds library/package compatibility gaps, add Phase 6J-1 before entering 6K.
+
+## Phase 6K
+
+Defined the User App Template Consumption Contract.
+
+What changed:
+
+- `UserAppTemplatePackage`, `UserAppTemplate`, app-facing makeup step, region instruction, tool suggestion, product suggestion, compatibility, readiness, and validation schemas now exist.
+- `TemplatePublishPackage` can be adapted into `UserAppTemplatePackage` through deterministic contract adapters.
+- Makeup steps are normalized into app-facing order, duration, difficulty, tool/product references, correction tips, and evidence references.
+- Region instructions expose normalized region references, blend direction, edge softness, intensity range, symmetry hints, and user guidance text.
+- Consumption manifests, checksums, package JSON export, and handoff export helpers now exist.
+- Template Studio now includes `UserAppTemplatePreview` after package preview.
+- Example contract fixtures cover brows, eyeshadow, blush, and lips without object URLs, local paths, or image bytes.
+
+What still cannot happen:
+
+- Phase 6K does not build the user app.
+- `UserAppTemplatePackage` is not backend publication or online release.
+- `TemplatePublishPackage` remains local/export metadata.
+- Consumption exports cannot contain object URLs, local absolute paths, large image bytes, or React state.
+- `SourceImagePackage` cannot directly become a user app template, library entry, publish package, or training dataset.
+
+Why Phase 6L follows:
+
+The app consumption contract is now stable enough to build a narrow read-only prototype consumer. If compatibility gaps appear, use Phase 6K-1 before 6L.
+
+## Phase 6L
+
+Added the read-only User App Prototype Contract Consumer.
+
+What changed:
+
+- `src/template-engine/app-contract/userAppPrototypeConsumer.ts` now derives deterministic prototype consumer view models from `UserAppTemplatePackage`.
+- The prototype view model includes package summary, app-facing template list, selected template detail, ordered makeup steps, region instructions, tool/product suggestions, lineage, and contract validation panel data.
+- Runtime-only references such as object URLs, local absolute paths, large image bytes, and React state remain blocking validation issues.
+- Template Studio now includes `UserAppPrototypeConsumerPanel` after `UserAppTemplatePreview`.
+- The panel renders an example `UserAppTemplatePackage` smoke preview when no active package exists.
+
+What still cannot happen:
+
+- Phase 6L does not build the real user app.
+- The prototype consumer is read-only admin validation, not online publication.
+- `UserAppTemplatePackage` remains local/export contract data.
+- `SourceImagePackage` cannot directly become a prototype consumer model, user app template, library entry, publish package, or training dataset.
+- Durable exports still cannot contain object URLs, local absolute paths, large image bytes, or React state.
+
+Why Phase 6L-1 follows:
+
+The prototype consumer now exists. The next bottleneck is QA hardening for compatibility edge cases, selected-template behavior, import/export round trips, and broader smoke coverage before designing interaction-level user app behavior.
+
+## Phase 6L-1
+
+Hardened the User App Prototype Contract Consumer before App MVP shell work.
+
+What changed:
+
+- Added multi-template and empty-package app contract QA fixtures.
+- Hardened selected-template fallback with visible diagnostics.
+- Added empty-state diagnostics for no package, no templates, no steps, no region instructions, no tools, and no product suggestions.
+- Added detailed validation issue output with severity, source, and next operator action.
+- Expanded compatibility validation for missing app templates, missing region instructions, step regions without matching region instructions, invalid step order, missing compatibility target, object URLs, local absolute paths, image bytes, large inline bytes, and React state.
+- Added JSON round-trip readiness validation for `UserAppTemplatePackage`.
+- Updated the Template Studio prototype consumer panel to render warning, blocked, and empty states while remaining read-only.
+
+What still cannot happen:
+
+- Phase 6L-1 does not build the real user app.
+- The prototype consumer is not online publication, backend state, durable app storage, or training input.
+- `SourceImagePackage` cannot directly become a prototype consumer model, app contract, library entry, publish package, or training dataset.
+- Durable exports still cannot contain object URLs, local absolute paths, large image bytes, or React state.
+
+Why Phase 7A follows:
+
+The prototype consumer is now stable enough to start a narrow `Phase 7A - User App MVP Shell`, as long as 7A remains contract-driven, local-only, and does not add backend, online publication, training, AR, or native iOS scope.
+
+## Phase 7A
+
+Added a local contract-driven User App MVP Shell.
+
+What changed:
+
+- `src/user-app` now provides deterministic shell view models, navigation state, progress state, and local shell helpers.
+- `src/components/user-app` renders package summary, template list, template detail, step-by-step guidance, region instructions, tool/product suggestions, compatibility warnings, and local progress.
+- `userAppMvpShellExamplePackage` provides a two-template shell fixture with warning coverage and no runtime-only references.
+- Template Studio now includes a User App MVP Shell preview after the User App Prototype Consumer panel.
+- Blocked packages cannot enter step guide and must resolve compatibility issues first.
+- Tests cover view model, navigation, progress, list/detail/step/region/tool/compatibility components, Template Studio wiring, runtime-only reference blocking, and documentation recovery.
+
+What still cannot happen:
+
+- Phase 7A is not a production user app.
+- It is not an iOS native app, backend, database, login system, camera flow, AR flow, or online publication.
+- It does not train models and does not add PyTorch, TensorFlow, ONNX Runtime, OpenAI API usage, or new runtime dependencies.
+- Shell progress is local UI state only and cannot become training data or durable export state.
+- `SourceImagePackage` cannot directly become a User App Shell model, app contract, library entry, publish package, or training dataset.
+- Durable exports still cannot contain object URLs, local absolute paths, large image bytes, `data:image/`, or React state.
+
+Why Phase 7B follows:
+
+The shell can consume `UserAppTemplatePackage`. The next bottleneck is making step-by-step guidance easier to read, pace, and trust before any production app work.
+
+## Phase 7B
+
+Hardened the User App MVP Shell step-by-step guidance UX.
+
+What changed:
+
+- Step guidance view models now expose progress labels, step categories, user-friendly instruction text, short summaries, detailed instructions, tool checklists, product checklists, region guidance, common mistakes, correction tips, warning messages, blocked reasons, and next actions.
+- Internal contract validation messages now have user-friendly warning and blocked copy for missing instructions, missing regions, runtime-only references, invalid step order, missing tools, and missing products.
+- User App Shell components now present clearer mobile-friendly layouts for guidance, progress, region instructions, tool/product suggestions, compatibility, and empty states.
+- `userAppGuidanceUxExamplePackage` covers complete, warning, blocked, long-flow, and short-flow templates.
+- Tests cover guidance view models, friendly messages, SSR/render surfaces, empty/blocked states, progress behavior, mobile layout smoke, and documentation recovery.
+
+What still cannot happen:
+
+- Phase 7B is not a production user app.
+- It is not an iOS native app, backend, database, login system, camera flow, AR flow, online publication, or training phase.
+- It does not add PyTorch, TensorFlow, ONNX Runtime, OpenAI API usage, or new runtime dependencies.
+- Friendly warning text does not repair invalid packages; it only explains user-facing readiness.
+- `SourceImagePackage` cannot directly become User App Shell state, app contract, library entry, publish package, or training dataset.
+
+Why Phase 7C follows:
+
+The shell can now explain and guide steps clearly enough to define the next boundary: a placeholder for future user photo intake and personalization without adding real camera, AR, backend, database, or training behavior.
+
+## Phase 7C
+
+Defined user photo intake and personalization placeholders before any real photo capability.
+
+What changed:
+
+- Added pure TypeScript user photo intake placeholder contracts with disabled future capabilities for manual upload, camera capture, face analysis, skin tone reference, face shape reference, and progress photos.
+- Added non-sensitive personalization placeholder contracts for skill level, preferred style, available time, available tools, comfort level, occasion, and guidance verbosity.
+- Added user photo privacy validators that block object URLs, `data:image/`, base64 image-like strings, local absolute paths, image/photo bytes, face embeddings, biometric identifiers, training input markers, and persistent photo references.
+- Added User App Shell sections for template guidance, preparation, disabled photo/personalization, and privacy notice.
+- Added disabled upload/camera controls only; no file input, camera permission request, image preview, upload, face analysis, backend, database, training, native iOS, or AR behavior was added.
+- Added examples and tests for default placeholders, blocked unsafe photo references, disabled UI, privacy copy, and guidance without a user photo.
+
+What still cannot happen:
+
+- Phase 7C is not real photo intake.
+- User photos cannot be collected, uploaded, analyzed, stored, exported, written to project-state, or used for training.
+- Personalization cannot store sensitive profile data, infer sensitive attributes, mutate templates, export user profiles, or create training data.
+- `SourceImagePackage` cannot directly become user photo intake, User App Shell state, app contract data, library entry, publish package, or training dataset.
+
+Why Phase 7D follows:
+
+The shell now has a privacy-safe placeholder boundary for future personalization. The next step can add local preferences and onboarding without collecting sensitive data or enabling camera/photo capture.
+
+## Phase 7D
+
+Added local-only onboarding and non-sensitive preferences to the User App MVP Shell.
+
+What changed:
+
+- `src/user-app/userOnboarding.ts` adds deterministic onboarding state, completion, skip, reset, summary, and validation.
+- `src/user-app/userLocalPreferences.ts` adds non-sensitive local preference state, readiness, summaries, and preference-to-guidance hint mapping.
+- `src/user-app/userPreferencePrivacy.ts` blocks object URLs, `data:image/`, base64 image-like strings, local absolute paths, image/photo bytes, face embeddings, biometric identifiers, sensitive fields, and training input markers.
+- `UserOnboardingFlow`, `UserPreferenceSetupPanel`, and `UserPreferenceSummary` are wired into the local User App Shell.
+- Preferences can affect guidance hints for pacing, verbosity, tools, style, comfort level, and time constraints.
+- Preference hints do not mutate `UserAppTemplatePackage`, write templates, enter training datasets, or write user preference records into `project-state`.
+
+What still cannot happen:
+
+- Phase 7D is not production app onboarding, account creation, backend sync, cloud sync, database persistence, analytics, production profile storage, camera capture, AR, or training.
+- Preferences cannot contain photos, object URLs, local paths, image bytes, base64 images, face embeddings, biometric identifiers, health information, sensitive identity fields, or training input markers.
+- `SourceImagePackage` cannot directly become User App Shell state, user preferences, app contract data, library entry, publish package, or training data.
+
+Why Phase 7E follows:
+
+The shell now has local onboarding and preference hints. The next step can define a safe template discovery and recommendation placeholder without adding a backend recommendation service, real photo analysis, accounts, cloud sync, database storage, or training.
+
+## Phase 7E
+
+Added local-only template discovery and recommendation placeholders to the User App MVP Shell.
+
+What changed:
+
+- `src/user-app/userTemplateDiscovery.ts` adds deterministic discovery filters, sorting, summaries, and state validation over `UserAppTemplatePackage`.
+- `src/user-app/userTemplateRecommendation.ts` adds rule-based scoring, ranking, summaries, readiness, and boundary validation.
+- `src/user-app/userRecommendationReasons.ts` turns recommendation reasons and warnings into user-facing copy.
+- `UserTemplateDiscoveryPanel`, `UserRecommendedTemplateList`, `UserRecommendationReasonPanel`, and `UserTemplateFiltersPanel` are wired into the local shell under `发现妆容`.
+- `userAppTemplateDiscoveryExamplePackage` covers beginner-friendly, short-duration, minimal-tools, advanced, tool-heavy, warning, and blocked template cases.
+- Blocked templates are excluded from recommendation lists, while warning templates can appear with visible warnings.
+
+What still cannot happen:
+
+- Phase 7E is not real AI recommendation, backend personalization, analytics, advertising, ecommerce, or a user profile system.
+- It does not add backend recommendation APIs, OpenAI API usage, external AI/CV APIs, accounts, cloud sync, database storage, real photo analysis, camera capture, AR, training, native iOS scope, online publication, or new runtime dependencies.
+- Recommendations cannot mutate `UserAppTemplatePackage`, write templates, enter training datasets, sync to backend/cloud, or write real user recommendation records into `project-state`.
+
+Why Phase 7F follows:
+
+The shell now has guidance, preferences, and discovery placeholders. The next bottleneck is local session state hardening so allowed non-sensitive shell state can be reset, summarized, and, if later approved, persisted without crossing privacy or training boundaries.
+
+## Phase 7F
+
+Added local-only session persistence and recovery hardening to the User App MVP Shell.
+
+What changed:
+
+- `src/user-app/userAppSession.ts` adds versioned local session snapshots for selected template, active step, current template progress ids, onboarding summary, non-sensitive preferences, discovery filters, sort mode, last visited section, and dismissed local warnings.
+- `src/user-app/userAppSessionStorage.ts` adds testable memory/localStorage adapters, save/load/clear, snapshot import/export, sanitization, and payload validation.
+- `src/user-app/userAppSessionRecovery.ts` adds selected-template fallback, active-step fallback, stale completed/skipped step removal, discovery filter reset, blocked-package step-guide prevention, and version mismatch reset.
+- `src/user-app/userAppSessionPrivacy.ts` blocks object URLs, `data:image/`, base64 image-like strings, local absolute paths, image/photo bytes, face embeddings, biometric identifiers, health/sensitive fields, React state, non-serializable values, recommendation user records, and training input markers.
+- `UserAppSessionPanel` and `UserAppSessionRecoveryNotice` are wired into the local shell under a local state section.
+- `user-app-session.example.ts` covers safe, stale, blocked, unsafe, and version mismatch session fixtures.
+
+What still cannot happen:
+
+- Phase 7F is not account storage, login, backend session sync, cloud sync, database persistence, analytics, production app storage, camera, AR, training, online publication, native iOS scope, or external API work.
+- Session state cannot store photos, object URLs, local paths, image bytes, base64 images, biometrics, sensitive profile fields, React state, recommendation result records, or training input.
+- Session recovery cannot mutate `UserAppTemplatePackage`.
+- `project-state` can document 7F but cannot store real user session records.
+
+Why Phase 7G follows:
+
+The shell now has guidance, preferences, discovery, and local session continuity. The next bottleneck is mobile interaction QA and app readiness gating across tabs, controls, warnings, blocked states, and recovery notices.
+
+## Phase 7G
+
+Added mobile interaction QA and a local App readiness gate for the User App MVP Shell.
+
+What changed:
+
+- `src/user-app/userAppMobileQa.ts` adds deterministic mobile viewport/checklist QA for layout, touch targets, navigation, guidance usability, empty states, blocked states, session controls, privacy copy, and raw JSON default hiding.
+- `src/user-app/userAppReadiness.ts` adds `UserAppReadinessReport` across template package, step guidance, onboarding, preferences, discovery, session persistence, privacy, mobile interaction, empty state, and blocked state.
+- `UserAppReadinessPanel`, `UserAppMobileQaPanel`, `UserAppInteractionChecklist`, and `UserAppReadinessGate` are wired into the local shell.
+- `UserAppShell` now exposes `App 就绪度`, `移动端 QA`, and `交互检查` entries, with readable Chinese shell copy.
+- `user-app-readiness.example.ts` covers normal, warning, and blocked readiness states.
+
+What still cannot happen:
+
+- Phase 7G is not a production app, native iOS app, backend, database, account system, cloud sync, analytics, camera, AR, training, online publication, or external API phase.
+- Readiness reports cannot mutate `UserAppTemplatePackage`.
+- Readiness and mobile QA data cannot store photos, object URLs, local paths, base64 images, biometrics, sensitive profile data, React state, recommendation records, or training input.
+- Deterministic mobile QA does not replace future real browser/device smoke tests.
+
+Why Phase 7H follows:
+
+The local readiness gate exists. The next bottleneck is browser/device-like QA harness coverage for narrow viewport rendering, tab navigation, controls, warning/blocked states, local session recovery, and readiness panels.
+
+## Phase OPS-0
+
+Added token budget and compact handoff rules for ChatGPT, Codex, PackyAPI, and CLI collaboration.
+
+What changed:
+
+- Added `docs/standards/TOKEN_BUDGET_AND_COMPACT_HANDOFF.md`.
+- Added `docs/prompts/COMPACT_CODEX_TASK_TEMPLATE.md`.
+- Updated master context and provider switching prompts to prefer compact handoff.
+- Added machine-readable guardrails for avoiding full directory trees, repeated phase history, repeated DOC-0 / DOC-1 text, and full prompts unless explicitly requested.
+- Added tests for compact handoff standards and provider switching documentation.
+
+What must remain true:
+
+- Token optimization only compresses repeated chat context.
+- It cannot reduce task goals, acceptance commands, tests, docs/status, docs/phases, project-state updates, or guardrails.
+- Detailed phase work remains in repository docs; chat reports stay compact.
+
+## Phase OPS-1
+
+Added reusable project skills for recovery, phase execution, contract/schema guardrails, production QA, and compact handoff.
+
+What changed:
+
+- Added `docs/skills/PROJECT_RECOVERY_SKILL.md`.
+- Added `docs/skills/PHASE_EXECUTION_SKILL.md`.
+- Added `docs/skills/CONTRACT_SCHEMA_GUARD_SKILL.md`.
+- Added `docs/skills/TEMPLATE_PRODUCTION_QA_SKILL.md`.
+- Added `docs/skills/COMPACT_HANDOFF_SKILL.md`.
+- Added `project-state/skills.json` as a machine-readable project skill index.
+- Updated master context and provider switch prompts to reference relevant project skills instead of repeating full operating rules in chat.
+
+What must remain true:
+
+- Project skills support execution; they do not override project guardrails.
+- Repository documents and `project-state/*.json` remain the source of truth.
+- Business next phase remained Phase 6L-1.
+
+## Phase OPS-2
+
+Added external skill vetting and root `AGENTS.md` integration.
+
+What changed:
+
+- Replaced the root `AGENTS.md` with a concise Makeup Engine agent entry point.
+- Added `docs/skills/EXTERNAL_SKILL_VETTING.md`.
+- Added `docs/skills/EXTERNAL_SKILL_REGISTRY.md`.
+- Added `docs/skills/RECOMMENDED_EXTERNAL_SKILLS.md`.
+- Added `project-state/external-skills-registry.json` with five candidate external skill categories.
+- Updated master context, provider switch prompts, token budget standards, and guardrails with external skill usage rules.
+- Added tests for AGENTS.md, external skill docs, external skill registry JSON, and guardrail/prompt wiring.
+
+What must remain true:
+
+- No external skill is installed by OPS-2.
+- Candidate external skills are explicit-only.
+- External skill scripts are disabled by default.
+- External skills cannot install production dependencies, call unapproved APIs, modify frozen legacy runtime, or override project guardrails.
+- Business next phase remains Phase 6L-1.
+
+## Phase DOC-0
+
+Adds the recoverable project documentation and machine-readable state foundation before Phase 6H-3.
+
+## Phase DOC-1
+
+Adds multi-provider handoff, execution profiles, master Codex context, provider switch prompts, and deterministic context pack tooling so new sessions and new providers can resume without losing project state or execution boundaries.
