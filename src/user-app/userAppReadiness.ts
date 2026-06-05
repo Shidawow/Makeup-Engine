@@ -106,8 +106,11 @@ const READINESS_CREATED_AT = '2026-01-01T00:00:00.000Z';
 
 const issue = (input: Omit<UserAppReadinessIssue, 'issueId'>): UserAppReadinessIssue => ({
   ...input,
-  issueId: `${input.checkId}-${input.severity}`,
+  issueId: `${input.checkId}-${input.severity}-${Math.abs(hashText(input.message))}`,
 });
+
+const hashText = (value: string): number =>
+  value.split('').reduce((hash, char) => (hash * 31 + char.charCodeAt(0)) | 0, 17);
 
 const check = (
   input: Omit<UserAppReadinessCheck, 'deterministic'>,
@@ -121,14 +124,8 @@ const uniqueStrings = (items: readonly string[]): string[] => Array.from(new Set
 const statusFromIssues = (
   issues: readonly UserAppReadinessIssue[],
 ): UserAppReadinessCheck['status'] => {
-  if (issues.some((item) => item.severity === 'blocking')) {
-    return 'blocked';
-  }
-
-  if (issues.length > 0) {
-    return 'warning';
-  }
-
+  if (issues.some((item) => item.severity === 'blocking')) return 'blocked';
+  if (issues.length > 0) return 'warning';
   return 'passed';
 };
 
@@ -139,7 +136,7 @@ const issuesFromMessages = (input: {
   messages: readonly string[];
   recommendation: string;
 }): UserAppReadinessIssue[] =>
-  uniqueStrings(input.messages).map((message) =>
+  uniqueStrings(input.messages.filter(Boolean)).map((message) =>
     issue({
       checkId: input.checkId,
       area: input.area,
@@ -158,7 +155,7 @@ export const validateUserAppReadinessBoundary = (
       area: 'privacy',
       severity: 'blocking',
       message,
-      recommendation: '移除 object URL、本地绝对路径、大图 bytes 或 React runtime 字段后再进入 App 门禁。',
+      recommendation: '移除 object URL、本地绝对路径、大图 bytes、base64 图片或 React runtime 字段后再进入 App 就绪检查。',
     }),
   ),
   ...createSessionBoundaryWarnings(value).map((privacyIssue) =>
@@ -230,14 +227,14 @@ const createTemplatePackageCheck = (input: {
       `onlinePublished: ${String(input.packageData.onlinePublished)}`,
     ],
     issues,
-    recommendation: '模板包必须只包含本地消费 contract 数据，不能包含临时资源或生产 App 状态。',
+    recommendation: '模板包只能包含本地消费 contract 数据，不能包含临时资源或生产 App 状态。',
   });
 };
 
 const createStepGuidanceCheck = (
   viewModel: UserAppShellViewModel,
 ): UserAppReadinessCheck => {
-  const messages = [
+  const blockingMessages = [
     ...viewModel.compatibility.blockingIssues,
     ...(viewModel.selectedTemplate?.blockingIssues ?? []),
   ];
@@ -250,7 +247,7 @@ const createStepGuidanceCheck = (
       checkId: 'step-guidance',
       area: 'step_guidance',
       severity: 'blocking',
-      messages,
+      messages: blockingMessages,
       recommendation: '步骤指导必须有可用模板、有效步骤、区域说明和工具/产品引用。',
     }),
     ...issuesFromMessages({
@@ -284,12 +281,11 @@ const createStepGuidanceCheck = (
 const createOnboardingCheck = (
   onboarding: UserOnboardingState,
 ): UserAppReadinessCheck => {
-  const validationIssues = validateOnboardingState(onboarding);
   const issues = issuesFromMessages({
     checkId: 'onboarding',
     area: 'onboarding',
     severity: 'blocking',
-    messages: validationIssues.map((item) => item.message),
+    messages: validateOnboardingState(onboarding).map((item) => item.message),
     recommendation: '修复本地 onboarding 状态边界，确保不含照片、敏感资料或训练输入。',
   });
   const optionalWarning =
@@ -299,7 +295,7 @@ const createOnboardingCheck = (
             checkId: 'onboarding',
             area: 'onboarding',
             severity: 'warning',
-            message: 'Onboarding 仍未开始；可以使用默认偏好，但 App 原型 QA 需要看到说明。',
+            message: 'Onboarding 尚未开始；可以使用默认偏好，但 App 原型 QA 需要看到说明。',
             recommendation: '在空状态中说明 onboarding 可跳过，默认偏好仍可工作。',
           }),
         ]
@@ -325,12 +321,11 @@ const createOnboardingCheck = (
 const createPreferencesCheck = (
   preferences: UserLocalPreferences,
 ): UserAppReadinessCheck => {
-  const validationIssues = validateUserLocalPreferences(preferences);
   const issues = issuesFromMessages({
     checkId: 'preferences',
     area: 'preferences',
     severity: 'blocking',
-    messages: validationIssues.map((item) => item.message),
+    messages: validateUserLocalPreferences(preferences).map((item) => item.message),
     recommendation: '偏好只能作为本地非敏感显示提示，不能写入模板、训练数据或 project-state。',
   });
 
@@ -375,7 +370,7 @@ const createDiscoveryCheck = (input: {
             area: 'discovery',
             severity: 'warning',
             message: '当前筛选没有可见模板，需要展示清晰空状态。',
-            recommendation: '保留“重置筛选/查看不可用原因”的空状态引导。',
+            recommendation: '保留“重置筛选 / 查看不可用原因”的空状态引导。',
           }),
         ]
       : [];
@@ -401,12 +396,11 @@ const createSessionCheck = (input: {
   session: UserAppSessionState;
   packageData?: UserAppTemplatePackage | null;
 }): UserAppReadinessCheck => {
-  const validationIssues = validateUserAppSession(input.session, input.packageData);
   const issues = issuesFromMessages({
     checkId: 'session-persistence',
     area: 'session_persistence',
     severity: 'blocking',
-    messages: validationIssues.map((item) => item.message),
+    messages: validateUserAppSession(input.session, input.packageData).map((item) => item.message),
     recommendation: '修复本地 session payload，只保存允许的轻量状态。',
   });
 

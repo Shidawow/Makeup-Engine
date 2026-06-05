@@ -14,9 +14,9 @@ describe('phase handoff requirements', () => {
     const raw = await readFile('project-state/latest-handoff.json', 'utf8');
     const handoff = JSON.parse(raw) as LatestHandoff;
 
-    expect(handoff.fromPhase).toBe('7G');
-    expect(handoff.toPhase).toBe('7H');
-    expect(handoff.nextAction).toContain('Phase 7H');
+    expect(handoff.fromPhase).toBe('7H');
+    expect(handoff.toPhase).toBe('8A');
+    expect(handoff.nextAction).toContain('Phase 8A');
     expect(handoff.filesToReadFirst).toContain('START_HERE.md');
     expect(handoff.forbiddenActions.join('\n')).toContain('Do not train directly from SourceImagePackage');
   });

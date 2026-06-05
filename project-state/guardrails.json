@@ -1,5 +1,5 @@
 {
-  "phase": "7G",
+  "phase": "7H",
   "guardrails": [
     {
       "id": "source-image-not-training-data",
@@ -10,48 +10,24 @@
       "rule": "SourceImagePackage cannot bypass correction or review queue."
     },
     {
-      "id": "no-ui-direct-training",
-      "rule": "UI state cannot directly train a model."
-    },
-    {
-      "id": "quality-gate-required",
-      "rule": "Source image quality gates cannot be skipped."
-    },
-    {
-      "id": "legacy-frozen",
-      "rule": "src/engine, src/runtime, and src/intelligence/runtime are legacy frozen areas for new mainline work and cannot expand."
-    },
-    {
       "id": "browser-artifact-boundary",
-      "rule": "Manifest artifact paths and manifest relative paths are references; only operator-selected files can become BrowserArtifactResource values."
+      "rule": "Manifest paths and manifest relative paths are references; only operator-selected files can become BrowserArtifactResource values."
     },
     {
       "id": "production-batch-boundary",
       "rule": "TemplateProductionBatch is local admin workflow state and cannot persist object URLs, local absolute paths, large image bytes, or React state."
     },
     {
-      "id": "library-boundary",
-      "rule": "TemplateLibraryEntry must be derived from an approved or locally published production task and cannot come directly from SourceImagePackage."
+      "id": "publish-confirmation-required",
+      "rule": "Production task publish requires explicit local confirmation and is not online publication."
     },
     {
       "id": "publish-package-boundary",
       "rule": "TemplatePublishPackage is local export metadata, not backend publication, and cannot contain object URLs, local absolute paths, large image bytes, or React state."
     },
     {
-      "id": "reject-reason-required",
-      "rule": "Production task rejection requires a fixed taxonomy reason."
-    },
-    {
-      "id": "publish-confirmation-required",
-      "rule": "Production task publish requires explicit local confirmation and is not online publication."
-    },
-    {
-      "id": "library-local-published",
-      "rule": "Template Library local_published is local-only and does not create online publication."
-    },
-    {
-      "id": "rebinding-after-restore",
-      "rule": "Session-restored tasks without browser-readable artifact resources must be rebound before analysis."
+      "id": "legacy-frozen",
+      "rule": "src/engine, src/runtime, and src/intelligence/runtime are legacy frozen areas for new mainline work and cannot expand."
     },
     {
       "id": "user-app-contract-boundary",
@@ -60,74 +36,6 @@
     {
       "id": "user-app-prototype-consumer-boundary",
       "rule": "UserAppPrototypeConsumer is read-only admin validation, not the real user app, backend publication, online release, or training input."
-    },
-    {
-      "id": "no-source-image-direct-prototype",
-      "rule": "SourceImagePackage cannot directly feed UserAppPrototypeConsumer; it must pass through artifact binding, analysis, evidence, review, library, package, and app contract validation."
-    },
-    {
-      "id": "consumption-export-boundary",
-      "rule": "User app consumption exports cannot contain object URLs, local absolute paths, large image bytes, or React state."
-    },
-    {
-      "id": "no_full_node_modules_tree",
-      "rule": "Do not paste full node_modules, dist, .test-dist, or .vite trees into prompts or handoffs."
-    },
-    {
-      "id": "no_repeated_full_phase_history",
-      "rule": "Do not repeat full phase history or DOC-0 / DOC-1 text in every task; reference repository documents instead."
-    },
-    {
-      "id": "prefer_compact_report",
-      "rule": "Codex completion reports should default to compact format with detailed implementation notes in phase docs."
-    },
-    {
-      "id": "prefer_repo_docs_as_context",
-      "rule": "Use START_HERE.md, MASTER_CODEX_CONTEXT.md, NEXT_ACTION.md, and project-state/*.json as stable context instead of chat history."
-    },
-    {
-      "id": "full_prompt_only_on_request",
-      "rule": "Provide full long prompts only when the owner explicitly asks for a full prompt or 完整 prompt."
-    },
-    {
-      "id": "require_project_recovery_skill",
-      "rule": "Use docs/skills/PROJECT_RECOVERY_SKILL.md and project-state/skills.json when starting a new session, provider switch, or recovery pass."
-    },
-    {
-      "id": "require_phase_execution_skill",
-      "rule": "Use docs/skills/PHASE_EXECUTION_SKILL.md for every phase execution, validation, documentation sync, and failure report."
-    },
-    {
-      "id": "require_contract_schema_guard_for_contract_changes",
-      "rule": "Use docs/skills/CONTRACT_SCHEMA_GUARD_SKILL.md before schema, contract, state machine, storage, export, or handoff JSON changes."
-    },
-    {
-      "id": "require_compact_handoff_by_default",
-      "rule": "Use docs/skills/COMPACT_HANDOFF_SKILL.md and compact handoff by default unless medium or full prompt is explicitly justified."
-    },
-    {
-      "id": "external_skills_must_be_registered",
-      "rule": "External skills must be listed in project-state/external-skills-registry.json before they are used."
-    },
-    {
-      "id": "external_skills_default_explicit_only",
-      "rule": "External skills default to explicit-only invocation; candidate skills cannot be invoked implicitly."
-    },
-    {
-      "id": "external_skills_scripts_disabled_by_default",
-      "rule": "External skill scripts are disabled by default and require manual review before any use."
-    },
-    {
-      "id": "external_skills_no_production_dependencies_without_approval",
-      "rule": "External skills must not install production dependencies without explicit approval."
-    },
-    {
-      "id": "external_skills_must_not_override_project_guardrails",
-      "rule": "External skills must not override AGENTS.md, project skills, MASTER_CODEX_CONTEXT.md, or project-state guardrails."
-    },
-    {
-      "id": "root_agents_md_required",
-      "rule": "Repository root AGENTS.md is required as the short agent entry point for source-of-truth, validation, compact handoff, and external skill rules."
     },
     {
       "id": "prototype-consumer-round-trip-required",
@@ -142,16 +50,12 @@
       "rule": "User App Shell must consume UserAppTemplatePackage only and cannot read SourceImagePackage directly."
     },
     {
-      "id": "user-app-shell-local-progress-only",
-      "rule": "User App Shell progress is local UI state only and cannot become durable export data, backend sync, or training input."
-    },
-    {
-      "id": "blocked-package-no-step-guide",
-      "rule": "Blocked UserAppTemplatePackage inputs cannot enter User App Shell step guide."
-    },
-    {
       "id": "phase-7b-no-production-app-scope",
       "rule": "Phase 7B may harden guidance UX only and must not add backend, database, login, camera, AR, training, native iOS, online publication, or unapproved runtime dependencies."
+    },
+    {
+      "id": "friendly-guidance-does-not-repair-contracts",
+      "rule": "User-friendly warning and blocked messages explain readiness only; they do not repair invalid UserAppTemplatePackage data or bypass app contract validation."
     },
     {
       "id": "phase-7c-placeholder-only",
@@ -170,32 +74,12 @@
       "rule": "User photo bytes, imageBytes, photoBytes, data:image strings, and base64 image-like strings cannot be stored in shell state, durable export, project-state, or training inputs."
     },
     {
-      "id": "no_user_photo_object_url_durable_export",
-      "rule": "User photo object URLs are runtime-only and cannot enter durable export, handoff JSON, project-state, or training inputs."
-    },
-    {
-      "id": "no_user_photo_local_path_storage",
-      "rule": "User photo local absolute paths cannot be stored in shell state, durable export, handoff JSON, project-state, or training inputs."
-    },
-    {
-      "id": "no_face_embedding",
-      "rule": "Face embeddings cannot be created, stored, exported, or used by Phase 7C placeholder features."
-    },
-    {
-      "id": "no_biometric_identifier",
-      "rule": "Biometric identifiers cannot be created, stored, exported, or used by Phase 7C placeholder features."
-    },
-    {
       "id": "no_user_photo_training_input",
       "rule": "User photo data and user photo placeholder state cannot become training input or training dataset material."
     },
     {
-      "id": "user_photo_features_placeholder_only",
-      "rule": "User photo features in Phase 7C are disabled placeholders only and require a future phase gate before real capture or analysis."
-    },
-    {
       "id": "personalization_placeholder_only",
-      "rule": "Personalization in Phase 7C is non-sensitive placeholder display hints only and cannot mutate templates, export user profiles, or create training data."
+      "rule": "Personalization is non-sensitive placeholder display hints only and cannot mutate templates, export user profiles, or create training data."
     },
     {
       "id": "preferences_local_only",
@@ -206,40 +90,16 @@
       "rule": "Phase 7D onboarding is local-only shell state and cannot become account onboarding, backend sync, cloud sync, analytics, database persistence, or training input."
     },
     {
-      "id": "onboarding_optional",
-      "rule": "User onboarding remains optional; skipping onboarding must keep default local preferences available without blocking template guidance."
-    },
-    {
       "id": "no_sensitive_user_profile",
       "rule": "Local preferences cannot contain health information, sensitive identity fields, precise personal identity fields, photos, face embeddings, biometric identifiers, or other sensitive profile data."
-    },
-    {
-      "id": "no_user_photo_in_preferences",
-      "rule": "Preferences cannot contain real user photos, object URLs, data:image strings, base64 image-like strings, local absolute paths, imageBytes, photoBytes, or large image bytes."
     },
     {
       "id": "no_training_input_from_preferences",
       "rule": "Local preferences and onboarding state cannot become training input, training dataset material, model artifacts, or evaluation data."
     },
     {
-      "id": "no_backend_sync",
-      "rule": "Phase 7D must not add backend sync, backend recommendation services, account APIs, or remote persistence."
-    },
-    {
-      "id": "no_cloud_sync",
-      "rule": "Phase 7D must not add cloud sync or remote user profile storage."
-    },
-    {
       "id": "preferences_do_not_modify_template_package",
       "rule": "Preferences can affect guidance hints only and cannot mutate UserAppTemplatePackage, UserAppTemplate, makeup steps, region instructions, tools, products, compatibility, or lineage."
-    },
-    {
-      "id": "preferences_do_not_enter_project_state",
-      "rule": "project-state may document preference feature boundaries, but must not contain real user preference records or user profile values."
-    },
-    {
-      "id": "preferences_do_not_enter_training_dataset",
-      "rule": "Preferences and onboarding state cannot enter materialized training datasets or model/export packages."
     },
     {
       "id": "recommendation_placeholder_only",
@@ -258,24 +118,8 @@
       "rule": "Phase 7E recommendation must not call OpenAI, external AI/CV APIs, external recommendation APIs, or remote personalization services."
     },
     {
-      "id": "recommendation_no_backend",
-      "rule": "Phase 7E must not add backend recommendation services, backend sync, database storage, cloud sync, account systems, analytics, advertising, or ecommerce links."
-    },
-    {
-      "id": "recommendation_no_training_input",
-      "rule": "Recommendation inputs, scores, reasons, results, preferences, and discovery state cannot become training input, training datasets, model artifacts, or evaluation data."
-    },
-    {
-      "id": "recommendation_no_sensitive_profile",
-      "rule": "Recommendation context cannot contain real user photos, sensitive profile data, health information, face embeddings, biometric identifiers, object URLs, local paths, image bytes, or base64 image data."
-    },
-    {
       "id": "recommendation_does_not_modify_template_package",
       "rule": "Discovery filters and recommendations can affect display order and reasons only; they cannot mutate UserAppTemplatePackage, UserAppTemplate, steps, regions, tools, products, compatibility, or lineage."
-    },
-    {
-      "id": "recommendation_results_not_project_state_user_records",
-      "rule": "project-state may document recommendation feature boundaries, but must not contain real user recommendation records, ranking histories, analytics, or durable user profile values."
     },
     {
       "id": "session_local_only",
@@ -290,44 +134,12 @@
       "rule": "User App session state cannot sync to backend services or remote session APIs."
     },
     {
-      "id": "session_no_user_photo_bytes",
-      "rule": "User App session payloads cannot store real user photos, imageBytes, photoBytes, binary image data, data:image strings, or base64 image-like values."
-    },
-    {
       "id": "session_no_object_url",
       "rule": "User App session payloads cannot store object URLs or blob: runtime references."
     },
     {
-      "id": "session_no_local_path",
-      "rule": "User App session payloads cannot store Windows, Unix, or device-local absolute paths."
-    },
-    {
-      "id": "session_no_biometric_identifier",
-      "rule": "User App session payloads cannot store face embeddings, biometric identifiers, faceprints, or biometric ids."
-    },
-    {
-      "id": "session_no_training_input",
-      "rule": "User App session payloads cannot become training input, training datasets, model artifacts, or evaluation data."
-    },
-    {
-      "id": "session_no_sensitive_profile",
-      "rule": "User App session payloads cannot store health, medical, sensitive identity, precise identity, or sensitive profile fields."
-    },
-    {
-      "id": "session_no_recommendation_user_records",
-      "rule": "Recommendation results, ranking histories, and recommendation analytics cannot be persisted as user session records."
-    },
-    {
       "id": "session_does_not_modify_template_package",
       "rule": "Session save, load, recovery, and reconciliation can affect local UI state only and cannot mutate UserAppTemplatePackage."
-    },
-    {
-      "id": "session_not_project_state_user_record",
-      "rule": "project-state may document Phase 7F boundaries and validation status, but cannot store real user session records, progress histories, preferences, or profile values."
-    },
-    {
-      "id": "friendly-guidance-does-not-repair-contracts",
-      "rule": "User-friendly warning and blocked messages explain readiness only; they do not repair invalid UserAppTemplatePackage data or bypass app contract validation."
     },
     {
       "id": "app_readiness_gate_required_before_production_app",
@@ -359,15 +171,87 @@
     },
     {
       "id": "no_new_runtime_dependency_without_approval",
-      "rule": "Phase 7G must not add new runtime dependencies without explicit approval."
+      "rule": "Phase 7G and Phase 7H must not add new runtime dependencies without explicit approval."
     },
     {
       "id": "readiness_does_not_modify_template_package",
       "rule": "Readiness and mobile QA can read UserAppTemplatePackage-derived view models only and cannot mutate UserAppTemplatePackage."
     },
     {
-      "id": "readiness_not_project_state_user_record",
-      "rule": "project-state may document Phase 7G boundaries and validation status, but cannot store real user readiness, session, preference, recommendation, or photo records."
+      "id": "browser_mobile_qa_local_only",
+      "rule": "Phase 7H browser/mobile QA is local deterministic prototype QA only and is not production release approval, real device lab QA, native iOS QA, backend readiness, camera readiness, AR readiness, training readiness, or app store readiness."
+    },
+    {
+      "id": "browser_mobile_qa_no_runtime_expansion",
+      "rule": "Phase 7H browser/mobile QA must not add backend, database, accounts, cloud sync, analytics, camera, AR, training, OpenAI API, external API calls, native iOS scope, online publication, or new runtime dependencies."
+    },
+    {
+      "id": "browser_mobile_qa_not_project_state_user_record",
+      "rule": "project-state may document Phase 7H boundaries and validation status, but cannot store real user browser QA records, readiness records, session records, preference records, recommendation records, profile values, or photo data."
+    },
+    {
+      "id": "browser_mobile_qa_no_sensitive_payload",
+      "rule": "Phase 7H browser/mobile QA reports cannot persist photos, temporary image URLs, local paths, encoded image data, image/photo bytes, biometrics, sensitive profile fields, React state, recommendation records, readiness records, browser QA records, or training input."
+    },
+    {
+      "id": "require_project_recovery_skill",
+      "rule": "Use docs/skills/PROJECT_RECOVERY_SKILL.md for recovery handoffs and repository-state restoration."
+    },
+    {
+      "id": "require_phase_execution_skill",
+      "rule": "Use docs/skills/PHASE_EXECUTION_SKILL.md for phase execution with scoped implementation, validation, and handoff updates."
+    },
+    {
+      "id": "require_contract_schema_guard_for_contract_changes",
+      "rule": "Use docs/skills/CONTRACT_SCHEMA_GUARD_SKILL.md when contract, schema, export, import, or durable data boundaries change."
+    },
+    {
+      "id": "require_compact_handoff_by_default",
+      "rule": "Use docs/skills/COMPACT_HANDOFF_SKILL.md and compact handoff by default unless the user explicitly asks for a full prompt."
+    },
+    {
+      "id": "no_full_node_modules_tree",
+      "rule": "Do not paste full repository directory trees or generated dependency trees such as node_modules into prompts, handoffs, or status documents."
+    },
+    {
+      "id": "no_repeated_full_phase_history",
+      "rule": "Do not repeatedly paste full phase history when a compact phase summary or repository source-of-truth reference is sufficient."
+    },
+    {
+      "id": "prefer_compact_report",
+      "rule": "Prefer compact reports that point to repository files instead of duplicating full docs, dist, .test-dist, .vite, coverage, or generated outputs."
+    },
+    {
+      "id": "prefer_repo_docs_as_context",
+      "rule": "Repository files are the source of truth; chat history is not. Prefer START_HERE.md, docs/status, docs/prompts, and project-state files as context."
+    },
+    {
+      "id": "full_prompt_only_on_request",
+      "rule": "Provide a full prompt only when the user explicitly requests it; otherwise provide compact prompt or medium prompt context."
+    },
+    {
+      "id": "external_skills_must_be_registered",
+      "rule": "External skills must be listed in project-state/external-skills-registry.json before they are used."
+    },
+    {
+      "id": "external_skills_default_explicit_only",
+      "rule": "External skills default to explicit-only invocation; candidate skills cannot be invoked implicitly."
+    },
+    {
+      "id": "external_skills_scripts_disabled_by_default",
+      "rule": "External skill scripts are disabled by default and require manual review before any use."
+    },
+    {
+      "id": "external_skills_no_production_dependencies_without_approval",
+      "rule": "External skills must not install production dependencies without explicit approval."
+    },
+    {
+      "id": "external_skills_must_not_override_project_guardrails",
+      "rule": "External skills must not override AGENTS.md, project skills, MASTER_CODEX_CONTEXT.md, or project-state guardrails."
+    },
+    {
+      "id": "root_agents_md_required",
+      "rule": "Repository root AGENTS.md is required as the short agent entry point for source-of-truth, validation, compact handoff, and external skill rules."
     }
   ],
   "legacyFrozenModules": [

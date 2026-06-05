@@ -1,18 +1,17 @@
 {
   "schemaVersion": "active-task.v1",
-  "taskId": "7H",
-  "title": "User App Prototype Device/Browser QA Harness",
+  "taskId": "8A",
+  "title": "Product Route Decision / App MVP Planning",
   "status": "recommended",
   "ownerRole": "Codex",
   "createdBy": "Codex",
-  "phase": "7H",
-  "recommendedProfile": "native-gpt-codex-daily",
+  "phase": "8A",
+  "recommendedProfile": "native-gpt-codex-desktop",
   "allowedDirectories": [
-    "src/user-app",
-    "src/components/user-app",
-    "src/templates/examples",
     "docs",
     "project-state",
+    "src/user-app",
+    "src/components/user-app",
     "tests"
   ],
   "forbiddenDirectories": [
@@ -30,13 +29,12 @@
     "node scripts/context-pack.mjs --json"
   ],
   "completionDefinition": [
-    "Phase 7H should add browser/device-like QA harness coverage for the local User App Shell readiness and mobile interaction flows.",
-    "7H must not add production app scope, backend, database, cloud sync, analytics, real camera capture, AR, training, online publication, native iOS scope, external APIs, or new runtime dependencies.",
-    "Browser/device QA must preserve local-only, non-sensitive, deterministic boundaries.",
+    "Phase 8A should decide the future user app technology route and repository ownership boundary.",
+    "8A must not implement production app scope, backend, database, cloud sync, analytics, real camera capture, AR, training, online publication, native iOS implementation, external APIs, or new runtime dependencies unless explicitly authorized.",
     "Docs and project-state must remain recoverable.",
-    "Tests passed."
+    "Tests passed and validation commands pass."
   ],
   "dependsOn": [
-    "7G User App Mobile Interaction QA / App Readiness Gate"
+    "7H Browser / Mobile E2E Interaction QA"
   ]
 }

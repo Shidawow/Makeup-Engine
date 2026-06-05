@@ -18,7 +18,7 @@ describe('User App mobile QA model', () => {
     expect(result.viewportProfiles.map((viewport) => viewport.width)).toEqual([
       375,
       390,
-      430,
+      414,
       768,
     ]);
     expect(result.requiresBrowserAutomation).toBe(false);

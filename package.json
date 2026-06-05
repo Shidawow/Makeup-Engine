@@ -15,6 +15,7 @@
     "training:lightweight": "node scripts/train-lightweight-segmentation.mjs",
     "training:export": "node scripts/export-model-package.mjs",
     "images:import": "node scripts/import-source-images.mjs",
+    "user-app:browser-qa": "node scripts/user-app-browser-qa.mjs",
     "project:status": "node scripts/project-status.mjs",
     "project:context": "node scripts/context-pack.mjs",
     "lint": "npm run typecheck",

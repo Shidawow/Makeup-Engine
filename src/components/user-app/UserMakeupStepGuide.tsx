@@ -120,7 +120,7 @@ export function UserMakeupStepGuide({
 
           <div className="grid gap-3 lg:grid-cols-[1.2fr_0.8fr]">
             <div className="rounded-lg border border-stone-200 p-4">
-              <h5 className="text-sm font-semibold text-stone-950">怎么画</h5>
+              <h5 className="text-sm font-semibold text-stone-950">怎么用</h5>
               <p className="mt-2 text-sm leading-6 text-stone-700">
                 {step.guidance.detailedInstruction}
               </p>

@@ -43,18 +43,18 @@ describe('Phase 7A documentation recovery', () => {
 
     expect(startHere).toContain('Phase 7A');
     expect(currentStatus).toContain('User App MVP Shell');
-    expect(currentPhase).toContain('7G');
-    expect(nextAction).toContain('Phase 7H');
+    expect(currentPhase).toContain('7H');
+    expect(nextAction).toContain('Phase 8A');
     expect(phaseDoc).toContain('not a production app');
     expect(phaseHistory).toContain('## Phase 7A');
     expect(architecture).toContain('src/user-app');
     expect(dataFlow).toContain('User App Shell');
     expect(guardrails).toContain('UserAppTemplatePackage');
-    expect(masterContext).toContain('Phase 7G completed');
-    expect(providerPrompt).toContain('lastCompletedPhase: 7G');
-    expect(snapshot.lastCompletedPhase).toBe('7G');
-    expect(snapshot.nextRecommendedPhase).toBe('7H');
-    expect(latestHandoff.fromPhase).toBe('7G');
-    expect(latestHandoff.toPhase).toBe('7H');
+    expect(masterContext).toContain('Phase 7H completed');
+    expect(providerPrompt).toContain('lastCompletedPhase: 7H');
+    expect(snapshot.lastCompletedPhase).toBe('7H');
+    expect(snapshot.nextRecommendedPhase).toBe('8A');
+    expect(latestHandoff.fromPhase).toBe('7H');
+    expect(latestHandoff.toPhase).toBe('8A');
   });
 });

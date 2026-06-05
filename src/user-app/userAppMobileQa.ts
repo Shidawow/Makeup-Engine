@@ -76,7 +76,7 @@ const MOBILE_QA_CREATED_AT = '2026-01-01T00:00:00.000Z';
 
 export const createDefaultMobileViewportProfiles = (): UserAppMobileViewportProfile[] => [
   {
-    viewportId: 'iphone-se-portrait',
+    viewportId: 'phone-375-portrait',
     label: '小屏手机 375px',
     width: 375,
     height: 667,
@@ -84,7 +84,7 @@ export const createDefaultMobileViewportProfiles = (): UserAppMobileViewportProf
     minTouchTargetPx: 44,
   },
   {
-    viewportId: 'phone-portrait',
+    viewportId: 'phone-390-portrait',
     label: '常规手机 390px',
     width: 390,
     height: 844,
@@ -92,15 +92,15 @@ export const createDefaultMobileViewportProfiles = (): UserAppMobileViewportProf
     minTouchTargetPx: 44,
   },
   {
-    viewportId: 'large-phone-portrait',
-    label: '大屏手机 430px',
-    width: 430,
-    height: 932,
+    viewportId: 'phone-414-portrait',
+    label: '大屏手机 414px',
+    width: 414,
+    height: 896,
     orientation: 'portrait',
     minTouchTargetPx: 44,
   },
   {
-    viewportId: 'tablet-narrow',
+    viewportId: 'tablet-768-portrait',
     label: '窄屏平板 768px',
     width: 768,
     height: 1024,
@@ -139,13 +139,13 @@ export const createMobileQaChecklist = (
     qaCheck({
       checkId: 'mobile-layout-stacks',
       area: 'layout',
-      label: '移动端纵向排布',
-      description: '小屏下模板列表、详情、步骤、状态面板需要纵向堆叠，不能挤压主要内容。',
+      label: '移动端纵向布局',
+      description: '窄屏下模板列表、详情、步骤、状态面板需要纵向堆叠，不能挤压主要内容。',
       required: true,
       status: hasMobileStackingClasses ? 'passed' : 'blocked',
       viewportIds: allViewportIds,
       evidence: hasMobileStackingClasses
-        ? ['Shell 使用 flex/grid 响应式 class，窄屏优先纵向阅读。']
+        ? ['Shell 使用响应式 flex/grid class，窄屏优先纵向阅读。']
         : ['未发现足够的窄屏纵向布局证据。'],
       recommendation: '保持主内容单列优先，辅助面板在小屏下向下堆叠。',
     }),
@@ -153,7 +153,7 @@ export const createMobileQaChecklist = (
       checkId: 'touch-target-size',
       area: 'touch_target',
       label: '按钮触控尺寸',
-      description: '导航、保存、恢复、筛选和步骤按钮在手机上需要可点，不应过窄。',
+      description: '导航、保存、恢复、筛选和步骤按钮在手机上需要可点击，不应过窄。',
       required: true,
       status: hasLargeTapTargets ? 'passed' : 'warning',
       viewportIds: allViewportIds,
@@ -166,13 +166,13 @@ export const createMobileQaChecklist = (
       checkId: 'core-navigation-visible',
       area: 'navigation',
       label: '核心入口可见',
-      description: '模板指导、发现、准备、偏好、隐私、会话和就绪度入口需要可见。',
+      description: '模板指导、发现、准备、偏好、隐私、会话、就绪度和 QA 入口需要可见。',
       required: true,
       status: hasPackage ? 'passed' : 'warning',
       viewportIds: allViewportIds,
       evidence: hasPackage
         ? ['已加载 UserAppTemplatePackage，核心入口可以展示。']
-        : ['无 package 时只能展示空状态入口。'],
+        : ['无 package 时只能展示明确空状态入口。'],
       recommendation: '无 package 时保留明确空状态，加载后显示完整入口。',
     }),
     qaCheck({
@@ -198,7 +198,7 @@ export const createMobileQaChecklist = (
       viewportIds: allViewportIds,
       evidence:
         hasPackage && templateCount > 0
-          ? ['当前 fixture 有模板，可同时检查正常态和空态文案。']
+          ? ['当前 fixture 有模板，可同时检查正常状态和空状态文案。']
           : ['当前没有可用模板，需要空状态说明。'],
       recommendation: '空状态不能只留白，需要说明“先导入/选择有效模板包”。',
     }),
@@ -210,10 +210,8 @@ export const createMobileQaChecklist = (
       required: true,
       status: hasBlockedCopy ? 'passed' : 'blocked',
       viewportIds: allViewportIds,
-      evidence: hasBlockedCopy
-        ? ['已有 blocked 状态说明。']
-        : ['缺少 blocked 状态说明。'],
-      recommendation: '保留 blocked reason，不用 warning 代替 blocking issue。',
+      evidence: hasBlockedCopy ? ['已有 blocked 状态说明。'] : ['缺少 blocked 状态说明。'],
+      recommendation: '保留 blocked reason，不用 warning 替代 blocking issue。',
     }),
     qaCheck({
       checkId: 'warning-copy-visible',
@@ -224,7 +222,7 @@ export const createMobileQaChecklist = (
       status: hasWarningCopy ? 'passed' : 'warning',
       viewportIds: allViewportIds,
       evidence: hasWarningCopy
-        ? ['warning 文案会在 compatibility/detail/recommendation 中展示。']
+        ? ['warning 文案会在兼容性、详情或推荐区域展示。']
         : ['未确认 warning 文案展示。'],
       recommendation: 'warning 不阻断，但必须保持可读。',
     }),
@@ -246,13 +244,11 @@ export const createMobileQaChecklist = (
       checkId: 'privacy-boundary-visible',
       area: 'privacy',
       label: '隐私边界可见',
-      description: '用户侧 shell 必须说明不收集真实照片、object URL、base64、路径和生物识别数据。',
+      description: '用户侧 shell 必须说明不收集照片、object URL、base64、路径和生物识别数据。',
       required: true,
       status: hasPrivacyCopy ? 'passed' : 'blocked',
       viewportIds: allViewportIds,
-      evidence: hasPrivacyCopy
-        ? ['隐私说明入口存在。']
-        : ['缺少用户侧隐私边界说明。'],
+      evidence: hasPrivacyCopy ? ['隐私说明入口存在。'] : ['缺少用户侧隐私边界说明。'],
       recommendation: '隐私边界必须默认可访问，不能只藏在开发文档中。',
     }),
     qaCheck({
@@ -289,7 +285,7 @@ export const createMobileQaRecommendations = (
   issues: readonly UserAppMobileQaIssue[],
 ): string[] => {
   if (issues.length === 0) {
-    return ['移动端 QA 当前没有阻断项；可以进入 App 就绪度门禁复核。'];
+    return ['移动端 QA 当前没有阻断项；可以进入 App 就绪度复核。'];
   }
 
   return Array.from(

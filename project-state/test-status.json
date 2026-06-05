@@ -1,5 +1,5 @@
 {
-  "phase": "7G",
+  "phase": "7H",
   "status": "passed",
   "lastValidation": {
     "typecheck": "passed",
@@ -9,9 +9,10 @@
     "projectStatusJson": "passed",
     "projectContext": "passed",
     "contextPackJson": "passed",
-    "testFiles": 358,
-    "tests": 493,
-    "httpSmoke": "passed"
+    "userAppBrowserQa": "passed",
+    "httpSmoke": "passed",
+    "testFiles": 360,
+    "tests": 497
   },
   "lastKnownPreDoc0Validation": {
     "typecheck": "passed",
@@ -27,15 +28,16 @@
     "npm run project:status",
     "npm run project:context",
     "node scripts/project-status.mjs --json",
-    "node scripts/context-pack.mjs --json"
+    "node scripts/context-pack.mjs --json",
+    "npm run user-app:browser-qa -- --json"
   ],
   "notes": [
-    "7A validation completed after adding local User App MVP Shell view models, navigation, progress, components, Template Studio preview wiring, tests, docs, and project-state updates.",
-    "7B validation completed after hardening step guidance UX, friendly warning/blocked messages, mobile-friendly user app shell components, guidance fixtures, tests, docs, project-state updates, and HTTP smoke.",
-    "7C validation completed after adding user photo intake placeholders, personalization placeholders, privacy boundary validation, shell UI wiring, examples, tests, docs, project-state updates, and HTTP smoke.",
-    "7D validation completed after adding local onboarding, non-sensitive local preferences, preference privacy boundary validation, guidance hints, shell UI wiring, examples, tests, docs, project-state updates, and HTTP smoke.",
-    "7E validation completed after adding local template discovery, rule-based recommendation placeholders, user-friendly recommendation reasons, shell UI wiring, examples, tests, docs, and project-state updates.",
-    "7F validation completed after adding local session model, storage adapter, recovery, privacy boundary validation, shell UI wiring, examples, tests, docs, project-state updates, and HTTP smoke.",
-    "7G validation completed after adding User App mobile QA, app readiness gate, interaction checklist, shell UI wiring, examples, tests, docs, and project-state updates."
+    "7H added deterministic browser/mobile QA harness coverage for the local User App MVP Shell.",
+    "7H source-only QA passed before full validation: npm run user-app:browser-qa -- --skip-server --json.",
+    "npm run typecheck passed.",
+    "npm run test passed: 360 test files, 497 tests.",
+    "npm run build passed with Vite chunk-size warning only.",
+    "npm run project:status, npm run project:context, node scripts/project-status.mjs --json, and node scripts/context-pack.mjs --json passed.",
+    "User manually confirmed npm run user-app:browser-qa -- --json passed in local PowerShell with browserSmokeStatus/status/criticalPathStatus/privacyCopyStatus/chineseCopyStatus passed and backend/camera/AR/external API/training all false."
   ]
 }

@@ -183,3 +183,16 @@ User App Shell
 ```
 
 Readiness can affect local QA decisions only. It cannot mutate `UserAppTemplatePackage`, write real user records into `project-state`, store photos, object URLs, local paths, image bytes, base64 images, biometrics, sensitive profile fields, React state, recommendation records, or training input. It is not production release approval and does not replace future real browser/device QA.
+
+Phase 7H adds local browser/mobile QA harness coverage without creating a production app:
+
+```text
+User App Shell
+-> Browser / Mobile QA Report
+-> HTTP Smoke
+-> Critical Path Copy Checks
+-> Mobile Viewport Readiness
+-> Privacy / Chinese Copy Checks
+```
+
+The harness can document local prototype readiness only. It cannot mutate `UserAppTemplatePackage`, persist real user records, collect photos, call camera APIs, call external APIs, train models, or certify production release readiness.

@@ -273,3 +273,11 @@ src/components/demo/vision-analysis-demo
 - The shell exposes `App 就绪度`, `移动端 QA`, and `交互检查` entries.
 - Readiness and mobile QA panels are product/admin QA surfaces; they are not production release approval.
 - Phase 7G does not add backend, database, accounts, cloud sync, analytics, camera, AR, training, external APIs, native iOS scope, online publication, or new runtime dependencies.
+
+## Phase 7H Additions
+
+- `src/user-app/userAppBrowserQa.ts` defines deterministic browser/mobile QA report metadata for the local User App MVP Shell.
+- `scripts/user-app-browser-qa.mjs` provides local HTTP smoke and source/copy checks without new runtime dependencies.
+- Mobile viewport readiness covers `375`, `390`, `414`, and `768` width profiles.
+- The User App Shell uses readable Chinese labels for the main prototype surfaces instead of mixed or mojibake copy.
+- Browser/mobile QA reports are local QA evidence only. They cannot mutate `UserAppTemplatePackage`, store real user records, or become production release approval.

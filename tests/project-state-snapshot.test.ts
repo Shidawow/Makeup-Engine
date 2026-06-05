@@ -31,13 +31,13 @@ describe('project state snapshot', () => {
 
     expect(snapshot.projectName).toBe('Makeup Engine');
     expect(snapshot.projectRole).toContain('Makeup template production system');
-    expect(snapshot.lastCompletedPhase).toBe('7G');
-    expect(snapshot.lastCompletedBusinessPhase).toBe('7G');
-    expect(snapshot.currentPhaseId).toBe('7G');
+    expect(snapshot.lastCompletedPhase).toBe('7H');
+    expect(snapshot.lastCompletedBusinessPhase).toBe('7H');
+    expect(snapshot.currentPhaseId).toBe('7H');
     expect(snapshot.currentPhase).toBeTruthy();
-    expect(snapshot.nextRecommendedPhase).toBe('7H');
-    expect(snapshot.nextRecommendedPhaseName).toContain('Device/Browser');
-    expect(snapshot.nextAction).toContain('Phase 7H');
+    expect(snapshot.nextRecommendedPhase).toBe('8A');
+    expect(snapshot.nextRecommendedPhaseName).toContain('Product Route');
+    expect(snapshot.nextAction).toContain('Phase 8A');
     expect(snapshot.mainDataFlow).toEqual(
       expect.arrayContaining([
         'SourceImagePackage',

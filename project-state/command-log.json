@@ -11,14 +11,14 @@
       "command": "npm run test",
       "purpose": "Run Vitest regression coverage.",
       "lastStatus": "passed",
-      "testFiles": 358,
-      "tests": 493
+      "lastSummary": "360 test files passed; 497 tests passed."
     },
     {
       "name": "build",
       "command": "npm run build",
       "purpose": "Run TypeScript build and Vite production build.",
-      "lastStatus": "passed"
+      "lastStatus": "passed",
+      "lastSummary": "Vite production build passed with chunk-size warning only."
     },
     {
       "name": "project-status",
@@ -28,8 +28,7 @@
     },
     {
       "name": "project-status-json",
-      "command": "npm run project:status -- --json",
-      "fallbackCommand": "node scripts/project-status.mjs --json",
+      "command": "node scripts/project-status.mjs --json",
       "purpose": "Print machine-readable project recovery status.",
       "lastStatus": "passed"
     },
@@ -46,22 +45,12 @@
       "lastStatus": "passed"
     },
     {
-      "name": "user-app-session-persistence-example",
-      "command": "Use the User App MVP Shell local state section to save, restore, clear template progress, reset preferences, clear all local state, and inspect recovery notices.",
-      "purpose": "Confirm Phase 7F local session persistence and recovery without accounts, backend sync, cloud sync, database storage, analytics, real photos, AR, training, production app storage, or unsafe durable payloads."
-    },
-    {
-      "name": "user-app-shell-http-smoke",
-      "command": "npm run dev -- --host 127.0.0.1 --port 5199; request http://127.0.0.1:5199",
-      "purpose": "Verify Vite local User App Shell / Template Studio page loads over HTTP.",
+      "name": "user-app-browser-qa",
+      "command": "npm run user-app:browser-qa -- --json",
+      "purpose": "Run Phase 7H local browser/mobile HTTP smoke, critical copy, Chinese copy, and privacy copy checks.",
       "lastStatus": "passed",
-      "statusCode": 200
-    },
-    {
-      "name": "user-app-readiness-gate-example",
-      "command": "Use the User App MVP Shell App 就绪度、移动端 QA、交互检查 sections to inspect readiness and mobile interaction reports.",
-      "purpose": "Confirm Phase 7G app readiness and mobile QA without production app scope, backend, camera, AR, training, external API calls, or unsafe durable payloads."
+      "lastSummary": "User manually confirmed full --json run passed in local PowerShell: browserSmokeStatus/status/criticalPathStatus/privacyCopyStatus/chineseCopyStatus passed; backend/camera/AR/external API/training false."
     }
   ],
-  "lastUpdatedPhase": "7G"
+  "lastUpdatedPhase": "7H"
 }

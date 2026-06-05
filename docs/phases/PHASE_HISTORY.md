@@ -453,3 +453,13 @@ Adds the recoverable project documentation and machine-readable state foundation
 ## Phase DOC-1
 
 Adds multi-provider handoff, execution profiles, master Codex context, provider switch prompts, and deterministic context pack tooling so new sessions and new providers can resume without losing project state or execution boundaries.
+
+## Phase 7H
+
+- Added a local browser/mobile QA harness for the User App MVP Shell.
+- Added `userAppBrowserQa` deterministic report generation and `npm run user-app:browser-qa`.
+- Browser QA covers local HTTP smoke, critical shell copy, privacy copy, Chinese copy, and forbidden runtime/training token checks.
+- Mobile QA viewport profiles cover `375`, `390`, `414`, and `768` widths.
+- User-visible shell QA labels were corrected to readable Chinese for readiness, mobile QA, interaction checklist, local state, preferences, personalization placeholder, and privacy notice.
+- Tests cover browser/mobile smoke, critical path reachability, empty states, warning states, blocked states, recovery state, privacy copy, and mobile viewport readiness.
+- Phase 7H remains local deterministic prototype QA. It is not production release approval, real device lab QA, Playwright pointer/canvas/screenshot QA, native iOS QA, backend readiness, camera readiness, AR readiness, training readiness, or app store readiness.

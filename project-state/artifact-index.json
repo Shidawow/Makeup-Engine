@@ -224,6 +224,11 @@
     "UserAppReadinessCheck metadata",
     "UserAppReadinessReport metadata",
     "UserAppReadinessRecommendation metadata",
+    "UserAppBrowserQaReport metadata",
+    "Browser/mobile HTTP smoke report metadata",
+    "Critical shell copy QA metadata",
+    "Chinese copy QA metadata",
+    "Privacy copy QA metadata",
     "Blocked readiness fixture metadata",
     "Mobile QA warning fixture metadata"
   ]

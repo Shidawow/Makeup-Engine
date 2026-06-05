@@ -12,8 +12,8 @@ export function UserAppInteractionChecklist({
   mobileChecks,
   readinessReport,
 }: UserAppInteractionChecklistProps) {
-  const requiredChecks = mobileChecks.filter((check) => check.required);
-  const optionalChecks = mobileChecks.filter((check) => !check.required);
+  const requiredChecks = mobileChecks.filter((item) => item.required);
+  const optionalChecks = mobileChecks.filter((item) => !item.required);
 
   return (
     <section className="rounded-lg border border-stone-200 bg-white p-4 shadow-soft">
@@ -35,15 +35,15 @@ export function UserAppInteractionChecklist({
         <div>
           <h3 className="text-sm font-semibold text-stone-950">必测项</h3>
           <div className="mt-2 grid gap-2">
-            {requiredChecks.map((check) => (
-              <div className="rounded-md border border-stone-200 bg-stone-50 p-3" key={check.checkId}>
+            {requiredChecks.map((item) => (
+              <div className="rounded-md border border-stone-200 bg-stone-50 p-3" key={item.checkId}>
                 <div className="flex items-start justify-between gap-3">
-                  <p className="font-semibold text-stone-900">{check.label}</p>
+                  <p className="font-semibold text-stone-900">{item.label}</p>
                   <span className="rounded-md bg-white px-2 py-1 text-xs text-stone-600">
-                    {toLabel(check.status)}
+                    {toLabel(item.status)}
                   </span>
                 </div>
-                <p className="mt-1 text-sm leading-6 text-stone-600">{check.recommendation}</p>
+                <p className="mt-1 text-sm leading-6 text-stone-600">{item.recommendation}</p>
               </div>
             ))}
           </div>
@@ -52,15 +52,15 @@ export function UserAppInteractionChecklist({
         <div>
           <h3 className="text-sm font-semibold text-stone-950">补充项</h3>
           <div className="mt-2 grid gap-2">
-            {optionalChecks.map((check) => (
-              <div className="rounded-md border border-stone-200 bg-stone-50 p-3" key={check.checkId}>
+            {optionalChecks.map((item) => (
+              <div className="rounded-md border border-stone-200 bg-stone-50 p-3" key={item.checkId}>
                 <div className="flex items-start justify-between gap-3">
-                  <p className="font-semibold text-stone-900">{check.label}</p>
+                  <p className="font-semibold text-stone-900">{item.label}</p>
                   <span className="rounded-md bg-white px-2 py-1 text-xs text-stone-600">
-                    {toLabel(check.status)}
+                    {toLabel(item.status)}
                   </span>
                 </div>
-                <p className="mt-1 text-sm leading-6 text-stone-600">{check.description}</p>
+                <p className="mt-1 text-sm leading-6 text-stone-600">{item.description}</p>
               </div>
             ))}
           </div>

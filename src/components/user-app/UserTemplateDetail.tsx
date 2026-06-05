@@ -69,16 +69,16 @@ export function UserTemplateDetail({
 
       {template.blockingIssues.length > 0 ? (
         <ul className="mt-3 grid gap-2 rounded-md border border-rose-200 bg-rose-50 p-3 text-sm leading-6 text-rose-950">
-          {template.blockingIssues.map((issue) => (
-            <li key={issue}>阻断：{issue}</li>
+          {template.blockingIssues.map((item) => (
+            <li key={item}>阻断：{item}</li>
           ))}
         </ul>
       ) : null}
 
       {template.warnings.length > 0 ? (
         <ul className="mt-3 grid gap-2 rounded-md border border-amber-200 bg-amber-50 p-3 text-sm leading-6 text-amber-950">
-          {template.warnings.map((warning) => (
-            <li key={warning}>提醒：{warning}</li>
+          {template.warnings.map((item) => (
+            <li key={item}>提醒：{item}</li>
           ))}
         </ul>
       ) : null}

@@ -13,7 +13,7 @@ const statusTone: Record<UserAppReadinessReport['status'], string> = {
 
 const statusLabel: Record<UserAppReadinessReport['status'], string> = {
   ready_for_app_prototype: '可以进入 App 原型',
-  ready_with_warnings: '可进入但需跟踪提醒',
+  ready_with_warnings: '可进入，但需跟踪提醒',
   needs_qa_hardening: '需要移动端 QA 加固',
   blocked: '阻断',
 };
@@ -51,7 +51,7 @@ export function UserAppReadinessGate({ report }: UserAppReadinessGateProps) {
       </div>
 
       <p className="mt-3 text-xs leading-5 opacity-80">
-        这是本地 QA 门禁，不是生产 App 发布；不启用后端、相机、AR、训练或外部 API。
+        这是本地 QA 门禁，不是生产 App 发布；不会启用后端、相机、AR、训练或外部 API。
       </p>
     </section>
   );

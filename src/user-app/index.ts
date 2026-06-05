@@ -18,3 +18,4 @@ export * from './userTemplateDiscovery';
 export * from './userTemplateRecommendation';
 export * from './userAppMobileQa';
 export * from './userAppReadiness';
+export * from './userAppBrowserQa';

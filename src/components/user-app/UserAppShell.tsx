@@ -311,7 +311,7 @@ export function UserAppShell({
       <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
         <div>
           <p className="text-xs font-semibold uppercase text-teal-700">
-            Phase 7F local session shell · Phase 7G readiness gate
+            Phase 7H browser and mobile QA shell
           </p>
           <h1 className="text-xl font-semibold text-stone-950">用户 App MVP Shell</h1>
           <p className="mt-1 max-w-2xl text-sm leading-6 text-stone-600">

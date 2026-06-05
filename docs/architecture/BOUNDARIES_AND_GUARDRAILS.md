@@ -62,6 +62,9 @@
 - Phase 7G mobile interaction QA is required before the next browser/device QA phase, but it is deterministic checklist readiness and not a substitute for real device or browser pointer QA.
 - Phase 7G readiness and mobile QA must not add backend, database, accounts, cloud sync, analytics, camera, AR, training, OpenAI API, external API calls, native iOS scope, online publication, or new runtime dependencies.
 - Phase 7G readiness reports cannot mutate `UserAppTemplatePackage` and cannot persist photos, object URLs, local paths, base64 images, image/photo bytes, face embeddings, biometric identifiers, sensitive profile fields, React state, recommendation records, or training input.
+- Phase 7H browser/mobile QA is local deterministic prototype QA and is not production release approval, app store readiness, native iOS QA, real device lab QA, Playwright pointer/canvas/screenshot QA, backend readiness, camera readiness, AR readiness, or training readiness.
+- Phase 7H browser/mobile QA must not add backend, database, accounts, cloud sync, analytics, camera, AR, training, OpenAI API, external API calls, native iOS scope, online publication, or new runtime dependencies.
+- Phase 7H browser/mobile QA reports cannot mutate `UserAppTemplatePackage` and cannot persist photos, temporary image URLs, local paths, encoded image data, image/photo bytes, biometrics, sensitive profile fields, React state, recommendation records, readiness records, browser QA records, or training input.
 - A compatibility target such as `ios-app-v0` or `web-app-v0` describes intended consumers only; it does not create an iOS app, Web app, backend, or online release.
 - Rejected, archived, or deprecated library entries must not enter publish packages by default.
 - Legacy runtime areas no longer carry new mainline features.
@@ -83,6 +86,7 @@
 - Template discovery and recommendation placeholders read `UserAppTemplatePackage` plus non-sensitive local preferences only; they do not read real photos, do not call recommendation services, do not create user profiles, and do not write recommendation records into `project-state`.
 - Local session persistence reads User App Shell local state only; it does not create accounts, does not sync to backend/cloud, does not store real photos or sensitive profile data, and does not write user session records into `project-state`.
 - App readiness and mobile QA read User App Shell local state and `UserAppTemplatePackage`-derived view models only; they do not create production app state, do not mutate packages, do not train models, and do not create durable user records.
+- Browser/mobile QA reads the local User App Shell, source copy, and deterministic QA metadata only; it does not create production app state, does not mutate packages, does not train models, and does not create durable user records.
 - Dataset review decides whether corrected artifacts can become materialized training data.
 - Training reads materialized datasets, not UI state and not raw source packages.
 - Export reads validated model artifacts and export readiness metadata.

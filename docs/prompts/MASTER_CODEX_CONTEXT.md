@@ -12,10 +12,10 @@ It produces templates, template evidence, correction records, review state, loca
 
 ## Current Phase
 
-- Current business phase: `Phase 7G completed`
-- Last completed phase: `Phase 7G`
-- Last completed phase name: `Phase 7G - User App Mobile Interaction QA / App Readiness Gate`
-- Next recommended phase: `Phase 7H - User App Prototype Device/Browser QA Harness`
+- Current business phase: `Phase 7H completed`
+- Last completed phase: `Phase 7H`
+- Last completed phase name: `Phase 7H - Browser / Mobile E2E Interaction QA`
+- Next recommended phase: `Phase 8A - Product Route Decision / App MVP Planning`
 
 ## Current Main Data Flow
 
@@ -45,6 +45,7 @@ Real Photo
 -> User App Template Discovery / Recommendation Placeholder
 -> User App Session Persistence / Local State Hardening
 -> User App Mobile QA / App Readiness Gate
+-> Browser / Mobile QA Harness
 -> User App Consumption Manifest
 -> Dataset Review
 -> Materialized Training Dataset
@@ -61,7 +62,7 @@ Important boundary: `SourceImagePackage` can enter Vision Analysis through opera
 - `src/template-engine/production`: production queue, state machine, QA rules, rebinding recovery, analysis handoff, review lifecycle, smoke checklist.
 - `src/template-engine/library`: production task to library entry conversion, template versioning, and local library lifecycle.
 - `src/template-engine/app-contract`: publish package to user app contract adapter, makeup step normalization, compatibility validation, and prototype consumer view models.
-- `src/user-app`: local User App MVP Shell view models, navigation, progress, guidance UX, friendly messages, state, photo intake placeholder, personalization placeholder, local onboarding, local preferences, guidance hints, discovery, recommendation placeholders, local session persistence/recovery, privacy boundary utilities, mobile QA, and app readiness gating.
+- `src/user-app`: local User App MVP Shell view models, navigation, progress, guidance UX, friendly messages, state, photo intake placeholder, personalization placeholder, local onboarding, local preferences, guidance hints, discovery, recommendation placeholders, local session persistence/recovery, privacy boundary utilities, mobile QA, app readiness gating, and browser/mobile QA reports.
 - `src/components/user-app`: local shell UI for package summary, template list/detail, hardened step guidance, region instructions, tools/products, compatibility, progress, disabled photo intake placeholder, personalization placeholder, local onboarding, local preferences, discovery/recommendation UI, session controls, recovery notices, app readiness, mobile QA, interaction checklist, and privacy notice.
 - `src/training`: source image import, artifact handling, deterministic training/evaluation/export utilities.
 - `src/components/template-studio`: operator UI for source image intake, artifact binding, production QA, library management, package preview, app contract preview, prototype consumer preview, mask editing, evidence, review, and dataset panels.
@@ -107,6 +108,7 @@ These areas are retained for compatibility and historical runtime work, but they
 - Generate deterministic User App readiness reports across template package, step guidance, onboarding, preferences, discovery, local session, privacy, mobile interaction, empty state, and blocked state.
 - Generate deterministic mobile interaction QA reports for narrow viewport layout, touch targets, navigation, guidance usability, empty states, blocked states, session controls, privacy copy, and raw JSON default hiding.
 - Render App readiness, mobile QA, and interaction checklist panels in the local User App MVP Shell.
+- Run deterministic browser/mobile QA for local HTTP smoke, critical shell copy, privacy copy, Chinese copy, forbidden-token checks, and mobile viewport readiness.
 - Export user app consumption manifest and handoff JSON.
 - Evaluate batch QA issues, task readiness diagnostics, reject reasons, publish confirmation, rebinding recovery, library lifecycle, and operator handoff reports.
 - Continue into mask editing, template evidence capture, dataset review, and training dataset materialization.
@@ -137,6 +139,8 @@ These areas are retained for compatibility and historical runtime work, but they
 - Phase 7F session payloads cannot store photos, object URLs, local paths, image bytes, base64 images, biometrics, sensitive profile fields, React state, recommendation result records, or training input, and recovery cannot mutate `UserAppTemplatePackage`.
 - Phase 7G readiness gate is local product/QA gating only; it is not production release approval, native iOS QA, backend readiness, app store readiness, camera readiness, AR readiness, training readiness, or a substitute for future real browser/device QA.
 - Phase 7G readiness and mobile QA reports cannot mutate `UserAppTemplatePackage`, write real user records into `project-state`, store photos, object URLs, local paths, base64 images, biometrics, sensitive profile data, React state, recommendation records, or training input.
+- Phase 7H browser/mobile QA is local deterministic prototype QA only; it is not production release approval, real device lab QA, Playwright pointer/canvas/screenshot QA, native iOS QA, backend readiness, camera readiness, AR readiness, training readiness, or app store readiness.
+- Phase 7H browser/mobile QA reports cannot mutate `UserAppTemplatePackage`, write real user records into `project-state`, store photos, temporary image URLs, local paths, encoded image data, biometrics, sensitive profile data, React state, recommendation records, readiness records, browser QA records, or training input.
 - User photo data, face embeddings, biometric identifiers, sensitive profile data, and user photo references must not enter durable export, training, model artifacts, or project-state.
 - User app consumption exports cannot persist object URLs, local absolute paths, large image bytes, or React state.
 - JPEG pixel decoding remains unsupported.

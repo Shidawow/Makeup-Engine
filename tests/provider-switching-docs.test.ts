@@ -46,10 +46,10 @@ describe('provider switching docs', () => {
     expect(prompt).toContain('Switch To Native GPT / Codex Desktop');
     expect(prompt).toContain('Switch To PackyAPI + CLI');
     expect(prompt).toContain('Return From PackyAPI To ChatGPT');
-    expect(prompt).toContain('lastCompletedPhase: 7G');
-    expect(prompt).toContain('nextRecommendedPhase: 7H');
+    expect(prompt).toContain('lastCompletedPhase: 7H');
+    expect(prompt).toContain('nextRecommendedPhase: 8A');
     expect(prompt).toContain('prototype consumer is read-only validation');
-    expect(prompt).toContain('Phase 7A/7B/7C/7D/7E/7F/7G shell');
+    expect(prompt).toContain('Phase 7A/7B/7C/7D/7E/7F/7G/7H shell');
     expect(prompt).toContain('photo intake is placeholder-only');
     expect(prompt).toContain('node scripts/context-pack.mjs --json');
   });

@@ -13,7 +13,7 @@ describe('UserAppReadinessPanel', () => {
     expect(html).toContain('App 就绪度检查');
     expect(html).toContain('模板包');
     expect(html).toContain('移动端交互 QA');
-    expect(html).toContain('不是生产 App');
+    expect(html).toContain('不会创建生产 App');
     expect(html).not.toContain('blob:');
     expect(html).not.toContain('data:image/');
     expect(html).not.toContain('C:\\');
