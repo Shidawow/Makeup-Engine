@@ -1,11 +1,11 @@
 import { ArrowDown, ArrowUp, Plus, Trash2 } from 'lucide-react';
 import type { ReactNode } from 'react';
-import { actionLabels, pressureLabels, regionLabels } from '../data/displayLabels';
-import { MAKEUP_ACTIONS, MAKEUP_REGIONS } from '../types/makeup';
-import type { ActionPressure, MakeupActionType, MakeupRegion } from '../types/makeup';
-import { useTemplateStore } from '../store/templateStore';
-
-const pressureOptions: ActionPressure[] = ['light', 'medium', 'firm'];
+import { useStepPanel } from '../runtime/useMakeupRuntime';
+import type {
+  ActionPressure,
+  MakeupActionType,
+  MakeupRegion,
+} from '../runtime/useMakeupRuntime';
 
 interface TextFieldProps {
   label: string;
@@ -69,20 +69,26 @@ function FieldGroup({
 }
 
 export function StepEditor() {
-  const steps = useTemplateStore((state) => state.template.steps);
-  const selectedRegion = useTemplateStore((state) => state.selectedRegion);
-  const selectedStepId = useTemplateStore((state) => state.selectedStepId);
-  const addStep = useTemplateStore((state) => state.addStep);
-  const updateStep = useTemplateStore((state) => state.updateStep);
-  const updateStepTool = useTemplateStore((state) => state.updateStepTool);
-  const updateStepProduct = useTemplateStore((state) => state.updateStepProduct);
-  const updateStepAction = useTemplateStore((state) => state.updateStepAction);
-  const updateStepPlacement = useTemplateStore((state) => state.updateStepPlacement);
-  const updateStepEffect = useTemplateStore((state) => state.updateStepEffect);
-  const removeStep = useTemplateStore((state) => state.removeStep);
-  const moveStep = useTemplateStore((state) => state.moveStep);
-  const setSelectedStepId = useTemplateStore((state) => state.setSelectedStepId);
-  const activeStep = steps.find((step) => step.step_id === selectedStepId) ?? steps[0];
+  const {
+    steps,
+    tabs,
+    activeStep,
+    activeStepIndex,
+    selectedRegion,
+    regionOptions,
+    actionOptions,
+    pressureOptions,
+    selectStep,
+    addStep,
+    updateStep,
+    updateStepTool,
+    updateStepProduct,
+    updateStepAction,
+    updateStepPlacement,
+    updateStepEffect,
+    removeStep,
+    moveStep,
+  } = useStepPanel();
 
   return (
     <div className="min-w-0 rounded-lg border border-stone-200 bg-white/85 shadow-soft">
@@ -103,18 +109,18 @@ export function StepEditor() {
 
       <div className="grid gap-4 p-5">
         <div className="flex gap-2 overflow-x-auto pb-1">
-          {steps.map((step, index) => (
+          {tabs.map((tab) => (
             <button
               className={`min-h-10 shrink-0 rounded-md border px-3 text-sm transition ${
-                step.step_id === activeStep?.step_id
+                tab.active
                   ? 'border-teal-600 bg-teal-50 text-teal-900'
                   : 'border-stone-200 bg-white text-stone-600 hover:border-stone-300'
               }`}
-              key={step.step_id}
-              onClick={() => setSelectedStepId(step.step_id)}
+              key={tab.id}
+              onClick={() => selectStep(tab.id)}
               type="button"
             >
-              {index + 1}. {regionLabels[step.region]}
+              {tab.label}
             </button>
           ))}
         </div>
@@ -123,7 +129,7 @@ export function StepEditor() {
           <div className="grid gap-4">
             <div className="flex items-center justify-between gap-3 rounded-md bg-stone-50 px-3 py-2">
               <span className="text-sm font-medium text-stone-700">
-                正在编辑第 {steps.findIndex((step) => step.step_id === activeStep.step_id) + 1} 步
+                正在编辑第 {activeStepIndex + 1} 步
               </span>
               <div className="flex gap-1">
                 <button
@@ -153,15 +159,15 @@ export function StepEditor() {
               </div>
             </div>
 
-            <FieldGroup title="Step">
+            <FieldGroup title="步骤基础信息">
               <TextField
-                label="step_id"
+                label="步骤 ID"
                 onChange={(step_id) => updateStep(activeStep.step_id, { step_id })}
                 value={activeStep.step_id}
               />
               <label className="grid gap-1.5">
                 <span className="text-xs font-medium uppercase tracking-wide text-stone-500">
-                  region
+                  区域
                 </span>
                 <select
                   className="h-10 rounded-md border border-stone-200 bg-white px-3 text-sm"
@@ -172,9 +178,9 @@ export function StepEditor() {
                   }
                   value={activeStep.region}
                 >
-                  {MAKEUP_REGIONS.map((region) => (
-                    <option key={region} value={region}>
-                      {regionLabels[region]}
+                  {regionOptions.map((region) => (
+                    <option key={region.value} value={region.value}>
+                      {region.label}
                     </option>
                   ))}
                 </select>
@@ -183,7 +189,7 @@ export function StepEditor() {
 
             <label className="grid gap-1.5">
               <span className="text-xs font-medium uppercase tracking-wide text-stone-500">
-                goal
+                视觉目标
               </span>
               <textarea
                 className="min-h-20 resize-y rounded-md border border-stone-200 px-3 py-2 text-sm leading-6"
@@ -194,45 +200,45 @@ export function StepEditor() {
               />
             </label>
 
-            <FieldGroup title="Tool">
+            <FieldGroup title="工具">
               <TextField
-                label="type"
+                label="类型"
                 onChange={(type) => updateStepTool(activeStep.step_id, { type })}
                 value={activeStep.tool.type}
               />
               <TextField
-                label="subtype"
+                label="子类型"
                 onChange={(subtype) => updateStepTool(activeStep.step_id, { subtype })}
                 value={activeStep.tool.subtype}
               />
             </FieldGroup>
 
-            <FieldGroup title="Product">
+            <FieldGroup title="产品">
               <TextField
-                label="category"
+                label="品类"
                 onChange={(category) =>
                   updateStepProduct(activeStep.step_id, { category })
                 }
                 value={activeStep.product.category}
               />
               <TextField
-                label="color_family"
+                label="色系"
                 onChange={(color_family) =>
                   updateStepProduct(activeStep.step_id, { color_family })
                 }
                 value={activeStep.product.color_family}
               />
               <TextField
-                label="finish"
+                label="妆效"
                 onChange={(finish) => updateStepProduct(activeStep.step_id, { finish })}
                 value={activeStep.product.finish}
               />
             </FieldGroup>
 
-            <FieldGroup title="Action">
+            <FieldGroup title="动作">
               <label className="grid gap-1.5">
                 <span className="text-xs font-medium uppercase tracking-wide text-stone-500">
-                  type
+                  类型
                 </span>
                 <select
                   className="h-10 rounded-md border border-stone-200 bg-white px-3 text-sm"
@@ -243,15 +249,15 @@ export function StepEditor() {
                   }
                   value={activeStep.action.type}
                 >
-                  {MAKEUP_ACTIONS.map((action) => (
-                    <option key={action} value={action}>
-                      {actionLabels[action]}
+                  {actionOptions.map((action) => (
+                    <option key={action.value} value={action.value}>
+                      {action.label}
                     </option>
                   ))}
                 </select>
               </label>
               <TextField
-                label="direction"
+                label="方向"
                 onChange={(direction) =>
                   updateStepAction(activeStep.step_id, { direction })
                 }
@@ -259,7 +265,7 @@ export function StepEditor() {
               />
               <label className="grid gap-1.5">
                 <span className="text-xs font-medium uppercase tracking-wide text-stone-500">
-                  pressure
+                  力度
                 </span>
                 <select
                   className="h-10 rounded-md border border-stone-200 bg-white px-3 text-sm"
@@ -271,15 +277,15 @@ export function StepEditor() {
                   value={activeStep.action.pressure}
                 >
                   {pressureOptions.map((pressure) => (
-                    <option key={pressure} value={pressure}>
-                      {pressureLabels[pressure]}
+                    <option key={pressure.value} value={pressure.value}>
+                      {pressure.label}
                     </option>
                   ))}
                 </select>
               </label>
               <label className="grid gap-1.5">
                 <span className="text-xs font-medium uppercase tracking-wide text-stone-500">
-                  repeat
+                  重复次数
                 </span>
                 <input
                   className="h-10 rounded-md border border-stone-200 px-3 text-sm"
@@ -295,39 +301,39 @@ export function StepEditor() {
               </label>
             </FieldGroup>
 
-            <FieldGroup title="Placement">
+            <FieldGroup title="位置">
               <TextField
-                label="anchor"
+                label="锚点"
                 onChange={(anchor) =>
                   updateStepPlacement(activeStep.step_id, { anchor })
                 }
                 value={activeStep.placement.anchor}
               />
               <TextField
-                label="shape"
+                label="形状"
                 onChange={(shape) => updateStepPlacement(activeStep.step_id, { shape })}
                 value={activeStep.placement.shape}
               />
               <RangeField
-                label="size"
+                label="范围"
                 onChange={(size) => updateStepPlacement(activeStep.step_id, { size })}
                 value={activeStep.placement.size}
               />
             </FieldGroup>
 
-            <FieldGroup title="Effect">
+            <FieldGroup title="效果">
               <RangeField
-                label="contrast"
+                label="对比度"
                 onChange={(contrast) => updateStepEffect(activeStep.step_id, { contrast })}
                 value={activeStep.effect.contrast}
               />
               <RangeField
-                label="softness"
+                label="柔和度"
                 onChange={(softness) => updateStepEffect(activeStep.step_id, { softness })}
                 value={activeStep.effect.softness}
               />
               <RangeField
-                label="depth"
+                label="深邃度"
                 onChange={(depth) => updateStepEffect(activeStep.step_id, { depth })}
                 value={activeStep.effect.depth}
               />

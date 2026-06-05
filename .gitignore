@@ -1,6 +1,10 @@
 node_modules
 dist
 .test-dist
+.vite
+coverage
+tmp
+public/mediapipe
 .env
 .env.local
 *.local

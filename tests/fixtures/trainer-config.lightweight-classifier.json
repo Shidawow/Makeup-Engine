@@ -1,0 +1,63 @@
+{
+  "artifacts": {
+    "diffFormat": "json-diff-grid",
+    "maskFormat": "json-alpha-grid"
+  },
+  "batchSize": 8,
+  "configId": "trainer-config-lightweight-fixture",
+  "imageConditioned": {
+    "alphaNegativeThreshold": 0.05,
+    "alphaPositiveThreshold": 0.4,
+    "featureStride": 1,
+    "imageConditionedFeatureConfig": {
+      "hsv": true,
+      "localContrast": true,
+      "position": true,
+      "rgb": true,
+      "skinRelative": true
+    },
+    "localContrastWindow": 1,
+    "missingPixelArtifactPolicy": "fail",
+    "pixelArtifactRequired": true,
+    "positiveNegativeBalancePolicy": "all-deterministic",
+    "regions": ["lips", "blush", "eyeshadow"],
+    "scoreThresholdPolicy": "midpoint",
+    "skinBaselinePolicy": "mask-negative-pixels",
+    "trainerKind": "image-conditioned-pixel-prior"
+  },
+  "lightweight": {
+    "alphaNegativeThreshold": 0.05,
+    "alphaPositiveThreshold": 0.4,
+    "artifactFormatPreference": "json-alpha-grid",
+    "classifierKind": "nearest-centroid",
+    "featureNormalization": "range",
+    "featureSet": ["rgb", "hsv", "skin-relative", "local-contrast", "position"],
+    "featureStride": 1,
+    "learningRate": 0.05,
+    "maxIterations": 8,
+    "missingBinaryMaskPolicy": "warn",
+    "missingPixelArtifactPolicy": "fail",
+    "postProcessingPolicy": "smooth-4-neighborhood",
+    "regions": ["lips", "blush", "eyeshadow"],
+    "regularization": 0,
+    "thresholdPolicy": "centroid-midpoint",
+    "trainerKind": "lightweight-segmentation-classifier"
+  },
+  "quality": {
+    "excludeLowQuality": true,
+    "minQualityScore": 0.7
+  },
+  "regions": {
+    "enabledRegions": ["lips", "blush", "eyeshadow"],
+    "minSamplesPerRegion": 1
+  },
+  "runtime": {
+    "runtimeKind": "dry-run",
+    "runtimeVersion": "dry-run-v0.1"
+  },
+  "schemaVersion": "trainer-config-v0.1",
+  "splitPolicy": {
+    "allowTrainTestLeakage": false,
+    "requireTrainValidationTest": true
+  }
+}

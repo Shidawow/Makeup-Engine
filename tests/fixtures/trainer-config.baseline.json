@@ -1,0 +1,38 @@
+{
+  "artifacts": {
+    "diffFormat": "json-diff-grid",
+    "maskFormat": "json-alpha-grid"
+  },
+  "baseline": {
+    "alphaThreshold": 0.5,
+    "artifactFormat": "baseline-mask-prior-json",
+    "confidencePolicy": "quality-weighted",
+    "evaluationSplits": ["validation", "test"],
+    "minSamplesPerRegion": 1,
+    "missingRegionPolicy": "warn",
+    "modelOutputFormat": "baseline-mask-prior-json",
+    "qualityThreshold": 0.7,
+    "regions": ["lips", "blush", "eyeshadow"],
+    "resizePolicy": "nearest",
+    "trainerKind": "baseline-mask-prior"
+  },
+  "batchSize": 8,
+  "configId": "trainer-config-baseline-fixture-v0.1",
+  "quality": {
+    "excludeLowQuality": true,
+    "minQualityScore": 0.7
+  },
+  "regions": {
+    "enabledRegions": ["lips", "blush", "eyeshadow"],
+    "minSamplesPerRegion": 1
+  },
+  "runtime": {
+    "runtimeKind": "dry-run",
+    "runtimeVersion": "baseline-mask-prior-v0.1"
+  },
+  "schemaVersion": "trainer-config-v0.1",
+  "splitPolicy": {
+    "allowTrainTestLeakage": false,
+    "requireTrainValidationTest": true
+  }
+}

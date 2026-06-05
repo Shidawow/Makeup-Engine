@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "offline-training-package-v0.1",
+  "reportId": "operator-audit-fixture",
+  "packageId": "offline-package-fixture",
+  "sourceReviewedDatasetId": "dataset-fixture",
+  "sourceTrainingManifestId": "training-manifest-fixture",
+  "createdAt": "2026-05-30T00:00:00.000Z",
+  "correctionSummary": {
+    "totalCorrections": 3,
+    "regionCounts": {
+      "lips": 1,
+      "blush": 1,
+      "eyeshadow": 1,
+      "eyeliner": 0,
+      "contour": 0,
+      "highlight": 0
+    },
+    "averageCorrectionConfidence": 0.9
+  },
+  "reviewSummary": {
+    "accepted": 3,
+    "rejected": 0,
+    "needsSecondReview": 0,
+    "readyForTraining": 3,
+    "reviewerCounts": {
+      "fixture-reviewer": 3
+    }
+  },
+  "rejectedReasonSummary": {},
+  "readinessSummary": {
+    "trainingReadySamples": 3,
+    "blockedSamples": 0,
+    "validationPassed": true,
+    "warnings": []
+  },
+  "recommendations": ["ready for materialization"]
+}

@@ -1,13 +1,16 @@
 import { Plus, RotateCcw, X } from 'lucide-react';
 import { useState } from 'react';
-import { useTemplateStore } from '../store/templateStore';
+import { useTemplatePanel } from '../runtime/useMakeupRuntime';
 
 export function TemplateEditor() {
-  const template = useTemplateStore((state) => state.template);
-  const updateMetadata = useTemplateStore((state) => state.updateMetadata);
-  const addStyleTag = useTemplateStore((state) => state.addStyleTag);
-  const removeStyleTag = useTemplateStore((state) => state.removeStyleTag);
-  const resetTemplate = useTemplateStore((state) => state.resetTemplate);
+  const {
+    metadata,
+    styleTags,
+    updateMetadata,
+    addStyleTag,
+    removeStyleTag,
+    resetTemplate,
+  } = useTemplatePanel();
   const [tagValue, setTagValue] = useState('');
 
   const submitTag = () => {
@@ -40,7 +43,7 @@ export function TemplateEditor() {
           <input
             className="h-10 rounded-md border border-stone-200 bg-white px-3 text-sm text-stone-950"
             onChange={(event) => updateMetadata({ name: event.target.value })}
-            value={template.metadata.name}
+            value={metadata.name}
           />
         </label>
 
@@ -52,7 +55,7 @@ export function TemplateEditor() {
             <input
               className="h-10 rounded-md border border-stone-200 bg-white px-3 text-sm"
               onChange={(event) => updateMetadata({ version: event.target.value })}
-              value={template.metadata.version}
+              value={metadata.version}
             />
           </label>
           <label className="grid gap-1.5">
@@ -62,7 +65,7 @@ export function TemplateEditor() {
             <input
               className="h-10 rounded-md border border-stone-200 bg-white px-3 text-sm"
               onChange={(event) => updateMetadata({ author: event.target.value })}
-              value={template.metadata.author}
+              value={metadata.author}
             />
           </label>
         </div>
@@ -74,7 +77,7 @@ export function TemplateEditor() {
           <textarea
             className="min-h-24 resize-y rounded-md border border-stone-200 bg-white px-3 py-2 text-sm leading-6"
             onChange={(event) => updateMetadata({ description: event.target.value })}
-            value={template.metadata.description}
+            value={metadata.description}
           />
         </label>
 
@@ -83,7 +86,7 @@ export function TemplateEditor() {
             风格标签
           </span>
           <div className="flex flex-wrap gap-2">
-            {template.styleTags.map((tag) => (
+            {styleTags.map((tag) => (
               <span
                 className="inline-flex min-h-8 items-center gap-1 rounded-md bg-rose-50 px-2.5 text-sm text-rose-900 ring-1 ring-rose-100"
                 key={tag}
@@ -125,9 +128,9 @@ export function TemplateEditor() {
         </div>
 
         <div className="rounded-lg border border-stone-200 bg-stone-50 p-3 text-xs leading-5 text-stone-500">
-          <p>ID: {template.metadata.id}</p>
-          <p>创建时间：{new Date(template.metadata.createdAt).toLocaleString()}</p>
-          <p>更新时间：{new Date(template.metadata.updatedAt).toLocaleString()}</p>
+          <p>ID: {metadata.id}</p>
+          <p>创建时间：{new Date(metadata.createdAt).toLocaleString()}</p>
+          <p>更新时间：{new Date(metadata.updatedAt).toLocaleString()}</p>
         </div>
       </div>
     </div>

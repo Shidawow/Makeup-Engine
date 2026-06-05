@@ -1,0 +1,65 @@
+import type { MakeupTemplate } from '../schema/types';
+
+export const naturalDailyMakeup: MakeupTemplate = {
+  id: 'template-natural-daily-v01',
+  name: 'Natural Daily Makeup',
+  goals: ['brighten_skin', 'natural_glow', 'enlarge_eye'],
+  metadata: {
+    style: 'natural',
+  },
+  steps: [
+    {
+      id: 'step-01-skin-prep',
+      region: 'face',
+      action: 'prep',
+      tool: 'finger',
+      intensity: 'low',
+      description: 'Warm a thin layer of base product into the skin for an even surface.',
+    },
+    {
+      id: 'step-02-brighten-base',
+      region: 'face',
+      action: 'brighten',
+      tool: 'sponge',
+      intensity: 'medium',
+      description: 'Tap coverage through the center of the face to brighten dull areas.',
+      dependency: 'step-01-skin-prep',
+    },
+    {
+      id: 'step-03-natural-glow',
+      region: 'face',
+      action: 'blend',
+      tool: 'finger',
+      intensity: 'low',
+      description: 'Blend a subtle glow over the high points while keeping the skin natural.',
+      dependency: 'step-02-brighten-base',
+    },
+    {
+      id: 'step-04-soft-eyebrow',
+      region: 'eyebrow',
+      action: 'define',
+      tool: 'brush',
+      intensity: 'low',
+      description: 'Define the brow shape softly without creating a hard edge.',
+      dependency: 'step-03-natural-glow',
+    },
+    {
+      id: 'step-05-eye-lift',
+      region: 'eye',
+      action: 'blend',
+      tool: 'brush',
+      intensity: 'medium',
+      description: 'Blend a neutral shade upward at the outer eye to make the eyes look larger.',
+      dependency: 'step-04-soft-eyebrow',
+    },
+    {
+      id: 'step-06-natural-lip',
+      region: 'lip',
+      action: 'apply',
+      tool: 'finger',
+      intensity: 'low',
+      description: 'Press color into the center of the lips and soften it outward.',
+      dependency: 'step-05-eye-lift',
+    },
+  ],
+};

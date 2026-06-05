@@ -1,0 +1,1 @@
+{"createdAt":"2026-05-30T00:00:00.000Z","datasetId":"materialized-realistic-synthetic-fixture","packageId":"offline-package-realistic-synthetic-fixture","readinessSummary":{"blockedSamples":0,"trainingReadySamples":18,"validationPassed":true,"warnings":[]},"reportId":"operator-audit-realistic-synthetic-fixture","schemaVersion":"offline-training-package-v0.1"}

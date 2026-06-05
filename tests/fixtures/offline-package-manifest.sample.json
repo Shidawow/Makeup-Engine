@@ -1,0 +1,95 @@
+{
+  "schemaVersion": "offline-training-package-v0.1",
+  "packageId": "offline-package-fixture",
+  "datasetVersion": {
+    "versionId": "offline-dataset-version-fixture",
+    "datasetId": "dataset-fixture",
+    "trainingManifestId": "training-manifest-fixture",
+    "createdAt": "2026-05-30T00:00:00.000Z",
+    "sampleCount": 3,
+    "fingerprint": "fixture",
+    "labels": ["reviewed-dataset", "segmentation-training"]
+  },
+  "createdAt": "2026-05-30T00:00:00.000Z",
+  "sourceReviewedDatasetId": "dataset-fixture",
+  "sourceTrainingManifestId": "training-manifest-fixture",
+  "entryCount": 3,
+  "imageReferenceCount": 3,
+  "maskArtifactCount": 9,
+  "splitSummary": {
+    "train": 1,
+    "validation": 1,
+    "test": 1,
+    "holdout": 0,
+    "unassigned": 0
+  },
+  "regionSummary": {
+    "lips": 1,
+    "blush": 1,
+    "eyeshadow": 1,
+    "eyeliner": 0,
+    "contour": 0,
+    "highlight": 0
+  },
+  "qualitySummary": {
+    "minQualityScore": 0.82,
+    "maxQualityScore": 0.94,
+    "averageQualityScore": 0.8867
+  },
+  "validationSummary": {
+    "schemaVersion": "offline-training-package-v0.1",
+    "valid": true,
+    "checkedAt": "2026-05-30T00:00:00.000Z",
+    "errors": [],
+    "warnings": [],
+    "summary": {
+      "sampleReferenceCount": 3,
+      "imageReferenceCount": 3,
+      "maskArtifactCount": 9,
+      "splitCompleteness": {
+        "train": true,
+        "validation": true,
+        "test": true
+      },
+      "leakageIssueCount": 0,
+      "lowQualityExcludedCount": 0
+    }
+  },
+  "auditSummary": {
+    "schemaVersion": "offline-training-package-v0.1",
+    "reportId": "operator-audit-fixture",
+    "packageId": "offline-package-fixture",
+    "sourceReviewedDatasetId": "dataset-fixture",
+    "sourceTrainingManifestId": "training-manifest-fixture",
+    "createdAt": "2026-05-30T00:00:00.000Z",
+    "correctionSummary": {
+      "totalCorrections": 3,
+      "regionCounts": {
+        "lips": 1,
+        "blush": 1,
+        "eyeshadow": 1,
+        "eyeliner": 0,
+        "contour": 0,
+        "highlight": 0
+      },
+      "averageCorrectionConfidence": 0.9
+    },
+    "reviewSummary": {
+      "accepted": 3,
+      "rejected": 0,
+      "needsSecondReview": 0,
+      "readyForTraining": 3,
+      "reviewerCounts": {
+        "fixture-reviewer": 3
+      }
+    },
+    "rejectedReasonSummary": {},
+    "readinessSummary": {
+      "trainingReadySamples": 3,
+      "blockedSamples": 0,
+      "validationPassed": true,
+      "warnings": []
+    },
+    "recommendations": ["ready for materialization"]
+  }
+}

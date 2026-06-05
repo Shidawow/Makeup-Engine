@@ -1,0 +1,412 @@
+{
+  "schemaVersion": "offline-training-package-v0.1",
+  "packageId": "offline-package-fixture",
+  "datasetVersion": {
+    "versionId": "offline-dataset-version-fixture",
+    "datasetId": "dataset-fixture",
+    "trainingManifestId": "training-manifest-fixture",
+    "createdAt": "2026-05-30T00:00:00.000Z",
+    "sampleCount": 3,
+    "fingerprint": "fixture",
+    "labels": ["reviewed-dataset", "segmentation-training"]
+  },
+  "createdAt": "2026-05-30T00:00:00.000Z",
+  "sourceReviewedDatasetId": "dataset-fixture",
+  "sourceTrainingManifestId": "training-manifest-fixture",
+  "entryCount": 3,
+  "imageReferenceCount": 3,
+  "maskArtifactCount": 9,
+  "splitSummary": {
+    "train": 1,
+    "validation": 1,
+    "test": 1,
+    "holdout": 0,
+    "unassigned": 0
+  },
+  "regionSummary": {
+    "lips": 1,
+    "blush": 1,
+    "eyeshadow": 1,
+    "eyeliner": 0,
+    "contour": 0,
+    "highlight": 0
+  },
+  "qualitySummary": {
+    "minQualityScore": 0.82,
+    "maxQualityScore": 0.94,
+    "averageQualityScore": 0.8867
+  },
+  "validationSummary": {
+    "schemaVersion": "offline-training-package-v0.1",
+    "valid": true,
+    "checkedAt": "2026-05-30T00:00:00.000Z",
+    "errors": [],
+    "warnings": [],
+    "summary": {
+      "sampleReferenceCount": 3,
+      "imageReferenceCount": 3,
+      "maskArtifactCount": 9,
+      "splitCompleteness": {
+        "train": true,
+        "validation": true,
+        "test": true
+      },
+      "leakageIssueCount": 0,
+      "lowQualityExcludedCount": 0
+    }
+  },
+  "auditSummary": {
+    "schemaVersion": "offline-training-package-v0.1",
+    "reportId": "operator-audit-fixture",
+    "packageId": "offline-package-fixture",
+    "sourceReviewedDatasetId": "dataset-fixture",
+    "sourceTrainingManifestId": "training-manifest-fixture",
+    "createdAt": "2026-05-30T00:00:00.000Z",
+    "correctionSummary": {
+      "totalCorrections": 3,
+      "regionCounts": {
+        "lips": 1,
+        "blush": 1,
+        "eyeshadow": 1,
+        "eyeliner": 0,
+        "contour": 0,
+        "highlight": 0
+      },
+      "averageCorrectionConfidence": 0.9
+    },
+    "reviewSummary": {
+      "accepted": 3,
+      "rejected": 0,
+      "needsSecondReview": 0,
+      "readyForTraining": 3,
+      "reviewerCounts": {
+        "fixture-reviewer": 3
+      }
+    },
+    "rejectedReasonSummary": {},
+    "readinessSummary": {
+      "trainingReadySamples": 3,
+      "blockedSamples": 0,
+      "validationPassed": true,
+      "warnings": []
+    },
+    "recommendations": ["ready for materialization"]
+  },
+  "entries": [
+    {
+      "entryId": "entry-train",
+      "sampleId": "sample-fixture-train",
+      "imageId": "image-train",
+      "templateId": "template-a",
+      "split": "train",
+      "regionId": "lips",
+      "qualityScore": 0.94,
+      "sampleWeight": 1,
+      "imageReferenceId": "image-ref-train",
+      "maskArtifactIds": {
+        "originalMask": "artifact-train-original",
+        "humanEditedMask": "artifact-train-edited",
+        "diffHeatmap": "artifact-train-diff"
+      },
+      "validationStatus": "ready",
+      "warnings": []
+    },
+    {
+      "entryId": "entry-validation",
+      "sampleId": "sample-fixture-validation",
+      "imageId": "image-validation",
+      "templateId": "template-a",
+      "split": "validation",
+      "regionId": "blush",
+      "qualityScore": 0.9,
+      "sampleWeight": 1,
+      "imageReferenceId": "image-ref-validation",
+      "maskArtifactIds": {
+        "originalMask": "artifact-validation-original",
+        "humanEditedMask": "artifact-validation-edited",
+        "diffHeatmap": "artifact-validation-diff"
+      },
+      "validationStatus": "ready",
+      "warnings": []
+    },
+    {
+      "entryId": "entry-test",
+      "sampleId": "sample-fixture-test",
+      "imageId": "image-test",
+      "templateId": "template-a",
+      "split": "test",
+      "regionId": "eyeshadow",
+      "qualityScore": 0.82,
+      "sampleWeight": 1,
+      "imageReferenceId": "image-ref-test",
+      "maskArtifactIds": {
+        "originalMask": "artifact-test-original",
+        "humanEditedMask": "artifact-test-edited",
+        "diffHeatmap": "artifact-test-diff"
+      },
+      "validationStatus": "ready",
+      "warnings": []
+    }
+  ],
+  "imageReferences": [
+    {
+      "imageReferenceId": "image-ref-train",
+      "imageId": "image-train",
+      "split": "train",
+      "sampleIds": ["sample-fixture-train"],
+      "referenceUri": "offline://images/image-train",
+      "checksum": "image-train-checksum",
+      "source": "reviewed-dataset"
+    },
+    {
+      "imageReferenceId": "image-ref-validation",
+      "imageId": "image-validation",
+      "split": "validation",
+      "sampleIds": ["sample-fixture-validation"],
+      "referenceUri": "offline://images/image-validation",
+      "checksum": "image-validation-checksum",
+      "source": "reviewed-dataset"
+    },
+    {
+      "imageReferenceId": "image-ref-test",
+      "imageId": "image-test",
+      "split": "test",
+      "sampleIds": ["sample-fixture-test"],
+      "referenceUri": "offline://images/image-test",
+      "checksum": "image-test-checksum",
+      "source": "reviewed-dataset"
+    }
+  ],
+  "maskArtifacts": [
+    {
+      "artifactId": "artifact-train-original",
+      "sampleId": "sample-fixture-train",
+      "maskId": "mask-train-original",
+      "target": "lips",
+      "regionId": "lips",
+      "artifactKind": "original_mask",
+      "width": 3,
+      "height": 3,
+      "alphaStats": { "min": 0, "max": 0.8, "mean": 0.2, "activeRatio": 0.33 },
+      "bounds": { "x": 0.2, "y": 0.2, "width": 0.4, "height": 0.2, "space": "normalized-image" },
+      "source": "human-correction-sample",
+      "checksum": "artifact-train-original-checksum",
+      "referenceUri": "offline://mask-artifacts/artifact-train-original.json"
+    },
+    {
+      "artifactId": "artifact-train-edited",
+      "sampleId": "sample-fixture-train",
+      "maskId": "mask-train-edited",
+      "target": "lips",
+      "regionId": "lips",
+      "artifactKind": "human_edited_mask",
+      "width": 3,
+      "height": 3,
+      "alphaStats": { "min": 0, "max": 0.9, "mean": 0.25, "activeRatio": 0.44 },
+      "bounds": { "x": 0.2, "y": 0.2, "width": 0.4, "height": 0.2, "space": "normalized-image" },
+      "source": "human-correction-sample",
+      "checksum": "artifact-train-edited-checksum",
+      "referenceUri": "offline://mask-artifacts/artifact-train-edited.json"
+    },
+    {
+      "artifactId": "artifact-train-diff",
+      "sampleId": "sample-fixture-train",
+      "maskId": "mask-train-diff",
+      "target": "lips",
+      "regionId": "lips",
+      "artifactKind": "diff_heatmap",
+      "width": 3,
+      "height": 3,
+      "alphaStats": { "min": 0, "max": 0.2, "mean": 0.05, "activeRatio": 0.22 },
+      "bounds": { "x": 0.2, "y": 0.2, "width": 0.4, "height": 0.2, "space": "normalized-image" },
+      "source": "mask-diff",
+      "checksum": "artifact-train-diff-checksum",
+      "referenceUri": "offline://mask-artifacts/artifact-train-diff.json"
+    },
+    {
+      "artifactId": "artifact-validation-original",
+      "sampleId": "sample-fixture-validation",
+      "maskId": "mask-validation-original",
+      "target": "blush",
+      "regionId": "blush",
+      "artifactKind": "original_mask",
+      "width": 3,
+      "height": 3,
+      "alphaStats": { "min": 0, "max": 0.7, "mean": 0.18, "activeRatio": 0.33 },
+      "bounds": { "x": 0.35, "y": 0.45, "width": 0.2, "height": 0.2, "space": "normalized-image" },
+      "source": "human-correction-sample",
+      "checksum": "artifact-validation-original-checksum",
+      "referenceUri": "offline://mask-artifacts/artifact-validation-original.json"
+    },
+    {
+      "artifactId": "artifact-validation-edited",
+      "sampleId": "sample-fixture-validation",
+      "maskId": "mask-validation-edited",
+      "target": "blush",
+      "regionId": "blush",
+      "artifactKind": "human_edited_mask",
+      "width": 3,
+      "height": 3,
+      "alphaStats": { "min": 0, "max": 0.8, "mean": 0.22, "activeRatio": 0.44 },
+      "bounds": { "x": 0.35, "y": 0.45, "width": 0.2, "height": 0.2, "space": "normalized-image" },
+      "source": "human-correction-sample",
+      "checksum": "artifact-validation-edited-checksum",
+      "referenceUri": "offline://mask-artifacts/artifact-validation-edited.json"
+    },
+    {
+      "artifactId": "artifact-validation-diff",
+      "sampleId": "sample-fixture-validation",
+      "maskId": "mask-validation-diff",
+      "target": "blush",
+      "regionId": "blush",
+      "artifactKind": "diff_heatmap",
+      "width": 3,
+      "height": 3,
+      "alphaStats": { "min": 0, "max": 0.16, "mean": 0.04, "activeRatio": 0.22 },
+      "bounds": { "x": 0.35, "y": 0.45, "width": 0.2, "height": 0.2, "space": "normalized-image" },
+      "source": "mask-diff",
+      "checksum": "artifact-validation-diff-checksum",
+      "referenceUri": "offline://mask-artifacts/artifact-validation-diff.json"
+    },
+    {
+      "artifactId": "artifact-test-original",
+      "sampleId": "sample-fixture-test",
+      "maskId": "mask-test-original",
+      "target": "eyeshadow",
+      "regionId": "eyeshadow",
+      "artifactKind": "original_mask",
+      "width": 3,
+      "height": 3,
+      "alphaStats": { "min": 0, "max": 0.6, "mean": 0.16, "activeRatio": 0.33 },
+      "bounds": { "x": 0.25, "y": 0.25, "width": 0.5, "height": 0.2, "space": "normalized-image" },
+      "source": "human-correction-sample",
+      "checksum": "artifact-test-original-checksum",
+      "referenceUri": "offline://mask-artifacts/artifact-test-original.json"
+    },
+    {
+      "artifactId": "artifact-test-edited",
+      "sampleId": "sample-fixture-test",
+      "maskId": "mask-test-edited",
+      "target": "eyeshadow",
+      "regionId": "eyeshadow",
+      "artifactKind": "human_edited_mask",
+      "width": 3,
+      "height": 3,
+      "alphaStats": { "min": 0, "max": 0.72, "mean": 0.2, "activeRatio": 0.44 },
+      "bounds": { "x": 0.25, "y": 0.25, "width": 0.5, "height": 0.2, "space": "normalized-image" },
+      "source": "human-correction-sample",
+      "checksum": "artifact-test-edited-checksum",
+      "referenceUri": "offline://mask-artifacts/artifact-test-edited.json"
+    },
+    {
+      "artifactId": "artifact-test-diff",
+      "sampleId": "sample-fixture-test",
+      "maskId": "mask-test-diff",
+      "target": "eyeshadow",
+      "regionId": "eyeshadow",
+      "artifactKind": "diff_heatmap",
+      "width": 3,
+      "height": 3,
+      "alphaStats": { "min": 0, "max": 0.12, "mean": 0.04, "activeRatio": 0.22 },
+      "bounds": { "x": 0.25, "y": 0.25, "width": 0.5, "height": 0.2, "space": "normalized-image" },
+      "source": "mask-diff",
+      "checksum": "artifact-test-diff-checksum",
+      "referenceUri": "offline://mask-artifacts/artifact-test-diff.json"
+    }
+  ],
+  "manifest": {
+    "schemaVersion": "offline-training-package-v0.1",
+    "packageId": "offline-package-fixture",
+    "datasetVersion": {
+      "versionId": "offline-dataset-version-fixture",
+      "datasetId": "dataset-fixture",
+      "trainingManifestId": "training-manifest-fixture",
+      "createdAt": "2026-05-30T00:00:00.000Z",
+      "sampleCount": 3,
+      "fingerprint": "fixture",
+      "labels": ["reviewed-dataset", "segmentation-training"]
+    },
+    "createdAt": "2026-05-30T00:00:00.000Z",
+    "sourceReviewedDatasetId": "dataset-fixture",
+    "sourceTrainingManifestId": "training-manifest-fixture",
+    "entryCount": 3,
+    "imageReferenceCount": 3,
+    "maskArtifactCount": 9,
+    "splitSummary": {
+      "train": 1,
+      "validation": 1,
+      "test": 1,
+      "holdout": 0,
+      "unassigned": 0
+    },
+    "regionSummary": {
+      "lips": 1,
+      "blush": 1,
+      "eyeshadow": 1,
+      "eyeliner": 0,
+      "contour": 0,
+      "highlight": 0
+    },
+    "qualitySummary": {
+      "minQualityScore": 0.82,
+      "maxQualityScore": 0.94,
+      "averageQualityScore": 0.8867
+    },
+    "validationSummary": {
+      "schemaVersion": "offline-training-package-v0.1",
+      "valid": true,
+      "checkedAt": "2026-05-30T00:00:00.000Z",
+      "errors": [],
+      "warnings": [],
+      "summary": {
+        "sampleReferenceCount": 3,
+        "imageReferenceCount": 3,
+        "maskArtifactCount": 9,
+        "splitCompleteness": {
+          "train": true,
+          "validation": true,
+          "test": true
+        },
+        "leakageIssueCount": 0,
+        "lowQualityExcludedCount": 0
+      }
+    },
+    "auditSummary": {
+      "schemaVersion": "offline-training-package-v0.1",
+      "reportId": "operator-audit-fixture",
+      "packageId": "offline-package-fixture",
+      "sourceReviewedDatasetId": "dataset-fixture",
+      "sourceTrainingManifestId": "training-manifest-fixture",
+      "createdAt": "2026-05-30T00:00:00.000Z",
+      "correctionSummary": {
+        "totalCorrections": 3,
+        "regionCounts": {
+          "lips": 1,
+          "blush": 1,
+          "eyeshadow": 1,
+          "eyeliner": 0,
+          "contour": 0,
+          "highlight": 0
+        },
+        "averageCorrectionConfidence": 0.9
+      },
+      "reviewSummary": {
+        "accepted": 3,
+        "rejected": 0,
+        "needsSecondReview": 0,
+        "readyForTraining": 3,
+        "reviewerCounts": {
+          "fixture-reviewer": 3
+        }
+      },
+      "rejectedReasonSummary": {},
+      "readinessSummary": {
+        "trainingReadySamples": 3,
+        "blockedSamples": 0,
+        "validationPassed": true,
+        "warnings": []
+      },
+      "recommendations": ["ready for materialization"]
+    }
+  }
+}

@@ -1,13 +1,9 @@
-import type { MakeupTemplate } from '../types/makeup';
+import { createTemplateFileName, toTemplateJson } from '../schema/json';
+import type { MakeupTemplate } from '../schema/legacyTypes';
 
-export const toTemplateJson = (template: MakeupTemplate) =>
-  JSON.stringify(template, null, 2);
+export { createTemplateFileName, toTemplateJson };
 
 export const downloadTemplateJson = (template: MakeupTemplate) => {
-  const fileName = `${template.metadata.name
-    .trim()
-    .replace(/[\\/:*?"<>|]+/g, '-')
-    .replace(/^-|-$/g, '') || 'makeup-template'}.json`;
   const blob = new Blob([toTemplateJson(template)], {
     type: 'application/json;charset=utf-8',
   });
@@ -15,7 +11,7 @@ export const downloadTemplateJson = (template: MakeupTemplate) => {
   const anchor = document.createElement('a');
 
   anchor.href = url;
-  anchor.download = fileName;
+  anchor.download = createTemplateFileName(template);
   anchor.click();
   URL.revokeObjectURL(url);
 };
