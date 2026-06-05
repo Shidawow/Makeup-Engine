@@ -2,22 +2,24 @@
 
 ## Phase State
 
-- `lastCompletedPhase`: `7H`
-- `lastCompletedBusinessPhase`: `7H`
-- `currentPhase`: `7H`
-- `currentPhaseName`: `Browser / Mobile E2E Interaction QA`
-- `nextRecommendedPhase`: `8A`
-- `nextRecommendedPhaseName`: `Product Route Decision / App MVP Planning`
+- `lastCompletedPhase`: `8A`
+- `lastCompletedBusinessPhase`: `8A`
+- `currentPhase`: `8A`
+- `currentPhaseName`: `Product Route Decision / App MVP Planning`
+- `nextRecommendedPhase`: `8B`
+- `nextRecommendedPhaseName`: `PWA / Mobile Web MVP Polish`
 - `phaseOwner`: `Codex implementation, validation, commit, and push pass`
 
 ## Phase Completion Definition
 
-Phase 7H is complete when:
+Phase 8A is complete when:
 
-- The local User App MVP Shell has a browser/mobile QA harness for HTTP smoke, critical copy, privacy copy, Chinese copy, mobile viewport readiness, and local interaction coverage.
-- The shell keeps default Admin/user-facing copy in Chinese where the UI is user-visible.
-- Narrow viewport coverage includes `375`, `390`, `414`, and `768` width profiles.
-- Empty, warning, blocked, and recovery states are covered by deterministic tests and readiness reports.
-- The harness remains local-only and deterministic and does not add production app scope, backend, database, accounts, cloud sync, analytics, camera, AR, training, OpenAI/external API calls, native iOS, or new runtime dependencies.
+- The future user app route is selected.
+- React Web / PWA MVP first is selected as the technology route.
+- The MVP scope, V1 non-goals, ownership boundary, and Phase 8 roadmap are documented.
+- Makeup Engine ownership versus future user-facing app ownership is documented.
+- `UserAppTemplatePackage` remains the handoff contract.
+- Phase 7H QA evidence is accepted for planning but not production release approval.
+- The phase remains planning-only and does not add production app code, backend, database, accounts, analytics, camera, AR, training, native iOS, OpenAI/external APIs, online publication, or new runtime dependencies.
 - Documentation and project-state handoff are updated.
-- Typecheck, tests, build, project status, context pack, direct JSON status, direct JSON context, and browser/mobile smoke pass.
+- Typecheck, tests, build, project status, context pack, direct JSON status, and direct JSON context pass.

@@ -1,5 +1,5 @@
 {
-  "phase": "7H",
+  "phase": "8A",
   "guardrails": [
     {
       "id": "source-image-not-training-data",
@@ -252,6 +252,34 @@
     {
       "id": "root_agents_md_required",
       "rule": "Repository root AGENTS.md is required as the short agent entry point for source-of-truth, validation, compact handoff, and external skill rules."
+    },
+    {
+      "id": "phase_8a_planning_only",
+      "rule": "Phase 8A is product route and ownership planning only; it must not implement the production user app."
+    },
+    {
+      "id": "phase_8a_web_first_route_not_app",
+      "rule": "Phase 8A selects React Web / PWA MVP first, but that decision is not a Web app implementation, deployment, backend, analytics surface, online release, native implementation, camera flow, AR flow, ecommerce/community/paid scope, OpenAI API, external API, training phase, or app store release approval."
+    },
+    {
+      "id": "phase_8a_separate_app_boundary",
+      "rule": "Future production user-facing app work must be planned as a separate app surface or repository after an explicit phase gate; Makeup Engine remains the template production system."
+    },
+    {
+      "id": "phase_8a_contract_boundary",
+      "rule": "UserAppTemplatePackage remains the handoff contract and route planning cannot mutate package data, templates, shell state, training data, or project-state user records."
+    },
+    {
+      "id": "phase_8a_no_runtime_expansion",
+      "rule": "Phase 8A must not add backend, database, accounts, analytics, camera, AR, OpenAI API, external API, training, native iOS implementation, online publication, production app code, or new runtime dependencies."
+    },
+    {
+      "id": "phase_8a_no_native_or_commerce_scope",
+      "rule": "Phase 8A must not add React Native, Flutter, iOS native, ecommerce, community, paid features, app store release work, TestFlight work, real photo capture, or model training."
+    },
+    {
+      "id": "phase_8a_source_image_not_user_app_input",
+      "rule": "SourceImagePackage cannot directly enter the future User App; the future MVP must consume validated UserAppTemplatePackage exports only."
     }
   ],
   "legacyFrozenModules": [

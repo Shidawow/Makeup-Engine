@@ -4,14 +4,15 @@
       "name": "typecheck",
       "command": "npm run typecheck",
       "purpose": "Validate TypeScript project references.",
-      "lastStatus": "passed"
+      "lastStatus": "passed",
+      "lastSummary": "TypeScript project references passed after Phase 8A product route planning sync."
     },
     {
       "name": "test",
       "command": "npm run test",
       "purpose": "Run Vitest regression coverage.",
       "lastStatus": "passed",
-      "lastSummary": "360 test files passed; 497 tests passed."
+      "lastSummary": "Full Vitest suite passed: 363 test files, 503 tests."
     },
     {
       "name": "build",
@@ -24,33 +25,37 @@
       "name": "project-status",
       "command": "npm run project:status",
       "purpose": "Print human-readable project recovery status.",
-      "lastStatus": "passed"
+      "lastStatus": "passed",
+      "lastSummary": "Human-readable project status passed after final Phase 8A state sync."
     },
     {
       "name": "project-status-json",
       "command": "node scripts/project-status.mjs --json",
       "purpose": "Print machine-readable project recovery status.",
-      "lastStatus": "passed"
+      "lastStatus": "passed",
+      "lastSummary": "Machine-readable project status passed after final Phase 8A state sync."
     },
     {
       "name": "project-context",
       "command": "npm run project:context",
       "purpose": "Print human-readable multi-provider context package.",
-      "lastStatus": "passed"
+      "lastStatus": "passed",
+      "lastSummary": "Human-readable context pack passed after final Phase 8A state sync."
     },
     {
       "name": "context-pack-json",
       "command": "node scripts/context-pack.mjs --json",
       "purpose": "Print machine-readable multi-provider context package.",
-      "lastStatus": "passed"
+      "lastStatus": "passed",
+      "lastSummary": "Machine-readable context pack passed after final Phase 8A state sync."
     },
     {
       "name": "user-app-browser-qa",
       "command": "npm run user-app:browser-qa -- --json",
       "purpose": "Run Phase 7H local browser/mobile HTTP smoke, critical copy, Chinese copy, and privacy copy checks.",
-      "lastStatus": "passed",
-      "lastSummary": "User manually confirmed full --json run passed in local PowerShell: browserSmokeStatus/status/criticalPathStatus/privacyCopyStatus/chineseCopyStatus passed; backend/camera/AR/external API/training false."
+      "lastStatus": "not_required_for_phase_8A_docs_only",
+      "lastSummary": "Not required for Phase 8A docs/project-state route planning; Phase 7H browser QA remains the latest browser/runtime smoke scope."
     }
   ],
-  "lastUpdatedPhase": "7H"
+  "lastUpdatedPhase": "8A"
 }

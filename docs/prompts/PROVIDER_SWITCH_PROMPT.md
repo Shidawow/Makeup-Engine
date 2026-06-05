@@ -6,10 +6,10 @@ Default to compact context. Do not copy full historical chat transcripts. Do not
 
 ## Current State
 
-- `lastCompletedPhase: 7H`
-- `nextRecommendedPhase: 8A`
+- `lastCompletedPhase: 8A`
+- `nextRecommendedPhase: 8B`
 - Project role: Makeup template production system with a local contract-driven user app shell prototype, not a production user app.
-- Current capability: Phase 7H local browser/mobile QA harness, mobile readiness, app readiness, Chinese copy QA, and privacy copy QA are complete.
+- Current capability: Phase 8A selected React Web / PWA MVP first and a separate future app ownership boundary after Phase 7H local browser/mobile QA.
 
 ## Relevant skills
 
@@ -24,10 +24,10 @@ Default to compact context. Do not copy full historical chat transcripts. Do not
 You are continuing Makeup Engine on native GPT / Codex Desktop.
 
 Current state:
-- lastCompletedPhase: 7H
-- nextRecommendedPhase: 8A
+- lastCompletedPhase: 8A
+- nextRecommendedPhase: 8B
 - project role: Makeup template production system with a local contract-driven user app shell prototype, not a production user app
-- current capability: User App browser/mobile QA harness, mobile readiness, app readiness, Chinese copy QA, and privacy copy QA are complete
+- current capability: React Web / PWA MVP first is selected; Makeup Engine remains the template production system and the future user-facing app should be planned separately
 
 Compact context:
 - Use repository documents as source of truth; do not copy full historical chat.
@@ -44,19 +44,26 @@ Read these files first:
 4. docs/prompts/PROVIDER_SWITCH_PROMPT.md
 5. docs/status/CURRENT_PROJECT_STATUS.md
 6. docs/status/NEXT_ACTION.md
-7. docs/user-app/user-app-browser-mobile-qa.md
-8. docs/user-app/user-app-e2e-readiness.md
-9. docs/user-app/user-app-mobile-interaction-qa.md
-10. docs/user-app/user-app-readiness-gate.md
-11. docs/user-app/user-app-readiness-checklist.md
-12. docs/privacy/user-app-session-data-boundary.md
-13. docs/phases/phase-7H.md
-14. project-state/project-state.snapshot.json
-15. project-state/provider-handoff.json
-16. project-state/latest-handoff.json
-17. project-state/active-task.json
-18. project-state/skills.json
-19. project-state/external-skills-registry.json
+7. docs/app-roadmap/app-technology-route-decision.md
+8. docs/app-roadmap/user-app-mvp-plan.md
+9. docs/app-roadmap/makeup-engine-vs-user-app-boundary.md
+10. docs/app-roadmap/phase-8-roadmap.md
+11. docs/product/user-app-v1-non-goals.md
+12. docs/user-app/user-app-product-route.md
+13. docs/user-app/user-app-browser-mobile-qa.md
+14. docs/user-app/user-app-e2e-readiness.md
+15. docs/user-app/user-app-mobile-interaction-qa.md
+16. docs/user-app/user-app-readiness-gate.md
+17. docs/user-app/user-app-readiness-checklist.md
+18. docs/privacy/user-app-session-data-boundary.md
+19. docs/phases/phase-8A.md
+20. docs/phases/phase-7H.md
+21. project-state/project-state.snapshot.json
+22. project-state/provider-handoff.json
+23. project-state/latest-handoff.json
+24. project-state/active-task.json
+25. project-state/skills.json
+26. project-state/external-skills-registry.json
 
 Forbidden:
 - Do not touch src/engine, src/runtime, or src/intelligence/runtime legacy frozen modules.
@@ -64,7 +71,9 @@ Forbidden:
 - Do not bypass artifact binding, mask correction, template review, dataset review, package validation, app contract validation, or quality gates.
 - Do not treat UserAppTemplatePackage as the real user app or online release.
 - Do not treat the Phase 7A/7B/7C/7D/7E/7F/7G/7H shell, readiness gate, and browser/mobile QA harness as a production user app or production release approval.
-- Do not add real camera capture, AR, backend, database, account systems, cloud sync, analytics, online publishing, training, native iOS, or new runtime dependencies.
+- Do not treat the Phase 8A React Web / PWA route decision as production app implementation approval.
+- Do not build or bootstrap the separate production user app repository unless a future explicit phase gate expands scope.
+- Do not add real camera capture, AR, backend, database, account systems, cloud sync, analytics, ecommerce, community, paid features, online publishing, training, native iOS, React Native, Flutter, app store release work, or new runtime dependencies.
 - Do not collect, upload, analyze, store, export, or train on real user photos.
 - Do not persist face embeddings, biometric identifiers, user photo bytes, base64 image data, local photo paths, sensitive profile data, React state, recommendation result records, readiness records, browser QA records, or training input.
 - Do not let preferences, recommendations, session recovery, readiness, mobile QA, or browser QA mutate UserAppTemplatePackage, enter training datasets, sync to backend/cloud, or write real user records into project-state.
@@ -78,7 +87,6 @@ Acceptance commands:
 - npm run project:context
 - node scripts/project-status.mjs --json
 - node scripts/context-pack.mjs --json
-- npm run user-app:browser-qa -- --json
 ```
 
 ## Switch To PackyAPI + CLI
@@ -87,10 +95,10 @@ Acceptance commands:
 You are continuing Makeup Engine on PackyAPI + CLI.
 
 Current state:
-- lastCompletedPhase: 7H
-- nextRecommendedPhase: 8A
+- lastCompletedPhase: 8A
+- nextRecommendedPhase: 8B
 - project role: Makeup template production system with a local contract-driven user app shell prototype, not a production user app
-- current capability: local User App MVP Shell consumes UserAppTemplatePackage and has Phase 7H browser/mobile QA harness coverage for HTTP smoke, mobile readiness, critical paths, Chinese copy, and privacy copy
+- current capability: Phase 8A selected React Web / PWA MVP first and separate future app ownership after the local User App MVP Shell reached Phase 7H browser/mobile QA readiness
 
 Use compact context and repository docs as source of truth. Candidate external skills remain explicit-only and scripts-disabled by default.
 
@@ -105,8 +113,8 @@ Forbidden and acceptance commands are the same as above.
 Below is the PackyAPI + CLI execution result for Makeup Engine. Please review it as ChatGPT / PM / architect and decide the next step.
 
 Current state:
-- lastCompletedPhase: 7H
-- nextRecommendedPhase: 8A
+- lastCompletedPhase: 8A
+- nextRecommendedPhase: 8B
 - project role: Makeup template production system, not a production user app
 
 Completed work:
@@ -142,14 +150,14 @@ Please respond with:
 1. Whether this work is accepted
 2. Whether anything must be rolled back or patched
 3. The next recommended provider and profile
-4. Whether to start Phase 8A or run a targeted Phase 7H-1
+4. Whether to start Phase 8B or run a targeted route-planning follow-up
 5. The exact handoff text for the next provider
 ```
 
 ## Required Handoff Rules
 
-- Always state `lastCompletedPhase: 7H`.
-- Always state `nextRecommendedPhase: 8A` unless QA confirms the project needs a targeted Phase 7H-1.
+- Always state `lastCompletedPhase: 8A`.
+- Always state `nextRecommendedPhase: 8B` unless the owner asks for a targeted 8A follow-up.
 - Always list the required read files first.
 - Always include the boundary that `SourceImagePackage` can reach Vision Analysis through explicit binding, but cannot become a training dataset directly and cannot directly become a template library entry.
 - Always include the boundary that `UserAppTemplatePackage` is a consumption contract, not a real app, backend publication, or online release.
@@ -161,6 +169,7 @@ Please respond with:
 - Always include the boundary that Phase 7F session persistence is local-only, not account/backend/cloud storage, not training input, and cannot persist photos, object URLs, local paths, image bytes, base64 images, biometrics, sensitive profile fields, React state, or recommendation result records.
 - Always include the boundary that Phase 7G readiness/mobile QA is local deterministic product QA only, not real device QA, native iOS QA, backend readiness, camera readiness, AR readiness, training readiness, or app store release approval.
 - Always include the boundary that Phase 7H browser/mobile QA is local deterministic prototype QA only, not production release approval, real device lab QA, Playwright pointer/canvas/screenshot QA, native iOS QA, backend readiness, camera readiness, AR readiness, training readiness, or app store release approval.
+- Always include the boundary that Phase 8A selected React Web / PWA MVP first only, not production app implementation, repository bootstrap, backend, analytics, camera, AR, native iOS, React Native, Flutter, ecommerce, community, paid features, training, external API, OpenAI API, online publication, app store release work, or new dependency approval.
 - Always include the validation commands that were run.
 - Always state that project-state and docs/status were updated after the work.
 - Always include `project-state/skills.json` or the relevant skill docs when switching providers.

@@ -30,14 +30,14 @@ describe('Phase 6K documentation recovery', () => {
 
     expect(startHere).toContain('Phase 6L');
     expect(masterContext).toContain('UserAppTemplatePackage');
-    expect(providerPrompt).toContain('lastCompletedPhase: 7H');
-    expect(providerPrompt).toContain('nextRecommendedPhase: 8A');
+    expect(providerPrompt).toContain('lastCompletedPhase: 8A');
+    expect(providerPrompt).toContain('nextRecommendedPhase: 8B');
     expect(phaseHistory).toContain('## Phase 6K');
     expect(architecture).toContain('User App Template Consumption Contract');
     expect(dataFlow).toContain('UserAppTemplatePackage');
     expect(guardrails).toContain('object URL');
-    expect(snapshot.lastCompletedPhase).toBe('7H');
-    expect(snapshot.nextRecommendedPhase).toBe('8A');
-    expect(snapshot.nextAction).toContain('Phase 8A');
+    expect(snapshot.lastCompletedPhase).toBe('8A');
+    expect(snapshot.nextRecommendedPhase).toBe('8B');
+    expect(snapshot.nextAction).toContain('Phase 8B');
   });
 });

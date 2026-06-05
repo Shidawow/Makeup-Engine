@@ -463,3 +463,28 @@ Adds multi-provider handoff, execution profiles, master Codex context, provider 
 - User-visible shell QA labels were corrected to readable Chinese for readiness, mobile QA, interaction checklist, local state, preferences, personalization placeholder, and privacy notice.
 - Tests cover browser/mobile smoke, critical path reachability, empty states, warning states, blocked states, recovery state, privacy copy, and mobile viewport readiness.
 - Phase 7H remains local deterministic prototype QA. It is not production release approval, real device lab QA, Playwright pointer/canvas/screenshot QA, native iOS QA, backend readiness, camera readiness, AR readiness, training readiness, or app store readiness.
+
+## Phase 8A
+
+Completed the product route decision and app MVP planning boundary.
+
+What changed:
+
+- Selected React Web / PWA MVP first as the next user app route.
+- Added canonical Phase 8A planning docs for technology route decision, user app MVP scope, Makeup Engine versus User App boundary, Phase 8 roadmap, and User App V1 non-goals.
+- Decided that future production user-facing app work should be planned as a separate app surface or repository after an explicit phase gate.
+- Kept Makeup Engine as the template production system, local contract prototype workbench, and package export owner.
+- Kept `UserAppTemplatePackage` as the handoff contract from Makeup Engine to the future user app.
+- Accepted Phase 7H local browser/mobile QA as enough evidence to begin app MVP planning, while keeping it out of production release approval.
+- Deferred native iOS, cross-platform implementation, backend, accounts, analytics, camera/photo capture, AR, OpenAI/external APIs, training, online publication, and new runtime dependencies.
+
+What still cannot happen:
+
+- Phase 8A does not build the production app.
+- It does not bootstrap backend, database, accounts, analytics, camera, AR, training, native iOS, online publication, OpenAI API, external APIs, or new runtime dependencies.
+- It does not add React Native, Flutter, ecommerce, community, paid features, app store release work, real photo capture, or model training.
+- Route planning cannot mutate `UserAppTemplatePackage`, create user records in `project-state`, or expand legacy frozen modules.
+
+Why Phase 8B follows:
+
+The route is decided. The next bottleneck is polishing the PWA / mobile web MVP brief, UX acceptance criteria, package consumption expectations, and trial-readiness checklist without implementing production app scope.

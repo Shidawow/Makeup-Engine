@@ -39,9 +39,9 @@ describe('Phase 6I-1 documentation recovery', () => {
     };
 
     expect(startHere).toContain('Phase 6L');
-    expect(masterContext).toContain('Phase 7H completed');
-    expect(providerPrompt).toContain('lastCompletedPhase: 7H');
-    expect(providerPrompt).toContain('nextRecommendedPhase: 8A');
+    expect(masterContext).toContain('Phase 8A completed');
+    expect(providerPrompt).toContain('lastCompletedPhase: 8A');
+    expect(providerPrompt).toContain('nextRecommendedPhase: 8B');
     expect(phaseHistory).toContain('## Phase 6I-1');
     expect(qaDoc).toContain('Production Batch QA / Review Hardening');
     expect(rejectDoc).toContain('Reject must use a fixed');
@@ -51,8 +51,8 @@ describe('Phase 6I-1 documentation recovery', () => {
     expect(architecture).toContain('Production Batch QA / Review Hardening');
     expect(dataFlow).toContain('Production QA Report');
     expect(guardrails).toContain('Publish requires explicit local confirmation and cannot happen for rejected tasks');
-    expect(snapshot.lastCompletedPhase).toBe('7H');
-    expect(snapshot.nextRecommendedPhase).toBe('8A');
+    expect(snapshot.lastCompletedPhase).toBe('8A');
+    expect(snapshot.nextRecommendedPhase).toBe('8B');
     expect(snapshot.mainDataFlow).toContain('ProductionQaReport');
   });
 });

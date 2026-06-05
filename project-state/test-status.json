@@ -1,5 +1,5 @@
 {
-  "phase": "7H",
+  "phase": "8A",
   "status": "passed",
   "lastValidation": {
     "typecheck": "passed",
@@ -9,10 +9,10 @@
     "projectStatusJson": "passed",
     "projectContext": "passed",
     "contextPackJson": "passed",
-    "userAppBrowserQa": "passed",
-    "httpSmoke": "passed",
-    "testFiles": 360,
-    "tests": 497
+    "userAppBrowserQa": "not_required_for_phase_8A_docs_only",
+    "httpSmoke": "not_required_for_phase_8A_docs_only",
+    "testFiles": 363,
+    "tests": 503
   },
   "lastKnownPreDoc0Validation": {
     "typecheck": "passed",
@@ -23,21 +23,22 @@
   },
   "requiredValidationCommands": [
     "npm run typecheck",
-    "npm run test",
     "npm run build",
     "npm run project:status",
     "npm run project:context",
     "node scripts/project-status.mjs --json",
     "node scripts/context-pack.mjs --json",
-    "npm run user-app:browser-qa -- --json"
+    "npm run test -- tests/phase-8A-documentation-recovery.test.ts tests/app-technology-route-decision.test.ts tests/user-app-mvp-plan-docs.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
+    "npm run test"
   ],
   "notes": [
-    "7H added deterministic browser/mobile QA harness coverage for the local User App MVP Shell.",
-    "7H source-only QA passed before full validation: npm run user-app:browser-qa -- --skip-server --json.",
+    "8A is a docs/project-state route decision phase only.",
+    "8A selected React Web / PWA MVP first and documented MVP scope, ownership boundary, Phase 8 roadmap, and V1 non-goals.",
+    "8A did not add production app code, backend, database, accounts, analytics, camera, AR, training, OpenAI API, external API, native iOS, React Native, Flutter, ecommerce, community, paid features, online publication, app store release work, separate repository bootstrap, or dependencies.",
     "npm run typecheck passed.",
-    "npm run test passed: 360 test files, 497 tests.",
     "npm run build passed with Vite chunk-size warning only.",
     "npm run project:status, npm run project:context, node scripts/project-status.mjs --json, and node scripts/context-pack.mjs --json passed.",
-    "User manually confirmed npm run user-app:browser-qa -- --json passed in local PowerShell with browserSmokeStatus/status/criticalPathStatus/privacyCopyStatus/chineseCopyStatus passed and backend/camera/AR/external API/training all false."
+    "Scoped Phase 8A documentation tests passed: 5 test files, 13 tests.",
+    "Full npm run test passed: 363 test files, 503 tests."
   ]
 }

@@ -1,23 +1,23 @@
 {
   "schemaVersion": "active-task.v1",
-  "taskId": "8A",
-  "title": "Product Route Decision / App MVP Planning",
+  "taskId": "8B",
+  "title": "PWA / Mobile Web MVP Polish",
   "status": "recommended",
   "ownerRole": "Codex",
   "createdBy": "Codex",
-  "phase": "8A",
-  "recommendedProfile": "native-gpt-codex-desktop",
+  "phase": "8B",
+  "recommendedProfile": "chatgpt-planning",
   "allowedDirectories": [
     "docs",
     "project-state",
-    "src/user-app",
-    "src/components/user-app",
     "tests"
   ],
   "forbiddenDirectories": [
     "src/engine",
     "src/runtime",
-    "src/intelligence/runtime"
+    "src/intelligence/runtime",
+    "src/user-app",
+    "src/components/user-app"
   ],
   "validationCommands": [
     "npm run typecheck",
@@ -29,12 +29,14 @@
     "node scripts/context-pack.mjs --json"
   ],
   "completionDefinition": [
-    "Phase 8A should decide the future user app technology route and repository ownership boundary.",
-    "8A must not implement production app scope, backend, database, cloud sync, analytics, real camera capture, AR, training, online publication, native iOS implementation, external APIs, or new runtime dependencies unless explicitly authorized.",
-    "Docs and project-state must remain recoverable.",
-    "Tests passed and validation commands pass."
+    "Phase 8B should polish the mobile-first React Web / PWA MVP brief, UX acceptance criteria, package consumption expectations, and trial-readiness checklist.",
+    "8B must not implement the production user app, backend, database, accounts, analytics, camera, AR, training, OpenAI API, external APIs, native iOS, React Native, Flutter, ecommerce, community, paid features, app store release work, online publication, or new runtime dependencies unless explicitly authorized by a future phase gate.",
+    "8B must not bootstrap a separate production app repository unless the owner explicitly expands scope.",
+    "Makeup Engine must remain the template production system and UserAppTemplatePackage must remain the handoff contract.",
+    "Docs and project-state must remain recoverable and validation commands must pass.",
+    "Tests passed and validation commands pass before 8B completion is accepted."
   ],
   "dependsOn": [
-    "7H Browser / Mobile E2E Interaction QA"
+    "8A Product Route Decision / App MVP Planning"
   ]
 }

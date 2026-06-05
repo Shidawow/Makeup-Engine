@@ -29,6 +29,10 @@
 - Phase 7G readiness gate is local product/QA gating only; it is not production release approval, native iOS QA, backend readiness, app store readiness, camera readiness, AR readiness, or training readiness.
 - Phase 7G mobile QA is deterministic checklist/DOM-level readiness; it does not replace future real browser/device pointer, screenshot, or accessibility QA.
 - App readiness reports and mobile QA reports cannot store real user photos, object URLs, local paths, base64 images, biometric fields, sensitive profile fields, React state, recommendation records, or training input.
+- Phase 7H browser/mobile QA is local deterministic prototype QA; it is not production release approval, real device lab QA, Playwright pointer/canvas/screenshot QA, native iOS QA, backend readiness, camera readiness, AR readiness, training readiness, or app store readiness.
+- Phase 8A selected a React Web / PWA MVP first route only; it did not implement the production user app.
+- The future production user-facing app should be planned as a separate app surface or repository and is not owned by Makeup Engine without a future explicit phase gate.
+- Native iOS, React Native, Flutter, backend, accounts, analytics, camera/photo capture, AR, online publication, OpenAI/external APIs, ecommerce, community, paid features, and training remain deferred after Phase 8A.
 - `SourceImagePackage` still cannot directly become user photo intake, User App Shell state, `TemplateLibraryEntry`, `UserAppTemplatePackage`, or training data.
 - Full real photo distribution coverage is not established.
 - A real deep segmentation model has not been trained yet.

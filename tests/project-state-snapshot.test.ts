@@ -31,13 +31,13 @@ describe('project state snapshot', () => {
 
     expect(snapshot.projectName).toBe('Makeup Engine');
     expect(snapshot.projectRole).toContain('Makeup template production system');
-    expect(snapshot.lastCompletedPhase).toBe('7H');
-    expect(snapshot.lastCompletedBusinessPhase).toBe('7H');
-    expect(snapshot.currentPhaseId).toBe('7H');
+    expect(snapshot.lastCompletedPhase).toBe('8A');
+    expect(snapshot.lastCompletedBusinessPhase).toBe('8A');
+    expect(snapshot.currentPhaseId).toBe('8A');
     expect(snapshot.currentPhase).toBeTruthy();
-    expect(snapshot.nextRecommendedPhase).toBe('8A');
-    expect(snapshot.nextRecommendedPhaseName).toContain('Product Route');
-    expect(snapshot.nextAction).toContain('Phase 8A');
+    expect(snapshot.nextRecommendedPhase).toBe('8B');
+    expect(snapshot.nextRecommendedPhaseName).toContain('PWA / Mobile Web');
+    expect(snapshot.nextAction).toContain('Phase 8B');
     expect(snapshot.mainDataFlow).toEqual(
       expect.arrayContaining([
         'SourceImagePackage',
@@ -62,6 +62,10 @@ describe('project state snapshot', () => {
         'PreferenceGuidanceHints',
         'UserAppTemplateDiscovery',
         'UserTemplateRecommendationPlaceholder',
+        'UserAppProductRouteDecision',
+        'UserAppTechnologyRouteDecision',
+        'UserAppMvpPlan',
+        'UserAppV1NonGoals',
         'UserAppConsumptionManifest',
         'VisionAnalysis',
         'MaterializedTrainingDataset',

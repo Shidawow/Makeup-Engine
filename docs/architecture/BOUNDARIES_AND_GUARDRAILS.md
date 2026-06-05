@@ -65,6 +65,12 @@
 - Phase 7H browser/mobile QA is local deterministic prototype QA and is not production release approval, app store readiness, native iOS QA, real device lab QA, Playwright pointer/canvas/screenshot QA, backend readiness, camera readiness, AR readiness, or training readiness.
 - Phase 7H browser/mobile QA must not add backend, database, accounts, cloud sync, analytics, camera, AR, training, OpenAI API, external API calls, native iOS scope, online publication, or new runtime dependencies.
 - Phase 7H browser/mobile QA reports cannot mutate `UserAppTemplatePackage` and cannot persist photos, temporary image URLs, local paths, encoded image data, image/photo bytes, biometrics, sensitive profile fields, React state, recommendation records, readiness records, browser QA records, or training input.
+- Phase 8A is product route and ownership planning only; it must not implement the production user app.
+- Phase 8A selects React Web / PWA MVP first, but that decision is not a Web app implementation, deployment, backend, analytics surface, online release, native app implementation, camera flow, AR flow, ecommerce, community, paid feature, OpenAI API, external API, or training phase.
+- Future production user-facing app work must be planned as a separate app surface or repository after an explicit phase gate; Makeup Engine remains the template production system.
+- Phase 8A route planning must keep `UserAppTemplatePackage` as the handoff contract and cannot mutate package data, templates, shell state, training data, or project-state user records.
+- Phase 8A must not add backend, database, accounts, analytics, camera, AR, OpenAI API, external API, training, native iOS implementation, online publication, production app code, or new runtime dependencies.
+- Phase 8A must not add React Native, Flutter, ecommerce, community, paid features, App Store release work, TestFlight work, real photo capture, model training, or separate repository bootstrap.
 - A compatibility target such as `ios-app-v0` or `web-app-v0` describes intended consumers only; it does not create an iOS app, Web app, backend, or online release.
 - Rejected, archived, or deprecated library entries must not enter publish packages by default.
 - Legacy runtime areas no longer carry new mainline features.
@@ -87,6 +93,7 @@
 - Local session persistence reads User App Shell local state only; it does not create accounts, does not sync to backend/cloud, does not store real photos or sensitive profile data, and does not write user session records into `project-state`.
 - App readiness and mobile QA read User App Shell local state and `UserAppTemplatePackage`-derived view models only; they do not create production app state, do not mutate packages, do not train models, and do not create durable user records.
 - Browser/mobile QA reads the local User App Shell, source copy, and deterministic QA metadata only; it does not create production app state, does not mutate packages, does not train models, and does not create durable user records.
+- Product route planning reads Phase 7H QA evidence and app contract documents only; it does not create production app state, app repository state, backend state, analytics, user records, camera/photo records, AR state, ecommerce/community/paid state, native app state, or training data.
 - Dataset review decides whether corrected artifacts can become materialized training data.
 - Training reads materialized datasets, not UI state and not raw source packages.
 - Export reads validated model artifacts and export readiness metadata.

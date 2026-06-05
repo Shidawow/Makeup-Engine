@@ -29,15 +29,15 @@ describe('Phase 6J documentation recovery', () => {
     };
 
     expect(startHere).toContain('Phase 6L');
-    expect(masterContext).toContain('Phase 7H completed');
-    expect(providerPrompt).toContain('lastCompletedPhase: 7H');
-    expect(providerPrompt).toContain('nextRecommendedPhase: 8A');
+    expect(masterContext).toContain('Phase 8A completed');
+    expect(providerPrompt).toContain('lastCompletedPhase: 8A');
+    expect(providerPrompt).toContain('nextRecommendedPhase: 8B');
     expect(phaseHistory).toContain('## Phase 6J');
     expect(architecture).toContain('Template Library');
     expect(dataFlow).toContain('Template Library Entry');
     expect(guardrails).toContain('local-only');
-    expect(snapshot.lastCompletedPhase).toBe('7H');
-    expect(snapshot.nextRecommendedPhase).toBe('8A');
-    expect(snapshot.nextAction).toContain('Phase 8A');
+    expect(snapshot.lastCompletedPhase).toBe('8A');
+    expect(snapshot.nextRecommendedPhase).toBe('8B');
+    expect(snapshot.nextAction).toContain('Phase 8B');
   });
 });

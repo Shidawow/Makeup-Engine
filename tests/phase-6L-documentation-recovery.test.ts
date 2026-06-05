@@ -35,7 +35,7 @@ interface GuardrailState {
 describe('Phase 6L documentation recovery', () => {
   it('keeps 6L prototype docs while current recovery state has advanced to 7A', () => {
     expect(readText('START_HERE.md')).toContain('Phase 6L');
-    expect(readText('docs/prompts/MASTER_CODEX_CONTEXT.md')).toContain('Phase 7H completed');
+    expect(readText('docs/prompts/MASTER_CODEX_CONTEXT.md')).toContain('Phase 8A completed');
     expect(readText('docs/prompts/PROVIDER_SWITCH_PROMPT.md')).toContain(
       'prototype consumer is read-only validation',
     );
@@ -55,21 +55,21 @@ describe('Phase 6L documentation recovery', () => {
     );
 
     const snapshot = readJson<ProjectSnapshot>('project-state/project-state.snapshot.json');
-    expect(snapshot.lastCompletedPhase).toBe('7H');
-    expect(snapshot.nextRecommendedPhase).toBe('8A');
-    expect(snapshot.nextAction).toContain('Phase 8A');
+    expect(snapshot.lastCompletedPhase).toBe('8A');
+    expect(snapshot.nextRecommendedPhase).toBe('8B');
+    expect(snapshot.nextAction).toContain('Phase 8B');
     expect(snapshot.recoveryEntryFiles).toContain(
       'docs/app-contract/user-app-prototype-contract-consumer.md',
     );
 
     const latestHandoff = readJson<LatestHandoff>('project-state/latest-handoff.json');
-    expect(latestHandoff.fromPhase).toBe('7H');
-    expect(latestHandoff.toPhase).toBe('8A');
-    expect(latestHandoff.nextAction).toContain('Phase 8A');
+    expect(latestHandoff.fromPhase).toBe('8A');
+    expect(latestHandoff.toPhase).toBe('8B');
+    expect(latestHandoff.nextAction).toContain('Phase 8B');
 
     const providerHandoff = readJson<ProviderHandoff>('project-state/provider-handoff.json');
-    expect(providerHandoff.lastCompletedPhase).toBe('7H');
-    expect(providerHandoff.nextRecommendedPhase).toBe('8A');
+    expect(providerHandoff.lastCompletedPhase).toBe('8A');
+    expect(providerHandoff.nextRecommendedPhase).toBe('8B');
     expect(providerHandoff.nextRequiredReadFiles).toContain('docs/phases/phase-7B.md');
 
     const artifactIndex = readJson<ArtifactIndex>('project-state/artifact-index.json');
@@ -78,7 +78,7 @@ describe('Phase 6L documentation recovery', () => {
     );
 
     const guardrails = readJson<GuardrailState>('project-state/guardrails.json');
-    expect(guardrails.phase).toBe('7H');
+    expect(guardrails.phase).toBe('8A');
     expect(guardrails.guardrails.map((guardrail) => guardrail.id)).toContain(
       'user-app-prototype-consumer-boundary',
     );

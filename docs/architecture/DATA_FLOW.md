@@ -28,6 +28,9 @@ Real Photo
 -> User App Template Discovery / Recommendation Placeholder
 -> User App Session Persistence / Local State Hardening
 -> User App Mobile QA / App Readiness Gate
+-> Browser / Mobile QA Harness
+-> Product Route Decision / App MVP Plan
+-> Phase 8 Roadmap / V1 Non-Goals
 -> User App Consumption Manifest
 -> Dataset Review
 -> MaterializedTrainingDataset
@@ -62,6 +65,9 @@ Real Photo
 - `User App Template Discovery / Recommendation Placeholder`: Phase 7E local-only layer for deterministic discovery filters and rule-based recommendation placeholder ranking. It uses `UserAppTemplatePackage` plus non-sensitive local preferences only.
 - `User App Session Persistence / Local State Hardening`: Phase 7F local-only layer for selected template, active step, progress ids, onboarding summary, non-sensitive preferences, discovery filters, sort mode, last visited section, storage sanitization, recovery, and privacy boundary validation.
 - `User App Mobile QA / App Readiness Gate`: Phase 7G local-only layer for deterministic mobile interaction QA and app prototype readiness reports over the existing shell.
+- `Browser / Mobile QA Harness`: Phase 7H local-only layer for HTTP smoke, critical copy, privacy copy, Chinese copy, and forbidden-token checks over the local shell.
+- `Product Route Decision / App MVP Plan`: Phase 8A planning layer that selects React Web / PWA MVP first, defines MVP scope, records V1 non-goals, and separates future user app ownership from Makeup Engine.
+- `Phase 8 Roadmap / V1 Non-Goals`: planning docs for 8A through 8E and the anti-scope list for login, backend, database, camera, AR, native apps, OpenAI API, ecommerce, community, paid features, and training.
 - `User App Consumption Manifest`: handoff manifest with app template entries, versions, compatibility target, checksums, readiness, and local-only disclaimer.
 - `Dataset Review`: explicit review decisions before data becomes training-ready.
 - `MaterializedTrainingDataset`: reviewed dataset with splits, masks, image references, checksums, and audit reports.
@@ -196,3 +202,15 @@ User App Shell
 ```
 
 The harness can document local prototype readiness only. It cannot mutate `UserAppTemplatePackage`, persist real user records, collect photos, call camera APIs, call external APIs, train models, or certify production release readiness.
+
+Phase 8A adds a product route decision without creating a production app:
+
+```text
+Phase 7H QA Evidence
+-> React Web / PWA MVP First Route Decision
+-> MVP Scope / V1 Non-Goals
+-> Ownership Boundary
+-> Phase 8B PWA / Mobile Web MVP Polish
+```
+
+Route planning can document product direction only. It cannot bootstrap a production app, mutate `UserAppTemplatePackage`, write user records into `project-state`, call backend/cloud/API services, collect photos, add analytics, train models, add ecommerce/community/paid scope, start React Native/Flutter/iOS native work, or certify release readiness.

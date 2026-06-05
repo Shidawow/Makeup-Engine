@@ -24,10 +24,10 @@ describe('provider handoff state', () => {
     expect(handoff.projectName).toBe('Makeup Engine');
     expect(handoff.activeProvider).toBeTruthy();
     expect(handoff.lastProvider).toBeTruthy();
-    expect(handoff.currentTask).toContain('7H');
+    expect(handoff.currentTask).toContain('8A');
     expect(handoff.taskStatus).toBeTruthy();
-    expect(handoff.lastCompletedPhase).toBe('7H');
-    expect(handoff.nextRecommendedPhase).toBe('8A');
+    expect(handoff.lastCompletedPhase).toBe('8A');
+    expect(handoff.nextRecommendedPhase).toBe('8B');
     expect(handoff.nextRequiredReadFiles).toEqual(
       expect.arrayContaining([
         'START_HERE.md',

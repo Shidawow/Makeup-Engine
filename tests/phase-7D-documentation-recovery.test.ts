@@ -52,15 +52,15 @@ describe('Phase 7D documentation recovery', () => {
       'preferences must remain non-sensitive',
     );
     expect(readText('docs/prompts/MASTER_CODEX_CONTEXT.md')).toContain(
-      'Phase 7H completed',
+      'Phase 8A completed',
     );
     expect(readText('docs/prompts/PROVIDER_SWITCH_PROMPT.md')).toContain(
-      'lastCompletedPhase: 7H',
+      'lastCompletedPhase: 8A',
     );
 
     const snapshot = readJson<ProjectSnapshot>('project-state/project-state.snapshot.json');
-    expect(snapshot.lastCompletedPhase).toBe('7H');
-    expect(snapshot.nextRecommendedPhase).toBe('8A');
+    expect(snapshot.lastCompletedPhase).toBe('8A');
+    expect(snapshot.nextRecommendedPhase).toBe('8B');
     expect(snapshot.mainDataFlow).toContain('UserAppLocalOnboarding');
     expect(snapshot.mainDataFlow).toContain('UserLocalPreferences');
     expect(snapshot.mainDataFlow).toContain('PreferenceGuidanceHints');
@@ -71,12 +71,12 @@ describe('Phase 7D documentation recovery', () => {
     expect(snapshot.forbiddenActions.join('\n')).toContain('preferences');
 
     const providerHandoff = readJson<ProviderHandoff>('project-state/provider-handoff.json');
-    expect(providerHandoff.lastCompletedPhase).toBe('7H');
-    expect(providerHandoff.nextRecommendedPhase).toBe('8A');
+    expect(providerHandoff.lastCompletedPhase).toBe('8A');
+    expect(providerHandoff.nextRecommendedPhase).toBe('8B');
     expect(providerHandoff.nextRequiredReadFiles).toContain('docs/phases/phase-7D.md');
 
     const guardrails = readJson<GuardrailState>('project-state/guardrails.json');
-    expect(guardrails.phase).toBe('7H');
+    expect(guardrails.phase).toBe('8A');
     expect(guardrails.guardrails.map((guardrail) => guardrail.id)).toEqual(
       expect.arrayContaining([
         'preferences_local_only',

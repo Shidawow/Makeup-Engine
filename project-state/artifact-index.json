@@ -63,7 +63,9 @@
     "User local onboarding and preferences are memory-only shell state, not account data, backend sync, export data, project-state records, or training input",
     "User template discovery and recommendation placeholders are display-only shell metadata, not AI recommendations, backend records, project-state user records, analytics, ads, ecommerce, or training input",
     "User App local session snapshots are local-only shell state, not account data, backend sync, cloud sync, project-state user records, analytics, production app storage, or training input",
-    "User App readiness and mobile QA reports are local QA metadata, not production app state, backend records, training input, or durable user records"
+    "User App readiness and mobile QA reports are local QA metadata, not production app state, backend records, training input, or durable user records",
+    "Phase 8A route planning is documentation metadata, not production app state, backend state, user records, analytics, camera data, AR state, or training input",
+    "Phase 8A MVP plan and V1 non-goals are documentation metadata, not production app state, backend state, user records, analytics, camera data, AR state, ecommerce/community/paid state, native app state, or training input."
   ],
   "materializedDatasetOutputs": [
     "tmp/datasets/realistic-synthetic-png-image-v0/package.json",
@@ -103,7 +105,9 @@
     "docs/dataset",
     "docs/template-studio",
     "docs/app-contract",
-    "docs/user-app"
+    "docs/user-app",
+    "docs/app-roadmap",
+    "docs/product"
   ],
   "userAppConsumptionOutputs": [
     "UserAppTemplatePackage JSON",
@@ -231,5 +235,16 @@
     "Privacy copy QA metadata",
     "Blocked readiness fixture metadata",
     "Mobile QA warning fixture metadata"
+  ],
+  "userAppRoutePlanningOutputs": [
+    "User app React Web / PWA route decision metadata",
+    "Future separate app ownership boundary",
+    "UserAppTemplatePackage handoff contract decision",
+    "Phase 7H QA evidence acceptance summary",
+    "Deferred native iOS/cross-platform/backend/camera/AR/training route notes",
+    "React Web / PWA MVP first technology route decision",
+    "User App MVP includes template discovery, template detail, step guidance, region instructions, tools/products, local onboarding, local preferences, local session progress, privacy notice, and photo/camera/AR placeholders",
+    "User App V1 non-goals for login, backend, database, real photo capture, camera, AR, OpenAI API, ecommerce, community, paid features, and model training",
+    "Phase 8 roadmap from 8A route decision through 8E MVP release readiness gate"
   ]
 }

@@ -49,15 +49,15 @@ describe('Phase 7G documentation recovery', () => {
       'app readiness gate is required',
     );
     expect(readText('docs/prompts/MASTER_CODEX_CONTEXT.md')).toContain(
-      'Phase 7H completed',
+      'Phase 8A completed',
     );
     expect(readText('docs/prompts/PROVIDER_SWITCH_PROMPT.md')).toContain(
-      'lastCompletedPhase: 7H',
+      'lastCompletedPhase: 8A',
     );
 
     const snapshot = readJson<ProjectSnapshot>('project-state/project-state.snapshot.json');
-    expect(snapshot.lastCompletedPhase).toBe('7H');
-    expect(snapshot.nextRecommendedPhase).toBe('8A');
+    expect(snapshot.lastCompletedPhase).toBe('8A');
+    expect(snapshot.nextRecommendedPhase).toBe('8B');
     expect(snapshot.mainDataFlow).toContain('UserAppMobileQa');
     expect(snapshot.mainDataFlow).toContain('UserAppReadinessGate');
     expect(snapshot.recoveryEntryFiles).toContain('docs/phases/phase-7G.md');
@@ -67,12 +67,12 @@ describe('Phase 7G documentation recovery', () => {
     expect(snapshot.forbiddenActions.join('\n')).toContain('readiness');
 
     const providerHandoff = readJson<ProviderHandoff>('project-state/provider-handoff.json');
-    expect(providerHandoff.lastCompletedPhase).toBe('7H');
-    expect(providerHandoff.nextRecommendedPhase).toBe('8A');
+    expect(providerHandoff.lastCompletedPhase).toBe('8A');
+    expect(providerHandoff.nextRecommendedPhase).toBe('8B');
     expect(providerHandoff.nextRequiredReadFiles).toContain('docs/phases/phase-7G.md');
 
     const guardrails = readJson<GuardrailState>('project-state/guardrails.json');
-    expect(guardrails.phase).toBe('7H');
+    expect(guardrails.phase).toBe('8A');
     expect(guardrails.guardrails.map((guardrail) => guardrail.id)).toEqual(
       expect.arrayContaining([
         'app_readiness_gate_required_before_production_app',

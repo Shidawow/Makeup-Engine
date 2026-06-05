@@ -55,11 +55,11 @@ describe('documentation recovery links', () => {
     ].join('\n');
 
     expect(startHere).toContain('Phase 7A');
-    expect(startHere).toContain('Phase 7H - Browser / Mobile E2E Interaction QA');
-    expect(masterContext).toContain('Phase 7H completed');
-    expect(masterContext).toContain('Phase 7H - Browser / Mobile E2E Interaction QA');
-    expect(providerPrompt).toContain('lastCompletedPhase: 7H');
-    expect(providerPrompt).toContain('nextRecommendedPhase: 8A');
+    expect(startHere).toContain('Phase 8A - Product Route Decision / App MVP Planning');
+    expect(masterContext).toContain('Phase 8A completed');
+    expect(masterContext).toContain('Phase 8A - Product Route Decision / App MVP Planning');
+    expect(providerPrompt).toContain('lastCompletedPhase: 8A');
+    expect(providerPrompt).toContain('nextRecommendedPhase: 8B');
     expect(phaseHistory).toContain('Phase 6H-4');
     expect(phaseHistory).toContain('Phase 6I');
     expect(currentArchitecture).toContain('Source Image Artifact Binding');
