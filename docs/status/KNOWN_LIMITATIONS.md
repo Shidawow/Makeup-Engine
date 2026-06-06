@@ -37,6 +37,9 @@
 - Phase 8C trial feedback must not collect real names, contact information, photos, health information, sensitive identity information, face embeddings, biometric identifiers, backend records, analytics records, or training data.
 - Phase 8D adds template content QA and trial content readiness only; it is not production release, App Store/TestFlight, backend, analytics, camera, AR, AI content generation, OpenAI/external API usage, training, or real user record collection.
 - Phase 8D content QA reports cannot mutate `UserAppTemplatePackage`, write real user trial records into `project-state`, or enter training datasets.
+- Phase 8E adds MVP release readiness and trial go/no-go gates only; it is not production release, App Store/TestFlight, backend readiness, analytics readiness, camera readiness, AR readiness, AI generation approval, OpenAI/external API approval, training readiness, online publication, or real user data collection approval.
+- Phase 8E `go_for_internal_trial` or `go_with_warnings` means internal small-scope trial preparation only, not production ready.
+- Phase 8E release readiness and go/no-go reports cannot mutate `UserAppTemplatePackage`, collect photos, write real user trial records into `project-state`, or enter training datasets.
 - The future production user-facing app should be planned as a separate app surface or repository and is not owned by Makeup Engine without a future explicit phase gate.
 - Native iOS, React Native, Flutter, backend, accounts, analytics, camera/photo capture, AR, online publication, OpenAI/external APIs, ecommerce, community, paid features, and training remain deferred after Phase 8A.
 - `SourceImagePackage` still cannot directly become user photo intake, User App Shell state, `TemplateLibraryEntry`, `UserAppTemplatePackage`, or training data.

@@ -13,10 +13,12 @@ import {
   createInitialUserOnboardingState,
   createSessionFromAppState,
   createUserAppMvpPolishReport,
+  createUserAppMvpReleaseReadinessReport,
   createUserAppPwaReadinessReport,
   createUserAppReadinessReport,
   createUserAppSessionStorageAdapter,
   createUserAppShellModel,
+  createUserAppTrialGoNoGoDecision,
   createUserAppTrialFeedbackForm,
   createUserAppTrialPack,
   createUserAppTrialReadinessReport,
@@ -50,12 +52,14 @@ import { UserAppInteractionChecklist } from './UserAppInteractionChecklist';
 import { UserAppMobileHome } from './UserAppMobileHome';
 import { UserAppMobileQaPanel } from './UserAppMobileQaPanel';
 import { UserAppMvpPolishChecklist } from './UserAppMvpPolishChecklist';
+import { UserAppMvpReleaseReadinessPanel } from './UserAppMvpReleaseReadinessPanel';
 import { UserAppProgressPanel } from './UserAppProgressPanel';
 import { UserAppPwaInstallPanel } from './UserAppPwaInstallPanel';
 import { UserAppReadinessPanel } from './UserAppReadinessPanel';
 import { UserAppSessionPanel } from './UserAppSessionPanel';
 import { UserAppSessionRecoveryNotice } from './UserAppSessionRecoveryNotice';
 import { UserAppTrialFeedbackPanel } from './UserAppTrialFeedbackPanel';
+import { UserAppTrialGoNoGoPanel } from './UserAppTrialGoNoGoPanel';
 import { UserAppTrialPackPanel } from './UserAppTrialPackPanel';
 import { UserAppTrialReadinessPanel } from './UserAppTrialReadinessPanel';
 import { UserAppTemplateContentQaPanel } from './UserAppTemplateContentQaPanel';
@@ -95,6 +99,8 @@ const adminSectionTabs: Array<{ tabId: UserAppShellSection; label: string }> = [
   { tabId: 'templateContentQa', label: '模板内容 QA' },
   { tabId: 'trialTemplateSelection', label: '试用模板选择' },
   { tabId: 'trialContentReadiness', label: '试用内容就绪度' },
+  { tabId: 'mvpReleaseReadiness', label: 'MVP 发布就绪度' },
+  { tabId: 'trialGoNoGo', label: '试用 Go/No-Go' },
   { tabId: 'pwa', label: 'PWA 检查' },
   { tabId: 'mvpPolish', label: 'MVP 打磨' },
   { tabId: 'readiness', label: 'App 就绪度' },
@@ -236,6 +242,53 @@ export function UserAppShell({
         hasPrivacyBoundaryCopy: true,
       }),
     [trialReadinessReport, trialTemplateSelectionReport],
+  );
+  const mvpReleaseReadinessReport = useMemo(
+    () =>
+      createUserAppMvpReleaseReadinessReport({
+        pwaReport: pwaReadinessReport,
+        mvpPolishReport,
+        trialReadinessReport,
+        feedbackForm: trialFeedbackForm,
+        trialContentReadinessReport,
+        trialTemplateSelectionReport,
+        technologyRouteDecided: true,
+        browserMobileQaPassed: true,
+        testsPassed: true,
+        knownLimitationsAccepted: true,
+        productionNonGoalsDocumented: true,
+        ordinaryUserPathReady: true,
+        ordinaryUserPathHidesAdminTerms: true,
+        privacyLocalOnlyCopyReady: true,
+        noUploadCopyReady: true,
+        noTrainingCopyReady: true,
+        noSensitiveDataCopyReady: true,
+      }),
+    [
+      mvpPolishReport,
+      pwaReadinessReport,
+      trialContentReadinessReport,
+      trialFeedbackForm,
+      trialReadinessReport,
+      trialTemplateSelectionReport,
+    ],
+  );
+  const trialGoNoGoDecision = useMemo(
+    () =>
+      createUserAppTrialGoNoGoDecision({
+        releaseReadinessReport: mvpReleaseReadinessReport,
+        trialContentReadinessReport,
+        trialTemplateSelectionReport,
+        feedbackForm: trialFeedbackForm,
+        testsPassed: true,
+        knownLimitationsDocumented: true,
+      }),
+    [
+      mvpReleaseReadinessReport,
+      trialContentReadinessReport,
+      trialFeedbackForm,
+      trialTemplateSelectionReport,
+    ],
   );
   const readinessReport = useMemo(
     () =>
@@ -563,8 +616,8 @@ export function UserAppShell({
               <div className="rounded-md border border-stone-200 bg-stone-50 p-3">
                 <p className="text-xs font-semibold text-stone-500">管理员检查</p>
                 <p className="mt-1 text-xs leading-5 text-stone-500">
-                  这里保留 MVP 试用管理、模板内容 QA、PWA、readiness 和 contract 检查信息；
-                  普通用户不应把它们理解为正式功能。
+                  这里保留 MVP 试用管理、模板内容 QA、发布就绪度、PWA、readiness 和 contract
+                  检查信息；普通用户不应把它们理解为正式功能。
                 </p>
                 <div className="mt-2 flex flex-wrap gap-2">
                   {adminSectionTabs.map(({ tabId, label }) => (
@@ -683,6 +736,14 @@ export function UserAppShell({
                   readinessReport={trialContentReadinessReport}
                   selectionReport={trialTemplateSelectionReport}
                 />
+              ) : null}
+
+              {boundaryTab === 'mvpReleaseReadiness' ? (
+                <UserAppMvpReleaseReadinessPanel report={mvpReleaseReadinessReport} />
+              ) : null}
+
+              {boundaryTab === 'trialGoNoGo' ? (
+                <UserAppTrialGoNoGoPanel decision={trialGoNoGoDecision} />
               ) : null}
 
               {boundaryTab === 'mvpPolish' ? (

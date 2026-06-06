@@ -130,3 +130,19 @@ Phase 8D adds a local content QA gate for real user trial preparation:
 - administrator content QA panels
 
 The result is still local-only and contract-driven. It does not add AI content generation, OpenAI/external API calls, backend, database, accounts, analytics, camera, AR, real photo collection, training, online publication, native app work, App Store/TestFlight, or production release scope.
+
+## Phase 8E Result
+
+Phase 8E adds the MVP release readiness gate for internal trial preparation:
+
+- MVP release readiness report
+- trial go/no-go decision
+- ready, warning, no-template, unsafe-feedback, blocked-content, and production-boundary fixtures
+- administrator release gate panels
+- internal trial launch checklist
+
+The result is still local-only and contract-driven. `go_for_internal_trial` and `go_with_warnings` mean internal small-scope trial preparation only. They do not add backend, database, accounts, analytics, camera, AR, real photo collection, training, online publication, native app work, App Store/TestFlight, production release scope, service worker, offline cache, push notification, background sync, install tracking, AI generation, OpenAI/external API calls, or real user record collection.
+
+## Phase 9A Planning Target
+
+Phase 9A should prepare the internal trial operations pack: participant instructions, operator script, warning log, stop conditions, and post-trial summary structure. It should not create backend forms, analytics stores, camera/photo capture, AR flows, App Store/TestFlight work, online release, or real user record storage unless a later explicit gate approves those systems.

@@ -3,12 +3,12 @@
   "projectName": "Makeup Engine",
   "activeProvider": "native-gpt-codex-desktop",
   "lastProvider": "native-gpt-codex-desktop",
-  "currentTask": "Phase 8D Template Content QA for Real User Trial",
+  "currentTask": "Phase 8E MVP Release Readiness Gate",
   "taskStatus": "completed",
-  "lastCompletedPhase": "8D",
-  "lastCompletedBusinessPhase": "8D",
-  "nextRecommendedPhase": "8E",
-  "nextRecommendedPhaseName": "MVP Release Readiness Gate",
+  "lastCompletedPhase": "8E",
+  "lastCompletedBusinessPhase": "8E",
+  "nextRecommendedPhase": "9A",
+  "nextRecommendedPhaseName": "Internal Trial Operations Pack",
   "nextRequiredReadFiles": [
     "AGENTS.md",
     "START_HERE.md",
@@ -57,7 +57,11 @@
     "docs/user-app/trial-template-selection.md",
     "docs/user-app/trial-content-readiness.md",
     "docs/product/template-content-qa-checklist.md",
-    "docs/phases/phase-8D.md"
+    "docs/phases/phase-8D.md",
+    "docs/user-app/mvp-release-readiness-gate.md",
+    "docs/user-app/trial-go-no-go-decision.md",
+    "docs/product/internal-trial-launch-checklist.md",
+    "docs/phases/phase-8E.md"
   ],
   "handoffNotes": [
     "Repository documents are the source of truth, not chat memory.",
@@ -66,9 +70,10 @@
     "UserAppTemplatePackage is local/export consumption contract data, not the real user app and not online publication.",
     "Phase 8C added ordered trial tasks, privacy-safe feedback form, mock/example feedback summary, trial readiness model, and administrator trial panels.",
     "Phase 8D added template content QA, trial template selection, trial content readiness, content QA fixtures, and administrator panels.",
-    "Phase 8D is not production release approval and does not add backend, analytics, AI generation, OpenAI/external API usage, camera, AR, training, App Store/TestFlight, online publication, or real user record collection.",
-    "Template content QA cannot mutate UserAppTemplatePackage, collect photos, write real user records into project-state, or enter training datasets.",
-    "Phase 8E should decide MVP release readiness only unless a future explicit gate expands scope."
+    "Phase 8E added MVP release readiness, trial go/no-go decision, release readiness fixtures, internal trial launch checklist, and administrator release gate panels.",
+    "Phase 8E is not production release approval and does not add backend, analytics, AI generation, OpenAI/external API usage, camera, AR, training, App Store/TestFlight, online publication, or real user record collection.",
+    "Release readiness and go/no-go reports cannot mutate UserAppTemplatePackage, collect photos, write real user records into project-state, or enter training datasets.",
+    "Phase 9A should create internal trial operations materials only unless a future explicit gate expands scope."
   ],
   "allowedDirectories": [
     "src/user-app",
@@ -92,10 +97,11 @@
     "projectStatusJson": "passed",
     "projectContext": "passed",
     "contextPackJson": "passed",
-    "userAppBrowserQa": "not_required_for_phase_8D_content_qa",
-    "httpSmoke": "not_required_for_phase_8D_content_qa",
+    "userAppBrowserQa": "not_required_for_phase_8E_release_gate",
+    "httpSmoke": "not_required_for_phase_8E_release_gate",
     "phase8DScopedTests": "passed",
-    "testFiles": 385,
-    "tests": 545
+    "testFiles": 391,
+    "tests": 557,
+    "phase8EScopedTests": "passed"
   }
 }

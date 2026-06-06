@@ -48,6 +48,8 @@ export type UserAppShellSection =
   | 'templateContentQa'
   | 'trialTemplateSelection'
   | 'trialContentReadiness'
+  | 'mvpReleaseReadiness'
+  | 'trialGoNoGo'
   | 'mobileQa'
   | 'interaction';
 

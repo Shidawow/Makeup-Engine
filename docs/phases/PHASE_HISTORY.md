@@ -558,3 +558,26 @@ What still cannot happen:
 Why Phase 8E follows:
 
 The trial structure and content QA gate now exist. The next bottleneck is a release readiness decision: whether the evidence supports a controlled MVP release path or requires more trial/content work.
+
+## Phase 8E
+
+Added local MVP Release Readiness Gate and Trial Go/No-Go decision.
+
+What changed:
+
+- Added `UserAppMvpReleaseReadinessReport` to summarize 8A route, 8B PWA/mobile polish, 8C trial pack, 8D content QA, privacy boundaries, QA evidence, known limitations, and production non-goals.
+- Added `UserAppTrialGoNoGoDecision` to return `go_for_internal_trial`, `go_with_warnings`, or `no_go`.
+- Added administrator panels for MVP 发布就绪度 and 试用 Go/No-Go.
+- Added release readiness and go/no-go fixtures for ready, warning, no-trial-template, unsafe feedback, blocked content QA, and production boundary violation cases.
+- Added internal trial launch checklist and Phase 8E recovery docs.
+
+What still cannot happen:
+
+- Phase 8E is not a production app, production release, App Store/TestFlight test, backend readiness, analytics readiness, camera readiness, AR readiness, AI generation approval, OpenAI/external API approval, training readiness, online publication, or real user data collection approval.
+- `go_for_internal_trial` and `go_with_warnings` mean internal small-scope trial preparation only.
+- Release readiness and go/no-go reports cannot collect photos, names, contacts, health information, sensitive identity information, biometrics, backend records, analytics records, real user trial records, or training data.
+- Release readiness, go/no-go, sessions, preferences, recommendations, trial tasks, feedback, and admin panels cannot mutate `UserAppTemplatePackage` or write real user trial records into `project-state`.
+
+Why Phase 9A follows:
+
+The MVP evidence is ready for internal trial preparation. The next bottleneck is an operations pack: participant instructions, operator script, warning log, stop conditions, and post-trial summary structure without adding production collection systems.

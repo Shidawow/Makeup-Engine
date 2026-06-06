@@ -12,14 +12,15 @@ It produces templates, template evidence, correction records, review state, loca
 
 ## Current Phase
 
-- Current business phase: `Phase 8D completed`
-- Last completed phase: `Phase 8D`
-- Last completed phase name: `Phase 8D - Template Content QA for Real User Trial`
-- Next recommended phase: `Phase 8E - MVP Release Readiness Gate`
+- Current business phase: `Phase 8E completed`
+- Last completed phase: `Phase 8E`
+- Last completed phase name: `Phase 8E - MVP Release Readiness Gate`
+- Next recommended phase: `Phase 9A - Internal Trial Operations Pack`
 
 Historical recovery milestone retained for older phase tests: `Phase 8A completed` / `Phase 8A - Product Route Decision / App MVP Planning`.
 Historical recovery milestone retained for Phase 8B tests: `Phase 8B completed` / `Phase 8B - PWA / Mobile Web MVP Polish`.
 Historical recovery milestone retained for Phase 8C tests: `Phase 8C completed` / `Phase 8C - User App MVP Trial Pack`.
+Historical recovery milestone retained for Phase 8D tests: `Phase 8D completed` / `Phase 8D - Template Content QA for Real User Trial`.
 
 ## Current Main Data Flow
 
@@ -54,6 +55,7 @@ Real Photo
 -> PWA / Mobile Web MVP Polish
 -> User App MVP Trial Pack
 -> Template Content QA for Real User Trial
+-> MVP Release Readiness Gate
 -> Phase 8 Roadmap / V1 Non-Goals
 -> User App Consumption Manifest
 -> Dataset Review
@@ -122,6 +124,7 @@ These areas are retained for compatibility and historical runtime work, but they
 - Render Phase 8B PWA/mobile shell polish with lightweight manifest metadata, mobile home, PWA readiness, MVP polish readiness, and separated administrator QA surfaces.
 - Render Phase 8C MVP trial pack, feedback form preview, mock/example feedback summary, and trial readiness administrator panels for internal / small-scope trial planning.
 - Render Phase 8D template content QA, trial template selection, and trial content readiness administrator panels for real user trial preparation.
+- Render Phase 8E MVP release readiness and trial go/no-go administrator panels for internal trial preparation decisions.
 - Export user app consumption manifest and handoff JSON.
 - Evaluate batch QA issues, task readiness diagnostics, reject reasons, publish confirmation, rebinding recovery, library lifecycle, and operator handoff reports.
 - Continue into mask editing, template evidence capture, dataset review, and training dataset materialization.
@@ -158,6 +161,7 @@ These areas are retained for compatibility and historical runtime work, but they
 - Phase 8B PWA/mobile polish added only local shell UI polish, lightweight manifest metadata, PWA readiness, and MVP polish readiness; it is not production PWA release approval and does not add service worker, offline cache, push notification, background sync, install tracking, analytics, backend, camera, AR, native app, external API, training, or online publication scope.
 - Phase 8C trial pack adds only local internal / small-scope trial planning structures; it is not production release, App Store/TestFlight, backend form, analytics, real user record collection, camera, AR, training, or online publication scope.
 - Phase 8D template content QA adds only local content QA and trial content readiness structures; it is not production release, App Store/TestFlight, backend, analytics, AI generation, OpenAI/external API usage, real user record collection, camera, AR, training, or online publication scope.
+- Phase 8E MVP release readiness and trial go/no-go add only local gate decisions for internal trial preparation; they are not production release, App Store/TestFlight, backend readiness, analytics readiness, camera readiness, AR readiness, AI generation approval, OpenAI/external API approval, training readiness, online publication, or real user data collection approval.
 - Future production user-facing app work should be planned as a separate app surface or repository after an explicit phase gate. Makeup Engine remains the template production system and `UserAppTemplatePackage` remains the handoff contract.
 - User photo data, face embeddings, biometric identifiers, sensitive profile data, and user photo references must not enter durable export, training, model artifacts, or project-state.
 - User app consumption exports cannot persist object URLs, local absolute paths, large image bytes, or React state.
@@ -239,6 +243,9 @@ Business phases still use `START_HERE.md`, this file, `docs/status/NEXT_ACTION.m
 - `docs/product/user-app-v1-non-goals.md`
 - `docs/user-app/pwa-mobile-web-mvp-polish.md`
 - `docs/user-app/pwa-install-readiness.md`
+- `docs/user-app/mvp-release-readiness-gate.md`
+- `docs/user-app/trial-go-no-go-decision.md`
+- `docs/product/internal-trial-launch-checklist.md`
 - `docs/architecture/CURRENT_ARCHITECTURE.md`
 - `docs/architecture/DATA_FLOW.md`
 - `docs/architecture/BOUNDARIES_AND_GUARDRAILS.md`

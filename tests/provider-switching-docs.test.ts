@@ -40,14 +40,16 @@ describe('provider switching docs', () => {
     expect(combined).toContain('src/intelligence/runtime');
   });
 
-  it('provides phase 8D to 8E switch templates', async () => {
+  it('provides phase 8E to 9A switch templates with historical 8D markers', async () => {
     const prompt = await readFile('docs/prompts/PROVIDER_SWITCH_PROMPT.md', 'utf8');
 
     expect(prompt).toContain('Switch To Native GPT / Codex Desktop');
     expect(prompt).toContain('Switch To PackyAPI + CLI');
     expect(prompt).toContain('Return From PackyAPI To ChatGPT');
-    expect(prompt).toContain('lastCompletedPhase: 8D');
-    expect(prompt).toContain('nextRecommendedPhase: 8E');
+    expect(prompt).toContain('lastCompletedPhase: 8E');
+    expect(prompt).toContain('nextRecommendedPhase: 9A');
+    expect(prompt).toContain('Internal Trial Operations Pack');
+    expect(prompt).toContain('Historical handoff marker retained for Phase 8D recovery tests');
     expect(prompt).toContain('prototype consumer is read-only validation');
     expect(prompt).toContain('Phase 7A/7B/7C/7D/7E/7F/7G/7H shell');
     expect(prompt).toContain('docs/app-roadmap/app-technology-route-decision.md');
@@ -56,7 +58,8 @@ describe('provider switching docs', () => {
     expect(prompt).toContain('Phase 8B PWA/mobile polish');
     expect(prompt).toContain('Phase 8C trial pack');
     expect(prompt).toContain('Phase 8D template content QA');
-    expect(prompt).toContain('MVP Release Readiness Gate');
+    expect(prompt).toContain('MVP release readiness');
+    expect(prompt).toContain('trial go/no-go');
     expect(prompt).toContain('photo intake is placeholder-only');
     expect(prompt).toContain('node scripts/context-pack.mjs --json');
   });

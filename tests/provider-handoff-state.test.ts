@@ -24,10 +24,10 @@ describe('provider handoff state', () => {
     expect(handoff.projectName).toBe('Makeup Engine');
     expect(handoff.activeProvider).toBeTruthy();
     expect(handoff.lastProvider).toBeTruthy();
-    expect(handoff.currentTask).toContain('8D');
+    expect(handoff.currentTask).toContain('8E');
     expect(handoff.taskStatus).toBeTruthy();
-    expect(handoff.lastCompletedPhase).toBe('8D');
-    expect(handoff.nextRecommendedPhase).toBe('8E');
+    expect(handoff.lastCompletedPhase).toBe('8E');
+    expect(handoff.nextRecommendedPhase).toBe('9A');
     expect(handoff.nextRequiredReadFiles).toEqual(
       expect.arrayContaining([
         'START_HERE.md',
@@ -54,8 +54,9 @@ describe('provider handoff state', () => {
     expect(notes).toContain('UserAppTemplatePackage is local/export consumption contract data');
     expect(notes).toContain('Phase 8C added ordered trial tasks');
     expect(notes).toContain('Phase 8D added template content QA');
+    expect(notes).toContain('Phase 8E added MVP release readiness');
     expect(notes).toContain('App Store/TestFlight');
-    expect(notes).toContain('Phase 8E should decide MVP release readiness');
+    expect(notes).toContain('Phase 9A should create internal trial operations materials');
     expect(handoff.forbiddenDirectories).toEqual(
       expect.arrayContaining(['src/engine', 'src/runtime', 'src/intelligence/runtime']),
     );

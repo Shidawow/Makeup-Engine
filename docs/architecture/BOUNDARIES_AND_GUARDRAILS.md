@@ -80,6 +80,9 @@
 - Phase 8C trial tasks, feedback, readiness, sessions, preferences, recommendations, and admin panels cannot mutate `UserAppTemplatePackage`, write real user trial records into `project-state`, or enter training datasets.
 - Phase 8D template content QA, trial template selection, and trial content readiness are local content QA only and are not production release, App Store/TestFlight, backend, analytics, AI generation, OpenAI/external API, camera, AR, or training approval.
 - Phase 8D reports cannot mutate `UserAppTemplatePackage`, collect photos, write real user trial records into `project-state`, or enter training datasets.
+- Phase 8E MVP release readiness and trial go/no-go are local gate decisions only and are not production release, App Store/TestFlight, backend readiness, analytics readiness, camera readiness, AR readiness, AI generation approval, OpenAI/external API approval, or training approval.
+- Phase 8E `go_for_internal_trial` and `go_with_warnings` mean internal small-scope trial preparation only, not production ready.
+- Phase 8E reports cannot mutate `UserAppTemplatePackage`, collect photos, write real user trial records into `project-state`, call backend/analytics/camera/AR/OpenAI/external APIs, or enter training datasets.
 - A compatibility target such as `ios-app-v0` or `web-app-v0` describes intended consumers only; it does not create an iOS app, Web app, backend, or online release.
 - Rejected, archived, or deprecated library entries must not enter publish packages by default.
 - Legacy runtime areas no longer carry new mainline features.
@@ -106,6 +109,7 @@
 - PWA/mobile polish reads the local shell, manifest metadata, and deterministic readiness models only; it does not create production app state, service worker state, backend state, analytics, user records, camera/photo records, AR state, native app state, or training data.
 - Trial pack planning reads local shell readiness, PWA/MVP polish readiness, and mock/example feedback structures only; it does not create production app state, backend records, analytics records, real user trial records, camera/photo records, AR state, native app state, or training data.
 - Template content QA reads `UserAppTemplatePackage` content and deterministic QA fixtures only; it does not create production app state, backend records, analytics records, AI-generated content, real user trial records, camera/photo records, AR state, native app state, or training data.
+- MVP release readiness and trial go/no-go read Phase 8A-8D readiness evidence only; they do not create production app state, backend records, analytics records, AI-generated content, real user trial records, camera/photo records, AR state, native app state, or training data.
 - Dataset review decides whether corrected artifacts can become materialized training data.
 - Training reads materialized datasets, not UI state and not raw source packages.
 - Export reads validated model artifacts and export readiness metadata.

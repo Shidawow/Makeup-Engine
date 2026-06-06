@@ -49,8 +49,8 @@ describe('Phase 7B documentation recovery', () => {
     );
 
     const snapshot = readJson<ProjectSnapshot>('project-state/project-state.snapshot.json');
-    expect(snapshot.lastCompletedPhase).toBe('8D');
-    expect(snapshot.nextRecommendedPhase).toBe('8E');
+    expect(snapshot.lastCompletedPhase).toBe('8E');
+    expect(snapshot.nextRecommendedPhase).toBe('9A');
     expect(snapshot.mainDataFlow).toContain('StepGuidanceUxHardening');
     expect(snapshot.recoveryEntryFiles).toContain('docs/phases/phase-7B.md');
     expect(snapshot.recoveryEntryFiles).toContain(
@@ -58,12 +58,12 @@ describe('Phase 7B documentation recovery', () => {
     );
 
     const providerHandoff = readJson<ProviderHandoff>('project-state/provider-handoff.json');
-    expect(providerHandoff.lastCompletedPhase).toBe('8D');
-    expect(providerHandoff.nextRecommendedPhase).toBe('8E');
+    expect(providerHandoff.lastCompletedPhase).toBe('8E');
+    expect(providerHandoff.nextRecommendedPhase).toBe('9A');
     expect(providerHandoff.nextRequiredReadFiles).toContain('docs/phases/phase-7B.md');
 
     const guardrails = readJson<GuardrailState>('project-state/guardrails.json');
-    expect(guardrails.phase).toBe('8D');
+    expect(guardrails.phase).toBe('8E');
     expect(guardrails.guardrails.map((guardrail) => guardrail.id)).toEqual(
       expect.arrayContaining([
         'phase-7b-no-production-app-scope',

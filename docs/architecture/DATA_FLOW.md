@@ -33,6 +33,7 @@ Real Photo
 -> PWA / Mobile Web MVP Polish
 -> User App MVP Trial Pack
 -> Template Content QA / Trial Template Selection / Trial Content Readiness
+-> MVP Release Readiness Gate / Trial Go-No-Go
 -> Phase 8 Roadmap / V1 Non-Goals
 -> User App Consumption Manifest
 -> Dataset Review
@@ -73,6 +74,7 @@ Real Photo
 - `PWA / Mobile Web MVP Polish`: Phase 8B local shell polish layer for manifest metadata, lightweight icon placeholder, PWA readiness, MVP polish readiness, mobile home, Chinese user copy, and separated administrator QA surfaces.
 - `User App MVP Trial Pack`: Phase 8C local trial planning layer for ordered user tasks, feedback questionnaire, mock/example feedback summary, and trial readiness checks. It is not a backend form, production release, App Store/TestFlight test, analytics flow, real user record store, or training data source.
 - `Template Content QA / Trial Template Selection / Trial Content Readiness`: Phase 8D local content QA layer for template copy, step actionability, region instructions, tools/products, recommendation reasons, trial-ready template selection, and integrated content readiness. It is not production release approval, AI content generation, backend readiness, OpenAI/external API usage, camera/AR readiness, real user record storage, or training data.
+- `MVP Release Readiness Gate / Trial Go-No-Go`: Phase 8E local gate layer that summarizes 8A-8D evidence and decides go, go with warnings, or no-go for internal trial preparation only. It is not production release approval, App Store/TestFlight readiness, backend readiness, camera/AR readiness, analytics readiness, AI generation approval, OpenAI/external API approval, real user record storage, or training data.
 - `Phase 8 Roadmap / V1 Non-Goals`: planning docs for 8A through 8E and the anti-scope list for login, backend, database, camera, AR, native apps, OpenAI API, ecommerce, community, paid features, and training.
 - `User App Consumption Manifest`: handoff manifest with app template entries, versions, compatibility target, checksums, readiness, and local-only disclaimer.
 - `Dataset Review`: explicit review decisions before data becomes training-ready.
@@ -99,6 +101,8 @@ Real Photo
 `User App MVP Trial Pack` is a local administrator planning layer over the polished shell. It cannot collect real names, contact information, photos, health information, sensitive identity information, face embeddings, biometric identifiers, backend records, analytics records, or training data. Trial tasks, feedback, readiness, sessions, preferences, and recommendations cannot mutate `UserAppTemplatePackage` or write real user trial records into `project-state`.
 
 `Template Content QA / Trial Template Selection / Trial Content Readiness` is a local administrator content QA layer over `UserAppTemplatePackage`. It can identify trial-ready, backup warning, and blocked templates, but it cannot mutate `UserAppTemplatePackage`, call OpenAI/external APIs, generate AI content, collect user photos, write real user trial records into `project-state`, or create training input.
+
+`MVP Release Readiness Gate / Trial Go-No-Go` is a local administrator gate over Phase 8A-8D evidence. It can decide whether to prepare an internal small-scope trial, but it cannot approve production release, mutate `UserAppTemplatePackage`, call backend/analytics/camera/AR/OpenAI/external APIs, collect photos, write real user trial records into `project-state`, or create training input.
 
 Phase 6L-1 adds a QA loop inside this read-only layer:
 
@@ -238,3 +242,17 @@ User App Shell
 ```
 
 PWA/mobile polish can improve local UI, metadata, and readiness checks only. It cannot add service worker, offline cache, push notification, background sync, install tracking, analytics, backend, database, accounts, camera, AR, OpenAI/external APIs, training, native apps, online publication, app store release work, or new runtime dependencies. It cannot mutate `UserAppTemplatePackage` or write real user records into `project-state`.
+
+Phase 8E adds MVP release readiness and trial go/no-go without creating a production app:
+
+```text
+8A Route Decision
+-> 8B PWA / Mobile Polish
+-> 8C Trial Pack
+-> 8D Content QA
+-> MVP Release Readiness Report
+-> Trial Go / No-Go Decision
+-> Phase 9A Internal Trial Operations Pack
+```
+
+Release readiness can decide internal trial preparation only. It cannot add production release, App Store/TestFlight, backend, database, accounts, analytics, camera, AR, AI generation, OpenAI/external APIs, training, native apps, online publication, service worker, offline cache, push notification, background sync, install tracking, or real user data collection.

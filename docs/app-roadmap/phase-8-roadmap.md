@@ -11,6 +11,7 @@ Phase 8 turns the local contract-driven User App MVP Shell evidence into a contr
 | 8C | User App MVP Trial Pack | Define the first trial-ready `UserAppTemplatePackage` set and sample guidance coverage for user testing. | Content/package selection only unless explicitly expanded. No real user photos, backend, camera, AR, or training from trial users. |
 | 8D | Template Content QA for Real User Trial | QA template copy, region instructions, warnings, tools/products, and mobile guidance clarity for a limited trial. | QA and content readiness only. Do not treat QA as app store, backend, camera, AR, accessibility certification, or production release approval. |
 | 8E | MVP Release Readiness Gate | Decide whether the MVP is ready for a controlled release path and what later implementation phase is allowed. | Gate decision only unless owner explicitly approves implementation scope. Native, backend, camera, AR, analytics, paid, and app store work stay separate gates. |
+| 9A | Internal Trial Operations Pack | Prepare internal trial operations materials after 8E go/go-with-warnings. | Operations docs only. No backend form, analytics collection, camera, AR, App Store/TestFlight, production release, or real user record storage. |
 
 ## 8A Completed Decision
 
@@ -75,6 +76,21 @@ Before starting 8B:
 - `nextRecommendedPhase` is `8E`.
 - Template content QA, trial template selection, and trial content readiness scoped tests have passed.
 - The next phase remains release readiness gate only unless explicitly expanded.
+
+## 8E Completed Result
+
+- MVP release readiness summarizes 8A route, 8B PWA/mobile polish, 8C trial pack, 8D content QA, privacy boundaries, browser/mobile QA evidence, known limitations, and production non-goals.
+- Trial go/no-go returns go, go with warnings, or no-go for internal small-scope trial preparation.
+- Admin release gate panels are available in the local shell without disrupting the ordinary user path.
+- The current next recommended phase is Phase 9A Internal Trial Operations Pack.
+- No production app, backend, camera, AR, analytics, OpenAI/external API usage, AI generation, training, App Store/TestFlight, online release, real user record collection, service worker, offline cache, push notification, background sync, install tracking, or new runtime dependency was added.
+
+## 9A Entry Criteria
+
+- `lastCompletedPhase` is `8E`.
+- `nextRecommendedPhase` is `9A`.
+- MVP release readiness and trial go/no-go scoped tests have passed.
+- The next phase remains internal trial operations preparation only unless explicitly expanded.
 
 ## Persistent Guardrails
 

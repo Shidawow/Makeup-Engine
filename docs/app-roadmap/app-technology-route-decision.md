@@ -65,3 +65,15 @@ Phase 8B completed local PWA/mobile shell polish only. It did not change the sel
 Phase 8C completed a local MVP trial pack for internal / small-scope user validation planning. It keeps the React Web / PWA MVP route, keeps Makeup Engine as the template production system, and keeps `UserAppTemplatePackage` as the handoff contract.
 
 8C does not approve production app implementation, backend, analytics, camera, AR, native app, training, App Store/TestFlight, online release, or real user data collection.
+
+## Phase 8D Result
+
+Phase 8D completed local template content QA and trial content readiness. It keeps the React Web / PWA MVP route, keeps Makeup Engine as the template production system, and keeps `UserAppTemplatePackage` as the handoff contract.
+
+8D does not approve AI content generation, OpenAI/external API calls, production app implementation, backend, analytics, camera, AR, native app, training, App Store/TestFlight, online release, or real user data collection.
+
+## Phase 8E Result
+
+Phase 8E completed the MVP release readiness gate and trial go/no-go decision. It decides that the next safe step is internal small-scope trial operations preparation, not production release implementation.
+
+8E does not approve backend, analytics, camera, AR, native app, training, App Store/TestFlight, online release, service worker, offline cache, push notification, background sync, install tracking, OpenAI/external API calls, AI content generation, or real user data collection.

@@ -1,5 +1,5 @@
 {
-  "phase": "8D",
+  "phase": "8E",
   "status": "passed",
   "lastValidation": {
     "typecheck": "passed",
@@ -9,11 +9,12 @@
     "projectStatusJson": "passed",
     "projectContext": "passed",
     "contextPackJson": "passed",
-    "userAppBrowserQa": "not_required_for_phase_8D_content_qa",
-    "httpSmoke": "not_required_for_phase_8D_content_qa",
+    "userAppBrowserQa": "not_required_for_phase_8E_release_gate",
+    "httpSmoke": "not_required_for_phase_8E_release_gate",
     "phase8DScopedTests": "passed",
-    "testFiles": 385,
-    "tests": 545
+    "phase8EScopedTests": "passed",
+    "testFiles": 391,
+    "tests": 557
   },
   "lastKnownPreDoc0Validation": {
     "typecheck": "passed",
@@ -30,14 +31,14 @@
     "npm run project:context",
     "node scripts/project-status.mjs --json",
     "node scripts/context-pack.mjs --json",
-    "npm run test -- tests/user-app-template-content-qa.test.ts tests/user-app-trial-template-selection.test.ts tests/user-app-trial-content-readiness.test.ts tests/user-app-template-content-qa-panel.test.tsx tests/user-app-trial-template-readiness-panel.test.tsx tests/user-app-shell-template-content-qa-flow.test.tsx tests/phase-8D-documentation-recovery.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
+    "npm run test -- tests/user-app-mvp-release-readiness.test.ts tests/user-app-trial-go-no-go.test.ts tests/user-app-mvp-release-readiness-panel.test.tsx tests/user-app-trial-go-no-go-panel.test.tsx tests/user-app-shell-release-readiness-flow.test.tsx tests/phase-8E-documentation-recovery.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
   ],
   "notes": [
-    "8D is local template content QA for real user trial preparation only.",
-    "8D added template content QA, trial template selection, trial content readiness, and administrator panels.",
-    "8D did not add production app, backend, analytics, AI generation, OpenAI/external API usage, camera, AR, training, App Store/TestFlight, online release, or real user data collection.",
-    "Phase 8D scoped tests passed: 9 test files, 22 tests.",
-    "Full npm run test passed: 385 test files, 545 tests.",
+    "8E is local MVP release readiness and trial go/no-go gating for internal small-scope trial preparation only.",
+    "8E added MVP release readiness, trial go/no-go decision, release readiness fixtures, administrator panels, and internal trial launch checklist documentation.",
+    "8E did not add production app, backend, analytics, AI generation, OpenAI/external API usage, camera, AR, training, App Store/TestFlight, online release, or real user data collection.",
+    "Phase 8E scoped tests passed: 8 test files, 19 tests.",
+    "Full npm run test passed: 391 test files, 557 tests.",
     "npm run typecheck, npm run build, npm run project:status, npm run project:context, node scripts/project-status.mjs --json, and node scripts/context-pack.mjs --json passed."
   ]
 }

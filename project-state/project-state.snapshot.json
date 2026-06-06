@@ -1,14 +1,14 @@
 {
   "projectName": "Makeup Engine",
-  "projectRole": "Makeup template production system with completed React Web / PWA route planning, Phase 8B local PWA/mobile shell polish, Phase 8C local MVP trial pack, and Phase 8D template content QA for a future separate user app MVP",
+  "projectRole": "Makeup template production system with completed React Web / PWA route planning, Phase 8B local PWA/mobile shell polish, Phase 8C local MVP trial pack, Phase 8D template content QA, and Phase 8E MVP release readiness for a future separate user app MVP",
   "projectIsUserFacingApp": false,
-  "lastCompletedPhase": "8D",
-  "lastCompletedBusinessPhase": "8D",
-  "currentPhase": "Template Content QA for Real User Trial",
-  "currentPhaseId": "8D",
-  "nextRecommendedPhase": "8E",
-  "nextRecommendedPhaseName": "MVP Release Readiness Gate",
-  "nextAction": "Proceed to Phase 8E: MVP Release Readiness Gate. Phase 8D is complete. Decide whether the MVP evidence is sufficient for a controlled release path without adding production app, backend, database, camera, AR, training, OpenAI API, external API, native iOS, React Native, Flutter, ecommerce, community, paid features, analytics, accounts, online publication, App Store/TestFlight, service worker, offline cache, push notification, background sync, install tracking, AI content generation, or real user data collection.",
+  "lastCompletedPhase": "8E",
+  "lastCompletedBusinessPhase": "8E",
+  "currentPhase": "MVP Release Readiness Gate",
+  "currentPhaseId": "8E",
+  "nextRecommendedPhase": "9A",
+  "nextRecommendedPhaseName": "Internal Trial Operations Pack",
+  "nextAction": "Proceed to Phase 9A: Internal Trial Operations Pack. Phase 8E is complete. Prepare internal small-scope trial operations materials without adding production app, backend, database, camera, AR, training, OpenAI API, external API, native iOS, React Native, Flutter, ecommerce, community, paid features, analytics, accounts, online publication, App Store/TestFlight, service worker, offline cache, push notification, background sync, install tracking, AI content generation, or real user data collection.",
   "mainDataFlow": [
     "SourceImagePackage",
     "SourceImageEntry",
@@ -69,7 +69,11 @@
     "UserAppTemplateContentQa",
     "UserAppTrialTemplateSelection",
     "UserAppTrialContentReadiness",
-    "UserAppTemplateContentQaAdminPanels"
+    "UserAppTemplateContentQaAdminPanels",
+    "UserAppMvpReleaseReadiness",
+    "UserAppTrialGoNoGo",
+    "UserAppMvpReleaseReadinessAdminPanels",
+    "UserAppInternalTrialLaunchChecklist"
   ],
   "mainModules": [
     "src/vision",
@@ -111,11 +115,12 @@
     "projectStatusJson": "passed",
     "projectContext": "passed",
     "contextPackJson": "passed",
-    "userAppBrowserQa": "not_required_for_phase_8D_content_qa",
-    "httpSmoke": "not_required_for_phase_8D_content_qa",
+    "userAppBrowserQa": "not_required_for_phase_8E_release_gate",
+    "httpSmoke": "not_required_for_phase_8E_release_gate",
     "phase8DScopedTests": "passed",
-    "testFiles": 385,
-    "tests": 545
+    "testFiles": 391,
+    "tests": 557,
+    "phase8EScopedTests": "passed"
   },
   "knownLimitations": [
     "SourceImagePackage is not a training dataset",
@@ -151,7 +156,10 @@
     "Phase 8C trial pack is local internal / small-scope trial planning only; it is not production release, App Store/TestFlight, backend form, analytics, camera, AR, training, or real user data collection approval.",
     "Phase 8C trial feedback must not collect real names, contact information, photos, health information, sensitive identity information, face embeddings, biometric identifiers, backend records, analytics records, or training data.",
     "Phase 8D template content QA is local trial content preparation only; it is not production release, App Store/TestFlight, backend, analytics, AI generation, OpenAI/external API usage, camera, AR, training, or real user record collection approval.",
-    "Phase 8D content QA reports cannot mutate UserAppTemplatePackage, collect photos, write real user trial records into project-state, or enter training datasets."
+    "Phase 8D content QA reports cannot mutate UserAppTemplatePackage, collect photos, write real user trial records into project-state, or enter training datasets.",
+    "Phase 8E MVP release readiness is local gate evidence only; it is not production release, App Store/TestFlight, backend readiness, analytics readiness, camera readiness, AR readiness, AI generation approval, OpenAI/external API approval, training readiness, online publication, or real user data collection approval.",
+    "Phase 8E go_for_internal_trial or go_with_warnings means internal small-scope trial preparation only, not production readiness.",
+    "Phase 8E release readiness and go/no-go reports cannot mutate UserAppTemplatePackage, collect photos, write real user trial records into project-state, call external APIs, or enter training datasets."
   ],
   "recoveryEntryFiles": [
     "START_HERE.md",
@@ -217,7 +225,11 @@
     "docs/user-app/trial-template-selection.md",
     "docs/user-app/trial-content-readiness.md",
     "docs/product/template-content-qa-checklist.md",
-    "docs/phases/phase-8D.md"
+    "docs/phases/phase-8D.md",
+    "docs/user-app/mvp-release-readiness-gate.md",
+    "docs/user-app/trial-go-no-go-decision.md",
+    "docs/product/internal-trial-launch-checklist.md",
+    "docs/phases/phase-8E.md"
   ],
   "forbiddenActions": [
     "Do not build the full production user-side app in the local admin workbench",
@@ -243,6 +255,10 @@
     "Do not write real user trial records into project-state or training datasets.",
     "Do not treat Phase 8D template content QA, trial template selection, or trial content readiness as production release, App Store/TestFlight, backend, analytics, AI generation, OpenAI/external API usage, real user record collection, camera, AR, training, or online publication approval.",
     "Do not mutate UserAppTemplatePackage from Phase 8D content QA, trial template selection, trial content readiness, sessions, preferences, recommendations, or admin panels.",
-    "Do not write real user template QA records into project-state or training datasets."
+    "Do not write real user template QA records into project-state or training datasets.",
+    "Do not treat Phase 8E MVP release readiness or trial go/no-go as production release, App Store/TestFlight, backend readiness, analytics readiness, camera readiness, AR readiness, AI generation approval, OpenAI/external API approval, training readiness, online publication, or real user data collection approval.",
+    "Do not use Phase 8E go_for_internal_trial or go_with_warnings as permission to collect real user names, contacts, photos, health information, sensitive identity data, biometrics, backend records, analytics records, or training data.",
+    "Do not mutate UserAppTemplatePackage from Phase 8E release readiness, trial go/no-go, sessions, preferences, recommendations, content QA, feedback, or admin panels.",
+    "Do not write real release readiness, go/no-go, or trial participant records into project-state or training datasets."
   ]
 }

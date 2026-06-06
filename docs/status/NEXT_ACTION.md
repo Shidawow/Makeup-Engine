@@ -2,20 +2,19 @@
 
 ## What To Do Next
 
-Proceed to Phase 8E: MVP Release Readiness Gate.
+Proceed to Phase 9A: Internal Trial Operations Pack.
 
 ## Why
 
-Phase 8D added a local Template Content QA gate, trial template selection, trial content readiness model, content QA fixtures, and administrator panels. The next bottleneck is release decision quality: whether the MVP evidence is sufficient to approve a controlled release path or whether more trial/content work is needed.
+Phase 8E added the MVP release readiness gate and trial go/no-go decision. The current decision is that the MVP can proceed to internal small-scope trial preparation, while production release remains out of scope.
 
-Historical recovery notes: Phase 7H browser/mobile QA remains the local prototype QA baseline, Phase 8B PWA/mobile polish is complete, Phase 8C trial pack is complete, and Phase 8D content QA is complete.
+Historical recovery notes: Phase 7H browser/mobile QA remains the local prototype QA baseline, Phase 8B PWA/mobile polish is complete, Phase 8C trial pack is complete, Phase 8D content QA is complete, and Phase 8E release readiness is complete.
 
-## Recommended 8E Scope
+## Recommended 9A Scope
 
-- Decide MVP release readiness from existing PWA/mobile shell, trial pack, feedback structure, and content QA evidence.
-- Keep release readiness as a gate, not implementation.
-- Identify required blockers before any controlled release path.
-- Define what later phase can implement only if the owner approves the gate.
+- Create the internal trial operations pack.
+- Define operator roles, participant instructions, session script, warning log, stop conditions, and post-trial summary template.
+- Keep the work local/documented unless a later explicit gate approves real collection systems.
 
 ## What Not To Do
 
@@ -52,11 +51,15 @@ Read these files first:
 20. `docs/product/template-content-qa-checklist.md`
 21. `docs/phases/phase-8C.md`
 22. `docs/phases/phase-8D.md`
-18. `project-state/project-state.snapshot.json`
-19. `project-state/latest-handoff.json`
-20. `project-state/provider-handoff.json`
-21. `project-state/active-task.json`
-22. `project-state/guardrails.json`
+23. `docs/user-app/mvp-release-readiness-gate.md`
+24. `docs/user-app/trial-go-no-go-decision.md`
+25. `docs/product/internal-trial-launch-checklist.md`
+26. `docs/phases/phase-8E.md`
+27. `project-state/project-state.snapshot.json`
+28. `project-state/latest-handoff.json`
+29. `project-state/provider-handoff.json`
+30. `project-state/active-task.json`
+31. `project-state/guardrails.json`
 
 Then run:
 

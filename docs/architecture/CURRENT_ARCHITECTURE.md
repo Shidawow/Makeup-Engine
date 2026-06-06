@@ -80,6 +80,10 @@ Phase 8C adds local internal / small-scope trial planning structures. `src/user-
 
 Phase 8D adds local content QA structures for trial preparation. `src/user-app/userAppTemplateContentQa.ts` checks template title, summary, steps, actionability, region instructions, tools, products, duration, difficulty, recommendation reasons, privacy/placeholder copy, internal technical terms, and trial suitability. `src/user-app/userAppTrialTemplateSelection.ts` separates trial-ready, backup warning, and blocked templates. `src/user-app/userAppTrialContentReadiness.ts` combines Phase 8C trial readiness with template content QA, template selection, privacy boundary, and local-only boundary. `src/components/user-app` renders 模板内容 QA, 试用模板选择, and 试用内容就绪度 panels inside the administrator checks area. It does not add production app scope, backend services, analytics, AI content generation, OpenAI/external API usage, real user record storage, camera, AR, training, App Store/TestFlight, online publication, or new runtime dependencies.
 
+### MVP Release Readiness Gate
+
+Phase 8E adds local release readiness gate structures for internal trial preparation. `src/user-app/userAppMvpReleaseReadiness.ts` summarizes Phase 8A route decision, Phase 8B PWA/mobile polish, PWA manifest readiness, ordinary user path readiness, privacy/local-only boundary, Phase 8C trial pack and feedback form, Phase 8D template content QA and trial template selection, browser/mobile QA evidence, known limitations, and production non-goals. `src/user-app/userAppTrialGoNoGo.ts` returns `go_for_internal_trial`, `go_with_warnings`, or `no_go`. `src/components/user-app` renders MVP 发布就绪度 and 试用 Go/No-Go panels inside the administrator checks area. It does not add production app scope, backend services, analytics, camera, AR, AI generation, OpenAI/external API usage, real user record storage, training, App Store/TestFlight, online publication, or new runtime dependencies.
+
 ### Vision Analysis
 
 `src/vision` owns local face, cosmetic, pixel, region, quality, provider, and pipeline logic. It consumes `TemplateAnalysisSeed` records when they are ready for Vision Analysis.
@@ -184,7 +188,7 @@ src/components/template-studio/user-app-prototype-consumer-panel
 -> prototype template list / detail / validation preview
 
 src/user-app
--> User App Shell view model / navigation / progress / guidance UX / photo intake placeholder / personalization boundary / local onboarding / local preferences / local template discovery / recommendation placeholders / local session persistence and recovery / mobile QA / readiness gate / PWA readiness / MVP polish readiness / trial pack / trial feedback / trial readiness / template content QA / trial template selection / trial content readiness
+-> User App Shell view model / navigation / progress / guidance UX / photo intake placeholder / personalization boundary / local onboarding / local preferences / local template discovery / recommendation placeholders / local session persistence and recovery / mobile QA / readiness gate / PWA readiness / MVP polish readiness / trial pack / trial feedback / trial readiness / template content QA / trial template selection / trial content readiness / MVP release readiness / trial go-no-go
 
 docs/app-roadmap/app-technology-route-decision.md
 -> React Web / PWA MVP first route decision / deferred native-backend-camera-AR routes
@@ -205,6 +209,12 @@ docs/user-app/trial-template-selection.md
 docs/user-app/trial-content-readiness.md
 -> Phase 8D integrated trial content readiness / privacy and local-only boundary
 
+docs/user-app/mvp-release-readiness-gate.md
+-> Phase 8E MVP release readiness gate / internal trial readiness only / not production ready
+
+docs/user-app/trial-go-no-go-decision.md
+-> Phase 8E go / go-with-warnings / no-go decision for internal trial preparation
+
 docs/user-app/pwa-install-readiness.md
 -> manifest / metadata / icon placeholder / no service worker install-readiness boundary
 
@@ -221,7 +231,7 @@ docs/user-app/user-app-product-route.md
 -> compatibility entry point for Phase 8A route decision / ownership boundary / future separate app planning
 
 src/components/user-app
--> local User App MVP Shell preview / mobile home / step guidance UX hardening / disabled photo intake and privacy placeholder UI / onboarding and preference setup UI / discovery and recommendation placeholder UI / session controls and recovery notice / PWA readiness panel / MVP polish checklist / trial pack panel / trial feedback panel / trial readiness panel / template content QA panel / trial template readiness panel / App readiness panel / mobile QA panel / interaction checklist
+-> local User App MVP Shell preview / mobile home / step guidance UX hardening / disabled photo intake and privacy placeholder UI / onboarding and preference setup UI / discovery and recommendation placeholder UI / session controls and recovery notice / PWA readiness panel / MVP polish checklist / trial pack panel / trial feedback panel / trial readiness panel / template content QA panel / trial template readiness panel / MVP release readiness panel / trial go-no-go panel / App readiness panel / mobile QA panel / interaction checklist
 
 src/components/demo/vision-analysis-demo
 -> seed analysis

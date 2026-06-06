@@ -19,10 +19,10 @@ describe('project status CLI', () => {
       knownLimitations: string[];
     };
 
-    expect(parsed.currentPhase).toBe('Template Content QA for Real User Trial');
-    expect(parsed.lastCompletedPhase).toBe('8D');
-    expect(parsed.lastCompletedBusinessPhase).toBe('8D');
-    expect(parsed.nextRecommendedPhase).toBe('8E');
+    expect(parsed.currentPhase).toBe('MVP Release Readiness Gate');
+    expect(parsed.lastCompletedPhase).toBe('8E');
+    expect(parsed.lastCompletedBusinessPhase).toBe('8E');
+    expect(parsed.nextRecommendedPhase).toBe('9A');
     expect(parsed.knownLimitations).toContain('JPEG pixel decoding is intentionally unsupported');
   });
 
@@ -34,8 +34,8 @@ describe('project status CLI', () => {
 
     expect(result.status).toBe(0);
     expect(result.stdout).toContain('Makeup Engine');
-    expect(result.stdout).toContain('8D');
-    expect(result.stdout).toContain('8E');
+    expect(result.stdout).toContain('9A');
+    expect(result.stdout).toContain('9A');
   });
 
   it('runs through npm script with forwarded JSON flag', () => {
@@ -48,6 +48,6 @@ describe('project status CLI', () => {
     const parsed = JSON.parse(result.stdout.slice(result.stdout.indexOf('{'))) as {
       nextAction: string;
     };
-    expect(parsed.nextAction).toContain('Phase 8E');
+    expect(parsed.nextAction).toContain('Phase 9A');
   });
 });

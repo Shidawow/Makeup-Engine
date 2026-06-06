@@ -5,14 +5,14 @@
       "command": "npm run typecheck",
       "purpose": "Validate TypeScript project references.",
       "lastStatus": "passed",
-      "lastSummary": "npm run typecheck passed for Phase 8D."
+      "lastSummary": "npm run typecheck passed for Phase 8E."
     },
     {
       "name": "test",
       "command": "npm run test",
       "purpose": "Run Vitest regression coverage.",
       "lastStatus": "passed",
-      "lastSummary": "npm run test passed: 385 test files, 545 tests."
+      "lastSummary": "npm run test passed: 391 test files, 557 tests."
     },
     {
       "name": "build",
@@ -26,35 +26,35 @@
       "command": "npm run project:status",
       "purpose": "Print human-readable project recovery status.",
       "lastStatus": "passed",
-      "lastSummary": "npm run project:status passed and reports 8D -> 8E."
+      "lastSummary": "npm run project:status passed and reports 8E -> 9A."
     },
     {
       "name": "project-status-json",
       "command": "node scripts/project-status.mjs --json",
       "purpose": "Print machine-readable project recovery status.",
       "lastStatus": "passed",
-      "lastSummary": "node scripts/project-status.mjs --json passed and reports 8D -> 8E."
+      "lastSummary": "node scripts/project-status.mjs --json passed and reports 8E -> 9A."
     },
     {
       "name": "project-context",
       "command": "npm run project:context",
       "purpose": "Print human-readable multi-provider context package.",
       "lastStatus": "passed",
-      "lastSummary": "npm run project:context passed and reports Phase 8D handoff context."
+      "lastSummary": "npm run project:context passed and reports Phase 8E handoff context."
     },
     {
       "name": "context-pack-json",
       "command": "node scripts/context-pack.mjs --json",
       "purpose": "Print machine-readable multi-provider context package.",
       "lastStatus": "passed",
-      "lastSummary": "node scripts/context-pack.mjs --json passed and reports Phase 8D handoff context."
+      "lastSummary": "node scripts/context-pack.mjs --json passed and reports Phase 8E handoff context."
     },
     {
       "name": "user-app-browser-qa",
       "command": "npm run user-app:browser-qa -- --json",
       "purpose": "Run Phase 7H local browser/mobile HTTP smoke, critical copy, Chinese copy, and privacy copy checks.",
-      "lastStatus": "not_required_for_phase_8D_content_qa",
-      "lastSummary": "Browser/mobile QA is not required for Phase 8D content QA, but may be rerun if shell copy changes require smoke evidence."
+      "lastStatus": "not_required_for_phase_8E_release_gate",
+      "lastSummary": "Browser/mobile QA is not required for Phase 8E release gate, but prior Phase 7H/8B QA remains part of the evidence reviewed by readiness models."
     },
     {
       "name": "phase-8c-scoped-tests",
@@ -69,7 +69,14 @@
       "purpose": "Run Phase 8D template content QA scoped regression coverage.",
       "lastStatus": "passed",
       "lastSummary": "Phase 8D scoped tests passed: 9 test files, 22 tests."
+    },
+    {
+      "name": "phase-8e-scoped-tests",
+      "command": "npm run test -- tests/user-app-mvp-release-readiness.test.ts tests/user-app-trial-go-no-go.test.ts tests/user-app-mvp-release-readiness-panel.test.tsx tests/user-app-trial-go-no-go-panel.test.tsx tests/user-app-shell-release-readiness-flow.test.tsx tests/phase-8E-documentation-recovery.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
+      "purpose": "Run Phase 8E MVP release readiness and trial go/no-go scoped regression coverage.",
+      "lastStatus": "passed",
+      "lastSummary": "Phase 8E scoped tests passed: 8 test files, 19 tests."
     }
   ],
-  "lastUpdatedPhase": "8D"
+  "lastUpdatedPhase": "8E"
 }

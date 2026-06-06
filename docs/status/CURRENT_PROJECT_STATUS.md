@@ -2,13 +2,13 @@
 
 ## Current Phase
 
-Phase 8D: Template Content QA for Real User Trial is complete.
+Phase 8E: MVP Release Readiness Gate is complete.
 
-Last completed business phase: Phase 8D.
+Last completed business phase: Phase 8E.
 
-Next recommended phase: Phase 8E, MVP Release Readiness Gate.
+Next recommended phase: Phase 9A, Internal Trial Operations Pack.
 
-Phase 8D adds a local template content QA gate, trial template selection, and trial content readiness checks for a small-scope real user trial. Makeup Engine remains the makeup template production system and local contract prototype. Future production user app work should still be planned as a separate app surface or repository after an explicit phase gate.
+Phase 8E adds a local MVP release readiness gate and trial go/no-go decision for internal small-scope real user trial preparation. Makeup Engine remains the makeup template production system and local contract prototype. Future production user app work should still be planned as a separate app surface or repository after an explicit phase gate.
 
 ## What The System Can Do
 
@@ -34,6 +34,7 @@ Phase 8D adds a local template content QA gate, trial template selection, and tr
 - Render lightweight PWA metadata, PWA readiness, mobile home polish, MVP polish readiness, and separated administrator QA panels for the local shell.
 - Render MVP trial pack, feedback form preview, privacy-safe mock feedback summary, and trial readiness administrator panels for internal / small-scope trial planning.
 - Render template content QA, trial template selection, and trial content readiness administrator panels for real user trial preparation.
+- Render MVP release readiness and trial go/no-go administrator panels for internal trial preparation decisions.
 - Verify HTTP smoke, critical copy, privacy copy, Chinese copy, and source-level forbidden-token checks without browser photo capture, backend, AR, training, OpenAI, external APIs, or new runtime dependencies.
 - Use the Phase 8A product route decision to plan a future React Web / PWA user app MVP outside Makeup Engine while keeping `UserAppTemplatePackage` as the handoff contract.
 - Export operator/Codex handoff summaries without storing object URLs, large image bytes, local absolute paths, React state, user photo bytes, or sensitive profile data.
@@ -54,6 +55,7 @@ Phase 8D adds a local template content QA gate, trial template selection, and tr
 - It cannot treat Phase 8B manifest metadata or PWA polish readiness as production PWA release approval.
 - It cannot treat Phase 8C trial pack, feedback preview, or trial readiness as production release, backend form, analytics, App Store/TestFlight, or real user data collection approval.
 - It cannot treat Phase 8D template content QA, trial template selection, or trial content readiness as production release, App Store/TestFlight, backend readiness, AI generation approval, OpenAI/external API usage, camera/AR readiness, analytics readiness, or training approval.
+- It cannot treat Phase 8E MVP release readiness or trial go/no-go as production release, App Store/TestFlight, backend readiness, camera/AR readiness, analytics readiness, AI generation approval, OpenAI/external API usage, or training approval.
 - It cannot collect real names, contact information, health information, sensitive identity information, photos, face embeddings, biometric identifiers, backend trial records, analytics records, or training data through the trial pack.
 - It cannot use service workers, offline cache, push notifications, background sync, install tracking, analytics, backend, camera, AR, or training in Phase 8B.
 - It cannot bootstrap backend, accounts, analytics, camera/photo capture, AR, native iOS, cross-platform runtime, OpenAI/external APIs, training, or online publication during route planning.
@@ -83,7 +85,7 @@ Phase 8D adds a local template content QA gate, trial template selection, and tr
 
 ## Recent Validation
 
-Phase 8D validation must include:
+Phase 8E validation must include:
 
 ```bash
 npm run typecheck
@@ -99,6 +101,6 @@ The latest completed validation is recorded in `project-state/test-status.json`.
 
 ## Next Phase Recommendation
 
-Proceed to Phase 8E: MVP Release Readiness Gate.
+Proceed to Phase 9A: Internal Trial Operations Pack.
 
-Phase 8E should decide whether the MVP evidence is ready for a controlled release path. It should remain a release readiness gate unless the owner explicitly approves implementation scope.
+Phase 9A should prepare internal trial operations materials while keeping real collection systems, backend, camera, AR, analytics, App Store/TestFlight, and production release out of scope.
