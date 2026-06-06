@@ -20,8 +20,9 @@ describe('user app photo boundary flow', () => {
 
     expect(viewModel.compatibility.canEnterStepGuide).toBe(true);
     expect(viewModel.selectedTemplate?.steps.length).toBeGreaterThan(0);
-    expect(html).toContain('UserAppTemplatePackage');
-    expect(html).toContain('照片与个性化');
+    expect(html).toContain('今日妆容练习');
+    expect(html).toContain('照片占位');
+    expect(html).toContain('照片占位');
     expect(html).not.toContain('type="file"');
     expect(html).not.toContain('getUserMedia');
   });

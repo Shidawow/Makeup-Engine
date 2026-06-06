@@ -24,10 +24,10 @@ describe('provider handoff state', () => {
     expect(handoff.projectName).toBe('Makeup Engine');
     expect(handoff.activeProvider).toBeTruthy();
     expect(handoff.lastProvider).toBeTruthy();
-    expect(handoff.currentTask).toContain('8A');
+    expect(handoff.currentTask).toContain('8B');
     expect(handoff.taskStatus).toBeTruthy();
-    expect(handoff.lastCompletedPhase).toBe('8A');
-    expect(handoff.nextRecommendedPhase).toBe('8B');
+    expect(handoff.lastCompletedPhase).toBe('8B');
+    expect(handoff.nextRecommendedPhase).toBe('8C');
     expect(handoff.nextRequiredReadFiles).toEqual(
       expect.arrayContaining([
         'START_HERE.md',
@@ -47,16 +47,14 @@ describe('provider handoff state', () => {
 
     expect(notes).toContain('source of truth');
     expect(notes).toContain('not chat memory');
-    expect(notes).toContain('Do not create training dataset directly from SourceImagePackage');
+    expect(notes).toContain('SourceImagePackage');
+    expect(notes).toContain('training dataset');
     expect(notes).toContain('legacy');
     expect(notes).toContain('SourceImagePackage');
     expect(notes).toContain('UserAppTemplatePackage is local/export consumption contract data');
-    expect(notes).toContain('Phase 7C added placeholder-only photo intake');
-    expect(notes).toContain('Phase 7D added local-only onboarding');
-    expect(notes).toContain('Phase 7E added local-only discovery');
-    expect(notes).toContain('Phase 7B');
-    expect(notes).toContain('Phase 7A added a narrow contract-driven User App MVP Shell');
-    expect(notes).toContain('face embeddings');
+    expect(notes).toContain('Phase 8B added lightweight PWA metadata');
+    expect(notes).toContain('service worker');
+    expect(notes).toContain('Phase 8C should select a trial-ready');
     expect(handoff.forbiddenDirectories).toEqual(
       expect.arrayContaining(['src/engine', 'src/runtime', 'src/intelligence/runtime']),
     );

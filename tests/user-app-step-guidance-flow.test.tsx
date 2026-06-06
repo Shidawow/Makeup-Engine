@@ -35,7 +35,8 @@ describe('user app step guidance flow', () => {
       <UserAppShell packageData={userAppGuidanceUxExamplePackage} />,
     );
 
-    expect(html).toContain('UserAppTemplatePackage');
+    expect(html).toContain('今日妆容练习');
+    expect(html).toContain('管理员检查');
     expect(html).toContain('暂时不能指导');
     expect(html).toContain('妆容模板');
     expect(html.length).toBeGreaterThan(0);

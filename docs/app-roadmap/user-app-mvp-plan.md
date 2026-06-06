@@ -92,7 +92,7 @@ Forbidden local state:
 
 ## Phase 8B Planning Target
 
-Phase 8B should polish the PWA / mobile web MVP plan and define acceptance criteria for a real MVP surface. It should not bootstrap a production app repository unless the owner explicitly expands scope.
+Phase 8B polished the local PWA / mobile web MVP shell evidence: mobile home, user copy, PWA metadata, install-readiness placeholder, PWA readiness, MVP polish readiness, privacy copy, touch-friendly step actions, and administrator QA separation. It did not bootstrap a production app repository.
 
 Phase 8B should keep the same boundaries:
 
@@ -100,3 +100,7 @@ Phase 8B should keep the same boundaries:
 - local-only V1 state
 - `UserAppTemplatePackage` contract consumption
 - no backend, database, camera, AR, native app, training, OpenAI API, ecommerce, community, or paid scope
+
+## Phase 8C Planning Target
+
+Phase 8C should define the first User App MVP Trial Pack: a small set of trial-ready templates and sample guidance coverage. It should remain content/package selection only unless a future explicit gate expands scope.

@@ -12,6 +12,17 @@ const statusText: Record<string, string> = {
   empty: '未加载模板包',
 };
 
+const friendlyCopy = (message: string): string =>
+  [
+    ['UserAppTemplatePackage', '本地妆容包'],
+    ['contract-driven prototype', '本地预览'],
+    ['contract', '内容'],
+    ['object URL', '临时图片链接'],
+    ['large image bytes', '大图内容'],
+    ['image bytes', '图片内容'],
+    ['React state', '界面状态'],
+  ].reduce((copy, [from, to]) => copy.split(from).join(to), message);
+
 export function UserAppCompatibilityBanner({
   compatibility,
 }: UserAppCompatibilityBannerProps) {
@@ -42,12 +53,16 @@ export function UserAppCompatibilityBanner({
             </span>
             {compatibility.target ? (
               <span className="rounded bg-white/70 px-2 py-0.5 text-xs">
-                {compatibility.target}
+                移动 Web
               </span>
             ) : null}
           </div>
-          <p className="mt-1 text-xs leading-5">{compatibility.localOnlyDisclaimer}</p>
-          <p className="mt-1 text-xs font-medium leading-5">{compatibility.nextAction}</p>
+          <p className="mt-1 text-xs leading-5">
+            {friendlyCopy(compatibility.localOnlyDisclaimer)}
+          </p>
+          <p className="mt-1 text-xs font-medium leading-5">
+            {friendlyCopy(compatibility.nextAction)}
+          </p>
         </div>
       </div>
 
@@ -55,7 +70,7 @@ export function UserAppCompatibilityBanner({
         <ul className="mt-3 grid gap-2 text-xs leading-5">
           {compatibility.blockingIssues.map((issue) => (
             <li className="rounded bg-white/60 p-2" key={issue}>
-              阻断：{issue}
+              阻断：{friendlyCopy(issue)}
             </li>
           ))}
         </ul>
@@ -65,7 +80,7 @@ export function UserAppCompatibilityBanner({
         <ul className="mt-3 grid gap-2 text-xs leading-5">
           {compatibility.warnings.map((warning) => (
             <li className="rounded bg-white/60 p-2" key={warning}>
-              提醒：{warning}
+              提醒：{friendlyCopy(warning)}
             </li>
           ))}
         </ul>
@@ -73,7 +88,7 @@ export function UserAppCompatibilityBanner({
 
       {compatibility.runtimeReferenceIssues.length === 0 ? (
         <p className="mt-3 text-xs leading-5">
-          未发现 object URL、本地绝对路径、大图 bytes 或 React state。
+          未发现临时图片链接、本机路径、大图内容或界面状态。
         </p>
       ) : (
         <ul className="mt-3 grid gap-2 text-xs leading-5">

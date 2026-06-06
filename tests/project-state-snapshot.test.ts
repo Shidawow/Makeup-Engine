@@ -31,13 +31,13 @@ describe('project state snapshot', () => {
 
     expect(snapshot.projectName).toBe('Makeup Engine');
     expect(snapshot.projectRole).toContain('Makeup template production system');
-    expect(snapshot.lastCompletedPhase).toBe('8A');
-    expect(snapshot.lastCompletedBusinessPhase).toBe('8A');
-    expect(snapshot.currentPhaseId).toBe('8A');
+    expect(snapshot.lastCompletedPhase).toBe('8B');
+    expect(snapshot.lastCompletedBusinessPhase).toBe('8B');
+    expect(snapshot.currentPhaseId).toBe('8B');
     expect(snapshot.currentPhase).toBeTruthy();
-    expect(snapshot.nextRecommendedPhase).toBe('8B');
-    expect(snapshot.nextRecommendedPhaseName).toContain('PWA / Mobile Web');
-    expect(snapshot.nextAction).toContain('Phase 8B');
+    expect(snapshot.nextRecommendedPhase).toBe('8C');
+    expect(snapshot.nextRecommendedPhaseName).toContain('User App MVP Trial Pack');
+    expect(snapshot.nextAction).toContain('Phase 8C');
     expect(snapshot.mainDataFlow).toEqual(
       expect.arrayContaining([
         'SourceImagePackage',
@@ -65,6 +65,9 @@ describe('project state snapshot', () => {
         'UserAppProductRouteDecision',
         'UserAppTechnologyRouteDecision',
         'UserAppMvpPlan',
+        'UserAppPwaReadiness',
+        'UserAppMvpPolishReadiness',
+        'UserAppMobileHome',
         'UserAppV1NonGoals',
         'UserAppConsumptionManifest',
         'VisionAnalysis',
@@ -83,6 +86,8 @@ describe('project state snapshot', () => {
     expect(snapshot.knownLimitations).toContain('UserAppShell is a local contract-driven MVP shell, not the production user app');
     expect(snapshot.knownLimitations).toContain('Phase 7C photo intake is placeholder-only and does not collect, upload, analyze, preview, store, export, or train on real user photos');
     expect(snapshot.knownLimitations).toContain('Phase 7D onboarding and preferences are local-only and non-sensitive; they are not account onboarding, backend sync, cloud sync, database persistence, analytics, production profile storage, or training input');
+    expect(snapshot.knownLimitations.join('\n')).toContain('Phase 8B PWA/mobile polish');
+    expect(snapshot.knownLimitations.join('\n')).toContain('service worker');
     expect(snapshot.knownLimitations).toContain('raw RGBA is currently summary-only in Studio');
     expect(snapshot.lastValidation.typecheck).toBeTruthy();
     expect(snapshot.lastValidation.test).toBeTruthy();

@@ -7,12 +7,15 @@ import {
 import { userAppMvpShellExamplePackage } from '../src/templates/examples';
 
 const renderedText = [
-  '用户 App MVP Shell',
-  '模板指导',
+  '今日妆容练习',
+  '跟练',
   '发现妆容',
   '我的准备',
   '我的偏好',
-  '本地状态',
+  '本地进度',
+  'PWA 检查',
+  'MVP 打磨',
+  '管理员检查',
   'App 就绪度',
   '移动端 QA',
   '交互检查',
@@ -25,6 +28,7 @@ const renderedText = [
   '不采集真实用户照片',
   '不上传照片',
   '不会把用户照片、偏好、会话或推荐记录用于训练',
+  '不会用于训练',
 ].join('\n');
 
 describe('User App browser/mobile QA report', () => {
@@ -77,7 +81,7 @@ describe('User App browser/mobile QA report', () => {
     const report = createUserAppBrowserQaReport({
       httpStatus: 500,
       pageLoaded: false,
-      renderedText: '用户 App MVP Shell blob: 灏辩华',
+      renderedText: '今日妆容练习 blob: 灏辩华',
       criticalPathEvidence: [],
       emptyStateEvidence: [],
       blockedStateEvidence: [],

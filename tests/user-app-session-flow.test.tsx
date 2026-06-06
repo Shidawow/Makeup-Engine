@@ -10,10 +10,10 @@ describe('user app session flow shell wiring', () => {
       <UserAppShell packageData={userAppMvpShellExamplePackage} />,
     );
 
-    expect(html).toContain('\u7528\u6237 App MVP Shell');
+    expect(html).toContain('今日妆容练习');
     expect(html).toContain('Soft Rose Daily Look');
     expect(html).toContain('Warm Bronze Evening Look');
-    expect(html).toContain('UserAppTemplatePackage');
+    expect(html).toContain('本地进度');
     expect(html).toContain('0%');
     expect(html).not.toContain('blob:');
     expect(html).not.toContain('data:image/');

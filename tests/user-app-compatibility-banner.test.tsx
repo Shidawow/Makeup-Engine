@@ -12,9 +12,11 @@ describe('UserAppCompatibilityBanner', () => {
       <UserAppCompatibilityBanner compatibility={compatibility} />,
     );
 
-    expect(html).toContain('web-app-v0');
     expect(html).toContain('本地');
-    expect(html).toContain('object URL');
-    expect(html).toContain('web-app-v0');
+    expect(html).toContain('移动 Web');
+    expect(html).toContain('不上传、不发布、不训练、不使用相机或 AR');
+    expect(html).toContain('未发现临时图片链接、本机路径、大图内容或界面状态');
+    expect(html).not.toContain('web-app-v0');
+    expect(html).not.toContain('object URL');
   });
 });

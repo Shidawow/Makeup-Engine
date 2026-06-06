@@ -10,11 +10,11 @@ describe('UserAppShell discovery flow wiring', () => {
       <UserAppShell packageData={userAppTemplateDiscoveryExamplePackage} />,
     );
 
-    expect(html).toContain('\u7528\u6237 App MVP Shell');
+    expect(html).toContain('今日妆容练习');
     expect(html).toContain('\u53d1\u73b0\u5986\u5bb9');
     expect(html).toContain('\u6211\u7684\u504f\u597d');
-    expect(html).toContain('\u7167\u7247\u4e0e\u4e2a\u6027\u5316');
-    expect(html).toContain('UserAppTemplatePackage');
+    expect(html).toContain('照片占位');
+    expect(html).toContain('用户路径');
     expect(html).not.toContain('type="file"');
     expect(html).not.toContain('blob:');
     expect(html).not.toContain('data:image/');

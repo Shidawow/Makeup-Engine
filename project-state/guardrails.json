@@ -1,5 +1,5 @@
 {
-  "phase": "8A",
+  "phase": "8B",
   "guardrails": [
     {
       "id": "source-image-not-training-data",
@@ -280,6 +280,26 @@
     {
       "id": "phase_8a_source_image_not_user_app_input",
       "rule": "SourceImagePackage cannot directly enter the future User App; the future MVP must consume validated UserAppTemplatePackage exports only."
+    },
+    {
+      "id": "phase_8b_pwa_mobile_polish_only",
+      "rule": "Phase 8B PWA/mobile polish is local shell polish only and is not production PWA release approval."
+    },
+    {
+      "id": "phase_8b_manifest_metadata_only",
+      "rule": "Phase 8B may add lightweight manifest metadata, theme color, icon placeholder, PWA readiness, MVP polish readiness, and mobile UI polish only."
+    },
+    {
+      "id": "phase_8b_no_service_worker_or_offline",
+      "rule": "Phase 8B must not add service worker, offline cache, push notification, background sync, install tracking, analytics, backend, database, accounts, cloud sync, camera, AR, native app, online publication, app store release work, external APIs, training, or new runtime dependencies."
+    },
+    {
+      "id": "phase_8b_admin_qa_not_user_feature",
+      "rule": "PWA readiness, MVP polish readiness, app readiness, mobile QA, and interaction checklist panels are administrator QA surfaces, not ordinary user production features."
+    },
+    {
+      "id": "phase_8b_does_not_modify_user_app_template_package",
+      "rule": "Phase 8B shell polish, readiness, QA, sessions, preferences, and recommendations cannot mutate UserAppTemplatePackage, write real user records into project-state, or enter training datasets."
     }
   ],
   "legacyFrozenModules": [

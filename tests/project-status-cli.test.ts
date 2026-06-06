@@ -19,10 +19,10 @@ describe('project status CLI', () => {
       knownLimitations: string[];
     };
 
-    expect(parsed.currentPhase).toBe('Product Route Decision / App MVP Planning');
-    expect(parsed.lastCompletedPhase).toBe('8A');
-    expect(parsed.lastCompletedBusinessPhase).toBe('8A');
-    expect(parsed.nextRecommendedPhase).toBe('8B');
+    expect(parsed.currentPhase).toBe('PWA / Mobile Web MVP Polish');
+    expect(parsed.lastCompletedPhase).toBe('8B');
+    expect(parsed.lastCompletedBusinessPhase).toBe('8B');
+    expect(parsed.nextRecommendedPhase).toBe('8C');
     expect(parsed.knownLimitations).toContain('JPEG pixel decoding is intentionally unsupported');
   });
 
@@ -34,8 +34,8 @@ describe('project status CLI', () => {
 
     expect(result.status).toBe(0);
     expect(result.stdout).toContain('Makeup Engine');
-    expect(result.stdout).toContain('8A');
     expect(result.stdout).toContain('8B');
+    expect(result.stdout).toContain('8C');
   });
 
   it('runs through npm script with forwarded JSON flag', () => {
@@ -48,6 +48,6 @@ describe('project status CLI', () => {
     const parsed = JSON.parse(result.stdout.slice(result.stdout.indexOf('{'))) as {
       nextAction: string;
     };
-    expect(parsed.nextAction).toContain('Phase 8B');
+    expect(parsed.nextAction).toContain('Phase 8C');
   });
 });

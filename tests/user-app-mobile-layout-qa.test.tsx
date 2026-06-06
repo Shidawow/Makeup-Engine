@@ -10,8 +10,10 @@ describe('User App mobile layout QA shell wiring', () => {
       <UserAppShell packageData={userAppMvpShellExamplePackage} />,
     );
 
-    expect(html).toContain('Phase 7H browser and mobile QA shell');
-    expect(html).toContain('用户 App MVP Shell');
+    expect(html).toContain('Phase 8B PWA / Mobile Web MVP Polish');
+    expect(html).toContain('今日妆容练习');
+    expect(html).toContain('PWA 检查');
+    expect(html).toContain('MVP 打磨');
     expect(html).toContain('App 就绪度');
     expect(html).toContain('移动端 QA');
     expect(html).toContain('交互检查');

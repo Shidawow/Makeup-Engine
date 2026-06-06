@@ -9,3 +9,5 @@ export * from './user-app-local-preferences.example';
 export * from './user-app-template-discovery.example';
 export * from './user-app-session.example';
 export * from './user-app-readiness.example';
+export * from './user-app-pwa-polish.example';
+export * from './user-app-mvp-polish.example';

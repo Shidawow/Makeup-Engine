@@ -22,12 +22,13 @@ describe('Phase 7H User App mobile/browser smoke rendering', () => {
       <UserAppShell packageData={userAppMvpShellExamplePackage} />,
     );
 
-    expect(html).toContain('用户 App MVP Shell');
+    expect(html).toContain('今日妆容练习');
+    expect(html).toContain('PWA 检查');
     expect(html).toContain('模板指导');
     expect(html).toContain('发现妆容');
     expect(html).toContain('我的准备');
     expect(html).toContain('我的偏好');
-    expect(html).toContain('本地状态');
+    expect(html).toContain('本地进度');
     expect(html).toContain('App 就绪度');
     expect(html).toContain('移动端 QA');
     expect(html).toContain('交互检查');

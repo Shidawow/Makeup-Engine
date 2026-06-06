@@ -488,3 +488,28 @@ What still cannot happen:
 Why Phase 8B follows:
 
 The route is decided. The next bottleneck is polishing the PWA / mobile web MVP brief, UX acceptance criteria, package consumption expectations, and trial-readiness checklist without implementing production app scope.
+
+## Phase 8B
+
+Polished the local User App Shell into a more mobile-first PWA MVP preview.
+
+What changed:
+
+- Added lightweight PWA manifest, theme color metadata, and SVG icon placeholder.
+- Added `UserAppPwaReadinessReport` and `UserAppMvpPolishReport`.
+- Added PWA install readiness and MVP polish admin panels.
+- Added a mobile-first home for current recommendation, start guidance, template discovery, and privacy.
+- Separated ordinary user path from administrator QA surfaces.
+- Updated Chinese user-facing copy so technical terms are kept in admin QA context.
+- Preserved no backend, no service worker, no analytics, no camera, no AR, no training, no native app, no production release, and no new runtime dependency boundaries.
+
+What still cannot happen:
+
+- Phase 8B is not a production app or production PWA release.
+- PWA metadata is install-readiness placeholder only.
+- `UserAppTemplatePackage` remains read-only handoff contract data and cannot be mutated by shell state, readiness, QA, preferences, sessions, or recommendations.
+- Real user photos, user records, readiness reports, browser QA reports, recommendations, preferences, and sessions cannot become training input or project-state user records.
+
+Why Phase 8C follows:
+
+The mobile shell now has enough PWA/MVP polish to define a trial-ready template pack. Phase 8C should select the first User App MVP Trial Pack without adding backend, camera, AR, training, analytics, accounts, or production release scope.

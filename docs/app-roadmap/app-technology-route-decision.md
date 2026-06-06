@@ -13,6 +13,7 @@ The future user-facing app should begin as a mobile-first web/PWA experience tha
 - Makeup Engine already has React/Vite UI infrastructure and a local contract-driven User App MVP Shell.
 - `UserAppTemplatePackage` already carries the app-facing contract for templates, steps, region instructions, tools, products, warnings, duration, difficulty, and lineage.
 - Phase 7A through 7H already proved local web rendering, step guidance, discovery, preferences, session recovery, readiness, mobile QA, browser smoke, Chinese copy, and privacy boundaries.
+- Phase 8B added local mobile web polish, lightweight PWA metadata, PWA readiness, MVP polish readiness, and admin QA separation without production runtime expansion.
 - A PWA can test real user guidance flow and mobile layout without adding native toolchains, app store processes, camera permissions, AR runtimes, accounts, backend storage, analytics, or paid infrastructure.
 
 ## Route Comparison
@@ -54,3 +55,7 @@ The following are not approved by Phase 8A:
 After a PWA MVP is validated, the future user-facing app can move to a separate repository or package boundary. That repository should consume stable `UserAppTemplatePackage` exports and should not mutate Makeup Engine production state.
 
 The split should be approved by a future phase gate that defines repository ownership, package handoff format, privacy policy, release process, storage boundary, and whether native, backend, camera, AR, analytics, or paid features are in scope.
+
+## Phase 8B Result
+
+Phase 8B completed local PWA/mobile shell polish only. It did not change the selected route, did not bootstrap a production app repository, and did not approve service worker, offline cache, backend, analytics, camera, AR, native app, OpenAI/external API, ecommerce, community, paid, training, online publication, or app store release work.

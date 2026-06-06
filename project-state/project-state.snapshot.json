@@ -1,14 +1,14 @@
 {
   "projectName": "Makeup Engine",
-  "projectRole": "Makeup template production system with a completed React Web / PWA product route decision for a future separate user app MVP, plus a local contract-driven user app shell prototype",
+  "projectRole": "Makeup template production system with completed React Web / PWA route planning and Phase 8B local PWA/mobile shell polish for a future separate user app MVP, plus a local contract-driven user app shell prototype",
   "projectIsUserFacingApp": false,
-  "lastCompletedPhase": "8A",
-  "lastCompletedBusinessPhase": "8A",
-  "currentPhase": "Product Route Decision / App MVP Planning",
-  "currentPhaseId": "8A",
-  "nextRecommendedPhase": "8B",
-  "nextRecommendedPhaseName": "PWA / Mobile Web MVP Polish",
-  "nextAction": "Proceed to Phase 8B: PWA / Mobile Web MVP Polish. Polish the mobile-first React Web / PWA MVP brief, UX acceptance criteria, package consumption expectations, and trial-readiness checklist. Keep Makeup Engine as the template production system, keep UserAppTemplatePackage as the handoff contract, and do not implement a production app, backend, database, camera, AR, training, OpenAI API, external API, native iOS, React Native, Flutter, ecommerce, community, paid features, analytics, accounts, online publication, app store release work, or separate repository bootstrap without a future explicit phase gate.",
+  "lastCompletedPhase": "8B",
+  "lastCompletedBusinessPhase": "8B",
+  "currentPhase": "PWA / Mobile Web MVP Polish",
+  "currentPhaseId": "8B",
+  "nextRecommendedPhase": "8C",
+  "nextRecommendedPhaseName": "User App MVP Trial Pack",
+  "nextAction": "Proceed to Phase 8C: User App MVP Trial Pack. Select the first trial-ready UserAppTemplatePackage set and sample guidance coverage for limited user testing. Phase 8B is complete. Keep Makeup Engine as the template production system, keep UserAppTemplatePackage as the handoff contract, and do not implement a production app, backend, database, camera, AR, training, OpenAI API, external API, native iOS, React Native, Flutter, ecommerce, community, paid features, analytics, accounts, online publication, app store release work, service worker, offline cache, push notification, background sync, install tracking, or separate repository bootstrap without a future explicit phase gate.",
   "mainDataFlow": [
     "SourceImagePackage",
     "SourceImageEntry",
@@ -48,6 +48,11 @@
     "UserAppProductRouteDecision",
     "UserAppTechnologyRouteDecision",
     "UserAppMvpPlan",
+    "UserAppPwaManifestMetadata",
+    "UserAppPwaReadiness",
+    "UserAppMvpPolishReadiness",
+    "UserAppMobileHome",
+    "UserAppAdminQaSeparation",
     "UserAppBoundaryPlan",
     "Phase8Roadmap",
     "UserAppV1NonGoals",
@@ -97,10 +102,11 @@
     "projectStatusJson": "passed",
     "projectContext": "passed",
     "contextPackJson": "passed",
-    "userAppBrowserQa": "not_required_for_phase_8A_docs_only",
-    "httpSmoke": "not_required_for_phase_8A_docs_only",
-    "testFiles": 363,
-    "tests": 503
+    "userAppBrowserQa": "passed",
+    "httpSmoke": "passed",
+    "phase8BScopedTests": "passed",
+    "testFiles": 370,
+    "tests": 514
   },
   "knownLimitations": [
     "SourceImagePackage is not a training dataset",
@@ -130,7 +136,9 @@
     "The future user-facing app should be planned as a separate React Web / PWA MVP surface that consumes UserAppTemplatePackage exports from Makeup Engine",
     "Native iOS, cross-platform shell, backend, accounts, analytics, camera, AR, and production release remain gated behind later explicit phases",
     "Phase 8A selects React Web / PWA MVP first; it does not implement the production user app, backend, database, camera, AR, native app, OpenAI API, ecommerce, community, paid features, training, app store release work, or separate repository bootstrap.",
-    "The future user-facing MVP should remain mobile-first PWA planning until a later explicit gate approves repository bootstrap, native implementation, backend, camera, AR, or release scope."
+    "The future user-facing MVP should remain mobile-first PWA planning until a later explicit gate approves repository bootstrap, native implementation, backend, camera, AR, or release scope.",
+    "Phase 8B PWA/mobile polish adds local shell UI polish, manifest metadata, and readiness checks only; it is not production PWA release approval.",
+    "Phase 8B does not add service worker, offline cache, push notification, background sync, install tracking, analytics, backend, camera, AR, native app, external API, training, online publication, or app store release scope."
   ],
   "recoveryEntryFiles": [
     "START_HERE.md",
@@ -144,6 +152,8 @@
     "docs/app-roadmap/makeup-engine-vs-user-app-boundary.md",
     "docs/app-roadmap/phase-8-roadmap.md",
     "docs/product/user-app-v1-non-goals.md",
+    "docs/user-app/pwa-mobile-web-mvp-polish.md",
+    "docs/user-app/pwa-install-readiness.md",
     "docs/user-app/user-app-product-route.md",
     "docs/app-contract/user-app-prototype-contract-consumer.md",
     "docs/user-app/user-app-mvp-shell.md",
@@ -166,6 +176,7 @@
     "docs/user-app/user-app-readiness-checklist.md",
     "docs/privacy/user-app-session-data-boundary.md",
     "docs/phases/phase-7H.md",
+    "docs/phases/phase-8B.md",
     "docs/phases/phase-8A.md",
     "docs/phases/phase-6L.md",
     "docs/phases/phase-6L-1.md",
@@ -200,6 +211,8 @@
     "Do not weaken the UserAppTemplatePackage boundary; the future React Web / PWA MVP must consume exported contract data and cannot mutate Makeup Engine production state",
     "Do not treat Phase 8A React Web / PWA route selection as permission to build a production user app inside Makeup Engine.",
     "Do not add React Native, Flutter, iOS native, backend, database, camera, AR, OpenAI API, external API, ecommerce, community, paid features, app store release work, training, analytics, accounts, online publication, or separate repository bootstrap in Phase 8A.",
-    "Do not allow SourceImagePackage to directly enter the future User App; only validated UserAppTemplatePackage exports can be consumed."
+    "Do not allow SourceImagePackage to directly enter the future User App; only validated UserAppTemplatePackage exports can be consumed.",
+    "Do not treat Phase 8B PWA/mobile polish as production PWA release approval.",
+    "Do not add service worker, offline cache, push notification, background sync, install tracking, analytics, backend, camera, AR, native app, external API, training, online publication, or app store release work in Phase 8B."
   ]
 }

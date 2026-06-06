@@ -45,10 +45,14 @@ The shell can preview:
 - local preferences
 - local session progress
 - readiness and mobile QA
+- PWA install-readiness placeholder
+- MVP polish readiness
 - privacy copy
 - disabled future photo/camera/AR placeholders
 
 It cannot become backend state, app store release state, analytics, camera capture, AR state, OpenAI API use, external API use, training input, or durable user records.
+
+Phase 8B adds only local shell polish and lightweight PWA metadata. The shell still cannot become the future production User App, a deployment target, service worker runtime, offline cache, analytics surface, backend client, install-tracking surface, camera/AR surface, native app, or release approval system.
 
 ## UserAppTemplatePackage Owns The Contract
 

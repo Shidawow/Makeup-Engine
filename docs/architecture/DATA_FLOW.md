@@ -30,6 +30,7 @@ Real Photo
 -> User App Mobile QA / App Readiness Gate
 -> Browser / Mobile QA Harness
 -> Product Route Decision / App MVP Plan
+-> PWA / Mobile Web MVP Polish
 -> Phase 8 Roadmap / V1 Non-Goals
 -> User App Consumption Manifest
 -> Dataset Review
@@ -67,6 +68,7 @@ Real Photo
 - `User App Mobile QA / App Readiness Gate`: Phase 7G local-only layer for deterministic mobile interaction QA and app prototype readiness reports over the existing shell.
 - `Browser / Mobile QA Harness`: Phase 7H local-only layer for HTTP smoke, critical copy, privacy copy, Chinese copy, and forbidden-token checks over the local shell.
 - `Product Route Decision / App MVP Plan`: Phase 8A planning layer that selects React Web / PWA MVP first, defines MVP scope, records V1 non-goals, and separates future user app ownership from Makeup Engine.
+- `PWA / Mobile Web MVP Polish`: Phase 8B local shell polish layer for manifest metadata, lightweight icon placeholder, PWA readiness, MVP polish readiness, mobile home, Chinese user copy, and separated administrator QA surfaces.
 - `Phase 8 Roadmap / V1 Non-Goals`: planning docs for 8A through 8E and the anti-scope list for login, backend, database, camera, AR, native apps, OpenAI API, ecommerce, community, paid features, and training.
 - `User App Consumption Manifest`: handoff manifest with app template entries, versions, compatibility target, checksums, readiness, and local-only disclaimer.
 - `Dataset Review`: explicit review decisions before data becomes training-ready.
@@ -214,3 +216,17 @@ Phase 7H QA Evidence
 ```
 
 Route planning can document product direction only. It cannot bootstrap a production app, mutate `UserAppTemplatePackage`, write user records into `project-state`, call backend/cloud/API services, collect photos, add analytics, train models, add ecommerce/community/paid scope, start React Native/Flutter/iOS native work, or certify release readiness.
+
+Phase 8B adds PWA/mobile polish without creating a production app:
+
+```text
+User App Shell
+-> Mobile Home
+-> PWA Manifest Metadata
+-> PWA Readiness Report
+-> MVP Polish Readiness Report
+-> Admin QA Separation
+-> Phase 8C Trial Pack Recommendation
+```
+
+PWA/mobile polish can improve local UI, metadata, and readiness checks only. It cannot add service worker, offline cache, push notification, background sync, install tracking, analytics, backend, database, accounts, camera, AR, OpenAI/external APIs, training, native apps, online publication, app store release work, or new runtime dependencies. It cannot mutate `UserAppTemplatePackage` or write real user records into `project-state`.

@@ -5,57 +5,57 @@
       "command": "npm run typecheck",
       "purpose": "Validate TypeScript project references.",
       "lastStatus": "passed",
-      "lastSummary": "TypeScript project references passed after Phase 8A product route planning sync."
+      "lastSummary": "npm run typecheck passed for Phase 8B final validation."
     },
     {
       "name": "test",
       "command": "npm run test",
       "purpose": "Run Vitest regression coverage.",
       "lastStatus": "passed",
-      "lastSummary": "Full Vitest suite passed: 363 test files, 503 tests."
+      "lastSummary": "npm run test passed for Phase 8B final validation: 370 test files, 514 tests."
     },
     {
       "name": "build",
       "command": "npm run build",
       "purpose": "Run TypeScript build and Vite production build.",
       "lastStatus": "passed",
-      "lastSummary": "Vite production build passed with chunk-size warning only."
+      "lastSummary": "npm run build passed for Phase 8B final validation; Vite reported the existing chunk-size warning only."
     },
     {
       "name": "project-status",
       "command": "npm run project:status",
       "purpose": "Print human-readable project recovery status.",
       "lastStatus": "passed",
-      "lastSummary": "Human-readable project status passed after final Phase 8A state sync."
+      "lastSummary": "npm run project:status passed for Phase 8B final validation."
     },
     {
       "name": "project-status-json",
       "command": "node scripts/project-status.mjs --json",
       "purpose": "Print machine-readable project recovery status.",
       "lastStatus": "passed",
-      "lastSummary": "Machine-readable project status passed after final Phase 8A state sync."
+      "lastSummary": "node scripts/project-status.mjs --json passed for Phase 8B final validation."
     },
     {
       "name": "project-context",
       "command": "npm run project:context",
       "purpose": "Print human-readable multi-provider context package.",
       "lastStatus": "passed",
-      "lastSummary": "Human-readable context pack passed after final Phase 8A state sync."
+      "lastSummary": "npm run project:context passed for Phase 8B final validation."
     },
     {
       "name": "context-pack-json",
       "command": "node scripts/context-pack.mjs --json",
       "purpose": "Print machine-readable multi-provider context package.",
       "lastStatus": "passed",
-      "lastSummary": "Machine-readable context pack passed after final Phase 8A state sync."
+      "lastSummary": "node scripts/context-pack.mjs --json passed for Phase 8B final validation."
     },
     {
       "name": "user-app-browser-qa",
       "command": "npm run user-app:browser-qa -- --json",
       "purpose": "Run Phase 7H local browser/mobile HTTP smoke, critical copy, Chinese copy, and privacy copy checks.",
-      "lastStatus": "not_required_for_phase_8A_docs_only",
-      "lastSummary": "Not required for Phase 8A docs/project-state route planning; Phase 7H browser QA remains the latest browser/runtime smoke scope."
+      "lastStatus": "passed",
+      "lastSummary": "npm run user-app:browser-qa -- --json passed local HTTP smoke, critical copy, privacy copy, and Chinese copy checks for Phase 8B."
     }
   ],
-  "lastUpdatedPhase": "8A"
+  "lastUpdatedPhase": "8B"
 }

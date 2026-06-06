@@ -60,7 +60,7 @@ describe('Phase 8A documentation recovery', () => {
     expect(readText('docs/phases/phase-8A.md')).toContain(
       'Product Route Decision / App MVP Planning',
     );
-    expect(readText('docs/status/NEXT_ACTION.md')).toContain('Phase 8B');
+    expect(readText('docs/status/NEXT_ACTION.md')).toContain('Phase 8C');
     expect(readText('docs/architecture/BOUNDARIES_AND_GUARDRAILS.md')).toContain(
       'Phase 8A is product route and ownership planning only',
     );
@@ -72,11 +72,11 @@ describe('Phase 8A documentation recovery', () => {
     );
 
     const snapshot = readJson<ProjectSnapshot>('project-state/project-state.snapshot.json');
-    expect(snapshot.lastCompletedPhase).toBe('8A');
-    expect(snapshot.lastCompletedBusinessPhase).toBe('8A');
-    expect(snapshot.currentPhaseId).toBe('8A');
-    expect(snapshot.nextRecommendedPhase).toBe('8B');
-    expect(snapshot.nextRecommendedPhaseName).toContain('PWA / Mobile Web');
+    expect(snapshot.lastCompletedPhase).toBe('8B');
+    expect(snapshot.lastCompletedBusinessPhase).toBe('8B');
+    expect(snapshot.currentPhaseId).toBe('8B');
+    expect(snapshot.nextRecommendedPhase).toBe('8C');
+    expect(snapshot.nextRecommendedPhaseName).toContain('User App MVP Trial Pack');
     expect(snapshot.mainDataFlow).toContain('UserAppProductRouteDecision');
     expect(snapshot.mainDataFlow).toContain('UserAppTechnologyRouteDecision');
     expect(snapshot.mainDataFlow).toContain('UserAppMvpPlan');
@@ -92,9 +92,9 @@ describe('Phase 8A documentation recovery', () => {
     expect(snapshot.forbiddenActions.join('\n')).toContain('React Native');
 
     const providerHandoff = readJson<ProviderHandoff>('project-state/provider-handoff.json');
-    expect(providerHandoff.currentTask).toContain('Phase 8A');
-    expect(providerHandoff.lastCompletedPhase).toBe('8A');
-    expect(providerHandoff.nextRecommendedPhase).toBe('8B');
+    expect(providerHandoff.currentTask).toContain('Phase 8B');
+    expect(providerHandoff.lastCompletedPhase).toBe('8B');
+    expect(providerHandoff.nextRecommendedPhase).toBe('8C');
     expect(providerHandoff.nextRequiredReadFiles).toContain(
       'docs/app-roadmap/app-technology-route-decision.md',
     );
@@ -103,13 +103,13 @@ describe('Phase 8A documentation recovery', () => {
     );
 
     const latestHandoff = readJson<LatestHandoff>('project-state/latest-handoff.json');
-    expect(latestHandoff.fromPhase).toBe('8A');
-    expect(latestHandoff.toPhase).toBe('8B');
+    expect(latestHandoff.fromPhase).toBe('8B');
+    expect(latestHandoff.toPhase).toBe('8C');
     expect(latestHandoff.routeDecision.selectedRoute).toBe('React Web / PWA MVP first');
     expect(latestHandoff.routeDecision.handoffContract).toBe('UserAppTemplatePackage');
 
     const guardrails = readJson<GuardrailState>('project-state/guardrails.json');
-    expect(guardrails.phase).toBe('8A');
+    expect(guardrails.phase).toBe('8B');
     expect(guardrails.guardrails.map((guardrail) => guardrail.id)).toEqual(
       expect.arrayContaining([
         'phase_8a_planning_only',

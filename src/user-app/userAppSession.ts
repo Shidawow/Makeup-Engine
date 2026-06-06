@@ -40,6 +40,8 @@ export type UserAppShellSection =
   | 'privacy'
   | 'session'
   | 'readiness'
+  | 'pwa'
+  | 'mvpPolish'
   | 'mobileQa'
   | 'interaction';
 

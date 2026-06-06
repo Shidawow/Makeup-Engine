@@ -66,12 +66,15 @@ export interface CreateUserAppBrowserQaReportInput {
 const BROWSER_QA_CREATED_AT = '2026-01-01T00:00:00.000Z';
 
 const requiredCopySnippets = [
-  '用户 App MVP Shell',
-  '模板指导',
+  '今日妆容练习',
+  '跟练',
   '发现妆容',
   '我的准备',
   '我的偏好',
-  '本地状态',
+  '本地进度',
+  'PWA 检查',
+  'MVP 打磨',
+  '管理员检查',
   'App 就绪度',
   '移动端 QA',
   '交互检查',
@@ -211,7 +214,12 @@ const createEvidenceCheck = (input: {
 
 const createPrivacyCopyCheck = (renderedText = ''): UserAppBrowserQaCheck => {
   const forbiddenHits = forbiddenRenderedTokens.filter((token) => renderedText.includes(token));
-  const required = ['不采集真实用户照片', '不上传照片', '不会把用户照片、偏好、会话或推荐记录用于训练'];
+  const required = [
+    '不采集真实用户照片',
+    '不上传照片',
+    '不会把用户照片、偏好、会话或推荐记录用于训练',
+    '不会用于训练',
+  ];
   const missing = required.filter((snippet) => !renderedText.includes(snippet));
 
   return check({
@@ -322,8 +330,8 @@ export const createUserAppBrowserQaReport = (
           : 'User App MVP Shell 浏览器与移动端 QA 存在阻断项。',
     nextRecommendation:
       status === 'blocked'
-        ? '先修复阻断项，再进入 App 技术路线讨论。'
-        : '可进入 Phase 8A App Technology Route Decision；若希望先继续打磨移动端，可选择 Phase 7H-1。',
+        ? '先修复阻断项，再完成 Phase 8B PWA/mobile polish。'
+        : '可进入 Phase 8C User App MVP Trial Pack；若希望先继续打磨移动端，可选择 Phase 8B follow-up。',
     localOnly: true,
     deterministic: true,
     productionApp: false,

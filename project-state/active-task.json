@@ -2,22 +2,24 @@
   "schemaVersion": "active-task.v1",
   "taskId": "8B",
   "title": "PWA / Mobile Web MVP Polish",
-  "status": "recommended",
+  "status": "completed",
   "ownerRole": "Codex",
   "createdBy": "Codex",
   "phase": "8B",
-  "recommendedProfile": "chatgpt-planning",
+  "recommendedProfile": "native-gpt-codex-high-reasoning",
   "allowedDirectories": [
     "docs",
     "project-state",
-    "tests"
+    "tests",
+    "src/user-app",
+    "src/components/user-app",
+    "src/templates/examples",
+    "public"
   ],
   "forbiddenDirectories": [
     "src/engine",
     "src/runtime",
-    "src/intelligence/runtime",
-    "src/user-app",
-    "src/components/user-app"
+    "src/intelligence/runtime"
   ],
   "validationCommands": [
     "npm run typecheck",
@@ -29,14 +31,19 @@
     "node scripts/context-pack.mjs --json"
   ],
   "completionDefinition": [
-    "Phase 8B should polish the mobile-first React Web / PWA MVP brief, UX acceptance criteria, package consumption expectations, and trial-readiness checklist.",
-    "8B must not implement the production user app, backend, database, accounts, analytics, camera, AR, training, OpenAI API, external APIs, native iOS, React Native, Flutter, ecommerce, community, paid features, app store release work, online publication, or new runtime dependencies unless explicitly authorized by a future phase gate.",
-    "8B must not bootstrap a separate production app repository unless the owner explicitly expands scope.",
+    "Phase 8B polished the local mobile-first React Web / PWA shell with manifest metadata, mobile home, PWA readiness, MVP polish readiness, Chinese copy, and administrator QA separation.",
+    "8B did not implement the production user app, backend, database, accounts, analytics, service worker, offline cache, push notification, background sync, install tracking, camera, AR, training, OpenAI API, external APIs, native iOS, React Native, Flutter, ecommerce, community, paid features, app store release work, online publication, or new runtime dependencies.",
+    "8B did not bootstrap a separate production app repository.",
     "Makeup Engine must remain the template production system and UserAppTemplatePackage must remain the handoff contract.",
     "Docs and project-state must remain recoverable and validation commands must pass.",
     "Tests passed and validation commands pass before 8B completion is accepted."
   ],
   "dependsOn": [
     "8A Product Route Decision / App MVP Planning"
-  ]
+  ],
+  "nextRecommendedTask": {
+    "taskId": "8C",
+    "title": "User App MVP Trial Pack",
+    "status": "recommended"
+  }
 }

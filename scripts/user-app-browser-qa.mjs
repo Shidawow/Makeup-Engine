@@ -120,8 +120,11 @@ const stopServer = (child) => {
 const readUserAppCopy = async () => {
   const files = [
     'src/components/user-app/UserAppShell.tsx',
+    'src/components/user-app/UserAppMobileHome.tsx',
     'src/components/user-app/UserTemplateDetail.tsx',
     'src/components/user-app/UserMakeupStepGuide.tsx',
+    'src/components/user-app/UserAppPwaInstallPanel.tsx',
+    'src/components/user-app/UserAppMvpPolishChecklist.tsx',
     'src/components/user-app/UserAppReadinessPanel.tsx',
     'src/components/user-app/UserAppMobileQaPanel.tsx',
     'src/components/user-app/UserAppInteractionChecklist.tsx',
@@ -135,12 +138,15 @@ const readUserAppCopy = async () => {
 };
 
 const requiredCopy = [
-  '用户 App MVP Shell',
-  '模板指导',
+  '今日妆容练习',
+  '跟练',
   '发现妆容',
   '我的准备',
   '我的偏好',
-  '本地状态',
+  '本地进度',
+  'PWA 检查',
+  'MVP 打磨',
+  '管理员检查',
   'App 就绪度',
   '移动端 QA',
   '交互检查',
@@ -156,6 +162,7 @@ const requiredPrivacyCopy = [
   '不采集真实用户照片',
   '不上传照片',
   '不会把用户照片、偏好、会话或推荐记录用于训练',
+  '不会用于训练',
 ];
 
 const forbiddenTokens = [
@@ -265,8 +272,8 @@ const createReport = ({ url, httpResult, sourceText, skippedServer }) => {
     usesExternalApi: false,
     nextRecommendation:
       status === 'blocked'
-        ? 'Fix blocking browser/mobile QA issues before Phase 8A.'
-        : 'Browser/mobile smoke is sufficient to proceed to Phase 8A or optional Phase 7H-1 polish.',
+        ? 'Fix blocking browser/mobile QA issues before Phase 8B completion.'
+        : 'Browser/mobile smoke is sufficient for Phase 8B local PWA/mobile polish evidence.',
   };
 };
 

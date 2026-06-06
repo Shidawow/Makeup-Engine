@@ -2,13 +2,13 @@
 
 ## Current Phase
 
-Phase 8A: Product Route Decision / App MVP Planning is complete.
+Phase 8B: PWA / Mobile Web MVP Polish is complete.
 
-Last completed business phase: Phase 8A.
+Last completed business phase: Phase 8B.
 
-Next recommended phase: Phase 8B, PWA / Mobile Web MVP Polish.
+Next recommended phase: Phase 8C, User App MVP Trial Pack.
 
-Phase 8A selected a React Web / PWA MVP first route and documented the ownership boundary. Makeup Engine remains the makeup template production system and local contract prototype. Future production user app work should be planned as a separate app surface or repository after an explicit phase gate.
+Phase 8B polished the local User App Shell into a more mobile-first PWA MVP preview. Makeup Engine remains the makeup template production system and local contract prototype. Future production user app work should still be planned as a separate app surface or repository after an explicit phase gate.
 
 ## What The System Can Do
 
@@ -31,6 +31,7 @@ Phase 8A selected a React Web / PWA MVP first route and documented the ownership
 - Generate deterministic mobile interaction QA reports for `375`, `390`, `414`, and `768` width viewport profiles.
 - Render the local shell with Chinese-facing tab labels for template guidance, discovery, readiness, mobile QA, interaction checklist, local state, preferences, personalization placeholder, and privacy notice.
 - Run a local browser/mobile QA harness with `npm run user-app:browser-qa`.
+- Render lightweight PWA metadata, PWA readiness, mobile home polish, MVP polish readiness, and separated administrator QA panels for the local shell.
 - Verify HTTP smoke, critical copy, privacy copy, Chinese copy, and source-level forbidden-token checks without browser photo capture, backend, AR, training, OpenAI, external APIs, or new runtime dependencies.
 - Use the Phase 8A product route decision to plan a future React Web / PWA user app MVP outside Makeup Engine while keeping `UserAppTemplatePackage` as the handoff contract.
 - Export operator/Codex handoff summaries without storing object URLs, large image bytes, local absolute paths, React state, user photo bytes, or sensitive profile data.
@@ -48,6 +49,8 @@ Phase 8A selected a React Web / PWA MVP first route and documented the ownership
 - It cannot treat Phase 7H browser/mobile QA as production release approval, native iOS QA, app store readiness, backend readiness, camera readiness, AR readiness, accessibility certification, or real device lab QA.
 - It cannot use the Phase 7H harness as a substitute for future Playwright pointer/canvas/screenshot/device testing.
 - It cannot treat the Phase 8A route decision as permission to implement the production user app inside Makeup Engine.
+- It cannot treat Phase 8B manifest metadata or PWA polish readiness as production PWA release approval.
+- It cannot use service workers, offline cache, push notifications, background sync, install tracking, analytics, backend, camera, AR, or training in Phase 8B.
 - It cannot bootstrap backend, accounts, analytics, camera/photo capture, AR, native iOS, cross-platform runtime, OpenAI/external APIs, training, or online publication during route planning.
 - It cannot add ecommerce, community, paid features, App Store release work, React Native, Flutter, or iOS native implementation during Phase 8A.
 - It cannot train directly from a source image package.
@@ -75,7 +78,7 @@ Phase 8A selected a React Web / PWA MVP first route and documented the ownership
 
 ## Recent Validation
 
-Phase 8A validation must include:
+Phase 8B validation must include:
 
 ```bash
 npm run typecheck
@@ -87,10 +90,10 @@ node scripts/project-status.mjs --json
 node scripts/context-pack.mjs --json
 ```
 
-The latest completed full validation is recorded in `project-state/test-status.json`.
+The latest completed validation is recorded in `project-state/test-status.json`.
 
 ## Next Phase Recommendation
 
-Proceed to Phase 8B: PWA / Mobile Web MVP Polish.
+Proceed to Phase 8C: User App MVP Trial Pack.
 
-Phase 8B should polish the mobile-first PWA MVP brief, UX acceptance criteria, package consumption expectations, and trial-readiness checklist without implementing the production app.
+Phase 8C should select the first trial-ready template package set and sample guidance coverage without adding real user photos, backend, camera, AR, analytics, accounts, training from trial users, or production release scope.

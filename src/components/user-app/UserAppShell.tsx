@@ -12,6 +12,8 @@ import {
   createInitialUserAppState,
   createInitialUserOnboardingState,
   createSessionFromAppState,
+  createUserAppMvpPolishReport,
+  createUserAppPwaReadinessReport,
   createUserAppReadinessReport,
   createUserAppSessionStorageAdapter,
   createUserAppShellModel,
@@ -36,10 +38,12 @@ import {
   type UserOnboardingState,
 } from '../../user-app';
 import { UserAppCompatibilityBanner } from './UserAppCompatibilityBanner';
-import { UserAppHome } from './UserAppHome';
 import { UserAppInteractionChecklist } from './UserAppInteractionChecklist';
+import { UserAppMobileHome } from './UserAppMobileHome';
 import { UserAppMobileQaPanel } from './UserAppMobileQaPanel';
+import { UserAppMvpPolishChecklist } from './UserAppMvpPolishChecklist';
 import { UserAppProgressPanel } from './UserAppProgressPanel';
+import { UserAppPwaInstallPanel } from './UserAppPwaInstallPanel';
 import { UserAppReadinessPanel } from './UserAppReadinessPanel';
 import { UserAppSessionPanel } from './UserAppSessionPanel';
 import { UserAppSessionRecoveryNotice } from './UserAppSessionRecoveryNotice';
@@ -61,17 +65,22 @@ export interface UserAppShellProps {
   showExampleWhenEmpty?: boolean;
 }
 
-const sectionTabs: Array<{ tabId: UserAppShellSection; label: string }> = [
-  { tabId: 'guidance', label: '模板指导' },
+const userSectionTabs: Array<{ tabId: UserAppShellSection; label: string }> = [
+  { tabId: 'guidance', label: '跟练' },
   { tabId: 'discovery', label: '发现妆容' },
   { tabId: 'preparation', label: '我的准备' },
-  { tabId: 'photo', label: '照片与个性化' },
   { tabId: 'preferences', label: '我的偏好' },
-  { tabId: 'session', label: '本地状态' },
+  { tabId: 'photo', label: '照片占位' },
+  { tabId: 'session', label: '本地进度' },
+  { tabId: 'privacy', label: '隐私说明' },
+];
+
+const adminSectionTabs: Array<{ tabId: UserAppShellSection; label: string }> = [
+  { tabId: 'pwa', label: 'PWA 检查' },
+  { tabId: 'mvpPolish', label: 'MVP 打磨' },
   { tabId: 'readiness', label: 'App 就绪度' },
   { tabId: 'mobileQa', label: '移动端 QA' },
   { tabId: 'interaction', label: '交互检查' },
-  { tabId: 'privacy', label: '隐私说明' },
 ];
 
 export function UserAppShell({
@@ -139,6 +148,30 @@ export function UserAppShell({
       viewModel.hasPackage,
       viewModel.packageSummary.templateCount,
     ],
+  );
+  const pwaReadinessReport = useMemo(() => createUserAppPwaReadinessReport(), []);
+  const mvpPolishReport = useMemo(
+    () =>
+      createUserAppMvpPolishReport({
+        pwaReport: pwaReadinessReport,
+        hasMobileHome: true,
+        hasPrimaryTemplateCta: true,
+        hasCurrentRecommendation: Boolean(viewModel.selectedTemplate ?? viewModel.templates[0]),
+        hasTouchStepActions: true,
+        hasPreviousNextCompleteSkipLabels: true,
+        hasReadableToolsAndProducts: true,
+        hasReadableRegionCopy: true,
+        hasPrivacyLocalOnlyCopy: true,
+        hasNoUploadCopy: true,
+        hasNoTrainingCopy: true,
+        hidesInternalTermsFromUserPath: true,
+        userPathInternalTerms: [],
+        hasAdminQaSeparation: true,
+        adminQaLabel: '管理员检查',
+        hasPlaceholderDisabledCopy: true,
+        hasLocalOnlyBoundary: true,
+      }),
+    [pwaReadinessReport, viewModel.selectedTemplate, viewModel.templates],
   );
   const readinessReport = useMemo(
     () =>
@@ -311,30 +344,34 @@ export function UserAppShell({
       <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
         <div>
           <p className="text-xs font-semibold uppercase text-teal-700">
-            Phase 7H browser and mobile QA shell
+            Phase 8B PWA / Mobile Web MVP Polish
           </p>
-          <h1 className="text-xl font-semibold text-stone-950">用户 App MVP Shell</h1>
+          <h1 className="text-xl font-semibold text-stone-950">今日妆容练习</h1>
           <p className="mt-1 max-w-2xl text-sm leading-6 text-stone-600">
-            这是本地 contract-driven prototype，只消费 UserAppTemplatePackage；不是正式生产 App，
-            也不是 iOS 原生 App、后端、相机、AR 或训练流程。
+            这是本地移动 Web MVP 壳，用来预览妆容发现和分步跟练。它不是正式生产 App，
+            不登录、不上传、不接后端、不启用相机或 AR，也不会用于训练。
           </p>
         </div>
         <div className="w-fit rounded-md bg-white px-3 py-2 text-xs text-stone-600">
-          {effectivePackage ? effectivePackage.packageName : '未加载 package'}
+          {effectivePackage ? effectivePackage.packageName : '未加载妆容包'}
         </div>
       </div>
 
       <div className="mt-4 grid gap-4 xl:grid-cols-[minmax(280px,360px)_1fr]">
         <div className="grid content-start gap-4">
           <UserAppCompatibilityBanner compatibility={viewModel.compatibility} />
-          <UserAppHome
+          <UserAppMobileHome
             onBrowseTemplates={() =>
               setState((current) => ({
                 ...current,
                 navigation: navigateToTemplateList(current.navigation),
               }))
             }
+            onOpenPrivacy={() => setBoundaryTab('privacy')}
+            onStartGuidance={startGuidance}
+            selectedTemplate={currentTemplate}
             summary={viewModel.packageSummary}
+            templates={viewModel.templates}
           />
           <UserTemplateList
             onSelectTemplate={selectTemplate}
@@ -346,7 +383,7 @@ export function UserAppShell({
         <div className="grid content-start gap-4">
           <div className="flex flex-wrap gap-2">
             <button
-              className="rounded-md border border-stone-300 bg-white px-3 py-2 text-xs text-stone-700"
+              className="min-h-11 rounded-md border border-stone-300 bg-white px-3 py-2 text-xs font-medium text-stone-700"
               onClick={() =>
                 setState((current) => ({
                   ...current,
@@ -358,7 +395,7 @@ export function UserAppShell({
               返回
             </button>
             <button
-              className="rounded-md border border-stone-300 bg-white px-3 py-2 text-xs text-stone-700"
+              className="min-h-11 rounded-md border border-stone-300 bg-white px-3 py-2 text-xs font-medium text-stone-700"
               onClick={() =>
                 setState((current) => ({
                   ...current,
@@ -370,7 +407,7 @@ export function UserAppShell({
               工具
             </button>
             <button
-              className="rounded-md border border-stone-300 bg-white px-3 py-2 text-xs text-stone-700"
+              className="min-h-11 rounded-md border border-stone-300 bg-white px-3 py-2 text-xs font-medium text-stone-700"
               onClick={() =>
                 setState((current) => ({
                   ...current,
@@ -433,16 +470,42 @@ export function UserAppShell({
             </>
           ) : (
             <div className="rounded-lg border border-dashed border-stone-300 bg-white p-4 text-sm text-stone-600">
-              没有可用模板详情。请先加载有效的 UserAppTemplatePackage。
+              没有可用模板详情。请先加载有效妆容包。
             </div>
           )}
 
           <section className="rounded-lg border border-stone-200 bg-white p-4 shadow-soft">
-            <div className="flex flex-wrap gap-2">
-              {sectionTabs.map(({ tabId, label }) => (
+            <div className="grid gap-3">
+              <div>
+                <p className="text-xs font-semibold text-stone-500">用户路径</p>
+                <div className="mt-2 flex flex-wrap gap-2">
+                  {userSectionTabs.map(({ tabId, label }) => (
+                    <button
+                      key={tabId}
+                      className={`min-h-11 rounded-md border px-3 py-2 text-sm ${
+                        boundaryTab === tabId
+                          ? 'border-teal-700 bg-teal-50 text-teal-900'
+                          : 'border-stone-300 bg-white text-stone-700'
+                      }`}
+                      onClick={() => setBoundaryTab(tabId)}
+                      type="button"
+                    >
+                      {label}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              <div className="rounded-md border border-stone-200 bg-stone-50 p-3">
+                <p className="text-xs font-semibold text-stone-500">管理员检查</p>
+                <p className="mt-1 text-xs leading-5 text-stone-500">
+                  这里保留 PWA、readiness、QA 和 contract 检查信息；普通用户不应把它们理解为正式功能。
+                </p>
+                <div className="mt-2 flex flex-wrap gap-2">
+                  {adminSectionTabs.map(({ tabId, label }) => (
                 <button
                   key={tabId}
-                  className={`rounded-md border px-3 py-2 text-sm ${
+                  className={`min-h-11 rounded-md border px-3 py-2 text-sm ${
                     boundaryTab === tabId
                       ? 'border-teal-700 bg-teal-50 text-teal-900'
                       : 'border-stone-300 bg-white text-stone-700'
@@ -453,6 +516,8 @@ export function UserAppShell({
                   {label}
                 </button>
               ))}
+                </div>
+              </div>
             </div>
 
             <div className="mt-4 grid gap-4">
@@ -516,6 +581,14 @@ export function UserAppShell({
                     session={currentSession}
                   />
                 </>
+              ) : null}
+
+              {boundaryTab === 'pwa' ? (
+                <UserAppPwaInstallPanel report={pwaReadinessReport} />
+              ) : null}
+
+              {boundaryTab === 'mvpPolish' ? (
+                <UserAppMvpPolishChecklist report={mvpPolishReport} />
               ) : null}
 
               {boundaryTab === 'readiness' ? (

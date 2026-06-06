@@ -1,5 +1,5 @@
 {
-  "phase": "8A",
+  "phase": "8B",
   "status": "passed",
   "lastValidation": {
     "typecheck": "passed",
@@ -9,10 +9,11 @@
     "projectStatusJson": "passed",
     "projectContext": "passed",
     "contextPackJson": "passed",
-    "userAppBrowserQa": "not_required_for_phase_8A_docs_only",
-    "httpSmoke": "not_required_for_phase_8A_docs_only",
-    "testFiles": 363,
-    "tests": 503
+    "userAppBrowserQa": "passed",
+    "httpSmoke": "passed",
+    "phase8BScopedTests": "passed",
+    "testFiles": 370,
+    "tests": 514
   },
   "lastKnownPreDoc0Validation": {
     "typecheck": "passed",
@@ -28,17 +29,18 @@
     "npm run project:context",
     "node scripts/project-status.mjs --json",
     "node scripts/context-pack.mjs --json",
-    "npm run test -- tests/phase-8A-documentation-recovery.test.ts tests/app-technology-route-decision.test.ts tests/user-app-mvp-plan-docs.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
+    "npm run test -- tests/user-app-pwa-readiness.test.ts tests/user-app-mvp-polish.test.ts tests/user-app-pwa-install-panel.test.tsx tests/user-app-mobile-home.test.tsx tests/user-app-mvp-polish-checklist.test.tsx tests/user-app-shell-pwa-polish-flow.test.tsx tests/phase-8B-documentation-recovery.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
     "npm run test"
   ],
   "notes": [
-    "8A is a docs/project-state route decision phase only.",
-    "8A selected React Web / PWA MVP first and documented MVP scope, ownership boundary, Phase 8 roadmap, and V1 non-goals.",
-    "8A did not add production app code, backend, database, accounts, analytics, camera, AR, training, OpenAI API, external API, native iOS, React Native, Flutter, ecommerce, community, paid features, online publication, app store release work, separate repository bootstrap, or dependencies.",
+    "8B is local PWA/mobile shell polish only.",
+    "8B added lightweight manifest metadata, PWA readiness, MVP polish readiness, mobile home, Chinese copy polish, and administrator QA separation.",
+    "8B did not add production app code, service worker, offline cache, push notification, background sync, install tracking, backend, database, accounts, analytics, camera, AR, training, OpenAI API, external API, native iOS, React Native, Flutter, ecommerce, community, paid features, online publication, app store release work, separate repository bootstrap, new runtime dependencies, or production release scope.",
     "npm run typecheck passed.",
-    "npm run build passed with Vite chunk-size warning only.",
+    "npm run test passed: 370 test files, 514 tests.",
+    "Phase 8B scoped tests passed: 9 test files, 18 tests.",
+    "npm run build passed with the existing Vite chunk-size warning only.",
     "npm run project:status, npm run project:context, node scripts/project-status.mjs --json, and node scripts/context-pack.mjs --json passed.",
-    "Scoped Phase 8A documentation tests passed: 5 test files, 13 tests.",
-    "Full npm run test passed: 363 test files, 503 tests."
+    "npm run user-app:browser-qa -- --json passed local HTTP smoke, critical copy, privacy copy, and Chinese copy checks."
   ]
 }

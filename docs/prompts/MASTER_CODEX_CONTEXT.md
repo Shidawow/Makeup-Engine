@@ -12,10 +12,12 @@ It produces templates, template evidence, correction records, review state, loca
 
 ## Current Phase
 
-- Current business phase: `Phase 8A completed`
-- Last completed phase: `Phase 8A`
-- Last completed phase name: `Phase 8A - Product Route Decision / App MVP Planning`
-- Next recommended phase: `Phase 8B - PWA / Mobile Web MVP Polish`
+- Current business phase: `Phase 8B completed`
+- Last completed phase: `Phase 8B`
+- Last completed phase name: `Phase 8B - PWA / Mobile Web MVP Polish`
+- Next recommended phase: `Phase 8C - User App MVP Trial Pack`
+
+Historical recovery milestone retained for older phase tests: `Phase 8A completed` / `Phase 8A - Product Route Decision / App MVP Planning`.
 
 ## Current Main Data Flow
 
@@ -47,6 +49,7 @@ Real Photo
 -> User App Mobile QA / App Readiness Gate
 -> Browser / Mobile QA Harness
 -> Product Route Decision / App MVP Plan
+-> PWA / Mobile Web MVP Polish
 -> Phase 8 Roadmap / V1 Non-Goals
 -> User App Consumption Manifest
 -> Dataset Review
@@ -112,6 +115,7 @@ These areas are retained for compatibility and historical runtime work, but they
 - Render App readiness, mobile QA, and interaction checklist panels in the local User App MVP Shell.
 - Run deterministic browser/mobile QA for local HTTP smoke, critical shell copy, privacy copy, Chinese copy, forbidden-token checks, and mobile viewport readiness.
 - Use the Phase 8A route decision to plan a future React Web / PWA user app MVP in a separate app surface or repository while keeping Makeup Engine as the template production system.
+- Render Phase 8B PWA/mobile shell polish with lightweight manifest metadata, mobile home, PWA readiness, MVP polish readiness, and separated administrator QA surfaces.
 - Export user app consumption manifest and handoff JSON.
 - Evaluate batch QA issues, task readiness diagnostics, reject reasons, publish confirmation, rebinding recovery, library lifecycle, and operator handoff reports.
 - Continue into mask editing, template evidence capture, dataset review, and training dataset materialization.
@@ -145,6 +149,7 @@ These areas are retained for compatibility and historical runtime work, but they
 - Phase 7H browser/mobile QA is local deterministic prototype QA only; it is not production release approval, real device lab QA, Playwright pointer/canvas/screenshot QA, native iOS QA, backend readiness, camera readiness, AR readiness, training readiness, or app store readiness.
 - Phase 7H browser/mobile QA reports cannot mutate `UserAppTemplatePackage`, write real user records into `project-state`, store photos, temporary image URLs, local paths, encoded image data, biometrics, sensitive profile data, React state, recommendation records, readiness records, browser QA records, or training input.
 - Phase 8A product route planning selected a React Web / PWA MVP first route only; it is not production app implementation, repository bootstrap, backend, database, accounts, analytics, camera, AR, native iOS, React Native, Flutter, ecommerce, community, paid features, cross-platform implementation, OpenAI/external API work, training, online publication, app store release work, or a new dependency phase.
+- Phase 8B PWA/mobile polish added only local shell UI polish, lightweight manifest metadata, PWA readiness, and MVP polish readiness; it is not production PWA release approval and does not add service worker, offline cache, push notification, background sync, install tracking, analytics, backend, camera, AR, native app, external API, training, or online publication scope.
 - Future production user-facing app work should be planned as a separate app surface or repository after an explicit phase gate. Makeup Engine remains the template production system and `UserAppTemplatePackage` remains the handoff contract.
 - User photo data, face embeddings, biometric identifiers, sensitive profile data, and user photo references must not enter durable export, training, model artifacts, or project-state.
 - User app consumption exports cannot persist object URLs, local absolute paths, large image bytes, or React state.
@@ -224,6 +229,8 @@ Business phases still use `START_HERE.md`, this file, `docs/status/NEXT_ACTION.m
 - `docs/app-roadmap/makeup-engine-vs-user-app-boundary.md`
 - `docs/app-roadmap/phase-8-roadmap.md`
 - `docs/product/user-app-v1-non-goals.md`
+- `docs/user-app/pwa-mobile-web-mvp-polish.md`
+- `docs/user-app/pwa-install-readiness.md`
 - `docs/architecture/CURRENT_ARCHITECTURE.md`
 - `docs/architecture/DATA_FLOW.md`
 - `docs/architecture/BOUNDARIES_AND_GUARDRAILS.md`

@@ -65,7 +65,9 @@
     "User App local session snapshots are local-only shell state, not account data, backend sync, cloud sync, project-state user records, analytics, production app storage, or training input",
     "User App readiness and mobile QA reports are local QA metadata, not production app state, backend records, training input, or durable user records",
     "Phase 8A route planning is documentation metadata, not production app state, backend state, user records, analytics, camera data, AR state, or training input",
-    "Phase 8A MVP plan and V1 non-goals are documentation metadata, not production app state, backend state, user records, analytics, camera data, AR state, ecommerce/community/paid state, native app state, or training input."
+    "Phase 8A MVP plan and V1 non-goals are documentation metadata, not production app state, backend state, user records, analytics, camera data, AR state, ecommerce/community/paid state, native app state, or training input.",
+    "Phase 8B PWA manifest metadata and icon placeholder are local install-readiness placeholders, not production PWA release artifacts, analytics, install tracking, backend state, user records, or training input.",
+    "Phase 8B PWA readiness and MVP polish readiness reports are local QA metadata, not production app state, backend records, durable user records, browser QA records, recommendation records, or training input."
   ],
   "materializedDatasetOutputs": [
     "tmp/datasets/realistic-synthetic-png-image-v0/package.json",
@@ -180,7 +182,14 @@
     "UserAppReadinessPanel UI preview",
     "UserAppMobileQaPanel UI preview",
     "UserAppInteractionChecklist UI preview",
-    "UserAppReadinessGate UI preview"
+    "UserAppReadinessGate UI preview",
+    "UserAppMobileHome UI preview",
+    "UserAppPwaReadinessReport metadata",
+    "UserAppMvpPolishReport metadata",
+    "UserAppPwaInstallPanel UI preview",
+    "UserAppMvpPolishChecklist UI preview",
+    "PWA manifest metadata placeholder",
+    "PWA SVG icon placeholder"
   ],
   "userPhotoBoundaryOutputs": [
     "User photo intake placeholder metadata",
@@ -246,5 +255,18 @@
     "User App MVP includes template discovery, template detail, step guidance, region instructions, tools/products, local onboarding, local preferences, local session progress, privacy notice, and photo/camera/AR placeholders",
     "User App V1 non-goals for login, backend, database, real photo capture, camera, AR, OpenAI API, ecommerce, community, paid features, and model training",
     "Phase 8 roadmap from 8A route decision through 8E MVP release readiness gate"
+  ],
+  "userAppPwaMobilePolishOutputs": [
+    "public/manifest.webmanifest metadata",
+    "public/pwa-icon.svg lightweight placeholder",
+    "HTML theme-color and manifest link metadata",
+    "UserAppPwaReadinessReport metadata",
+    "UserAppPwaReadinessCheck metadata",
+    "UserAppMvpPolishReport metadata",
+    "UserAppMvpPolishCheck metadata",
+    "UserAppMobileHome UI preview",
+    "UserAppPwaInstallPanel UI preview",
+    "UserAppMvpPolishChecklist UI preview",
+    "Administrator QA separation labels"
   ]
 }

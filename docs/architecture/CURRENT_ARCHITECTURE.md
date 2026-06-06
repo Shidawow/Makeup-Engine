@@ -68,6 +68,10 @@ Phase 7G adds local app prototype readiness gating for the User App MVP Shell. `
 
 Phase 8A selects React Web / PWA MVP first as the next product route. The canonical route decision is documented in `docs/app-roadmap/app-technology-route-decision.md`, `docs/app-roadmap/user-app-mvp-plan.md`, `docs/app-roadmap/makeup-engine-vs-user-app-boundary.md`, `docs/app-roadmap/phase-8-roadmap.md`, and `docs/product/user-app-v1-non-goals.md`. It does not add runtime code. Makeup Engine remains the template production system, local contract prototype, and package export owner. The future production user-facing app should be planned as a separate app surface or repository after an explicit phase gate, with `UserAppTemplatePackage` as the handoff contract.
 
+### PWA / Mobile Web MVP Polish
+
+Phase 8B adds lightweight PWA metadata and local mobile shell polish. `public/manifest.webmanifest`, `public/pwa-icon.svg`, and `index.html` provide install-readiness placeholders. `src/user-app/userAppPwaReadiness.ts` and `src/user-app/userAppMvpPolish.ts` provide deterministic local readiness reports. `src/components/user-app` renders a mobile-first home plus separated administrator QA panels for PWA readiness and MVP polish readiness. It does not add service worker, offline cache, push notification, background sync, install tracking, analytics, backend, database, camera, AR, native app scope, external APIs, training, online publication, or production app release.
+
 ### Vision Analysis
 
 `src/vision` owns local face, cosmetic, pixel, region, quality, provider, and pipeline logic. It consumes `TemplateAnalysisSeed` records when they are ready for Vision Analysis.
@@ -172,13 +176,19 @@ src/components/template-studio/user-app-prototype-consumer-panel
 -> prototype template list / detail / validation preview
 
 src/user-app
--> User App Shell view model / navigation / progress / guidance UX / photo intake placeholder / personalization boundary / local onboarding / local preferences / local template discovery / recommendation placeholders / local session persistence and recovery / mobile QA / readiness gate
+-> User App Shell view model / navigation / progress / guidance UX / photo intake placeholder / personalization boundary / local onboarding / local preferences / local template discovery / recommendation placeholders / local session persistence and recovery / mobile QA / readiness gate / PWA readiness / MVP polish readiness
 
 docs/app-roadmap/app-technology-route-decision.md
 -> React Web / PWA MVP first route decision / deferred native-backend-camera-AR routes
 
 docs/app-roadmap/user-app-mvp-plan.md
 -> template discovery / detail / step guidance / local preferences / local session / privacy MVP plan
+
+docs/user-app/pwa-mobile-web-mvp-polish.md
+-> Phase 8B mobile shell polish / user path / admin QA separation / PWA boundary
+
+docs/user-app/pwa-install-readiness.md
+-> manifest / metadata / icon placeholder / no service worker install-readiness boundary
 
 docs/app-roadmap/makeup-engine-vs-user-app-boundary.md
 -> Makeup Engine ownership / future User App ownership / SourceImagePackage exclusion
@@ -193,7 +203,7 @@ docs/user-app/user-app-product-route.md
 -> compatibility entry point for Phase 8A route decision / ownership boundary / future separate app planning
 
 src/components/user-app
--> local User App MVP Shell preview / step guidance UX hardening / disabled photo intake and privacy placeholder UI / onboarding and preference setup UI / discovery and recommendation placeholder UI / session controls and recovery notice / App readiness panel / mobile QA panel / interaction checklist
+-> local User App MVP Shell preview / mobile home / step guidance UX hardening / disabled photo intake and privacy placeholder UI / onboarding and preference setup UI / discovery and recommendation placeholder UI / session controls and recovery notice / PWA readiness panel / MVP polish checklist / App readiness panel / mobile QA panel / interaction checklist
 
 src/components/demo/vision-analysis-demo
 -> seed analysis

@@ -2,29 +2,32 @@
 
 ## What To Do Next
 
-Proceed to Phase 8B: PWA / Mobile Web MVP Polish.
+Proceed to Phase 8C: User App MVP Trial Pack.
 
 ## Why
 
-Phase 8A selected a React Web / PWA MVP first route for the future user-facing app and documented the ownership boundary. Makeup Engine remains the template production system and local contract prototype. `UserAppTemplatePackage` remains the handoff contract.
+Phase 8B polished the local mobile-first PWA shell, added lightweight install-readiness metadata, PWA readiness, MVP polish readiness, and separated ordinary user paths from administrator QA paths. Makeup Engine remains the template production system and local contract prototype. `UserAppTemplatePackage` remains the handoff contract.
 
-The next bottleneck is polishing the mobile-first PWA MVP brief, UX acceptance criteria, package consumption expectations, and trial-readiness checklist without prematurely building the production app.
+The next bottleneck is selecting a trial-ready template package set and sample guidance coverage for limited user testing without prematurely building the production app.
 
-## Recommended 8B Scope
+## Recommended 8C Scope
 
-- Polish the React Web / PWA user app MVP brief.
-- Define mobile web UX acceptance criteria for template discovery, template detail, step guidance, region instructions, tools/products, local onboarding, local preferences, local session progress, privacy notice, and photo/camera/AR placeholders.
-- Define which product flows belong in the future app versus Makeup Engine.
-- Define the future separate app repository/package handoff expectations without bootstrapping the repository.
+- Select a small trial pack of `UserAppTemplatePackage` templates.
+- Confirm each selected template has clear steps, region instructions, tools/products, warnings, and safety notes.
+- Define trial scenario coverage such as daily, work, evening, beginner, and warning-state examples.
+- Keep trial data local and contract-driven.
 - Keep `UserAppTemplatePackage` as the consumption contract from Makeup Engine.
 - Keep real camera/photo capture, backend, accounts, cloud sync, AR, analytics, ecommerce, community, paid, native app, OpenAI API, external API, training, and production release work gated behind later explicit phases.
 
-## Completed 8A Decision
+## Completed 8B Polish
 
-- Selected React Web / PWA MVP first as the next route.
-- Deferred native iOS, React Native, Flutter, backend, camera, AR, ecommerce, community, paid, OpenAI API, external API, and training until product scope and device requirements are clearer.
-- Kept future production app ownership outside Makeup Engine.
-- Accepted Phase 7H local browser/mobile QA as enough to start planning, not as production release approval.
+- Added lightweight PWA manifest, theme color, and icon placeholder.
+- Added PWA readiness and MVP polish readiness models and panels.
+- Added a mobile-first shell home and clearer Chinese user path.
+- Separated administrator QA surfaces from the ordinary user path.
+- Kept no backend, no camera, no AR, no analytics, no training, no production release, and no native app boundaries intact.
+
+Historical recovery notes: Phase 7H browser/mobile QA remains the local prototype QA baseline, and Phase 8B is now complete.
 
 ## What Not To Do
 
@@ -59,11 +62,14 @@ Read these files first:
 17. `docs/privacy/user-app-session-data-boundary.md`
 18. `docs/user-app/user-app-product-route.md`
 19. `docs/phases/phase-8A.md`
-20. `docs/phases/phase-7H.md`
-21. `project-state/project-state.snapshot.json`
-22. `project-state/latest-handoff.json`
-23. `project-state/provider-handoff.json`
-24. `project-state/active-task.json`
+20. `docs/phases/phase-8B.md`
+21. `docs/user-app/pwa-mobile-web-mvp-polish.md`
+22. `docs/user-app/pwa-install-readiness.md`
+23. `docs/phases/phase-7H.md`
+24. `project-state/project-state.snapshot.json`
+25. `project-state/latest-handoff.json`
+26. `project-state/provider-handoff.json`
+27. `project-state/active-task.json`
 
 Then run:
 

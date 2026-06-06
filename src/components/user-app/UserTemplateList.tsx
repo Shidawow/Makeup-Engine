@@ -44,7 +44,7 @@ export function UserTemplateList({
 
       {templates.length === 0 ? (
         <div className="mt-3 rounded-md border border-dashed border-stone-300 bg-stone-50 p-3 text-sm leading-6 text-stone-600">
-          暂无可展示模板。请先加载包含 templates 的 UserAppTemplatePackage。
+          暂无可展示妆容。请先加载包含妆容内容的本地包。
         </div>
       ) : null}
 

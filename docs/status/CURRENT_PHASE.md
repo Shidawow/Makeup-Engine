@@ -2,24 +2,24 @@
 
 ## Phase State
 
-- `lastCompletedPhase`: `8A`
-- `lastCompletedBusinessPhase`: `8A`
-- `currentPhase`: `8A`
-- `currentPhaseName`: `Product Route Decision / App MVP Planning`
-- `nextRecommendedPhase`: `8B`
-- `nextRecommendedPhaseName`: `PWA / Mobile Web MVP Polish`
+- `lastCompletedPhase`: `8B`
+- `lastCompletedBusinessPhase`: `8B`
+- `currentPhase`: `8B`
+- `currentPhaseName`: `PWA / Mobile Web MVP Polish`
+- `nextRecommendedPhase`: `8C`
+- `nextRecommendedPhaseName`: `User App MVP Trial Pack`
 - `phaseOwner`: `Codex implementation, validation, commit, and push pass`
 
 ## Phase Completion Definition
 
-Phase 8A is complete when:
+Phase 8B is complete when:
 
-- The future user app route is selected.
-- React Web / PWA MVP first is selected as the technology route.
-- The MVP scope, V1 non-goals, ownership boundary, and Phase 8 roadmap are documented.
-- Makeup Engine ownership versus future user-facing app ownership is documented.
-- `UserAppTemplatePackage` remains the handoff contract.
-- Phase 7H QA evidence is accepted for planning but not production release approval.
-- The phase remains planning-only and does not add production app code, backend, database, accounts, analytics, camera, AR, training, native iOS, OpenAI/external APIs, online publication, or new runtime dependencies.
+- The local shell has mobile-first PWA MVP polish.
+- PWA manifest, theme color, and lightweight icon placeholder exist.
+- PWA readiness and MVP polish readiness models and panels exist.
+- Ordinary Chinese user copy avoids internal technical feature language.
+- Admin QA surfaces are separated from the ordinary user path.
+- `UserAppTemplatePackage` remains the handoff contract and is not mutated.
+- The phase does not add service worker, offline cache, push, background sync, backend, database, accounts, analytics, camera, AR, training, native iOS, OpenAI/external APIs, online publication, app store release, or new runtime dependencies.
 - Documentation and project-state handoff are updated.
 - Typecheck, tests, build, project status, context pack, direct JSON status, and direct JSON context pass.

@@ -15,9 +15,9 @@ describe('user app empty and blocked states', () => {
       <UserAppShell packageData={userAppEmptyTemplatePackageExample} />,
     );
 
-    expect(noPackageHtml).toContain('未加载 package');
+    expect(noPackageHtml).toContain('未加载妆容包');
     expect(noPackageHtml).toContain('没有可用模板详情');
-    expect(emptyPackageHtml).toContain('UserAppTemplatePackage');
+    expect(emptyPackageHtml).toContain('暂无可展示妆容');
   });
 
   it('keeps blocked templates out of usable step guidance', () => {

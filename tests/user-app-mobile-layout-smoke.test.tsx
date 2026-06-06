@@ -11,7 +11,8 @@ describe('user app mobile layout smoke', () => {
     );
 
     expect(html).toContain('sm:');
-    expect(html).toContain('UserAppTemplatePackage');
+    expect(html).toContain('今日妆容练习');
+    expect(html).toContain('管理员检查');
     expect(html).not.toContain('blob:');
     expect(html).not.toContain('data:image/');
     expect(html).not.toContain('C:\\');

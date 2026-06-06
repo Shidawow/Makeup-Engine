@@ -16,6 +16,10 @@ Phase 8A defines what the first user-facing MVP must not include. These non-goal
 - No subscriptions.
 - No app store release.
 - No online template publication.
+- No service worker in Phase 8B.
+- No offline cache in Phase 8B.
+- No push notification or background sync in Phase 8B.
+- No install tracking in Phase 8B.
 
 ## Photo / Camera / AR Non-Goals
 
