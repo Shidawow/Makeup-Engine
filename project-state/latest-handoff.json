@@ -1,7 +1,7 @@
 {
-  "fromPhase": "8B",
-  "toPhase": "8C",
-  "summary": "Phase 8B completed PWA / Mobile Web MVP Polish for the local User App Shell. The shell now has lightweight PWA metadata, a mobile-first user home, PWA readiness, MVP polish readiness, clearer Chinese user-facing copy, touch-friendly step actions, and separated administrator QA panels. No production app, service worker, offline cache, push notification, background sync, install tracking, backend, database, camera, AR, training, OpenAI API, external API, native iOS, React Native, Flutter, ecommerce, community, paid features, analytics, accounts, online publication, app store release work, separate repository bootstrap, or new runtime dependency was added.",
+  "fromPhase": "8C",
+  "toPhase": "8D",
+  "summary": "Phase 8C completed the local User App MVP Trial Pack: ordered trial tasks, privacy-safe feedback form, mock/example feedback summary, trial readiness model, and administrator trial panels. It did not add production app, backend, camera, AR, analytics, training, App Store/TestFlight, online release, or real user record collection.",
   "routeDecision": {
     "selectedRoute": "React Web / PWA MVP first",
     "futureAppOwnership": "separate user-facing app surface/repository after a future explicit phase gate",
@@ -38,11 +38,24 @@
     "docs/app-roadmap/makeup-engine-vs-user-app-boundary.md",
     "docs/app-roadmap/phase-8-roadmap.md",
     "docs/product/user-app-v1-non-goals.md",
+    "docs/product/user-app-trial-script.md",
+    "docs/product/user-app-feedback-questionnaire.md",
     "docs/user-app/user-app-mvp-shell.md",
     "docs/user-app/pwa-mobile-web-mvp-polish.md",
     "docs/user-app/pwa-install-readiness.md",
+    "docs/user-app/user-app-mvp-trial-pack.md",
+    "docs/user-app/user-app-trial-feedback.md",
+    "docs/user-app/user-app-trial-readiness.md",
+    "docs/user-app/user-app-browser-mobile-qa.md",
+    "docs/user-app/user-app-e2e-readiness.md",
+    "docs/user-app/user-app-mobile-interaction-qa.md",
+    "docs/user-app/user-app-readiness-gate.md",
+    "docs/user-app/user-app-readiness-checklist.md",
+    "docs/privacy/user-app-session-data-boundary.md",
     "docs/phases/phase-8A.md",
     "docs/phases/phase-8B.md",
+    "docs/phases/phase-8C.md",
+    "docs/phases/phase-7H.md",
     "project-state/project-state.snapshot.json",
     "project-state/provider-handoff.json",
     "project-state/latest-handoff.json",
@@ -50,13 +63,12 @@
     "project-state/skills.json",
     "project-state/external-skills-registry.json"
   ],
-  "nextAction": "Proceed to Phase 8C: User App MVP Trial Pack. Phase 8B is complete. Select a small trial-ready UserAppTemplatePackage set and sample guidance coverage without adding production app, backend, camera, AR, analytics, accounts, training from trial users, service worker, offline cache, push notification, background sync, install tracking, native app, online publication, or app store release scope.",
+  "nextAction": "Proceed to Phase 8D: Template Content QA for Real User Trial. Phase 8C is complete. QA the trial-selected template copy, region instructions, warnings, tools/products, and mobile guidance clarity without adding production app, backend, database, camera, AR, training, OpenAI API, external API, native iOS, React Native, Flutter, ecommerce, community, paid features, analytics, accounts, online publication, App Store/TestFlight, service worker, offline cache, push notification, background sync, install tracking, or real user data collection.",
   "risks": [
-    "Letting Phase 8C become production app implementation instead of trial package selection",
-    "Treating Phase 8B PWA metadata as production PWA release approval",
-    "Weakening UserAppTemplatePackage as the stable handoff contract",
-    "Adding backend, accounts, analytics, service worker, offline cache, camera, AR, native app, external APIs, OpenAI API, training, online publication, or new runtime dependencies too early",
-    "Writing real user trial data, sessions, preferences, readiness, browser QA, recommendations, or photo data into project-state"
+    "Letting Phase 8D become production app implementation instead of template content QA",
+    "Treating Phase 8C trial feedback as backend form, analytics, or real user records",
+    "Collecting photos, names, contact information, health information, sensitive identity information, biometrics, or training data",
+    "Weakening UserAppTemplatePackage as the stable handoff contract"
   ],
   "forbiddenActions": [
     "Do not treat Phase 8B PWA/mobile polish as production app implementation or production PWA release approval",
@@ -64,6 +76,18 @@
     "Do not weaken the UserAppTemplatePackage boundary; the future React Web / PWA MVP must consume exported contract data and cannot mutate Makeup Engine production state",
     "Do not train directly from SourceImagePackage or user photo/profile/preference/recommendation/session/readiness/browser QA data",
     "Do not persist BrowserArtifactResource object URLs, data:image strings, local absolute paths, user photo bytes, face embeddings, biometric identifiers, sensitive profile data, React state, real user preference records, real recommendation records, real session records, readiness records, browser QA records, or training input",
-    "Do not expand legacy frozen modules"
-  ]
+    "Do not expand legacy frozen modules",
+    "Do not treat Phase 8C trial pack as production release or user data collection approval",
+    "Do not write real user trial records into project-state or training datasets"
+  ],
+  "trialPackDecision": {
+    "phase8CResult": [
+      "ordered local trial tasks",
+      "privacy-safe feedback form",
+      "mock/example feedback summary",
+      "trial readiness report",
+      "administrator trial panels"
+    ],
+    "nextContentGate": "Phase 8D Template Content QA for Real User Trial"
+  }
 }

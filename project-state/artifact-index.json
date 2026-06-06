@@ -67,7 +67,8 @@
     "Phase 8A route planning is documentation metadata, not production app state, backend state, user records, analytics, camera data, AR state, or training input",
     "Phase 8A MVP plan and V1 non-goals are documentation metadata, not production app state, backend state, user records, analytics, camera data, AR state, ecommerce/community/paid state, native app state, or training input.",
     "Phase 8B PWA manifest metadata and icon placeholder are local install-readiness placeholders, not production PWA release artifacts, analytics, install tracking, backend state, user records, or training input.",
-    "Phase 8B PWA readiness and MVP polish readiness reports are local QA metadata, not production app state, backend records, durable user records, browser QA records, recommendation records, or training input."
+    "Phase 8B PWA readiness and MVP polish readiness reports are local QA metadata, not production app state, backend records, durable user records, browser QA records, recommendation records, or training input.",
+    "Phase 8C trial pack, feedback, and readiness reports are local planning metadata, not backend forms, analytics, production release records, real user records, or training input."
   ],
   "materializedDatasetOutputs": [
     "tmp/datasets/realistic-synthetic-png-image-v0/package.json",
@@ -189,7 +190,14 @@
     "UserAppPwaInstallPanel UI preview",
     "UserAppMvpPolishChecklist UI preview",
     "PWA manifest metadata placeholder",
-    "PWA SVG icon placeholder"
+    "PWA SVG icon placeholder",
+    "UserAppTrialPack metadata",
+    "UserAppTrialFeedbackForm metadata",
+    "UserAppTrialFeedbackSummary mock metadata",
+    "UserAppTrialReadinessReport metadata",
+    "UserAppTrialPackPanel UI preview",
+    "UserAppTrialFeedbackPanel UI preview",
+    "UserAppTrialReadinessPanel UI preview"
   ],
   "userPhotoBoundaryOutputs": [
     "User photo intake placeholder metadata",
@@ -268,5 +276,14 @@
     "UserAppPwaInstallPanel UI preview",
     "UserAppMvpPolishChecklist UI preview",
     "Administrator QA separation labels"
+  ],
+  "userAppTrialPackOutputs": [
+    "UserAppTrialPack metadata",
+    "UserAppTrialTask ordered task metadata",
+    "UserAppTrialFeedbackForm metadata",
+    "UserAppTrialFeedbackSummary mock/example metadata",
+    "UserAppTrialReadinessReport metadata",
+    "Trial script documentation",
+    "Feedback questionnaire documentation"
   ]
 }

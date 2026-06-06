@@ -2,24 +2,24 @@
 
 ## Phase State
 
-- `lastCompletedPhase`: `8B`
-- `lastCompletedBusinessPhase`: `8B`
-- `currentPhase`: `8B`
-- `currentPhaseName`: `PWA / Mobile Web MVP Polish`
-- `nextRecommendedPhase`: `8C`
-- `nextRecommendedPhaseName`: `User App MVP Trial Pack`
+- `lastCompletedPhase`: `8C`
+- `lastCompletedBusinessPhase`: `8C`
+- `currentPhase`: `8C`
+- `currentPhaseName`: `User App MVP Trial Pack`
+- `nextRecommendedPhase`: `8D`
+- `nextRecommendedPhaseName`: `Template Content QA for Real User Trial`
 - `phaseOwner`: `Codex implementation, validation, commit, and push pass`
 
 ## Phase Completion Definition
 
-Phase 8B is complete when:
+Phase 8C is complete when:
 
-- The local shell has mobile-first PWA MVP polish.
-- PWA manifest, theme color, and lightweight icon placeholder exist.
-- PWA readiness and MVP polish readiness models and panels exist.
-- Ordinary Chinese user copy avoids internal technical feature language.
-- Admin QA surfaces are separated from the ordinary user path.
+- A local MVP trial pack exists with ordered user trial tasks.
+- A privacy-safe trial feedback form and mock/example summary exist.
+- Trial readiness checks cover tasks, feedback, privacy, local-only boundaries, PWA carryover, mobile shell carryover, ordinary user path, and admin QA separation.
+- UserAppShell exposes MVP 试用包, 反馈表预览, and 试用就绪度 only in administrator checks.
+- The ordinary user path remains focused on 跟练, 发现妆容, 我的准备, 我的偏好, 照片占位, 本地进度, and 隐私说明.
 - `UserAppTemplatePackage` remains the handoff contract and is not mutated.
-- The phase does not add service worker, offline cache, push, background sync, backend, database, accounts, analytics, camera, AR, training, native iOS, OpenAI/external APIs, online publication, app store release, or new runtime dependencies.
+- The phase does not add production app, online release, App Store/TestFlight, backend, database, accounts, analytics, camera, AR, training, native iOS, OpenAI/external APIs, online publication, service worker, offline cache, or new runtime dependencies.
 - Documentation and project-state handoff are updated.
 - Typecheck, tests, build, project status, context pack, direct JSON status, and direct JSON context pass.

@@ -49,10 +49,15 @@ The shell can preview:
 - MVP polish readiness
 - privacy copy
 - disabled future photo/camera/AR placeholders
+- internal / small-scope trial pack tasks
+- privacy-safe feedback form preview
+- trial readiness checks
 
 It cannot become backend state, app store release state, analytics, camera capture, AR state, OpenAI API use, external API use, training input, or durable user records.
 
 Phase 8B adds only local shell polish and lightweight PWA metadata. The shell still cannot become the future production User App, a deployment target, service worker runtime, offline cache, analytics surface, backend client, install-tracking surface, camera/AR surface, native app, or release approval system.
+
+Phase 8C adds only local trial pack, feedback preview, and trial readiness administrator surfaces. These surfaces are not backend forms, analytics, production trial records, App Store/TestFlight, online release approval, or real user data collection systems.
 
 ## UserAppTemplatePackage Owns The Contract
 

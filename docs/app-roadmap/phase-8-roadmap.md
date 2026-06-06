@@ -46,6 +46,21 @@ Before starting 8B:
 - Phase 8B scoped tests and validation have passed.
 - The trial pack remains content/package selection only unless explicitly expanded.
 
+## 8C Completed Result
+
+- Local MVP trial pack tasks cover opening the shell, browsing recommendation, selecting template, reading detail, starting guidance, completing at least three steps, viewing tools/products, viewing regions, setting or skipping preferences, reading privacy, and restoring local progress.
+- Trial feedback form covers understanding, willingness to follow, step count, tool usefulness, recommendation usefulness, privacy clarity, confusing step, continued use, non-sensitive business interest, and free text.
+- Trial readiness checks cover tasks, feedback, privacy, local-only boundary, PWA carryover, mobile shell carryover, user path readiness, and admin QA separation.
+- Admin trial panels are available in the local shell without disrupting the ordinary user path.
+- No production app, backend, camera, AR, analytics, training, App Store/TestFlight, online release, or real user record collection was added.
+
+## 8D Entry Criteria
+
+- `lastCompletedPhase` is `8C`.
+- `nextRecommendedPhase` is `8D`.
+- Trial pack, feedback, and readiness scoped tests have passed.
+- The next phase remains content QA only unless explicitly expanded.
+
 ## Persistent Guardrails
 
 - Do not treat Makeup Engine as the production user app.

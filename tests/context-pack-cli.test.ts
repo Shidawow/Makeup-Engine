@@ -35,14 +35,14 @@ describe('context pack CLI', () => {
     };
 
     expect(parsed.project.name).toBe('Makeup Engine');
-    expect(parsed.currentPhase.id).toBe('8B');
-    expect(parsed.currentPhase.nextRecommendedPhase).toBe('8C');
-    expect(parsed.nextAction).toContain('Phase 8C');
+    expect(parsed.currentPhase.id).toBe('8C');
+    expect(parsed.currentPhase.nextRecommendedPhase).toBe('8D');
+    expect(parsed.nextAction).toContain('Phase 8D');
     expect(parsed.requiredReadFiles).toContain('docs/prompts/MASTER_CODEX_CONTEXT.md');
     expect(parsed.guardrails.join('\n')).toContain('SourceImagePackage is not a training dataset');
     expect(parsed.guardrails.join('\n')).toContain('manifest relative paths');
     expect(parsed.providerHandoff.schemaVersion).toBe('provider-handoff.v1');
-    expect(parsed.activeTask.taskId).toBe('8B');
+    expect(parsed.activeTask.taskId).toBe('8C');
     expect(parsed.lastValidation.typecheck).toBeTruthy();
   });
 

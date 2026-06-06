@@ -40,20 +40,21 @@ describe('provider switching docs', () => {
     expect(combined).toContain('src/intelligence/runtime');
   });
 
-  it('provides phase 8B to 8C switch templates', async () => {
+  it('provides phase 8C to 8D switch templates', async () => {
     const prompt = await readFile('docs/prompts/PROVIDER_SWITCH_PROMPT.md', 'utf8');
 
     expect(prompt).toContain('Switch To Native GPT / Codex Desktop');
     expect(prompt).toContain('Switch To PackyAPI + CLI');
     expect(prompt).toContain('Return From PackyAPI To ChatGPT');
-    expect(prompt).toContain('lastCompletedPhase: 8B');
-    expect(prompt).toContain('nextRecommendedPhase: 8C');
+    expect(prompt).toContain('lastCompletedPhase: 8C');
+    expect(prompt).toContain('nextRecommendedPhase: 8D');
     expect(prompt).toContain('prototype consumer is read-only validation');
     expect(prompt).toContain('Phase 7A/7B/7C/7D/7E/7F/7G/7H shell');
     expect(prompt).toContain('docs/app-roadmap/app-technology-route-decision.md');
     expect(prompt).toContain('docs/user-app/pwa-mobile-web-mvp-polish.md');
     expect(prompt).toContain('React Web / PWA MVP first');
     expect(prompt).toContain('Phase 8B PWA/mobile polish');
+    expect(prompt).toContain('Phase 8C trial pack');
     expect(prompt).toContain('photo intake is placeholder-only');
     expect(prompt).toContain('node scripts/context-pack.mjs --json');
   });

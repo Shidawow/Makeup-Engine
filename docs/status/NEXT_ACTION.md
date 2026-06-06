@@ -2,41 +2,30 @@
 
 ## What To Do Next
 
-Proceed to Phase 8C: User App MVP Trial Pack.
+Proceed to Phase 8D: Template Content QA for Real User Trial.
 
 ## Why
 
-Phase 8B polished the local mobile-first PWA shell, added lightweight install-readiness metadata, PWA readiness, MVP polish readiness, and separated ordinary user paths from administrator QA paths. Makeup Engine remains the template production system and local contract prototype. `UserAppTemplatePackage` remains the handoff contract.
+Phase 8C added a local User App MVP Trial Pack, trial feedback structure, privacy-safe mock feedback summary, trial readiness model, and administrator trial panels. The next bottleneck is content quality: whether template copy, step wording, region instructions, warnings, tools/products, and mobile guidance clarity are good enough for a real user trial.
 
-The next bottleneck is selecting a trial-ready template package set and sample guidance coverage for limited user testing without prematurely building the production app.
+Historical recovery notes: Phase 7H browser/mobile QA remains the local prototype QA baseline, Phase 8B PWA/mobile polish is complete, and Phase 8C trial pack is complete.
 
-## Recommended 8C Scope
+## Recommended 8D Scope
 
-- Select a small trial pack of `UserAppTemplatePackage` templates.
-- Confirm each selected template has clear steps, region instructions, tools/products, warnings, and safety notes.
-- Define trial scenario coverage such as daily, work, evening, beginner, and warning-state examples.
-- Keep trial data local and contract-driven.
-- Keep `UserAppTemplatePackage` as the consumption contract from Makeup Engine.
-- Keep real camera/photo capture, backend, accounts, cloud sync, AR, analytics, ecommerce, community, paid, native app, OpenAI API, external API, training, and production release work gated behind later explicit phases.
-
-## Completed 8B Polish
-
-- Added lightweight PWA manifest, theme color, and icon placeholder.
-- Added PWA readiness and MVP polish readiness models and panels.
-- Added a mobile-first shell home and clearer Chinese user path.
-- Separated administrator QA surfaces from the ordinary user path.
-- Kept no backend, no camera, no AR, no analytics, no training, no production release, and no native app boundaries intact.
-
-Historical recovery notes: Phase 7H browser/mobile QA remains the local prototype QA baseline, and Phase 8B is now complete.
+- QA trial-selected template copy.
+- QA region instructions and step wording.
+- QA warning and blocked-state clarity.
+- QA tool/product usefulness.
+- QA mobile guidance readability for the trial pack.
+- Keep the work content/readiness-only.
 
 ## What Not To Do
 
-- Do not build the production user app inside this repository without a new phase gate.
-- Do not add backend, database, account system, cloud sync, analytics, camera capture, AR, OpenAI/external API calls, training, native iOS implementation, or new runtime dependencies in the planning phase.
-- Do not add React Native, Flutter, ecommerce, community, paid features, app store release work, or model training in 8B unless the owner explicitly expands scope.
-- Do not bootstrap the separate production app repository during 8B unless the owner explicitly expands scope.
-- Do not mutate `UserAppTemplatePackage` from user app shell state.
-- Do not write real user photos, photo bytes, object URLs, local paths, biometrics, preferences, sessions, recommendations, or readiness records into `project-state`.
+- Do not build the production user app inside this repository.
+- Do not add backend, database, account system, cloud sync, analytics, camera capture, AR, OpenAI/external API calls, training, native iOS implementation, React Native, Flutter, online publication, App Store/TestFlight work, service worker, offline cache, push notification, background sync, install tracking, ecommerce, community, paid features, or new runtime dependencies.
+- Do not collect real user photos, names, contact information, health information, sensitive identity information, biometrics, backend records, analytics records, or training data.
+- Do not mutate `UserAppTemplatePackage` from trial tasks, trial feedback, readiness, sessions, preferences, recommendations, or admin panels.
+- Do not write real user trial records into `project-state`.
 - Do not modify legacy runtime areas.
 
 ## Entry For The Next Codex Session
@@ -54,22 +43,17 @@ Read these files first:
 9. `docs/app-roadmap/makeup-engine-vs-user-app-boundary.md`
 10. `docs/app-roadmap/phase-8-roadmap.md`
 11. `docs/product/user-app-v1-non-goals.md`
-12. `docs/user-app/user-app-browser-mobile-qa.md`
-13. `docs/user-app/user-app-e2e-readiness.md`
-14. `docs/user-app/user-app-mobile-interaction-qa.md`
-15. `docs/user-app/user-app-readiness-gate.md`
-16. `docs/user-app/user-app-readiness-checklist.md`
-17. `docs/privacy/user-app-session-data-boundary.md`
-18. `docs/user-app/user-app-product-route.md`
-19. `docs/phases/phase-8A.md`
-20. `docs/phases/phase-8B.md`
-21. `docs/user-app/pwa-mobile-web-mvp-polish.md`
-22. `docs/user-app/pwa-install-readiness.md`
-23. `docs/phases/phase-7H.md`
-24. `project-state/project-state.snapshot.json`
-25. `project-state/latest-handoff.json`
-26. `project-state/provider-handoff.json`
-27. `project-state/active-task.json`
+12. `docs/user-app/user-app-mvp-trial-pack.md`
+13. `docs/user-app/user-app-trial-feedback.md`
+14. `docs/user-app/user-app-trial-readiness.md`
+15. `docs/product/user-app-trial-script.md`
+16. `docs/product/user-app-feedback-questionnaire.md`
+17. `docs/phases/phase-8C.md`
+18. `project-state/project-state.snapshot.json`
+19. `project-state/latest-handoff.json`
+20. `project-state/provider-handoff.json`
+21. `project-state/active-task.json`
+22. `project-state/guardrails.json`
 
 Then run:
 
@@ -80,7 +64,3 @@ npm run typecheck
 npm run test
 npm run build
 ```
-
-## Prompt Format
-
-Use `docs/prompts/COMPACT_CODEX_TASK_TEMPLATE.md` by default. Include `npm run project:context` output or summary and `project-state/latest-handoff.json` summary. Do not paste full historical chat, full directory trees, `node_modules`, `dist`, `.test-dist`, or `.vite`.

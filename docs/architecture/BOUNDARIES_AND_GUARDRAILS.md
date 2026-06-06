@@ -75,6 +75,9 @@
 - Phase 8B may add manifest metadata, lightweight icon placeholder, PWA readiness, MVP polish readiness, and mobile UI polish only.
 - Phase 8B must not add service worker, offline cache, push notification, background sync, install tracking, analytics, backend, database, accounts, cloud sync, camera, AR, OpenAI API, external API, native app scope, ecommerce, community, paid features, online publication, app store release work, model training, or new runtime dependencies.
 - Phase 8B readiness, QA, preferences, recommendations, sessions, and shell state cannot mutate `UserAppTemplatePackage`, write real user records into `project-state`, or enter training datasets.
+- Phase 8C trial pack is local internal / small-scope trial planning only and is not production release, App Store/TestFlight, online user growth, backend form, analytics, camera, AR, training, or real user data collection approval.
+- Phase 8C feedback must not collect real names, contact information, photos, health information, sensitive identity information, face embeddings, biometric identifiers, backend records, analytics records, or training data.
+- Phase 8C trial tasks, feedback, readiness, sessions, preferences, recommendations, and admin panels cannot mutate `UserAppTemplatePackage`, write real user trial records into `project-state`, or enter training datasets.
 - A compatibility target such as `ios-app-v0` or `web-app-v0` describes intended consumers only; it does not create an iOS app, Web app, backend, or online release.
 - Rejected, archived, or deprecated library entries must not enter publish packages by default.
 - Legacy runtime areas no longer carry new mainline features.
@@ -99,6 +102,7 @@
 - Browser/mobile QA reads the local User App Shell, source copy, and deterministic QA metadata only; it does not create production app state, does not mutate packages, does not train models, and does not create durable user records.
 - Product route planning reads Phase 7H QA evidence and app contract documents only; it does not create production app state, app repository state, backend state, analytics, user records, camera/photo records, AR state, ecommerce/community/paid state, native app state, or training data.
 - PWA/mobile polish reads the local shell, manifest metadata, and deterministic readiness models only; it does not create production app state, service worker state, backend state, analytics, user records, camera/photo records, AR state, native app state, or training data.
+- Trial pack planning reads local shell readiness, PWA/MVP polish readiness, and mock/example feedback structures only; it does not create production app state, backend records, analytics records, real user trial records, camera/photo records, AR state, native app state, or training data.
 - Dataset review decides whether corrected artifacts can become materialized training data.
 - Training reads materialized datasets, not UI state and not raw source packages.
 - Export reads validated model artifacts and export readiness metadata.

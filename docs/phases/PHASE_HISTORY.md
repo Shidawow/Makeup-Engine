@@ -513,3 +513,26 @@ What still cannot happen:
 Why Phase 8C follows:
 
 The mobile shell now has enough PWA/MVP polish to define a trial-ready template pack. Phase 8C should select the first User App MVP Trial Pack without adding backend, camera, AR, training, analytics, accounts, or production release scope.
+
+## Phase 8C
+
+Added a local User App MVP Trial Pack for internal / small-scope trial planning.
+
+What changed:
+
+- Added `UserAppTrialPack` with ordered trial tasks from opening the shell through restoring local progress.
+- Added `UserAppTrialFeedbackForm` with privacy-safe feedback questions and unsafe feedback blocking for names, contact information, photos/base64, health information, sensitive identity fields, biometrics, and training/project-state writes.
+- Added `UserAppTrialReadinessReport` with ready, warning, and blocked states.
+- Added administrator panels for MVP 试用包, 反馈表预览, and 试用就绪度.
+- Kept ordinary user path separate from trial administrator management.
+- Added trial pack, feedback, readiness, trial script, questionnaire, phase docs, tests, and project-state updates.
+
+What still cannot happen:
+
+- Phase 8C is not a production app, production release, App Store/TestFlight test, backend form, analytics flow, camera/AR feature, training collection, online publication, or real user record system.
+- Trial feedback cannot collect real names, contacts, photos, health information, sensitive identity information, face embeddings, biometric identifiers, backend records, analytics records, or training data.
+- Trial tasks, feedback, readiness, sessions, preferences, recommendations, and admin panels cannot mutate `UserAppTemplatePackage` or write real user trial records into `project-state`.
+
+Why Phase 8D follows:
+
+The trial structure exists. The next bottleneck is content quality for real user trial: template copy, step wording, region instructions, warnings, tools/products, and mobile guidance clarity.

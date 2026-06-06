@@ -42,6 +42,9 @@ export type UserAppShellSection =
   | 'readiness'
   | 'pwa'
   | 'mvpPolish'
+  | 'trialPack'
+  | 'trialFeedback'
+  | 'trialReadiness'
   | 'mobileQa'
   | 'interaction';
 

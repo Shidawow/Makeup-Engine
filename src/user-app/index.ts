@@ -21,3 +21,6 @@ export * from './userAppReadiness';
 export * from './userAppBrowserQa';
 export * from './userAppPwaReadiness';
 export * from './userAppMvpPolish';
+export * from './userAppTrialPack';
+export * from './userAppTrialFeedback';
+export * from './userAppTrialReadiness';

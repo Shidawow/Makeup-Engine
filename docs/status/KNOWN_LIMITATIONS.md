@@ -33,6 +33,8 @@
 - Phase 8A selected a React Web / PWA MVP first route only; it did not implement the production user app.
 - Phase 8B adds PWA metadata and mobile shell polish only; it is not a production PWA release.
 - Phase 8B does not add service worker, offline cache, push notification, background sync, install tracking, analytics, backend, camera, AR, native app, OpenAI/external API, ecommerce, community, paid, app store release, or training scope.
+- Phase 8C adds an internal / small-scope MVP trial pack only; it is not production release, online user growth, App Store/TestFlight, backend form, analytics, camera, AR, training, or real user record collection.
+- Phase 8C trial feedback must not collect real names, contact information, photos, health information, sensitive identity information, face embeddings, biometric identifiers, backend records, analytics records, or training data.
 - The future production user-facing app should be planned as a separate app surface or repository and is not owned by Makeup Engine without a future explicit phase gate.
 - Native iOS, React Native, Flutter, backend, accounts, analytics, camera/photo capture, AR, online publication, OpenAI/external APIs, ecommerce, community, paid features, and training remain deferred after Phase 8A.
 - `SourceImagePackage` still cannot directly become user photo intake, User App Shell state, `TemplateLibraryEntry`, `UserAppTemplatePackage`, or training data.

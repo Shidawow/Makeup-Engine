@@ -72,6 +72,10 @@ Phase 8A selects React Web / PWA MVP first as the next product route. The canoni
 
 Phase 8B adds lightweight PWA metadata and local mobile shell polish. `public/manifest.webmanifest`, `public/pwa-icon.svg`, and `index.html` provide install-readiness placeholders. `src/user-app/userAppPwaReadiness.ts` and `src/user-app/userAppMvpPolish.ts` provide deterministic local readiness reports. `src/components/user-app` renders a mobile-first home plus separated administrator QA panels for PWA readiness and MVP polish readiness. It does not add service worker, offline cache, push notification, background sync, install tracking, analytics, backend, database, camera, AR, native app scope, external APIs, training, online publication, or production app release.
 
+### User App MVP Trial Pack
+
+Phase 8C adds local internal / small-scope trial planning structures. `src/user-app/userAppTrialPack.ts` owns ordered trial tasks and trial checklist. `src/user-app/userAppTrialFeedback.ts` owns privacy-safe feedback form structure, mock/example summaries, and unsafe feedback blocking. `src/user-app/userAppTrialReadiness.ts` owns trial readiness checks across tasks, feedback, privacy, local-only boundary, PWA carryover, mobile shell carryover, user path readiness, and admin QA separation. `src/components/user-app` renders MVP 试用包, 反馈表预览, and 试用就绪度 panels inside the administrator checks area. It does not add production app scope, backend forms, analytics, real user record storage, camera, AR, training, App Store/TestFlight, online publication, or new runtime dependencies.
+
 ### Vision Analysis
 
 `src/vision` owns local face, cosmetic, pixel, region, quality, provider, and pipeline logic. It consumes `TemplateAnalysisSeed` records when they are ready for Vision Analysis.
@@ -176,7 +180,7 @@ src/components/template-studio/user-app-prototype-consumer-panel
 -> prototype template list / detail / validation preview
 
 src/user-app
--> User App Shell view model / navigation / progress / guidance UX / photo intake placeholder / personalization boundary / local onboarding / local preferences / local template discovery / recommendation placeholders / local session persistence and recovery / mobile QA / readiness gate / PWA readiness / MVP polish readiness
+-> User App Shell view model / navigation / progress / guidance UX / photo intake placeholder / personalization boundary / local onboarding / local preferences / local template discovery / recommendation placeholders / local session persistence and recovery / mobile QA / readiness gate / PWA readiness / MVP polish readiness / trial pack / trial feedback / trial readiness
 
 docs/app-roadmap/app-technology-route-decision.md
 -> React Web / PWA MVP first route decision / deferred native-backend-camera-AR routes
@@ -186,6 +190,7 @@ docs/app-roadmap/user-app-mvp-plan.md
 
 docs/user-app/pwa-mobile-web-mvp-polish.md
 -> Phase 8B mobile shell polish / user path / admin QA separation / PWA boundary
+-> Phase 8C trial pack / feedback preview / trial readiness / no real user record boundary
 
 docs/user-app/pwa-install-readiness.md
 -> manifest / metadata / icon placeholder / no service worker install-readiness boundary
@@ -203,7 +208,7 @@ docs/user-app/user-app-product-route.md
 -> compatibility entry point for Phase 8A route decision / ownership boundary / future separate app planning
 
 src/components/user-app
--> local User App MVP Shell preview / mobile home / step guidance UX hardening / disabled photo intake and privacy placeholder UI / onboarding and preference setup UI / discovery and recommendation placeholder UI / session controls and recovery notice / PWA readiness panel / MVP polish checklist / App readiness panel / mobile QA panel / interaction checklist
+-> local User App MVP Shell preview / mobile home / step guidance UX hardening / disabled photo intake and privacy placeholder UI / onboarding and preference setup UI / discovery and recommendation placeholder UI / session controls and recovery notice / PWA readiness panel / MVP polish checklist / trial pack panel / trial feedback panel / trial readiness panel / App readiness panel / mobile QA panel / interaction checklist
 
 src/components/demo/vision-analysis-demo
 -> seed analysis

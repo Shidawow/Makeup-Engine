@@ -6,12 +6,13 @@ Default to compact context. Do not copy full historical chat transcripts. Do not
 
 ## Current State
 
-- `lastCompletedPhase: 8B`
-- `nextRecommendedPhase: 8C`
+- `lastCompletedPhase: 8C`
+- `nextRecommendedPhase: 8D`
 - Project role: Makeup template production system with a local contract-driven user app shell prototype, not a production user app.
-- Current capability: Phase 8B polished the local mobile web/PWA shell with lightweight manifest metadata, PWA readiness, MVP polish readiness, mobile home copy, and separated administrator QA after Phase 8A selected React Web / PWA MVP first.
+- Current capability: Phase 8C added a local MVP trial pack, privacy-safe feedback structure, mock/example feedback summary, trial readiness checks, and administrator trial panels after Phase 8B polished the local mobile web/PWA shell.
 
 Historical handoff marker retained for recovery tests: `lastCompletedPhase: 8A`, `nextRecommendedPhase: 8B`.
+Historical handoff marker retained for Phase 8B recovery tests: `lastCompletedPhase: 8B`, `nextRecommendedPhase: 8C`.
 
 ## Relevant skills
 
@@ -26,10 +27,10 @@ Historical handoff marker retained for recovery tests: `lastCompletedPhase: 8A`,
 You are continuing Makeup Engine on native GPT / Codex Desktop.
 
 Current state:
-- lastCompletedPhase: 8B
-- nextRecommendedPhase: 8C
+- lastCompletedPhase: 8C
+- nextRecommendedPhase: 8D
 - project role: Makeup template production system with a local contract-driven user app shell prototype, not a production user app
-- current capability: React Web / PWA MVP first is selected; Phase 8B local PWA/mobile shell polish is complete; Makeup Engine remains the template production system and the future user-facing app should be planned separately
+- current capability: React Web / PWA MVP first is selected; Phase 8B local PWA/mobile shell polish and Phase 8C local MVP trial pack are complete; Makeup Engine remains the template production system and the future user-facing app should be planned separately
 
 Compact context:
 - Use repository documents as source of truth; do not copy full historical chat.
@@ -54,21 +55,27 @@ Read these files first:
 12. docs/user-app/user-app-product-route.md
 13. docs/user-app/pwa-mobile-web-mvp-polish.md
 14. docs/user-app/pwa-install-readiness.md
-15. docs/user-app/user-app-browser-mobile-qa.md
-16. docs/user-app/user-app-e2e-readiness.md
-17. docs/user-app/user-app-mobile-interaction-qa.md
-18. docs/user-app/user-app-readiness-gate.md
-19. docs/user-app/user-app-readiness-checklist.md
-20. docs/privacy/user-app-session-data-boundary.md
-21. docs/phases/phase-8A.md
-22. docs/phases/phase-8B.md
-23. docs/phases/phase-7H.md
-24. project-state/project-state.snapshot.json
-25. project-state/provider-handoff.json
-26. project-state/latest-handoff.json
-27. project-state/active-task.json
-28. project-state/skills.json
-29. project-state/external-skills-registry.json
+15. docs/user-app/user-app-mvp-trial-pack.md
+16. docs/user-app/user-app-trial-feedback.md
+17. docs/user-app/user-app-trial-readiness.md
+18. docs/product/user-app-trial-script.md
+19. docs/product/user-app-feedback-questionnaire.md
+20. docs/user-app/user-app-browser-mobile-qa.md
+21. docs/user-app/user-app-e2e-readiness.md
+22. docs/user-app/user-app-mobile-interaction-qa.md
+23. docs/user-app/user-app-readiness-gate.md
+24. docs/user-app/user-app-readiness-checklist.md
+25. docs/privacy/user-app-session-data-boundary.md
+26. docs/phases/phase-8A.md
+27. docs/phases/phase-8B.md
+28. docs/phases/phase-8C.md
+29. docs/phases/phase-7H.md
+30. project-state/project-state.snapshot.json
+31. project-state/provider-handoff.json
+32. project-state/latest-handoff.json
+33. project-state/active-task.json
+34. project-state/skills.json
+35. project-state/external-skills-registry.json
 
 Forbidden:
 - Do not touch src/engine, src/runtime, or src/intelligence/runtime legacy frozen modules.
@@ -77,6 +84,7 @@ Forbidden:
 - Do not treat UserAppTemplatePackage as the real user app or online release.
 - Do not treat the Phase 7A/7B/7C/7D/7E/7F/7G/7H shell, readiness gate, and browser/mobile QA harness as a production user app or production release approval.
 - Do not treat the Phase 8A React Web / PWA route decision or Phase 8B PWA/mobile polish as production app implementation approval.
+- Do not treat the Phase 8C trial pack, feedback preview, or trial readiness as production release, App Store/TestFlight, backend form, analytics, real user record collection, camera/AR, or training approval.
 - Do not add service worker, offline cache, push notification, background sync, install tracking, analytics, backend, camera, AR, external API, native app, training, online publication, or app store release work unless a future explicit phase gate expands scope.
 - Do not build or bootstrap the separate production user app repository unless a future explicit phase gate expands scope.
 - Do not add real camera capture, AR, backend, database, account systems, cloud sync, analytics, ecommerce, community, paid features, online publishing, training, native iOS, React Native, Flutter, app store release work, or new runtime dependencies.
@@ -101,10 +109,10 @@ Acceptance commands:
 You are continuing Makeup Engine on PackyAPI + CLI.
 
 Current state:
-- lastCompletedPhase: 8B
-- nextRecommendedPhase: 8C
+- lastCompletedPhase: 8C
+- nextRecommendedPhase: 8D
 - project role: Makeup template production system with a local contract-driven user app shell prototype, not a production user app
-- current capability: Phase 8B completed local PWA/mobile shell polish after Phase 8A selected React Web / PWA MVP first and separate future app ownership
+- current capability: Phase 8C completed local MVP trial pack after Phase 8B completed local PWA/mobile shell polish and Phase 8A selected React Web / PWA MVP first
 
 Use compact context and repository docs as source of truth. Candidate external skills remain explicit-only and scripts-disabled by default.
 
@@ -119,8 +127,8 @@ Forbidden and acceptance commands are the same as above.
 Below is the PackyAPI + CLI execution result for Makeup Engine. Please review it as ChatGPT / PM / architect and decide the next step.
 
 Current state:
-- lastCompletedPhase: 8B
-- nextRecommendedPhase: 8C
+- lastCompletedPhase: 8C
+- nextRecommendedPhase: 8D
 - project role: Makeup template production system, not a production user app
 
 Completed work:
@@ -162,8 +170,8 @@ Please respond with:
 
 ## Required Handoff Rules
 
-- Always state `lastCompletedPhase: 8B`.
-- Always state `nextRecommendedPhase: 8C` unless the owner asks for a targeted 8B follow-up.
+- Always state `lastCompletedPhase: 8C`.
+- Always state `nextRecommendedPhase: 8D` unless the owner asks for a targeted 8C follow-up.
 - Always list the required read files first.
 - Always include the boundary that `SourceImagePackage` can reach Vision Analysis through explicit binding, but cannot become a training dataset directly and cannot directly become a template library entry.
 - Always include the boundary that `UserAppTemplatePackage` is a consumption contract, not a real app, backend publication, or online release.
@@ -177,6 +185,7 @@ Please respond with:
 - Always include the boundary that Phase 7H browser/mobile QA is local deterministic prototype QA only, not production release approval, real device lab QA, Playwright pointer/canvas/screenshot QA, native iOS QA, backend readiness, camera readiness, AR readiness, training readiness, or app store release approval.
 - Always include the boundary that Phase 8A selected React Web / PWA MVP first only, not production app implementation, repository bootstrap, backend, analytics, camera, AR, native iOS, React Native, Flutter, ecommerce, community, paid features, training, external API, OpenAI API, online publication, app store release work, or new dependency approval.
 - Always include the boundary that Phase 8B PWA/mobile polish is local shell polish only, not production PWA release approval, and does not add service worker, offline cache, push notification, background sync, install tracking, analytics, backend, camera, AR, native app, external API, training, or online publication scope.
+- Always include the boundary that Phase 8C trial pack is local internal / small-scope trial planning only, not production release, App Store/TestFlight, backend form, analytics, real user record collection, camera, AR, training, or online publication scope.
 - Always include the validation commands that were run.
 - Always state that project-state and docs/status were updated after the work.
 - Always include `project-state/skills.json` or the relevant skill docs when switching providers.

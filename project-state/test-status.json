@@ -1,5 +1,5 @@
 {
-  "phase": "8B",
+  "phase": "8C",
   "status": "passed",
   "lastValidation": {
     "typecheck": "passed",
@@ -9,11 +9,11 @@
     "projectStatusJson": "passed",
     "projectContext": "passed",
     "contextPackJson": "passed",
-    "userAppBrowserQa": "passed",
-    "httpSmoke": "passed",
-    "phase8BScopedTests": "passed",
-    "testFiles": 370,
-    "tests": 514
+    "userAppBrowserQa": "not_required_for_phase_8C_trial_pack",
+    "httpSmoke": "not_required_for_phase_8C_trial_pack",
+    "phase8CScopedTests": "passed",
+    "testFiles": 378,
+    "tests": 530
   },
   "lastKnownPreDoc0Validation": {
     "typecheck": "passed",
@@ -24,23 +24,19 @@
   },
   "requiredValidationCommands": [
     "npm run typecheck",
+    "npm run test",
     "npm run build",
     "npm run project:status",
     "npm run project:context",
     "node scripts/project-status.mjs --json",
     "node scripts/context-pack.mjs --json",
-    "npm run test -- tests/user-app-pwa-readiness.test.ts tests/user-app-mvp-polish.test.ts tests/user-app-pwa-install-panel.test.tsx tests/user-app-mobile-home.test.tsx tests/user-app-mvp-polish-checklist.test.tsx tests/user-app-shell-pwa-polish-flow.test.tsx tests/phase-8B-documentation-recovery.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
-    "npm run test"
+    "npm run test -- tests/user-app-trial-pack.test.ts tests/user-app-trial-feedback.test.ts tests/user-app-trial-readiness.test.ts tests/user-app-trial-pack-panel.test.tsx tests/user-app-trial-feedback-panel.test.tsx tests/user-app-trial-readiness-panel.test.tsx tests/user-app-shell-trial-pack-flow.test.tsx tests/phase-8C-documentation-recovery.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
   ],
   "notes": [
-    "8B is local PWA/mobile shell polish only.",
-    "8B added lightweight manifest metadata, PWA readiness, MVP polish readiness, mobile home, Chinese copy polish, and administrator QA separation.",
-    "8B did not add production app code, service worker, offline cache, push notification, background sync, install tracking, backend, database, accounts, analytics, camera, AR, training, OpenAI API, external API, native iOS, React Native, Flutter, ecommerce, community, paid features, online publication, app store release work, separate repository bootstrap, new runtime dependencies, or production release scope.",
-    "npm run typecheck passed.",
-    "npm run test passed: 370 test files, 514 tests.",
-    "Phase 8B scoped tests passed: 9 test files, 18 tests.",
-    "npm run build passed with the existing Vite chunk-size warning only.",
-    "npm run project:status, npm run project:context, node scripts/project-status.mjs --json, and node scripts/context-pack.mjs --json passed.",
-    "npm run user-app:browser-qa -- --json passed local HTTP smoke, critical copy, privacy copy, and Chinese copy checks."
+    "8C is local MVP trial pack planning only.",
+    "8C added trial pack, feedback form, mock/example feedback summary, trial readiness, and administrator trial panels.",
+    "8C did not add production app, backend, analytics, camera, AR, training, App Store/TestFlight, online release, or real user data collection.",
+    "Required Phase 8C scoped tests passed: 10 test files, 23 tests.",
+    "Full Vitest passed: 378 test files, 530 tests."
   ]
 }

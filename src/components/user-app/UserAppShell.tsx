@@ -17,6 +17,9 @@ import {
   createUserAppReadinessReport,
   createUserAppSessionStorageAdapter,
   createUserAppShellModel,
+  createUserAppTrialFeedbackForm,
+  createUserAppTrialPack,
+  createUserAppTrialReadinessReport,
   createUserPhotoIntakePlaceholder,
   evaluateMobileQaReadiness,
   loadUserAppSession,
@@ -37,6 +40,7 @@ import {
   type UserAppShellState,
   type UserOnboardingState,
 } from '../../user-app';
+import { userAppTrialFeedbackMockSummary } from '../../templates/examples/user-app-trial-feedback.example';
 import { UserAppCompatibilityBanner } from './UserAppCompatibilityBanner';
 import { UserAppInteractionChecklist } from './UserAppInteractionChecklist';
 import { UserAppMobileHome } from './UserAppMobileHome';
@@ -47,6 +51,9 @@ import { UserAppPwaInstallPanel } from './UserAppPwaInstallPanel';
 import { UserAppReadinessPanel } from './UserAppReadinessPanel';
 import { UserAppSessionPanel } from './UserAppSessionPanel';
 import { UserAppSessionRecoveryNotice } from './UserAppSessionRecoveryNotice';
+import { UserAppTrialFeedbackPanel } from './UserAppTrialFeedbackPanel';
+import { UserAppTrialPackPanel } from './UserAppTrialPackPanel';
+import { UserAppTrialReadinessPanel } from './UserAppTrialReadinessPanel';
 import { UserMakeupStepGuide } from './UserMakeupStepGuide';
 import { UserOnboardingFlow } from './UserOnboardingFlow';
 import { UserPersonalizationPanel } from './UserPersonalizationPanel';
@@ -76,6 +83,9 @@ const userSectionTabs: Array<{ tabId: UserAppShellSection; label: string }> = [
 ];
 
 const adminSectionTabs: Array<{ tabId: UserAppShellSection; label: string }> = [
+  { tabId: 'trialPack', label: 'MVP 试用包' },
+  { tabId: 'trialFeedback', label: '反馈表预览' },
+  { tabId: 'trialReadiness', label: '试用就绪度' },
   { tabId: 'pwa', label: 'PWA 检查' },
   { tabId: 'mvpPolish', label: 'MVP 打磨' },
   { tabId: 'readiness', label: 'App 就绪度' },
@@ -172,6 +182,24 @@ export function UserAppShell({
         hasLocalOnlyBoundary: true,
       }),
     [pwaReadinessReport, viewModel.selectedTemplate, viewModel.templates],
+  );
+  const trialPack = useMemo(() => createUserAppTrialPack(), []);
+  const trialFeedbackForm = useMemo(() => createUserAppTrialFeedbackForm(), []);
+  const trialReadinessReport = useMemo(
+    () =>
+      createUserAppTrialReadinessReport({
+        trialPack,
+        feedbackForm: trialFeedbackForm,
+        pwaReport: pwaReadinessReport,
+        mvpPolishReport,
+        hasPrivacyLocalOnlyCopy: true,
+        hasNoUploadCopy: true,
+        hasNoTrainingCopy: true,
+        hasNoSensitiveDataCopy: true,
+        hasUserPathReady: true,
+        hasAdminQaSeparation: true,
+      }),
+    [mvpPolishReport, pwaReadinessReport, trialFeedbackForm, trialPack],
   );
   const readinessReport = useMemo(
     () =>
@@ -499,7 +527,8 @@ export function UserAppShell({
               <div className="rounded-md border border-stone-200 bg-stone-50 p-3">
                 <p className="text-xs font-semibold text-stone-500">管理员检查</p>
                 <p className="mt-1 text-xs leading-5 text-stone-500">
-                  这里保留 PWA、readiness、QA 和 contract 检查信息；普通用户不应把它们理解为正式功能。
+                  这里保留 MVP 试用管理、PWA、readiness、QA 和 contract 检查信息；
+                  普通用户不应把它们理解为正式功能。
                 </p>
                 <div className="mt-2 flex flex-wrap gap-2">
                   {adminSectionTabs.map(({ tabId, label }) => (
@@ -585,6 +614,21 @@ export function UserAppShell({
 
               {boundaryTab === 'pwa' ? (
                 <UserAppPwaInstallPanel report={pwaReadinessReport} />
+              ) : null}
+
+              {boundaryTab === 'trialPack' ? (
+                <UserAppTrialPackPanel pack={trialPack} />
+              ) : null}
+
+              {boundaryTab === 'trialFeedback' ? (
+                <UserAppTrialFeedbackPanel
+                  form={trialFeedbackForm}
+                  summary={userAppTrialFeedbackMockSummary}
+                />
+              ) : null}
+
+              {boundaryTab === 'trialReadiness' ? (
+                <UserAppTrialReadinessPanel report={trialReadinessReport} />
               ) : null}
 
               {boundaryTab === 'mvpPolish' ? (

@@ -1,5 +1,5 @@
 {
-  "phase": "8B",
+  "phase": "8C",
   "guardrails": [
     {
       "id": "source-image-not-training-data",
@@ -300,6 +300,22 @@
     {
       "id": "phase_8b_does_not_modify_user_app_template_package",
       "rule": "Phase 8B shell polish, readiness, QA, sessions, preferences, and recommendations cannot mutate UserAppTemplatePackage, write real user records into project-state, or enter training datasets."
+    },
+    {
+      "id": "phase_8c_trial_pack_local_only",
+      "rule": "Phase 8C trial pack is local internal / small-scope trial planning only and is not production release, App Store/TestFlight, backend form, analytics, camera, AR, training, online publication, or real user data collection approval."
+    },
+    {
+      "id": "phase_8c_feedback_privacy_boundary",
+      "rule": "Phase 8C feedback must not collect real names, contact information, photos, health information, sensitive identity information, face embeddings, biometric identifiers, backend records, analytics records, or training data."
+    },
+    {
+      "id": "phase_8c_no_project_state_user_records",
+      "rule": "Phase 8C trial tasks, feedback, readiness, sessions, preferences, recommendations, and admin panels cannot write real user trial records into project-state or training datasets."
+    },
+    {
+      "id": "phase_8c_does_not_modify_user_app_template_package",
+      "rule": "Phase 8C trial tasks, feedback, readiness, sessions, preferences, recommendations, and admin panels cannot mutate UserAppTemplatePackage."
     }
   ],
   "legacyFrozenModules": [

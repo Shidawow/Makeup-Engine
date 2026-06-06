@@ -20,6 +20,7 @@ Phase 8A defines what the first user-facing MVP must not include. These non-goal
 - No offline cache in Phase 8B.
 - No push notification or background sync in Phase 8B.
 - No install tracking in Phase 8B.
+- No production release, online user growth, backend feedback form, analytics, or App Store/TestFlight testing in Phase 8C.
 
 ## Photo / Camera / AR Non-Goals
 
@@ -71,6 +72,8 @@ V1 must not store or export:
 - sensitive profile fields
 - health information
 - real user preference records
+- real user trial feedback records
+- real names or contact information
 - real recommendation records
 - real session records
 - readiness/browser QA records as user records
