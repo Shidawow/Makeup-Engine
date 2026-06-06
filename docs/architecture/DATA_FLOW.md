@@ -34,6 +34,7 @@ Real Photo
 -> User App MVP Trial Pack
 -> Template Content QA / Trial Template Selection / Trial Content Readiness
 -> MVP Release Readiness Gate / Trial Go-No-Go
+-> Internal Trial Operations / Observation Template / Outcome Review
 -> Phase 8 Roadmap / V1 Non-Goals
 -> User App Consumption Manifest
 -> Dataset Review
@@ -75,6 +76,7 @@ Real Photo
 - `User App MVP Trial Pack`: Phase 8C local trial planning layer for ordered user tasks, feedback questionnaire, mock/example feedback summary, and trial readiness checks. It is not a backend form, production release, App Store/TestFlight test, analytics flow, real user record store, or training data source.
 - `Template Content QA / Trial Template Selection / Trial Content Readiness`: Phase 8D local content QA layer for template copy, step actionability, region instructions, tools/products, recommendation reasons, trial-ready template selection, and integrated content readiness. It is not production release approval, AI content generation, backend readiness, OpenAI/external API usage, camera/AR readiness, real user record storage, or training data.
 - `MVP Release Readiness Gate / Trial Go-No-Go`: Phase 8E local gate layer that summarizes 8A-8D evidence and decides go, go with warnings, or no-go for internal trial preparation only. It is not production release approval, App Store/TestFlight readiness, backend readiness, camera/AR readiness, analytics readiness, AI generation approval, OpenAI/external API approval, real user record storage, or training data.
+- `Internal Trial Operations / Observation Template / Outcome Review`: Phase 9A local operations layer for broad participant type planning, session checklist, anonymous observation signals, and outcome recommendations. It is not public recruitment, production release, App Store/TestFlight readiness, backend form, analytics readiness, camera/AR readiness, AI analysis, OpenAI/external API usage, real user record storage, or training data.
 - `Phase 8 Roadmap / V1 Non-Goals`: planning docs for 8A through 8E and the anti-scope list for login, backend, database, camera, AR, native apps, OpenAI API, ecommerce, community, paid features, and training.
 - `User App Consumption Manifest`: handoff manifest with app template entries, versions, compatibility target, checksums, readiness, and local-only disclaimer.
 - `Dataset Review`: explicit review decisions before data becomes training-ready.
@@ -103,6 +105,8 @@ Real Photo
 `Template Content QA / Trial Template Selection / Trial Content Readiness` is a local administrator content QA layer over `UserAppTemplatePackage`. It can identify trial-ready, backup warning, and blocked templates, but it cannot mutate `UserAppTemplatePackage`, call OpenAI/external APIs, generate AI content, collect user photos, write real user trial records into `project-state`, or create training input.
 
 `MVP Release Readiness Gate / Trial Go-No-Go` is a local administrator gate over Phase 8A-8D evidence. It can decide whether to prepare an internal small-scope trial, but it cannot approve production release, mutate `UserAppTemplatePackage`, call backend/analytics/camera/AR/OpenAI/external APIs, collect photos, write real user trial records into `project-state`, or create training input.
+
+`Internal Trial Operations / Observation Template / Outcome Review` is a local administrator operations layer over Phase 8C-8E trial readiness evidence. It can define participant types, session flow, anonymous observation signals, and outcome recommendations, but it cannot recruit publicly, collect real names, contact information, photos, health information, sensitive identity information, biometrics, backend records, analytics records, write real participant records into `project-state`, mutate `UserAppTemplatePackage`, or create training input.
 
 Phase 6L-1 adds a QA loop inside this read-only layer:
 

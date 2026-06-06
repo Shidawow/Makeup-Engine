@@ -92,6 +92,22 @@ Before starting 8B:
 - MVP release readiness and trial go/no-go scoped tests have passed.
 - The next phase remains internal trial operations preparation only unless explicitly expanded.
 
+## 9A Completed Result
+
+- Internal trial operations define broad participant types, session plan, checklist, risks, boundaries, and readiness status.
+- Observation guide defines anonymous experience signals and mock/example summaries.
+- Outcome review recommends continuing internal trials, revising content, revising shell, blocking for privacy/scope, or entering Phase 9B.
+- Admin operations panels are available in the local shell without disrupting the ordinary user path.
+- The current next recommended phase is Phase 9B Internal Trial Result Review Framework.
+- No public recruitment, production app, backend, camera, AR, analytics, OpenAI/external API usage, AI analysis, training, App Store/TestFlight, online release, real user record collection, or new runtime dependency was added.
+
+## 9B Entry Criteria
+
+- `lastCompletedPhase` is `9A`.
+- `nextRecommendedPhase` is `9B`.
+- Internal trial operations, observation, outcome review, and documentation scoped tests have passed.
+- The next phase remains internal trial result review only unless explicitly expanded.
+
 ## Persistent Guardrails
 
 - Do not treat Makeup Engine as the production user app.
@@ -99,3 +115,4 @@ Before starting 8B:
 - Do not let `SourceImagePackage` directly enter the User App.
 - Do not collect, upload, analyze, store, export, or train on real user photos.
 - Do not add backend, database, accounts, cloud sync, analytics, camera, AR, OpenAI API, external APIs, native app implementation, ecommerce, community, paid features, model training, online publication, or app store release scope without a later explicit gate.
+- Do not treat Phase 9A internal trial operations, observation templates, or outcome review as public recruitment, production release, backend forms, analytics, camera/AR readiness, AI analysis, OpenAI/external API approval, training, App Store/TestFlight, or real user data collection approval.

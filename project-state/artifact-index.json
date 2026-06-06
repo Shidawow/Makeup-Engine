@@ -69,7 +69,8 @@
     "Phase 8B PWA manifest metadata and icon placeholder are local install-readiness placeholders, not production PWA release artifacts, analytics, install tracking, backend state, user records, or training input.",
     "Phase 8B PWA readiness and MVP polish readiness reports are local QA metadata, not production app state, backend records, durable user records, browser QA records, recommendation records, or training input.",
     "Phase 8C trial pack, feedback, and readiness reports are local planning metadata, not backend forms, analytics, production release records, real user records, or training input.",
-    "Phase 8E MVP release readiness and trial go/no-go reports are local admin gate metadata, not production release records, backend records, analytics records, real user records, AI-generated content, or training input."
+    "Phase 8E MVP release readiness and trial go/no-go reports are local admin gate metadata, not production release records, backend records, analytics records, real user records, AI-generated content, or training input.",
+    "Phase 9A internal trial operations, observation guide, and outcome review are local admin planning metadata, not backend records, analytics records, real user records, AI analysis records, production release records, or training input."
   ],
   "materializedDatasetOutputs": [
     "tmp/datasets/realistic-synthetic-png-image-v0/package.json",
@@ -200,7 +201,14 @@
     "UserAppTrialFeedbackPanel UI preview",
     "UserAppTrialReadinessPanel UI preview",
     "UserAppMvpReleaseReadinessPanel UI preview",
-    "UserAppTrialGoNoGoPanel UI preview"
+    "UserAppTrialGoNoGoPanel UI preview",
+    "UserAppInternalTrialOpsPack metadata",
+    "UserAppTrialObservationGuide metadata",
+    "UserAppTrialObservationSummary mock metadata",
+    "UserAppTrialOutcomeReview metadata",
+    "UserAppInternalTrialOpsPanel UI preview",
+    "UserAppTrialObservationPanel UI preview",
+    "UserAppTrialOutcomePanel UI preview"
   ],
   "userPhotoBoundaryOutputs": [
     "User photo intake placeholder metadata",
@@ -289,7 +297,7 @@
     "Trial script documentation",
     "Feedback questionnaire documentation"
   ],
-  "runtimeResource": "Phase 8E MVP release readiness and trial go/no-go reports are local admin gate metadata, not backend records, analytics, real user records, AI-generated content, production release records, or training input.",
+  "runtimeResource": "Phase 9A internal trial operations, observation guide, and outcome review are local admin planning metadata, not backend records, analytics, real user records, AI analysis records, production release records, or training input.",
   "userAppTrialContentQaOutputs": [
     "UserAppTemplateContentQaReport metadata",
     "UserAppTrialTemplateSelectionReport metadata",
@@ -308,5 +316,25 @@
     "MVP release readiness administrator panel",
     "Trial go/no-go administrator panel",
     "Internal trial launch checklist documentation"
+  ],
+  "userAppInternalTrialOpsOutputs": [
+    "UserAppInternalTrialOpsPack metadata",
+    "UserAppInternalTrialParticipantType metadata",
+    "UserAppInternalTrialSessionPlan metadata",
+    "UserAppInternalTrialChecklist metadata",
+    "UserAppInternalTrialRisk metadata",
+    "UserAppInternalTrialBoundary metadata",
+    "UserAppTrialObservationGuide metadata",
+    "UserAppTrialObservationSignal metadata",
+    "UserAppTrialObservationSummary mock/example metadata",
+    "UserAppTrialOutcomeReview metadata",
+    "UserAppTrialOutcomeDecision metadata",
+    "Internal trial operations administrator panel",
+    "Trial observation administrator panel",
+    "Trial outcome administrator panel",
+    "Internal trial operations documentation",
+    "Participant guide documentation",
+    "Observation template documentation",
+    "Outcome review documentation"
   ]
 }

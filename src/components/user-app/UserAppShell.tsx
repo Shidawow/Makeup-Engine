@@ -14,12 +14,15 @@ import {
   createSessionFromAppState,
   createUserAppMvpPolishReport,
   createUserAppMvpReleaseReadinessReport,
+  createUserAppInternalTrialOpsPack,
   createUserAppPwaReadinessReport,
   createUserAppReadinessReport,
   createUserAppSessionStorageAdapter,
   createUserAppShellModel,
   createUserAppTrialGoNoGoDecision,
   createUserAppTrialFeedbackForm,
+  createUserAppTrialObservationGuide,
+  createUserAppTrialOutcomeReview,
   createUserAppTrialPack,
   createUserAppTrialReadinessReport,
   createUserAppTemplateContentQaReport,
@@ -47,7 +50,9 @@ import {
 } from '../../user-app';
 import { userAppTemplateContentQaExamplePackage } from '../../templates/examples/user-app-template-content-qa.example';
 import { userAppTrialFeedbackMockSummary } from '../../templates/examples/user-app-trial-feedback.example';
+import { userAppTrialObservationMockSummary } from '../../templates/examples/user-app-trial-observation.example';
 import { UserAppCompatibilityBanner } from './UserAppCompatibilityBanner';
+import { UserAppInternalTrialOpsPanel } from './UserAppInternalTrialOpsPanel';
 import { UserAppInteractionChecklist } from './UserAppInteractionChecklist';
 import { UserAppMobileHome } from './UserAppMobileHome';
 import { UserAppMobileQaPanel } from './UserAppMobileQaPanel';
@@ -60,6 +65,8 @@ import { UserAppSessionPanel } from './UserAppSessionPanel';
 import { UserAppSessionRecoveryNotice } from './UserAppSessionRecoveryNotice';
 import { UserAppTrialFeedbackPanel } from './UserAppTrialFeedbackPanel';
 import { UserAppTrialGoNoGoPanel } from './UserAppTrialGoNoGoPanel';
+import { UserAppTrialObservationPanel } from './UserAppTrialObservationPanel';
+import { UserAppTrialOutcomePanel } from './UserAppTrialOutcomePanel';
 import { UserAppTrialPackPanel } from './UserAppTrialPackPanel';
 import { UserAppTrialReadinessPanel } from './UserAppTrialReadinessPanel';
 import { UserAppTemplateContentQaPanel } from './UserAppTemplateContentQaPanel';
@@ -101,6 +108,9 @@ const adminSectionTabs: Array<{ tabId: UserAppShellSection; label: string }> = [
   { tabId: 'trialContentReadiness', label: '试用内容就绪度' },
   { tabId: 'mvpReleaseReadiness', label: 'MVP 发布就绪度' },
   { tabId: 'trialGoNoGo', label: '试用 Go/No-Go' },
+  { tabId: 'internalTrialOps', label: '内部试用运营' },
+  { tabId: 'trialObservation', label: '观察记录模板' },
+  { tabId: 'trialOutcome', label: '试用结果复盘' },
   { tabId: 'pwa', label: 'PWA 检查' },
   { tabId: 'mvpPolish', label: 'MVP 打磨' },
   { tabId: 'readiness', label: 'App 就绪度' },
@@ -289,6 +299,15 @@ export function UserAppShell({
       trialFeedbackForm,
       trialTemplateSelectionReport,
     ],
+  );
+  const internalTrialOpsPack = useMemo(() => createUserAppInternalTrialOpsPack(), []);
+  const trialObservationGuide = useMemo(() => createUserAppTrialObservationGuide(), []);
+  const trialOutcomeReview = useMemo(
+    () =>
+      createUserAppTrialOutcomeReview({
+        participantSessionsReviewed: 1,
+      }),
+    [],
   );
   const readinessReport = useMemo(
     () =>
@@ -616,8 +635,8 @@ export function UserAppShell({
               <div className="rounded-md border border-stone-200 bg-stone-50 p-3">
                 <p className="text-xs font-semibold text-stone-500">管理员检查</p>
                 <p className="mt-1 text-xs leading-5 text-stone-500">
-                  这里保留 MVP 试用管理、模板内容 QA、发布就绪度、PWA、readiness 和 contract
-                  检查信息；普通用户不应把它们理解为正式功能。
+                  这里保留 MVP 试用管理、模板内容 QA、发布就绪度、内部试用运营、PWA、
+                  readiness 和 contract 检查信息；普通用户不应把它们理解为正式功能。
                 </p>
                 <div className="mt-2 flex flex-wrap gap-2">
                   {adminSectionTabs.map(({ tabId, label }) => (
@@ -744,6 +763,21 @@ export function UserAppShell({
 
               {boundaryTab === 'trialGoNoGo' ? (
                 <UserAppTrialGoNoGoPanel decision={trialGoNoGoDecision} />
+              ) : null}
+
+              {boundaryTab === 'internalTrialOps' ? (
+                <UserAppInternalTrialOpsPanel pack={internalTrialOpsPack} />
+              ) : null}
+
+              {boundaryTab === 'trialObservation' ? (
+                <UserAppTrialObservationPanel
+                  guide={trialObservationGuide}
+                  summary={userAppTrialObservationMockSummary}
+                />
+              ) : null}
+
+              {boundaryTab === 'trialOutcome' ? (
+                <UserAppTrialOutcomePanel review={trialOutcomeReview} />
               ) : null}
 
               {boundaryTab === 'mvpPolish' ? (

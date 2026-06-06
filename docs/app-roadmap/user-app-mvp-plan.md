@@ -146,3 +146,21 @@ The result is still local-only and contract-driven. `go_for_internal_trial` and 
 ## Phase 9A Planning Target
 
 Phase 9A should prepare the internal trial operations pack: participant instructions, operator script, warning log, stop conditions, and post-trial summary structure. It should not create backend forms, analytics stores, camera/photo capture, AR flows, App Store/TestFlight work, online release, or real user record storage unless a later explicit gate approves those systems.
+
+## Phase 9A Result
+
+Phase 9A adds a local internal trial operations pack:
+
+- participant type coverage
+- session plan and checklist
+- risk and boundary checks
+- anonymous observation guide
+- mock/example observation summary
+- outcome review recommendations
+- administrator operations panels
+
+The result is still local-only and contract-driven. It does not add public recruitment, backend forms, database, accounts, analytics, camera, AR, real photo collection, AI analysis, OpenAI/external API calls, training, online publication, native app work, App Store/TestFlight, production release scope, or real user record collection.
+
+## Phase 9B Planning Target
+
+Phase 9B should define how anonymous internal trial signals are reviewed after sessions: evidence sufficiency, issue theme grouping, decision criteria, and whether to continue trials, revise content, revise shell, or pause for privacy/scope. It should not create a backend research repository, analytics store, public recruitment workflow, or real participant record system unless a later explicit gate approves those systems.

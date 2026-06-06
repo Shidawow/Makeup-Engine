@@ -40,6 +40,9 @@
 - Phase 8E adds MVP release readiness and trial go/no-go gates only; it is not production release, App Store/TestFlight, backend readiness, analytics readiness, camera readiness, AR readiness, AI generation approval, OpenAI/external API approval, training readiness, online publication, or real user data collection approval.
 - Phase 8E `go_for_internal_trial` or `go_with_warnings` means internal small-scope trial preparation only, not production ready.
 - Phase 8E release readiness and go/no-go reports cannot mutate `UserAppTemplatePackage`, collect photos, write real user trial records into `project-state`, or enter training datasets.
+- Phase 9A adds internal trial operations, observation templates, and outcome review only; it is not public recruitment, production release, App Store/TestFlight, backend form, analytics, camera, AR, AI analysis, OpenAI/external API usage, training, or real user record collection.
+- Phase 9A participant types are broad categories only and cannot store real names, contact information, health information, sensitive identity information, photos, face embeddings, biometric identifiers, backend records, analytics records, or training data.
+- Phase 9A operations, observation notes, and outcome review cannot mutate `UserAppTemplatePackage`, write real user trial records into `project-state`, or enter training datasets.
 - The future production user-facing app should be planned as a separate app surface or repository and is not owned by Makeup Engine without a future explicit phase gate.
 - Native iOS, React Native, Flutter, backend, accounts, analytics, camera/photo capture, AR, online publication, OpenAI/external APIs, ecommerce, community, paid features, and training remain deferred after Phase 8A.
 - `SourceImagePackage` still cannot directly become user photo intake, User App Shell state, `TemplateLibraryEntry`, `UserAppTemplatePackage`, or training data.

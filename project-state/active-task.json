@@ -1,11 +1,11 @@
 {
   "schemaVersion": "active-task.v1",
-  "taskId": "8E",
-  "title": "MVP Release Readiness Gate",
+  "taskId": "9A",
+  "title": "Internal Trial Operations Pack",
   "status": "completed",
   "ownerRole": "Codex",
   "createdBy": "Codex",
-  "phase": "8E",
+  "phase": "9A",
   "recommendedProfile": "native-gpt-codex-high-reasoning",
   "allowedDirectories": [
     "docs",
@@ -29,21 +29,21 @@
     "npm run project:context",
     "node scripts/project-status.mjs --json",
     "node scripts/context-pack.mjs --json",
-    "npm run test -- tests/user-app-mvp-release-readiness.test.ts tests/user-app-trial-go-no-go.test.ts tests/user-app-mvp-release-readiness-panel.test.tsx tests/user-app-trial-go-no-go-panel.test.tsx tests/user-app-shell-release-readiness-flow.test.tsx tests/phase-8E-documentation-recovery.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
+    "npm run test -- tests/user-app-internal-trial-ops.test.ts tests/user-app-trial-observation.test.ts tests/user-app-trial-outcome.test.ts tests/user-app-internal-trial-ops-panel.test.tsx tests/user-app-trial-observation-panel.test.tsx tests/user-app-trial-outcome-panel.test.tsx tests/user-app-shell-internal-trial-flow.test.tsx tests/phase-9A-documentation-recovery.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
   ],
   "completionDefinition": [
-    "Phase 8E added MVP release readiness, trial go/no-go decision, release readiness fixtures, administrator release gate panels, and internal trial launch checklist documentation.",
-    "8E did not implement production app, backend, database, accounts, analytics, AI generation, OpenAI/external API usage, camera, AR, training, App Store/TestFlight, online publication, service worker, offline cache, push notification, background sync, install tracking, new runtime dependencies, or real user data collection.",
-    "8E did not collect real names, contact information, photos, health information, sensitive identity information, face embeddings, biometric identifiers, backend records, analytics records, or training data.",
+    "Phase 9A added internal trial operations, participant type coverage, anonymous observation guide, outcome review recommendations, fixtures, administrator panels, and internal trial operations documentation.",
+    "9A did not implement production app, public recruitment, backend, database, accounts, analytics, AI analysis, OpenAI/external API usage, camera, AR, training, App Store/TestFlight, online publication, service worker, offline cache, push notification, background sync, install tracking, new runtime dependencies, or real user data collection.",
+    "9A did not collect real names, contact information, photos, health information, sensitive identity information, face embeddings, biometric identifiers, backend records, analytics records, or training data.",
     "Makeup Engine remains the template production system and UserAppTemplatePackage remains the handoff contract.",
     "Docs and project-state must remain recoverable and validation commands must pass."
   ],
   "dependsOn": [
-    "8D Template Content QA for Real User Trial"
+    "8E MVP Release Readiness Gate"
   ],
   "nextRecommendedTask": {
-    "taskId": "9A",
-    "title": "Internal Trial Operations Pack",
+    "taskId": "9B",
+    "title": "Internal Trial Result Review Framework",
     "status": "recommended"
   }
 }

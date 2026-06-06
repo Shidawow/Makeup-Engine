@@ -50,6 +50,9 @@ export type UserAppShellSection =
   | 'trialContentReadiness'
   | 'mvpReleaseReadiness'
   | 'trialGoNoGo'
+  | 'internalTrialOps'
+  | 'trialObservation'
+  | 'trialOutcome'
   | 'mobileQa'
   | 'interaction';
 

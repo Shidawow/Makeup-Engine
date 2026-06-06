@@ -19,10 +19,10 @@ describe('project status CLI', () => {
       knownLimitations: string[];
     };
 
-    expect(parsed.currentPhase).toBe('MVP Release Readiness Gate');
-    expect(parsed.lastCompletedPhase).toBe('8E');
-    expect(parsed.lastCompletedBusinessPhase).toBe('8E');
-    expect(parsed.nextRecommendedPhase).toBe('9A');
+    expect(parsed.currentPhase).toBe('Internal Trial Operations Pack');
+    expect(parsed.lastCompletedPhase).toBe('9A');
+    expect(parsed.lastCompletedBusinessPhase).toBe('9A');
+    expect(parsed.nextRecommendedPhase).toBe('9B');
     expect(parsed.knownLimitations).toContain('JPEG pixel decoding is intentionally unsupported');
   });
 
@@ -48,6 +48,6 @@ describe('project status CLI', () => {
     const parsed = JSON.parse(result.stdout.slice(result.stdout.indexOf('{'))) as {
       nextAction: string;
     };
-    expect(parsed.nextAction).toContain('Phase 9A');
+    expect(parsed.nextAction).toContain('Phase 9B');
   });
 });

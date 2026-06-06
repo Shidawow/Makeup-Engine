@@ -1,5 +1,5 @@
 {
-  "phase": "8E",
+  "phase": "9A",
   "status": "passed",
   "lastValidation": {
     "typecheck": "passed",
@@ -9,12 +9,13 @@
     "projectStatusJson": "passed",
     "projectContext": "passed",
     "contextPackJson": "passed",
-    "userAppBrowserQa": "not_required_for_phase_8E_release_gate",
-    "httpSmoke": "not_required_for_phase_8E_release_gate",
+    "userAppBrowserQa": "not_required_for_phase_9A_operations_pack",
+    "httpSmoke": "not_required_for_phase_9A_operations_pack",
     "phase8DScopedTests": "passed",
     "phase8EScopedTests": "passed",
-    "testFiles": 391,
-    "tests": 557
+    "phase9AScopedTests": "passed",
+    "testFiles": 399,
+    "tests": 570
   },
   "lastKnownPreDoc0Validation": {
     "typecheck": "passed",
@@ -31,14 +32,14 @@
     "npm run project:context",
     "node scripts/project-status.mjs --json",
     "node scripts/context-pack.mjs --json",
-    "npm run test -- tests/user-app-mvp-release-readiness.test.ts tests/user-app-trial-go-no-go.test.ts tests/user-app-mvp-release-readiness-panel.test.tsx tests/user-app-trial-go-no-go-panel.test.tsx tests/user-app-shell-release-readiness-flow.test.tsx tests/phase-8E-documentation-recovery.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
+    "npm run test -- tests/user-app-internal-trial-ops.test.ts tests/user-app-trial-observation.test.ts tests/user-app-trial-outcome.test.ts tests/user-app-internal-trial-ops-panel.test.tsx tests/user-app-trial-observation-panel.test.tsx tests/user-app-trial-outcome-panel.test.tsx tests/user-app-shell-internal-trial-flow.test.tsx tests/phase-9A-documentation-recovery.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
   ],
   "notes": [
-    "8E is local MVP release readiness and trial go/no-go gating for internal small-scope trial preparation only.",
-    "8E added MVP release readiness, trial go/no-go decision, release readiness fixtures, administrator panels, and internal trial launch checklist documentation.",
-    "8E did not add production app, backend, analytics, AI generation, OpenAI/external API usage, camera, AR, training, App Store/TestFlight, online release, or real user data collection.",
-    "Phase 8E scoped tests passed: 8 test files, 19 tests.",
-    "Full npm run test passed: 391 test files, 557 tests.",
+    "9A is local internal trial operations preparation only.",
+    "9A added internal trial operations, participant type coverage, anonymous observation guide, outcome review recommendations, fixtures, administrator panels, and operations documentation.",
+    "9A did not add production app, public recruitment, backend, analytics, AI analysis, OpenAI/external API usage, camera, AR, training, App Store/TestFlight, online release, or real user data collection.",
+    "Phase 9A scoped tests passed: 10 test files, 20 tests.",
+    "Full npm run test passed: 399 test files, 570 tests.",
     "npm run typecheck, npm run build, npm run project:status, npm run project:context, node scripts/project-status.mjs --json, and node scripts/context-pack.mjs --json passed."
   ]
 }

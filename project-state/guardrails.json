@@ -1,5 +1,5 @@
 {
-  "phase": "8E",
+  "phase": "9A",
   "guardrails": [
     {
       "id": "source-image-not-training-data",
@@ -348,6 +348,22 @@
     {
       "id": "phase_8e_no_contract_mutation_or_user_records",
       "rule": "Phase 8E release readiness, go/no-go, feedback, sessions, preferences, recommendations, content QA, and admin panels cannot mutate UserAppTemplatePackage, write real user records into project-state, or enter training datasets."
+    },
+    {
+      "id": "phase_9a_internal_trial_ops_only",
+      "rule": "Phase 9A internal trial operations, observation templates, and outcome review are local administrator preparation only and are not public recruitment, production release, App Store/TestFlight, backend forms, analytics, camera, AR, AI analysis, external API, or training approval."
+    },
+    {
+      "id": "phase_9a_no_sensitive_participant_data",
+      "rule": "Phase 9A participant coverage uses broad participant types only and cannot collect real names, contact information, health information, sensitive identity information, photos, face embeddings, biometric identifiers, backend records, analytics records, or training data."
+    },
+    {
+      "id": "phase_9a_no_backend_or_runtime_collection",
+      "rule": "Phase 9A must not add backend, database, accounts, analytics, service worker, offline cache, push notification, background sync, install tracking, camera, AR, external API calls, OpenAI API calls, AI analysis, training, or real user data collection."
+    },
+    {
+      "id": "phase_9a_no_training_or_project_state_user_records",
+      "rule": "Phase 9A operations, observation, outcome review, feedback, sessions, preferences, recommendations, content QA, and admin panels cannot mutate UserAppTemplatePackage, write real user records into project-state, or enter training datasets."
     }
   ],
   "legacyFrozenModules": [

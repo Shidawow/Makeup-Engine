@@ -31,13 +31,13 @@ describe('project state snapshot', () => {
 
     expect(snapshot.projectName).toBe('Makeup Engine');
     expect(snapshot.projectRole).toContain('Makeup template production system');
-    expect(snapshot.lastCompletedPhase).toBe('8E');
-    expect(snapshot.lastCompletedBusinessPhase).toBe('8E');
-    expect(snapshot.currentPhaseId).toBe('8E');
+    expect(snapshot.lastCompletedPhase).toBe('9A');
+    expect(snapshot.lastCompletedBusinessPhase).toBe('9A');
+    expect(snapshot.currentPhaseId).toBe('9A');
     expect(snapshot.currentPhase).toBeTruthy();
-    expect(snapshot.nextRecommendedPhase).toBe('9A');
-    expect(snapshot.nextRecommendedPhaseName).toContain('Internal Trial Operations Pack');
-    expect(snapshot.nextAction).toContain('Phase 9A');
+    expect(snapshot.nextRecommendedPhase).toBe('9B');
+    expect(snapshot.nextRecommendedPhaseName).toContain('Internal Trial Result Review Framework');
+    expect(snapshot.nextAction).toContain('Phase 9B');
     expect(snapshot.mainDataFlow).toEqual(
       expect.arrayContaining([
         'SourceImagePackage',
@@ -81,6 +81,10 @@ describe('project state snapshot', () => {
         'UserAppTrialGoNoGo',
         'UserAppMvpReleaseReadinessAdminPanels',
         'UserAppInternalTrialLaunchChecklist',
+        'UserAppInternalTrialOpsPack',
+        'UserAppTrialObservationGuide',
+        'UserAppTrialOutcomeReview',
+        'UserAppInternalTrialOpsAdminPanels',
         'UserAppV1NonGoals',
         'UserAppConsumptionManifest',
         'VisionAnalysis',
@@ -103,6 +107,7 @@ describe('project state snapshot', () => {
     expect(snapshot.knownLimitations.join('\n')).toContain('Phase 8C trial pack');
     expect(snapshot.knownLimitations.join('\n')).toContain('Phase 8D template content QA');
     expect(snapshot.knownLimitations.join('\n')).toContain('Phase 8E MVP release readiness');
+    expect(snapshot.knownLimitations.join('\n')).toContain('Phase 9A internal trial operations');
     expect(snapshot.knownLimitations.join('\n')).toContain('real names');
     expect(snapshot.knownLimitations.join('\n')).toContain('service worker');
     expect(snapshot.knownLimitations).toContain('raw RGBA is currently summary-only in Studio');

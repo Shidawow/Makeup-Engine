@@ -36,8 +36,8 @@ describe('Phase 6K documentation recovery', () => {
     expect(architecture).toContain('User App Template Consumption Contract');
     expect(dataFlow).toContain('UserAppTemplatePackage');
     expect(guardrails).toContain('object URL');
-    expect(snapshot.lastCompletedPhase).toBe('8E');
-    expect(snapshot.nextRecommendedPhase).toBe('9A');
-    expect(snapshot.nextAction).toContain('Phase 9A');
+    expect(snapshot.lastCompletedPhase).toBe('9A');
+    expect(snapshot.nextRecommendedPhase).toBe('9B');
+    expect(snapshot.nextAction).toContain('Phase 9B');
   });
 });

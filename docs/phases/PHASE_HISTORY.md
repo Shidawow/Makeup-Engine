@@ -581,3 +581,25 @@ What still cannot happen:
 Why Phase 9A follows:
 
 The MVP evidence is ready for internal trial preparation. The next bottleneck is an operations pack: participant instructions, operator script, warning log, stop conditions, and post-trial summary structure without adding production collection systems.
+
+## Phase 9A
+
+Added local Internal Trial Operations Pack for internal small-scope trial preparation.
+
+What changed:
+
+- Added `UserAppInternalTrialOpsPack` with participant type coverage, session plan, checklist, risks, boundaries, and readiness status.
+- Added `UserAppTrialObservationGuide` with anonymous observation signals and mock/example summary support.
+- Added `UserAppTrialOutcomeReview` with recommendations to continue internal trials, revise content, revise shell, block for privacy/scope, or enter Phase 9B.
+- Added administrator panels for 内部试用运营, 观察记录模板, and 试用结果复盘.
+- Added operations, participant guide, observation template, outcome review, phase docs, tests, and project-state updates.
+
+What still cannot happen:
+
+- Phase 9A is not public recruitment, production release, App Store/TestFlight test, backend form, analytics flow, camera/AR feature, AI analysis, OpenAI/external API usage, training collection, online publication, or real user record system.
+- Participant coverage uses broad participant types only and cannot collect real names, contact information, photos, health information, sensitive identity information, face embeddings, biometric identifiers, backend records, analytics records, or training data.
+- Operations, observation notes, outcome review, sessions, preferences, recommendations, and admin panels cannot mutate `UserAppTemplatePackage` or write real user trial records into `project-state`.
+
+Why Phase 9B follows:
+
+The operations pack exists. The next bottleneck is a result review framework: how to summarize anonymous internal trial signals, decide what evidence is enough, and choose whether to continue trials, revise content, revise shell, or pause for privacy/scope.

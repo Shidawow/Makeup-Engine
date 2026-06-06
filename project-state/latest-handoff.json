@@ -1,7 +1,7 @@
 {
-  "fromPhase": "8E",
-  "toPhase": "9A",
-  "summary": "Phase 8E completed local MVP Release Readiness Gate work: MVP release readiness report, trial go/no-go decision, release readiness fixtures, administrator release gate panels, and internal trial launch checklist documentation. It did not add production app, backend, camera, AR, analytics, AI generation, OpenAI/external API usage, training, App Store/TestFlight, online release, or real user record collection.",
+  "fromPhase": "9A",
+  "toPhase": "9B",
+  "summary": "Phase 9A completed local Internal Trial Operations Pack work: internal trial operations model, anonymous observation guide, outcome review model, administrator operations panels, operations documents, participant guide, observation template, and outcome review documentation. It did not add production app, public recruitment, backend, camera, AR, analytics, AI analysis, OpenAI/external API usage, training, App Store/TestFlight, online release, or real user record collection.",
   "routeDecision": {
     "selectedRoute": "React Web / PWA MVP first",
     "futureAppOwnership": "separate user-facing app surface/repository after a future explicit phase gate",
@@ -42,6 +42,10 @@
     "docs/product/user-app-feedback-questionnaire.md",
     "docs/product/template-content-qa-checklist.md",
     "docs/product/internal-trial-launch-checklist.md",
+    "docs/product/internal-trial-operations-pack.md",
+    "docs/product/internal-trial-participant-guide.md",
+    "docs/product/internal-trial-observation-template.md",
+    "docs/product/internal-trial-outcome-review.md",
     "docs/user-app/user-app-mvp-shell.md",
     "docs/user-app/pwa-mobile-web-mvp-polish.md",
     "docs/user-app/pwa-install-readiness.md",
@@ -64,29 +68,43 @@
     "docs/phases/phase-8C.md",
     "docs/phases/phase-8D.md",
     "docs/phases/phase-8E.md",
+    "docs/phases/phase-9A.md",
     "docs/phases/phase-7H.md",
     "project-state/project-state.snapshot.json",
     "project-state/provider-handoff.json",
     "project-state/latest-handoff.json",
     "project-state/active-task.json",
+    "project-state/guardrails.json",
     "project-state/skills.json",
-    "project-state/external-skills-registry.json"
+    "project-state/external-skills-registry.json",
+    "docs/user-app/user-app-product-route.md",
+    "docs/phases/phase-7A.md",
+    "docs/phases/phase-7B.md",
+    "docs/phases/phase-7C.md",
+    "docs/phases/phase-7D.md",
+    "docs/phases/phase-7E.md",
+    "docs/phases/phase-7F.md",
+    "docs/phases/phase-7G.md",
+    "docs/phases/phase-6L.md",
+    "docs/phases/phase-6L-1.md",
+    "docs/phases/phase-6K.md",
+    "docs/phases/phase-6J.md"
   ],
-  "nextAction": "Proceed to Phase 9A: Internal Trial Operations Pack. Phase 8E is complete. Prepare internal small-scope trial operations materials without adding production app, backend, database, camera, AR, training, OpenAI API, external API, native iOS, React Native, Flutter, ecommerce, community, paid features, analytics, accounts, online publication, App Store/TestFlight, service worker, offline cache, push notification, background sync, install tracking, AI content generation, or real user data collection.",
+  "nextAction": "Proceed to Phase 9B: Internal Trial Result Review Framework. Phase 9A is complete. Review anonymous internal trial operations evidence without adding production app, public recruitment, backend, database, camera, AR, training, OpenAI API, external API, native iOS, React Native, Flutter, ecommerce, community, paid features, analytics, accounts, online publication, App Store/TestFlight, service worker, offline cache, push notification, background sync, install tracking, AI analysis, or real user data collection.",
   "risks": [
-    "Letting Phase 9A become production launch operations instead of internal trial operations planning",
-    "Treating Phase 8E go/no-go as App Store/TestFlight or production release approval",
-    "Collecting real names, contact information, photos, health data, sensitive identity data, analytics records, or training data before a future explicit approval gate",
+    "Letting Phase 9B become real user research data infrastructure instead of a local result review framework",
+    "Treating Phase 9A operations as public recruitment, App Store/TestFlight, or production launch operations",
+    "Collecting real names, contact information, photos, health data, sensitive identity data, analytics records, backend records, or training data before a future explicit approval gate",
     "Weakening UserAppTemplatePackage as the stable handoff contract"
   ],
   "forbiddenActions": [
-    "Do not train directly from SourceImagePackage or user photo/profile/preference/recommendation/session/readiness/browser QA/release readiness/go-no-go data.",
+    "Do not treat Phase 9A internal trial operations, observation templates, or outcome review as public recruitment, production release, App Store/TestFlight, backend forms, analytics, camera readiness, AR readiness, AI analysis approval, OpenAI/external API approval, training readiness, online publication, or real user data collection approval.",
+    "Do not use Phase 9A participant types as permission to collect real user names, contacts, photos, health information, sensitive identity data, biometrics, backend records, analytics records, or training data.",
+    "Do not mutate UserAppTemplatePackage from Phase 9A operations, observation, outcome review, sessions, preferences, recommendations, content QA, feedback, or admin panels.",
+    "Do not write real internal trial participant records into project-state or training datasets.",
+    "Do not train directly from SourceImagePackage or user photo/profile/preference/recommendation/session/readiness/browser QA/release readiness/go-no-go/operations/observation/outcome data.",
     "Do not expand legacy frozen modules.",
-    "Do not weaken the UserAppTemplatePackage boundary; the future React Web / PWA MVP must consume exported contract data and cannot mutate Makeup Engine production state.",
-    "Do not treat Phase 8E MVP release readiness or trial go/no-go as production release, App Store/TestFlight, backend readiness, analytics readiness, camera readiness, AR readiness, AI generation approval, OpenAI/external API approval, training readiness, online publication, or real user data collection approval.",
-    "Do not use Phase 8E go_for_internal_trial or go_with_warnings as permission to collect real user names, contacts, photos, health information, sensitive identity data, biometrics, backend records, analytics records, or training data.",
-    "Do not mutate UserAppTemplatePackage from Phase 8E release readiness, trial go/no-go, sessions, preferences, recommendations, content QA, feedback, or admin panels.",
-    "Do not write real release readiness, go/no-go, or trial participant records into project-state or training datasets."
+    "Do not weaken the UserAppTemplatePackage boundary; the future React Web / PWA MVP must consume exported contract data and cannot mutate Makeup Engine production state."
   ],
   "trialPackDecision": {
     "phase8CResult": [
@@ -118,5 +136,17 @@
     ],
     "internalTrialBoundary": "Ready states mean internal small-scope trial preparation only; production release remains blocked.",
     "nextPhase": "Phase 9A Internal Trial Operations Pack"
+  },
+  "internalTrialOpsDecision": {
+    "phase9AResult": [
+      "internal trial operations pack",
+      "participant type coverage model",
+      "anonymous observation guide",
+      "trial outcome review recommendations",
+      "administrator operations panels",
+      "operations, participant, observation, and outcome documents"
+    ],
+    "participantBoundary": "Participant coverage uses broad types only; real names, contact information, photos, health information, sensitive identity information, biometrics, backend records, analytics records, and training data remain blocked.",
+    "nextPhase": "Phase 9B Internal Trial Result Review Framework"
   }
 }

@@ -54,6 +54,9 @@ The shell can preview:
 - trial readiness checks
 - MVP release readiness gate
 - trial go/no-go decision
+- internal trial operations
+- anonymous observation template
+- trial outcome review
 
 It cannot become backend state, app store release state, analytics, camera capture, AR state, OpenAI API use, external API use, training input, or durable user records.
 
@@ -62,6 +65,8 @@ Phase 8B adds only local shell polish and lightweight PWA metadata. The shell st
 Phase 8C adds only local trial pack, feedback preview, and trial readiness administrator surfaces. These surfaces are not backend forms, analytics, production trial records, App Store/TestFlight, online release approval, or real user data collection systems.
 
 Phase 8E adds only local MVP release readiness and go/no-go administrator surfaces. These surfaces can decide internal trial preparation, but they are not production release approval, backend readiness, analytics readiness, camera readiness, AR readiness, App Store/TestFlight, online release approval, or real user data collection systems.
+
+Phase 9A adds only local internal trial operations, observation template, and outcome review administrator surfaces. These surfaces can prepare and review internal small-scope trial operations, but they are not public recruitment, backend forms, analytics stores, camera/AR flows, AI analysis, App Store/TestFlight, online release approval, real participant record systems, or training data sources.
 
 ## UserAppTemplatePackage Owns The Contract
 

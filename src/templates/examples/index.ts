@@ -17,3 +17,6 @@ export * from './user-app-template-content-qa.example';
 export * from './user-app-trial-template-selection.example';
 export * from './user-app-mvp-release-readiness.example';
 export * from './user-app-trial-go-no-go.example';
+export * from './user-app-internal-trial-ops.example';
+export * from './user-app-trial-observation.example';
+export * from './user-app-trial-outcome.example';

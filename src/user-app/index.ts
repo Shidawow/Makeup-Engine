@@ -29,3 +29,6 @@ export * from './userAppTrialTemplateSelection';
 export * from './userAppTrialContentReadiness';
 export * from './userAppMvpReleaseReadiness';
 export * from './userAppTrialGoNoGo';
+export * from './userAppInternalTrialOps';
+export * from './userAppTrialObservation';
+export * from './userAppTrialOutcome';

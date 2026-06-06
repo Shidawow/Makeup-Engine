@@ -59,8 +59,8 @@ describe('Phase 7D documentation recovery', () => {
     );
 
     const snapshot = readJson<ProjectSnapshot>('project-state/project-state.snapshot.json');
-    expect(snapshot.lastCompletedPhase).toBe('8E');
-    expect(snapshot.nextRecommendedPhase).toBe('9A');
+    expect(snapshot.lastCompletedPhase).toBe('9A');
+    expect(snapshot.nextRecommendedPhase).toBe('9B');
     expect(snapshot.mainDataFlow).toContain('UserAppLocalOnboarding');
     expect(snapshot.mainDataFlow).toContain('UserLocalPreferences');
     expect(snapshot.mainDataFlow).toContain('PreferenceGuidanceHints');
@@ -71,12 +71,12 @@ describe('Phase 7D documentation recovery', () => {
     expect(snapshot.forbiddenActions.join('\n')).toContain('preferences');
 
     const providerHandoff = readJson<ProviderHandoff>('project-state/provider-handoff.json');
-    expect(providerHandoff.lastCompletedPhase).toBe('8E');
-    expect(providerHandoff.nextRecommendedPhase).toBe('9A');
+    expect(providerHandoff.lastCompletedPhase).toBe('9A');
+    expect(providerHandoff.nextRecommendedPhase).toBe('9B');
     expect(providerHandoff.nextRequiredReadFiles).toContain('docs/phases/phase-7D.md');
 
     const guardrails = readJson<GuardrailState>('project-state/guardrails.json');
-    expect(guardrails.phase).toBe('8E');
+    expect(guardrails.phase).toBe('9A');
     expect(guardrails.guardrails.map((guardrail) => guardrail.id)).toEqual(
       expect.arrayContaining([
         'preferences_local_only',

@@ -84,6 +84,10 @@ Phase 8D adds local content QA structures for trial preparation. `src/user-app/u
 
 Phase 8E adds local release readiness gate structures for internal trial preparation. `src/user-app/userAppMvpReleaseReadiness.ts` summarizes Phase 8A route decision, Phase 8B PWA/mobile polish, PWA manifest readiness, ordinary user path readiness, privacy/local-only boundary, Phase 8C trial pack and feedback form, Phase 8D template content QA and trial template selection, browser/mobile QA evidence, known limitations, and production non-goals. `src/user-app/userAppTrialGoNoGo.ts` returns `go_for_internal_trial`, `go_with_warnings`, or `no_go`. `src/components/user-app` renders MVP 发布就绪度 and 试用 Go/No-Go panels inside the administrator checks area. It does not add production app scope, backend services, analytics, camera, AR, AI generation, OpenAI/external API usage, real user record storage, training, App Store/TestFlight, online publication, or new runtime dependencies.
 
+### Internal Trial Operations Pack
+
+Phase 9A adds local internal trial operations structures for small-scope trial preparation. `src/user-app/userAppInternalTrialOps.ts` owns participant type coverage, session plan, checklist, risks, boundaries, and operations status. `src/user-app/userAppTrialObservation.ts` owns anonymous observation signals and mock/example summaries. `src/user-app/userAppTrialOutcome.ts` owns outcome review recommendations for continuing trials, revising content, revising shell, blocking for privacy/scope, or entering Phase 9B. `src/components/user-app` renders 内部试用运营, 观察记录模板, and 试用结果复盘 panels inside the administrator checks area. It does not add public recruitment, production app scope, backend forms, analytics, real user record storage, camera, AR, AI analysis, OpenAI/external API usage, training, App Store/TestFlight, online publication, or new runtime dependencies.
+
 ### Vision Analysis
 
 `src/vision` owns local face, cosmetic, pixel, region, quality, provider, and pipeline logic. It consumes `TemplateAnalysisSeed` records when they are ready for Vision Analysis.
@@ -188,7 +192,7 @@ src/components/template-studio/user-app-prototype-consumer-panel
 -> prototype template list / detail / validation preview
 
 src/user-app
--> User App Shell view model / navigation / progress / guidance UX / photo intake placeholder / personalization boundary / local onboarding / local preferences / local template discovery / recommendation placeholders / local session persistence and recovery / mobile QA / readiness gate / PWA readiness / MVP polish readiness / trial pack / trial feedback / trial readiness / template content QA / trial template selection / trial content readiness / MVP release readiness / trial go-no-go
+-> User App Shell view model / navigation / progress / guidance UX / photo intake placeholder / personalization boundary / local onboarding / local preferences / local template discovery / recommendation placeholders / local session persistence and recovery / mobile QA / readiness gate / PWA readiness / MVP polish readiness / trial pack / trial feedback / trial readiness / template content QA / trial template selection / trial content readiness / MVP release readiness / trial go-no-go / internal trial operations / trial observation / trial outcome review
 
 docs/app-roadmap/app-technology-route-decision.md
 -> React Web / PWA MVP first route decision / deferred native-backend-camera-AR routes
@@ -214,6 +218,15 @@ docs/user-app/mvp-release-readiness-gate.md
 
 docs/user-app/trial-go-no-go-decision.md
 -> Phase 8E go / go-with-warnings / no-go decision for internal trial preparation
+
+docs/product/internal-trial-operations-pack.md
+-> Phase 9A internal small-scope trial operations / participant type coverage / stop conditions
+
+docs/product/internal-trial-observation-template.md
+-> Phase 9A anonymous observation signals / no real participant records
+
+docs/product/internal-trial-outcome-review.md
+-> Phase 9A outcome recommendations / continue, revise, block, or enter Phase 9B
 
 docs/user-app/pwa-install-readiness.md
 -> manifest / metadata / icon placeholder / no service worker install-readiness boundary
