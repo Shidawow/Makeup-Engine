@@ -3,12 +3,12 @@
   "projectName": "Makeup Engine",
   "activeProvider": "native-gpt-codex-desktop",
   "lastProvider": "native-gpt-codex-desktop",
-  "currentTask": "Phase 8C User App MVP Trial Pack",
+  "currentTask": "Phase 8D Template Content QA for Real User Trial",
   "taskStatus": "completed",
-  "lastCompletedPhase": "8C",
-  "lastCompletedBusinessPhase": "8C",
-  "nextRecommendedPhase": "8D",
-  "nextRecommendedPhaseName": "Template Content QA for Real User Trial",
+  "lastCompletedPhase": "8D",
+  "lastCompletedBusinessPhase": "8D",
+  "nextRecommendedPhase": "8E",
+  "nextRecommendedPhaseName": "MVP Release Readiness Gate",
   "nextRequiredReadFiles": [
     "AGENTS.md",
     "START_HERE.md",
@@ -52,18 +52,23 @@
     "docs/phases/phase-7D.md",
     "docs/phases/phase-7E.md",
     "docs/phases/phase-7F.md",
-    "docs/phases/phase-7G.md"
+    "docs/phases/phase-7G.md",
+    "docs/user-app/template-content-qa-for-trial.md",
+    "docs/user-app/trial-template-selection.md",
+    "docs/user-app/trial-content-readiness.md",
+    "docs/product/template-content-qa-checklist.md",
+    "docs/phases/phase-8D.md"
   ],
   "handoffNotes": [
     "Repository documents are the source of truth, not chat memory.",
     "SourceImagePackage can reach Vision Analysis only through explicit artifact binding and cannot directly become a template library entry, user app contract, or training dataset.",
     "Do not modify legacy src/engine, src/runtime, src/intelligence/runtime.",
     "UserAppTemplatePackage is local/export consumption contract data, not the real user app and not online publication.",
-    "Phase 8B added lightweight PWA metadata, mobile-first shell home, PWA readiness, MVP polish readiness, Chinese copy polish, and separated administrator QA panels.",
     "Phase 8C added ordered trial tasks, privacy-safe feedback form, mock/example feedback summary, trial readiness model, and administrator trial panels.",
-    "Phase 8C is not production release approval and does not add backend, analytics, camera, AR, external API, training, App Store/TestFlight, online publication, or real user record collection.",
-    "Trial feedback must not collect real names, contact information, photos, health information, sensitive identity information, face embeddings, biometric identifiers, backend records, analytics records, or training data.",
-    "Phase 8D should QA template copy, region instructions, warnings, tools/products, and mobile guidance clarity only unless a future explicit gate expands scope."
+    "Phase 8D added template content QA, trial template selection, trial content readiness, content QA fixtures, and administrator panels.",
+    "Phase 8D is not production release approval and does not add backend, analytics, AI generation, OpenAI/external API usage, camera, AR, training, App Store/TestFlight, online publication, or real user record collection.",
+    "Template content QA cannot mutate UserAppTemplatePackage, collect photos, write real user records into project-state, or enter training datasets.",
+    "Phase 8E should decide MVP release readiness only unless a future explicit gate expands scope."
   ],
   "allowedDirectories": [
     "src/user-app",
@@ -87,10 +92,10 @@
     "projectStatusJson": "passed",
     "projectContext": "passed",
     "contextPackJson": "passed",
-    "userAppBrowserQa": "not_required_for_phase_8C_trial_pack",
-    "httpSmoke": "not_required_for_phase_8C_trial_pack",
-    "phase8CScopedTests": "passed",
-    "testFiles": 378,
-    "tests": 530
+    "userAppBrowserQa": "not_required_for_phase_8D_content_qa",
+    "httpSmoke": "not_required_for_phase_8D_content_qa",
+    "phase8DScopedTests": "passed",
+    "testFiles": 385,
+    "tests": 545
   }
 }

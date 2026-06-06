@@ -5,9 +5,9 @@ Makeup Engine is the makeup template production system for a future makeup coach
 ## Current Position
 
 - Project role: makeup template production system plus a local contract-driven user app shell prototype.
-- Last completed phase: `Phase 8C`.
-- Current completed business phase: `Phase 8C - User App MVP Trial Pack`.
-- Next recommended phase: `Phase 8D - Template Content QA for Real User Trial`.
+- Last completed phase: `Phase 8D`.
+- Current completed business phase: `Phase 8D - Template Content QA for Real User Trial`.
+- Next recommended phase: `Phase 8E - MVP Release Readiness Gate`.
 - Recent recovery milestones retained in phase docs: `Phase 6K`, `Phase 6L`, `Phase 6L-1`, `Phase 7A`, `Phase 7B`, `Phase 7C`, `Phase 7D`, `Phase 7E`, `Phase 7F`, `Phase 7G`, `Phase 7H`, and `Phase 8A`.
 - Historical route-planning milestone: `Phase 8A - Product Route Decision / App MVP Planning`.
 
@@ -39,6 +39,7 @@ SourceImagePackage manifest
 -> Product Route Decision / App MVP Plan
 -> PWA / Mobile Web MVP Polish
 -> User App MVP Trial Pack
+-> Template Content QA for Real User Trial
 -> Phase 8 Roadmap / V1 Non-Goals
 -> Consumption Manifest
 -> Dataset Review
@@ -73,11 +74,16 @@ SourceImagePackage manifest
 22. `docs/user-app/user-app-trial-feedback.md`
 23. `docs/user-app/user-app-trial-readiness.md`
 24. `docs/phases/phase-8C.md`
-25. `docs/phases/phase-7H.md`
-26. `project-state/project-state.snapshot.json`
-27. `project-state/provider-handoff.json`
-28. `project-state/latest-handoff.json`
-29. `project-state/active-task.json`
+25. `docs/user-app/template-content-qa-for-trial.md`
+26. `docs/user-app/trial-template-selection.md`
+27. `docs/user-app/trial-content-readiness.md`
+28. `docs/product/template-content-qa-checklist.md`
+29. `docs/phases/phase-8D.md`
+30. `docs/phases/phase-7H.md`
+31. `project-state/project-state.snapshot.json`
+32. `project-state/provider-handoff.json`
+33. `project-state/latest-handoff.json`
+34. `project-state/active-task.json`
 
 ## What The System Can Do Now
 
@@ -92,6 +98,7 @@ SourceImagePackage manifest
 - Use the Phase 8A route decision to plan a future React Web / PWA user app MVP as a mobile-first surface that consumes `UserAppTemplatePackage`.
 - Render Phase 8B mobile-first shell polish with a clearer Chinese user path, separated administrator QA surfaces, PWA readiness, and MVP polish readiness.
 - Render Phase 8C MVP trial pack, feedback form preview, and trial readiness administrator panels for internal / small-scope trial planning.
+- Render Phase 8D template content QA, trial template selection, and trial content readiness administrator panels for real user trial preparation.
 - Continue from Vision Analysis into mask editing, evidence capture, dataset review, materialized training datasets, and lightweight model artifact workflows.
 
 ## What The System Must Not Do
@@ -105,6 +112,7 @@ SourceImagePackage manifest
 - Do not treat the Phase 8A React Web / PWA route decision as permission to build the production user app inside Makeup Engine.
 - Do not treat Phase 8B PWA metadata, mobile shell polish, PWA readiness, or MVP polish readiness as production PWA release approval.
 - Do not treat Phase 8C trial pack, feedback preview, or trial readiness as production release, backend form, analytics, App Store/TestFlight, or real user data collection approval.
+- Do not treat Phase 8D content QA, trial template selection, or trial content readiness as production release, App Store/TestFlight, backend, AI generation, camera, AR, analytics, or training approval.
 - Do not start React Native, Flutter, iOS native, backend, database, camera, AR, ecommerce, community, paid, OpenAI API, external API, training, or production release work without a later explicit gate.
 
 ## Validation Commands
@@ -137,6 +145,12 @@ For Phase 8C scoped trial pack checks run:
 
 ```bash
 npm run test -- tests/user-app-trial-pack.test.ts tests/user-app-trial-feedback.test.ts tests/user-app-trial-readiness.test.ts tests/user-app-trial-pack-panel.test.tsx tests/user-app-trial-feedback-panel.test.tsx tests/user-app-trial-readiness-panel.test.tsx tests/user-app-shell-trial-pack-flow.test.tsx tests/phase-8C-documentation-recovery.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts
+```
+
+For Phase 8D scoped template content QA checks run:
+
+```bash
+npm run test -- tests/user-app-template-content-qa.test.ts tests/user-app-trial-template-selection.test.ts tests/user-app-trial-content-readiness.test.ts tests/user-app-template-content-qa-panel.test.tsx tests/user-app-trial-template-readiness-panel.test.tsx tests/user-app-shell-template-content-qa-flow.test.tsx tests/phase-8D-documentation-recovery.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts
 ```
 
 ## Source Of Truth

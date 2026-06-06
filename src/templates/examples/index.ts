@@ -13,3 +13,5 @@ export * from './user-app-pwa-polish.example';
 export * from './user-app-mvp-polish.example';
 export * from './user-app-trial-pack.example';
 export * from './user-app-trial-feedback.example';
+export * from './user-app-template-content-qa.example';
+export * from './user-app-trial-template-selection.example';

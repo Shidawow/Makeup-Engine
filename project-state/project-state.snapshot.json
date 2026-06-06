@@ -1,14 +1,14 @@
 {
   "projectName": "Makeup Engine",
-  "projectRole": "Makeup template production system with completed React Web / PWA route planning, Phase 8B local PWA/mobile shell polish, and Phase 8C local MVP trial pack for a future separate user app MVP",
+  "projectRole": "Makeup template production system with completed React Web / PWA route planning, Phase 8B local PWA/mobile shell polish, Phase 8C local MVP trial pack, and Phase 8D template content QA for a future separate user app MVP",
   "projectIsUserFacingApp": false,
-  "lastCompletedPhase": "8C",
-  "lastCompletedBusinessPhase": "8C",
-  "currentPhase": "User App MVP Trial Pack",
-  "currentPhaseId": "8C",
-  "nextRecommendedPhase": "8D",
-  "nextRecommendedPhaseName": "Template Content QA for Real User Trial",
-  "nextAction": "Proceed to Phase 8D: Template Content QA for Real User Trial. Phase 8C is complete. QA the trial-selected template copy, region instructions, warnings, tools/products, and mobile guidance clarity without adding production app, backend, database, camera, AR, training, OpenAI API, external API, native iOS, React Native, Flutter, ecommerce, community, paid features, analytics, accounts, online publication, App Store/TestFlight, service worker, offline cache, push notification, background sync, install tracking, or real user data collection.",
+  "lastCompletedPhase": "8D",
+  "lastCompletedBusinessPhase": "8D",
+  "currentPhase": "Template Content QA for Real User Trial",
+  "currentPhaseId": "8D",
+  "nextRecommendedPhase": "8E",
+  "nextRecommendedPhaseName": "MVP Release Readiness Gate",
+  "nextAction": "Proceed to Phase 8E: MVP Release Readiness Gate. Phase 8D is complete. Decide whether the MVP evidence is sufficient for a controlled release path without adding production app, backend, database, camera, AR, training, OpenAI API, external API, native iOS, React Native, Flutter, ecommerce, community, paid features, analytics, accounts, online publication, App Store/TestFlight, service worker, offline cache, push notification, background sync, install tracking, AI content generation, or real user data collection.",
   "mainDataFlow": [
     "SourceImagePackage",
     "SourceImageEntry",
@@ -65,7 +65,11 @@
     "UserAppTrialFeedbackForm",
     "UserAppTrialFeedbackSummary",
     "UserAppTrialReadiness",
-    "UserAppTrialAdminPanels"
+    "UserAppTrialAdminPanels",
+    "UserAppTemplateContentQa",
+    "UserAppTrialTemplateSelection",
+    "UserAppTrialContentReadiness",
+    "UserAppTemplateContentQaAdminPanels"
   ],
   "mainModules": [
     "src/vision",
@@ -107,11 +111,11 @@
     "projectStatusJson": "passed",
     "projectContext": "passed",
     "contextPackJson": "passed",
-    "userAppBrowserQa": "not_required_for_phase_8C_trial_pack",
-    "httpSmoke": "not_required_for_phase_8C_trial_pack",
-    "phase8CScopedTests": "passed",
-    "testFiles": 378,
-    "tests": 530
+    "userAppBrowserQa": "not_required_for_phase_8D_content_qa",
+    "httpSmoke": "not_required_for_phase_8D_content_qa",
+    "phase8DScopedTests": "passed",
+    "testFiles": 385,
+    "tests": 545
   },
   "knownLimitations": [
     "SourceImagePackage is not a training dataset",
@@ -145,7 +149,9 @@
     "Phase 8B PWA/mobile polish adds local shell UI polish, manifest metadata, and readiness checks only; it is not production PWA release approval.",
     "Phase 8B does not add service worker, offline cache, push notification, background sync, install tracking, analytics, backend, camera, AR, native app, external API, training, online publication, or app store release scope.",
     "Phase 8C trial pack is local internal / small-scope trial planning only; it is not production release, App Store/TestFlight, backend form, analytics, camera, AR, training, or real user data collection approval.",
-    "Phase 8C trial feedback must not collect real names, contact information, photos, health information, sensitive identity information, face embeddings, biometric identifiers, backend records, analytics records, or training data."
+    "Phase 8C trial feedback must not collect real names, contact information, photos, health information, sensitive identity information, face embeddings, biometric identifiers, backend records, analytics records, or training data.",
+    "Phase 8D template content QA is local trial content preparation only; it is not production release, App Store/TestFlight, backend, analytics, AI generation, OpenAI/external API usage, camera, AR, training, or real user record collection approval.",
+    "Phase 8D content QA reports cannot mutate UserAppTemplatePackage, collect photos, write real user trial records into project-state, or enter training datasets."
   ],
   "recoveryEntryFiles": [
     "START_HERE.md",
@@ -206,7 +212,12 @@
     "docs/user-app/user-app-mvp-trial-pack.md",
     "docs/user-app/user-app-trial-feedback.md",
     "docs/user-app/user-app-trial-readiness.md",
-    "docs/phases/phase-8C.md"
+    "docs/phases/phase-8C.md",
+    "docs/user-app/template-content-qa-for-trial.md",
+    "docs/user-app/trial-template-selection.md",
+    "docs/user-app/trial-content-readiness.md",
+    "docs/product/template-content-qa-checklist.md",
+    "docs/phases/phase-8D.md"
   ],
   "forbiddenActions": [
     "Do not build the full production user-side app in the local admin workbench",
@@ -229,6 +240,9 @@
     "Do not add service worker, offline cache, push notification, background sync, install tracking, analytics, backend, camera, AR, native app, external API, training, online publication, or app store release work in Phase 8B.",
     "Do not treat Phase 8C trial pack, feedback preview, or trial readiness as production release, App Store/TestFlight, backend form, analytics, real user record collection, camera, AR, training, or online publication approval.",
     "Do not collect real names, contact information, photos, health information, sensitive identity information, face embeddings, biometric identifiers, backend records, analytics records, or training data through trial feedback.",
-    "Do not write real user trial records into project-state or training datasets."
+    "Do not write real user trial records into project-state or training datasets.",
+    "Do not treat Phase 8D template content QA, trial template selection, or trial content readiness as production release, App Store/TestFlight, backend, analytics, AI generation, OpenAI/external API usage, real user record collection, camera, AR, training, or online publication approval.",
+    "Do not mutate UserAppTemplatePackage from Phase 8D content QA, trial template selection, trial content readiness, sessions, preferences, recommendations, or admin panels.",
+    "Do not write real user template QA records into project-state or training datasets."
   ]
 }

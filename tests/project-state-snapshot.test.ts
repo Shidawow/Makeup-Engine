@@ -31,13 +31,13 @@ describe('project state snapshot', () => {
 
     expect(snapshot.projectName).toBe('Makeup Engine');
     expect(snapshot.projectRole).toContain('Makeup template production system');
-    expect(snapshot.lastCompletedPhase).toBe('8C');
-    expect(snapshot.lastCompletedBusinessPhase).toBe('8C');
-    expect(snapshot.currentPhaseId).toBe('8C');
+    expect(snapshot.lastCompletedPhase).toBe('8D');
+    expect(snapshot.lastCompletedBusinessPhase).toBe('8D');
+    expect(snapshot.currentPhaseId).toBe('8D');
     expect(snapshot.currentPhase).toBeTruthy();
-    expect(snapshot.nextRecommendedPhase).toBe('8D');
-    expect(snapshot.nextRecommendedPhaseName).toContain('Template Content QA for Real User Trial');
-    expect(snapshot.nextAction).toContain('Phase 8D');
+    expect(snapshot.nextRecommendedPhase).toBe('8E');
+    expect(snapshot.nextRecommendedPhaseName).toContain('MVP Release Readiness Gate');
+    expect(snapshot.nextAction).toContain('Phase 8E');
     expect(snapshot.mainDataFlow).toEqual(
       expect.arrayContaining([
         'SourceImagePackage',
@@ -73,6 +73,10 @@ describe('project state snapshot', () => {
         'UserAppTrialFeedbackSummary',
         'UserAppTrialReadiness',
         'UserAppTrialAdminPanels',
+        'UserAppTemplateContentQa',
+        'UserAppTrialTemplateSelection',
+        'UserAppTrialContentReadiness',
+        'UserAppTemplateContentQaAdminPanels',
         'UserAppV1NonGoals',
         'UserAppConsumptionManifest',
         'VisionAnalysis',
@@ -93,6 +97,7 @@ describe('project state snapshot', () => {
     expect(snapshot.knownLimitations).toContain('Phase 7D onboarding and preferences are local-only and non-sensitive; they are not account onboarding, backend sync, cloud sync, database persistence, analytics, production profile storage, or training input');
     expect(snapshot.knownLimitations.join('\n')).toContain('Phase 8B PWA/mobile polish');
     expect(snapshot.knownLimitations.join('\n')).toContain('Phase 8C trial pack');
+    expect(snapshot.knownLimitations.join('\n')).toContain('Phase 8D template content QA');
     expect(snapshot.knownLimitations.join('\n')).toContain('real names');
     expect(snapshot.knownLimitations.join('\n')).toContain('service worker');
     expect(snapshot.knownLimitations).toContain('raw RGBA is currently summary-only in Studio');

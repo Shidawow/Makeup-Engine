@@ -5,56 +5,56 @@
       "command": "npm run typecheck",
       "purpose": "Validate TypeScript project references.",
       "lastStatus": "passed",
-      "lastSummary": "Passed TypeScript project references for Phase 8C trial pack."
+      "lastSummary": "npm run typecheck passed for Phase 8D."
     },
     {
       "name": "test",
       "command": "npm run test",
       "purpose": "Run Vitest regression coverage.",
       "lastStatus": "passed",
-      "lastSummary": "Passed full Vitest regression coverage: 378 test files, 530 tests."
+      "lastSummary": "npm run test passed: 385 test files, 545 tests."
     },
     {
       "name": "build",
       "command": "npm run build",
       "purpose": "Run TypeScript build and Vite production build.",
       "lastStatus": "passed",
-      "lastSummary": "Passed TypeScript build and Vite production build for Phase 8C trial pack."
+      "lastSummary": "npm run build passed; Vite reported the existing >500 kB chunk warning."
     },
     {
       "name": "project-status",
       "command": "npm run project:status",
       "purpose": "Print human-readable project recovery status.",
       "lastStatus": "passed",
-      "lastSummary": "Passed human-readable project status after Phase 8C state sync."
+      "lastSummary": "npm run project:status passed and reports 8D -> 8E."
     },
     {
       "name": "project-status-json",
       "command": "node scripts/project-status.mjs --json",
       "purpose": "Print machine-readable project recovery status.",
       "lastStatus": "passed",
-      "lastSummary": "Passed machine-readable project status after Phase 8C state sync."
+      "lastSummary": "node scripts/project-status.mjs --json passed and reports 8D -> 8E."
     },
     {
       "name": "project-context",
       "command": "npm run project:context",
       "purpose": "Print human-readable multi-provider context package.",
       "lastStatus": "passed",
-      "lastSummary": "Passed human-readable context pack after Phase 8C state sync."
+      "lastSummary": "npm run project:context passed and reports Phase 8D handoff context."
     },
     {
       "name": "context-pack-json",
       "command": "node scripts/context-pack.mjs --json",
       "purpose": "Print machine-readable multi-provider context package.",
       "lastStatus": "passed",
-      "lastSummary": "Passed machine-readable context pack after Phase 8C state sync."
+      "lastSummary": "node scripts/context-pack.mjs --json passed and reports Phase 8D handoff context."
     },
     {
       "name": "user-app-browser-qa",
       "command": "npm run user-app:browser-qa -- --json",
       "purpose": "Run Phase 7H local browser/mobile HTTP smoke, critical copy, Chinese copy, and privacy copy checks.",
-      "lastStatus": "not_required_for_phase_8C_trial_pack",
-      "lastSummary": "Browser/mobile QA is not required for Phase 8C trial pack, but may be rerun if shell copy changes require smoke evidence."
+      "lastStatus": "not_required_for_phase_8D_content_qa",
+      "lastSummary": "Browser/mobile QA is not required for Phase 8D content QA, but may be rerun if shell copy changes require smoke evidence."
     },
     {
       "name": "phase-8c-scoped-tests",
@@ -62,7 +62,14 @@
       "purpose": "Run Phase 8C trial pack scoped regression coverage.",
       "lastStatus": "passed",
       "lastSummary": "Passed required Phase 8C scoped trial pack tests: 10 test files, 23 tests."
+    },
+    {
+      "name": "phase-8d-scoped-tests",
+      "command": "npm run test -- tests/user-app-template-content-qa.test.ts tests/user-app-trial-template-selection.test.ts tests/user-app-trial-content-readiness.test.ts tests/user-app-template-content-qa-panel.test.tsx tests/user-app-trial-template-readiness-panel.test.tsx tests/user-app-shell-template-content-qa-flow.test.tsx tests/phase-8D-documentation-recovery.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
+      "purpose": "Run Phase 8D template content QA scoped regression coverage.",
+      "lastStatus": "passed",
+      "lastSummary": "Phase 8D scoped tests passed: 9 test files, 22 tests."
     }
   ],
-  "lastUpdatedPhase": "8C"
+  "lastUpdatedPhase": "8D"
 }

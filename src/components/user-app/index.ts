@@ -15,6 +15,8 @@ export * from './UserAppSessionRecoveryNotice';
 export * from './UserAppTrialFeedbackPanel';
 export * from './UserAppTrialPackPanel';
 export * from './UserAppTrialReadinessPanel';
+export * from './UserAppTemplateContentQaPanel';
+export * from './UserAppTrialTemplateReadinessPanel';
 export * from './UserMakeupStepGuide';
 export * from './UserOnboardingFlow';
 export * from './UserPersonalizationPanel';

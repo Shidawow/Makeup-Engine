@@ -45,6 +45,9 @@ export type UserAppShellSection =
   | 'trialPack'
   | 'trialFeedback'
   | 'trialReadiness'
+  | 'templateContentQa'
+  | 'trialTemplateSelection'
+  | 'trialContentReadiness'
   | 'mobileQa'
   | 'interaction';
 

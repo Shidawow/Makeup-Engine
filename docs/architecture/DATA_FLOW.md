@@ -32,6 +32,7 @@ Real Photo
 -> Product Route Decision / App MVP Plan
 -> PWA / Mobile Web MVP Polish
 -> User App MVP Trial Pack
+-> Template Content QA / Trial Template Selection / Trial Content Readiness
 -> Phase 8 Roadmap / V1 Non-Goals
 -> User App Consumption Manifest
 -> Dataset Review
@@ -71,6 +72,7 @@ Real Photo
 - `Product Route Decision / App MVP Plan`: Phase 8A planning layer that selects React Web / PWA MVP first, defines MVP scope, records V1 non-goals, and separates future user app ownership from Makeup Engine.
 - `PWA / Mobile Web MVP Polish`: Phase 8B local shell polish layer for manifest metadata, lightweight icon placeholder, PWA readiness, MVP polish readiness, mobile home, Chinese user copy, and separated administrator QA surfaces.
 - `User App MVP Trial Pack`: Phase 8C local trial planning layer for ordered user tasks, feedback questionnaire, mock/example feedback summary, and trial readiness checks. It is not a backend form, production release, App Store/TestFlight test, analytics flow, real user record store, or training data source.
+- `Template Content QA / Trial Template Selection / Trial Content Readiness`: Phase 8D local content QA layer for template copy, step actionability, region instructions, tools/products, recommendation reasons, trial-ready template selection, and integrated content readiness. It is not production release approval, AI content generation, backend readiness, OpenAI/external API usage, camera/AR readiness, real user record storage, or training data.
 - `Phase 8 Roadmap / V1 Non-Goals`: planning docs for 8A through 8E and the anti-scope list for login, backend, database, camera, AR, native apps, OpenAI API, ecommerce, community, paid features, and training.
 - `User App Consumption Manifest`: handoff manifest with app template entries, versions, compatibility target, checksums, readiness, and local-only disclaimer.
 - `Dataset Review`: explicit review decisions before data becomes training-ready.
@@ -95,6 +97,8 @@ Real Photo
 `User App Shell` is a local prototype consumer over `UserAppTemplatePackage`. It cannot read `SourceImagePackage` directly, cannot publish online, cannot call a backend, cannot use camera or AR, cannot train a model, and cannot persist object URLs, local absolute paths, large image bytes, or React state as durable export data.
 
 `User App MVP Trial Pack` is a local administrator planning layer over the polished shell. It cannot collect real names, contact information, photos, health information, sensitive identity information, face embeddings, biometric identifiers, backend records, analytics records, or training data. Trial tasks, feedback, readiness, sessions, preferences, and recommendations cannot mutate `UserAppTemplatePackage` or write real user trial records into `project-state`.
+
+`Template Content QA / Trial Template Selection / Trial Content Readiness` is a local administrator content QA layer over `UserAppTemplatePackage`. It can identify trial-ready, backup warning, and blocked templates, but it cannot mutate `UserAppTemplatePackage`, call OpenAI/external APIs, generate AI content, collect user photos, write real user trial records into `project-state`, or create training input.
 
 Phase 6L-1 adds a QA loop inside this read-only layer:
 

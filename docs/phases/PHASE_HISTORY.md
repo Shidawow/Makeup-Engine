@@ -536,3 +536,25 @@ What still cannot happen:
 Why Phase 8D follows:
 
 The trial structure exists. The next bottleneck is content quality for real user trial: template copy, step wording, region instructions, warnings, tools/products, and mobile guidance clarity.
+
+## Phase 8D
+
+Added local Template Content QA for Real User Trial.
+
+What changed:
+
+- Added `UserAppTemplateContentQaReport` for title, summary, steps, actionability, regions, tools, products, duration, difficulty, recommendation reasons, privacy/placeholder copy, internal technical terms, and trial suitability.
+- Added `UserAppTrialTemplateSelectionReport` to separate trial-ready, backup warning, and blocked templates.
+- Added `UserAppTrialContentReadinessReport` to combine trial readiness, feedback readiness, content QA, template selection, privacy boundary, and local-only boundary.
+- Added administrator panels for 模板内容 QA, 试用模板选择, and 试用内容就绪度.
+- Added content QA fixtures for trial-ready, warning, blocked, missing steps, missing tools, missing region instruction, and technical copy.
+
+What still cannot happen:
+
+- Phase 8D is not a production app, production release, App Store/TestFlight test, backend content service, analytics flow, AI content generation, OpenAI/external API usage, camera/AR feature, training collection, online publication, or real user record system.
+- Content QA cannot collect real photos, names, contacts, health information, sensitive identity information, face embeddings, biometric identifiers, backend records, analytics records, or training data.
+- Content QA, trial template selection, trial content readiness, sessions, preferences, recommendations, and admin panels cannot mutate `UserAppTemplatePackage` or write real user trial records into `project-state`.
+
+Why Phase 8E follows:
+
+The trial structure and content QA gate now exist. The next bottleneck is a release readiness decision: whether the evidence supports a controlled MVP release path or requires more trial/content work.

@@ -1,11 +1,11 @@
 {
   "schemaVersion": "active-task.v1",
-  "taskId": "8C",
-  "title": "User App MVP Trial Pack",
+  "taskId": "8D",
+  "title": "Template Content QA for Real User Trial",
   "status": "completed",
   "ownerRole": "Codex",
   "createdBy": "Codex",
-  "phase": "8C",
+  "phase": "8D",
   "recommendedProfile": "native-gpt-codex-high-reasoning",
   "allowedDirectories": [
     "docs",
@@ -29,21 +29,21 @@
     "npm run project:context",
     "node scripts/project-status.mjs --json",
     "node scripts/context-pack.mjs --json",
-    "npm run test -- tests/user-app-trial-pack.test.ts tests/user-app-trial-feedback.test.ts tests/user-app-trial-readiness.test.ts tests/user-app-trial-pack-panel.test.tsx tests/user-app-trial-feedback-panel.test.tsx tests/user-app-trial-readiness-panel.test.tsx tests/user-app-shell-trial-pack-flow.test.tsx tests/phase-8C-documentation-recovery.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
+    "npm run test -- tests/user-app-template-content-qa.test.ts tests/user-app-trial-template-selection.test.ts tests/user-app-trial-content-readiness.test.ts tests/user-app-template-content-qa-panel.test.tsx tests/user-app-trial-template-readiness-panel.test.tsx tests/user-app-shell-template-content-qa-flow.test.tsx tests/phase-8D-documentation-recovery.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
   ],
   "completionDefinition": [
-    "Phase 8C added ordered local trial tasks, privacy-safe feedback form, mock/example feedback summary, trial readiness checks, and administrator trial panels.",
-    "8C did not implement production app, backend, database, accounts, analytics, camera, AR, training, App Store/TestFlight, online publication, service worker, offline cache, push notification, background sync, install tracking, new runtime dependencies, or real user data collection.",
-    "8C did not collect real names, contact information, photos, health information, sensitive identity information, face embeddings, biometric identifiers, backend records, analytics records, or training data.",
+    "Phase 8D added template content QA, trial template selection, trial content readiness, content QA fixtures, and administrator panels.",
+    "8D did not implement production app, backend, database, accounts, analytics, AI generation, OpenAI/external API usage, camera, AR, training, App Store/TestFlight, online publication, service worker, offline cache, push notification, background sync, install tracking, new runtime dependencies, or real user data collection.",
+    "8D did not collect real names, contact information, photos, health information, sensitive identity information, face embeddings, biometric identifiers, backend records, analytics records, or training data.",
     "Makeup Engine remains the template production system and UserAppTemplatePackage remains the handoff contract.",
     "Docs and project-state must remain recoverable and validation commands must pass."
   ],
   "dependsOn": [
-    "8B PWA / Mobile Web MVP Polish"
+    "8C User App MVP Trial Pack"
   ],
   "nextRecommendedTask": {
-    "taskId": "8D",
-    "title": "Template Content QA for Real User Trial",
+    "taskId": "8E",
+    "title": "MVP Release Readiness Gate",
     "status": "recommended"
   }
 }

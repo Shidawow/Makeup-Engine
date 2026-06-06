@@ -1,5 +1,5 @@
 {
-  "phase": "8C",
+  "phase": "8D",
   "guardrails": [
     {
       "id": "source-image-not-training-data",
@@ -316,6 +316,22 @@
     {
       "id": "phase_8c_does_not_modify_user_app_template_package",
       "rule": "Phase 8C trial tasks, feedback, readiness, sessions, preferences, recommendations, and admin panels cannot mutate UserAppTemplatePackage."
+    },
+    {
+      "id": "phase_8d_content_qa_local_only",
+      "rule": "Phase 8D template content QA, trial template selection, and trial content readiness are local content QA only and are not production release, App Store/TestFlight, backend, analytics, AI generation, OpenAI/external API, camera, AR, or training approval."
+    },
+    {
+      "id": "phase_8d_no_template_mutation",
+      "rule": "Phase 8D content QA reports cannot mutate UserAppTemplatePackage, templates, trial tasks, sessions, preferences, recommendations, or admin panels."
+    },
+    {
+      "id": "phase_8d_no_user_records_or_training",
+      "rule": "Phase 8D content QA cannot collect photos, names, contacts, health information, sensitive identity information, biometrics, backend records, analytics records, real user trial records, or training data."
+    },
+    {
+      "id": "phase_8d_no_ai_generation_or_api",
+      "rule": "Phase 8D must not call OpenAI, external AI/CV APIs, external recommendation APIs, or generate template content through remote services."
     }
   ],
   "legacyFrozenModules": [

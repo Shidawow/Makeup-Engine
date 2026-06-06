@@ -12,13 +12,14 @@ It produces templates, template evidence, correction records, review state, loca
 
 ## Current Phase
 
-- Current business phase: `Phase 8C completed`
-- Last completed phase: `Phase 8C`
-- Last completed phase name: `Phase 8C - User App MVP Trial Pack`
-- Next recommended phase: `Phase 8D - Template Content QA for Real User Trial`
+- Current business phase: `Phase 8D completed`
+- Last completed phase: `Phase 8D`
+- Last completed phase name: `Phase 8D - Template Content QA for Real User Trial`
+- Next recommended phase: `Phase 8E - MVP Release Readiness Gate`
 
 Historical recovery milestone retained for older phase tests: `Phase 8A completed` / `Phase 8A - Product Route Decision / App MVP Planning`.
 Historical recovery milestone retained for Phase 8B tests: `Phase 8B completed` / `Phase 8B - PWA / Mobile Web MVP Polish`.
+Historical recovery milestone retained for Phase 8C tests: `Phase 8C completed` / `Phase 8C - User App MVP Trial Pack`.
 
 ## Current Main Data Flow
 
@@ -52,6 +53,7 @@ Real Photo
 -> Product Route Decision / App MVP Plan
 -> PWA / Mobile Web MVP Polish
 -> User App MVP Trial Pack
+-> Template Content QA for Real User Trial
 -> Phase 8 Roadmap / V1 Non-Goals
 -> User App Consumption Manifest
 -> Dataset Review
@@ -119,6 +121,7 @@ These areas are retained for compatibility and historical runtime work, but they
 - Use the Phase 8A route decision to plan a future React Web / PWA user app MVP in a separate app surface or repository while keeping Makeup Engine as the template production system.
 - Render Phase 8B PWA/mobile shell polish with lightweight manifest metadata, mobile home, PWA readiness, MVP polish readiness, and separated administrator QA surfaces.
 - Render Phase 8C MVP trial pack, feedback form preview, mock/example feedback summary, and trial readiness administrator panels for internal / small-scope trial planning.
+- Render Phase 8D template content QA, trial template selection, and trial content readiness administrator panels for real user trial preparation.
 - Export user app consumption manifest and handoff JSON.
 - Evaluate batch QA issues, task readiness diagnostics, reject reasons, publish confirmation, rebinding recovery, library lifecycle, and operator handoff reports.
 - Continue into mask editing, template evidence capture, dataset review, and training dataset materialization.
@@ -154,6 +157,7 @@ These areas are retained for compatibility and historical runtime work, but they
 - Phase 8A product route planning selected a React Web / PWA MVP first route only; it is not production app implementation, repository bootstrap, backend, database, accounts, analytics, camera, AR, native iOS, React Native, Flutter, ecommerce, community, paid features, cross-platform implementation, OpenAI/external API work, training, online publication, app store release work, or a new dependency phase.
 - Phase 8B PWA/mobile polish added only local shell UI polish, lightweight manifest metadata, PWA readiness, and MVP polish readiness; it is not production PWA release approval and does not add service worker, offline cache, push notification, background sync, install tracking, analytics, backend, camera, AR, native app, external API, training, or online publication scope.
 - Phase 8C trial pack adds only local internal / small-scope trial planning structures; it is not production release, App Store/TestFlight, backend form, analytics, real user record collection, camera, AR, training, or online publication scope.
+- Phase 8D template content QA adds only local content QA and trial content readiness structures; it is not production release, App Store/TestFlight, backend, analytics, AI generation, OpenAI/external API usage, real user record collection, camera, AR, training, or online publication scope.
 - Future production user-facing app work should be planned as a separate app surface or repository after an explicit phase gate. Makeup Engine remains the template production system and `UserAppTemplatePackage` remains the handoff contract.
 - User photo data, face embeddings, biometric identifiers, sensitive profile data, and user photo references must not enter durable export, training, model artifacts, or project-state.
 - User app consumption exports cannot persist object URLs, local absolute paths, large image bytes, or React state.

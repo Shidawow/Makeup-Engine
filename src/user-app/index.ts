@@ -24,3 +24,6 @@ export * from './userAppMvpPolish';
 export * from './userAppTrialPack';
 export * from './userAppTrialFeedback';
 export * from './userAppTrialReadiness';
+export * from './userAppTemplateContentQa';
+export * from './userAppTrialTemplateSelection';
+export * from './userAppTrialContentReadiness';

@@ -61,6 +61,21 @@ Before starting 8B:
 - Trial pack, feedback, and readiness scoped tests have passed.
 - The next phase remains content QA only unless explicitly expanded.
 
+## 8D Completed Result
+
+- Template content QA checks user-facing title, summary, steps, actionability, regions, tools, products, duration, difficulty, recommendation reasons, privacy/placeholder copy, internal technical terms, and trial suitability.
+- Trial template selection separates trial-ready, backup warning, and blocked templates.
+- Trial content readiness combines Phase 8C trial pack readiness, feedback readiness, content QA, template selection, privacy boundary, and local-only boundary.
+- Admin content QA panels are available in the local shell without disrupting the ordinary user path.
+- No production app, backend, camera, AR, analytics, OpenAI/external API usage, AI generation, training, App Store/TestFlight, online release, or real user record collection was added.
+
+## 8E Entry Criteria
+
+- `lastCompletedPhase` is `8D`.
+- `nextRecommendedPhase` is `8E`.
+- Template content QA, trial template selection, and trial content readiness scoped tests have passed.
+- The next phase remains release readiness gate only unless explicitly expanded.
+
 ## Persistent Guardrails
 
 - Do not treat Makeup Engine as the production user app.

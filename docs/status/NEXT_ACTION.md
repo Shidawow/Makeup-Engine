@@ -2,22 +2,20 @@
 
 ## What To Do Next
 
-Proceed to Phase 8D: Template Content QA for Real User Trial.
+Proceed to Phase 8E: MVP Release Readiness Gate.
 
 ## Why
 
-Phase 8C added a local User App MVP Trial Pack, trial feedback structure, privacy-safe mock feedback summary, trial readiness model, and administrator trial panels. The next bottleneck is content quality: whether template copy, step wording, region instructions, warnings, tools/products, and mobile guidance clarity are good enough for a real user trial.
+Phase 8D added a local Template Content QA gate, trial template selection, trial content readiness model, content QA fixtures, and administrator panels. The next bottleneck is release decision quality: whether the MVP evidence is sufficient to approve a controlled release path or whether more trial/content work is needed.
 
-Historical recovery notes: Phase 7H browser/mobile QA remains the local prototype QA baseline, Phase 8B PWA/mobile polish is complete, and Phase 8C trial pack is complete.
+Historical recovery notes: Phase 7H browser/mobile QA remains the local prototype QA baseline, Phase 8B PWA/mobile polish is complete, Phase 8C trial pack is complete, and Phase 8D content QA is complete.
 
-## Recommended 8D Scope
+## Recommended 8E Scope
 
-- QA trial-selected template copy.
-- QA region instructions and step wording.
-- QA warning and blocked-state clarity.
-- QA tool/product usefulness.
-- QA mobile guidance readability for the trial pack.
-- Keep the work content/readiness-only.
+- Decide MVP release readiness from existing PWA/mobile shell, trial pack, feedback structure, and content QA evidence.
+- Keep release readiness as a gate, not implementation.
+- Identify required blockers before any controlled release path.
+- Define what later phase can implement only if the owner approves the gate.
 
 ## What Not To Do
 
@@ -48,7 +46,12 @@ Read these files first:
 14. `docs/user-app/user-app-trial-readiness.md`
 15. `docs/product/user-app-trial-script.md`
 16. `docs/product/user-app-feedback-questionnaire.md`
-17. `docs/phases/phase-8C.md`
+17. `docs/user-app/template-content-qa-for-trial.md`
+18. `docs/user-app/trial-template-selection.md`
+19. `docs/user-app/trial-content-readiness.md`
+20. `docs/product/template-content-qa-checklist.md`
+21. `docs/phases/phase-8C.md`
+22. `docs/phases/phase-8D.md`
 18. `project-state/project-state.snapshot.json`
 19. `project-state/latest-handoff.json`
 20. `project-state/provider-handoff.json`

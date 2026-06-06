@@ -52,24 +52,24 @@ describe('Phase 6L-1 documentation recovery', () => {
     );
 
     const snapshot = readJson<ProjectSnapshot>('project-state/project-state.snapshot.json');
-    expect(snapshot.lastCompletedPhase).toBe('8C');
-    expect(snapshot.nextRecommendedPhase).toBe('8D');
-    expect(snapshot.nextAction).toContain('Phase 8D');
+    expect(snapshot.lastCompletedPhase).toBe('8D');
+    expect(snapshot.nextRecommendedPhase).toBe('8E');
+    expect(snapshot.nextAction).toContain('Phase 8E');
     expect(snapshot.recoveryEntryFiles).toContain('docs/phases/phase-6L-1.md');
     expect(snapshot.recoveryEntryFiles).toContain('docs/phases/phase-7A.md');
 
     const latestHandoff = readJson<LatestHandoff>('project-state/latest-handoff.json');
-    expect(latestHandoff.fromPhase).toBe('8C');
-    expect(latestHandoff.toPhase).toBe('8D');
-    expect(latestHandoff.nextAction).toContain('Phase 8D');
+    expect(latestHandoff.fromPhase).toBe('8D');
+    expect(latestHandoff.toPhase).toBe('8E');
+    expect(latestHandoff.nextAction).toContain('Phase 8E');
 
     const providerHandoff = readJson<ProviderHandoff>('project-state/provider-handoff.json');
-    expect(providerHandoff.lastCompletedPhase).toBe('8C');
-    expect(providerHandoff.nextRecommendedPhase).toBe('8D');
+    expect(providerHandoff.lastCompletedPhase).toBe('8D');
+    expect(providerHandoff.nextRecommendedPhase).toBe('8E');
     expect(providerHandoff.nextRequiredReadFiles).toContain('docs/phases/phase-7B.md');
 
     const guardrails = readJson<GuardrailState>('project-state/guardrails.json');
-    expect(guardrails.phase).toBe('8C');
+    expect(guardrails.phase).toBe('8D');
     expect(guardrails.guardrails.map((guardrail) => guardrail.id)).toEqual(
       expect.arrayContaining([
         'prototype-consumer-round-trip-required',
