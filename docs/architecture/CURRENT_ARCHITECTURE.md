@@ -92,6 +92,10 @@ Phase 9A adds local internal trial operations structures for small-scope trial p
 
 Phase 9B adds local result review structures for anonymous/mock internal trial review. `src/user-app/userAppTrialResultReview.ts` owns review signals, summaries, warnings, and blocked states. `src/user-app/userAppTrialIssueTaxonomy.ts` owns issue categories, severity, actionability, and issue summaries. `src/user-app/userAppTrialDecisionFramework.ts` owns next-step decisions for continuing trials, revising template content, revising the Shell, revising the trial pack, pausing for privacy/scope, or entering Phase 9C. `src/components/user-app` renders 试用结果复盘框架, 问题分类汇总, and 下一步决策框架 panels inside the administrator checks area. It does not add production analytics, backend forms, real user record storage, camera, AR, AI analysis, OpenAI/external API usage, training, App Store/TestFlight, online publication, or new runtime dependencies.
 
+### Internal Trial Iteration Plan
+
+Phase 9C adds local iteration planning structures for anonymous/mock next-iteration planning. `src/user-app/userAppTrialIterationPlan.ts` owns workstreams, goals, actions, risks, and iteration status. `src/user-app/userAppTrialIterationBacklog.ts` owns issue-derived backlog items with category, severity, confidence, actionability, owner area, fix type, target iteration, acceptance criteria, and blocked reason. `src/user-app/userAppTrialIterationPriority.ts` owns deterministic P0/P1/P2/P3/observe-more priority recommendations. `src/components/user-app` renders 试用迭代计划, 迭代 backlog, and 优先级建议 panels inside the administrator checks area. It does not add a formal production roadmap, backend issue tracker, production analytics, real user record storage, camera, AR, AI analysis, OpenAI/external API usage, training, App Store/TestFlight, online publication, or new runtime dependencies.
+
 ### Vision Analysis
 
 `src/vision` owns local face, cosmetic, pixel, region, quality, provider, and pipeline logic. It consumes `TemplateAnalysisSeed` records when they are ready for Vision Analysis.
@@ -196,7 +200,7 @@ src/components/template-studio/user-app-prototype-consumer-panel
 -> prototype template list / detail / validation preview
 
 src/user-app
--> User App Shell view model / navigation / progress / guidance UX / photo intake placeholder / personalization boundary / local onboarding / local preferences / local template discovery / recommendation placeholders / local session persistence and recovery / mobile QA / readiness gate / PWA readiness / MVP polish readiness / trial pack / trial feedback / trial readiness / template content QA / trial template selection / trial content readiness / MVP release readiness / trial go-no-go / internal trial operations / trial observation / trial outcome review / trial result review / trial issue taxonomy / trial decision framework
+-> User App Shell view model / navigation / progress / guidance UX / photo intake placeholder / personalization boundary / local onboarding / local preferences / local template discovery / recommendation placeholders / local session persistence and recovery / mobile QA / readiness gate / PWA readiness / MVP polish readiness / trial pack / trial feedback / trial readiness / template content QA / trial template selection / trial content readiness / MVP release readiness / trial go-no-go / internal trial operations / trial observation / trial outcome review / trial result review / trial issue taxonomy / trial decision framework / trial iteration plan / trial iteration backlog / trial iteration priority
 
 docs/app-roadmap/app-technology-route-decision.md
 -> React Web / PWA MVP first route decision / deferred native-backend-camera-AR routes
@@ -231,6 +235,15 @@ docs/product/internal-trial-issue-taxonomy.md
 
 docs/product/internal-trial-decision-framework.md
 -> Phase 9B continue / revise / pause / ready-for-9C decisions
+
+docs/product/internal-trial-iteration-plan.md
+-> Phase 9C next-iteration workstreams / no real collection boundary
+
+docs/product/internal-trial-iteration-backlog.md
+-> Phase 9C backlog items / owner areas / acceptance criteria
+
+docs/product/internal-trial-priority-framework.md
+-> Phase 9C P0/P1/P2/P3/observe-more priority rules
 
 docs/product/internal-trial-operations-pack.md
 -> Phase 9A internal small-scope trial operations / participant type coverage / stop conditions

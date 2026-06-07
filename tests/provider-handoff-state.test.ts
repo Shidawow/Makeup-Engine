@@ -24,10 +24,10 @@ describe('provider handoff state', () => {
     expect(handoff.projectName).toBe('Makeup Engine');
     expect(handoff.activeProvider).toBeTruthy();
     expect(handoff.lastProvider).toBeTruthy();
-    expect(handoff.currentTask).toContain('9B');
+    expect(handoff.currentTask).toContain('9C');
     expect(handoff.taskStatus).toBeTruthy();
-    expect(handoff.lastCompletedPhase).toBe('9B');
-    expect(handoff.nextRecommendedPhase).toBe('9C');
+    expect(handoff.lastCompletedPhase).toBe('9C');
+    expect(handoff.nextRecommendedPhase).toBe('9D');
     expect(handoff.nextRequiredReadFiles).toEqual(
       expect.arrayContaining([
         'START_HERE.md',
@@ -56,7 +56,7 @@ describe('provider handoff state', () => {
     expect(notes).toContain('Phase 8D added template content QA');
     expect(notes).toContain('Phase 9A added internal trial operations');
     expect(notes).toContain('App Store/TestFlight');
-    expect(notes).toContain('Phase 9C should create an internal trial iteration plan');
+    expect(notes).toContain('Phase 9D should create an internal trial learning summary');
     expect(handoff.forbiddenDirectories).toEqual(
       expect.arrayContaining(['src/engine', 'src/runtime', 'src/intelligence/runtime']),
     );

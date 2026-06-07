@@ -164,3 +164,31 @@ The result is still local-only and contract-driven. It does not add public recru
 ## Phase 9B Planning Target
 
 Phase 9B should define how anonymous internal trial signals are reviewed after sessions: evidence sufficiency, issue theme grouping, decision criteria, and whether to continue trials, revise content, revise shell, or pause for privacy/scope. It should not create a backend research repository, analytics store, public recruitment workflow, or real participant record system unless a later explicit gate approves those systems.
+
+## Phase 9B Result
+
+Phase 9B adds a local internal trial result review framework:
+
+- anonymous/mock review dimensions
+- issue taxonomy
+- severity and actionability
+- next-step decision framework
+- administrator review panels
+
+The result is still local-only and contract-driven. It does not add production analytics, backend, database, accounts, analytics, camera, AR, real photo collection, AI analysis, OpenAI/external API calls, training, online publication, native app work, App Store/TestFlight, production release scope, or real user record collection.
+
+## Phase 9C Planning Target
+
+Phase 9C should define how anonymous/mock review decisions become scoped iteration plans: content fixes, Shell fixes, trial-pack fixes, privacy/boundary fixes, discovery/recommendation fixes, session/preference copy fixes, or observe-more items. It should not create a formal production roadmap, backend issue tracker, analytics store, public recruitment workflow, or real participant record system unless a later explicit gate approves those systems.
+
+## Phase 9C Result
+
+Phase 9C adds a local internal trial iteration planning framework:
+
+- iteration workstreams
+- issue-derived backlog items
+- deterministic priority recommendations
+- acceptance criteria and blocked reasons
+- administrator iteration panels
+
+The result is still local-only and contract-driven. It does not add a formal production roadmap, backend issue tracker, production analytics, database, accounts, camera, AR, real photo collection, AI analysis, OpenAI/external API calls, training, online publication, native app work, App Store/TestFlight, production release scope, or real user record collection.

@@ -12,6 +12,8 @@ Phase 8 turns the local contract-driven User App MVP Shell evidence into a contr
 | 8D | Template Content QA for Real User Trial | QA template copy, region instructions, warnings, tools/products, and mobile guidance clarity for a limited trial. | QA and content readiness only. Do not treat QA as app store, backend, camera, AR, accessibility certification, or production release approval. |
 | 8E | MVP Release Readiness Gate | Decide whether the MVP is ready for a controlled release path and what later implementation phase is allowed. | Gate decision only unless owner explicitly approves implementation scope. Native, backend, camera, AR, analytics, paid, and app store work stay separate gates. |
 | 9A | Internal Trial Operations Pack | Prepare internal trial operations materials after 8E go/go-with-warnings. | Operations docs only. No backend form, analytics collection, camera, AR, App Store/TestFlight, production release, or real user record storage. |
+| 9B | Internal Trial Result Review Framework | Review anonymous/mock internal trial signals and classify issues. | Review framework only. No backend collection, production analytics, AI analysis, public recruitment, training, or real user record storage. |
+| 9C | Internal Trial Iteration Plan | Convert review decisions into next-iteration workstreams, backlog, and priority. | Iteration planning only. No formal production roadmap, backend issue tracker, production analytics, AI analysis, training, or real user record storage. |
 
 ## 8A Completed Decision
 
@@ -108,6 +110,31 @@ Before starting 8B:
 - Internal trial operations, observation, outcome review, and documentation scoped tests have passed.
 - The next phase remains internal trial result review only unless explicitly expanded.
 
+## 9B Completed Result
+
+- Internal trial result review defines anonymous/mock review dimensions.
+- Issue taxonomy classifies content, Shell, guidance, recommendation, privacy, trial ops, template selection, boundary, and unknown issues.
+- Decision framework can continue trials, revise content, revise Shell, revise trial pack, pause for privacy/scope, or enter Phase 9C.
+- Admin result review panels are available in the local shell without disrupting the ordinary user path.
+- The current next recommended phase is Phase 9C Internal Trial Iteration Plan.
+- No production analytics, public recruitment, backend, camera, AR, AI analysis, OpenAI/external API usage, training, App Store/TestFlight, online release, real user record collection, or new runtime dependency was added.
+
+## 9C Entry Criteria
+
+- `lastCompletedPhase` is `9B`.
+- `nextRecommendedPhase` is `9C`.
+- Internal trial result review, issue taxonomy, decision framework, and documentation scoped tests have passed.
+- The next phase remains internal trial iteration planning only unless explicitly expanded.
+
+## 9C Completed Result
+
+- Internal trial iteration plan defines workstreams, goals, actions, risks, and iteration status.
+- Iteration backlog creates owner-area action items with severity, confidence, actionability, fix type, target iteration, acceptance criteria, and blocked reason.
+- Priority framework scores P0/P1/P2/P3/observe-more and forces privacy/boundary risks to P0.
+- Admin iteration panels are available in the local shell without disrupting the ordinary user path.
+- The current next recommended phase is Phase 9D Internal Trial Learning Summary & Product Decision Gate.
+- No formal production roadmap, backend issue tracker, production analytics, public recruitment, backend, camera, AR, AI analysis, OpenAI/external API usage, training, App Store/TestFlight, online release, real user record collection, or new runtime dependency was added.
+
 ## Persistent Guardrails
 
 - Do not treat Makeup Engine as the production user app.
@@ -116,3 +143,5 @@ Before starting 8B:
 - Do not collect, upload, analyze, store, export, or train on real user photos.
 - Do not add backend, database, accounts, cloud sync, analytics, camera, AR, OpenAI API, external APIs, native app implementation, ecommerce, community, paid features, model training, online publication, or app store release scope without a later explicit gate.
 - Do not treat Phase 9A internal trial operations, observation templates, or outcome review as public recruitment, production release, backend forms, analytics, camera/AR readiness, AI analysis, OpenAI/external API approval, training, App Store/TestFlight, or real user data collection approval.
+- Do not treat Phase 9B internal trial result review, issue taxonomy, or decision framework as production analytics, backend collection, public recruitment, AI analysis, OpenAI/external API approval, training, App Store/TestFlight, or real user data collection approval.
+- Do not treat Phase 9C internal trial iteration plan, backlog, or priority framework as a formal production roadmap, backend issue tracker, production analytics, public recruitment, AI analysis, OpenAI/external API approval, training, App Store/TestFlight, or real user data collection approval.

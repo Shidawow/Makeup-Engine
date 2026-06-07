@@ -40,18 +40,19 @@ describe('provider switching docs', () => {
     expect(combined).toContain('src/intelligence/runtime');
   });
 
-  it('provides phase 9B to 9C switch templates with historical 8E and 9A markers', async () => {
+  it('provides phase 9C to 9D switch templates with historical 8E, 9A, and 9B markers', async () => {
     const prompt = await readFile('docs/prompts/PROVIDER_SWITCH_PROMPT.md', 'utf8');
 
     expect(prompt).toContain('Switch To Native GPT / Codex Desktop');
     expect(prompt).toContain('Switch To PackyAPI + CLI');
     expect(prompt).toContain('Return From PackyAPI To ChatGPT');
-    expect(prompt).toContain('lastCompletedPhase: 9B');
-    expect(prompt).toContain('nextRecommendedPhase: 9C');
-    expect(prompt).toContain('Internal Trial Iteration Plan');
+    expect(prompt).toContain('lastCompletedPhase: 9C');
+    expect(prompt).toContain('nextRecommendedPhase: 9D');
+    expect(prompt).toContain('Internal Trial Learning Summary & Product Decision Gate');
     expect(prompt).toContain('Historical handoff marker retained for Phase 8D recovery tests');
     expect(prompt).toContain('Historical handoff marker retained for Phase 8E recovery tests');
     expect(prompt).toContain('Historical handoff marker retained for Phase 9A recovery tests');
+    expect(prompt).toContain('Historical handoff marker retained for Phase 9B recovery tests');
     expect(prompt).toContain('prototype consumer is read-only validation');
     expect(prompt).toContain('Phase 7A/7B/7C/7D/7E/7F/7G/7H shell');
     expect(prompt).toContain('docs/app-roadmap/app-technology-route-decision.md');
@@ -64,6 +65,7 @@ describe('provider switching docs', () => {
     expect(prompt).toContain('trial go/no-go');
     expect(prompt).toContain('Phase 9A internal trial operations');
     expect(prompt).toContain('Phase 9B internal trial result review');
+    expect(prompt).toContain('Phase 9C internal trial iteration plan');
     expect(prompt).toContain('photo intake is placeholder-only');
     expect(prompt).toContain('node scripts/context-pack.mjs --json');
   });

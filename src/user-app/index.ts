@@ -35,3 +35,6 @@ export * from './userAppTrialOutcome';
 export * from './userAppTrialIssueTaxonomy';
 export * from './userAppTrialResultReview';
 export * from './userAppTrialDecisionFramework';
+export * from './userAppTrialIterationPriority';
+export * from './userAppTrialIterationBacklog';
+export * from './userAppTrialIterationPlan';

@@ -3,94 +3,72 @@
     {
       "name": "typecheck",
       "command": "npm run typecheck",
-      "purpose": "Validate TypeScript project references.",
-      "lastStatus": "passed",
-      "lastSummary": "npm run typecheck passed for Phase 9B."
+      "status": "passed",
+      "summary": "Passed.",
+      "phase": "9C",
+      "ranAt": "2026-06-07T00:00:00.000+08:00"
+    },
+    {
+      "name": "phase-9c-scoped-tests",
+      "command": "npm run test -- tests/user-app-trial-iteration-plan.test.ts tests/user-app-trial-iteration-backlog.test.ts tests/user-app-trial-iteration-priority.test.ts tests/user-app-trial-iteration-plan-panel.test.tsx tests/user-app-trial-iteration-backlog-panel.test.tsx tests/user-app-trial-iteration-priority-panel.test.tsx tests/user-app-shell-trial-iteration-flow.test.tsx tests/phase-9C-documentation-recovery.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
+      "status": "passed",
+      "summary": "Passed: 10 test files, 28 tests.",
+      "phase": "9C",
+      "ranAt": "2026-06-07T00:00:00.000+08:00"
     },
     {
       "name": "test",
       "command": "npm run test",
-      "purpose": "Run Vitest regression coverage.",
-      "lastStatus": "passed",
-      "lastSummary": "npm run test passed: 407 test files, 590 tests."
+      "status": "passed",
+      "summary": "Passed: 415 test files, 611 tests.",
+      "phase": "9C",
+      "ranAt": "2026-06-07T00:00:00.000+08:00"
     },
     {
       "name": "build",
       "command": "npm run build",
-      "purpose": "Run TypeScript build and Vite production build.",
-      "lastStatus": "passed",
-      "lastSummary": "npm run build passed for Phase 9B; Vite may report the existing >500 kB chunk warning."
+      "status": "passed",
+      "summary": "Passed. Vite reported existing chunk-size warning only.",
+      "phase": "9C",
+      "ranAt": "2026-06-07T00:00:00.000+08:00"
     },
     {
       "name": "project-status",
       "command": "npm run project:status",
-      "purpose": "Print human-readable project recovery status.",
-      "lastStatus": "passed",
-      "lastSummary": "npm run project:status passed and reports 9B -> 9C."
-    },
-    {
-      "name": "project-status-json",
-      "command": "node scripts/project-status.mjs --json",
-      "purpose": "Print machine-readable project recovery status.",
-      "lastStatus": "passed",
-      "lastSummary": "node scripts/project-status.mjs --json passed and reports 9B -> 9C."
+      "status": "passed",
+      "summary": "Passed.",
+      "phase": "9C",
+      "ranAt": "2026-06-07T00:00:00.000+08:00"
     },
     {
       "name": "project-context",
       "command": "npm run project:context",
-      "purpose": "Print human-readable multi-provider context package.",
-      "lastStatus": "passed",
-      "lastSummary": "npm run project:context passed and reports Phase 9B handoff context."
+      "status": "passed",
+      "summary": "Passed.",
+      "phase": "9C",
+      "ranAt": "2026-06-07T00:00:00.000+08:00"
+    },
+    {
+      "name": "project-status-json",
+      "command": "node scripts/project-status.mjs --json",
+      "status": "passed",
+      "summary": "Passed.",
+      "phase": "9C",
+      "ranAt": "2026-06-07T00:00:00.000+08:00"
     },
     {
       "name": "context-pack-json",
       "command": "node scripts/context-pack.mjs --json",
-      "purpose": "Print machine-readable multi-provider context package.",
-      "lastStatus": "passed",
-      "lastSummary": "node scripts/context-pack.mjs --json passed and reports Phase 9B handoff context."
-    },
-    {
-      "name": "user-app-browser-qa",
-      "command": "npm run user-app:browser-qa -- --json",
-      "purpose": "Run Phase 7H local browser/mobile HTTP smoke, critical copy, Chinese copy, and privacy copy checks.",
-      "lastStatus": "not_required_for_phase_9B_result_review_framework",
-      "lastSummary": "Browser/mobile QA is not required for Phase 9B result review framework, but prior Phase 7H/8B QA remains part of the evidence reviewed by readiness models."
-    },
-    {
-      "name": "phase-8c-scoped-tests",
-      "command": "npm run test -- tests/user-app-trial-pack.test.ts tests/user-app-trial-feedback.test.ts tests/user-app-trial-readiness.test.ts tests/user-app-trial-pack-panel.test.tsx tests/user-app-trial-feedback-panel.test.tsx tests/user-app-trial-readiness-panel.test.tsx tests/user-app-shell-trial-pack-flow.test.tsx tests/phase-8C-documentation-recovery.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
-      "purpose": "Run Phase 8C trial pack scoped regression coverage.",
-      "lastStatus": "passed",
-      "lastSummary": "Passed required Phase 8C scoped trial pack tests: 10 test files, 23 tests."
-    },
-    {
-      "name": "phase-8d-scoped-tests",
-      "command": "npm run test -- tests/user-app-template-content-qa.test.ts tests/user-app-trial-template-selection.test.ts tests/user-app-trial-content-readiness.test.ts tests/user-app-template-content-qa-panel.test.tsx tests/user-app-trial-template-readiness-panel.test.tsx tests/user-app-shell-template-content-qa-flow.test.tsx tests/phase-8D-documentation-recovery.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
-      "purpose": "Run Phase 8D template content QA scoped regression coverage.",
-      "lastStatus": "passed",
-      "lastSummary": "Phase 8D scoped tests passed: 9 test files, 22 tests."
-    },
-    {
-      "name": "phase-8e-scoped-tests",
-      "command": "npm run test -- tests/user-app-mvp-release-readiness.test.ts tests/user-app-trial-go-no-go.test.ts tests/user-app-mvp-release-readiness-panel.test.tsx tests/user-app-trial-go-no-go-panel.test.tsx tests/user-app-shell-release-readiness-flow.test.tsx tests/phase-8E-documentation-recovery.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
-      "purpose": "Run Phase 8E MVP release readiness and trial go/no-go scoped regression coverage.",
-      "lastStatus": "passed",
-      "lastSummary": "Phase 8E scoped tests passed: 8 test files, 19 tests."
-    },
-    {
-      "name": "phase-9a-scoped-tests",
-      "command": "npm run test -- tests/user-app-internal-trial-ops.test.ts tests/user-app-trial-observation.test.ts tests/user-app-trial-outcome.test.ts tests/user-app-internal-trial-ops-panel.test.tsx tests/user-app-trial-observation-panel.test.tsx tests/user-app-trial-outcome-panel.test.tsx tests/user-app-shell-internal-trial-flow.test.tsx tests/phase-9A-documentation-recovery.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
-      "purpose": "Run Phase 9A internal trial operations scoped regression coverage.",
-      "lastStatus": "passed",
-      "lastSummary": "Phase 9A scoped tests passed: 10 test files, 20 tests."
-    },
-    {
-      "name": "phase-9b-scoped-tests",
-      "command": "npm run test -- tests/user-app-trial-result-review.test.ts tests/user-app-trial-issue-taxonomy.test.ts tests/user-app-trial-decision-framework.test.ts tests/user-app-trial-result-review-panel.test.tsx tests/user-app-trial-issue-summary-panel.test.tsx tests/user-app-trial-decision-framework-panel.test.tsx tests/user-app-shell-trial-result-review-flow.test.tsx tests/phase-9B-documentation-recovery.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
-      "purpose": "Run Phase 9B internal trial result review scoped regression coverage.",
-      "lastStatus": "passed",
-      "lastSummary": "Phase 9B scoped tests passed: 10 test files, 27 tests."
+      "status": "passed",
+      "summary": "Passed.",
+      "phase": "9C",
+      "ranAt": "2026-06-07T00:00:00.000+08:00"
     }
   ],
-  "lastUpdatedPhase": "9B"
+  "lastUpdatedPhase": "9C",
+  "phase": "9C",
+  "lastCompletedPhase": "9C",
+  "currentPhase": "9C",
+  "nextRecommendedPhase": "9D",
+  "updatedAt": "2026-06-07T00:00:00.000+08:00"
 }

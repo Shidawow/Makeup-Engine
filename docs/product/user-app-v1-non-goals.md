@@ -24,6 +24,8 @@ Phase 8A defines what the first user-facing MVP must not include. These non-goal
 - No production release, AI content generation, backend content service, analytics, OpenAI/external API use, real user record collection, or App Store/TestFlight testing in Phase 8D.
 - No production release, backend readiness, analytics readiness, camera readiness, AR readiness, OpenAI/external API use, AI content generation, real user record collection, or App Store/TestFlight testing in Phase 8E.
 - No public recruitment, production release, backend form, analytics, camera readiness, AR readiness, AI analysis, OpenAI/external API use, real user record collection, or App Store/TestFlight testing in Phase 9A.
+- No production analytics, public recruitment, production release, backend collection, AI analysis, OpenAI/external API use, real user record collection, or App Store/TestFlight testing in Phase 9B.
+- No formal production roadmap, backend issue tracker, production analytics, public recruitment, production release, AI analysis, OpenAI/external API use, real user record collection, or App Store/TestFlight testing in Phase 9C.
 
 ## Photo / Camera / AR Non-Goals
 
@@ -79,6 +81,8 @@ V1 must not store or export:
 - real user template content QA records
 - real user release readiness or go/no-go participant records
 - real user internal trial observation or outcome records
+- real user internal trial result review records
+- real user internal trial iteration records
 - real names or contact information
 - real recommendation records
 - real session records

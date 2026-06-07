@@ -2,18 +2,18 @@
 
 ## What To Do Next
 
-Proceed to Phase 9C: Internal Trial Iteration Plan.
+Proceed to Phase 9D: Internal Trial Learning Summary & Product Decision Gate.
 
 ## Why
 
-Phase 9B added the internal trial result review framework, issue taxonomy, and next-step decision model. The current decision is that anonymous/mock internal trial results can now be turned into an iteration plan, while production release remains out of scope.
+Phase 9C added the internal trial iteration plan, backlog, and priority framework. The current decision is that anonymous/mock iteration planning can now be summarized into learning and product decision criteria, while production release remains out of scope.
 
-Historical recovery notes: Phase 7H browser/mobile QA remains the local prototype QA baseline, Phase 8B PWA/mobile polish is complete, Phase 8C trial pack is complete, Phase 8D content QA is complete, Phase 8E release readiness is complete, Phase 9A internal trial operations are complete, and Phase 9B internal trial result review is complete.
+Historical recovery notes: Phase 7H browser/mobile QA remains the local prototype QA baseline, Phase 8B PWA/mobile polish is complete, Phase 8C trial pack is complete, Phase 8D content QA is complete, Phase 8E release readiness is complete, Phase 9A internal trial operations is complete, Phase 9B internal trial result review is complete, and Phase 9C internal trial iteration planning is complete.
 
-## Recommended 9C Scope
+## Recommended 9D Scope
 
-- Create an internal trial iteration plan.
-- Turn review decisions into scoped content, Shell, trial-pack, privacy-copy, and follow-up trial actions.
+- Summarize internal trial learnings from anonymous/mock review and iteration planning.
+- Decide whether to continue internal trials, revise content, revise Shell, revise trial operations, pause for privacy/scope, or propose a later implementation gate.
 - Keep the work local/documented unless a later explicit gate approves real collection systems.
 
 ## What Not To Do
@@ -64,11 +64,15 @@ Read these files first:
 33. `docs/product/internal-trial-issue-taxonomy.md`
 34. `docs/product/internal-trial-decision-framework.md`
 35. `docs/phases/phase-9B.md`
-36. `project-state/project-state.snapshot.json`
-37. `project-state/latest-handoff.json`
-38. `project-state/provider-handoff.json`
-39. `project-state/active-task.json`
-40. `project-state/guardrails.json`
+36. `docs/product/internal-trial-iteration-plan.md`
+37. `docs/product/internal-trial-iteration-backlog.md`
+38. `docs/product/internal-trial-priority-framework.md`
+39. `docs/phases/phase-9C.md`
+40. `project-state/project-state.snapshot.json`
+41. `project-state/latest-handoff.json`
+42. `project-state/provider-handoff.json`
+43. `project-state/active-task.json`
+44. `project-state/guardrails.json`
 
 Then run:
 

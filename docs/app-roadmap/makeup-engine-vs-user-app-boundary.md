@@ -57,6 +57,12 @@ The shell can preview:
 - internal trial operations
 - anonymous observation template
 - trial outcome review
+- anonymous trial result review
+- issue taxonomy
+- trial decision framework
+- trial iteration plan
+- trial iteration backlog
+- iteration priority recommendations
 
 It cannot become backend state, app store release state, analytics, camera capture, AR state, OpenAI API use, external API use, training input, or durable user records.
 
@@ -67,6 +73,10 @@ Phase 8C adds only local trial pack, feedback preview, and trial readiness admin
 Phase 8E adds only local MVP release readiness and go/no-go administrator surfaces. These surfaces can decide internal trial preparation, but they are not production release approval, backend readiness, analytics readiness, camera readiness, AR readiness, App Store/TestFlight, online release approval, or real user data collection systems.
 
 Phase 9A adds only local internal trial operations, observation template, and outcome review administrator surfaces. These surfaces can prepare and review internal small-scope trial operations, but they are not public recruitment, backend forms, analytics stores, camera/AR flows, AI analysis, App Store/TestFlight, online release approval, real participant record systems, or training data sources.
+
+Phase 9B adds only local internal trial result review, issue taxonomy, and decision framework administrator surfaces. These surfaces can review anonymous/mock trial signals, but they are not production analytics, backend forms, analytics stores, camera/AR flows, AI analysis, App Store/TestFlight, online release approval, real participant record systems, or training data sources.
+
+Phase 9C adds only local internal trial iteration plan, backlog, and priority administrator surfaces. These surfaces can organize anonymous/mock next-iteration work, but they are not a formal production roadmap, backend issue tracker, production analytics, public recruitment workflow, camera/AR flow, AI analysis, App Store/TestFlight, online release approval, real participant record system, or training data source.
 
 ## UserAppTemplatePackage Owns The Contract
 

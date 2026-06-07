@@ -23,3 +23,6 @@ export * from './user-app-trial-outcome.example';
 export * from './user-app-trial-result-review.example';
 export * from './user-app-trial-issue-taxonomy.example';
 export * from './user-app-trial-decision-framework.example';
+export * from './user-app-trial-iteration-priority.example';
+export * from './user-app-trial-iteration-backlog.example';
+export * from './user-app-trial-iteration-plan.example';

@@ -70,11 +70,11 @@ describe('Phase 9B documentation recovery', () => {
     );
 
     const snapshot = readJson<ProjectSnapshot>('project-state/project-state.snapshot.json');
-    expect(snapshot.lastCompletedPhase).toBe('9B');
-    expect(snapshot.lastCompletedBusinessPhase).toBe('9B');
-    expect(snapshot.currentPhaseId).toBe('9B');
-    expect(snapshot.nextRecommendedPhase).toBe('9C');
-    expect(snapshot.nextRecommendedPhaseName).toContain('Internal Trial Iteration Plan');
+    expect(snapshot.lastCompletedPhase).toBe('9C');
+    expect(snapshot.lastCompletedBusinessPhase).toBe('9C');
+    expect(snapshot.currentPhaseId).toBe('9C');
+    expect(snapshot.nextRecommendedPhase).toBe('9D');
+    expect(snapshot.nextRecommendedPhaseName).toContain('Internal Trial Learning Summary & Product Decision Gate');
     expect(snapshot.mainDataFlow).toEqual(
       expect.arrayContaining([
         'UserAppTrialResultReview',
@@ -101,24 +101,24 @@ describe('Phase 9B documentation recovery', () => {
     expect(snapshot.forbiddenActions.join('\n')).toContain('real user names');
 
     const providerHandoff = readJson<ProviderHandoff>('project-state/provider-handoff.json');
-    expect(providerHandoff.currentTask).toContain('Phase 9B');
-    expect(providerHandoff.lastCompletedPhase).toBe('9B');
-    expect(providerHandoff.nextRecommendedPhase).toBe('9C');
+    expect(providerHandoff.currentTask).toContain('Phase 9C');
+    expect(providerHandoff.lastCompletedPhase).toBe('9C');
+    expect(providerHandoff.nextRecommendedPhase).toBe('9D');
     expect(providerHandoff.nextRecommendedPhaseName).toContain(
-      'Internal Trial Iteration Plan',
+      'Internal Trial Learning Summary & Product Decision Gate',
     );
     expect(providerHandoff.nextRequiredReadFiles).toContain('docs/phases/phase-9B.md');
     expect(providerHandoff.nextRequiredReadFiles).toContain(
       'docs/product/internal-trial-result-review-framework.md',
     );
     expect(providerHandoff.handoffNotes.join('\n')).toContain(
-      'Phase 9C should create an internal trial iteration plan',
+      'Phase 9D should create an internal trial learning summary',
     );
 
     const latestHandoff = readJson<LatestHandoff>('project-state/latest-handoff.json');
-    expect(latestHandoff.fromPhase).toBe('9B');
-    expect(latestHandoff.toPhase).toBe('9C');
-    expect(latestHandoff.nextAction).toContain('Phase 9C');
+    expect(latestHandoff.fromPhase).toBe('9C');
+    expect(latestHandoff.toPhase).toBe('9D');
+    expect(latestHandoff.nextAction).toContain('Phase 9D');
     expect(latestHandoff.internalTrialResultReviewDecision.phase9BResult).toContain(
       'internal trial result review framework',
     );
@@ -133,7 +133,7 @@ describe('Phase 9B documentation recovery', () => {
     );
 
     const guardrails = readJson<GuardrailState>('project-state/guardrails.json');
-    expect(guardrails.phase).toBe('9B');
+    expect(guardrails.phase).toBe('9C');
     expect(guardrails.guardrails.map((guardrail) => guardrail.id)).toEqual(
       expect.arrayContaining([
         'phase_9b_internal_trial_result_review_only',

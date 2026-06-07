@@ -1,11 +1,11 @@
 {
   "schemaVersion": "active-task.v1",
-  "taskId": "9B",
-  "title": "Internal Trial Result Review Framework",
+  "taskId": "9C",
+  "title": "Internal Trial Iteration Plan",
   "status": "completed",
   "ownerRole": "Codex",
   "createdBy": "Codex",
-  "phase": "9B",
+  "phase": "9C",
   "recommendedProfile": "native-gpt-codex-high-reasoning",
   "allowedDirectories": [
     "docs",
@@ -29,21 +29,21 @@
     "npm run project:context",
     "node scripts/project-status.mjs --json",
     "node scripts/context-pack.mjs --json",
-    "npm run test -- tests/user-app-trial-result-review.test.ts tests/user-app-trial-issue-taxonomy.test.ts tests/user-app-trial-decision-framework.test.ts tests/user-app-trial-result-review-panel.test.tsx tests/user-app-trial-issue-summary-panel.test.tsx tests/user-app-trial-decision-framework-panel.test.tsx tests/user-app-shell-trial-result-review-flow.test.tsx tests/phase-9B-documentation-recovery.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
+    "npm run test -- tests/user-app-trial-iteration-plan.test.ts tests/user-app-trial-iteration-backlog.test.ts tests/user-app-trial-iteration-priority.test.ts tests/user-app-trial-iteration-plan-panel.test.tsx tests/user-app-trial-iteration-backlog-panel.test.tsx tests/user-app-trial-iteration-priority-panel.test.tsx tests/user-app-shell-trial-iteration-flow.test.tsx tests/phase-9C-documentation-recovery.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
   ],
   "completionDefinition": [
-    "Phase 9B added internal trial result review, issue taxonomy, decision framework, fixtures, administrator panels, and internal trial result review documentation.",
-    "9B did not implement production app, public recruitment, backend, database, accounts, analytics, AI analysis, OpenAI/external API usage, camera, AR, training, App Store/TestFlight, online publication, service worker, offline cache, push notification, background sync, install tracking, new runtime dependencies, or real user data collection.",
-    "9B did not collect real names, contact information, photos, health information, sensitive identity information, face embeddings, biometric identifiers, backend records, analytics records, or training data.",
+    "Phase 9C added internal trial iteration plan, backlog, priority framework, fixtures, administrator panels, and internal trial iteration documentation.",
+    "9C did not implement production app, formal production roadmap, backend issue tracker, public recruitment, backend, database, accounts, analytics, AI analysis, OpenAI/external API usage, camera, AR, training, App Store/TestFlight, online publication, service worker, offline cache, push notification, background sync, install tracking, new runtime dependencies, or real user data collection.",
+    "9C did not collect real names, contact information, photos, health information, sensitive identity information, face embeddings, biometric identifiers, backend records, analytics records, AI analysis records, or training data.",
     "Makeup Engine remains the template production system and UserAppTemplatePackage remains the handoff contract.",
     "Docs and project-state must remain recoverable and validation commands must pass."
   ],
   "dependsOn": [
-    "9A Internal Trial Operations Pack"
+    "9B Internal Trial Result Review Framework"
   ],
   "nextRecommendedTask": {
-    "taskId": "9C",
-    "title": "Internal Trial Iteration Plan",
+    "taskId": "9D",
+    "title": "Internal Trial Learning Summary & Product Decision Gate",
     "status": "recommended"
   }
 }

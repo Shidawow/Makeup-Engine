@@ -1,5 +1,5 @@
 {
-  "phase": "9B",
+  "phase": "9C",
   "status": "passed",
   "lastValidation": {
     "typecheck": "passed",
@@ -9,14 +9,16 @@
     "projectStatusJson": "passed",
     "projectContext": "passed",
     "contextPackJson": "passed",
-    "userAppBrowserQa": "not_required_for_phase_9B_result_review_framework",
-    "httpSmoke": "not_required_for_phase_9B_result_review_framework",
+    "userAppBrowserQa": "not_required_for_phase_9c_iteration_plan",
+    "httpSmoke": "not_required_for_phase_9c_iteration_plan",
     "phase8DScopedTests": "passed",
     "phase8EScopedTests": "passed",
     "phase9AScopedTests": "passed",
-    "testFiles": 407,
-    "tests": 590,
-    "phase9BScopedTests": "passed"
+    "phase9BScopedTests": "passed",
+    "phase9CScopedTests": "passed",
+    "testFiles": 415,
+    "tests": 611,
+    "updatedAt": "2026-06-07T00:00:00.000+08:00"
   },
   "lastKnownPreDoc0Validation": {
     "typecheck": "passed",
@@ -33,14 +35,19 @@
     "npm run project:context",
     "node scripts/project-status.mjs --json",
     "node scripts/context-pack.mjs --json",
-    "npm run test -- tests/user-app-trial-result-review.test.ts tests/user-app-trial-issue-taxonomy.test.ts tests/user-app-trial-decision-framework.test.ts tests/user-app-trial-result-review-panel.test.tsx tests/user-app-trial-issue-summary-panel.test.tsx tests/user-app-trial-decision-framework-panel.test.tsx tests/user-app-shell-trial-result-review-flow.test.tsx tests/phase-9B-documentation-recovery.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
+    "npm run test -- tests/user-app-trial-iteration-plan.test.ts tests/user-app-trial-iteration-backlog.test.ts tests/user-app-trial-iteration-priority.test.ts tests/user-app-trial-iteration-plan-panel.test.tsx tests/user-app-trial-iteration-backlog-panel.test.tsx tests/user-app-trial-iteration-priority-panel.test.tsx tests/user-app-shell-trial-iteration-flow.test.tsx tests/phase-9C-documentation-recovery.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
   ],
   "notes": [
-    "9B is local internal trial result review only.",
-    "9B added result review, issue taxonomy, decision framework, fixtures, administrator panels, and result review documentation.",
-    "9B did not add production app, public recruitment, backend, analytics, AI analysis, OpenAI/external API usage, camera, AR, training, App Store/TestFlight, online release, or real user data collection.",
-    "Phase 9B scoped tests passed: 10 test files, 27 tests.",
-    "Full npm run test passed: 407 test files, 590 tests.",
-    "npm run typecheck, npm run build, npm run project:status, npm run project:context, node scripts/project-status.mjs --json, and node scripts/context-pack.mjs --json passed."
-  ]
+    "9C is local internal trial iteration planning only.",
+    "9C added iteration plan, backlog, priority framework, fixtures, administrator panels, and iteration planning documentation.",
+    "9C did not add formal production roadmap, backend issue tracker, production app, public recruitment, backend, analytics, AI analysis, OpenAI/external API usage, camera, AR, training, App Store/TestFlight, online release, or real user data collection.",
+    "Phase 9C scoped tests passed: 10 test files, 28 tests.",
+    "Full npm run test passed: 415 test files, 611 tests.",
+    "npm run typecheck and npm run build passed. project:status/project:context passed and JSON CLIs are being rerun after validation state update."
+  ],
+  "lastCompletedPhase": "9C",
+  "currentPhase": "9C",
+  "nextRecommendedPhase": "9D",
+  "updatedAt": "2026-06-07T00:00:00.000+08:00",
+  "summary": "Phase 9C validation passed: scoped Phase 9C tests, full npm run test, typecheck, build, project status/context, and JSON status/context commands."
 }

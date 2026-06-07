@@ -22,6 +22,8 @@ import {
   createUserAppTrialGoNoGoDecision,
   createUserAppTrialFeedbackForm,
   createUserAppTrialDecisionFramework,
+  createUserAppTrialIterationBacklog,
+  createUserAppTrialIterationPlan,
   createUserAppTrialObservationGuide,
   createUserAppTrialOutcomeReview,
   createUserAppTrialPack,
@@ -68,6 +70,9 @@ import { UserAppSessionRecoveryNotice } from './UserAppSessionRecoveryNotice';
 import { UserAppTrialFeedbackPanel } from './UserAppTrialFeedbackPanel';
 import { UserAppTrialGoNoGoPanel } from './UserAppTrialGoNoGoPanel';
 import { UserAppTrialDecisionFrameworkPanel } from './UserAppTrialDecisionFrameworkPanel';
+import { UserAppTrialIterationBacklogPanel } from './UserAppTrialIterationBacklogPanel';
+import { UserAppTrialIterationPlanPanel } from './UserAppTrialIterationPlanPanel';
+import { UserAppTrialIterationPriorityPanel } from './UserAppTrialIterationPriorityPanel';
 import { UserAppTrialIssueSummaryPanel } from './UserAppTrialIssueSummaryPanel';
 import { UserAppTrialObservationPanel } from './UserAppTrialObservationPanel';
 import { UserAppTrialOutcomePanel } from './UserAppTrialOutcomePanel';
@@ -119,6 +124,9 @@ const adminSectionTabs: Array<{ tabId: UserAppShellSection; label: string }> = [
   { tabId: 'trialResultReview', label: '试用结果复盘框架' },
   { tabId: 'trialIssueSummary', label: '问题分类汇总' },
   { tabId: 'trialDecisionFramework', label: '下一步决策框架' },
+  { tabId: 'trialIterationPlan', label: '试用迭代计划' },
+  { tabId: 'trialIterationBacklog', label: '迭代 backlog' },
+  { tabId: 'trialIterationPriority', label: '优先级建议' },
   { tabId: 'pwa', label: 'PWA 检查' },
   { tabId: 'mvpPolish', label: 'MVP 打磨' },
   { tabId: 'readiness', label: 'App 就绪度' },
@@ -324,6 +332,26 @@ export function UserAppShell({
         review: trialResultReview,
       }),
     [trialResultReview],
+  );
+  const trialIterationBacklog = useMemo(
+    () =>
+      createUserAppTrialIterationBacklog({
+        issueSummary: trialResultReview.issueSummary,
+      }),
+    [trialResultReview],
+  );
+  const trialIterationPlan = useMemo(
+    () =>
+      createUserAppTrialIterationPlan({
+        backlog: trialIterationBacklog,
+        decisionFramework: trialDecisionFramework,
+        readyForNextInternalTrial: false,
+      }),
+    [trialDecisionFramework, trialIterationBacklog],
+  );
+  const trialIterationPriorityRecommendations = useMemo(
+    () => trialIterationBacklog.items.map((item) => item.priorityRecommendation),
+    [trialIterationBacklog],
   );
   const readinessReport = useMemo(
     () =>
@@ -806,6 +834,20 @@ export function UserAppShell({
 
               {boundaryTab === 'trialDecisionFramework' ? (
                 <UserAppTrialDecisionFrameworkPanel framework={trialDecisionFramework} />
+              ) : null}
+
+              {boundaryTab === 'trialIterationPlan' ? (
+                <UserAppTrialIterationPlanPanel plan={trialIterationPlan} />
+              ) : null}
+
+              {boundaryTab === 'trialIterationBacklog' ? (
+                <UserAppTrialIterationBacklogPanel backlog={trialIterationBacklog} />
+              ) : null}
+
+              {boundaryTab === 'trialIterationPriority' ? (
+                <UserAppTrialIterationPriorityPanel
+                  recommendations={trialIterationPriorityRecommendations}
+                />
               ) : null}
 
               {boundaryTab === 'mvpPolish' ? (

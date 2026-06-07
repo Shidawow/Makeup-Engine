@@ -1,5 +1,5 @@
 {
-  "phase": "9B",
+  "phase": "9C",
   "guardrails": [
     {
       "id": "source-image-not-training-data",
@@ -380,6 +380,22 @@
     {
       "id": "phase_9b_no_training_or_project_state_user_records",
       "rule": "Phase 9B result review, issue taxonomy, and decision framework cannot write real user records into project-state, enter training datasets, or mutate UserAppTemplatePackage."
+    },
+    {
+      "id": "phase_9c_iteration_plan_only",
+      "rule": "Phase 9C internal trial iteration plan, backlog, and priority framework are local administrator planning aids only and must not become a formal production roadmap, backend issue tracker, production analytics, or production release approval."
+    },
+    {
+      "id": "phase_9c_no_sensitive_iteration_data",
+      "rule": "Phase 9C iteration inputs are anonymous/mock/example summaries only and cannot collect real names, contact information, health information, sensitive identity information, photos, face embeddings, biometric identifiers, backend records, analytics records, AI analysis records, or training data."
+    },
+    {
+      "id": "phase_9c_no_backend_ai_or_runtime_collection",
+      "rule": "Phase 9C must not add backend, database, accounts, cloud sync, analytics, camera, AR, AI analysis, OpenAI/external API usage, online publication, App Store/TestFlight, or new runtime dependencies."
+    },
+    {
+      "id": "phase_9c_no_training_or_project_state_user_records",
+      "rule": "Phase 9C iteration plan, backlog, priority framework, sessions, preferences, recommendations, and admin panels cannot mutate UserAppTemplatePackage, write real user records into project-state, or enter training datasets."
     }
   ],
   "legacyFrozenModules": [

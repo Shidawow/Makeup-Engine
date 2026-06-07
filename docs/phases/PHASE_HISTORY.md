@@ -625,3 +625,25 @@ What still cannot happen:
 Why Phase 9C follows:
 
 The result review framework exists. The next bottleneck is an iteration plan: translating anonymous review decisions into scoped content, Shell, privacy-copy, and trial-pack follow-up work without adding backend, analytics, real user collection, AI analysis, training, or production release scope.
+
+## Phase 9C
+
+Added local Internal Trial Iteration Plan for anonymous/mock next-iteration planning.
+
+What changed:
+
+- Added `UserAppTrialIterationPlan` with next-iteration workstreams for template content, User App Shell, trial pack, privacy boundary, discovery/recommendation, session/preference, and observe-more.
+- Added `UserAppTrialIterationBacklog` with issue category, severity, confidence, actionability, owner area, fix type, target iteration, acceptance criteria, and blocked reason.
+- Added `UserAppTrialIterationPriority` with `p0_blocker`, `p1_high`, `p2_medium`, `p3_low`, and `observe_more` recommendations.
+- Added administrator panels for 试用迭代计划, 迭代 backlog, and 优先级建议.
+- Added iteration plan, backlog, priority fixtures, phase docs, product docs, tests, and project-state updates.
+
+What still cannot happen:
+
+- Phase 9C is not a formal production roadmap, backend issue tracker, production analytics, public recruitment, production release, App Store/TestFlight test, camera/AR feature, AI analysis, OpenAI/external API usage, training collection, online publication, or real user record system.
+- Iteration inputs are anonymous/mock/example summaries only and cannot collect real names, contact information, photos, health information, sensitive identity information, face embeddings, biometric identifiers, backend records, analytics records, AI analysis records, or training data.
+- Iteration plan, backlog, priority framework, sessions, preferences, recommendations, and admin panels cannot mutate `UserAppTemplatePackage` or write real user trial records into `project-state`.
+
+Why Phase 9D follows:
+
+The iteration planning framework exists. The next bottleneck is a learning summary and product decision gate: deciding whether internal trial learnings justify more trials, content fixes, Shell fixes, trial operations fixes, a privacy/scope pause, or a later explicit implementation gate without adding production release scope.
