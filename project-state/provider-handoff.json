@@ -3,12 +3,12 @@
   "projectName": "Makeup Engine",
   "activeProvider": "native-gpt-codex-desktop",
   "lastProvider": "native-gpt-codex-desktop",
-  "currentTask": "Phase 9A Internal Trial Operations Pack",
+  "currentTask": "Phase 9B Internal Trial Result Review Framework",
   "taskStatus": "completed",
-  "lastCompletedPhase": "9A",
-  "lastCompletedBusinessPhase": "9A",
-  "nextRecommendedPhase": "9B",
-  "nextRecommendedPhaseName": "Internal Trial Result Review Framework",
+  "lastCompletedPhase": "9B",
+  "lastCompletedBusinessPhase": "9B",
+  "nextRecommendedPhase": "9C",
+  "nextRecommendedPhaseName": "Internal Trial Iteration Plan",
   "nextRequiredReadFiles": [
     "AGENTS.md",
     "START_HERE.md",
@@ -71,7 +71,11 @@
     "docs/phases/phase-6L.md",
     "docs/phases/phase-6L-1.md",
     "docs/phases/phase-6K.md",
-    "docs/phases/phase-6J.md"
+    "docs/phases/phase-6J.md",
+    "docs/product/internal-trial-result-review-framework.md",
+    "docs/product/internal-trial-issue-taxonomy.md",
+    "docs/product/internal-trial-decision-framework.md",
+    "docs/phases/phase-9B.md"
   ],
   "handoffNotes": [
     "Repository documents are the source of truth, not chat memory.",
@@ -84,7 +88,10 @@
     "Phase 9A added internal trial operations, participant type coverage, anonymous observation guide, outcome review recommendations, and administrator operations panels.",
     "Phase 9A is not public recruitment or production release approval and does not add backend, analytics, AI analysis, OpenAI/external API usage, camera, AR, training, App Store/TestFlight, online publication, or real user record collection.",
     "Operations, observation, and outcome review cannot mutate UserAppTemplatePackage, collect photos, write real user records into project-state, or enter training datasets.",
-    "Phase 9B should create an internal trial result review framework only unless a future explicit gate expands scope."
+    "Phase 9B added internal trial result review, issue taxonomy, next-step decision framework, fixtures, and administrator review panels.",
+    "Phase 9B is not production analytics or real data collection and does not add backend, analytics, AI analysis, OpenAI/external API usage, camera, AR, training, App Store/TestFlight, online publication, or real user record collection.",
+    "Result review, issue taxonomy, and decision framework cannot mutate UserAppTemplatePackage, collect photos, write real user records into project-state, call external APIs, or enter training datasets.",
+    "Phase 9C should create an internal trial iteration plan only unless a future explicit gate expands scope."
   ],
   "allowedDirectories": [
     "src/user-app",
@@ -108,12 +115,13 @@
     "projectStatusJson": "passed",
     "projectContext": "passed",
     "contextPackJson": "passed",
-    "userAppBrowserQa": "not_required_for_phase_9A_operations_pack",
-    "httpSmoke": "not_required_for_phase_9A_operations_pack",
+    "userAppBrowserQa": "not_required_for_phase_9B_result_review_framework",
+    "httpSmoke": "not_required_for_phase_9B_result_review_framework",
     "phase8DScopedTests": "passed",
     "phase8EScopedTests": "passed",
     "phase9AScopedTests": "passed",
-    "testFiles": 399,
-    "tests": 570
+    "testFiles": 407,
+    "tests": 590,
+    "phase9BScopedTests": "passed"
   }
 }

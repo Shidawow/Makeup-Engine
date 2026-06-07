@@ -70,7 +70,8 @@
     "Phase 8B PWA readiness and MVP polish readiness reports are local QA metadata, not production app state, backend records, durable user records, browser QA records, recommendation records, or training input.",
     "Phase 8C trial pack, feedback, and readiness reports are local planning metadata, not backend forms, analytics, production release records, real user records, or training input.",
     "Phase 8E MVP release readiness and trial go/no-go reports are local admin gate metadata, not production release records, backend records, analytics records, real user records, AI-generated content, or training input.",
-    "Phase 9A internal trial operations, observation guide, and outcome review are local admin planning metadata, not backend records, analytics records, real user records, AI analysis records, production release records, or training input."
+    "Phase 9A internal trial operations, observation guide, and outcome review are local admin planning metadata, not backend records, analytics records, real user records, AI analysis records, production release records, or training input.",
+    "Phase 9B trial result review, issue taxonomy, and decision framework are local admin review metadata, not backend records, analytics records, real user records, AI analysis records, production release records, or training input."
   ],
   "materializedDatasetOutputs": [
     "tmp/datasets/realistic-synthetic-png-image-v0/package.json",
@@ -208,7 +209,15 @@
     "UserAppTrialOutcomeReview metadata",
     "UserAppInternalTrialOpsPanel UI preview",
     "UserAppTrialObservationPanel UI preview",
-    "UserAppTrialOutcomePanel UI preview"
+    "UserAppTrialOutcomePanel UI preview",
+    "UserAppTrialResultReview metadata",
+    "UserAppTrialResultSignal mock metadata",
+    "UserAppTrialIssueTaxonomy metadata",
+    "UserAppTrialIssueSummary metadata",
+    "UserAppTrialDecisionFramework metadata",
+    "UserAppTrialResultReviewPanel UI preview",
+    "UserAppTrialIssueSummaryPanel UI preview",
+    "UserAppTrialDecisionFrameworkPanel UI preview"
   ],
   "userPhotoBoundaryOutputs": [
     "User photo intake placeholder metadata",

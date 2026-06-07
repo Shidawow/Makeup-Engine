@@ -21,10 +21,12 @@ import {
   createUserAppShellModel,
   createUserAppTrialGoNoGoDecision,
   createUserAppTrialFeedbackForm,
+  createUserAppTrialDecisionFramework,
   createUserAppTrialObservationGuide,
   createUserAppTrialOutcomeReview,
   createUserAppTrialPack,
   createUserAppTrialReadinessReport,
+  createUserAppTrialResultReview,
   createUserAppTemplateContentQaReport,
   createUserAppTrialContentReadinessReport,
   createUserAppTrialTemplateSelectionReport,
@@ -65,10 +67,13 @@ import { UserAppSessionPanel } from './UserAppSessionPanel';
 import { UserAppSessionRecoveryNotice } from './UserAppSessionRecoveryNotice';
 import { UserAppTrialFeedbackPanel } from './UserAppTrialFeedbackPanel';
 import { UserAppTrialGoNoGoPanel } from './UserAppTrialGoNoGoPanel';
+import { UserAppTrialDecisionFrameworkPanel } from './UserAppTrialDecisionFrameworkPanel';
+import { UserAppTrialIssueSummaryPanel } from './UserAppTrialIssueSummaryPanel';
 import { UserAppTrialObservationPanel } from './UserAppTrialObservationPanel';
 import { UserAppTrialOutcomePanel } from './UserAppTrialOutcomePanel';
 import { UserAppTrialPackPanel } from './UserAppTrialPackPanel';
 import { UserAppTrialReadinessPanel } from './UserAppTrialReadinessPanel';
+import { UserAppTrialResultReviewPanel } from './UserAppTrialResultReviewPanel';
 import { UserAppTemplateContentQaPanel } from './UserAppTemplateContentQaPanel';
 import { UserAppTrialTemplateReadinessPanel } from './UserAppTrialTemplateReadinessPanel';
 import { UserMakeupStepGuide } from './UserMakeupStepGuide';
@@ -111,6 +116,9 @@ const adminSectionTabs: Array<{ tabId: UserAppShellSection; label: string }> = [
   { tabId: 'internalTrialOps', label: '内部试用运营' },
   { tabId: 'trialObservation', label: '观察记录模板' },
   { tabId: 'trialOutcome', label: '试用结果复盘' },
+  { tabId: 'trialResultReview', label: '试用结果复盘框架' },
+  { tabId: 'trialIssueSummary', label: '问题分类汇总' },
+  { tabId: 'trialDecisionFramework', label: '下一步决策框架' },
   { tabId: 'pwa', label: 'PWA 检查' },
   { tabId: 'mvpPolish', label: 'MVP 打磨' },
   { tabId: 'readiness', label: 'App 就绪度' },
@@ -308,6 +316,14 @@ export function UserAppShell({
         participantSessionsReviewed: 1,
       }),
     [],
+  );
+  const trialResultReview = useMemo(() => createUserAppTrialResultReview(), []);
+  const trialDecisionFramework = useMemo(
+    () =>
+      createUserAppTrialDecisionFramework({
+        review: trialResultReview,
+      }),
+    [trialResultReview],
   );
   const readinessReport = useMemo(
     () =>
@@ -778,6 +794,18 @@ export function UserAppShell({
 
               {boundaryTab === 'trialOutcome' ? (
                 <UserAppTrialOutcomePanel review={trialOutcomeReview} />
+              ) : null}
+
+              {boundaryTab === 'trialResultReview' ? (
+                <UserAppTrialResultReviewPanel review={trialResultReview} />
+              ) : null}
+
+              {boundaryTab === 'trialIssueSummary' ? (
+                <UserAppTrialIssueSummaryPanel summary={trialResultReview.issueSummary} />
+              ) : null}
+
+              {boundaryTab === 'trialDecisionFramework' ? (
+                <UserAppTrialDecisionFrameworkPanel framework={trialDecisionFramework} />
               ) : null}
 
               {boundaryTab === 'mvpPolish' ? (

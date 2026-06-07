@@ -20,3 +20,6 @@ export * from './user-app-trial-go-no-go.example';
 export * from './user-app-internal-trial-ops.example';
 export * from './user-app-trial-observation.example';
 export * from './user-app-trial-outcome.example';
+export * from './user-app-trial-result-review.example';
+export * from './user-app-trial-issue-taxonomy.example';
+export * from './user-app-trial-decision-framework.example';

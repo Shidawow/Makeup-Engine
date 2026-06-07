@@ -51,8 +51,8 @@ describe('Phase 6I-1 documentation recovery', () => {
     expect(architecture).toContain('Production Batch QA / Review Hardening');
     expect(dataFlow).toContain('Production QA Report');
     expect(guardrails).toContain('Publish requires explicit local confirmation and cannot happen for rejected tasks');
-    expect(snapshot.lastCompletedPhase).toBe('9A');
-    expect(snapshot.nextRecommendedPhase).toBe('9B');
+    expect(snapshot.lastCompletedPhase).toBe('9B');
+    expect(snapshot.nextRecommendedPhase).toBe('9C');
     expect(snapshot.mainDataFlow).toContain('ProductionQaReport');
   });
 });

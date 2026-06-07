@@ -88,6 +88,10 @@ Phase 8E adds local release readiness gate structures for internal trial prepara
 
 Phase 9A adds local internal trial operations structures for small-scope trial preparation. `src/user-app/userAppInternalTrialOps.ts` owns participant type coverage, session plan, checklist, risks, boundaries, and operations status. `src/user-app/userAppTrialObservation.ts` owns anonymous observation signals and mock/example summaries. `src/user-app/userAppTrialOutcome.ts` owns outcome review recommendations for continuing trials, revising content, revising shell, blocking for privacy/scope, or entering Phase 9B. `src/components/user-app` renders 内部试用运营, 观察记录模板, and 试用结果复盘 panels inside the administrator checks area. It does not add public recruitment, production app scope, backend forms, analytics, real user record storage, camera, AR, AI analysis, OpenAI/external API usage, training, App Store/TestFlight, online publication, or new runtime dependencies.
 
+### Internal Trial Result Review Framework
+
+Phase 9B adds local result review structures for anonymous/mock internal trial review. `src/user-app/userAppTrialResultReview.ts` owns review signals, summaries, warnings, and blocked states. `src/user-app/userAppTrialIssueTaxonomy.ts` owns issue categories, severity, actionability, and issue summaries. `src/user-app/userAppTrialDecisionFramework.ts` owns next-step decisions for continuing trials, revising template content, revising the Shell, revising the trial pack, pausing for privacy/scope, or entering Phase 9C. `src/components/user-app` renders 试用结果复盘框架, 问题分类汇总, and 下一步决策框架 panels inside the administrator checks area. It does not add production analytics, backend forms, real user record storage, camera, AR, AI analysis, OpenAI/external API usage, training, App Store/TestFlight, online publication, or new runtime dependencies.
+
 ### Vision Analysis
 
 `src/vision` owns local face, cosmetic, pixel, region, quality, provider, and pipeline logic. It consumes `TemplateAnalysisSeed` records when they are ready for Vision Analysis.
@@ -192,7 +196,7 @@ src/components/template-studio/user-app-prototype-consumer-panel
 -> prototype template list / detail / validation preview
 
 src/user-app
--> User App Shell view model / navigation / progress / guidance UX / photo intake placeholder / personalization boundary / local onboarding / local preferences / local template discovery / recommendation placeholders / local session persistence and recovery / mobile QA / readiness gate / PWA readiness / MVP polish readiness / trial pack / trial feedback / trial readiness / template content QA / trial template selection / trial content readiness / MVP release readiness / trial go-no-go / internal trial operations / trial observation / trial outcome review
+-> User App Shell view model / navigation / progress / guidance UX / photo intake placeholder / personalization boundary / local onboarding / local preferences / local template discovery / recommendation placeholders / local session persistence and recovery / mobile QA / readiness gate / PWA readiness / MVP polish readiness / trial pack / trial feedback / trial readiness / template content QA / trial template selection / trial content readiness / MVP release readiness / trial go-no-go / internal trial operations / trial observation / trial outcome review / trial result review / trial issue taxonomy / trial decision framework
 
 docs/app-roadmap/app-technology-route-decision.md
 -> React Web / PWA MVP first route decision / deferred native-backend-camera-AR routes
@@ -218,6 +222,15 @@ docs/user-app/mvp-release-readiness-gate.md
 
 docs/user-app/trial-go-no-go-decision.md
 -> Phase 8E go / go-with-warnings / no-go decision for internal trial preparation
+
+docs/product/internal-trial-result-review-framework.md
+-> Phase 9B anonymous result review / no real data collection boundary
+
+docs/product/internal-trial-issue-taxonomy.md
+-> Phase 9B issue categories / severity / actionability
+
+docs/product/internal-trial-decision-framework.md
+-> Phase 9B continue / revise / pause / ready-for-9C decisions
 
 docs/product/internal-trial-operations-pack.md
 -> Phase 9A internal small-scope trial operations / participant type coverage / stop conditions

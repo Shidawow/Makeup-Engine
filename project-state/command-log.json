@@ -5,56 +5,56 @@
       "command": "npm run typecheck",
       "purpose": "Validate TypeScript project references.",
       "lastStatus": "passed",
-      "lastSummary": "npm run typecheck passed for Phase 9A."
+      "lastSummary": "npm run typecheck passed for Phase 9B."
     },
     {
       "name": "test",
       "command": "npm run test",
       "purpose": "Run Vitest regression coverage.",
       "lastStatus": "passed",
-      "lastSummary": "npm run test passed: 399 test files, 570 tests."
+      "lastSummary": "npm run test passed: 407 test files, 590 tests."
     },
     {
       "name": "build",
       "command": "npm run build",
       "purpose": "Run TypeScript build and Vite production build.",
       "lastStatus": "passed",
-      "lastSummary": "npm run build passed; Vite reported the existing >500 kB chunk warning."
+      "lastSummary": "npm run build passed for Phase 9B; Vite may report the existing >500 kB chunk warning."
     },
     {
       "name": "project-status",
       "command": "npm run project:status",
       "purpose": "Print human-readable project recovery status.",
       "lastStatus": "passed",
-      "lastSummary": "npm run project:status passed and reports 9A -> 9B."
+      "lastSummary": "npm run project:status passed and reports 9B -> 9C."
     },
     {
       "name": "project-status-json",
       "command": "node scripts/project-status.mjs --json",
       "purpose": "Print machine-readable project recovery status.",
       "lastStatus": "passed",
-      "lastSummary": "node scripts/project-status.mjs --json passed and reports 9A -> 9B."
+      "lastSummary": "node scripts/project-status.mjs --json passed and reports 9B -> 9C."
     },
     {
       "name": "project-context",
       "command": "npm run project:context",
       "purpose": "Print human-readable multi-provider context package.",
       "lastStatus": "passed",
-      "lastSummary": "npm run project:context passed and reports Phase 9A handoff context."
+      "lastSummary": "npm run project:context passed and reports Phase 9B handoff context."
     },
     {
       "name": "context-pack-json",
       "command": "node scripts/context-pack.mjs --json",
       "purpose": "Print machine-readable multi-provider context package.",
       "lastStatus": "passed",
-      "lastSummary": "node scripts/context-pack.mjs --json passed and reports Phase 9A handoff context."
+      "lastSummary": "node scripts/context-pack.mjs --json passed and reports Phase 9B handoff context."
     },
     {
       "name": "user-app-browser-qa",
       "command": "npm run user-app:browser-qa -- --json",
       "purpose": "Run Phase 7H local browser/mobile HTTP smoke, critical copy, Chinese copy, and privacy copy checks.",
-      "lastStatus": "not_required_for_phase_9A_operations_pack",
-      "lastSummary": "Browser/mobile QA is not required for Phase 9A operations pack, but prior Phase 7H/8B QA remains part of the evidence reviewed by readiness models."
+      "lastStatus": "not_required_for_phase_9B_result_review_framework",
+      "lastSummary": "Browser/mobile QA is not required for Phase 9B result review framework, but prior Phase 7H/8B QA remains part of the evidence reviewed by readiness models."
     },
     {
       "name": "phase-8c-scoped-tests",
@@ -83,7 +83,14 @@
       "purpose": "Run Phase 9A internal trial operations scoped regression coverage.",
       "lastStatus": "passed",
       "lastSummary": "Phase 9A scoped tests passed: 10 test files, 20 tests."
+    },
+    {
+      "name": "phase-9b-scoped-tests",
+      "command": "npm run test -- tests/user-app-trial-result-review.test.ts tests/user-app-trial-issue-taxonomy.test.ts tests/user-app-trial-decision-framework.test.ts tests/user-app-trial-result-review-panel.test.tsx tests/user-app-trial-issue-summary-panel.test.tsx tests/user-app-trial-decision-framework-panel.test.tsx tests/user-app-shell-trial-result-review-flow.test.tsx tests/phase-9B-documentation-recovery.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
+      "purpose": "Run Phase 9B internal trial result review scoped regression coverage.",
+      "lastStatus": "passed",
+      "lastSummary": "Phase 9B scoped tests passed: 10 test files, 27 tests."
     }
   ],
-  "lastUpdatedPhase": "9A"
+  "lastUpdatedPhase": "9B"
 }

@@ -2,18 +2,18 @@
 
 ## What To Do Next
 
-Proceed to Phase 9B: Internal Trial Result Review Framework.
+Proceed to Phase 9C: Internal Trial Iteration Plan.
 
 ## Why
 
-Phase 9A added the internal trial operations pack, observation template, and outcome review model. The current decision is that internal small-scope trial operations are ready to be reviewed through a result framework, while production release remains out of scope.
+Phase 9B added the internal trial result review framework, issue taxonomy, and next-step decision model. The current decision is that anonymous/mock internal trial results can now be turned into an iteration plan, while production release remains out of scope.
 
-Historical recovery notes: Phase 7H browser/mobile QA remains the local prototype QA baseline, Phase 8B PWA/mobile polish is complete, Phase 8C trial pack is complete, Phase 8D content QA is complete, Phase 8E release readiness is complete, and Phase 9A internal trial operations are complete.
+Historical recovery notes: Phase 7H browser/mobile QA remains the local prototype QA baseline, Phase 8B PWA/mobile polish is complete, Phase 8C trial pack is complete, Phase 8D content QA is complete, Phase 8E release readiness is complete, Phase 9A internal trial operations are complete, and Phase 9B internal trial result review is complete.
 
-## Recommended 9B Scope
+## Recommended 9C Scope
 
-- Create an internal trial result review framework.
-- Define how anonymous observation signals, issue themes, and outcome recommendations should be summarized.
+- Create an internal trial iteration plan.
+- Turn review decisions into scoped content, Shell, trial-pack, privacy-copy, and follow-up trial actions.
 - Keep the work local/documented unless a later explicit gate approves real collection systems.
 
 ## What Not To Do
@@ -60,11 +60,15 @@ Read these files first:
 29. `docs/product/internal-trial-observation-template.md`
 30. `docs/product/internal-trial-outcome-review.md`
 31. `docs/phases/phase-9A.md`
-32. `project-state/project-state.snapshot.json`
-33. `project-state/latest-handoff.json`
-34. `project-state/provider-handoff.json`
-35. `project-state/active-task.json`
-36. `project-state/guardrails.json`
+32. `docs/product/internal-trial-result-review-framework.md`
+33. `docs/product/internal-trial-issue-taxonomy.md`
+34. `docs/product/internal-trial-decision-framework.md`
+35. `docs/phases/phase-9B.md`
+36. `project-state/project-state.snapshot.json`
+37. `project-state/latest-handoff.json`
+38. `project-state/provider-handoff.json`
+39. `project-state/active-task.json`
+40. `project-state/guardrails.json`
 
 Then run:
 

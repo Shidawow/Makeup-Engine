@@ -5,9 +5,9 @@ Makeup Engine is the makeup template production system for a future makeup coach
 ## Current Position
 
 - Project role: makeup template production system plus a local contract-driven user app shell prototype.
-- Last completed phase: `Phase 9A`.
-- Current completed business phase: `Phase 9A - Internal Trial Operations Pack`.
-- Next recommended phase: `Phase 9B - Internal Trial Result Review Framework`.
+- Last completed phase: `Phase 9B`.
+- Current completed business phase: `Phase 9B - Internal Trial Result Review Framework`.
+- Next recommended phase: `Phase 9C - Internal Trial Iteration Plan`.
 - Recent recovery milestones retained in phase docs: `Phase 6K`, `Phase 6L`, `Phase 6L-1`, `Phase 7A`, `Phase 7B`, `Phase 7C`, `Phase 7D`, `Phase 7E`, `Phase 7F`, `Phase 7G`, `Phase 7H`, and `Phase 8A`.
 - Historical route-planning milestone: `Phase 8A - Product Route Decision / App MVP Planning`.
 
@@ -42,6 +42,7 @@ SourceImagePackage manifest
 -> Template Content QA for Real User Trial
 -> MVP Release Readiness Gate
 -> Internal Trial Operations Pack
+-> Internal Trial Result Review Framework
 -> Phase 8 Roadmap / V1 Non-Goals
 -> Consumption Manifest
 -> Dataset Review
@@ -89,12 +90,16 @@ SourceImagePackage manifest
 35. `docs/product/internal-trial-participant-guide.md`
 36. `docs/product/internal-trial-observation-template.md`
 37. `docs/product/internal-trial-outcome-review.md`
-38. `docs/phases/phase-9A.md`
-39. `docs/phases/phase-7H.md`
-40. `project-state/project-state.snapshot.json`
-41. `project-state/provider-handoff.json`
-42. `project-state/latest-handoff.json`
-43. `project-state/active-task.json`
+38. `docs/product/internal-trial-result-review-framework.md`
+39. `docs/product/internal-trial-issue-taxonomy.md`
+40. `docs/product/internal-trial-decision-framework.md`
+41. `docs/phases/phase-9A.md`
+42. `docs/phases/phase-9B.md`
+43. `docs/phases/phase-7H.md`
+44. `project-state/project-state.snapshot.json`
+45. `project-state/provider-handoff.json`
+46. `project-state/latest-handoff.json`
+47. `project-state/active-task.json`
 
 ## What The System Can Do Now
 
@@ -112,6 +117,7 @@ SourceImagePackage manifest
 - Render Phase 8D template content QA, trial template selection, and trial content readiness administrator panels for real user trial preparation.
 - Render Phase 8E MVP release readiness and trial go/no-go administrator panels for deciding internal trial preparation.
 - Render Phase 9A internal trial operations, observation template, and outcome review administrator panels for internal small-scope trial preparation.
+- Render Phase 9B internal trial result review, issue taxonomy, and decision framework administrator panels for anonymous/mock local trial result review.
 - Continue from Vision Analysis into mask editing, evidence capture, dataset review, materialized training datasets, and lightweight model artifact workflows.
 
 ## What The System Must Not Do
@@ -128,6 +134,7 @@ SourceImagePackage manifest
 - Do not treat Phase 8D content QA, trial template selection, or trial content readiness as production release, App Store/TestFlight, backend, AI generation, camera, AR, analytics, or training approval.
 - Do not treat Phase 8E release readiness or go/no-go as production release, App Store/TestFlight, backend readiness, camera readiness, AR readiness, analytics readiness, or training approval.
 - Do not treat Phase 9A internal trial operations, observation templates, or outcome review as public recruitment, production release, backend form, analytics, App Store/TestFlight, or real user data collection approval.
+- Do not treat Phase 9B result review, issue taxonomy, or decision framework as production analytics, backend record collection, AI analysis, training, public recruitment, or production release approval.
 - Do not start React Native, Flutter, iOS native, backend, database, camera, AR, ecommerce, community, paid, OpenAI API, external API, training, or production release work without a later explicit gate.
 
 ## Validation Commands
@@ -178,6 +185,12 @@ For Phase 9A scoped internal trial operations checks run:
 
 ```bash
 npm run test -- tests/user-app-internal-trial-ops.test.ts tests/user-app-trial-observation.test.ts tests/user-app-trial-outcome.test.ts tests/user-app-internal-trial-ops-panel.test.tsx tests/user-app-trial-observation-panel.test.tsx tests/user-app-trial-outcome-panel.test.tsx tests/user-app-shell-internal-trial-flow.test.tsx tests/phase-9A-documentation-recovery.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts
+```
+
+For Phase 9B scoped internal trial result review checks run:
+
+```bash
+npm run test -- tests/user-app-trial-result-review.test.ts tests/user-app-trial-issue-taxonomy.test.ts tests/user-app-trial-decision-framework.test.ts tests/user-app-trial-result-review-panel.test.tsx tests/user-app-trial-issue-summary-panel.test.tsx tests/user-app-trial-decision-framework-panel.test.tsx tests/user-app-shell-trial-result-review-flow.test.tsx tests/phase-9B-documentation-recovery.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts
 ```
 
 ## Source Of Truth

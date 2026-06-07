@@ -53,6 +53,9 @@ export type UserAppShellSection =
   | 'internalTrialOps'
   | 'trialObservation'
   | 'trialOutcome'
+  | 'trialResultReview'
+  | 'trialIssueSummary'
+  | 'trialDecisionFramework'
   | 'mobileQa'
   | 'interaction';
 

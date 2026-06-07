@@ -57,7 +57,7 @@ describe('Phase 8E documentation recovery', () => {
       'Do not collect real names',
     );
     expect(readText('docs/phases/phase-8E.md')).toContain('MVP Release Readiness Gate');
-    expect(readText('docs/status/NEXT_ACTION.md')).toContain('Phase 9B');
+    expect(readText('docs/status/NEXT_ACTION.md')).toContain('Phase 9C');
     expect(readText('docs/prompts/MASTER_CODEX_CONTEXT.md')).toContain(
       'Phase 8E completed',
     );
@@ -65,15 +65,15 @@ describe('Phase 8E documentation recovery', () => {
       'lastCompletedPhase: 9A',
     );
     expect(readText('docs/prompts/PROVIDER_SWITCH_PROMPT.md')).toContain(
-      'nextRecommendedPhase: 9B',
+      'nextRecommendedPhase: 9C',
     );
 
     const snapshot = readJson<ProjectSnapshot>('project-state/project-state.snapshot.json');
-    expect(snapshot.lastCompletedPhase).toBe('9A');
-    expect(snapshot.lastCompletedBusinessPhase).toBe('9A');
-    expect(snapshot.currentPhaseId).toBe('9A');
-    expect(snapshot.nextRecommendedPhase).toBe('9B');
-    expect(snapshot.nextRecommendedPhaseName).toContain('Internal Trial Result Review Framework');
+    expect(snapshot.lastCompletedPhase).toBe('9B');
+    expect(snapshot.lastCompletedBusinessPhase).toBe('9B');
+    expect(snapshot.currentPhaseId).toBe('9B');
+    expect(snapshot.nextRecommendedPhase).toBe('9C');
+    expect(snapshot.nextRecommendedPhaseName).toContain('Internal Trial Iteration Plan');
     expect(snapshot.mainDataFlow).toEqual(
       expect.arrayContaining([
         'UserAppMvpReleaseReadiness',
@@ -93,22 +93,22 @@ describe('Phase 8E documentation recovery', () => {
     expect(snapshot.forbiddenActions.join('\n')).toContain('real user data collection');
 
     const providerHandoff = readJson<ProviderHandoff>('project-state/provider-handoff.json');
-    expect(providerHandoff.currentTask).toContain('Phase 9A');
-    expect(providerHandoff.lastCompletedPhase).toBe('9A');
-    expect(providerHandoff.nextRecommendedPhase).toBe('9B');
-    expect(providerHandoff.nextRecommendedPhaseName).toContain('Internal Trial Result Review Framework');
+    expect(providerHandoff.currentTask).toContain('Phase 9B');
+    expect(providerHandoff.lastCompletedPhase).toBe('9B');
+    expect(providerHandoff.nextRecommendedPhase).toBe('9C');
+    expect(providerHandoff.nextRecommendedPhaseName).toContain('Internal Trial Iteration Plan');
     expect(providerHandoff.nextRequiredReadFiles).toContain('docs/phases/phase-8E.md');
     expect(providerHandoff.nextRequiredReadFiles).toContain(
       'docs/user-app/mvp-release-readiness-gate.md',
     );
     expect(providerHandoff.handoffNotes.join('\n')).toContain(
-      'Phase 9B should create an internal trial result review framework',
+      'Phase 9C should create an internal trial iteration plan',
     );
 
     const latestHandoff = readJson<LatestHandoff>('project-state/latest-handoff.json');
-    expect(latestHandoff.fromPhase).toBe('9A');
-    expect(latestHandoff.toPhase).toBe('9B');
-    expect(latestHandoff.nextAction).toContain('Phase 9B');
+    expect(latestHandoff.fromPhase).toBe('9B');
+    expect(latestHandoff.toPhase).toBe('9C');
+    expect(latestHandoff.nextAction).toContain('Phase 9C');
     expect(latestHandoff.mvpReleaseReadinessDecision.phase8EResult).toContain(
       'MVP release readiness report',
     );
@@ -121,7 +121,7 @@ describe('Phase 8E documentation recovery', () => {
     expect(latestHandoff.mvpReleaseReadinessDecision.nextPhase).toContain('Phase 9A');
 
     const guardrails = readJson<GuardrailState>('project-state/guardrails.json');
-    expect(guardrails.phase).toBe('9A');
+    expect(guardrails.phase).toBe('9B');
     expect(guardrails.guardrails.map((guardrail) => guardrail.id)).toEqual(
       expect.arrayContaining([
         'phase_8e_release_readiness_gate_only',

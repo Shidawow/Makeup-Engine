@@ -1,7 +1,7 @@
 {
-  "fromPhase": "9A",
-  "toPhase": "9B",
-  "summary": "Phase 9A completed local Internal Trial Operations Pack work: internal trial operations model, anonymous observation guide, outcome review model, administrator operations panels, operations documents, participant guide, observation template, and outcome review documentation. It did not add production app, public recruitment, backend, camera, AR, analytics, AI analysis, OpenAI/external API usage, training, App Store/TestFlight, online release, or real user record collection.",
+  "fromPhase": "9B",
+  "toPhase": "9C",
+  "summary": "Phase 9B completed local Internal Trial Result Review Framework work: anonymous/mock result review model, issue taxonomy, decision framework, administrator review panels, result review documents, issue taxonomy documentation, and decision framework documentation. It did not add production app, public recruitment, backend, camera, AR, analytics, AI analysis, OpenAI/external API usage, training, App Store/TestFlight, online release, or real user record collection.",
   "routeDecision": {
     "selectedRoute": "React Web / PWA MVP first",
     "futureAppOwnership": "separate user-facing app surface/repository after a future explicit phase gate",
@@ -88,21 +88,25 @@
     "docs/phases/phase-6L.md",
     "docs/phases/phase-6L-1.md",
     "docs/phases/phase-6K.md",
-    "docs/phases/phase-6J.md"
+    "docs/phases/phase-6J.md",
+    "docs/product/internal-trial-result-review-framework.md",
+    "docs/product/internal-trial-issue-taxonomy.md",
+    "docs/product/internal-trial-decision-framework.md",
+    "docs/phases/phase-9B.md"
   ],
-  "nextAction": "Proceed to Phase 9B: Internal Trial Result Review Framework. Phase 9A is complete. Review anonymous internal trial operations evidence without adding production app, public recruitment, backend, database, camera, AR, training, OpenAI API, external API, native iOS, React Native, Flutter, ecommerce, community, paid features, analytics, accounts, online publication, App Store/TestFlight, service worker, offline cache, push notification, background sync, install tracking, AI analysis, or real user data collection.",
+  "nextAction": "Proceed to Phase 9C: Internal Trial Iteration Plan. Phase 9B is complete. Turn anonymous/mock internal trial review decisions into scoped iteration plans without adding production app, public recruitment, backend, database, camera, AR, training, OpenAI API, external API, native iOS, React Native, Flutter, ecommerce, community, paid features, analytics, accounts, online publication, App Store/TestFlight, service worker, offline cache, push notification, background sync, install tracking, AI analysis, or real user data collection.",
   "risks": [
-    "Letting Phase 9B become real user research data infrastructure instead of a local result review framework",
-    "Treating Phase 9A operations as public recruitment, App Store/TestFlight, or production launch operations",
+    "Letting Phase 9C become production roadmap execution instead of a local internal iteration plan",
+    "Treating Phase 9B review decisions as real analytics or public research data",
     "Collecting real names, contact information, photos, health data, sensitive identity data, analytics records, backend records, or training data before a future explicit approval gate",
     "Weakening UserAppTemplatePackage as the stable handoff contract"
   ],
   "forbiddenActions": [
-    "Do not treat Phase 9A internal trial operations, observation templates, or outcome review as public recruitment, production release, App Store/TestFlight, backend forms, analytics, camera readiness, AR readiness, AI analysis approval, OpenAI/external API approval, training readiness, online publication, or real user data collection approval.",
-    "Do not use Phase 9A participant types as permission to collect real user names, contacts, photos, health information, sensitive identity data, biometrics, backend records, analytics records, or training data.",
-    "Do not mutate UserAppTemplatePackage from Phase 9A operations, observation, outcome review, sessions, preferences, recommendations, content QA, feedback, or admin panels.",
+    "Do not treat Phase 9B internal trial result review, issue taxonomy, or decision framework as production analytics, public recruitment, production release, App Store/TestFlight, backend forms, analytics, camera readiness, AR readiness, AI analysis approval, OpenAI/external API approval, training readiness, online publication, or real user data collection approval.",
+    "Do not use Phase 9B anonymous/mock review signals as permission to collect real user names, contacts, photos, health information, sensitive identity data, biometrics, backend records, analytics records, or training data.",
+    "Do not mutate UserAppTemplatePackage from Phase 9B result review, issue taxonomy, decision framework, sessions, preferences, recommendations, content QA, feedback, or admin panels.",
     "Do not write real internal trial participant records into project-state or training datasets.",
-    "Do not train directly from SourceImagePackage or user photo/profile/preference/recommendation/session/readiness/browser QA/release readiness/go-no-go/operations/observation/outcome data.",
+    "Do not train directly from SourceImagePackage or user photo/profile/preference/recommendation/session/readiness/browser QA/release readiness/go-no-go/operations/observation/outcome/review data.",
     "Do not expand legacy frozen modules.",
     "Do not weaken the UserAppTemplatePackage boundary; the future React Web / PWA MVP must consume exported contract data and cannot mutate Makeup Engine production state."
   ],
@@ -148,5 +152,16 @@
     ],
     "participantBoundary": "Participant coverage uses broad types only; real names, contact information, photos, health information, sensitive identity information, biometrics, backend records, analytics records, and training data remain blocked.",
     "nextPhase": "Phase 9B Internal Trial Result Review Framework"
+  },
+  "internalTrialResultReviewDecision": {
+    "phase9BResult": [
+      "internal trial result review framework",
+      "issue taxonomy with severity and actionability",
+      "decision framework for continue/revise/pause/ready-for-9C",
+      "administrator review panels",
+      "result review, issue taxonomy, and decision documents"
+    ],
+    "reviewBoundary": "Review inputs are anonymous/mock/example summaries only; real names, contact information, photos, health information, sensitive identity information, biometrics, backend records, analytics records, AI analysis records, and training data remain blocked.",
+    "nextPhase": "Phase 9C Internal Trial Iteration Plan"
   }
 }

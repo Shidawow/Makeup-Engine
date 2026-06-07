@@ -2,13 +2,13 @@
 
 ## Current Phase
 
-Phase 9A: Internal Trial Operations Pack is complete.
+Phase 9B: Internal Trial Result Review Framework is complete.
 
-Last completed business phase: Phase 9A.
+Last completed business phase: Phase 9B.
 
-Next recommended phase: Phase 9B, Internal Trial Result Review Framework.
+Next recommended phase: Phase 9C, Internal Trial Iteration Plan.
 
-Phase 9A adds a local internal trial operations pack, observation template, and outcome review model for internal small-scope trial preparation. Makeup Engine remains the makeup template production system and local contract prototype. Future production user app work should still be planned as a separate app surface or repository after an explicit phase gate.
+Phase 9B adds a local internal trial result review framework, issue taxonomy, and next-step decision model for anonymous/mock trial result review. Makeup Engine remains the makeup template production system and local contract prototype. Future production user app work should still be planned as a separate app surface or repository after an explicit phase gate.
 
 ## What The System Can Do
 
@@ -36,6 +36,7 @@ Phase 9A adds a local internal trial operations pack, observation template, and 
 - Render template content QA, trial template selection, and trial content readiness administrator panels for real user trial preparation.
 - Render MVP release readiness and trial go/no-go administrator panels for internal trial preparation decisions.
 - Render internal trial operations, observation template, and outcome review administrator panels for internal small-scope trial preparation.
+- Render internal trial result review, issue taxonomy, and decision framework administrator panels for anonymous/mock local trial result review.
 - Verify HTTP smoke, critical copy, privacy copy, Chinese copy, and source-level forbidden-token checks without browser photo capture, backend, AR, training, OpenAI, external APIs, or new runtime dependencies.
 - Use the Phase 8A product route decision to plan a future React Web / PWA user app MVP outside Makeup Engine while keeping `UserAppTemplatePackage` as the handoff contract.
 - Export operator/Codex handoff summaries without storing object URLs, large image bytes, local absolute paths, React state, user photo bytes, or sensitive profile data.
@@ -58,6 +59,7 @@ Phase 9A adds a local internal trial operations pack, observation template, and 
 - It cannot treat Phase 8D template content QA, trial template selection, or trial content readiness as production release, App Store/TestFlight, backend readiness, AI generation approval, OpenAI/external API usage, camera/AR readiness, analytics readiness, or training approval.
 - It cannot treat Phase 8E MVP release readiness or trial go/no-go as production release, App Store/TestFlight, backend readiness, camera/AR readiness, analytics readiness, AI generation approval, OpenAI/external API usage, or training approval.
 - It cannot treat Phase 9A internal trial operations, observation templates, or outcome review as public recruitment, production release, backend form, analytics, App Store/TestFlight, real user record collection, or training approval.
+- It cannot treat Phase 9B result review, issue taxonomy, or decision framework as production analytics, backend record collection, AI analysis, training, public recruitment, or production release approval.
 - It cannot collect real names, contact information, health information, sensitive identity information, photos, face embeddings, biometric identifiers, backend trial records, analytics records, or training data through the trial pack.
 - It cannot use service workers, offline cache, push notifications, background sync, install tracking, analytics, backend, camera, AR, or training in Phase 8B.
 - It cannot bootstrap backend, accounts, analytics, camera/photo capture, AR, native iOS, cross-platform runtime, OpenAI/external APIs, training, or online publication during route planning.
@@ -87,7 +89,7 @@ Phase 9A adds a local internal trial operations pack, observation template, and 
 
 ## Recent Validation
 
-Phase 9A validation must include:
+Phase 9B validation must include:
 
 ```bash
 npm run typecheck
@@ -103,6 +105,6 @@ The latest completed validation is recorded in `project-state/test-status.json`.
 
 ## Next Phase Recommendation
 
-Proceed to Phase 9B: Internal Trial Result Review Framework.
+Proceed to Phase 9C: Internal Trial Iteration Plan.
 
-Phase 9B should create a result review framework for internal trial evidence while keeping real collection systems, backend, camera, AR, analytics, App Store/TestFlight, and production release out of scope.
+Phase 9C should turn anonymous review decisions into an internal iteration plan while keeping real collection systems, backend, camera, AR, analytics, App Store/TestFlight, AI analysis, training, and production release out of scope.

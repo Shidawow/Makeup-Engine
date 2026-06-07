@@ -1,5 +1,5 @@
 {
-  "phase": "9A",
+  "phase": "9B",
   "status": "passed",
   "lastValidation": {
     "typecheck": "passed",
@@ -9,13 +9,14 @@
     "projectStatusJson": "passed",
     "projectContext": "passed",
     "contextPackJson": "passed",
-    "userAppBrowserQa": "not_required_for_phase_9A_operations_pack",
-    "httpSmoke": "not_required_for_phase_9A_operations_pack",
+    "userAppBrowserQa": "not_required_for_phase_9B_result_review_framework",
+    "httpSmoke": "not_required_for_phase_9B_result_review_framework",
     "phase8DScopedTests": "passed",
     "phase8EScopedTests": "passed",
     "phase9AScopedTests": "passed",
-    "testFiles": 399,
-    "tests": 570
+    "testFiles": 407,
+    "tests": 590,
+    "phase9BScopedTests": "passed"
   },
   "lastKnownPreDoc0Validation": {
     "typecheck": "passed",
@@ -32,14 +33,14 @@
     "npm run project:context",
     "node scripts/project-status.mjs --json",
     "node scripts/context-pack.mjs --json",
-    "npm run test -- tests/user-app-internal-trial-ops.test.ts tests/user-app-trial-observation.test.ts tests/user-app-trial-outcome.test.ts tests/user-app-internal-trial-ops-panel.test.tsx tests/user-app-trial-observation-panel.test.tsx tests/user-app-trial-outcome-panel.test.tsx tests/user-app-shell-internal-trial-flow.test.tsx tests/phase-9A-documentation-recovery.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
+    "npm run test -- tests/user-app-trial-result-review.test.ts tests/user-app-trial-issue-taxonomy.test.ts tests/user-app-trial-decision-framework.test.ts tests/user-app-trial-result-review-panel.test.tsx tests/user-app-trial-issue-summary-panel.test.tsx tests/user-app-trial-decision-framework-panel.test.tsx tests/user-app-shell-trial-result-review-flow.test.tsx tests/phase-9B-documentation-recovery.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
   ],
   "notes": [
-    "9A is local internal trial operations preparation only.",
-    "9A added internal trial operations, participant type coverage, anonymous observation guide, outcome review recommendations, fixtures, administrator panels, and operations documentation.",
-    "9A did not add production app, public recruitment, backend, analytics, AI analysis, OpenAI/external API usage, camera, AR, training, App Store/TestFlight, online release, or real user data collection.",
-    "Phase 9A scoped tests passed: 10 test files, 20 tests.",
-    "Full npm run test passed: 399 test files, 570 tests.",
+    "9B is local internal trial result review only.",
+    "9B added result review, issue taxonomy, decision framework, fixtures, administrator panels, and result review documentation.",
+    "9B did not add production app, public recruitment, backend, analytics, AI analysis, OpenAI/external API usage, camera, AR, training, App Store/TestFlight, online release, or real user data collection.",
+    "Phase 9B scoped tests passed: 10 test files, 27 tests.",
+    "Full npm run test passed: 407 test files, 590 tests.",
     "npm run typecheck, npm run build, npm run project:status, npm run project:context, node scripts/project-status.mjs --json, and node scripts/context-pack.mjs --json passed."
   ]
 }

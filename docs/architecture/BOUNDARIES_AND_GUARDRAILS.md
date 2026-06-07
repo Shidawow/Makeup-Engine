@@ -86,6 +86,9 @@
 - Phase 9A internal trial operations, observation templates, and outcome review are local administrator preparation only and are not public recruitment, production release, App Store/TestFlight, backend forms, analytics, camera, AR, AI analysis, OpenAI/external API usage, or training approval.
 - Phase 9A participant coverage uses broad participant types only and cannot collect real names, contact information, health information, sensitive identity information, photos, face embeddings, biometric identifiers, backend records, analytics records, or training data.
 - Phase 9A operations, observation notes, outcome review, sessions, preferences, recommendations, and admin panels cannot mutate `UserAppTemplatePackage`, write real user records into `project-state`, or enter training datasets.
+- Phase 9B internal trial result review, issue taxonomy, and decision framework are local administrator review aids only and are not production analytics, public recruitment, production release, App Store/TestFlight, backend forms, analytics, camera, AR, AI analysis, OpenAI/external API usage, or training approval.
+- Phase 9B review signals are anonymous/mock/example summaries only and cannot collect real names, contact information, health information, sensitive identity information, photos, face embeddings, biometric identifiers, backend records, analytics records, or training data.
+- Phase 9B result review, issue taxonomy, decision framework, sessions, preferences, recommendations, and admin panels cannot mutate `UserAppTemplatePackage`, write real user records into `project-state`, or enter training datasets.
 - A compatibility target such as `ios-app-v0` or `web-app-v0` describes intended consumers only; it does not create an iOS app, Web app, backend, or online release.
 - Rejected, archived, or deprecated library entries must not enter publish packages by default.
 - Legacy runtime areas no longer carry new mainline features.
@@ -114,6 +117,7 @@
 - Template content QA reads `UserAppTemplatePackage` content and deterministic QA fixtures only; it does not create production app state, backend records, analytics records, AI-generated content, real user trial records, camera/photo records, AR state, native app state, or training data.
 - MVP release readiness and trial go/no-go read Phase 8A-8D readiness evidence only; they do not create production app state, backend records, analytics records, AI-generated content, real user trial records, camera/photo records, AR state, native app state, or training data.
 - Internal trial operations, observation templates, and outcome review read Phase 8C-8E readiness evidence and local mock/example summaries only; they do not create production app state, backend records, analytics records, real user participant records, camera/photo records, AR state, native app state, or training data.
+- Internal trial result review, issue taxonomy, and decision framework read anonymous/mock trial result signals only; they do not create production app state, backend records, analytics records, real user participant records, camera/photo records, AR state, native app state, AI analysis state, or training data.
 - Dataset review decides whether corrected artifacts can become materialized training data.
 - Training reads materialized datasets, not UI state and not raw source packages.
 - Export reads validated model artifacts and export readiness metadata.

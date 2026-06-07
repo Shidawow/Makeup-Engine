@@ -32,3 +32,6 @@ export * from './userAppTrialGoNoGo';
 export * from './userAppInternalTrialOps';
 export * from './userAppTrialObservation';
 export * from './userAppTrialOutcome';
+export * from './userAppTrialIssueTaxonomy';
+export * from './userAppTrialResultReview';
+export * from './userAppTrialDecisionFramework';
