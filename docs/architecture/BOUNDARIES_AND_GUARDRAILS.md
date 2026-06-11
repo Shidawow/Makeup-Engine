@@ -135,3 +135,9 @@
 - No OpenAI API usage is required for current mainline behavior.
 - MediaPipe assets may exist for local vision work, but Phase 7C/7D/7E/7F user-side placeholder, preference, discovery, recommendation, and session work does not send user photos, preferences, recommendations, or session inputs to MediaPipe or any face analysis runtime.
 - PyTorch, TensorFlow, ONNX Runtime, backend services, and databases are not part of the current MVP foundation.
+
+## Phase 9E Evidence Boundary
+
+Phase 9E evidence pack, evidence summary, and sufficiency gate are local administrator decision aids only. They must not become production analytics, backend record collection, public recruitment, AI analysis, training, production app approval, production roadmap approval, or production release approval.
+
+Evidence cannot include real names, contact information, photos, health information, sensitive identity information, face embeddings, biometric identifiers, backend records, analytics records, AI analysis records, upload requests, or training labels. Evidence cannot mutate `UserAppTemplatePackage` and cannot write real user trial records into project-state.

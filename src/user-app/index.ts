@@ -41,3 +41,6 @@ export * from './userAppTrialIterationPlan';
 export * from './userAppInternalTrialLearningSummary';
 export * from './userAppProductDecisionGate';
 export * from './userAppNextPhaseRecommendation';
+export * from './userAppInternalTrialEvidencePack';
+export * from './userAppTrialEvidenceSummary';
+export * from './userAppEvidenceSufficiencyGate';

@@ -62,3 +62,6 @@
 
 - Phase 9D internal trial learning summary and product decision gate are local administrator decision aids only; they are not production analytics, backend collection, AI analysis, production app approval, production roadmap approval, public recruitment, App Store/TestFlight readiness, online publication, training, or real user record collection approval.
 - Phase 9D uses anonymous/mock/example summaries only and cannot store real names, contact information, photos, health information, sensitive identity information, biometrics, backend records, analytics records, AI analysis records, training labels, or real user trial records in project-state.
+
+- Phase 9E internal trial evidence pack is local administrator evidence support only; it is not production analytics, backend evidence collection, AI analysis, public recruitment, production app approval, or production release approval.
+- Phase 9E evidence must remain anonymous/mock/example summaries and cannot store real user names, contacts, photos, health information, sensitive identity information, biometrics, backend records, analytics records, AI analysis records, training labels, or real user trial records in project-state.

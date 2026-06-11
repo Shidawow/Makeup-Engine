@@ -1,5 +1,5 @@
 {
-  "phase": "9D",
+  "phase": "9E",
   "guardrails": [
     {
       "id": "source-image-not-training-data",
@@ -412,6 +412,22 @@
     {
       "id": "phase_9d_no_training_or_project_state_user_records",
       "rule": "Phase 9D must not write training data or real user trial records into project-state."
+    },
+    {
+      "id": "phase_9e_evidence_pack_only",
+      "rule": "Phase 9E evidence pack, summary, and sufficiency gate are local administrator evidence aids only, not production analytics, public recruitment, backend collection, AI analysis, training, production app approval, or production release approval."
+    },
+    {
+      "id": "phase_9e_no_sensitive_evidence_data",
+      "rule": "Phase 9E evidence cannot collect or store real names, contact information, photos, health information, sensitive identity information, face embeddings, biometric identifiers, backend records, analytics records, AI analysis records, or training data."
+    },
+    {
+      "id": "phase_9e_no_backend_ai_or_runtime_collection",
+      "rule": "Phase 9E must not add backend, database, accounts, analytics, AI analysis, OpenAI/external API usage, camera, AR, upload, service worker, offline cache, push notification, background sync, install tracking, native app, or production runtime collection."
+    },
+    {
+      "id": "phase_9e_no_training_or_project_state_user_records",
+      "rule": "Phase 9E evidence cannot write training input or real user trial records into project-state and cannot mutate UserAppTemplatePackage."
     }
   ],
   "legacyFrozenModules": [
@@ -420,5 +436,5 @@
     "src/intelligence/runtime"
   ],
   "externalApiUsageAllowedInDoc1": false,
-  "updatedAt": "2026-06-11T00:00:00.000+08:00"
+  "updatedAt": "2026-06-11T23:00:00.000+08:00"
 }

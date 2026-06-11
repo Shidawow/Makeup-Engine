@@ -6,11 +6,11 @@ Default to compact context. Do not copy full historical chat transcripts. Do not
 
 ## Current State
 
-- `lastCompletedPhase: 9D`
-- `nextRecommendedPhase: 9E`
-- `nextRecommendedPhaseName: Internal Trial Evidence Pack`
+- `lastCompletedPhase: 9E`
+- `nextRecommendedPhase: 9F`
+- `nextRecommendedPhaseName: Internal Trial Evidence Collection Preparation`
 - Project role: Makeup template production system with a local contract-driven user app shell prototype, not a production user app.
-- Current capability: Phase 9C added local internal trial iteration plan, backlog, priority framework, and administrator iteration panels after Phase 9B internal trial result review.
+- Current capability: Phase 9E added local internal trial evidence pack, evidence summary, sufficiency gate, fixtures, and administrator evidence panels after Phase 9D learning decision gate.
 
 Historical handoff marker retained for recovery tests: `lastCompletedPhase: 8A`, `nextRecommendedPhase: 8B`.
 Historical handoff marker retained for Phase 8B recovery tests: `lastCompletedPhase: 8B`, `nextRecommendedPhase: 8C`.
@@ -19,6 +19,8 @@ Historical handoff marker retained for Phase 8D recovery tests: `lastCompletedPh
 Historical handoff marker retained for Phase 8E recovery tests: `lastCompletedPhase: 8E`, `nextRecommendedPhase: 9A`.
 Historical handoff marker retained for Phase 9A recovery tests: `lastCompletedPhase: 9A`, `nextRecommendedPhase: 9B`.
 Historical handoff marker retained for Phase 9B recovery tests: `lastCompletedPhase: 9B`, `nextRecommendedPhase: 9C`.
+Historical handoff marker retained for Phase 9C recovery tests: `lastCompletedPhase: 9C`, `nextRecommendedPhase: 9D`.
+Historical handoff marker retained for Phase 9D recovery tests: `lastCompletedPhase: 9D`, `nextRecommendedPhase: 9E`.
 
 ## Relevant skills
 
@@ -33,11 +35,11 @@ Historical handoff marker retained for Phase 9B recovery tests: `lastCompletedPh
 You are continuing Makeup Engine on native GPT / Codex Desktop.
 
 Current state:
-- lastCompletedPhase: 9D
-- nextRecommendedPhase: 9E
-- nextRecommendedPhaseName: Internal Trial Evidence Pack
+- lastCompletedPhase: 9E
+- nextRecommendedPhase: 9F
+- nextRecommendedPhaseName: Internal Trial Evidence Collection Preparation
 - project role: Makeup template production system with a local contract-driven user app shell prototype, not a production user app
-- current capability: React Web / PWA MVP first is selected; Phase 8B local PWA/mobile shell polish, Phase 8C local MVP trial pack, Phase 8D template content QA, Phase 8E MVP release readiness gate, Phase 9A internal trial operations pack, Phase 9B internal trial result review framework, and Phase 9C internal trial iteration plan; Phase 9D internal trial learning decision gate are complete; Makeup Engine remains the template production system and the future user-facing app should be planned separately
+- current capability: React Web / PWA MVP first is selected; Phase 8B local PWA/mobile shell polish, Phase 8C local MVP trial pack, Phase 8D template content QA, Phase 8E MVP release readiness gate, Phase 9A internal trial operations pack, Phase 9B internal trial result review framework, Phase 9C internal trial iteration plan, Phase 9D internal trial learning decision gate, and Phase 9E internal trial evidence pack are complete; Makeup Engine remains the template production system and the future user-facing app should be planned separately
 
 Compact context:
 - Use repository documents as source of truth; do not copy full historical chat.
@@ -84,7 +86,13 @@ Read these files first:
 34. docs/product/internal-trial-iteration-plan.md
 35. docs/product/internal-trial-iteration-backlog.md
 36. docs/product/internal-trial-priority-framework.md
-37. docs/user-app/user-app-browser-mobile-qa.md
+37. docs/product/internal-trial-learning-summary.md
+38. docs/product/product-decision-gate.md
+39. docs/product/next-phase-recommendation-framework.md
+40. docs/product/internal-trial-evidence-pack.md
+41. docs/product/trial-evidence-summary.md
+42. docs/product/evidence-sufficiency-gate.md
+43. docs/user-app/user-app-browser-mobile-qa.md
 21. docs/user-app/user-app-e2e-readiness.md
 22. docs/user-app/user-app-mobile-interaction-qa.md
 23. docs/user-app/user-app-readiness-gate.md
@@ -118,7 +126,9 @@ Forbidden:
 - Do not treat the Phase 8E MVP release readiness or trial go/no-go decision as production release, App Store/TestFlight, backend readiness, analytics readiness, camera readiness, AR readiness, AI generation approval, OpenAI/external API approval, training readiness, online publication, or real user data collection approval.
 - Do not treat the Phase 9A internal trial operations, observation template, or outcome review as public recruitment, production release, App Store/TestFlight, backend form, analytics, real user record collection, camera/AR, AI analysis, OpenAI/external API usage, or training approval.
 - Do not treat the Phase 9B internal trial result review, issue taxonomy, or decision framework as production analytics, public recruitment, backend record collection, AI analysis, OpenAI/external API usage, training, production release, or real user record collection approval.
-- Do not treat the Phase 9C internal trial iteration plan; Phase 9D internal trial learning decision gate, backlog, or priority framework as a formal production roadmap, backend issue tracker, production analytics, public recruitment, AI analysis, OpenAI/external API usage, training, production release, or real user record collection approval.
+- Do not treat the Phase 9C internal trial iteration plan, backlog, or priority framework as a formal production roadmap, backend issue tracker, production analytics, public recruitment, AI analysis, OpenAI/external API usage, training, production release, or real user record collection approval.
+- Do not treat the Phase 9D internal trial learning decision gate as production analytics, production app approval, backend collection, AI analysis, training, public recruitment, production roadmap approval, or production release approval.
+- Do not treat the Phase 9E internal trial evidence pack, evidence summary, or sufficiency gate as production analytics, backend evidence collection, AI analysis, training, public recruitment, production app approval, or production release approval.
 - Do not add service worker, offline cache, push notification, background sync, install tracking, analytics, backend, camera, AR, external API, native app, training, online publication, or app store release work unless a future explicit phase gate expands scope.
 - Do not build or bootstrap the separate production user app repository unless a future explicit phase gate expands scope.
 - Do not add real camera capture, AR, backend, database, account systems, cloud sync, analytics, ecommerce, community, paid features, online publishing, training, native iOS, React Native, Flutter, app store release work, or new runtime dependencies.
@@ -143,11 +153,11 @@ Acceptance commands:
 You are continuing Makeup Engine on PackyAPI + CLI.
 
 Current state:
-- lastCompletedPhase: 9D
-- nextRecommendedPhase: 9E
-- nextRecommendedPhaseName: Internal Trial Evidence Pack
+- lastCompletedPhase: 9E
+- nextRecommendedPhase: 9F
+- nextRecommendedPhaseName: Internal Trial Evidence Collection Preparation
 - project role: Makeup template production system with a local contract-driven user app shell prototype, not a production user app
-- current capability: Phase 9C completed internal trial iteration planning after Phase 9B internal trial result review, Phase 9A internal trial operations, Phase 8E MVP release readiness, Phase 8D content QA, Phase 8C local MVP trial pack, Phase 8B local PWA/mobile shell polish, and Phase 8A selected React Web / PWA MVP first
+- current capability: Phase 9E completed internal trial evidence packaging after Phase 9D learning decision gate, Phase 9C iteration planning, Phase 9B result review, and Phase 9A operations
 
 Use compact context and repository docs as source of truth. Candidate external skills remain explicit-only and scripts-disabled by default.
 
@@ -162,9 +172,9 @@ Forbidden and acceptance commands are the same as above.
 Below is the PackyAPI + CLI execution result for Makeup Engine. Please review it as ChatGPT / PM / architect and decide the next step.
 
 Current state:
-- lastCompletedPhase: 9D
-- nextRecommendedPhase: 9E
-- nextRecommendedPhaseName: Internal Trial Evidence Pack
+- lastCompletedPhase: 9E
+- nextRecommendedPhase: 9F
+- nextRecommendedPhaseName: Internal Trial Evidence Collection Preparation
 - project role: Makeup template production system, not a production user app
 
 Completed work:
@@ -206,8 +216,8 @@ Please respond with:
 
 ## Required Handoff Rules
 
-- Always state `lastCompletedPhase: 9D`.
-- Always state `nextRecommendedPhase: 9E` unless the owner asks for a targeted 9C follow-up.
+- Always state `lastCompletedPhase: 9E`.
+- Always state `nextRecommendedPhase: 9F` unless the owner asks for a targeted 9C follow-up.
 - Always list the required read files first.
 - Always include the boundary that `SourceImagePackage` can reach Vision Analysis through explicit binding, but cannot become a training dataset directly and cannot directly become a template library entry.
 - Always include the boundary that `UserAppTemplatePackage` is a consumption contract, not a real app, backend publication, or online release.

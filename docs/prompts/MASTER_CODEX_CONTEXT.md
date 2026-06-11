@@ -12,11 +12,12 @@ It produces templates, template evidence, correction records, review state, loca
 
 ## Current Phase
 
-- Current business phase: `Phase 9C completed`
-- Last completed phase: `Phase 9C`
-- Last completed phase name: `Phase 9C - Internal Trial Iteration Plan`
-- Next recommended phase: `Phase 9D - Internal Trial Evidence Pack`
+- Current business phase: `Phase 9E completed`
+- Last completed phase: `Phase 9E`
+- Last completed phase name: `Phase 9E - Internal Trial Evidence Pack`
+- Next recommended phase: `Phase 9F - Internal Trial Evidence Collection Preparation`
 
+Historical recovery marker retained for Phase 9C tests: `Phase 9C completed`.
 Historical recovery milestone retained for older phase tests: `Phase 8A completed` / `Phase 8A - Product Route Decision / App MVP Planning`.
 Historical recovery milestone retained for Phase 8B tests: `Phase 8B completed` / `Phase 8B - PWA / Mobile Web MVP Polish`.
 Historical recovery milestone retained for Phase 8C tests: `Phase 8C completed` / `Phase 8C - User App MVP Trial Pack`.
@@ -61,6 +62,8 @@ Real Photo
 -> Internal Trial Operations Pack
 -> Internal Trial Result Review Framework
 -> Internal Trial Iteration Plan
+-> Internal Trial Learning Summary & Product Decision Gate
+-> Internal Trial Evidence Pack
 -> Phase 8 Roadmap / V1 Non-Goals
 -> User App Consumption Manifest
 -> Dataset Review
@@ -78,7 +81,7 @@ Important boundary: `SourceImagePackage` can enter Vision Analysis through opera
 - `src/template-engine/production`: production queue, state machine, QA rules, rebinding recovery, analysis handoff, review lifecycle, smoke checklist.
 - `src/template-engine/library`: production task to library entry conversion, template versioning, and local library lifecycle.
 - `src/template-engine/app-contract`: publish package to user app contract adapter, makeup step normalization, compatibility validation, and prototype consumer view models.
-- `src/user-app`: local User App MVP Shell view models, navigation, progress, guidance UX, friendly messages, state, photo intake placeholder, personalization placeholder, local onboarding, local preferences, guidance hints, discovery, recommendation placeholders, local session persistence/recovery, privacy boundary utilities, mobile QA, app readiness gating, browser/mobile QA reports, trial operations, trial result review, issue taxonomy, decision framework, iteration backlog, priority framework, and iteration plan.
+- `src/user-app`: local User App MVP Shell view models, navigation, progress, guidance UX, friendly messages, state, photo intake placeholder, personalization placeholder, local onboarding, local preferences, guidance hints, discovery, recommendation placeholders, local session persistence/recovery, privacy boundary utilities, mobile QA, app readiness gating, browser/mobile QA reports, trial operations, trial result review, issue taxonomy, decision framework, iteration backlog, priority framework, iteration plan, learning decision gate, and evidence pack models.
 - `src/components/user-app`: local shell UI for package summary, template list/detail, hardened step guidance, region instructions, tools/products, compatibility, progress, disabled photo intake placeholder, personalization placeholder, local onboarding, local preferences, discovery/recommendation UI, session controls, recovery notices, app readiness, mobile QA, interaction checklist, privacy notice, and administrator trial readiness/operations/review panels.
 - `src/training`: source image import, artifact handling, deterministic training/evaluation/export utilities.
 - `src/components/template-studio`: operator UI for source image intake, artifact binding, production QA, library management, package preview, app contract preview, prototype consumer preview, mask editing, evidence, review, and dataset panels.
@@ -172,7 +175,9 @@ These areas are retained for compatibility and historical runtime work, but they
 - Phase 8E MVP release readiness and trial go/no-go add only local gate decisions for internal trial preparation; they are not production release, App Store/TestFlight, backend readiness, analytics readiness, camera readiness, AR readiness, AI generation approval, OpenAI/external API approval, training readiness, online publication, or real user data collection approval.
 - Phase 9A internal trial operations add only local participant type planning, session flow, anonymous observation templates, and outcome review; they are not public recruitment, production release, App Store/TestFlight, backend forms, analytics, real user record collection, camera, AR, AI analysis, OpenAI/external API usage, training, or online publication scope.
 - Phase 9B internal trial result review adds only local anonymous/mock result review, issue taxonomy, and decision framework; it is not production analytics, public recruitment, backend record collection, AI analysis, OpenAI/external API usage, training, production release, or real user record collection scope.
-- Phase 9C internal trial iteration plan; Phase 9D internal trial learning decision gate adds only local anonymous/mock iteration planning, backlog, and priority framework; it is not a formal production roadmap, backend issue tracker, production analytics, public recruitment, AI analysis, OpenAI/external API usage, training, production release, or real user record collection scope.
+- Phase 9C internal trial iteration plan adds only local anonymous/mock iteration planning, backlog, and priority framework; it is not a formal production roadmap, backend issue tracker, production analytics, public recruitment, AI analysis, OpenAI/external API usage, training, production release, or real user record collection scope.
+- Phase 9D internal trial learning decision gate adds only local anonymous/mock learning summary, product decision gate, and next phase recommendation structures.
+- Phase 9E internal trial evidence pack adds only local anonymous/mock evidence packaging, evidence summary, and sufficiency gate structures; it is not production analytics, backend evidence collection, public recruitment, AI analysis, training, production app approval, or production release approval.
 - Future production user-facing app work should be planned as a separate app surface or repository after an explicit phase gate. Makeup Engine remains the template production system and `UserAppTemplatePackage` remains the handoff contract.
 - User photo data, face embeddings, biometric identifiers, sensitive profile data, and user photo references must not enter durable export, training, model artifacts, or project-state.
 - User app consumption exports cannot persist object URLs, local absolute paths, large image bytes, or React state.

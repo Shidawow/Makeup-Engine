@@ -1,5 +1,5 @@
 {
-  "phase": "9D",
+  "phase": "9E",
   "status": "passed",
   "lastValidation": {
     "typecheck": "passed",
@@ -9,20 +9,21 @@
     "projectStatusJson": "passed",
     "projectContext": "passed",
     "contextPackJson": "passed",
-    "userAppBrowserQa": "not_required_for_phase_9d_learning_decision_gate",
-    "httpSmoke": "not_required_for_phase_9d_learning_decision_gate",
+    "userAppBrowserQa": "not_required_for_phase_9e_evidence_pack",
+    "httpSmoke": "not_required_for_phase_9e_evidence_pack",
     "phase8DScopedTests": "passed",
     "phase8EScopedTests": "passed",
     "phase9AScopedTests": "passed",
     "phase9BScopedTests": "passed",
     "phase9CScopedTests": "passed",
     "phase9DScopedTests": "passed",
-    "testFiles": 423,
-    "tests": 631,
-    "phase9DScopedTestFiles": 10,
-    "phase9DScopedTestsCount": 27,
-    "summary": "Phase 9D validation passed: typecheck, scoped Phase 9D tests, full npm test, build, project status/context, and JSON status/context commands.",
-    "updatedAt": "2026-06-11T22:29:00.000+08:00"
+    "phase9EScopedTests": "passed",
+    "testFiles": 431,
+    "tests": 646,
+    "phase9EScopedTestFiles": 10,
+    "phase9EScopedTestsCount": 22,
+    "summary": "Phase 9E validation passed: typecheck, scoped Phase 9E tests, full npm test, build, project status/context, and JSON status/context commands.",
+    "updatedAt": "2026-06-11T23:02:00.000+08:00"
   },
   "lastKnownPreDoc0Validation": {
     "typecheck": "passed",
@@ -39,19 +40,19 @@
     "npm run project:context",
     "node scripts/project-status.mjs --json",
     "node scripts/context-pack.mjs --json",
-    "npm run test -- tests/user-app-internal-trial-learning-summary.test.ts tests/user-app-product-decision-gate.test.ts tests/user-app-next-phase-recommendation.test.ts tests/user-app-internal-trial-learning-summary-panel.test.tsx tests/user-app-product-decision-gate-panel.test.tsx tests/user-app-next-phase-recommendation-panel.test.tsx tests/user-app-shell-learning-decision-flow.test.tsx tests/phase-9D-documentation-recovery.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
+    "npm run test -- tests/user-app-internal-trial-evidence-pack.test.ts tests/user-app-trial-evidence-summary.test.ts tests/user-app-evidence-sufficiency-gate.test.ts tests/user-app-internal-trial-evidence-pack-panel.test.tsx tests/user-app-trial-evidence-summary-panel.test.tsx tests/user-app-evidence-sufficiency-gate-panel.test.tsx tests/user-app-shell-evidence-pack-flow.test.tsx tests/phase-9E-documentation-recovery.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
   ],
   "notes": [
-    "9D is local internal trial learning and product decision support only.",
-    "9D added learning summary, product decision gate, next phase recommendation, fixtures, administrator panels, and decision documentation.",
-    "9D did not add production app approval, backend collection, database, analytics, AI analysis, OpenAI/external API usage, camera, AR, training, public recruitment, production release, or real user data collection.",
-    "Phase 9D scoped tests passed: 10 test files, 27 tests.",
-    "Full npm run test passed: 423 test files, 631 tests.",
+    "9E is local internal trial evidence packaging only.",
+    "9E added evidence pack, evidence summary, sufficiency gate, fixtures, administrator panels, and evidence documentation.",
+    "9E did not add production app, public recruitment, backend, analytics, AI analysis, OpenAI/external API usage, camera, AR, training, App Store/TestFlight, online publication, or real user data collection.",
+    "Phase 9E scoped tests passed: 10 test files, 22 tests.",
+    "Full npm run test passed: 431 test files, 646 tests.",
     "npm run typecheck, npm run build, npm run project:status, npm run project:context, node scripts/project-status.mjs --json, and node scripts/context-pack.mjs --json passed."
   ],
-  "lastCompletedPhase": "9D",
-  "currentPhase": "9D",
-  "nextRecommendedPhase": "9E",
-  "updatedAt": "2026-06-11T22:29:00.000+08:00",
-  "summary": "Phase 9D validation passed."
+  "lastCompletedPhase": "9E",
+  "currentPhase": "9E",
+  "nextRecommendedPhase": "9F",
+  "updatedAt": "2026-06-11T23:02:00.000+08:00",
+  "summary": "Phase 9E validation passed."
 }

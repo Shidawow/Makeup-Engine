@@ -393,3 +393,7 @@ src/components/demo/vision-analysis-demo
 - Mobile viewport readiness covers `375`, `390`, `414`, and `768` width profiles.
 - The User App Shell uses readable Chinese labels for the main prototype surfaces instead of mixed or mojibake copy.
 - Browser/mobile QA reports are local QA evidence only. They cannot mutate `UserAppTemplatePackage`, store real user records, or become production release approval.
+
+### Internal Trial Evidence Pack
+
+Phase 9E adds local evidence packaging structures for anonymous/mock internal trial evidence. `src/user-app/userAppInternalTrialEvidencePack.ts` owns evidence items, evidence types, risks, status, and the 9A/9B/9C/9D/9E evidence chain. `src/user-app/userAppTrialEvidenceSummary.ts` groups evidence into themes, insights, gaps, and recommendations. `src/user-app/userAppEvidenceSufficiencyGate.ts` decides whether evidence supports another internal trial, MVP validation planning, more evidence collection, privacy/scope blocking, or missing-evidence blocking. `src/components/user-app` renders 内部试用证据包, 试用证据摘要, and 证据充分性判断 panels inside the administrator checks area. It does not add production analytics, backend collection, real user record storage, camera, AR, AI analysis, OpenAI/external API usage, training, App Store/TestFlight, online publication, production app approval, or new runtime dependencies.

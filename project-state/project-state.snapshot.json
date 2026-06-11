@@ -1,14 +1,14 @@
 {
   "projectName": "Makeup Engine",
-  "projectRole": "Makeup template production system with completed React Web / PWA route planning, Phase 8B local PWA/mobile shell polish, Phase 8C local MVP trial pack, Phase 8D template content QA, Phase 8E MVP release readiness, Phase 9A internal trial operations, Phase 9B internal trial result review framework, Phase 9C internal trial iteration plan, and Phase 9D internal trial learning/product decision gate for a future separate user app MVP",
+  "projectRole": "Makeup template production system with completed React Web / PWA route planning, Phase 8B local PWA/mobile shell polish, Phase 8C local MVP trial pack, Phase 8D template content QA, Phase 8E MVP release readiness, Phase 9A internal trial operations, Phase 9B internal trial result review framework, Phase 9C internal trial iteration plan, Phase 9D internal trial learning/product decision gate, and Phase 9E internal trial evidence pack for a future separate user app MVP",
   "projectIsUserFacingApp": false,
-  "lastCompletedPhase": "9D",
-  "lastCompletedBusinessPhase": "9D",
-  "currentPhase": "Internal Trial Learning Summary & Product Decision Gate",
-  "currentPhaseId": "9D",
-  "nextRecommendedPhase": "9E",
-  "nextRecommendedPhaseName": "Internal Trial Evidence Pack",
-  "nextAction": "Proceed to Phase 9E: Internal Trial Evidence Pack. Phase 9D is complete. Organize privacy-safe anonymous/mock internal trial evidence without adding production app, public recruitment, backend, database, camera, AR, training, OpenAI API, external API, native iOS, React Native, Flutter, ecommerce, community, paid features, analytics, accounts, online publication, App Store/TestFlight, service worker, offline cache, push notification, background sync, install tracking, AI analysis, or real user data collection.",
+  "lastCompletedPhase": "9E",
+  "lastCompletedBusinessPhase": "9E",
+  "currentPhase": "Internal Trial Evidence Pack",
+  "currentPhaseId": "9E",
+  "nextRecommendedPhase": "9F",
+  "nextRecommendedPhaseName": "Internal Trial Evidence Collection Preparation",
+  "nextAction": "Proceed to Phase 9F: Internal Trial Evidence Collection Preparation. Phase 9E is complete. Prepare privacy-safe internal trial evidence collection protocols before any MVP validation planning because current evidence remains anonymous/mock/example framework evidence; do not add production app, public recruitment, backend, database, camera, AR, training, OpenAI API, external API, native iOS, React Native, Flutter, ecommerce, community, paid features, analytics, accounts, online publication, App Store/TestFlight, service worker, offline cache, push notification, background sync, install tracking, AI analysis, or real user data collection.",
   "mainDataFlow": [
     "SourceImagePackage",
     "SourceImageEntry",
@@ -91,7 +91,11 @@
     "UserAppInternalTrialLearningSummary",
     "UserAppProductDecisionGate",
     "UserAppNextPhaseRecommendation",
-    "UserAppLearningDecisionAdminPanels"
+    "UserAppLearningDecisionAdminPanels",
+    "UserAppInternalTrialEvidencePack",
+    "UserAppTrialEvidenceSummary",
+    "UserAppEvidenceSufficiencyGate",
+    "UserAppEvidencePackAdminPanels"
   ],
   "mainModules": [
     "src/vision",
@@ -133,20 +137,21 @@
     "projectStatusJson": "passed",
     "projectContext": "passed",
     "contextPackJson": "passed",
-    "userAppBrowserQa": "not_required_for_phase_9d_learning_decision_gate",
-    "httpSmoke": "not_required_for_phase_9d_learning_decision_gate",
+    "userAppBrowserQa": "not_required_for_phase_9e_evidence_pack",
+    "httpSmoke": "not_required_for_phase_9e_evidence_pack",
     "phase8DScopedTests": "passed",
     "phase8EScopedTests": "passed",
     "phase9AScopedTests": "passed",
     "phase9BScopedTests": "passed",
     "phase9CScopedTests": "passed",
     "phase9DScopedTests": "passed",
-    "testFiles": 423,
-    "tests": 631,
-    "phase9DScopedTestFiles": 10,
-    "phase9DScopedTestsCount": 27,
-    "summary": "Phase 9D validation passed: typecheck, scoped Phase 9D tests, full npm test, build, project status/context, and JSON status/context commands.",
-    "updatedAt": "2026-06-11T22:29:00.000+08:00"
+    "phase9EScopedTests": "passed",
+    "testFiles": 431,
+    "tests": 646,
+    "phase9EScopedTestFiles": 10,
+    "phase9EScopedTestsCount": 22,
+    "summary": "Phase 9E validation passed: typecheck, scoped Phase 9E tests, full npm test, build, project status/context, and JSON status/context commands.",
+    "updatedAt": "2026-06-11T23:02:00.000+08:00"
   },
   "knownLimitations": [
     "SourceImagePackage is not a training dataset",
@@ -196,7 +201,9 @@
     "Phase 9C iteration inputs are anonymous/mock/example summaries only and cannot store real names, contact information, health information, sensitive identity information, photos, face embeddings, biometric identifiers, backend records, analytics records, AI analysis records, or training data.",
     "Phase 9C iteration plan, backlog, priority framework, sessions, preferences, recommendations, and admin panels cannot mutate UserAppTemplatePackage, write real user records into project-state, call external APIs, or enter training datasets.",
     "Phase 9D internal trial learning summary is local administrator decision support only; it is not production analytics, production app approval, backend collection, AI analysis, training, public recruitment, production roadmap approval, or production release approval.",
-    "Phase 9D uses anonymous/mock/example summaries only and cannot store real user names, contacts, photos, health information, sensitive identity information, biometrics, backend records, analytics records, AI analysis records, training labels, or real user trial records in project-state."
+    "Phase 9D uses anonymous/mock/example summaries only and cannot store real user names, contacts, photos, health information, sensitive identity information, biometrics, backend records, analytics records, AI analysis records, training labels, or real user trial records in project-state.",
+    "Phase 9E internal trial evidence pack is local administrator evidence support only; it is not production analytics, a backend evidence database, AI analysis, public recruitment, production app approval, or production release approval.",
+    "Phase 9E evidence must remain anonymous/mock/example summaries and cannot store real user names, contacts, photos, health information, sensitive identity information, biometrics, backend records, analytics records, AI analysis records, training labels, or real user trial records in project-state."
   ],
   "recoveryEntryFiles": [
     "START_HERE.md",
@@ -283,7 +290,11 @@
     "docs/product/internal-trial-learning-summary.md",
     "docs/product/product-decision-gate.md",
     "docs/product/next-phase-recommendation-framework.md",
-    "docs/phases/phase-9D.md"
+    "docs/phases/phase-9D.md",
+    "docs/product/internal-trial-evidence-pack.md",
+    "docs/product/trial-evidence-summary.md",
+    "docs/product/evidence-sufficiency-gate.md",
+    "docs/phases/phase-9E.md"
   ],
   "forbiddenActions": [
     "Do not build the full production user-side app in the local admin workbench",
@@ -326,10 +337,15 @@
     "Do not mutate UserAppTemplatePackage from Phase 9C iteration plan, backlog, priority framework, sessions, preferences, recommendations, content QA, feedback, or admin panels.",
     "Do not treat Phase 9D internal trial learning summary, product decision gate, or next phase recommendation as production analytics, production app approval, backend record collection, AI analysis, training, public recruitment, production roadmap approval, or production release approval.",
     "Do not use Phase 9D anonymous/mock learning summaries as permission to collect real user names, contacts, photos, health information, sensitive identity data, biometrics, backend records, analytics records, AI analysis records, or training data.",
-    "Do not mutate UserAppTemplatePackage from Phase 9D learning summary, decision gate, next phase recommendation, sessions, preferences, recommendations, content QA, feedback, or admin panels."
+    "Do not mutate UserAppTemplatePackage from Phase 9D learning summary, decision gate, next phase recommendation, sessions, preferences, recommendations, content QA, feedback, or admin panels.",
+    "Do not treat Phase 9E internal trial evidence pack, evidence summary, or sufficiency gate as production analytics, backend record collection, AI analysis, training, public recruitment, production app approval, or production release approval.",
+    "Do not use Phase 9E anonymous/mock evidence as permission to collect real user names, contacts, photos, health information, sensitive identity data, biometrics, backend records, analytics records, AI analysis records, or training data.",
+    "Do not mutate UserAppTemplatePackage from Phase 9E evidence pack, evidence summary, sufficiency gate, sessions, preferences, recommendations, content QA, feedback, or admin panels."
   ],
-  "currentPhaseName": "Internal Trial Learning Summary & Product Decision Gate",
+  "currentPhaseName": "Internal Trial Evidence Pack",
   "validation": {
+    "status": "passed",
+    "phase": "9E",
     "typecheck": "passed",
     "test": "passed",
     "build": "passed",
@@ -337,12 +353,22 @@
     "projectContext": "passed",
     "projectStatusJson": "passed",
     "contextPackJson": "passed",
-    "phase9DScopedTests": "passed",
-    "fullTestFiles": 423,
-    "fullTests": 631,
-    "phase9DScopedTestFiles": 10,
-    "phase9DScopedTestsCount": 27,
-    "updatedAt": "2026-06-11T22:29:00.000+08:00"
+    "phase9EScopedTests": "passed",
+    "fullTestFiles": 431,
+    "fullTests": 646,
+    "phase9EScopedTestFiles": 10,
+    "phase9EScopedTestsCount": 22,
+    "commands": [
+      "npm run typecheck",
+      "npm run test",
+      "npm run build",
+      "npm run project:status",
+      "npm run project:context",
+      "node scripts/project-status.mjs --json",
+      "node scripts/context-pack.mjs --json",
+      "npm run test -- tests/user-app-internal-trial-evidence-pack.test.ts tests/user-app-trial-evidence-summary.test.ts tests/user-app-evidence-sufficiency-gate.test.ts tests/user-app-internal-trial-evidence-pack-panel.test.tsx tests/user-app-trial-evidence-summary-panel.test.tsx tests/user-app-evidence-sufficiency-gate-panel.test.tsx tests/user-app-shell-evidence-pack-flow.test.tsx tests/phase-9E-documentation-recovery.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
+    ],
+    "updatedAt": "2026-06-11T23:02:00.000+08:00"
   },
-  "updatedAt": "2026-06-11T22:29:00.000+08:00"
+  "updatedAt": "2026-06-11T23:02:00.000+08:00"
 }

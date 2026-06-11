@@ -353,11 +353,11 @@
     "Observation template documentation",
     "Outcome review documentation"
   ],
-  "phase": "9D",
-  "lastCompletedPhase": "9D",
-  "currentPhase": "9D",
-  "nextRecommendedPhase": "9E",
-  "updatedAt": "2026-06-11T00:00:00.000+08:00",
+  "phase": "9E",
+  "lastCompletedPhase": "9E",
+  "currentPhase": "9E",
+  "nextRecommendedPhase": "9F",
+  "updatedAt": "2026-06-11T23:00:00.000+08:00",
   "artifacts": [
     "docs/product/internal-trial-learning-summary.md",
     "docs/product/product-decision-gate.md",
@@ -365,6 +365,16 @@
     "docs/phases/phase-9D.md",
     "src/user-app/userAppInternalTrialLearningSummary.ts",
     "src/user-app/userAppProductDecisionGate.ts",
-    "src/user-app/userAppNextPhaseRecommendation.ts"
+    "src/user-app/userAppNextPhaseRecommendation.ts",
+    "src/user-app/userAppInternalTrialEvidencePack.ts",
+    "src/user-app/userAppTrialEvidenceSummary.ts",
+    "src/user-app/userAppEvidenceSufficiencyGate.ts",
+    "src/components/user-app/UserAppInternalTrialEvidencePackPanel.tsx",
+    "src/components/user-app/UserAppTrialEvidenceSummaryPanel.tsx",
+    "src/components/user-app/UserAppEvidenceSufficiencyGatePanel.tsx",
+    "docs/product/internal-trial-evidence-pack.md",
+    "docs/product/trial-evidence-summary.md",
+    "docs/product/evidence-sufficiency-gate.md",
+    "docs/phases/phase-9E.md"
   ]
 }

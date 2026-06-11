@@ -5,9 +5,9 @@ Makeup Engine is the makeup template production system for a future makeup coach
 ## Current Position
 
 - Project role: makeup template production system plus a local contract-driven user app shell prototype.
-- Last completed phase: `Phase 9D`.
-- Current completed business phase: `Phase 9D - Internal Trial Learning Summary & Product Decision Gate`.
-- Next recommended phase: `Phase 9E - Internal Trial Evidence Pack`.
+- Last completed phase: `Phase 9E`.
+- Current completed business phase: `Phase 9E - Internal Trial Evidence Pack`.
+- Next recommended phase: `Phase 9F - Internal Trial Evidence Collection Preparation`.
 - Recent recovery milestones retained in phase docs: `Phase 6K`, `Phase 6L`, `Phase 6L-1`, `Phase 7A`, `Phase 7B`, `Phase 7C`, `Phase 7D`, `Phase 7E`, `Phase 7F`, `Phase 7G`, `Phase 7H`, and `Phase 8A`.
 - Historical route-planning milestone: `Phase 8A - Product Route Decision / App MVP Planning`.
 
@@ -45,6 +45,7 @@ SourceImagePackage manifest
 -> Internal Trial Result Review Framework
 -> Internal Trial Iteration Plan
 -> Internal Trial Learning Summary & Product Decision Gate
+-> Internal Trial Evidence Pack
 -> Phase 8 Roadmap / V1 Non-Goals
 -> Consumption Manifest
 -> Dataset Review
@@ -105,6 +106,10 @@ SourceImagePackage manifest
 48. `docs/product/product-decision-gate.md`
 49. `docs/product/next-phase-recommendation-framework.md`
 50. `docs/phases/phase-9D.md`
+51. `docs/product/internal-trial-evidence-pack.md`
+52. `docs/product/trial-evidence-summary.md`
+53. `docs/product/evidence-sufficiency-gate.md`
+54. `docs/phases/phase-9E.md`
 51. `docs/phases/phase-7H.md`
 48. `project-state/project-state.snapshot.json`
 49. `project-state/provider-handoff.json`
@@ -130,6 +135,7 @@ SourceImagePackage manifest
 - Render Phase 9B internal trial result review, issue taxonomy, and decision framework administrator panels for anonymous/mock local trial result review.
 - Render Phase 9C internal trial iteration plan, backlog, and priority administrator panels for anonymous/mock local next-iteration planning.
 - Render Phase 9D internal trial learning summary, product decision gate, and next phase recommendation administrator panels for anonymous/mock local product decision gating.
+- Render Phase 9E internal trial evidence pack, trial evidence summary, and evidence sufficiency gate administrator panels for anonymous/mock local evidence review.
 - Continue from Vision Analysis into mask editing, evidence capture, dataset review, materialized training datasets, and lightweight model artifact workflows.
 
 ## What The System Must Not Do
@@ -149,6 +155,7 @@ SourceImagePackage manifest
 - Do not treat Phase 9B result review, issue taxonomy, or decision framework as production analytics, backend record collection, AI analysis, training, public recruitment, or production release approval.
 - Do not treat Phase 9C iteration plan, backlog, or priority framework as a formal production roadmap, backend issue tracker, AI analysis, training, public recruitment, or production release approval.
 - Do not treat Phase 9D learning summary, product decision gate, or next phase recommendation as production analytics, production app approval, backend record collection, AI analysis, training, public recruitment, production roadmap approval, or production release approval.
+- Do not treat Phase 9E evidence pack, evidence summary, or sufficiency gate as production analytics, backend evidence collection, AI analysis, training, public recruitment, production app approval, or production release approval.
 - Do not start React Native, Flutter, iOS native, backend, database, camera, AR, ecommerce, community, paid, OpenAI API, external API, training, or production release work without a later explicit gate.
 
 ## Validation Commands
@@ -224,3 +231,9 @@ npm run test -- tests/user-app-internal-trial-learning-summary.test.ts tests/use
 Project state comes from repository documents and `project-state/*.json`, not from chat memory.
 
 Root `AGENTS.md` is the concise agent entry point. Project skills are indexed in `project-state/skills.json`; external skill candidates and approvals are indexed in `project-state/external-skills-registry.json`.
+
+For Phase 9E scoped evidence pack checks run:
+
+```bash
+npm run test -- tests/user-app-internal-trial-evidence-pack.test.ts tests/user-app-trial-evidence-summary.test.ts tests/user-app-evidence-sufficiency-gate.test.ts tests/user-app-internal-trial-evidence-pack-panel.test.tsx tests/user-app-trial-evidence-summary-panel.test.tsx tests/user-app-evidence-sufficiency-gate-panel.test.tsx tests/user-app-shell-evidence-pack-flow.test.tsx tests/phase-9E-documentation-recovery.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts
+```

@@ -2,23 +2,24 @@
 
 ## Phase State
 
-- `lastCompletedPhase`: `9D`
-- `lastCompletedBusinessPhase`: `9D`
-- `currentPhase`: `9D`
-- `currentPhaseName`: `Internal Trial Learning Summary & Product Decision Gate`
-- `nextRecommendedPhase`: `9E`
-- `nextRecommendedPhaseName`: `Internal Trial Evidence Pack`
+- `lastCompletedPhase`: `9E`
+- `lastCompletedBusinessPhase`: `9E`
+- `currentPhase`: `9E`
+- `currentPhaseName`: `Internal Trial Evidence Pack`
+- `nextRecommendedPhase`: `9F`
+- `nextRecommendedPhaseName`: `Internal Trial Evidence Collection Preparation`
 - `phaseOwner`: `Codex implementation, validation, commit, and push pass`
 
 ## Phase Completion Definition
 
-Phase 9D is complete when:
+Phase 9E is complete when:
 
-- Internal trial learning summary aggregates anonymous/mock 9A operations, 9B result review, and 9C iteration planning signals.
-- Product decision gate can choose continue internal trials, revise template content, revise User App Shell, revise trial ops, pause for privacy/scope, prepare MVP validation planning, production app discovery planning, or no-go.
-- Privacy, sensitive data, upload, backend, AI analysis, training, or project-state user-record issues force pause or no-go.
-- Next phase recommendation can choose Phase 9E, Phase 10A, Phase 10B, DOC-ILLUSTRATED, or Phase 9D-Fix without overclaiming production readiness.
-- UserAppShell exposes 试用学习总结, 产品决策门, and 下一阶段建议 only in administrator checks.
+- Internal trial evidence pack records anonymous/mock/example evidence items, evidence types, risks, and evidence chain across 9A/9B/9C/9D/9E.
+- Trial evidence summary groups evidence into user value, template content, Shell usability, guidance clarity, recommendation usefulness, privacy trust, trial ops, iteration readiness, and decision readiness themes.
+- Evidence sufficiency gate can decide next internal trial, MVP validation planning, more evidence collection, privacy/scope block, or missing evidence block.
+- No evidence or missing anonymous observation prevents overclaiming MVP validation planning.
+- Privacy, sensitive data, upload, backend, AI analysis, training, or project-state user-record issues force blocker decisions.
+- UserAppShell exposes 内部试用证据包, 试用证据摘要, and 证据充分性判断 only in administrator checks.
 - The ordinary user path remains focused on 跟练, 发现妆容, 我的准备, 我的偏好, 照片占位, 本地进度, and 隐私说明.
 - `UserAppTemplatePackage` remains the handoff contract and is not mutated.
 - The phase uses anonymous/mock/example summaries only and does not add production app, public recruitment, online release, App Store/TestFlight, backend, database, accounts, analytics, camera, AR, AI analysis, training, native iOS, OpenAI/external APIs, online publication, service worker, offline cache, or new runtime dependencies.

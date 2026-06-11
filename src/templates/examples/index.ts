@@ -29,3 +29,6 @@ export * from './user-app-trial-iteration-plan.example';
 export * from './user-app-internal-trial-learning-summary.example';
 export * from './user-app-product-decision-gate.example';
 export * from './user-app-next-phase-recommendation.example';
+export * from './user-app-internal-trial-evidence-pack.example';
+export * from './user-app-trial-evidence-summary.example';
+export * from './user-app-evidence-sufficiency-gate.example';

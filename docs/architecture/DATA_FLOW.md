@@ -274,3 +274,13 @@ Phase 8E adds MVP release readiness and trial go/no-go without creating a produc
 ```
 
 Release readiness can decide internal trial preparation only. It cannot add production release, App Store/TestFlight, backend, database, accounts, analytics, camera, AR, AI generation, OpenAI/external APIs, training, native apps, online publication, service worker, offline cache, push notification, background sync, install tracking, or real user data collection.
+
+## Phase 9E Internal Trial Evidence Flow
+
+`UserAppInternalTrialOpsPack` / `UserAppTrialResultReview` / `UserAppTrialIterationPlan` / `UserAppInternalTrialLearningSummary` / `UserAppProductDecisionGate`
+-> `UserAppInternalTrialEvidencePack`
+-> `UserAppTrialEvidenceSummary`
+-> `UserAppEvidenceSufficiencyGate`
+-> next recommendation for Phase 9F or future MVP validation planning.
+
+The flow is local, anonymous/mock/example-only, and cannot write real user records into project-state, backend systems, analytics systems, AI analysis systems, or training datasets.

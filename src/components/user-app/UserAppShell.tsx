@@ -24,9 +24,12 @@ import {
   createUserAppTrialDecisionFramework,
   createUserAppTrialIterationBacklog,
   createUserAppTrialIterationPlan,
+  createUserAppEvidenceSufficiencyGate,
+  createUserAppInternalTrialEvidencePack,
   createUserAppInternalTrialLearningSummary,
   createUserAppNextPhaseRecommendation,
   createUserAppProductDecisionGate,
+  createUserAppTrialEvidenceSummary,
   createUserAppTrialObservationGuide,
   createUserAppTrialOutcomeReview,
   createUserAppTrialPack,
@@ -59,6 +62,8 @@ import { userAppTemplateContentQaExamplePackage } from '../../templates/examples
 import { userAppTrialFeedbackMockSummary } from '../../templates/examples/user-app-trial-feedback.example';
 import { userAppTrialObservationMockSummary } from '../../templates/examples/user-app-trial-observation.example';
 import { UserAppCompatibilityBanner } from './UserAppCompatibilityBanner';
+import { UserAppEvidenceSufficiencyGatePanel } from './UserAppEvidenceSufficiencyGatePanel';
+import { UserAppInternalTrialEvidencePackPanel } from './UserAppInternalTrialEvidencePackPanel';
 import { UserAppInternalTrialOpsPanel } from './UserAppInternalTrialOpsPanel';
 import { UserAppInternalTrialLearningSummaryPanel } from './UserAppInternalTrialLearningSummaryPanel';
 import { UserAppInteractionChecklist } from './UserAppInteractionChecklist';
@@ -74,6 +79,7 @@ import { UserAppReadinessPanel } from './UserAppReadinessPanel';
 import { UserAppSessionPanel } from './UserAppSessionPanel';
 import { UserAppSessionRecoveryNotice } from './UserAppSessionRecoveryNotice';
 import { UserAppTrialFeedbackPanel } from './UserAppTrialFeedbackPanel';
+import { UserAppTrialEvidenceSummaryPanel } from './UserAppTrialEvidenceSummaryPanel';
 import { UserAppTrialGoNoGoPanel } from './UserAppTrialGoNoGoPanel';
 import { UserAppTrialDecisionFrameworkPanel } from './UserAppTrialDecisionFrameworkPanel';
 import { UserAppTrialIterationBacklogPanel } from './UserAppTrialIterationBacklogPanel';
@@ -136,6 +142,9 @@ const adminSectionTabs: Array<{ tabId: UserAppShellSection; label: string }> = [
   { tabId: 'trialLearningSummary', label: '试用学习总结' },
   { tabId: 'productDecisionGate', label: '产品决策门' },
   { tabId: 'nextPhaseRecommendation', label: '下一阶段建议' },
+  { tabId: 'internalTrialEvidencePack', label: '内部试用证据包' },
+  { tabId: 'trialEvidenceSummary', label: '试用证据摘要' },
+  { tabId: 'evidenceSufficiencyGate', label: '证据充分性判断' },
   { tabId: 'pwa', label: 'PWA 检查' },
   { tabId: 'mvpPolish', label: 'MVP 打磨' },
   { tabId: 'readiness', label: 'App 就绪度' },
@@ -384,6 +393,29 @@ export function UserAppShell({
         decisionGate: productDecisionGate,
       }),
     [productDecisionGate, trialLearningSummary],
+  );
+  const internalTrialEvidencePack = useMemo(
+    () =>
+      createUserAppInternalTrialEvidencePack({
+        learningSummary: trialLearningSummary,
+        productDecisionGate,
+      }),
+    [productDecisionGate, trialLearningSummary],
+  );
+  const trialEvidenceSummary = useMemo(
+    () =>
+      createUserAppTrialEvidenceSummary({
+        evidencePack: internalTrialEvidencePack,
+      }),
+    [internalTrialEvidencePack],
+  );
+  const evidenceSufficiencyGate = useMemo(
+    () =>
+      createUserAppEvidenceSufficiencyGate({
+        evidencePack: internalTrialEvidencePack,
+        evidenceSummary: trialEvidenceSummary,
+      }),
+    [internalTrialEvidencePack, trialEvidenceSummary],
   );
   const readinessReport = useMemo(
     () =>
@@ -892,6 +924,18 @@ export function UserAppShell({
 
               {boundaryTab === 'nextPhaseRecommendation' ? (
                 <UserAppNextPhaseRecommendationPanel recommendation={nextPhaseRecommendation} />
+              ) : null}
+
+              {boundaryTab === 'internalTrialEvidencePack' ? (
+                <UserAppInternalTrialEvidencePackPanel evidencePack={internalTrialEvidencePack} />
+              ) : null}
+
+              {boundaryTab === 'trialEvidenceSummary' ? (
+                <UserAppTrialEvidenceSummaryPanel evidenceSummary={trialEvidenceSummary} />
+              ) : null}
+
+              {boundaryTab === 'evidenceSufficiencyGate' ? (
+                <UserAppEvidenceSufficiencyGatePanel gate={evidenceSufficiencyGate} />
               ) : null}
 
               {boundaryTab === 'mvpPolish' ? (

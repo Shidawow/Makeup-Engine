@@ -62,6 +62,9 @@ export type UserAppShellSection =
   | 'trialLearningSummary'
   | 'productDecisionGate'
   | 'nextPhaseRecommendation'
+  | 'internalTrialEvidencePack'
+  | 'trialEvidenceSummary'
+  | 'evidenceSufficiencyGate'
   | 'mobileQa'
   | 'interaction';
 
