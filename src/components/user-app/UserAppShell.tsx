@@ -24,6 +24,9 @@ import {
   createUserAppTrialDecisionFramework,
   createUserAppTrialIterationBacklog,
   createUserAppTrialIterationPlan,
+  createUserAppInternalTrialLearningSummary,
+  createUserAppNextPhaseRecommendation,
+  createUserAppProductDecisionGate,
   createUserAppTrialObservationGuide,
   createUserAppTrialOutcomeReview,
   createUserAppTrialPack,
@@ -57,6 +60,7 @@ import { userAppTrialFeedbackMockSummary } from '../../templates/examples/user-a
 import { userAppTrialObservationMockSummary } from '../../templates/examples/user-app-trial-observation.example';
 import { UserAppCompatibilityBanner } from './UserAppCompatibilityBanner';
 import { UserAppInternalTrialOpsPanel } from './UserAppInternalTrialOpsPanel';
+import { UserAppInternalTrialLearningSummaryPanel } from './UserAppInternalTrialLearningSummaryPanel';
 import { UserAppInteractionChecklist } from './UserAppInteractionChecklist';
 import { UserAppMobileHome } from './UserAppMobileHome';
 import { UserAppMobileQaPanel } from './UserAppMobileQaPanel';
@@ -64,6 +68,8 @@ import { UserAppMvpPolishChecklist } from './UserAppMvpPolishChecklist';
 import { UserAppMvpReleaseReadinessPanel } from './UserAppMvpReleaseReadinessPanel';
 import { UserAppProgressPanel } from './UserAppProgressPanel';
 import { UserAppPwaInstallPanel } from './UserAppPwaInstallPanel';
+import { UserAppNextPhaseRecommendationPanel } from './UserAppNextPhaseRecommendationPanel';
+import { UserAppProductDecisionGatePanel } from './UserAppProductDecisionGatePanel';
 import { UserAppReadinessPanel } from './UserAppReadinessPanel';
 import { UserAppSessionPanel } from './UserAppSessionPanel';
 import { UserAppSessionRecoveryNotice } from './UserAppSessionRecoveryNotice';
@@ -127,6 +133,9 @@ const adminSectionTabs: Array<{ tabId: UserAppShellSection; label: string }> = [
   { tabId: 'trialIterationPlan', label: '试用迭代计划' },
   { tabId: 'trialIterationBacklog', label: '迭代 backlog' },
   { tabId: 'trialIterationPriority', label: '优先级建议' },
+  { tabId: 'trialLearningSummary', label: '试用学习总结' },
+  { tabId: 'productDecisionGate', label: '产品决策门' },
+  { tabId: 'nextPhaseRecommendation', label: '下一阶段建议' },
   { tabId: 'pwa', label: 'PWA 检查' },
   { tabId: 'mvpPolish', label: 'MVP 打磨' },
   { tabId: 'readiness', label: 'App 就绪度' },
@@ -352,6 +361,29 @@ export function UserAppShell({
   const trialIterationPriorityRecommendations = useMemo(
     () => trialIterationBacklog.items.map((item) => item.priorityRecommendation),
     [trialIterationBacklog],
+  );
+  const trialLearningSummary = useMemo(
+    () =>
+      createUserAppInternalTrialLearningSummary({
+        resultReview: trialResultReview,
+        iterationPlan: trialIterationPlan,
+      }),
+    [trialIterationPlan, trialResultReview],
+  );
+  const productDecisionGate = useMemo(
+    () =>
+      createUserAppProductDecisionGate({
+        learningSummary: trialLearningSummary,
+      }),
+    [trialLearningSummary],
+  );
+  const nextPhaseRecommendation = useMemo(
+    () =>
+      createUserAppNextPhaseRecommendation({
+        learningSummary: trialLearningSummary,
+        decisionGate: productDecisionGate,
+      }),
+    [productDecisionGate, trialLearningSummary],
   );
   const readinessReport = useMemo(
     () =>
@@ -848,6 +880,18 @@ export function UserAppShell({
                 <UserAppTrialIterationPriorityPanel
                   recommendations={trialIterationPriorityRecommendations}
                 />
+              ) : null}
+
+              {boundaryTab === 'trialLearningSummary' ? (
+                <UserAppInternalTrialLearningSummaryPanel summary={trialLearningSummary} />
+              ) : null}
+
+              {boundaryTab === 'productDecisionGate' ? (
+                <UserAppProductDecisionGatePanel gate={productDecisionGate} />
+              ) : null}
+
+              {boundaryTab === 'nextPhaseRecommendation' ? (
+                <UserAppNextPhaseRecommendationPanel recommendation={nextPhaseRecommendation} />
               ) : null}
 
               {boundaryTab === 'mvpPolish' ? (

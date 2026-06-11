@@ -59,6 +59,9 @@ export type UserAppShellSection =
   | 'trialIterationPlan'
   | 'trialIterationBacklog'
   | 'trialIterationPriority'
+  | 'trialLearningSummary'
+  | 'productDecisionGate'
+  | 'nextPhaseRecommendation'
   | 'mobileQa'
   | 'interaction';
 

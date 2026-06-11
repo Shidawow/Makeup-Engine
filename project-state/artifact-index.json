@@ -352,5 +352,19 @@
     "Participant guide documentation",
     "Observation template documentation",
     "Outcome review documentation"
+  ],
+  "phase": "9D",
+  "lastCompletedPhase": "9D",
+  "currentPhase": "9D",
+  "nextRecommendedPhase": "9E",
+  "updatedAt": "2026-06-11T00:00:00.000+08:00",
+  "artifacts": [
+    "docs/product/internal-trial-learning-summary.md",
+    "docs/product/product-decision-gate.md",
+    "docs/product/next-phase-recommendation-framework.md",
+    "docs/phases/phase-9D.md",
+    "src/user-app/userAppInternalTrialLearningSummary.ts",
+    "src/user-app/userAppProductDecisionGate.ts",
+    "src/user-app/userAppNextPhaseRecommendation.ts"
   ]
 }

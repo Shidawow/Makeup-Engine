@@ -96,6 +96,10 @@ Phase 9B adds local result review structures for anonymous/mock internal trial r
 
 Phase 9C adds local iteration planning structures for anonymous/mock next-iteration planning. `src/user-app/userAppTrialIterationPlan.ts` owns workstreams, goals, actions, risks, and iteration status. `src/user-app/userAppTrialIterationBacklog.ts` owns issue-derived backlog items with category, severity, confidence, actionability, owner area, fix type, target iteration, acceptance criteria, and blocked reason. `src/user-app/userAppTrialIterationPriority.ts` owns deterministic P0/P1/P2/P3/observe-more priority recommendations. `src/components/user-app` renders 试用迭代计划, 迭代 backlog, and 优先级建议 panels inside the administrator checks area. It does not add a formal production roadmap, backend issue tracker, production analytics, real user record storage, camera, AR, AI analysis, OpenAI/external API usage, training, App Store/TestFlight, online publication, or new runtime dependencies.
 
+### Internal Trial Learning Summary & Product Decision Gate
+
+Phase 9D adds local learning and product decision structures for anonymous/mock internal trial summaries. `src/user-app/userAppInternalTrialLearningSummary.ts` owns learning themes, signals, insights, risks, and status. `src/user-app/userAppProductDecisionGate.ts` owns decisions for continuing trials, revising content, revising the Shell, revising trial ops, pausing, planning MVP validation, exploring production app discovery, or no-go. `src/user-app/userAppNextPhaseRecommendation.ts` owns recommendations for Phase 9E, Phase 10A, Phase 10B, DOC-ILLUSTRATED, or Phase 9D-Fix. `src/components/user-app` renders 试用学习总结, 产品决策门, and 下一阶段建议 panels inside the administrator checks area. It does not add production analytics, backend forms, real user record storage, camera, AR, AI analysis, OpenAI/external API usage, training, App Store/TestFlight, online publication, production app approval, or new runtime dependencies.
+
 ### Vision Analysis
 
 `src/vision` owns local face, cosmetic, pixel, region, quality, provider, and pipeline logic. It consumes `TemplateAnalysisSeed` records when they are ready for Vision Analysis.
@@ -200,7 +204,7 @@ src/components/template-studio/user-app-prototype-consumer-panel
 -> prototype template list / detail / validation preview
 
 src/user-app
--> User App Shell view model / navigation / progress / guidance UX / photo intake placeholder / personalization boundary / local onboarding / local preferences / local template discovery / recommendation placeholders / local session persistence and recovery / mobile QA / readiness gate / PWA readiness / MVP polish readiness / trial pack / trial feedback / trial readiness / template content QA / trial template selection / trial content readiness / MVP release readiness / trial go-no-go / internal trial operations / trial observation / trial outcome review / trial result review / trial issue taxonomy / trial decision framework / trial iteration plan / trial iteration backlog / trial iteration priority
+-> User App Shell view model / navigation / progress / guidance UX / photo intake placeholder / personalization boundary / local onboarding / local preferences / local template discovery / recommendation placeholders / local session persistence and recovery / mobile QA / readiness gate / PWA readiness / MVP polish readiness / trial pack / trial feedback / trial readiness / template content QA / trial template selection / trial content readiness / MVP release readiness / trial go-no-go / internal trial operations / trial observation / trial outcome review / trial result review / trial issue taxonomy / trial decision framework / trial iteration plan / trial iteration backlog / trial iteration priority / internal trial learning summary / product decision gate / next phase recommendation
 
 docs/app-roadmap/app-technology-route-decision.md
 -> React Web / PWA MVP first route decision / deferred native-backend-camera-AR routes
@@ -244,6 +248,15 @@ docs/product/internal-trial-iteration-backlog.md
 
 docs/product/internal-trial-priority-framework.md
 -> Phase 9C P0/P1/P2/P3/observe-more priority rules
+
+docs/product/internal-trial-learning-summary.md
+-> Phase 9D learning themes / anonymous summary boundary
+
+docs/product/product-decision-gate.md
+-> Phase 9D continue / revise / pause / MVP validation planning decisions
+
+docs/product/next-phase-recommendation-framework.md
+-> Phase 9D Phase 9E / 10A / 10B / DOC / fix recommendation logic
 
 docs/product/internal-trial-operations-pack.md
 -> Phase 9A internal small-scope trial operations / participant type coverage / stop conditions

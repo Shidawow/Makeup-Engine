@@ -15,7 +15,7 @@ It produces templates, template evidence, correction records, review state, loca
 - Current business phase: `Phase 9C completed`
 - Last completed phase: `Phase 9C`
 - Last completed phase name: `Phase 9C - Internal Trial Iteration Plan`
-- Next recommended phase: `Phase 9D - Internal Trial Learning Summary & Product Decision Gate`
+- Next recommended phase: `Phase 9D - Internal Trial Evidence Pack`
 
 Historical recovery milestone retained for older phase tests: `Phase 8A completed` / `Phase 8A - Product Route Decision / App MVP Planning`.
 Historical recovery milestone retained for Phase 8B tests: `Phase 8B completed` / `Phase 8B - PWA / Mobile Web MVP Polish`.
@@ -132,7 +132,7 @@ These areas are retained for compatibility and historical runtime work, but they
 - Render Phase 8E MVP release readiness and trial go/no-go administrator panels for internal trial preparation decisions.
 - Render Phase 9A internal trial operations, observation template, and outcome review administrator panels for internal small-scope trial preparation.
 - Render Phase 9B internal trial result review, issue taxonomy, and decision framework administrator panels for anonymous/mock local trial result review.
-- Render Phase 9C internal trial iteration plan, backlog, and priority administrator panels for anonymous/mock local next-iteration planning.
+- Render Phase 9C internal trial iteration plan; Phase 9D internal trial learning decision gate, backlog, and priority administrator panels for anonymous/mock local next-iteration planning.
 - Export user app consumption manifest and handoff JSON.
 - Evaluate batch QA issues, task readiness diagnostics, reject reasons, publish confirmation, rebinding recovery, library lifecycle, and operator handoff reports.
 - Continue into mask editing, template evidence capture, dataset review, and training dataset materialization.
@@ -172,7 +172,7 @@ These areas are retained for compatibility and historical runtime work, but they
 - Phase 8E MVP release readiness and trial go/no-go add only local gate decisions for internal trial preparation; they are not production release, App Store/TestFlight, backend readiness, analytics readiness, camera readiness, AR readiness, AI generation approval, OpenAI/external API approval, training readiness, online publication, or real user data collection approval.
 - Phase 9A internal trial operations add only local participant type planning, session flow, anonymous observation templates, and outcome review; they are not public recruitment, production release, App Store/TestFlight, backend forms, analytics, real user record collection, camera, AR, AI analysis, OpenAI/external API usage, training, or online publication scope.
 - Phase 9B internal trial result review adds only local anonymous/mock result review, issue taxonomy, and decision framework; it is not production analytics, public recruitment, backend record collection, AI analysis, OpenAI/external API usage, training, production release, or real user record collection scope.
-- Phase 9C internal trial iteration plan adds only local anonymous/mock iteration planning, backlog, and priority framework; it is not a formal production roadmap, backend issue tracker, production analytics, public recruitment, AI analysis, OpenAI/external API usage, training, production release, or real user record collection scope.
+- Phase 9C internal trial iteration plan; Phase 9D internal trial learning decision gate adds only local anonymous/mock iteration planning, backlog, and priority framework; it is not a formal production roadmap, backend issue tracker, production analytics, public recruitment, AI analysis, OpenAI/external API usage, training, production release, or real user record collection scope.
 - Future production user-facing app work should be planned as a separate app surface or repository after an explicit phase gate. Makeup Engine remains the template production system and `UserAppTemplatePackage` remains the handoff contract.
 - User photo data, face embeddings, biometric identifiers, sensitive profile data, and user photo references must not enter durable export, training, model artifacts, or project-state.
 - User app consumption exports cannot persist object URLs, local absolute paths, large image bytes, or React state.
@@ -297,3 +297,8 @@ When finishing a round, report in this order:
 - `ChatGPT` should receive a concise, machine-checked handoff summary.
 - `SourceImagePackage` can move into Vision Analysis only through explicit binding; it still cannot become a training dataset directly, and it still cannot directly become a template library entry.
 - Never expand `src/engine`, `src/runtime`, or `src/intelligence/runtime` for new mainline features.
+
+
+- Phase 9D completed internal trial learning summary, product decision gate, next phase recommendation, fixtures, and administrator decision panels.
+- Phase 9D is not production analytics, production app approval, backend collection, AI analysis, training, public recruitment, or production release approval.
+- Phase 9E should create an internal trial evidence pack using privacy-safe anonymous/mock/example summaries only.

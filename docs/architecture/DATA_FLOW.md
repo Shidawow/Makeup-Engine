@@ -37,6 +37,7 @@ Real Photo
 -> Internal Trial Operations / Observation Template / Outcome Review
 -> Internal Trial Result Review / Issue Taxonomy / Decision Framework
 -> Internal Trial Iteration Plan / Backlog / Priority Framework
+-> Internal Trial Learning Summary / Product Decision Gate / Next Phase Recommendation
 -> Phase 8 Roadmap / V1 Non-Goals
 -> User App Consumption Manifest
 -> Dataset Review
@@ -81,6 +82,7 @@ Real Photo
 - `Internal Trial Operations / Observation Template / Outcome Review`: Phase 9A local operations layer for broad participant type planning, session checklist, anonymous observation signals, and outcome recommendations. It is not public recruitment, production release, App Store/TestFlight readiness, backend form, analytics readiness, camera/AR readiness, AI analysis, OpenAI/external API usage, real user record storage, or training data.
 - `Internal Trial Result Review / Issue Taxonomy / Decision Framework`: Phase 9B local review layer for anonymous/mock result signals, issue category/severity/actionability, and next-step decisions. It is not production analytics, backend collection, public recruitment, AI analysis, OpenAI/external API usage, real user record storage, or training data.
 - `Internal Trial Iteration Plan / Backlog / Priority Framework`: Phase 9C local planning layer for turning anonymous/mock review results into next-iteration workstreams, backlog items, priorities, risks, and acceptance criteria. It is not a formal production roadmap, backend issue tracker, production analytics, public recruitment, AI analysis, OpenAI/external API usage, real user record storage, or training data.
+- `Internal Trial Learning Summary / Product Decision Gate / Next Phase Recommendation`: Phase 9D local decision layer for summarizing 9A-9C anonymous/mock learnings and recommending Phase 9E, 10A, 10B, DOC-ILLUSTRATED, or 9D-Fix. It is not production analytics, production app approval, backend collection, AI analysis, real user record storage, or training data.
 - `Phase 8 Roadmap / V1 Non-Goals`: planning docs for 8A through 8E and the anti-scope list for login, backend, database, camera, AR, native apps, OpenAI API, ecommerce, community, paid features, and training.
 - `User App Consumption Manifest`: handoff manifest with app template entries, versions, compatibility target, checksums, readiness, and local-only disclaimer.
 - `Dataset Review`: explicit review decisions before data becomes training-ready.
@@ -115,6 +117,8 @@ Real Photo
 `Internal Trial Result Review / Issue Taxonomy / Decision Framework` is a local administrator review layer over anonymous/mock Phase 9A-style trial signals. It can classify issue categories, severity, actionability, and next-step decisions, but it cannot collect real names, contact information, photos, health information, sensitive identity information, biometrics, backend records, analytics records, use AI analysis, write real participant records into `project-state`, mutate `UserAppTemplatePackage`, or create training input.
 
 `Internal Trial Iteration Plan / Backlog / Priority Framework` is a local administrator planning layer over anonymous/mock Phase 9B-style review outputs. It can create workstreams, backlog items, priorities, risks, blocked reasons, and acceptance criteria, but it cannot become a formal production roadmap, backend issue tracker, analytics system, AI analysis system, real participant record store, training input, or production release approval. It cannot mutate `UserAppTemplatePackage`.
+
+`Internal Trial Learning Summary / Product Decision Gate / Next Phase Recommendation` is a local administrator decision layer over anonymous/mock Phase 9A-9C outputs. It can summarize learning themes, decide continue/revise/pause/MVP validation planning, and recommend the next phase, but it cannot approve production app development, create backend records, use AI analysis, collect real participant data, write real user records into `project-state`, or create training input. It cannot mutate `UserAppTemplatePackage`.
 
 Phase 6L-1 adds a QA loop inside this read-only layer:
 

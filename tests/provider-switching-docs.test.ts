@@ -46,9 +46,9 @@ describe('provider switching docs', () => {
     expect(prompt).toContain('Switch To Native GPT / Codex Desktop');
     expect(prompt).toContain('Switch To PackyAPI + CLI');
     expect(prompt).toContain('Return From PackyAPI To ChatGPT');
-    expect(prompt).toContain('lastCompletedPhase: 9C');
-    expect(prompt).toContain('nextRecommendedPhase: 9D');
-    expect(prompt).toContain('Internal Trial Learning Summary & Product Decision Gate');
+    expect(prompt).toContain('lastCompletedPhase: 9D');
+    expect(prompt).toContain('nextRecommendedPhase: 9E');
+    expect(prompt).toContain('Internal Trial Evidence Pack');
     expect(prompt).toContain('Historical handoff marker retained for Phase 8D recovery tests');
     expect(prompt).toContain('Historical handoff marker retained for Phase 8E recovery tests');
     expect(prompt).toContain('Historical handoff marker retained for Phase 9A recovery tests');

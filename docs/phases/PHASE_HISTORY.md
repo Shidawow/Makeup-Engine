@@ -647,3 +647,22 @@ What still cannot happen:
 Why Phase 9D follows:
 
 The iteration planning framework exists. The next bottleneck is a learning summary and product decision gate: deciding whether internal trial learnings justify more trials, content fixes, Shell fixes, trial operations fixes, a privacy/scope pause, or a later explicit implementation gate without adding production release scope.
+
+## Phase 9D
+
+Added the Internal Trial Learning Summary & Product Decision Gate.
+
+What changed:
+
+- Added learning summary, product decision gate, and next phase recommendation models.
+- Added administrator panels for 试用学习总结, 产品决策门, and 下一阶段建议.
+- Added docs for learning summary, product decision gate, next phase recommendation, and Phase 9D.
+
+What still cannot happen:
+
+- Phase 9D is not production app approval, public launch, backend, analytics, AI analysis, camera, AR, training, App Store/TestFlight, or real user data collection.
+- Production app discovery is planning only, not build approval.
+
+Why Phase 9E follows:
+
+Current evidence is still anonymous/mock/example framework evidence, so the conservative next step is an Internal Trial Evidence Pack.

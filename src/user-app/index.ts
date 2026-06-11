@@ -38,3 +38,6 @@ export * from './userAppTrialDecisionFramework';
 export * from './userAppTrialIterationPriority';
 export * from './userAppTrialIterationBacklog';
 export * from './userAppTrialIterationPlan';
+export * from './userAppInternalTrialLearningSummary';
+export * from './userAppProductDecisionGate';
+export * from './userAppNextPhaseRecommendation';

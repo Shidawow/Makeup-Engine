@@ -26,3 +26,6 @@ export * from './user-app-trial-decision-framework.example';
 export * from './user-app-trial-iteration-priority.example';
 export * from './user-app-trial-iteration-backlog.example';
 export * from './user-app-trial-iteration-plan.example';
+export * from './user-app-internal-trial-learning-summary.example';
+export * from './user-app-product-decision-gate.example';
+export * from './user-app-next-phase-recommendation.example';

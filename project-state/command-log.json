@@ -1,74 +1,66 @@
 {
   "commands": [
     {
-      "name": "typecheck",
+      "name": "phase-9d-validation-1",
       "command": "npm run typecheck",
       "status": "passed",
-      "summary": "Passed.",
-      "phase": "9C",
-      "ranAt": "2026-06-07T00:00:00.000+08:00"
+      "phase": "9D",
+      "ranAt": "2026-06-11T22:28:00.000+08:00"
     },
     {
-      "name": "phase-9c-scoped-tests",
-      "command": "npm run test -- tests/user-app-trial-iteration-plan.test.ts tests/user-app-trial-iteration-backlog.test.ts tests/user-app-trial-iteration-priority.test.ts tests/user-app-trial-iteration-plan-panel.test.tsx tests/user-app-trial-iteration-backlog-panel.test.tsx tests/user-app-trial-iteration-priority-panel.test.tsx tests/user-app-shell-trial-iteration-flow.test.tsx tests/phase-9C-documentation-recovery.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
-      "status": "passed",
-      "summary": "Passed: 10 test files, 28 tests.",
-      "phase": "9C",
-      "ranAt": "2026-06-07T00:00:00.000+08:00"
-    },
-    {
-      "name": "test",
+      "name": "phase-9d-validation-2",
       "command": "npm run test",
       "status": "passed",
-      "summary": "Passed: 415 test files, 611 tests.",
-      "phase": "9C",
-      "ranAt": "2026-06-07T00:00:00.000+08:00"
+      "phase": "9D",
+      "ranAt": "2026-06-11T22:28:00.000+08:00"
     },
     {
-      "name": "build",
+      "name": "phase-9d-validation-3",
       "command": "npm run build",
       "status": "passed",
-      "summary": "Passed. Vite reported existing chunk-size warning only.",
-      "phase": "9C",
-      "ranAt": "2026-06-07T00:00:00.000+08:00"
+      "phase": "9D",
+      "ranAt": "2026-06-11T22:28:00.000+08:00"
     },
     {
-      "name": "project-status",
+      "name": "phase-9d-validation-4",
       "command": "npm run project:status",
       "status": "passed",
-      "summary": "Passed.",
-      "phase": "9C",
-      "ranAt": "2026-06-07T00:00:00.000+08:00"
+      "phase": "9D",
+      "ranAt": "2026-06-11T22:28:00.000+08:00"
     },
     {
-      "name": "project-context",
+      "name": "phase-9d-validation-5",
       "command": "npm run project:context",
       "status": "passed",
-      "summary": "Passed.",
-      "phase": "9C",
-      "ranAt": "2026-06-07T00:00:00.000+08:00"
+      "phase": "9D",
+      "ranAt": "2026-06-11T22:28:00.000+08:00"
     },
     {
-      "name": "project-status-json",
+      "name": "phase-9d-validation-6",
       "command": "node scripts/project-status.mjs --json",
       "status": "passed",
-      "summary": "Passed.",
-      "phase": "9C",
-      "ranAt": "2026-06-07T00:00:00.000+08:00"
+      "phase": "9D",
+      "ranAt": "2026-06-11T22:28:00.000+08:00"
     },
     {
-      "name": "context-pack-json",
+      "name": "phase-9d-validation-7",
       "command": "node scripts/context-pack.mjs --json",
       "status": "passed",
-      "summary": "Passed.",
-      "phase": "9C",
-      "ranAt": "2026-06-07T00:00:00.000+08:00"
+      "phase": "9D",
+      "ranAt": "2026-06-11T22:28:00.000+08:00"
+    },
+    {
+      "name": "phase-9d-validation-8",
+      "command": "npm run test -- tests/user-app-internal-trial-learning-summary.test.ts tests/user-app-product-decision-gate.test.ts tests/user-app-next-phase-recommendation.test.ts tests/user-app-internal-trial-learning-summary-panel.test.tsx tests/user-app-product-decision-gate-panel.test.tsx tests/user-app-next-phase-recommendation-panel.test.tsx tests/user-app-shell-learning-decision-flow.test.tsx tests/phase-9D-documentation-recovery.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
+      "status": "passed",
+      "phase": "9D",
+      "ranAt": "2026-06-11T22:28:00.000+08:00"
     }
   ],
-  "lastUpdatedPhase": "9C",
-  "phase": "9C",
-  "lastCompletedPhase": "9C",
-  "currentPhase": "9C",
-  "nextRecommendedPhase": "9D",
-  "updatedAt": "2026-06-07T00:00:00.000+08:00"
+  "lastUpdatedPhase": "9D",
+  "phase": "9D",
+  "lastCompletedPhase": "9D",
+  "currentPhase": "9D",
+  "nextRecommendedPhase": "9E",
+  "updatedAt": "2026-06-11T22:28:00.000+08:00"
 }

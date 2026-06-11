@@ -2,13 +2,13 @@
 
 ## Current Phase
 
-Phase 9C: Internal Trial Iteration Plan is complete.
+Phase 9D: Internal Trial Learning Summary & Product Decision Gate is complete.
 
-Last completed business phase: Phase 9C.
+Last completed business phase: Phase 9D.
 
-Next recommended phase: Phase 9D, Internal Trial Learning Summary & Product Decision Gate.
+Next recommended phase: Phase 9E, Internal Trial Evidence Pack.
 
-Phase 9C adds a local internal trial iteration plan, backlog, and priority model for anonymous/mock next-iteration planning. Makeup Engine remains the makeup template production system and local contract prototype. Future production user app work should still be planned as a separate app surface or repository after an explicit phase gate.
+Phase 9D adds a local internal trial learning summary, product decision gate, and next phase recommendation framework over anonymous/mock 9A-9C signals. Makeup Engine remains the makeup template production system and local contract prototype. Future production user app work should still be planned as a separate app surface or repository after an explicit phase gate.
 
 ## What The System Can Do
 
@@ -38,6 +38,7 @@ Phase 9C adds a local internal trial iteration plan, backlog, and priority model
 - Render internal trial operations, observation template, and outcome review administrator panels for internal small-scope trial preparation.
 - Render internal trial result review, issue taxonomy, and decision framework administrator panels for anonymous/mock local trial result review.
 - Render internal trial iteration plan, backlog, and priority administrator panels for anonymous/mock local next-iteration planning.
+- Render internal trial learning summary, product decision gate, and next phase recommendation administrator panels for anonymous/mock local decision gating.
 - Verify HTTP smoke, critical copy, privacy copy, Chinese copy, and source-level forbidden-token checks without browser photo capture, backend, AR, training, OpenAI, external APIs, or new runtime dependencies.
 - Use the Phase 8A product route decision to plan a future React Web / PWA user app MVP outside Makeup Engine while keeping `UserAppTemplatePackage` as the handoff contract.
 - Export operator/Codex handoff summaries without storing object URLs, large image bytes, local absolute paths, React state, user photo bytes, or sensitive profile data.
@@ -62,6 +63,7 @@ Phase 9C adds a local internal trial iteration plan, backlog, and priority model
 - It cannot treat Phase 9A internal trial operations, observation templates, or outcome review as public recruitment, production release, backend form, analytics, App Store/TestFlight, real user record collection, or training approval.
 - It cannot treat Phase 9B result review, issue taxonomy, or decision framework as production analytics, backend record collection, AI analysis, training, public recruitment, or production release approval.
 - It cannot treat Phase 9C iteration plan, backlog, or priority framework as a formal production roadmap, backend issue tracker, AI analysis, training, public recruitment, or production release approval.
+- It cannot treat Phase 9D learning summary, product decision gate, or next phase recommendation as production analytics, backend collection, AI analysis, production app approval, production roadmap approval, public recruitment, or production release approval.
 - It cannot collect real names, contact information, health information, sensitive identity information, photos, face embeddings, biometric identifiers, backend trial records, analytics records, or training data through the trial pack.
 - It cannot use service workers, offline cache, push notifications, background sync, install tracking, analytics, backend, camera, AR, or training in Phase 8B.
 - It cannot bootstrap backend, accounts, analytics, camera/photo capture, AR, native iOS, cross-platform runtime, OpenAI/external APIs, training, or online publication during route planning.
@@ -91,7 +93,7 @@ Phase 9C adds a local internal trial iteration plan, backlog, and priority model
 
 ## Recent Validation
 
-Phase 9C validation must include:
+Phase 9D validation must include:
 
 ```bash
 npm run typecheck
@@ -107,6 +109,6 @@ The latest completed validation is recorded in `project-state/test-status.json`.
 
 ## Next Phase Recommendation
 
-Proceed to Phase 9D: Internal Trial Learning Summary & Product Decision Gate.
+Proceed to Phase 9E: Internal Trial Evidence Pack.
 
-Phase 9D should summarize internal trial learning and make a product decision gate while keeping real collection systems, backend, camera, AR, analytics, App Store/TestFlight, AI analysis, training, and production release out of scope unless a future explicit gate expands scope.
+Phase 9E should collect and organize privacy-safe internal trial evidence while keeping real collection systems, backend, camera, AR, analytics, App Store/TestFlight, AI analysis, training, and production release out of scope unless a future explicit gate expands scope.

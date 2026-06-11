@@ -59,3 +59,6 @@
 - External skill governance exists, but no external skill is installed or broadly approved by OPS-2.
 - Candidate external skills remain explicit-only and cannot run scripts or install dependencies by default.
 - `src/engine`, `src/runtime`, and `src/intelligence/runtime` are frozen compatibility areas, not the center for new mainline features.
+
+- Phase 9D internal trial learning summary and product decision gate are local administrator decision aids only; they are not production analytics, backend collection, AI analysis, production app approval, production roadmap approval, public recruitment, App Store/TestFlight readiness, online publication, training, or real user record collection approval.
+- Phase 9D uses anonymous/mock/example summaries only and cannot store real names, contact information, photos, health information, sensitive identity information, biometrics, backend records, analytics records, AI analysis records, training labels, or real user trial records in project-state.

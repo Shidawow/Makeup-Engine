@@ -36,8 +36,8 @@ describe('Phase 6J documentation recovery', () => {
     expect(architecture).toContain('Template Library');
     expect(dataFlow).toContain('Template Library Entry');
     expect(guardrails).toContain('local-only');
-    expect(snapshot.lastCompletedPhase).toBe('9C');
-    expect(snapshot.nextRecommendedPhase).toBe('9D');
-    expect(snapshot.nextAction).toContain('Phase 9D');
+    expect(snapshot.lastCompletedPhase).toBe('9D');
+    expect(snapshot.nextRecommendedPhase).toBe('9E');
+    expect(snapshot.nextAction).toContain('Phase 9E');
   });
 });

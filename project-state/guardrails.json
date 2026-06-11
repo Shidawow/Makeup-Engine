@@ -1,5 +1,5 @@
 {
-  "phase": "9C",
+  "phase": "9D",
   "guardrails": [
     {
       "id": "source-image-not-training-data",
@@ -396,6 +396,22 @@
     {
       "id": "phase_9c_no_training_or_project_state_user_records",
       "rule": "Phase 9C iteration plan, backlog, priority framework, sessions, preferences, recommendations, and admin panels cannot mutate UserAppTemplatePackage, write real user records into project-state, or enter training datasets."
+    },
+    {
+      "id": "phase_9d_learning_decision_only",
+      "rule": "Phase 9D learning summary and product decision gate are local decision aids only, not production analytics or production app approval."
+    },
+    {
+      "id": "phase_9d_no_sensitive_learning_data",
+      "rule": "Phase 9D inputs must not collect real names, contacts, photos, health information, sensitive identity information, or biometrics."
+    },
+    {
+      "id": "phase_9d_no_backend_ai_or_runtime_collection",
+      "rule": "Phase 9D must not add backend records, analytics, AI analysis, OpenAI/external API calls, camera, AR, or production runtime collection."
+    },
+    {
+      "id": "phase_9d_no_training_or_project_state_user_records",
+      "rule": "Phase 9D must not write training data or real user trial records into project-state."
     }
   ],
   "legacyFrozenModules": [
@@ -403,5 +419,6 @@
     "src/runtime",
     "src/intelligence/runtime"
   ],
-  "externalApiUsageAllowedInDoc1": false
+  "externalApiUsageAllowedInDoc1": false,
+  "updatedAt": "2026-06-11T00:00:00.000+08:00"
 }
