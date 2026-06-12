@@ -25,6 +25,9 @@ import {
   createUserAppTrialIterationBacklog,
   createUserAppTrialIterationPlan,
   createUserAppEvidenceSufficiencyGate,
+  createUserAppEvidenceCollectionChecklist,
+  createUserAppEvidenceCollectionProtocol,
+  createUserAppEvidenceCollectionQualityGate,
   createUserAppInternalTrialEvidencePack,
   createUserAppInternalTrialLearningSummary,
   createUserAppNextPhaseRecommendation,
@@ -62,6 +65,9 @@ import { userAppTemplateContentQaExamplePackage } from '../../templates/examples
 import { userAppTrialFeedbackMockSummary } from '../../templates/examples/user-app-trial-feedback.example';
 import { userAppTrialObservationMockSummary } from '../../templates/examples/user-app-trial-observation.example';
 import { UserAppCompatibilityBanner } from './UserAppCompatibilityBanner';
+import { UserAppEvidenceCollectionChecklistPanel } from './UserAppEvidenceCollectionChecklistPanel';
+import { UserAppEvidenceCollectionProtocolPanel } from './UserAppEvidenceCollectionProtocolPanel';
+import { UserAppEvidenceCollectionQualityGatePanel } from './UserAppEvidenceCollectionQualityGatePanel';
 import { UserAppEvidenceSufficiencyGatePanel } from './UserAppEvidenceSufficiencyGatePanel';
 import { UserAppInternalTrialEvidencePackPanel } from './UserAppInternalTrialEvidencePackPanel';
 import { UserAppInternalTrialOpsPanel } from './UserAppInternalTrialOpsPanel';
@@ -145,6 +151,9 @@ const adminSectionTabs: Array<{ tabId: UserAppShellSection; label: string }> = [
   { tabId: 'internalTrialEvidencePack', label: '内部试用证据包' },
   { tabId: 'trialEvidenceSummary', label: '试用证据摘要' },
   { tabId: 'evidenceSufficiencyGate', label: '证据充分性判断' },
+  { tabId: 'evidenceCollectionProtocol', label: '证据收集协议' },
+  { tabId: 'evidenceCollectionChecklist', label: '证据收集 checklist' },
+  { tabId: 'evidenceCollectionQualityGate', label: '证据收集质量门' },
   { tabId: 'pwa', label: 'PWA 检查' },
   { tabId: 'mvpPolish', label: 'MVP 打磨' },
   { tabId: 'readiness', label: 'App 就绪度' },
@@ -416,6 +425,25 @@ export function UserAppShell({
         evidenceSummary: trialEvidenceSummary,
       }),
     [internalTrialEvidencePack, trialEvidenceSummary],
+  );
+  const evidenceCollectionProtocol = useMemo(
+    () => createUserAppEvidenceCollectionProtocol(),
+    [],
+  );
+  const evidenceCollectionChecklist = useMemo(
+    () =>
+      createUserAppEvidenceCollectionChecklist({
+        protocol: evidenceCollectionProtocol,
+      }),
+    [evidenceCollectionProtocol],
+  );
+  const evidenceCollectionQualityGate = useMemo(
+    () =>
+      createUserAppEvidenceCollectionQualityGate({
+        protocol: evidenceCollectionProtocol,
+        checklist: evidenceCollectionChecklist,
+      }),
+    [evidenceCollectionChecklist, evidenceCollectionProtocol],
   );
   const readinessReport = useMemo(
     () =>
@@ -936,6 +964,20 @@ export function UserAppShell({
 
               {boundaryTab === 'evidenceSufficiencyGate' ? (
                 <UserAppEvidenceSufficiencyGatePanel gate={evidenceSufficiencyGate} />
+              ) : null}
+
+              {boundaryTab === 'evidenceCollectionProtocol' ? (
+                <UserAppEvidenceCollectionProtocolPanel protocol={evidenceCollectionProtocol} />
+              ) : null}
+
+              {boundaryTab === 'evidenceCollectionChecklist' ? (
+                <UserAppEvidenceCollectionChecklistPanel checklist={evidenceCollectionChecklist} />
+              ) : null}
+
+              {boundaryTab === 'evidenceCollectionQualityGate' ? (
+                <UserAppEvidenceCollectionQualityGatePanel
+                  gate={evidenceCollectionQualityGate}
+                />
               ) : null}
 
               {boundaryTab === 'mvpPolish' ? (

@@ -65,3 +65,6 @@
 
 - Phase 9E internal trial evidence pack is local administrator evidence support only; it is not production analytics, backend evidence collection, AI analysis, public recruitment, production app approval, or production release approval.
 - Phase 9E evidence must remain anonymous/mock/example summaries and cannot store real user names, contacts, photos, health information, sensitive identity information, biometrics, backend records, analytics records, AI analysis records, training labels, or real user trial records in project-state.
+
+- Phase 9F internal trial evidence collection preparation is local administrator preparation only; it is not real data collection, backend evidence storage, public recruitment, MVP validation approval, production analytics, AI analysis, training, or production release approval.
+- Phase 9F protocol, checklist, and quality gate cannot collect real names, contact information, photos, health information, sensitive identity information, biometrics, backend records, analytics records, AI analysis records, training labels, or real user trial records in project-state.

@@ -126,6 +126,7 @@
 - Internal trial result review, issue taxonomy, and decision framework read anonymous/mock trial result signals only; they do not create production app state, backend records, analytics records, real user participant records, camera/photo records, AR state, native app state, AI analysis state, or training data.
 - Internal trial iteration plan, backlog, and priority framework read anonymous/mock review outputs only; they do not create production roadmap state, backend issue tracker records, analytics records, real user participant records, camera/photo records, AR state, native app state, AI analysis state, or training data.
 - Internal trial learning summary, product decision gate, and next phase recommendation read anonymous/mock learning summaries only; they do not approve production app development, create backend records, analytics records, AI analysis records, real participant records, camera/photo records, AR state, native app state, or training data.
+- Internal trial evidence collection protocol, checklist, and quality gate read anonymous/mock evidence preparation only; they do not collect real participant records, photos, contact information, health information, sensitive identity information, biometrics, backend records, analytics records, AI analysis records, camera/photo records, AR state, native app state, upload data, or training data.
 - Dataset review decides whether corrected artifacts can become materialized training data.
 - Training reads materialized datasets, not UI state and not raw source packages.
 - Export reads validated model artifacts and export readiness metadata.
@@ -141,3 +142,9 @@
 Phase 9E evidence pack, evidence summary, and sufficiency gate are local administrator decision aids only. They must not become production analytics, backend record collection, public recruitment, AI analysis, training, production app approval, production roadmap approval, or production release approval.
 
 Evidence cannot include real names, contact information, photos, health information, sensitive identity information, face embeddings, biometric identifiers, backend records, analytics records, AI analysis records, upload requests, or training labels. Evidence cannot mutate `UserAppTemplatePackage` and cannot write real user trial records into project-state.
+
+## Phase 9F Evidence Collection Preparation Boundary
+
+Phase 9F protocol, checklist, and quality gate are local administrator preparation aids only. They must not become real data collection, public recruitment, backend record collection, production analytics, AI analysis, training, MVP validation approval, production app approval, production roadmap approval, or production release approval.
+
+Evidence collection preparation cannot request or store real names, contact information, photos, health information, sensitive identity information, face embeddings, biometric identifiers, backend records, analytics records, AI analysis records, uploads, account credentials, payment information, or training labels. Preparation cannot mutate `UserAppTemplatePackage` and cannot write real user trial records into project-state.

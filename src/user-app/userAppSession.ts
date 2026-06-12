@@ -65,6 +65,9 @@ export type UserAppShellSection =
   | 'internalTrialEvidencePack'
   | 'trialEvidenceSummary'
   | 'evidenceSufficiencyGate'
+  | 'evidenceCollectionProtocol'
+  | 'evidenceCollectionChecklist'
+  | 'evidenceCollectionQualityGate'
   | 'mobileQa'
   | 'interaction';
 

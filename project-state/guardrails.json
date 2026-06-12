@@ -1,5 +1,5 @@
 {
-  "phase": "9E",
+  "phase": "9F",
   "guardrails": [
     {
       "id": "source-image-not-training-data",
@@ -428,6 +428,22 @@
     {
       "id": "phase_9e_no_training_or_project_state_user_records",
       "rule": "Phase 9E evidence cannot write training input or real user trial records into project-state and cannot mutate UserAppTemplatePackage."
+    },
+    {
+      "id": "phase_9f_preparation_only",
+      "rule": "Phase 9F evidence collection protocol, checklist, and quality gate are preparation-only and must not become real data collection, backend evidence storage, public recruitment, MVP validation approval, production app approval, or production release approval."
+    },
+    {
+      "id": "phase_9f_no_sensitive_collection",
+      "rule": "Phase 9F must not collect real names, contact information, photos, health information, sensitive identity information, biometrics, account credentials, payment information, backend records, analytics records, AI analysis records, or training data."
+    },
+    {
+      "id": "phase_9f_no_backend_ai_training",
+      "rule": "Phase 9F must not add backend, database, analytics, AI analysis, OpenAI/external API calls, camera, AR, upload, service worker, offline cache, push notification, background sync, install tracking, or training."
+    },
+    {
+      "id": "phase_9f_no_project_state_user_records",
+      "rule": "Phase 9F cannot write real user trial records into project-state and cannot mutate UserAppTemplatePackage."
     }
   ],
   "legacyFrozenModules": [
@@ -436,5 +452,5 @@
     "src/intelligence/runtime"
   ],
   "externalApiUsageAllowedInDoc1": false,
-  "updatedAt": "2026-06-11T23:00:00.000+08:00"
+  "updatedAt": "2026-06-12T00:18:00.000+08:00"
 }

@@ -44,3 +44,6 @@ export * from './userAppNextPhaseRecommendation';
 export * from './userAppInternalTrialEvidencePack';
 export * from './userAppTrialEvidenceSummary';
 export * from './userAppEvidenceSufficiencyGate';
+export * from './userAppEvidenceCollectionProtocol';
+export * from './userAppEvidenceCollectionChecklist';
+export * from './userAppEvidenceCollectionQualityGate';

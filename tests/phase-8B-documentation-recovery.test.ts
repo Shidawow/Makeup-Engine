@@ -61,11 +61,11 @@ describe('Phase 8B documentation recovery', () => {
     );
 
     const snapshot = readJson<ProjectSnapshot>('project-state/project-state.snapshot.json');
-    expect(snapshot.lastCompletedPhase).toBe('9E');
-    expect(snapshot.lastCompletedBusinessPhase).toBe('9E');
-    expect(snapshot.currentPhaseId).toBe('9E');
-    expect(snapshot.nextRecommendedPhase).toBe('9F');
-    expect(snapshot.nextRecommendedPhaseName).toContain('Internal Trial Evidence Collection Preparation');
+    expect(snapshot.lastCompletedPhase).toBe('9F');
+    expect(snapshot.lastCompletedBusinessPhase).toBe('9F');
+    expect(snapshot.currentPhaseId).toBe('9F');
+    expect(snapshot.nextRecommendedPhase).toBe('9G');
+    expect(snapshot.nextRecommendedPhaseName).toContain('Anonymous Internal Trial Dry Run Pack');
     expect(snapshot.mainDataFlow).toContain('UserAppPwaReadiness');
     expect(snapshot.mainDataFlow).toContain('UserAppMvpPolishReadiness');
     expect(snapshot.recoveryEntryFiles).toContain('docs/phases/phase-8B.md');
@@ -75,23 +75,23 @@ describe('Phase 8B documentation recovery', () => {
     expect(snapshot.forbiddenActions.join('\n')).toContain('production PWA release');
 
     const providerHandoff = readJson<ProviderHandoff>('project-state/provider-handoff.json');
-    expect(providerHandoff.currentTask).toContain('Phase 9E');
-    expect(providerHandoff.lastCompletedPhase).toBe('9E');
-    expect(providerHandoff.nextRecommendedPhase).toBe('9F');
+    expect(providerHandoff.currentTask).toContain('Phase 9F');
+    expect(providerHandoff.lastCompletedPhase).toBe('9F');
+    expect(providerHandoff.nextRecommendedPhase).toBe('9G');
     expect(providerHandoff.nextRequiredReadFiles).toContain('docs/phases/phase-8B.md');
     expect(providerHandoff.nextRequiredReadFiles).toContain(
       'docs/user-app/pwa-mobile-web-mvp-polish.md',
     );
 
     const latestHandoff = readJson<LatestHandoff>('project-state/latest-handoff.json');
-    expect(latestHandoff.fromPhase).toBe('9E');
-    expect(latestHandoff.toPhase).toBe('9F');
+    expect(latestHandoff.fromPhase).toBe('9F');
+    expect(latestHandoff.toPhase).toBe('9G');
     expect(latestHandoff.routeDecision.selectedRoute).toBe('React Web / PWA MVP first');
     expect(latestHandoff.routeDecision.handoffContract).toBe('UserAppTemplatePackage');
     expect(latestHandoff.routeDecision.phase8BResult).toContain('PWA readiness report');
 
     const guardrails = readJson<GuardrailState>('project-state/guardrails.json');
-    expect(guardrails.phase).toBe('9E');
+    expect(guardrails.phase).toBe('9F');
     expect(guardrails.guardrails.map((guardrail) => guardrail.id)).toEqual(
       expect.arrayContaining([
         'phase_8b_pwa_mobile_polish_only',

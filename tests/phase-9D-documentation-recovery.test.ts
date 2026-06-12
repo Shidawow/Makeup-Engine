@@ -67,11 +67,11 @@ describe('Phase 9D documentation recovery', () => {
     );
 
     const snapshot = readJson<ProjectSnapshot>('project-state/project-state.snapshot.json');
-    expect(snapshot.lastCompletedPhase).toBe('9E');
-    expect(snapshot.lastCompletedBusinessPhase).toBe('9E');
-    expect(snapshot.currentPhaseId).toBe('9E');
-    expect(snapshot.nextRecommendedPhase).toBe('9F');
-    expect(snapshot.nextRecommendedPhaseName).toContain('Internal Trial Evidence Collection Preparation');
+    expect(snapshot.lastCompletedPhase).toBe('9F');
+    expect(snapshot.lastCompletedBusinessPhase).toBe('9F');
+    expect(snapshot.currentPhaseId).toBe('9F');
+    expect(snapshot.nextRecommendedPhase).toBe('9G');
+    expect(snapshot.nextRecommendedPhaseName).toContain('Anonymous Internal Trial Dry Run Pack');
     expect(snapshot.mainDataFlow).toEqual(
       expect.arrayContaining([
         'UserAppInternalTrialLearningSummary',
@@ -95,10 +95,10 @@ describe('Phase 9D documentation recovery', () => {
     expect(snapshot.forbiddenActions.join('\n')).toContain('real user names');
 
     const providerHandoff = readJson<ProviderHandoff>('project-state/provider-handoff.json');
-    expect(providerHandoff.currentTask).toContain('Phase 9E');
-    expect(providerHandoff.lastCompletedPhase).toBe('9E');
-    expect(providerHandoff.nextRecommendedPhase).toBe('9F');
-    expect(providerHandoff.nextRecommendedPhaseName).toContain('Internal Trial Evidence Collection Preparation');
+    expect(providerHandoff.currentTask).toContain('Phase 9F');
+    expect(providerHandoff.lastCompletedPhase).toBe('9F');
+    expect(providerHandoff.nextRecommendedPhase).toBe('9G');
+    expect(providerHandoff.nextRecommendedPhaseName).toContain('Anonymous Internal Trial Dry Run Pack');
     expect(providerHandoff.nextRequiredReadFiles).toContain('docs/phases/phase-9D.md');
     expect(providerHandoff.nextRequiredReadFiles).toContain(
       'docs/product/internal-trial-learning-summary.md',
@@ -108,9 +108,9 @@ describe('Phase 9D documentation recovery', () => {
     );
 
     const latestHandoff = readJson<LatestHandoff>('project-state/latest-handoff.json');
-    expect(latestHandoff.fromPhase).toBe('9E');
-    expect(latestHandoff.toPhase).toBe('9F');
-    expect(latestHandoff.nextAction).toContain('Phase 9F');
+    expect(latestHandoff.fromPhase).toBe('9F');
+    expect(latestHandoff.toPhase).toBe('9G');
+    expect(latestHandoff.nextAction).toContain('Phase 9G');
     expect(latestHandoff.internalTrialLearningDecision.phase9DResult).toContain(
       'internal trial learning summary with themes, insights, risks, and status',
     );
@@ -120,7 +120,7 @@ describe('Phase 9D documentation recovery', () => {
     expect(latestHandoff.internalTrialLearningDecision.nextPhase).toContain('Phase 9E');
 
     const guardrails = readJson<GuardrailState>('project-state/guardrails.json');
-    expect(guardrails.phase).toBe('9E');
+    expect(guardrails.phase).toBe('9F');
     expect(guardrails.guardrails.map((guardrail) => guardrail.id)).toEqual(
       expect.arrayContaining([
         'phase_9d_learning_decision_only',

@@ -686,3 +686,24 @@ What still cannot happen:
 Why Phase 9F follows:
 
 Current evidence is still anonymous/mock/example framework evidence, so the next conservative step is privacy-safe internal trial evidence collection preparation before MVP validation planning.
+
+## Phase 9F
+
+Added Internal Trial Evidence Collection Preparation.
+
+What changed:
+
+- Added local evidence collection protocol with allowed anonymous evidence types, forbidden data types, anonymization rules, participant notice, and stop conditions.
+- Added evidence collection checklist across before-trial, during-trial, after-trial, privacy boundary, evidence quality, stop conditions, and review handoff.
+- Added evidence collection quality gate with ready, warning, missing protocol, missing notice, forbidden data request, and privacy/scope blocker decisions.
+- Added administrator panels for 证据收集协议, 证据收集 checklist, and 证据收集质量门.
+- Added examples and tests for ready protocol, warning protocol, missing notice, forbidden photo/contact requests, upload/training violation, ready/blocked checklist, and ready/blocked quality gate.
+
+What still cannot happen:
+
+- Phase 9F is not real data collection, public recruitment, production analytics, backend collection, AI analysis, training, MVP validation approval, production app approval, or production release approval.
+- Phase 9F cannot collect real names, contacts, photos, health information, sensitive identity information, biometrics, backend records, analytics records, AI analysis records, training data, or real user trial records in project-state.
+
+Why Phase 9G follows:
+
+The protocol, checklist, and quality gate are ready for an anonymous internal dry run preparation layer. The next conservative step is Phase 9G - Anonymous Internal Trial Dry Run Pack.

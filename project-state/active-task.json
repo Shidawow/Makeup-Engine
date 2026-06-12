@@ -1,11 +1,11 @@
 {
   "schemaVersion": "active-task.v1",
-  "taskId": "9E",
-  "title": "Internal Trial Evidence Pack",
+  "taskId": "9F",
+  "title": "Internal Trial Evidence Collection Preparation",
   "status": "completed",
   "ownerRole": "Codex",
   "createdBy": "Codex",
-  "phase": "9E",
+  "phase": "9F",
   "recommendedProfile": "native-gpt-codex-high-reasoning",
   "allowedDirectories": [
     "docs",
@@ -29,23 +29,23 @@
     "npm run project:context",
     "node scripts/project-status.mjs --json",
     "node scripts/context-pack.mjs --json",
-    "npm run test -- tests/user-app-internal-trial-evidence-pack.test.ts tests/user-app-trial-evidence-summary.test.ts tests/user-app-evidence-sufficiency-gate.test.ts tests/user-app-internal-trial-evidence-pack-panel.test.tsx tests/user-app-trial-evidence-summary-panel.test.tsx tests/user-app-evidence-sufficiency-gate-panel.test.tsx tests/user-app-shell-evidence-pack-flow.test.tsx tests/phase-9E-documentation-recovery.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
+    "npm run test -- tests/user-app-evidence-collection-protocol.test.ts tests/user-app-evidence-collection-checklist.test.ts tests/user-app-evidence-collection-quality-gate.test.ts tests/user-app-evidence-collection-protocol-panel.test.tsx tests/user-app-evidence-collection-checklist-panel.test.tsx tests/user-app-evidence-collection-quality-gate-panel.test.tsx tests/user-app-shell-evidence-collection-flow.test.tsx tests/phase-9F-documentation-recovery.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
   ],
   "completionDefinition": [
-    "Phase 9E added internal trial evidence pack, evidence summary, evidence sufficiency gate, fixtures, administrator panels, and evidence documentation.",
-    "9E did not implement production app, public recruitment, backend collection, database, analytics, AI analysis, OpenAI/external API usage, camera, AR, training, App Store/TestFlight, online publication, new runtime dependencies, or real user data collection.",
-    "9E did not collect real names, contact information, photos, health information, sensitive identity information, face embeddings, biometric identifiers, backend records, analytics records, AI analysis records, or training data.",
+    "Phase 9F added evidence collection protocol, checklist, quality gate, fixtures, administrator panels, and evidence collection preparation documentation.",
+    "9F did not implement production app, public recruitment, backend collection, database, analytics, AI analysis, OpenAI/external API usage, camera, AR, training, App Store/TestFlight, online publication, new runtime dependencies, or real user data collection.",
+    "9F did not collect real names, contact information, photos, health information, sensitive identity information, face embeddings, biometric identifiers, backend records, analytics records, AI analysis records, or training data.",
     "Makeup Engine remains the template production system and UserAppTemplatePackage remains the handoff contract.",
     "Docs and project-state must remain recoverable and validation commands must pass."
   ],
   "dependsOn": [
-    "9D Internal Trial Learning Summary & Product Decision Gate"
+    "9E Internal Trial Evidence Pack"
   ],
   "nextRecommendedTask": {
-    "taskId": "9F",
-    "title": "Internal Trial Evidence Collection Preparation",
+    "taskId": "9G",
+    "title": "Anonymous Internal Trial Dry Run Pack",
     "status": "recommended"
   },
-  "updatedAt": "2026-06-11T23:02:00.000+08:00",
+  "updatedAt": "2026-06-12T00:18:00.000+08:00",
   "validationStatus": "passed"
 }

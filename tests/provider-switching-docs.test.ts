@@ -40,15 +40,15 @@ describe('provider switching docs', () => {
     expect(combined).toContain('src/intelligence/runtime');
   });
 
-  it('provides phase 9C to 9D switch templates with historical 8E, 9A, and 9B markers', async () => {
+  it('provides phase 9F to 9G switch templates with historical 8E, 9A, and 9B markers', async () => {
     const prompt = await readFile('docs/prompts/PROVIDER_SWITCH_PROMPT.md', 'utf8');
 
     expect(prompt).toContain('Switch To Native GPT / Codex Desktop');
     expect(prompt).toContain('Switch To PackyAPI + CLI');
     expect(prompt).toContain('Return From PackyAPI To ChatGPT');
-    expect(prompt).toContain('lastCompletedPhase: 9E');
-    expect(prompt).toContain('nextRecommendedPhase: 9F');
-    expect(prompt).toContain('Internal Trial Evidence Collection Preparation');
+    expect(prompt).toContain('lastCompletedPhase: 9F');
+    expect(prompt).toContain('nextRecommendedPhase: 9G');
+    expect(prompt).toContain('Anonymous Internal Trial Dry Run Pack');
     expect(prompt).toContain('Historical handoff marker retained for Phase 8D recovery tests');
     expect(prompt).toContain('Historical handoff marker retained for Phase 8E recovery tests');
     expect(prompt).toContain('Historical handoff marker retained for Phase 9A recovery tests');
@@ -66,6 +66,7 @@ describe('provider switching docs', () => {
     expect(prompt).toContain('Phase 9A internal trial operations');
     expect(prompt).toContain('Phase 9B internal trial result review');
     expect(prompt).toContain('Phase 9C internal trial iteration plan');
+    expect(prompt).toContain('Phase 9F evidence collection');
     expect(prompt).toContain('photo intake is placeholder-only');
     expect(prompt).toContain('node scripts/context-pack.mjs --json');
   });

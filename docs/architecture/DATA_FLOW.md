@@ -284,3 +284,13 @@ Release readiness can decide internal trial preparation only. It cannot add prod
 -> next recommendation for Phase 9F or future MVP validation planning.
 
 The flow is local, anonymous/mock/example-only, and cannot write real user records into project-state, backend systems, analytics systems, AI analysis systems, or training datasets.
+
+## Phase 9F Internal Trial Evidence Collection Preparation Flow
+
+`UserAppEvidenceSufficiencyGate`
+-> `UserAppEvidenceCollectionProtocol`
+-> `UserAppEvidenceCollectionChecklist`
+-> `UserAppEvidenceCollectionQualityGate`
+-> next recommendation for Phase 9G anonymous internal dry run pack.
+
+The flow is local, anonymous, and preparation-only. It can define allowed evidence, forbidden data, anonymization rules, participant notice, stop conditions, checklist items, and quality decisions. It cannot collect real user records, photos, contact information, health information, sensitive identity information, biometrics, backend records, analytics records, AI analysis records, uploads, or training data.

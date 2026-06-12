@@ -32,3 +32,6 @@ export * from './user-app-next-phase-recommendation.example';
 export * from './user-app-internal-trial-evidence-pack.example';
 export * from './user-app-trial-evidence-summary.example';
 export * from './user-app-evidence-sufficiency-gate.example';
+export * from './user-app-evidence-collection-protocol.example';
+export * from './user-app-evidence-collection-checklist.example';
+export * from './user-app-evidence-collection-quality-gate.example';
