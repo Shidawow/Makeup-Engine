@@ -127,6 +127,7 @@
 - Internal trial iteration plan, backlog, and priority framework read anonymous/mock review outputs only; they do not create production roadmap state, backend issue tracker records, analytics records, real user participant records, camera/photo records, AR state, native app state, AI analysis state, or training data.
 - Internal trial learning summary, product decision gate, and next phase recommendation read anonymous/mock learning summaries only; they do not approve production app development, create backend records, analytics records, AI analysis records, real participant records, camera/photo records, AR state, native app state, or training data.
 - Internal trial evidence collection protocol, checklist, and quality gate read anonymous/mock evidence preparation only; they do not collect real participant records, photos, contact information, health information, sensitive identity information, biometrics, backend records, analytics records, AI analysis records, camera/photo records, AR state, native app state, upload data, or training data.
+- Anonymous internal trial dry run pack, checklist, and review read Phase 9F preparation outputs and anonymous/mock dry run rehearsal state only; they do not launch a real trial, collect real participant records, photos, contact information, health information, sensitive identity information, biometrics, backend records, analytics records, AI analysis records, camera/photo records, AR state, native app state, upload data, or training data.
 - Dataset review decides whether corrected artifacts can become materialized training data.
 - Training reads materialized datasets, not UI state and not raw source packages.
 - Export reads validated model artifacts and export readiness metadata.
@@ -148,3 +149,9 @@ Evidence cannot include real names, contact information, photos, health informat
 Phase 9F protocol, checklist, and quality gate are local administrator preparation aids only. They must not become real data collection, public recruitment, backend record collection, production analytics, AI analysis, training, MVP validation approval, production app approval, production roadmap approval, or production release approval.
 
 Evidence collection preparation cannot request or store real names, contact information, photos, health information, sensitive identity information, face embeddings, biometric identifiers, backend records, analytics records, AI analysis records, uploads, account credentials, payment information, or training labels. Preparation cannot mutate `UserAppTemplatePackage` and cannot write real user trial records into project-state.
+
+## Phase 9G Anonymous Dry Run Boundary
+
+Phase 9G dry run pack, checklist, and review are local administrator rehearsal aids only. They must not become real trial launch, public recruitment, backend record collection, production analytics, AI analysis, training, MVP validation approval, production app approval, production roadmap approval, or production release approval.
+
+Dry run rehearsal cannot request or store real names, contact information, photos, health information, sensitive identity information, face embeddings, biometric identifiers, backend records, analytics records, AI analysis records, uploads, account credentials, payment information, or training labels. Dry run review cannot mutate `UserAppTemplatePackage` and cannot write real user trial records into project-state.

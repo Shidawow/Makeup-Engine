@@ -1,5 +1,5 @@
 {
-  "phase": "9F",
+  "phase": "9G",
   "status": "passed",
   "lastValidation": {
     "typecheck": "passed",
@@ -9,8 +9,8 @@
     "projectStatusJson": "passed",
     "projectContext": "passed",
     "contextPackJson": "passed",
-    "userAppBrowserQa": "not_required_for_phase_9f_evidence_collection_preparation",
-    "httpSmoke": "not_required_for_phase_9f_evidence_collection_preparation",
+    "userAppBrowserQa": "not_required_for_phase_9g_anonymous_internal_trial_dry_run",
+    "httpSmoke": "not_required_for_phase_9g_anonymous_internal_trial_dry_run",
     "phase8DScopedTests": "passed",
     "phase8EScopedTests": "passed",
     "phase9AScopedTests": "passed",
@@ -19,12 +19,13 @@
     "phase9DScopedTests": "passed",
     "phase9EScopedTests": "passed",
     "phase9FScopedTests": "passed",
-    "testFiles": 439,
-    "tests": 663,
-    "phase9FScopedTestFiles": 10,
-    "phase9FScopedTestsCount": 24,
-    "summary": "Phase 9F validation passed: typecheck, scoped Phase 9F tests, full npm test, build, project status/context, and JSON status/context commands.",
-    "updatedAt": "2026-06-12T00:18:00.000+08:00"
+    "phase9GScopedTests": "passed",
+    "testFiles": 447,
+    "tests": 679,
+    "phase9GScopedTestFiles": 10,
+    "phase9GScopedTestsCount": 23,
+    "summary": "Phase 9G validation passed: typecheck, scoped Phase 9G tests, full npm test, build, project status/context, and JSON status/context commands.",
+    "updatedAt": "2026-06-12T01:08:00.000+08:00"
   },
   "lastKnownPreDoc0Validation": {
     "typecheck": "passed",
@@ -41,20 +42,20 @@
     "npm run project:context",
     "node scripts/project-status.mjs --json",
     "node scripts/context-pack.mjs --json",
-    "npm run test -- tests/user-app-evidence-collection-protocol.test.ts tests/user-app-evidence-collection-checklist.test.ts tests/user-app-evidence-collection-quality-gate.test.ts tests/user-app-evidence-collection-protocol-panel.test.tsx tests/user-app-evidence-collection-checklist-panel.test.tsx tests/user-app-evidence-collection-quality-gate-panel.test.tsx tests/user-app-shell-evidence-collection-flow.test.tsx tests/phase-9F-documentation-recovery.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
+    "npm run test -- tests/user-app-anonymous-trial-dry-run-pack.test.ts tests/user-app-anonymous-trial-dry-run-checklist.test.ts tests/user-app-anonymous-trial-dry-run-review.test.ts tests/user-app-anonymous-trial-dry-run-pack-panel.test.tsx tests/user-app-anonymous-trial-dry-run-checklist-panel.test.tsx tests/user-app-anonymous-trial-dry-run-review-panel.test.tsx tests/user-app-shell-anonymous-trial-dry-run-flow.test.tsx tests/phase-9G-documentation-recovery.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
   ],
   "notes": [
-    "Phase 9F scoped model and panel tests passed locally before full validation; full acceptance validation pending.",
-    "No browser QA or HTTP smoke required for Phase 9F evidence collection preparation."
+    "Phase 9G scoped model and panel tests passed locally before full validation; full acceptance validation pending.",
+    "No browser QA or HTTP smoke required for Phase 9G anonymous internal trial dry run pack."
   ],
-  "lastCompletedPhase": "9F",
-  "currentPhase": "9F",
-  "nextRecommendedPhase": "9G",
-  "updatedAt": "2026-06-12T00:18:00.000+08:00",
-  "summary": "Phase 9F validation passed: typecheck, scoped Phase 9F tests, full npm test, build, project status/context, and JSON status/context commands.",
+  "lastCompletedPhase": "9G",
+  "currentPhase": "9G",
+  "nextRecommendedPhase": "9H",
+  "updatedAt": "2026-06-12T01:08:00.000+08:00",
+  "summary": "Phase 9G validation passed: typecheck, scoped Phase 9G tests, full npm test, build, project status/context, and JSON status/context commands.",
   "validation": {
     "status": "passed",
-    "phase": "9F",
+    "phase": "9G",
     "typecheck": "passed",
     "test": "passed",
     "build": "passed",
@@ -62,8 +63,8 @@
     "projectStatusJson": "passed",
     "projectContext": "passed",
     "contextPackJson": "passed",
-    "userAppBrowserQa": "not_required_for_phase_9f_evidence_collection_preparation",
-    "httpSmoke": "not_required_for_phase_9f_evidence_collection_preparation",
+    "userAppBrowserQa": "not_required_for_phase_9g_anonymous_internal_trial_dry_run",
+    "httpSmoke": "not_required_for_phase_9g_anonymous_internal_trial_dry_run",
     "phase8DScopedTests": "passed",
     "phase8EScopedTests": "passed",
     "phase9AScopedTests": "passed",
@@ -72,12 +73,13 @@
     "phase9DScopedTests": "passed",
     "phase9EScopedTests": "passed",
     "phase9FScopedTests": "passed",
-    "testFiles": 439,
-    "tests": 663,
-    "phase9FScopedTestFiles": 10,
-    "phase9FScopedTestsCount": 24,
-    "summary": "Phase 9F validation passed: typecheck, scoped Phase 9F tests, full npm test, build, project status/context, and JSON status/context commands.",
-    "updatedAt": "2026-06-12T00:18:00.000+08:00",
+    "phase9GScopedTests": "passed",
+    "testFiles": 447,
+    "tests": 679,
+    "phase9GScopedTestFiles": 10,
+    "phase9GScopedTestsCount": 23,
+    "summary": "Phase 9G validation passed: typecheck, scoped Phase 9G tests, full npm test, build, project status/context, and JSON status/context commands.",
+    "updatedAt": "2026-06-12T01:08:00.000+08:00",
     "commands": [
       "npm run typecheck",
       "npm run test",
@@ -86,7 +88,7 @@
       "npm run project:context",
       "node scripts/project-status.mjs --json",
       "node scripts/context-pack.mjs --json",
-      "npm run test -- tests/user-app-evidence-collection-protocol.test.ts tests/user-app-evidence-collection-checklist.test.ts tests/user-app-evidence-collection-quality-gate.test.ts tests/user-app-evidence-collection-protocol-panel.test.tsx tests/user-app-evidence-collection-checklist-panel.test.tsx tests/user-app-evidence-collection-quality-gate-panel.test.tsx tests/user-app-shell-evidence-collection-flow.test.tsx tests/phase-9F-documentation-recovery.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
+      "npm run test -- tests/user-app-anonymous-trial-dry-run-pack.test.ts tests/user-app-anonymous-trial-dry-run-checklist.test.ts tests/user-app-anonymous-trial-dry-run-review.test.ts tests/user-app-anonymous-trial-dry-run-pack-panel.test.tsx tests/user-app-anonymous-trial-dry-run-checklist-panel.test.tsx tests/user-app-anonymous-trial-dry-run-review-panel.test.tsx tests/user-app-shell-anonymous-trial-dry-run-flow.test.tsx tests/phase-9G-documentation-recovery.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
     ]
   }
 }

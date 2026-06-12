@@ -28,6 +28,9 @@ import {
   createUserAppEvidenceCollectionChecklist,
   createUserAppEvidenceCollectionProtocol,
   createUserAppEvidenceCollectionQualityGate,
+  createUserAppAnonymousTrialDryRunChecklist,
+  createUserAppAnonymousTrialDryRunPack,
+  createUserAppAnonymousTrialDryRunReview,
   createUserAppInternalTrialEvidencePack,
   createUserAppInternalTrialLearningSummary,
   createUserAppNextPhaseRecommendation,
@@ -64,6 +67,9 @@ import {
 import { userAppTemplateContentQaExamplePackage } from '../../templates/examples/user-app-template-content-qa.example';
 import { userAppTrialFeedbackMockSummary } from '../../templates/examples/user-app-trial-feedback.example';
 import { userAppTrialObservationMockSummary } from '../../templates/examples/user-app-trial-observation.example';
+import { UserAppAnonymousTrialDryRunChecklistPanel } from './UserAppAnonymousTrialDryRunChecklistPanel';
+import { UserAppAnonymousTrialDryRunPackPanel } from './UserAppAnonymousTrialDryRunPackPanel';
+import { UserAppAnonymousTrialDryRunReviewPanel } from './UserAppAnonymousTrialDryRunReviewPanel';
 import { UserAppCompatibilityBanner } from './UserAppCompatibilityBanner';
 import { UserAppEvidenceCollectionChecklistPanel } from './UserAppEvidenceCollectionChecklistPanel';
 import { UserAppEvidenceCollectionProtocolPanel } from './UserAppEvidenceCollectionProtocolPanel';
@@ -154,6 +160,9 @@ const adminSectionTabs: Array<{ tabId: UserAppShellSection; label: string }> = [
   { tabId: 'evidenceCollectionProtocol', label: '证据收集协议' },
   { tabId: 'evidenceCollectionChecklist', label: '证据收集 checklist' },
   { tabId: 'evidenceCollectionQualityGate', label: '证据收集质量门' },
+  { tabId: 'anonymousTrialDryRunPack', label: '匿名内部试用 dry run' },
+  { tabId: 'anonymousTrialDryRunChecklist', label: 'dry run checklist' },
+  { tabId: 'anonymousTrialDryRunReview', label: 'dry run 复盘' },
   { tabId: 'pwa', label: 'PWA 检查' },
   { tabId: 'mvpPolish', label: 'MVP 打磨' },
   { tabId: 'readiness', label: 'App 就绪度' },
@@ -444,6 +453,34 @@ export function UserAppShell({
         checklist: evidenceCollectionChecklist,
       }),
     [evidenceCollectionChecklist, evidenceCollectionProtocol],
+  );
+  const anonymousTrialDryRunPack = useMemo(
+    () => createUserAppAnonymousTrialDryRunPack(),
+    [],
+  );
+  const anonymousTrialDryRunChecklist = useMemo(
+    () =>
+      createUserAppAnonymousTrialDryRunChecklist({
+        pack: anonymousTrialDryRunPack,
+      }),
+    [anonymousTrialDryRunPack],
+  );
+  const anonymousTrialDryRunReview = useMemo(
+    () =>
+      createUserAppAnonymousTrialDryRunReview({
+        pack: anonymousTrialDryRunPack,
+        checklist: anonymousTrialDryRunChecklist,
+        evidenceProtocol: evidenceCollectionProtocol,
+        evidenceChecklist: evidenceCollectionChecklist,
+        evidenceQualityGate: evidenceCollectionQualityGate,
+      }),
+    [
+      anonymousTrialDryRunChecklist,
+      anonymousTrialDryRunPack,
+      evidenceCollectionChecklist,
+      evidenceCollectionProtocol,
+      evidenceCollectionQualityGate,
+    ],
   );
   const readinessReport = useMemo(
     () =>
@@ -978,6 +1015,20 @@ export function UserAppShell({
                 <UserAppEvidenceCollectionQualityGatePanel
                   gate={evidenceCollectionQualityGate}
                 />
+              ) : null}
+
+              {boundaryTab === 'anonymousTrialDryRunPack' ? (
+                <UserAppAnonymousTrialDryRunPackPanel pack={anonymousTrialDryRunPack} />
+              ) : null}
+
+              {boundaryTab === 'anonymousTrialDryRunChecklist' ? (
+                <UserAppAnonymousTrialDryRunChecklistPanel
+                  checklist={anonymousTrialDryRunChecklist}
+                />
+              ) : null}
+
+              {boundaryTab === 'anonymousTrialDryRunReview' ? (
+                <UserAppAnonymousTrialDryRunReviewPanel review={anonymousTrialDryRunReview} />
               ) : null}
 
               {boundaryTab === 'mvpPolish' ? (

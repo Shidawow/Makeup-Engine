@@ -707,3 +707,24 @@ What still cannot happen:
 Why Phase 9G follows:
 
 The protocol, checklist, and quality gate are ready for an anonymous internal dry run preparation layer. The next conservative step is Phase 9G - Anonymous Internal Trial Dry Run Pack.
+
+## Phase 9G
+
+Added the Anonymous Internal Trial Dry Run Pack.
+
+What changed:
+
+- Added local anonymous dry run pack with beginner flow, template discovery, step comprehension, privacy notice, administrator evidence capture, and stop condition rehearsal scenarios.
+- Added dry run checklist for before dry run, participant notice, administrator rehearsal, allowed evidence, forbidden data, during dry run, stop conditions, after dry run, and review handoff.
+- Added dry run review decisions for ready, warning, repeat dry run, revise protocol, revise checklist, missing notice, forbidden data request, and privacy/scope block.
+- Added administrator panels for 匿名内部试用 dry run, dry run checklist, and dry run 复盘.
+- Added examples and tests for ready dry run, warning dry run, missing participant notice, forbidden photo/contact requests, upload/training violation, incomplete checklist, ready review, repeat dry run, revise protocol/checklist, and blocked review.
+
+What still cannot happen:
+
+- Phase 9G is not real trial launch, public recruitment, production analytics, backend collection, AI analysis, training, MVP validation approval, production app approval, or production release approval.
+- Phase 9G cannot collect real names, contacts, photos, health information, sensitive identity information, biometrics, backend records, analytics records, AI analysis records, training data, upload data, or real user trial records in project-state.
+
+Why Phase 9H follows:
+
+The dry run pack and review are ready for an anonymous internal trial launch preparation layer. The next conservative step is Phase 9H - Anonymous Internal Trial Launch Pack.

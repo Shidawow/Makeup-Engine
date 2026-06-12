@@ -353,11 +353,11 @@
     "Observation template documentation",
     "Outcome review documentation"
   ],
-  "phase": "9F",
-  "lastCompletedPhase": "9F",
-  "currentPhase": "9F",
-  "nextRecommendedPhase": "9G",
-  "updatedAt": "2026-06-12T00:18:00.000+08:00",
+  "phase": "9G",
+  "lastCompletedPhase": "9G",
+  "currentPhase": "9G",
+  "nextRecommendedPhase": "9H",
+  "updatedAt": "2026-06-12T00:45:00.000+08:00",
   "artifacts": [
     "docs/product/internal-trial-learning-summary.md",
     "docs/product/product-decision-gate.md",
@@ -398,5 +398,18 @@
     "docs/product/internal-trial-evidence-collection-checklist.md",
     "docs/product/internal-trial-evidence-quality-gate.md",
     "docs/phases/phase-9F.md"
+  ],
+  "nextRecommendedPhaseName": "Anonymous Internal Trial Launch Pack",
+  "userAppAnonymousTrialDryRunOutputs": [
+    "src/user-app/userAppAnonymousTrialDryRunPack.ts",
+    "src/user-app/userAppAnonymousTrialDryRunChecklist.ts",
+    "src/user-app/userAppAnonymousTrialDryRunReview.ts",
+    "src/components/user-app/UserAppAnonymousTrialDryRunPackPanel.tsx",
+    "src/components/user-app/UserAppAnonymousTrialDryRunChecklistPanel.tsx",
+    "src/components/user-app/UserAppAnonymousTrialDryRunReviewPanel.tsx",
+    "docs/product/anonymous-internal-trial-dry-run-pack.md",
+    "docs/product/anonymous-internal-trial-dry-run-checklist.md",
+    "docs/product/anonymous-internal-trial-dry-run-review.md",
+    "docs/phases/phase-9G.md"
   ]
 }

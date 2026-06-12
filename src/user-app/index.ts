@@ -47,3 +47,6 @@ export * from './userAppEvidenceSufficiencyGate';
 export * from './userAppEvidenceCollectionProtocol';
 export * from './userAppEvidenceCollectionChecklist';
 export * from './userAppEvidenceCollectionQualityGate';
+export * from './userAppAnonymousTrialDryRunPack';
+export * from './userAppAnonymousTrialDryRunChecklist';
+export * from './userAppAnonymousTrialDryRunReview';

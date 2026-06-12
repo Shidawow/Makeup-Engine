@@ -68,3 +68,5 @@
 
 - Phase 9F internal trial evidence collection preparation is local administrator preparation only; it is not real data collection, backend evidence storage, public recruitment, MVP validation approval, production analytics, AI analysis, training, or production release approval.
 - Phase 9F protocol, checklist, and quality gate cannot collect real names, contact information, photos, health information, sensitive identity information, biometrics, backend records, analytics records, AI analysis records, training labels, or real user trial records in project-state.
+- Phase 9G anonymous internal trial dry run is local administrator rehearsal only; it is not real trial launch, production analytics, backend evidence collection, public recruitment, MVP validation approval, production app approval, or production release approval.
+- Phase 9G dry run pack, checklist, and review cannot collect real names, contact information, photos, health information, sensitive identity information, biometrics, backend records, analytics records, AI analysis records, training labels, upload data, or real user trial records in project-state.

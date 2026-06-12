@@ -1,14 +1,14 @@
 {
   "projectName": "Makeup Engine",
-  "projectRole": "Makeup template production system with completed React Web / PWA route planning, Phase 8B local PWA/mobile shell polish, Phase 8C local MVP trial pack, Phase 8D template content QA, Phase 8E MVP release readiness, Phase 9A internal trial operations, Phase 9B internal trial result review framework, Phase 9C internal trial iteration plan, Phase 9D internal trial learning/product decision gate, Phase 9E internal trial evidence pack, and Phase 9F internal trial evidence collection preparation for a future separate user app MVP",
+  "projectRole": "Makeup template production system with completed React Web / PWA route planning, Phase 8B local PWA/mobile shell polish, Phase 8C local MVP trial pack, Phase 8D template content QA, Phase 8E MVP release readiness, Phase 9A internal trial operations, Phase 9B internal trial result review framework, Phase 9C internal trial iteration plan, Phase 9D internal trial learning/product decision gate, Phase 9E internal trial evidence pack, Phase 9F internal trial evidence collection preparation, and Phase 9G anonymous internal trial dry run pack for a future separate user app MVP",
   "projectIsUserFacingApp": false,
-  "lastCompletedPhase": "9F",
-  "lastCompletedBusinessPhase": "9F",
-  "currentPhase": "Internal Trial Evidence Collection Preparation",
-  "currentPhaseId": "9F",
-  "nextRecommendedPhase": "9G",
-  "nextRecommendedPhaseName": "Anonymous Internal Trial Dry Run Pack",
-  "nextAction": "Proceed to Phase 9G: Anonymous Internal Trial Dry Run Pack. Phase 9F is complete. Use the local evidence collection protocol, checklist, participant notice, stop conditions, and quality gate to prepare an anonymous internal dry run; do not add production app, public recruitment, backend, database, camera, AR, training, OpenAI API, external API, native iOS, React Native, Flutter, ecommerce, community, paid features, analytics, accounts, online publication, App Store/TestFlight, service worker, offline cache, push notification, background sync, install tracking, AI analysis, or real user data collection.",
+  "lastCompletedPhase": "9G",
+  "lastCompletedBusinessPhase": "9G",
+  "currentPhase": "Anonymous Internal Trial Dry Run Pack",
+  "currentPhaseId": "9G",
+  "nextRecommendedPhase": "9H",
+  "nextRecommendedPhaseName": "Anonymous Internal Trial Launch Pack",
+  "nextAction": "Proceed to Phase 9H: Anonymous Internal Trial Launch Pack. Phase 9G is complete. Use the anonymous dry run pack, checklist, review result, participant notice, stop conditions, and Phase 9F quality gate to prepare a launch pack for anonymous internal trial only; do not add production app, public recruitment, backend, database, camera, AR, training, OpenAI API, external API, native iOS, React Native, Flutter, ecommerce, community, paid features, analytics, accounts, online publication, App Store/TestFlight, service worker, offline cache, push notification, background sync, install tracking, AI analysis, or real sensitive data collection.",
   "mainDataFlow": [
     "SourceImagePackage",
     "SourceImageEntry",
@@ -99,7 +99,11 @@
     "UserAppEvidenceCollectionProtocol",
     "UserAppEvidenceCollectionChecklist",
     "UserAppEvidenceCollectionQualityGate",
-    "UserAppEvidenceCollectionAdminPanels"
+    "UserAppEvidenceCollectionAdminPanels",
+    "UserAppAnonymousTrialDryRunPack",
+    "UserAppAnonymousTrialDryRunChecklist",
+    "UserAppAnonymousTrialDryRunReview",
+    "UserAppAnonymousTrialDryRunAdminPanels"
   ],
   "mainModules": [
     "src/vision",
@@ -141,8 +145,8 @@
     "projectStatusJson": "passed",
     "projectContext": "passed",
     "contextPackJson": "passed",
-    "userAppBrowserQa": "not_required_for_phase_9f_evidence_collection_preparation",
-    "httpSmoke": "not_required_for_phase_9f_evidence_collection_preparation",
+    "userAppBrowserQa": "not_required_for_phase_9g_anonymous_internal_trial_dry_run",
+    "httpSmoke": "not_required_for_phase_9g_anonymous_internal_trial_dry_run",
     "phase8DScopedTests": "passed",
     "phase8EScopedTests": "passed",
     "phase9AScopedTests": "passed",
@@ -151,12 +155,13 @@
     "phase9DScopedTests": "passed",
     "phase9EScopedTests": "passed",
     "phase9FScopedTests": "passed",
-    "testFiles": 439,
-    "tests": 663,
-    "phase9FScopedTestFiles": 10,
-    "phase9FScopedTestsCount": 24,
-    "summary": "Phase 9F validation passed: typecheck, scoped Phase 9F tests, full npm test, build, project status/context, and JSON status/context commands.",
-    "updatedAt": "2026-06-12T00:18:00.000+08:00"
+    "phase9GScopedTests": "passed",
+    "testFiles": 447,
+    "tests": 679,
+    "phase9GScopedTestFiles": 10,
+    "phase9GScopedTestsCount": 23,
+    "summary": "Phase 9G validation passed: typecheck, scoped Phase 9G tests, full npm test, build, project status/context, and JSON status/context commands.",
+    "updatedAt": "2026-06-12T01:08:00.000+08:00"
   },
   "knownLimitations": [
     "SourceImagePackage is not a training dataset",
@@ -210,7 +215,9 @@
     "Phase 9E internal trial evidence pack is local administrator evidence support only; it is not production analytics, a backend evidence database, AI analysis, public recruitment, production app approval, or production release approval.",
     "Phase 9E evidence must remain anonymous/mock/example summaries and cannot store real user names, contacts, photos, health information, sensitive identity information, biometrics, backend records, analytics records, AI analysis records, training labels, or real user trial records in project-state.",
     "Phase 9F internal trial evidence collection preparation is local administrator preparation only; it is not real data collection, backend evidence storage, public recruitment, MVP validation approval, production analytics, AI analysis, training, or production release approval.",
-    "Phase 9F protocol, checklist, and quality gate must remain anonymous/local preparation and cannot store real user names, contacts, photos, health information, sensitive identity information, biometrics, backend records, analytics records, AI analysis records, training labels, or real user trial records in project-state."
+    "Phase 9F protocol, checklist, and quality gate must remain anonymous/local preparation and cannot store real user names, contacts, photos, health information, sensitive identity information, biometrics, backend records, analytics records, AI analysis records, training labels, or real user trial records in project-state.",
+    "Phase 9G anonymous internal trial dry run is local administrator rehearsal only; it is not a real trial launch, production app approval, MVP validation planning, backend evidence collection, AI analysis, training, public recruitment, or production release approval.",
+    "Phase 9G dry run records must remain anonymous/mock/local and cannot store real user names, contacts, photos, health information, sensitive identity information, biometrics, backend records, analytics records, AI analysis records, training labels, or real user trial records in project-state."
   ],
   "recoveryEntryFiles": [
     "START_HERE.md",
@@ -305,7 +312,11 @@
     "docs/product/internal-trial-evidence-collection-protocol.md",
     "docs/product/internal-trial-evidence-collection-checklist.md",
     "docs/product/internal-trial-evidence-quality-gate.md",
-    "docs/phases/phase-9F.md"
+    "docs/phases/phase-9F.md",
+    "docs/product/anonymous-internal-trial-dry-run-pack.md",
+    "docs/product/anonymous-internal-trial-dry-run-checklist.md",
+    "docs/product/anonymous-internal-trial-dry-run-review.md",
+    "docs/phases/phase-9G.md"
   ],
   "forbiddenActions": [
     "Do not build the full production user-side app in the local admin workbench",
@@ -354,12 +365,15 @@
     "Do not mutate UserAppTemplatePackage from Phase 9E evidence pack, evidence summary, sufficiency gate, sessions, preferences, recommendations, content QA, feedback, or admin panels.",
     "Do not treat Phase 9F evidence collection protocol, checklist, or quality gate as real data collection, production analytics, backend evidence collection, AI analysis, training, MVP validation approval, public recruitment, production app approval, or production release approval.",
     "Do not use Phase 9F anonymous evidence collection preparation as permission to collect real user names, contacts, photos, health information, sensitive identity data, biometrics, backend records, analytics records, AI analysis records, upload data, or training data.",
-    "Do not mutate UserAppTemplatePackage from Phase 9F evidence collection preparation, evidence pack, evidence summary, sufficiency gate, sessions, preferences, recommendations, content QA, feedback, or admin panels."
+    "Do not mutate UserAppTemplatePackage from Phase 9F evidence collection preparation, evidence pack, evidence summary, sufficiency gate, sessions, preferences, recommendations, content QA, feedback, or admin panels.",
+    "Do not treat Phase 9G anonymous internal trial dry run as real trial launch, production analytics, backend evidence collection, AI analysis, training, MVP validation approval, public recruitment, production app approval, or production release approval.",
+    "Do not use Phase 9G dry run as permission to collect real user names, contacts, photos, health information, sensitive identity data, biometrics, backend records, analytics records, AI analysis records, upload data, or training data.",
+    "Do not mutate UserAppTemplatePackage from Phase 9G dry run pack, checklist, review, sessions, preferences, recommendations, content QA, feedback, or admin panels."
   ],
   "currentPhaseName": "Internal Trial Evidence Collection Preparation",
   "validation": {
     "status": "passed",
-    "phase": "9F",
+    "phase": "9G",
     "typecheck": "passed",
     "test": "passed",
     "build": "passed",
@@ -367,8 +381,8 @@
     "projectStatusJson": "passed",
     "projectContext": "passed",
     "contextPackJson": "passed",
-    "userAppBrowserQa": "not_required_for_phase_9f_evidence_collection_preparation",
-    "httpSmoke": "not_required_for_phase_9f_evidence_collection_preparation",
+    "userAppBrowserQa": "not_required_for_phase_9g_anonymous_internal_trial_dry_run",
+    "httpSmoke": "not_required_for_phase_9g_anonymous_internal_trial_dry_run",
     "phase8DScopedTests": "passed",
     "phase8EScopedTests": "passed",
     "phase9AScopedTests": "passed",
@@ -377,12 +391,13 @@
     "phase9DScopedTests": "passed",
     "phase9EScopedTests": "passed",
     "phase9FScopedTests": "passed",
-    "testFiles": 439,
-    "tests": 663,
-    "phase9FScopedTestFiles": 10,
-    "phase9FScopedTestsCount": 24,
-    "summary": "Phase 9F validation passed: typecheck, scoped Phase 9F tests, full npm test, build, project status/context, and JSON status/context commands.",
-    "updatedAt": "2026-06-12T00:18:00.000+08:00",
+    "phase9GScopedTests": "passed",
+    "testFiles": 447,
+    "tests": 679,
+    "phase9GScopedTestFiles": 10,
+    "phase9GScopedTestsCount": 23,
+    "summary": "Phase 9G validation passed: typecheck, scoped Phase 9G tests, full npm test, build, project status/context, and JSON status/context commands.",
+    "updatedAt": "2026-06-12T01:08:00.000+08:00",
     "commands": [
       "npm run typecheck",
       "npm run test",
@@ -391,8 +406,18 @@
       "npm run project:context",
       "node scripts/project-status.mjs --json",
       "node scripts/context-pack.mjs --json",
-      "npm run test -- tests/user-app-evidence-collection-protocol.test.ts tests/user-app-evidence-collection-checklist.test.ts tests/user-app-evidence-collection-quality-gate.test.ts tests/user-app-evidence-collection-protocol-panel.test.tsx tests/user-app-evidence-collection-checklist-panel.test.tsx tests/user-app-evidence-collection-quality-gate-panel.test.tsx tests/user-app-shell-evidence-collection-flow.test.tsx tests/phase-9F-documentation-recovery.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
+      "npm run test -- tests/user-app-anonymous-trial-dry-run-pack.test.ts tests/user-app-anonymous-trial-dry-run-checklist.test.ts tests/user-app-anonymous-trial-dry-run-review.test.ts tests/user-app-anonymous-trial-dry-run-pack-panel.test.tsx tests/user-app-anonymous-trial-dry-run-checklist-panel.test.tsx tests/user-app-anonymous-trial-dry-run-review-panel.test.tsx tests/user-app-shell-anonymous-trial-dry-run-flow.test.tsx tests/phase-9G-documentation-recovery.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
     ]
   },
-  "updatedAt": "2026-06-12T00:18:00.000+08:00"
+  "updatedAt": "2026-06-12T00:18:00.000+08:00",
+  "anonymousTrialDryRunDecision": {
+    "phase9GResult": [
+      "anonymous internal trial dry run pack with required scenarios",
+      "dry run checklist for participant notice, allowed evidence, forbidden data, and stop conditions",
+      "dry run review linked to Phase 9F evidence collection quality gate",
+      "administrator dry run panels separated from ordinary user path"
+    ],
+    "dryRunBoundary": "anonymous/local/mock rehearsal only; no photos, uploads, training, backend records, AI analysis, sensitive information, or real user records in project-state",
+    "nextPhase": "Phase 9H Anonymous Internal Trial Launch Pack"
+  }
 }

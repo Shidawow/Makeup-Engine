@@ -1,50 +1,48 @@
 {
   "commands": [
     {
-      "command": "npm run typecheck",
+      "command": "npm run test -- tests/user-app-anonymous-trial-dry-run-pack.test.ts tests/user-app-anonymous-trial-dry-run-checklist.test.ts tests/user-app-anonymous-trial-dry-run-review.test.ts tests/user-app-anonymous-trial-dry-run-pack-panel.test.tsx tests/user-app-anonymous-trial-dry-run-checklist-panel.test.tsx tests/user-app-anonymous-trial-dry-run-review-panel.test.tsx tests/user-app-shell-anonymous-trial-dry-run-flow.test.tsx",
       "status": "passed",
-      "phase": "9F"
+      "notes": "Initial Phase 9G model, panel, and shell wiring tests passed."
+    },
+    {
+      "command": "npm run test -- tests/user-app-anonymous-trial-dry-run-pack.test.ts tests/user-app-anonymous-trial-dry-run-checklist.test.ts tests/user-app-anonymous-trial-dry-run-review.test.ts tests/user-app-anonymous-trial-dry-run-pack-panel.test.tsx tests/user-app-anonymous-trial-dry-run-checklist-panel.test.tsx tests/user-app-anonymous-trial-dry-run-review-panel.test.tsx tests/user-app-shell-anonymous-trial-dry-run-flow.test.tsx tests/phase-9G-documentation-recovery.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
+      "status": "passed",
+      "notes": "Required Phase 9G scoped acceptance tests pending final docs/project-state update."
+    },
+    {
+      "command": "npm run typecheck",
+      "status": "passed"
     },
     {
       "command": "npm run test",
-      "status": "passed",
-      "phase": "9F"
+      "status": "passed"
     },
     {
       "command": "npm run build",
-      "status": "passed",
-      "phase": "9F"
+      "status": "passed"
     },
     {
       "command": "npm run project:status",
-      "status": "passed",
-      "phase": "9F"
+      "status": "passed"
     },
     {
       "command": "npm run project:context",
-      "status": "passed",
-      "phase": "9F"
+      "status": "passed"
     },
     {
       "command": "node scripts/project-status.mjs --json",
-      "status": "passed",
-      "phase": "9F"
+      "status": "passed"
     },
     {
       "command": "node scripts/context-pack.mjs --json",
-      "status": "passed",
-      "phase": "9F"
-    },
-    {
-      "command": "npm run test -- tests/user-app-evidence-collection-protocol.test.ts tests/user-app-evidence-collection-checklist.test.ts tests/user-app-evidence-collection-quality-gate.test.ts tests/user-app-evidence-collection-protocol-panel.test.tsx tests/user-app-evidence-collection-checklist-panel.test.tsx tests/user-app-evidence-collection-quality-gate-panel.test.tsx tests/user-app-shell-evidence-collection-flow.test.tsx tests/phase-9F-documentation-recovery.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
-      "status": "passed",
-      "phase": "9F"
+      "status": "passed"
     }
   ],
   "lastUpdatedPhase": "9F",
-  "phase": "9F",
+  "phase": "9G",
   "lastCompletedPhase": "9F",
   "currentPhase": "9F",
   "nextRecommendedPhase": "9G",
-  "updatedAt": "2026-06-12T00:18:00.000+08:00"
+  "updatedAt": "2026-06-12T01:08:00.000+08:00"
 }

@@ -35,3 +35,6 @@ export * from './user-app-evidence-sufficiency-gate.example';
 export * from './user-app-evidence-collection-protocol.example';
 export * from './user-app-evidence-collection-checklist.example';
 export * from './user-app-evidence-collection-quality-gate.example';
+export * from './user-app-anonymous-trial-dry-run-pack.example';
+export * from './user-app-anonymous-trial-dry-run-checklist.example';
+export * from './user-app-anonymous-trial-dry-run-review.example';

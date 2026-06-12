@@ -43,8 +43,8 @@ describe('Phase 7A documentation recovery', () => {
 
     expect(startHere).toContain('Phase 7A');
     expect(currentStatus).toContain('User App MVP Shell');
-    expect(currentPhase).toContain('9F');
-    expect(nextAction).toContain('Phase 9G');
+    expect(currentPhase).toContain('9G');
+    expect(nextAction).toContain('Phase 9H');
     expect(phaseDoc).toContain('not a production app');
     expect(phaseHistory).toContain('## Phase 7A');
     expect(architecture).toContain('src/user-app');
@@ -52,9 +52,9 @@ describe('Phase 7A documentation recovery', () => {
     expect(guardrails).toContain('UserAppTemplatePackage');
     expect(masterContext).toContain('Phase 8A completed');
     expect(providerPrompt).toContain('lastCompletedPhase: 8A');
-    expect(snapshot.lastCompletedPhase).toBe('9F');
-    expect(snapshot.nextRecommendedPhase).toBe('9G');
-    expect(latestHandoff.fromPhase).toBe('9F');
-    expect(latestHandoff.toPhase).toBe('9G');
+    expect(snapshot.lastCompletedPhase).toBe('9G');
+    expect(snapshot.nextRecommendedPhase).toBe('9H');
+    expect(latestHandoff.fromPhase).toBe('9G');
+    expect(latestHandoff.toPhase).toBe('9H');
   });
 });

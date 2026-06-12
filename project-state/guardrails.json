@@ -1,5 +1,5 @@
 {
-  "phase": "9F",
+  "phase": "9G",
   "guardrails": [
     {
       "id": "source-image-not-training-data",
@@ -444,6 +444,22 @@
     {
       "id": "phase_9f_no_project_state_user_records",
       "rule": "Phase 9F cannot write real user trial records into project-state and cannot mutate UserAppTemplatePackage."
+    },
+    {
+      "id": "phase_9g_dry_run_only",
+      "rule": "Phase 9G anonymous internal trial dry run is rehearsal-only and is not real trial launch, production analytics, MVP validation approval, production app approval, public recruitment, or production release approval."
+    },
+    {
+      "id": "phase_9g_no_sensitive_collection",
+      "rule": "Phase 9G must not collect real names, contact information, photos, health information, sensitive identity information, biometrics, backend records, analytics records, AI analysis records, upload data, or training data."
+    },
+    {
+      "id": "phase_9g_no_backend_ai_training",
+      "rule": "Phase 9G must not add backend, database, analytics, AI analysis, OpenAI/external API calls, camera, AR, upload, service worker, offline cache, push notification, background sync, install tracking, or training."
+    },
+    {
+      "id": "phase_9g_no_project_state_user_records",
+      "rule": "Phase 9G cannot write real user trial records into project-state and cannot mutate UserAppTemplatePackage."
     }
   ],
   "legacyFrozenModules": [

@@ -68,6 +68,9 @@ export type UserAppShellSection =
   | 'evidenceCollectionProtocol'
   | 'evidenceCollectionChecklist'
   | 'evidenceCollectionQualityGate'
+  | 'anonymousTrialDryRunPack'
+  | 'anonymousTrialDryRunChecklist'
+  | 'anonymousTrialDryRunReview'
   | 'mobileQa'
   | 'interaction';
 
