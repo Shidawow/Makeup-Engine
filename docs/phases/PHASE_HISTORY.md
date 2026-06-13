@@ -770,3 +770,24 @@ What still cannot happen:
 Why Phase 9J follows:
 
 The evidence review framework is ready for a conservative follow-up iteration plan. The next step is Phase 9J - Anonymous Internal Trial Follow-up Iteration, unless the owner explicitly chooses DOC-ILLUSTRATED or a 9I safety fix.
+
+## Phase 9J
+
+Added the Anonymous Internal Trial Follow-up Iteration.
+
+What changed:
+
+- Added local follow-up iteration planning that turns 9I decision input into conservative next actions.
+- Added gap action plan priorities for P0 privacy blockers, P1 before-next-trial fixes, P2 fixes, P3 observation, and no-action cases.
+- Added follow-up readiness decisions for next anonymous trial, warnings, repeat dry run, protocol revision, launch pack revision, privacy/scope pause, MVP validation preconditions, and do-not-advance.
+- Added administrator panels for 匿名试用后续迭代, 证据缺口行动计划, and 后续试用就绪度.
+- Added examples and tests for ready, warning, privacy blocker, missing notice, missing stop conditions, missing post-launch handoff, insufficient sample size, repeat dry run, revise protocol, MVP validation preconditions, and do-not-advance paths.
+
+What still cannot happen:
+
+- Phase 9J is not production roadmap approval, public recruitment, production analytics, backend collection, AI analysis, training, MVP validation approval, production app approval, or production release approval.
+- Phase 9J cannot collect real names, contacts, photos, health information, sensitive identity information, biometrics, backend records, analytics records, AI analysis records, training data, upload data, or real user trial records in project-state.
+
+Why Phase 9K follows:
+
+The follow-up iteration framework is ready to prepare a second anonymous internal evidence round. The next conservative step is Phase 9K - Anonymous Internal Trial Evidence Round 2 Pack.

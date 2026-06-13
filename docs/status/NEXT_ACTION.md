@@ -2,16 +2,15 @@
 
 ## What To Do Next
 
-Proceed to Phase 9J: Anonymous Internal Trial Follow-up Iteration.
+Proceed to Phase 9K: Anonymous Internal Trial Evidence Round 2 Pack.
 
 ## Why
 
-Phase 9I completed the anonymous internal trial evidence review framework,
-evidence gap review, and next-step decision input. The framework can review
-anonymous evidence completeness and identify gaps, privacy incidents, stopped
-sessions, and decision signals, but the project still has no production user
-app, no backend evidence system, and no approval to collect sensitive data or
-overclaim MVP validation readiness.
+Phase 9J completed the anonymous internal trial follow-up iteration framework,
+gap action plan, and follow-up readiness gate. The framework can turn 9I
+evidence gaps into conservative next actions, but the project still has no
+production user app, no backend evidence system, no real user database, and no
+approval to collect sensitive data or overclaim MVP validation readiness.
 
 Historical recovery notes: Phase 7H browser/mobile QA remains the local
 prototype QA baseline, Phase 8B PWA/mobile polish is complete, Phase 8C trial
@@ -21,20 +20,20 @@ trial result review is complete, Phase 9C internal trial iteration planning is
 complete, Phase 9D internal trial learning decision gate is complete, Phase 9E
 evidence pack is complete, Phase 9F evidence collection preparation is complete,
 Phase 9G anonymous internal dry run is complete, Phase 9H anonymous internal
-trial launch pack is complete, and Phase 9I anonymous internal trial evidence
-review is complete.
+trial launch pack is complete, Phase 9I anonymous internal trial evidence
+review is complete, and Phase 9J anonymous internal trial follow-up iteration is
+complete.
 
-## Recommended 9J Scope
+## Recommended 9K Scope
 
-- Use Phase 9I evidence review and gap review outputs to plan a follow-up
-  anonymous internal trial iteration.
-- Keep the next iteration local, anonymous, administrator-only, and
-  small-scope.
-- Prioritize fixing evidence gaps, participant notice wording, admin notes,
-  stop-condition handling, launch pack details, and evidence collection protocol
-  issues before any stronger validation planning.
-- Do not proceed to MVP validation planning unless non-mock anonymous evidence
-  is complete, privacy safe, and strong enough.
+- Use Phase 9J follow-up readiness and action plans to prepare an anonymous
+  internal trial evidence round 2 pack.
+- Keep round 2 local, anonymous, administrator-only, and small-scope.
+- Carry forward fixes for evidence gaps, participant notice wording, admin
+  notes, stop-condition handling, launch pack details, and evidence collection
+  protocol issues.
+- Do not proceed to production or public MVP validation unless a future explicit
+  phase gate approves that scope.
 
 ## What Not To Do
 

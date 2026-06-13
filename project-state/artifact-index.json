@@ -369,11 +369,11 @@
     "Observation template documentation",
     "Outcome review documentation"
   ],
-  "phase": "9I",
-  "lastCompletedPhase": "9I",
-  "currentPhase": "9I",
-  "nextRecommendedPhase": "9J",
-  "updatedAt": "2026-06-13T12:10:00.000+08:00",
+  "phase": "9J",
+  "lastCompletedPhase": "9J",
+  "currentPhase": "9J",
+  "nextRecommendedPhase": "9K",
+  "updatedAt": "2026-06-13T15:40:00.000+08:00",
   "artifacts": [
     "docs/product/internal-trial-learning-summary.md",
     "docs/product/product-decision-gate.md",
@@ -415,7 +415,7 @@
     "docs/product/internal-trial-evidence-quality-gate.md",
     "docs/phases/phase-9F.md"
   ],
-  "nextRecommendedPhaseName": "Anonymous Internal Trial Follow-up Iteration",
+  "nextRecommendedPhaseName": "Anonymous Internal Trial Evidence Round 2 Pack",
   "userAppAnonymousTrialDryRunOutputs": [
     "src/user-app/userAppAnonymousTrialDryRunPack.ts",
     "src/user-app/userAppAnonymousTrialDryRunChecklist.ts",
@@ -433,5 +433,17 @@
     "UserAppAnonymousTrialEvidenceGapReview local gap metadata",
     "UserAppAnonymousTrialDecisionInput local decision metadata",
     "UserAppAnonymousTrialEvidenceReview administrator panel metadata"
+  ],
+  "userAppAnonymousTrialFollowUpIterationOutputs": [
+    "src/user-app/userAppAnonymousTrialFollowUpIteration.ts",
+    "src/user-app/userAppAnonymousTrialGapActionPlan.ts",
+    "src/user-app/userAppAnonymousTrialFollowUpReadiness.ts",
+    "src/components/user-app/UserAppAnonymousTrialFollowUpIterationPanel.tsx",
+    "src/components/user-app/UserAppAnonymousTrialGapActionPlanPanel.tsx",
+    "src/components/user-app/UserAppAnonymousTrialFollowUpReadinessPanel.tsx",
+    "docs/product/anonymous-internal-trial-follow-up-iteration.md",
+    "docs/product/anonymous-internal-trial-gap-action-plan.md",
+    "docs/product/anonymous-internal-trial-follow-up-readiness.md",
+    "docs/phases/phase-9J.md"
   ]
 }

@@ -44,3 +44,6 @@ export * from './user-app-anonymous-trial-post-launch-handoff.example';
 export * from './user-app-anonymous-trial-evidence-review.example';
 export * from './user-app-anonymous-trial-evidence-gap-review.example';
 export * from './user-app-anonymous-trial-decision-input.example';
+export * from './user-app-anonymous-trial-gap-action-plan.example';
+export * from './user-app-anonymous-trial-follow-up-iteration.example';
+export * from './user-app-anonymous-trial-follow-up-readiness.example';

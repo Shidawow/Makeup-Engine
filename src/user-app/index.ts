@@ -56,3 +56,6 @@ export * from './userAppAnonymousTrialPostLaunchHandoff';
 export * from './userAppAnonymousTrialEvidenceReview';
 export * from './userAppAnonymousTrialEvidenceGapReview';
 export * from './userAppAnonymousTrialDecisionInput';
+export * from './userAppAnonymousTrialGapActionPlan';
+export * from './userAppAnonymousTrialFollowUpIteration';
+export * from './userAppAnonymousTrialFollowUpReadiness';

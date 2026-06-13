@@ -38,6 +38,7 @@ Real Photo
 -> Internal Trial Result Review / Issue Taxonomy / Decision Framework
 -> Internal Trial Iteration Plan / Backlog / Priority Framework
 -> Internal Trial Learning Summary / Product Decision Gate / Next Phase Recommendation
+-> Anonymous Internal Trial Follow-up Iteration / Gap Action Plan / Follow-up Readiness
 -> Phase 8 Roadmap / V1 Non-Goals
 -> User App Consumption Manifest
 -> Dataset Review
@@ -83,6 +84,7 @@ Real Photo
 - `Internal Trial Result Review / Issue Taxonomy / Decision Framework`: Phase 9B local review layer for anonymous/mock result signals, issue category/severity/actionability, and next-step decisions. It is not production analytics, backend collection, public recruitment, AI analysis, OpenAI/external API usage, real user record storage, or training data.
 - `Internal Trial Iteration Plan / Backlog / Priority Framework`: Phase 9C local planning layer for turning anonymous/mock review results into next-iteration workstreams, backlog items, priorities, risks, and acceptance criteria. It is not a formal production roadmap, backend issue tracker, production analytics, public recruitment, AI analysis, OpenAI/external API usage, real user record storage, or training data.
 - `Internal Trial Learning Summary / Product Decision Gate / Next Phase Recommendation`: Phase 9D local decision layer for summarizing 9A-9C anonymous/mock learnings and recommending Phase 9E, 10A, 10B, DOC-ILLUSTRATED, or 9D-Fix. It is not production analytics, production app approval, backend collection, AI analysis, real user record storage, or training data.
+- `Anonymous Internal Trial Follow-up Iteration / Gap Action Plan / Follow-up Readiness`: Phase 9J local planning layer for converting 9I evidence review outputs into conservative next actions, P0/P1/P2/P3/no-action gap priorities, and follow-up readiness decisions. It is not production roadmap approval, production analytics, backend collection, AI analysis, real user record storage, MVP validation approval, or training data.
 - `Phase 8 Roadmap / V1 Non-Goals`: planning docs for 8A through 8E and the anti-scope list for login, backend, database, camera, AR, native apps, OpenAI API, ecommerce, community, paid features, and training.
 - `User App Consumption Manifest`: handoff manifest with app template entries, versions, compatibility target, checksums, readiness, and local-only disclaimer.
 - `Dataset Review`: explicit review decisions before data becomes training-ready.

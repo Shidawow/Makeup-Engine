@@ -52,9 +52,9 @@ describe('Phase 7A documentation recovery', () => {
     expect(guardrails).toContain('UserAppTemplatePackage');
     expect(masterContext).toContain('Phase 8A completed');
     expect(providerPrompt).toContain('lastCompletedPhase: 8A');
-    expect(snapshot.lastCompletedPhase).toBe('9I');
-    expect(snapshot.nextRecommendedPhase).toBe('9J');
-    expect(latestHandoff.fromPhase).toBe('9I');
-    expect(latestHandoff.toPhase).toBe('9J');
+    expect(snapshot.lastCompletedPhase).toBe('9J');
+    expect(snapshot.nextRecommendedPhase).toBe('9K');
+    expect(latestHandoff.fromPhase).toBe('9J');
+    expect(latestHandoff.toPhase).toBe('9K');
   });
 });

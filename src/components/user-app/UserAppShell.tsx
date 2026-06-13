@@ -37,6 +37,9 @@ import {
   createUserAppAnonymousTrialDecisionInput,
   createUserAppAnonymousTrialEvidenceGapReview,
   createUserAppAnonymousTrialEvidenceReview,
+  createUserAppAnonymousTrialFollowUpIteration,
+  createUserAppAnonymousTrialFollowUpReadiness,
+  createUserAppAnonymousTrialGapActionPlan,
   createUserAppInternalTrialEvidencePack,
   createUserAppInternalTrialLearningSummary,
   createUserAppNextPhaseRecommendation,
@@ -82,6 +85,9 @@ import { UserAppAnonymousTrialPostLaunchHandoffPanel } from './UserAppAnonymousT
 import { UserAppAnonymousTrialDecisionInputPanel } from './UserAppAnonymousTrialDecisionInputPanel';
 import { UserAppAnonymousTrialEvidenceGapReviewPanel } from './UserAppAnonymousTrialEvidenceGapReviewPanel';
 import { UserAppAnonymousTrialEvidenceReviewPanel } from './UserAppAnonymousTrialEvidenceReviewPanel';
+import { UserAppAnonymousTrialFollowUpIterationPanel } from './UserAppAnonymousTrialFollowUpIterationPanel';
+import { UserAppAnonymousTrialFollowUpReadinessPanel } from './UserAppAnonymousTrialFollowUpReadinessPanel';
+import { UserAppAnonymousTrialGapActionPlanPanel } from './UserAppAnonymousTrialGapActionPlanPanel';
 import { UserAppCompatibilityBanner } from './UserAppCompatibilityBanner';
 import { UserAppEvidenceCollectionChecklistPanel } from './UserAppEvidenceCollectionChecklistPanel';
 import { UserAppEvidenceCollectionProtocolPanel } from './UserAppEvidenceCollectionProtocolPanel';
@@ -181,6 +187,9 @@ const adminSectionTabs: Array<{ tabId: UserAppShellSection; label: string }> = [
   { tabId: 'anonymousTrialEvidenceReview', label: '匿名试用证据复盘' },
   { tabId: 'anonymousTrialEvidenceGapReview', label: '证据缺口复盘' },
   { tabId: 'anonymousTrialDecisionInput', label: '下一步决策输入' },
+  { tabId: 'anonymousTrialFollowUpIteration', label: '匿名试用后续迭代' },
+  { tabId: 'anonymousTrialGapActionPlan', label: '证据缺口行动计划' },
+  { tabId: 'anonymousTrialFollowUpReadiness', label: '后续试用就绪度' },
   { tabId: 'pwa', label: 'PWA 检查' },
   { tabId: 'mvpPolish', label: 'MVP 打磨' },
   { tabId: 'readiness', label: 'App 就绪度' },
@@ -539,6 +548,29 @@ export function UserAppShell({
         gapReview: anonymousTrialEvidenceGapReview,
       }),
     [anonymousTrialEvidenceGapReview, anonymousTrialEvidenceReview],
+  );
+  const anonymousTrialGapActionPlan = useMemo(
+    () =>
+      createUserAppAnonymousTrialGapActionPlan({
+        decisionInput: anonymousTrialDecisionInput,
+      }),
+    [anonymousTrialDecisionInput],
+  );
+  const anonymousTrialFollowUpIteration = useMemo(
+    () =>
+      createUserAppAnonymousTrialFollowUpIteration({
+        decisionInput: anonymousTrialDecisionInput,
+        gapActionPlan: anonymousTrialGapActionPlan,
+      }),
+    [anonymousTrialDecisionInput, anonymousTrialGapActionPlan],
+  );
+  const anonymousTrialFollowUpReadiness = useMemo(
+    () =>
+      createUserAppAnonymousTrialFollowUpReadiness({
+        followUpIteration: anonymousTrialFollowUpIteration,
+        gapActionPlan: anonymousTrialGapActionPlan,
+      }),
+    [anonymousTrialFollowUpIteration, anonymousTrialGapActionPlan],
   );
   const readinessReport = useMemo(
     () =>
@@ -1120,6 +1152,24 @@ export function UserAppShell({
               {boundaryTab === 'anonymousTrialDecisionInput' ? (
                 <UserAppAnonymousTrialDecisionInputPanel
                   decisionInput={anonymousTrialDecisionInput}
+                />
+              ) : null}
+
+              {boundaryTab === 'anonymousTrialFollowUpIteration' ? (
+                <UserAppAnonymousTrialFollowUpIterationPanel
+                  iteration={anonymousTrialFollowUpIteration}
+                />
+              ) : null}
+
+              {boundaryTab === 'anonymousTrialGapActionPlan' ? (
+                <UserAppAnonymousTrialGapActionPlanPanel
+                  actionPlan={anonymousTrialGapActionPlan}
+                />
+              ) : null}
+
+              {boundaryTab === 'anonymousTrialFollowUpReadiness' ? (
+                <UserAppAnonymousTrialFollowUpReadinessPanel
+                  readiness={anonymousTrialFollowUpReadiness}
                 />
               ) : null}
 

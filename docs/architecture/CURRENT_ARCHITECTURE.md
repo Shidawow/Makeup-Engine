@@ -413,3 +413,20 @@ Phase 9H adds local anonymous internal trial launch preparation structures. `src
 ### Anonymous Internal Trial Evidence Review
 
 Phase 9I adds local anonymous internal trial evidence review structures. `src/user-app/userAppAnonymousTrialEvidenceReview.ts` owns evidence review items, completeness checks, privacy checks, privacy incidents, stopped/paused reasons, source type, sample size, risks, and review status. `src/user-app/userAppAnonymousTrialEvidenceGapReview.ts` classifies evidence gaps and severity for missing task completion, step comprehension, template value, Shell usability, privacy clarity, stop condition records, post-launch handoff, insufficient sample size, unclear admin notes, forbidden data over-collection, and privacy incidents. `src/user-app/userAppAnonymousTrialDecisionInput.ts` converts review and gap signals into continue, repeat, revise launch pack, revise evidence collection protocol, pause, prepare MVP validation plan, or do-not-advance recommendations. `src/components/user-app` renders 匿名试用证据复盘, 证据缺口复盘, and 下一步决策输入 panels inside the administrator checks area. It does not add production analytics, backend evidence storage, camera, AR, AI analysis, OpenAI/external API usage, training, public recruitment, MVP validation approval, production app approval, production release approval, or new runtime dependencies.
+
+### Anonymous Internal Trial Follow-up Iteration
+
+Phase 9J adds local anonymous internal trial follow-up iteration structures.
+`src/user-app/userAppAnonymousTrialFollowUpIteration.ts` owns follow-up goals,
+actions, risks, status, and conservative recommendations.
+`src/user-app/userAppAnonymousTrialGapActionPlan.ts` maps evidence gaps into
+P0/P1/P2/P3/no-action priorities with owner areas and acceptance criteria.
+`src/user-app/userAppAnonymousTrialFollowUpReadiness.ts` owns readiness
+decisions for next anonymous trial, warnings, repeat dry run, protocol revision,
+launch pack revision, privacy/scope pause, MVP validation preconditions, or
+do-not-advance. `src/components/user-app` renders 匿名试用后续迭代,
+证据缺口行动计划, and 后续试用就绪度 panels inside the administrator checks
+area. It does not add production roadmap approval, production analytics,
+backend evidence storage, camera, AR, AI analysis, OpenAI/external API usage,
+training, public recruitment, MVP validation approval, production app approval,
+production release approval, or new runtime dependencies.

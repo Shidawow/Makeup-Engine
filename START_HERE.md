@@ -5,9 +5,9 @@ Makeup Engine is the makeup template production system for a future makeup coach
 ## Current Position
 
 - Project role: makeup template production system plus a local contract-driven user app shell prototype.
-- Last completed phase: `Phase 9I`.
-- Current completed business phase: `Phase 9I - Anonymous Internal Trial Evidence Review`.
-- Next recommended phase: `Phase 9J - Anonymous Internal Trial Follow-up Iteration`.
+- Last completed phase: `Phase 9J`.
+- Current completed business phase: `Phase 9J - Anonymous Internal Trial Follow-up Iteration`.
+- Next recommended phase: `Phase 9K - Anonymous Internal Trial Evidence Round 2 Pack`.
 - Recent recovery milestones retained in phase docs: `Phase 6K`, `Phase 6L`, `Phase 6L-1`, `Phase 7A`, `Phase 7B`, `Phase 7C`, `Phase 7D`, `Phase 7E`, `Phase 7F`, `Phase 7G`, `Phase 7H`, and `Phase 8A`.
 - Historical route-planning milestone: `Phase 8A - Product Route Decision / App MVP Planning`.
 
@@ -50,6 +50,7 @@ SourceImagePackage manifest
 -> Anonymous Internal Trial Dry Run Pack
 -> Anonymous Internal Trial Launch Pack
 -> Anonymous Internal Trial Evidence Review
+-> Anonymous Internal Trial Follow-up Iteration
 -> Phase 8 Roadmap / V1 Non-Goals
 -> Consumption Manifest
 -> Dataset Review
@@ -130,11 +131,15 @@ SourceImagePackage manifest
 68. `docs/product/anonymous-internal-trial-evidence-gap-review.md`
 69. `docs/product/anonymous-internal-trial-decision-input.md`
 70. `docs/phases/phase-9I.md`
-71. `docs/phases/phase-7H.md`
-72. `project-state/project-state.snapshot.json`
-73. `project-state/provider-handoff.json`
-74. `project-state/latest-handoff.json`
-75. `project-state/active-task.json`
+71. `docs/product/anonymous-internal-trial-follow-up-iteration.md`
+72. `docs/product/anonymous-internal-trial-gap-action-plan.md`
+73. `docs/product/anonymous-internal-trial-follow-up-readiness.md`
+74. `docs/phases/phase-9J.md`
+75. `docs/phases/phase-7H.md`
+76. `project-state/project-state.snapshot.json`
+77. `project-state/provider-handoff.json`
+78. `project-state/latest-handoff.json`
+79. `project-state/active-task.json`
 
 ## What The System Can Do Now
 
@@ -160,6 +165,7 @@ SourceImagePackage manifest
 - Render Phase 9G anonymous internal trial dry run pack, checklist, and review administrator panels for local rehearsal before anonymous internal trial launch.
 - Render Phase 9H anonymous internal trial launch pack, launch readiness, and post-launch handoff administrator panels for anonymous local internal launch preparation.
 - Render Phase 9I anonymous internal trial evidence review, evidence gap review, and decision input administrator panels for anonymous local post-trial review.
+- Render Phase 9J anonymous internal trial follow-up iteration, gap action plan, and follow-up readiness administrator panels for conservative next-iteration planning.
 - Continue from Vision Analysis into mask editing, evidence capture, dataset review, materialized training datasets, and lightweight model artifact workflows.
 
 ## What The System Must Not Do
@@ -178,6 +184,7 @@ SourceImagePackage manifest
 - Do not treat Phase 9A internal trial operations, observation templates, or outcome review as public recruitment, production release, backend form, analytics, App Store/TestFlight, or real user data collection approval.
 - Do not treat Phase 9B result review, issue taxonomy, or decision framework as production analytics, backend record collection, AI analysis, training, public recruitment, or production release approval.
 - Do not treat Phase 9C iteration plan, backlog, or priority framework as a formal production roadmap, backend issue tracker, AI analysis, training, public recruitment, or production release approval.
+- Do not treat Phase 9J follow-up iteration, gap action plan, or readiness as production roadmap approval, public recruitment, production analytics, backend collection, AI analysis, training, MVP validation approval, production app approval, or production release approval.
 - Do not treat Phase 9D learning summary, product decision gate, or next phase recommendation as production analytics, production app approval, backend record collection, AI analysis, training, public recruitment, production roadmap approval, or production release approval.
 - Do not treat Phase 9E evidence pack, evidence summary, or sufficiency gate as production analytics, backend evidence collection, AI analysis, training, public recruitment, production app approval, or production release approval.
 - Do not treat Phase 9F evidence collection preparation as real data collection, backend evidence storage, AI analysis, training, public recruitment, MVP validation approval, or production release approval.

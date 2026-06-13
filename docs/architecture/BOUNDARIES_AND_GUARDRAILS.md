@@ -129,6 +129,7 @@
 - Internal trial evidence collection protocol, checklist, and quality gate read anonymous/mock evidence preparation only; they do not collect real participant records, photos, contact information, health information, sensitive identity information, biometrics, backend records, analytics records, AI analysis records, camera/photo records, AR state, native app state, upload data, or training data.
 - Anonymous internal trial dry run pack, checklist, and review read Phase 9F preparation outputs and anonymous/mock dry run rehearsal state only; they do not launch a real trial, collect real participant records, photos, contact information, health information, sensitive identity information, biometrics, backend records, analytics records, AI analysis records, camera/photo records, AR state, native app state, upload data, or training data.
 - Anonymous internal trial evidence review, gap review, and decision input read anonymous post-launch handoff summaries only; they do not create production analytics, backend records, AI analysis records, real participant records, camera/photo records, AR state, native app state, upload data, training data, MVP validation approval, production app approval, or production release approval.
+- Anonymous internal trial follow-up iteration, gap action plan, and follow-up readiness read anonymous evidence review outputs only; they do not create production roadmap approval, production analytics, backend records, AI analysis records, real participant records, camera/photo records, AR state, native app state, upload data, training data, MVP validation approval, production app approval, or production release approval.
 - Dataset review decides whether corrected artifacts can become materialized training data.
 - Training reads materialized datasets, not UI state and not raw source packages.
 - Export reads validated model artifacts and export readiness metadata.
@@ -168,3 +169,18 @@ Phase 9H may record only anonymous local observation summaries and aggregate han
 Phase 9I evidence review, gap review, and decision input are local administrator review aids only. They may review anonymous post-launch summaries, evidence completeness, evidence gaps, privacy incidents, stopped or paused sessions, learning signals, and next-step inputs, but they must not become production analytics, backend record collection, AI analysis, training, public recruitment, MVP validation approval, production app approval, production roadmap approval, or production release approval.
 
 Phase 9I may use only anonymous local summaries and mock/example fixtures. It must not collect or store real names, contacts, photos, health information, sensitive identity information, biometric identifiers, face embeddings, camera data, uploaded images, backend records, analytics records, AI analysis records, training labels, or real user trial records in project-state.
+
+## Phase 9J Anonymous Internal Trial Follow-up Iteration Boundary
+
+Phase 9J follow-up iteration, gap action plan, and follow-up readiness are local
+administrator planning aids only. They may convert anonymous evidence review
+outputs into conservative next actions, but they must not become production
+roadmap approval, production analytics, backend record collection, AI analysis,
+training, public recruitment, MVP validation approval, production app approval,
+or production release approval.
+
+Phase 9J may use only anonymous local summaries and mock/example fixtures. It
+must not collect or store real names, contacts, photos, health information,
+sensitive identity information, biometric identifiers, face embeddings, camera
+data, uploaded images, backend records, analytics records, AI analysis records,
+training labels, upload data, or real user trial records in project-state.

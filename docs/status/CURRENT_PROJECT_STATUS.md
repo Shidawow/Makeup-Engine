@@ -2,14 +2,14 @@
 
 ## Current Phase
 
-Phase 9I: Anonymous Internal Trial Evidence Review is complete.
+Phase 9J: Anonymous Internal Trial Follow-up Iteration is complete.
 
-Last completed business phase: Phase 9I.
+Last completed business phase: Phase 9J.
 
-Next recommended phase: Phase 9J, Anonymous Internal Trial Follow-up Iteration.
+Next recommended phase: Phase 9K, Anonymous Internal Trial Evidence Round 2 Pack.
 
-Phase 9I adds local anonymous evidence review, evidence gap review, and decision
-input structures after the Phase 9H launch handoff. Makeup Engine remains the
+Phase 9J adds local anonymous follow-up iteration, gap action plan, and
+follow-up readiness structures after the Phase 9I evidence review. Makeup Engine remains the
 makeup template production system and local contract prototype. Future
 production user app work should still be planned as a separate app surface or
 repository after an explicit phase gate.
@@ -26,10 +26,10 @@ repository after an explicit phase gate.
   post-launch handoff administrator panels.
 - Render Phase 9I anonymous internal trial evidence review, evidence gap review,
   and decision input administrator panels.
-- Review evidence completeness, evidence gaps, privacy incidents, stopped or
-  paused sessions, learning signals, and next-step decision inputs while keeping
-  production, public recruitment, backend, analytics, AI analysis, and training
-  out of scope.
+- Render Phase 9J anonymous internal trial follow-up iteration, gap action plan,
+  and follow-up readiness administrator panels.
+- Turn evidence gaps into conservative next actions while keeping production,
+  public recruitment, backend, analytics, AI analysis, and training out of scope.
 
 ## What The System Cannot Do
 
@@ -49,6 +49,10 @@ repository after an explicit phase gate.
   production analytics, backend evidence collection, AI analysis, training,
   public recruitment, production app approval, production release approval, or
   automatic MVP validation approval.
+- It cannot treat Phase 9J follow-up iteration, gap action plan, or readiness
+  as production roadmap approval, public recruitment, production analytics,
+  backend evidence collection, AI analysis, training, production app approval,
+  production release approval, or automatic MVP validation approval.
 - It cannot write real user trial records into `project-state`.
 - It cannot mutate `UserAppTemplatePackage` from launch pack, readiness,
   handoff, dry run, evidence collection preparation, sessions, preferences,
@@ -72,7 +76,7 @@ repository after an explicit phase gate.
 
 ## Recent Validation
 
-Phase 9I validation must include:
+Phase 9J validation must include:
 
 ```bash
 npm run typecheck
@@ -88,10 +92,10 @@ The latest completed validation is recorded in `project-state/test-status.json`.
 
 ## Next Phase Recommendation
 
-Proceed to Phase 9J: Anonymous Internal Trial Follow-up Iteration.
+Proceed to Phase 9K: Anonymous Internal Trial Evidence Round 2 Pack.
 
-Phase 9J should use the evidence review output to plan the next anonymous
-internal trial iteration. It must still keep backend, database, camera, AR,
+Phase 9K should use the follow-up iteration and readiness output to prepare a
+second anonymous internal evidence round. It must still keep backend, database, camera, AR,
 analytics, App Store/TestFlight, AI analysis, OpenAI/external APIs, training,
 real user record storage, sensitive data collection, and production release out
 of scope unless a future explicit gate expands scope.

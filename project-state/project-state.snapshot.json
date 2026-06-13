@@ -1,14 +1,14 @@
 {
   "projectName": "Makeup Engine",
-  "projectRole": "Makeup template production system with completed React Web / PWA route planning, Phase 8B local PWA/mobile shell polish, Phase 8C local MVP trial pack, Phase 8D template content QA, Phase 8E MVP release readiness, Phase 9A internal trial operations, Phase 9B internal trial result review framework, Phase 9C internal trial iteration plan, Phase 9D internal trial learning/product decision gate, Phase 9E internal trial evidence pack, Phase 9F internal trial evidence collection preparation, Phase 9G anonymous internal trial dry run pack, Phase 9H anonymous internal trial launch pack, and Phase 9I anonymous internal trial evidence review for a future separate user app MVP",
+  "projectRole": "Makeup template production system with completed React Web / PWA route planning, Phase 8B local PWA/mobile shell polish, Phase 8C local MVP trial pack, Phase 8D template content QA, Phase 8E MVP release readiness, Phase 9A internal trial operations, Phase 9B internal trial result review framework, Phase 9C internal trial iteration plan, Phase 9D internal trial learning/product decision gate, Phase 9E internal trial evidence pack, Phase 9F internal trial evidence collection preparation, Phase 9G anonymous internal trial dry run pack, Phase 9H anonymous internal trial launch pack, Phase 9I anonymous internal trial evidence review, and Phase 9J anonymous internal trial follow-up iteration for a future separate user app MVP",
   "projectIsUserFacingApp": false,
-  "lastCompletedPhase": "9I",
-  "lastCompletedBusinessPhase": "9I",
-  "currentPhase": "Anonymous Internal Trial Evidence Review",
-  "currentPhaseId": "9I",
-  "nextRecommendedPhase": "9J",
-  "nextRecommendedPhaseName": "Anonymous Internal Trial Follow-up Iteration",
-  "nextAction": "Proceed to Phase 9J: Anonymous Internal Trial Follow-up Iteration. Phase 9I is complete. Use the anonymous evidence review, gap review, and decision input to plan a conservative follow-up anonymous internal trial iteration only; do not add production app, public recruitment, backend, database, camera, AR, training, OpenAI API, external API, native iOS, React Native, Flutter, ecommerce, community, paid features, analytics, accounts, online publication, App Store/TestFlight, service worker, offline cache, push notification, background sync, install tracking, AI analysis, or real sensitive data collection.",
+  "lastCompletedPhase": "9J",
+  "lastCompletedBusinessPhase": "9J",
+  "currentPhase": "Anonymous Internal Trial Follow-up Iteration",
+  "currentPhaseId": "9J",
+  "nextRecommendedPhase": "9K",
+  "nextRecommendedPhaseName": "Anonymous Internal Trial Evidence Round 2 Pack",
+  "nextAction": "Proceed to Phase 9K: Anonymous Internal Trial Evidence Round 2 Pack. Phase 9J is complete. Use the follow-up iteration, gap action plan, and follow-up readiness gate to prepare a conservative second anonymous internal evidence round only; do not add production app, public recruitment, backend, database, camera, AR, training, OpenAI API, external API, native iOS, React Native, Flutter, ecommerce, community, paid features, analytics, accounts, online publication, App Store/TestFlight, service worker, offline cache, push notification, background sync, install tracking, AI analysis, real sensitive data collection, or real user records in project-state.",
   "mainDataFlow": [
     "SourceImagePackage",
     "SourceImageEntry",
@@ -111,7 +111,11 @@
     "UserAppAnonymousTrialEvidenceReview",
     "UserAppAnonymousTrialEvidenceGapReview",
     "UserAppAnonymousTrialDecisionInput",
-    "UserAppAnonymousTrialEvidenceReviewAdminPanels"
+    "UserAppAnonymousTrialEvidenceReviewAdminPanels",
+    "UserAppAnonymousTrialFollowUpIteration",
+    "UserAppAnonymousTrialGapActionPlan",
+    "UserAppAnonymousTrialFollowUpReadiness",
+    "UserAppAnonymousTrialFollowUpAdminPanels"
   ],
   "mainModules": [
     "src/vision",
@@ -153,8 +157,8 @@
     "projectStatusJson": "passed",
     "projectContext": "passed",
     "contextPackJson": "passed",
-    "userAppBrowserQa": "not_required_for_phase_9i_anonymous_internal_trial_evidence_review",
-    "httpSmoke": "not_required_for_phase_9i_anonymous_internal_trial_evidence_review",
+    "userAppBrowserQa": "not_required_for_phase_9j_anonymous_internal_trial_follow_up_iteration",
+    "httpSmoke": "not_required_for_phase_9j_anonymous_internal_trial_follow_up_iteration",
     "phase8DScopedTests": "passed",
     "phase8EScopedTests": "passed",
     "phase9AScopedTests": "passed",
@@ -166,12 +170,13 @@
     "phase9GScopedTests": "passed",
     "phase9HScopedTests": "passed",
     "phase9IScopedTests": "passed",
-    "testFiles": 463,
-    "tests": 712,
-    "phase9IScopedTestFiles": 10,
-    "phase9IScopedTestsCount": 24,
-    "summary": "Phase 9I validation passed: typecheck, scoped Phase 9I tests, full npm test, build, project status/context, and JSON status/context commands.",
-    "updatedAt": "2026-06-13T12:20:00.000+08:00"
+    "phase9JScopedTests": "passed",
+    "testFiles": 471,
+    "tests": 729,
+    "phase9JScopedTestFiles": 10,
+    "phase9JScopedTestsCount": 24,
+    "summary": "Phase 9J validation passed: typecheck, scoped Phase 9J tests, full npm test, build, project status/context, and JSON status/context commands.",
+    "updatedAt": "2026-06-13T15:55:00.000+08:00"
   },
   "knownLimitations": [
     "SourceImagePackage is not a training dataset",
@@ -231,7 +236,9 @@
     "Phase 9H anonymous internal trial launch pack is local administrator launch preparation only; it is not public recruitment, production app launch, backend evidence collection, production analytics, AI analysis, training, MVP validation approval, production app approval, or production release approval.",
     "Phase 9H launch pack, readiness, and post-launch handoff records must remain anonymous/local and cannot store real user names, contacts, photos, health information, sensitive identity information, biometrics, backend records, analytics records, AI analysis records, training labels, upload data, or real user trial records in project-state.",
     "Phase 9I anonymous internal trial evidence review is local administrator review only; it is not production analytics, backend evidence collection, AI analysis, training, public recruitment, MVP validation approval, production app approval, or production release approval.",
-    "Phase 9I evidence review, gap review, and decision input cannot collect real names, contact information, photos, health information, sensitive identity information, biometrics, backend records, analytics records, AI analysis records, training labels, upload data, or real user trial records in project-state."
+    "Phase 9I evidence review, gap review, and decision input cannot collect real names, contact information, photos, health information, sensitive identity information, biometrics, backend records, analytics records, AI analysis records, training labels, upload data, or real user trial records in project-state.",
+    "Phase 9J anonymous internal trial follow-up iteration is local administrator planning only; it is not production roadmap approval, production analytics, backend evidence collection, AI analysis, training, public recruitment, MVP validation approval, production app approval, or production release approval.",
+    "Phase 9J follow-up iteration, gap action plan, and readiness cannot collect real names, contact information, photos, health information, sensitive identity information, biometrics, backend records, analytics records, AI analysis records, training labels, upload data, or real user trial records in project-state."
   ],
   "recoveryEntryFiles": [
     "START_HERE.md",
@@ -338,7 +345,11 @@
     "docs/product/anonymous-internal-trial-evidence-review.md",
     "docs/product/anonymous-internal-trial-evidence-gap-review.md",
     "docs/product/anonymous-internal-trial-decision-input.md",
-    "docs/phases/phase-9I.md"
+    "docs/phases/phase-9I.md",
+    "docs/product/anonymous-internal-trial-follow-up-iteration.md",
+    "docs/product/anonymous-internal-trial-gap-action-plan.md",
+    "docs/product/anonymous-internal-trial-follow-up-readiness.md",
+    "docs/phases/phase-9J.md"
   ],
   "forbiddenActions": [
     "Do not build the full production user-side app in the local admin workbench",
@@ -394,9 +405,11 @@
     "Do not treat Phase 9H launch pack, readiness, or post-launch handoff as public recruitment, production app launch, production analytics, backend evidence collection, AI analysis, training, MVP validation approval, production app approval, or production release approval.",
     "Do not use Phase 9H launch preparation as permission to collect real user names, contacts, photos, health information, sensitive identity data, biometrics, backend records, analytics records, AI analysis records, upload data, or training data.",
     "Do not treat Phase 9I evidence review, gap review, or decision input as production analytics, backend evidence collection, AI analysis, training, MVP validation approval, public recruitment, production app approval, or production release approval.",
-    "Do not use Phase 9I anonymous evidence review as permission to collect real user names, contacts, photos, health information, sensitive identity data, biometrics, backend records, analytics records, AI analysis records, upload data, or training data."
+    "Do not use Phase 9I anonymous evidence review as permission to collect real user names, contacts, photos, health information, sensitive identity data, biometrics, backend records, analytics records, AI analysis records, upload data, or training data.",
+    "Do not treat Phase 9J evidence follow-up iteration, gap action plan, or readiness as production roadmap approval, production analytics, backend evidence collection, AI analysis, training, public recruitment, MVP validation approval, production app approval, or production release approval.",
+    "Do not use Phase 9J follow-up planning as permission to collect real user names, contacts, photos, health information, sensitive identity data, biometrics, backend records, analytics records, AI analysis records, upload data, or training data."
   ],
-  "currentPhaseName": "Anonymous Internal Trial Evidence Review",
+  "currentPhaseName": "Anonymous Internal Trial Follow-up Iteration",
   "validation": {
     "typecheck": "passed",
     "test": "passed",
@@ -405,8 +418,8 @@
     "projectStatusJson": "passed",
     "projectContext": "passed",
     "contextPackJson": "passed",
-    "userAppBrowserQa": "not_required_for_phase_9i_anonymous_internal_trial_evidence_review",
-    "httpSmoke": "not_required_for_phase_9i_anonymous_internal_trial_evidence_review",
+    "userAppBrowserQa": "not_required_for_phase_9j_anonymous_internal_trial_follow_up_iteration",
+    "httpSmoke": "not_required_for_phase_9j_anonymous_internal_trial_follow_up_iteration",
     "phase8DScopedTests": "passed",
     "phase8EScopedTests": "passed",
     "phase9AScopedTests": "passed",
@@ -418,14 +431,15 @@
     "phase9GScopedTests": "passed",
     "phase9HScopedTests": "passed",
     "phase9IScopedTests": "passed",
-    "testFiles": 463,
-    "tests": 712,
-    "phase9IScopedTestFiles": 10,
-    "phase9IScopedTestsCount": 24,
-    "summary": "Phase 9I validation passed: typecheck, scoped Phase 9I tests, full npm test, build, project status/context, and JSON status/context commands.",
-    "updatedAt": "2026-06-13T12:20:00.000+08:00"
+    "phase9JScopedTests": "passed",
+    "testFiles": 471,
+    "tests": 729,
+    "phase9JScopedTestFiles": 10,
+    "phase9JScopedTestsCount": 24,
+    "summary": "Phase 9J validation passed: typecheck, scoped Phase 9J tests, full npm test, build, project status/context, and JSON status/context commands.",
+    "updatedAt": "2026-06-13T15:55:00.000+08:00"
   },
-  "updatedAt": "2026-06-13T12:20:00.000+08:00",
+  "updatedAt": "2026-06-13T15:55:00.000+08:00",
   "anonymousTrialDryRunDecision": {
     "phase9GResult": [
       "anonymous internal trial dry run pack with required scenarios",
@@ -454,5 +468,16 @@
     "reviewBoundary": "anonymous/internal/local post-trial review only; no production analytics, backend records, AI analysis, training, sensitive data, uploads, or real user records",
     "defaultDecision": "repeat_anonymous_internal_trial when evidence is still mock/example or insufficient",
     "nextPhase": "Phase 9J Anonymous Internal Trial Follow-up Iteration"
+  },
+  "anonymousTrialFollowUpIterationDecision": {
+    "phase9JResult": [
+      "anonymous internal trial follow-up iteration with goals, actions, risks, status, and conservative recommendations",
+      "gap action plan with P0/P1/P2/P3/no-action priority mapping, owner areas, acceptance criteria, and blocker handling",
+      "follow-up readiness gate with next trial, warning, repeat dry run, revise protocol, revise launch pack, pause, MVP validation precondition, and do-not-advance decisions",
+      "administrator panels for anonymous trial follow-up iteration, gap action plan, and follow-up readiness"
+    ],
+    "planningBoundary": "anonymous/internal/local follow-up planning only; not production roadmap approval, production analytics, backend collection, AI analysis, training, MVP validation approval, public recruitment, or production release",
+    "defaultDecision": "repeat_dry_run_before_trial or revise protocol/launch pack when evidence is mock/example, insufficient, or structurally incomplete",
+    "nextPhase": "Phase 9K - Anonymous Internal Trial Evidence Round 2 Pack"
   }
 }

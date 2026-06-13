@@ -1,5 +1,5 @@
 {
-  "phase": "9I",
+  "phase": "9J",
   "guardrails": [
     {
       "id": "source-image-not-training-data",
@@ -492,6 +492,22 @@
     {
       "id": "phase_9i_no_project_state_user_records",
       "rule": "Phase 9I evidence review may define anonymous templates and mock/example summaries only and must not write real user trial records into project-state."
+    },
+    {
+      "id": "phase_9j_planning_only",
+      "rule": "Phase 9J follow-up iteration is local administrator planning only and must not become production roadmap approval, public recruitment, production analytics, MVP validation approval, production app approval, or production release approval."
+    },
+    {
+      "id": "phase_9j_no_sensitive_collection",
+      "rule": "Phase 9J cannot collect real names, contacts, photos, health information, sensitive identity information, biometrics, upload data, backend records, analytics records, AI analysis records, or training data."
+    },
+    {
+      "id": "phase_9j_no_backend_ai_training",
+      "rule": "Phase 9J must not add backend, database, analytics, OpenAI/external API analysis, upload, training, camera, AR, App Store/TestFlight, or production release scope."
+    },
+    {
+      "id": "phase_9j_no_project_state_user_records",
+      "rule": "Phase 9J can update project-state governance only and must not write real user trial records into project-state."
     }
   ],
   "legacyFrozenModules": [
@@ -500,5 +516,5 @@
     "src/intelligence/runtime"
   ],
   "externalApiUsageAllowedInDoc1": false,
-  "updatedAt": "2026-06-13T12:10:00.000+08:00"
+  "updatedAt": "2026-06-13T15:40:00.000+08:00"
 }

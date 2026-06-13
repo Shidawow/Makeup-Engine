@@ -77,6 +77,9 @@ export type UserAppShellSection =
   | 'anonymousTrialEvidenceReview'
   | 'anonymousTrialEvidenceGapReview'
   | 'anonymousTrialDecisionInput'
+  | 'anonymousTrialFollowUpIteration'
+  | 'anonymousTrialGapActionPlan'
+  | 'anonymousTrialFollowUpReadiness'
   | 'mobileQa'
   | 'interaction';
 
