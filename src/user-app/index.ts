@@ -53,3 +53,6 @@ export * from './userAppAnonymousTrialDryRunReview';
 export * from './userAppAnonymousTrialLaunchPack';
 export * from './userAppAnonymousTrialLaunchReadiness';
 export * from './userAppAnonymousTrialPostLaunchHandoff';
+export * from './userAppAnonymousTrialEvidenceReview';
+export * from './userAppAnonymousTrialEvidenceGapReview';
+export * from './userAppAnonymousTrialDecisionInput';

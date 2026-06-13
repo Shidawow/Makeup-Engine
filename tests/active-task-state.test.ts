@@ -32,6 +32,6 @@ describe('active task state', () => {
         'npm run build',
       ]),
     );
-    expect(task.completionDefinition.join('\n')).toContain('9H did not implement production app');
+    expect(task.completionDefinition.join('\n')).toContain('9I did not implement production app');
   });
 });

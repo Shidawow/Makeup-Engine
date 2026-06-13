@@ -1,11 +1,11 @@
 {
   "schemaVersion": "active-task.v1",
-  "taskId": "9H",
-  "title": "Anonymous Internal Trial Launch Pack",
+  "taskId": "9I",
+  "title": "Anonymous Internal Trial Evidence Review",
   "status": "completed",
   "ownerRole": "Codex",
   "createdBy": "Codex",
-  "phase": "9H",
+  "phase": "9I",
   "recommendedProfile": "native-gpt-codex-high-reasoning",
   "allowedDirectories": [
     "docs",
@@ -29,23 +29,51 @@
     "npm run project:context",
     "node scripts/project-status.mjs --json",
     "node scripts/context-pack.mjs --json",
-    "npm run test -- tests/user-app-anonymous-trial-launch-pack.test.ts tests/user-app-anonymous-trial-launch-readiness.test.ts tests/user-app-anonymous-trial-post-launch-handoff.test.ts tests/user-app-anonymous-trial-launch-pack-panel.test.tsx tests/user-app-anonymous-trial-launch-readiness-panel.test.tsx tests/user-app-anonymous-trial-post-launch-handoff-panel.test.tsx tests/user-app-shell-anonymous-trial-launch-flow.test.tsx tests/phase-9H-documentation-recovery.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
+    "npm run test -- tests/user-app-anonymous-trial-evidence-review.test.ts tests/user-app-anonymous-trial-evidence-gap-review.test.ts tests/user-app-anonymous-trial-decision-input.test.ts tests/user-app-anonymous-trial-evidence-review-panel.test.tsx tests/user-app-anonymous-trial-evidence-gap-review-panel.test.tsx tests/user-app-anonymous-trial-decision-input-panel.test.tsx tests/user-app-shell-anonymous-trial-evidence-review-flow.test.tsx tests/phase-9I-documentation-recovery.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
   ],
   "completionDefinition": [
-    "Phase 9H added anonymous internal trial launch pack, launch readiness, post-launch handoff, fixtures, administrator panels, and launch documentation.",
-    "9H did not implement production app, public recruitment, backend collection, database, analytics, AI analysis, OpenAI/external API usage, camera, AR, training, App Store/TestFlight, online publication, new runtime dependencies, or real user data collection.",
-    "9H did not collect real names, contact information, photos, health information, sensitive identity information, face embeddings, biometric identifiers, backend records, analytics records, AI analysis records, or training data.",
+    "Phase 9I added anonymous internal trial evidence review, evidence gap review, decision input, fixtures, administrator panels, and evidence review documentation.",
+    "9I did not implement production app, public recruitment, backend collection, database, analytics, AI analysis, OpenAI/external API usage, camera, AR, training, App Store/TestFlight, online publication, new runtime dependencies, or real user data collection.",
+    "9I did not collect real names, contact information, photos, health information, sensitive identity information, face embeddings, biometric identifiers, backend records, analytics records, AI analysis records, or training data.",
     "Makeup Engine remains the template production system and UserAppTemplatePackage remains the handoff contract.",
     "Docs and project-state must remain recoverable and validation commands must pass."
   ],
   "dependsOn": [
-    "9G Anonymous Internal Trial Dry Run Pack"
+    "9H Anonymous Internal Trial Launch Pack"
   ],
   "nextRecommendedTask": {
-    "taskId": "9I",
-    "title": "Anonymous Internal Trial Evidence Review",
+    "taskId": "9J",
+    "title": "Anonymous Internal Trial Follow-up Iteration",
     "status": "recommended"
   },
-  "updatedAt": "2026-06-13T11:13:00.000+08:00",
-  "validationStatus": "passed"
+  "updatedAt": "2026-06-13T12:20:00.000+08:00",
+  "validationStatus": "passed",
+  "lastValidation": {
+    "typecheck": "passed",
+    "test": "passed",
+    "build": "passed",
+    "projectStatus": "passed",
+    "projectStatusJson": "passed",
+    "projectContext": "passed",
+    "contextPackJson": "passed",
+    "userAppBrowserQa": "not_required_for_phase_9i_anonymous_internal_trial_evidence_review",
+    "httpSmoke": "not_required_for_phase_9i_anonymous_internal_trial_evidence_review",
+    "phase8DScopedTests": "passed",
+    "phase8EScopedTests": "passed",
+    "phase9AScopedTests": "passed",
+    "phase9BScopedTests": "passed",
+    "phase9CScopedTests": "passed",
+    "phase9DScopedTests": "passed",
+    "phase9EScopedTests": "passed",
+    "phase9FScopedTests": "passed",
+    "phase9GScopedTests": "passed",
+    "phase9HScopedTests": "passed",
+    "phase9IScopedTests": "passed",
+    "testFiles": 463,
+    "tests": 712,
+    "phase9IScopedTestFiles": 10,
+    "phase9IScopedTestsCount": 24,
+    "summary": "Phase 9I validation passed: typecheck, scoped Phase 9I tests, full npm test, build, project status/context, and JSON status/context commands.",
+    "updatedAt": "2026-06-13T12:20:00.000+08:00"
+  }
 }

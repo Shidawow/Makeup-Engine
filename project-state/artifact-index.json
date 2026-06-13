@@ -73,7 +73,8 @@
     "Phase 9A internal trial operations, observation guide, and outcome review are local admin planning metadata, not backend records, analytics records, real user records, AI analysis records, production release records, or training input.",
     "Phase 9B trial result review, issue taxonomy, and decision framework are local admin review metadata, not backend records, analytics records, real user records, AI analysis records, production release records, or training input.",
     "Phase 9C trial iteration plan, backlog, and priority framework are local admin planning metadata, not formal production roadmap records, backend issue tracker records, analytics records, real user records, AI analysis records, production release records, or training input.",
-    "Phase 9H anonymous internal trial launch pack, readiness, and post-launch handoff are local admin launch preparation metadata, not public recruitment, backend records, analytics records, real user records, AI analysis records, production release records, or training input."
+    "Phase 9H anonymous internal trial launch pack, readiness, and post-launch handoff are local admin launch preparation metadata, not public recruitment, backend records, analytics records, real user records, AI analysis records, production release records, or training input.",
+    "Phase 9I anonymous internal trial evidence review, gap review, and decision input are local admin review metadata, not production analytics, backend records, real user records, AI analysis records, MVP validation approval, production release records, or training input."
   ],
   "materializedDatasetOutputs": [
     "tmp/datasets/realistic-synthetic-png-image-v0/package.json",
@@ -119,7 +120,11 @@
     "docs/product/anonymous-internal-trial-launch-pack.md",
     "docs/product/anonymous-internal-trial-launch-readiness.md",
     "docs/product/anonymous-internal-trial-post-launch-handoff.md",
-    "docs/phases/phase-9H.md"
+    "docs/phases/phase-9H.md",
+    "docs/product/anonymous-internal-trial-evidence-review.md",
+    "docs/product/anonymous-internal-trial-evidence-gap-review.md",
+    "docs/product/anonymous-internal-trial-decision-input.md",
+    "docs/phases/phase-9I.md"
   ],
   "userAppConsumptionOutputs": [
     "UserAppTemplatePackage JSON",
@@ -364,11 +369,11 @@
     "Observation template documentation",
     "Outcome review documentation"
   ],
-  "phase": "9G",
-  "lastCompletedPhase": "9G",
-  "currentPhase": "9G",
-  "nextRecommendedPhase": "9H",
-  "updatedAt": "2026-06-13T10:20:00.000+08:00",
+  "phase": "9I",
+  "lastCompletedPhase": "9I",
+  "currentPhase": "9I",
+  "nextRecommendedPhase": "9J",
+  "updatedAt": "2026-06-13T12:10:00.000+08:00",
   "artifacts": [
     "docs/product/internal-trial-learning-summary.md",
     "docs/product/product-decision-gate.md",
@@ -410,7 +415,7 @@
     "docs/product/internal-trial-evidence-quality-gate.md",
     "docs/phases/phase-9F.md"
   ],
-  "nextRecommendedPhaseName": "Anonymous Internal Trial Launch Pack",
+  "nextRecommendedPhaseName": "Anonymous Internal Trial Follow-up Iteration",
   "userAppAnonymousTrialDryRunOutputs": [
     "src/user-app/userAppAnonymousTrialDryRunPack.ts",
     "src/user-app/userAppAnonymousTrialDryRunChecklist.ts",
@@ -422,5 +427,11 @@
     "docs/product/anonymous-internal-trial-dry-run-checklist.md",
     "docs/product/anonymous-internal-trial-dry-run-review.md",
     "docs/phases/phase-9G.md"
+  ],
+  "userAppAnonymousTrialEvidenceReviewOutputs": [
+    "UserAppAnonymousTrialEvidenceReview local review metadata",
+    "UserAppAnonymousTrialEvidenceGapReview local gap metadata",
+    "UserAppAnonymousTrialDecisionInput local decision metadata",
+    "UserAppAnonymousTrialEvidenceReview administrator panel metadata"
   ]
 }

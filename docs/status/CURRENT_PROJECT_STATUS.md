@@ -2,14 +2,14 @@
 
 ## Current Phase
 
-Phase 9H: Anonymous Internal Trial Launch Pack is complete.
+Phase 9I: Anonymous Internal Trial Evidence Review is complete.
 
-Last completed business phase: Phase 9H.
+Last completed business phase: Phase 9I.
 
-Next recommended phase: Phase 9I, Anonymous Internal Trial Evidence Review.
+Next recommended phase: Phase 9J, Anonymous Internal Trial Follow-up Iteration.
 
-Phase 9H adds a local, anonymous, internal, non-public launch pack, launch
-readiness gate, and post-launch handoff template. Makeup Engine remains the
+Phase 9I adds local anonymous evidence review, evidence gap review, and decision
+input structures after the Phase 9H launch handoff. Makeup Engine remains the
 makeup template production system and local contract prototype. Future
 production user app work should still be planned as a separate app surface or
 repository after an explicit phase gate.
@@ -20,16 +20,16 @@ repository after an explicit phase gate.
   Engine pipeline.
 - Export local publish packages and `UserAppTemplatePackage` contract data.
 - Render the local User App MVP Shell from `UserAppTemplatePackage`.
-- Render Phase 8B PWA/mobile shell polish through Phase 9G anonymous dry run
+- Render Phase 8B PWA/mobile shell polish through Phase 9H anonymous launch
   administrator panels.
 - Render Phase 9H anonymous internal trial launch pack, launch readiness, and
   post-launch handoff administrator panels.
-- Define launch scope, participant notice, administrator launch script,
-  anonymous evidence capture sheet, stop conditions, launch readiness decisions,
-  and post-launch evidence handoff.
-- Decide whether the anonymous internal trial can be launched locally and
-  anonymously, while keeping production, public recruitment, backend, analytics,
-  AI analysis, and training out of scope.
+- Render Phase 9I anonymous internal trial evidence review, evidence gap review,
+  and decision input administrator panels.
+- Review evidence completeness, evidence gaps, privacy incidents, stopped or
+  paused sessions, learning signals, and next-step decision inputs while keeping
+  production, public recruitment, backend, analytics, AI analysis, and training
+  out of scope.
 
 ## What The System Cannot Do
 
@@ -45,6 +45,10 @@ repository after an explicit phase gate.
   recruitment, production app launch, production analytics, backend collection,
   AI analysis, MVP validation approval, production app approval, or production
   release approval.
+- It cannot treat Phase 9I evidence review, gap review, or decision input as
+  production analytics, backend evidence collection, AI analysis, training,
+  public recruitment, production app approval, production release approval, or
+  automatic MVP validation approval.
 - It cannot write real user trial records into `project-state`.
 - It cannot mutate `UserAppTemplatePackage` from launch pack, readiness,
   handoff, dry run, evidence collection preparation, sessions, preferences,
@@ -57,9 +61,9 @@ repository after an explicit phase gate.
 
 - `src/user-app`: active local user app shell models, trial planning, review,
   iteration, learning decision, evidence pack, evidence collection preparation,
-  anonymous dry run, and anonymous launch models.
+  anonymous dry run, anonymous launch, and anonymous evidence review models.
 - `src/components/user-app`: active local shell UI and administrator QA/evidence
-  / dry run / launch panels.
+  / dry run / launch / evidence review panels.
 - `src/templates/examples`: active deterministic examples and fixtures.
 - `docs`, `project-state`, and `tests`: active recovery, architecture,
   validation, provider handoff, and regression coverage.
@@ -68,7 +72,7 @@ repository after an explicit phase gate.
 
 ## Recent Validation
 
-Phase 9H validation must include:
+Phase 9I validation must include:
 
 ```bash
 npm run typecheck
@@ -84,10 +88,10 @@ The latest completed validation is recorded in `project-state/test-status.json`.
 
 ## Next Phase Recommendation
 
-Proceed to Phase 9I: Anonymous Internal Trial Evidence Review.
+Proceed to Phase 9J: Anonymous Internal Trial Follow-up Iteration.
 
-Phase 9I should review anonymous internal trial evidence only. It must still
-keep backend, database, camera, AR, analytics, App Store/TestFlight, AI
-analysis, OpenAI/external APIs, training, real user record storage, sensitive
-data collection, and production release out of scope unless a future explicit
-gate expands scope.
+Phase 9J should use the evidence review output to plan the next anonymous
+internal trial iteration. It must still keep backend, database, camera, AR,
+analytics, App Store/TestFlight, AI analysis, OpenAI/external APIs, training,
+real user record storage, sensitive data collection, and production release out
+of scope unless a future explicit gate expands scope.

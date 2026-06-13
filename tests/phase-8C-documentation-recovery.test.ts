@@ -74,11 +74,11 @@ describe('Phase 8C documentation recovery', () => {
     );
 
     const snapshot = readJson<ProjectSnapshot>('project-state/project-state.snapshot.json');
-    expect(snapshot.lastCompletedPhase).toBe('9H');
-    expect(snapshot.lastCompletedBusinessPhase).toBe('9H');
-    expect(snapshot.currentPhaseId).toBe('9H');
-    expect(snapshot.nextRecommendedPhase).toBe('9I');
-    expect(snapshot.nextRecommendedPhaseName).toContain('Anonymous Internal Trial Evidence Review');
+    expect(snapshot.lastCompletedPhase).toBe('9I');
+    expect(snapshot.lastCompletedBusinessPhase).toBe('9I');
+    expect(snapshot.currentPhaseId).toBe('9I');
+    expect(snapshot.nextRecommendedPhase).toBe('9J');
+    expect(snapshot.nextRecommendedPhaseName).toContain('Anonymous Internal Trial Follow-up Iteration');
     expect(snapshot.mainDataFlow).toEqual(
       expect.arrayContaining([
         'UserAppTrialPack',
@@ -96,9 +96,9 @@ describe('Phase 8C documentation recovery', () => {
     expect(snapshot.forbiddenActions.join('\n')).toContain('real user trial records');
 
     const providerHandoff = readJson<ProviderHandoff>('project-state/provider-handoff.json');
-    expect(providerHandoff.currentTask).toContain('Phase 9H');
-    expect(providerHandoff.lastCompletedPhase).toBe('9H');
-    expect(providerHandoff.nextRecommendedPhase).toBe('9I');
+    expect(providerHandoff.currentTask).toContain('Phase 9I');
+    expect(providerHandoff.lastCompletedPhase).toBe('9I');
+    expect(providerHandoff.nextRecommendedPhase).toBe('9J');
     expect(providerHandoff.nextRequiredReadFiles).toContain('docs/phases/phase-8C.md');
     expect(providerHandoff.nextRequiredReadFiles).toContain(
       'docs/user-app/user-app-mvp-trial-pack.md',
@@ -106,15 +106,15 @@ describe('Phase 8C documentation recovery', () => {
     expect(providerHandoff.handoffNotes.join('\n')).toContain('Phase 8D added template content QA');
 
     const latestHandoff = readJson<LatestHandoff>('project-state/latest-handoff.json');
-    expect(latestHandoff.fromPhase).toBe('9H');
-    expect(latestHandoff.toPhase).toBe('9I');
-    expect(latestHandoff.nextAction).toContain('Phase 9I');
+    expect(latestHandoff.fromPhase).toBe('9I');
+    expect(latestHandoff.toPhase).toBe('9J');
+    expect(latestHandoff.nextAction).toContain('Phase 9J');
     expect(latestHandoff.trialPackDecision.phase8CResult).toContain('ordered local trial tasks');
     expect(latestHandoff.trialPackDecision.phase8CResult).toContain('trial readiness report');
     expect(latestHandoff.trialPackDecision.nextContentGate).toContain('Phase 8D');
 
     const guardrails = readJson<GuardrailState>('project-state/guardrails.json');
-    expect(guardrails.phase).toBe('9H');
+    expect(guardrails.phase).toBe('9I');
     expect(guardrails.guardrails.map((guardrail) => guardrail.id)).toEqual(
       expect.arrayContaining([
         'phase_8c_trial_pack_local_only',

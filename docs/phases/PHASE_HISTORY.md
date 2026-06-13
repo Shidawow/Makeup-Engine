@@ -749,3 +749,24 @@ What still cannot happen:
 Why Phase 9I follows:
 
 The launch pack is ready for anonymous internal trial evidence review. The next conservative step is Phase 9I - Anonymous Internal Trial Evidence Review.
+
+## Phase 9I
+
+Added the Anonymous Internal Trial Evidence Review.
+
+What changed:
+
+- Added local anonymous evidence review for task completion, step comprehension, template value, Shell usability, recommendation usefulness, privacy clarity, trial ops, stop condition, post-launch handoff, and decision input evidence.
+- Added evidence gap review with low, medium, high, and critical severity rules for missing evidence, missing post-launch handoff, insufficient sample size, unclear admin notes, privacy incidents, and forbidden data over-collection.
+- Added decision input recommendations for continuing, repeating, revising launch pack, revising evidence collection protocol, pausing for privacy/scope fixes, preparing MVP validation planning, and not advancing.
+- Added administrator panels for 匿名试用证据复盘, 证据缺口复盘, and 下一步决策输入.
+- Added examples and tests for complete safe evidence review, warning review, missing post-launch handoff, missing privacy clarity evidence, insufficient sample size, forbidden data over-collection, privacy incidents, repeat trial, prepare MVP validation planning, and do-not-advance decisions.
+
+What still cannot happen:
+
+- Phase 9I is not production analytics, backend evidence collection, AI analysis, training, public recruitment, MVP validation approval, production app approval, or production release approval.
+- Phase 9I cannot collect real names, contacts, photos, health information, sensitive identity information, biometrics, backend records, analytics records, AI analysis records, training data, upload data, or real user trial records in project-state.
+
+Why Phase 9J follows:
+
+The evidence review framework is ready for a conservative follow-up iteration plan. The next step is Phase 9J - Anonymous Internal Trial Follow-up Iteration, unless the owner explicitly chooses DOC-ILLUSTRATED or a 9I safety fix.

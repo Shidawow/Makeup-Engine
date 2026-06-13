@@ -314,3 +314,13 @@ The flow is local, anonymous, mock/rehearsal-only, and administrator-only. It ca
 -> next recommendation for Phase 9I anonymous internal trial evidence review.
 
 The flow is local, anonymous, internal, non-public, and administrator-only. It can prepare a participant notice, administrator launch script, anonymous evidence capture sheet, stop conditions, readiness decision, and post-launch handoff template. It cannot create public recruitment, production launch, backend records, analytics records, AI analysis records, uploads, training data, photos, contact data, health data, sensitive identity data, biometrics, or real user trial records in project-state.
+
+## Phase 9I Anonymous Internal Trial Evidence Review Flow
+
+`UserAppAnonymousTrialPostLaunchHandoff`
+-> `UserAppAnonymousTrialEvidenceReview`
+-> `UserAppAnonymousTrialEvidenceGapReview`
+-> `UserAppAnonymousTrialDecisionInput`
+-> next recommendation for Phase 9J anonymous internal trial follow-up iteration.
+
+The flow is local, anonymous, post-trial review-only, and administrator-only. It can review evidence completeness, evidence gaps, privacy incidents, stopped or paused sessions, learning signals, and decision inputs. It cannot create production analytics, backend records, AI analysis records, uploads, training data, photos, contact data, health data, sensitive identity data, biometrics, MVP validation approval, production app approval, production release approval, or real user trial records in project-state.

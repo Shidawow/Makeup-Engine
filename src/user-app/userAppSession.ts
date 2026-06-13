@@ -74,6 +74,9 @@ export type UserAppShellSection =
   | 'anonymousTrialLaunchPack'
   | 'anonymousTrialLaunchReadiness'
   | 'anonymousTrialPostLaunchHandoff'
+  | 'anonymousTrialEvidenceReview'
+  | 'anonymousTrialEvidenceGapReview'
+  | 'anonymousTrialDecisionInput'
   | 'mobileQa'
   | 'interaction';
 

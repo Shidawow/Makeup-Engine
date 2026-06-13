@@ -5,9 +5,9 @@ Makeup Engine is the makeup template production system for a future makeup coach
 ## Current Position
 
 - Project role: makeup template production system plus a local contract-driven user app shell prototype.
-- Last completed phase: `Phase 9H`.
-- Current completed business phase: `Phase 9H - Anonymous Internal Trial Launch Pack`.
-- Next recommended phase: `Phase 9I - Anonymous Internal Trial Evidence Review`.
+- Last completed phase: `Phase 9I`.
+- Current completed business phase: `Phase 9I - Anonymous Internal Trial Evidence Review`.
+- Next recommended phase: `Phase 9J - Anonymous Internal Trial Follow-up Iteration`.
 - Recent recovery milestones retained in phase docs: `Phase 6K`, `Phase 6L`, `Phase 6L-1`, `Phase 7A`, `Phase 7B`, `Phase 7C`, `Phase 7D`, `Phase 7E`, `Phase 7F`, `Phase 7G`, `Phase 7H`, and `Phase 8A`.
 - Historical route-planning milestone: `Phase 8A - Product Route Decision / App MVP Planning`.
 
@@ -49,6 +49,7 @@ SourceImagePackage manifest
 -> Internal Trial Evidence Collection Preparation
 -> Anonymous Internal Trial Dry Run Pack
 -> Anonymous Internal Trial Launch Pack
+-> Anonymous Internal Trial Evidence Review
 -> Phase 8 Roadmap / V1 Non-Goals
 -> Consumption Manifest
 -> Dataset Review
@@ -125,11 +126,15 @@ SourceImagePackage manifest
 64. `docs/product/anonymous-internal-trial-launch-readiness.md`
 65. `docs/product/anonymous-internal-trial-post-launch-handoff.md`
 66. `docs/phases/phase-9H.md`
-67. `docs/phases/phase-7H.md`
-68. `project-state/project-state.snapshot.json`
-69. `project-state/provider-handoff.json`
-70. `project-state/latest-handoff.json`
-71. `project-state/active-task.json`
+67. `docs/product/anonymous-internal-trial-evidence-review.md`
+68. `docs/product/anonymous-internal-trial-evidence-gap-review.md`
+69. `docs/product/anonymous-internal-trial-decision-input.md`
+70. `docs/phases/phase-9I.md`
+71. `docs/phases/phase-7H.md`
+72. `project-state/project-state.snapshot.json`
+73. `project-state/provider-handoff.json`
+74. `project-state/latest-handoff.json`
+75. `project-state/active-task.json`
 
 ## What The System Can Do Now
 
@@ -154,6 +159,7 @@ SourceImagePackage manifest
 - Render Phase 9F internal trial evidence collection protocol, checklist, and quality gate administrator panels for anonymous/local dry run preparation.
 - Render Phase 9G anonymous internal trial dry run pack, checklist, and review administrator panels for local rehearsal before anonymous internal trial launch.
 - Render Phase 9H anonymous internal trial launch pack, launch readiness, and post-launch handoff administrator panels for anonymous local internal launch preparation.
+- Render Phase 9I anonymous internal trial evidence review, evidence gap review, and decision input administrator panels for anonymous local post-trial review.
 - Continue from Vision Analysis into mask editing, evidence capture, dataset review, materialized training datasets, and lightweight model artifact workflows.
 
 ## What The System Must Not Do
@@ -177,6 +183,7 @@ SourceImagePackage manifest
 - Do not treat Phase 9F evidence collection preparation as real data collection, backend evidence storage, AI analysis, training, public recruitment, MVP validation approval, or production release approval.
 - Do not treat Phase 9G anonymous internal trial dry run as real trial launch, backend evidence collection, AI analysis, training, public recruitment, MVP validation approval, production app approval, or production release approval.
 - Do not treat Phase 9H anonymous internal trial launch pack as public recruitment, production app launch, backend evidence collection, production analytics, AI analysis, training, MVP validation approval, production app approval, or production release approval.
+- Do not treat Phase 9I anonymous internal trial evidence review as production analytics, backend evidence collection, AI analysis, training, public recruitment, production app approval, production release approval, or automatic MVP validation approval.
 - Do not start React Native, Flutter, iOS native, backend, database, camera, AR, ecommerce, community, paid, OpenAI API, external API, training, or production release work without a later explicit gate.
 
 ## Validation Commands

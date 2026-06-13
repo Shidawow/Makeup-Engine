@@ -34,6 +34,9 @@ import {
   createUserAppAnonymousTrialLaunchPack,
   createUserAppAnonymousTrialLaunchReadiness,
   createUserAppAnonymousTrialPostLaunchHandoff,
+  createUserAppAnonymousTrialDecisionInput,
+  createUserAppAnonymousTrialEvidenceGapReview,
+  createUserAppAnonymousTrialEvidenceReview,
   createUserAppInternalTrialEvidencePack,
   createUserAppInternalTrialLearningSummary,
   createUserAppNextPhaseRecommendation,
@@ -76,6 +79,9 @@ import { UserAppAnonymousTrialDryRunReviewPanel } from './UserAppAnonymousTrialD
 import { UserAppAnonymousTrialLaunchPackPanel } from './UserAppAnonymousTrialLaunchPackPanel';
 import { UserAppAnonymousTrialLaunchReadinessPanel } from './UserAppAnonymousTrialLaunchReadinessPanel';
 import { UserAppAnonymousTrialPostLaunchHandoffPanel } from './UserAppAnonymousTrialPostLaunchHandoffPanel';
+import { UserAppAnonymousTrialDecisionInputPanel } from './UserAppAnonymousTrialDecisionInputPanel';
+import { UserAppAnonymousTrialEvidenceGapReviewPanel } from './UserAppAnonymousTrialEvidenceGapReviewPanel';
+import { UserAppAnonymousTrialEvidenceReviewPanel } from './UserAppAnonymousTrialEvidenceReviewPanel';
 import { UserAppCompatibilityBanner } from './UserAppCompatibilityBanner';
 import { UserAppEvidenceCollectionChecklistPanel } from './UserAppEvidenceCollectionChecklistPanel';
 import { UserAppEvidenceCollectionProtocolPanel } from './UserAppEvidenceCollectionProtocolPanel';
@@ -172,6 +178,9 @@ const adminSectionTabs: Array<{ tabId: UserAppShellSection; label: string }> = [
   { tabId: 'anonymousTrialLaunchPack', label: '匿名内部试用启动包' },
   { tabId: 'anonymousTrialLaunchReadiness', label: '启动就绪度' },
   { tabId: 'anonymousTrialPostLaunchHandoff', label: '试用后 handoff' },
+  { tabId: 'anonymousTrialEvidenceReview', label: '匿名试用证据复盘' },
+  { tabId: 'anonymousTrialEvidenceGapReview', label: '证据缺口复盘' },
+  { tabId: 'anonymousTrialDecisionInput', label: '下一步决策输入' },
   { tabId: 'pwa', label: 'PWA 检查' },
   { tabId: 'mvpPolish', label: 'MVP 打磨' },
   { tabId: 'readiness', label: 'App 就绪度' },
@@ -508,6 +517,28 @@ export function UserAppShell({
         launchReadiness: anonymousTrialLaunchReadiness,
       }),
     [anonymousTrialLaunchReadiness],
+  );
+  const anonymousTrialEvidenceReview = useMemo(
+    () =>
+      createUserAppAnonymousTrialEvidenceReview({
+        postLaunchHandoff: anonymousTrialPostLaunchHandoff,
+      }),
+    [anonymousTrialPostLaunchHandoff],
+  );
+  const anonymousTrialEvidenceGapReview = useMemo(
+    () =>
+      createUserAppAnonymousTrialEvidenceGapReview({
+        evidenceReview: anonymousTrialEvidenceReview,
+      }),
+    [anonymousTrialEvidenceReview],
+  );
+  const anonymousTrialDecisionInput = useMemo(
+    () =>
+      createUserAppAnonymousTrialDecisionInput({
+        evidenceReview: anonymousTrialEvidenceReview,
+        gapReview: anonymousTrialEvidenceGapReview,
+      }),
+    [anonymousTrialEvidenceGapReview, anonymousTrialEvidenceReview],
   );
   const readinessReport = useMemo(
     () =>
@@ -1071,6 +1102,24 @@ export function UserAppShell({
               {boundaryTab === 'anonymousTrialPostLaunchHandoff' ? (
                 <UserAppAnonymousTrialPostLaunchHandoffPanel
                   handoff={anonymousTrialPostLaunchHandoff}
+                />
+              ) : null}
+
+              {boundaryTab === 'anonymousTrialEvidenceReview' ? (
+                <UserAppAnonymousTrialEvidenceReviewPanel
+                  review={anonymousTrialEvidenceReview}
+                />
+              ) : null}
+
+              {boundaryTab === 'anonymousTrialEvidenceGapReview' ? (
+                <UserAppAnonymousTrialEvidenceGapReviewPanel
+                  gapReview={anonymousTrialEvidenceGapReview}
+                />
+              ) : null}
+
+              {boundaryTab === 'anonymousTrialDecisionInput' ? (
+                <UserAppAnonymousTrialDecisionInputPanel
+                  decisionInput={anonymousTrialDecisionInput}
                 />
               ) : null}
 

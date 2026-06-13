@@ -59,8 +59,8 @@ describe('Phase 7E documentation recovery', () => {
     );
 
     const snapshot = readJson<ProjectSnapshot>('project-state/project-state.snapshot.json');
-    expect(snapshot.lastCompletedPhase).toBe('9H');
-    expect(snapshot.nextRecommendedPhase).toBe('9I');
+    expect(snapshot.lastCompletedPhase).toBe('9I');
+    expect(snapshot.nextRecommendedPhase).toBe('9J');
     expect(snapshot.mainDataFlow).toContain('UserAppTemplateDiscovery');
     expect(snapshot.mainDataFlow).toContain('UserTemplateRecommendationPlaceholder');
     expect(snapshot.recoveryEntryFiles).toContain('docs/phases/phase-7E.md');
@@ -70,12 +70,12 @@ describe('Phase 7E documentation recovery', () => {
     expect(snapshot.forbiddenActions.join('\n')).toContain('recommendation');
 
     const providerHandoff = readJson<ProviderHandoff>('project-state/provider-handoff.json');
-    expect(providerHandoff.lastCompletedPhase).toBe('9H');
-    expect(providerHandoff.nextRecommendedPhase).toBe('9I');
+    expect(providerHandoff.lastCompletedPhase).toBe('9I');
+    expect(providerHandoff.nextRecommendedPhase).toBe('9J');
     expect(providerHandoff.nextRequiredReadFiles).toContain('docs/phases/phase-7E.md');
 
     const guardrails = readJson<GuardrailState>('project-state/guardrails.json');
-    expect(guardrails.phase).toBe('9H');
+    expect(guardrails.phase).toBe('9I');
     expect(guardrails.guardrails.map((guardrail) => guardrail.id)).toEqual(
       expect.arrayContaining([
         'recommendation_placeholder_only',

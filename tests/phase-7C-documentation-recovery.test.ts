@@ -59,8 +59,8 @@ describe('Phase 7C documentation recovery', () => {
     );
 
     const snapshot = readJson<ProjectSnapshot>('project-state/project-state.snapshot.json');
-    expect(snapshot.lastCompletedPhase).toBe('9H');
-    expect(snapshot.nextRecommendedPhase).toBe('9I');
+    expect(snapshot.lastCompletedPhase).toBe('9I');
+    expect(snapshot.nextRecommendedPhase).toBe('9J');
     expect(snapshot.mainDataFlow).toContain('UserPhotoIntakePlaceholder');
     expect(snapshot.mainDataFlow).toContain('UserPersonalizationPlaceholder');
     expect(snapshot.mainDataFlow).toContain('UserPhotoPrivacyBoundary');
@@ -71,12 +71,12 @@ describe('Phase 7C documentation recovery', () => {
     expect(snapshot.forbiddenActions.join('\n')).toContain('real user photos');
 
     const providerHandoff = readJson<ProviderHandoff>('project-state/provider-handoff.json');
-    expect(providerHandoff.lastCompletedPhase).toBe('9H');
-    expect(providerHandoff.nextRecommendedPhase).toBe('9I');
+    expect(providerHandoff.lastCompletedPhase).toBe('9I');
+    expect(providerHandoff.nextRecommendedPhase).toBe('9J');
     expect(providerHandoff.nextRequiredReadFiles).toContain('docs/phases/phase-7C.md');
 
     const guardrails = readJson<GuardrailState>('project-state/guardrails.json');
-    expect(guardrails.phase).toBe('9H');
+    expect(guardrails.phase).toBe('9I');
     expect(guardrails.guardrails.map((guardrail) => guardrail.id)).toEqual(
       expect.arrayContaining([
         'no_real_user_photo_capture_in_7C',
