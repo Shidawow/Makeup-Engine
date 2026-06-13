@@ -1,11 +1,11 @@
 {
   "schemaVersion": "active-task.v1",
-  "taskId": "9G",
-  "title": "Anonymous Internal Trial Dry Run Pack",
+  "taskId": "9H",
+  "title": "Anonymous Internal Trial Launch Pack",
   "status": "completed",
   "ownerRole": "Codex",
   "createdBy": "Codex",
-  "phase": "9G",
+  "phase": "9H",
   "recommendedProfile": "native-gpt-codex-high-reasoning",
   "allowedDirectories": [
     "docs",
@@ -29,23 +29,23 @@
     "npm run project:context",
     "node scripts/project-status.mjs --json",
     "node scripts/context-pack.mjs --json",
-    "npm run test -- tests/user-app-anonymous-trial-dry-run-pack.test.ts tests/user-app-anonymous-trial-dry-run-checklist.test.ts tests/user-app-anonymous-trial-dry-run-review.test.ts tests/user-app-anonymous-trial-dry-run-pack-panel.test.tsx tests/user-app-anonymous-trial-dry-run-checklist-panel.test.tsx tests/user-app-anonymous-trial-dry-run-review-panel.test.tsx tests/user-app-shell-anonymous-trial-dry-run-flow.test.tsx tests/phase-9G-documentation-recovery.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
+    "npm run test -- tests/user-app-anonymous-trial-launch-pack.test.ts tests/user-app-anonymous-trial-launch-readiness.test.ts tests/user-app-anonymous-trial-post-launch-handoff.test.ts tests/user-app-anonymous-trial-launch-pack-panel.test.tsx tests/user-app-anonymous-trial-launch-readiness-panel.test.tsx tests/user-app-anonymous-trial-post-launch-handoff-panel.test.tsx tests/user-app-shell-anonymous-trial-launch-flow.test.tsx tests/phase-9H-documentation-recovery.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
   ],
   "completionDefinition": [
-    "Phase 9G added anonymous internal trial dry run pack, checklist, review, fixtures, administrator panels, and dry run documentation.",
-    "9G did not implement production app, public recruitment, backend collection, database, analytics, AI analysis, OpenAI/external API usage, camera, AR, training, App Store/TestFlight, online publication, new runtime dependencies, or real user data collection.",
-    "9G did not collect real names, contact information, photos, health information, sensitive identity information, face embeddings, biometric identifiers, backend records, analytics records, AI analysis records, or training data.",
+    "Phase 9H added anonymous internal trial launch pack, launch readiness, post-launch handoff, fixtures, administrator panels, and launch documentation.",
+    "9H did not implement production app, public recruitment, backend collection, database, analytics, AI analysis, OpenAI/external API usage, camera, AR, training, App Store/TestFlight, online publication, new runtime dependencies, or real user data collection.",
+    "9H did not collect real names, contact information, photos, health information, sensitive identity information, face embeddings, biometric identifiers, backend records, analytics records, AI analysis records, or training data.",
     "Makeup Engine remains the template production system and UserAppTemplatePackage remains the handoff contract.",
     "Docs and project-state must remain recoverable and validation commands must pass."
   ],
   "dependsOn": [
-    "9F Internal Trial Evidence Collection Preparation"
+    "9G Anonymous Internal Trial Dry Run Pack"
   ],
   "nextRecommendedTask": {
-    "taskId": "9H",
-    "title": "Anonymous Internal Trial Launch Pack",
+    "taskId": "9I",
+    "title": "Anonymous Internal Trial Evidence Review",
     "status": "recommended"
   },
-  "updatedAt": "2026-06-12T01:08:00.000+08:00",
+  "updatedAt": "2026-06-13T11:13:00.000+08:00",
   "validationStatus": "passed"
 }

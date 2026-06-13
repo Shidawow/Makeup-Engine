@@ -304,3 +304,13 @@ The flow is local, anonymous, and preparation-only. It can define allowed eviden
 -> next recommendation for Phase 9H anonymous internal trial launch pack.
 
 The flow is local, anonymous, mock/rehearsal-only, and administrator-only. It can rehearse participant notice, user shell task flow, allowed anonymous observations, forbidden data handling, stop conditions, and review decisions. It cannot launch a real trial, collect real user records, collect photos, collect contact information, collect health information, collect sensitive identity information, collect biometrics, create backend records, create analytics records, run AI analysis, upload data, or write training data.
+
+## Phase 9H Anonymous Internal Trial Launch Flow
+
+`UserAppAnonymousTrialDryRunReview`
+-> `UserAppAnonymousTrialLaunchPack`
+-> `UserAppAnonymousTrialLaunchReadiness`
+-> `UserAppAnonymousTrialPostLaunchHandoff`
+-> next recommendation for Phase 9I anonymous internal trial evidence review.
+
+The flow is local, anonymous, internal, non-public, and administrator-only. It can prepare a participant notice, administrator launch script, anonymous evidence capture sheet, stop conditions, readiness decision, and post-launch handoff template. It cannot create public recruitment, production launch, backend records, analytics records, AI analysis records, uploads, training data, photos, contact data, health data, sensitive identity data, biometrics, or real user trial records in project-state.

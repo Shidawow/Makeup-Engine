@@ -155,3 +155,9 @@ Evidence collection preparation cannot request or store real names, contact info
 Phase 9G dry run pack, checklist, and review are local administrator rehearsal aids only. They must not become real trial launch, public recruitment, backend record collection, production analytics, AI analysis, training, MVP validation approval, production app approval, production roadmap approval, or production release approval.
 
 Dry run rehearsal cannot request or store real names, contact information, photos, health information, sensitive identity information, face embeddings, biometric identifiers, backend records, analytics records, AI analysis records, uploads, account credentials, payment information, or training labels. Dry run review cannot mutate `UserAppTemplatePackage` and cannot write real user trial records into project-state.
+
+## Phase 9H Anonymous Internal Trial Launch Boundary
+
+Phase 9H launch pack, launch readiness, and post-launch handoff are local administrator launch preparation aids only. They may prepare a small-scope anonymous internal trial, but they must not become public recruitment, production app launch, backend record collection, production analytics, AI analysis, training, MVP validation approval, production app approval, production roadmap approval, or production release approval.
+
+Phase 9H may record only anonymous local observation summaries and aggregate handoff fields. It must not collect real names, contacts, photos, health information, sensitive identity information, biometric identifiers, face embeddings, camera data, uploaded images, backend records, analytics records, AI analysis records, training labels, or real user trial records in project-state.

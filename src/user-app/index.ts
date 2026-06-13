@@ -50,3 +50,6 @@ export * from './userAppEvidenceCollectionQualityGate';
 export * from './userAppAnonymousTrialDryRunPack';
 export * from './userAppAnonymousTrialDryRunChecklist';
 export * from './userAppAnonymousTrialDryRunReview';
+export * from './userAppAnonymousTrialLaunchPack';
+export * from './userAppAnonymousTrialLaunchReadiness';
+export * from './userAppAnonymousTrialPostLaunchHandoff';

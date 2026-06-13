@@ -72,11 +72,11 @@ describe('Phase 8A documentation recovery', () => {
     );
 
     const snapshot = readJson<ProjectSnapshot>('project-state/project-state.snapshot.json');
-    expect(snapshot.lastCompletedPhase).toBe('9G');
-    expect(snapshot.lastCompletedBusinessPhase).toBe('9G');
-    expect(snapshot.currentPhaseId).toBe('9G');
-    expect(snapshot.nextRecommendedPhase).toBe('9H');
-    expect(snapshot.nextRecommendedPhaseName).toContain('Anonymous Internal Trial Launch Pack');
+    expect(snapshot.lastCompletedPhase).toBe('9H');
+    expect(snapshot.lastCompletedBusinessPhase).toBe('9H');
+    expect(snapshot.currentPhaseId).toBe('9H');
+    expect(snapshot.nextRecommendedPhase).toBe('9I');
+    expect(snapshot.nextRecommendedPhaseName).toContain('Anonymous Internal Trial Evidence Review');
     expect(snapshot.mainDataFlow).toContain('UserAppProductRouteDecision');
     expect(snapshot.mainDataFlow).toContain('UserAppTechnologyRouteDecision');
     expect(snapshot.mainDataFlow).toContain('UserAppMvpPlan');
@@ -92,9 +92,9 @@ describe('Phase 8A documentation recovery', () => {
     expect(snapshot.forbiddenActions.join('\n')).toContain('React Native');
 
     const providerHandoff = readJson<ProviderHandoff>('project-state/provider-handoff.json');
-    expect(providerHandoff.currentTask).toContain('Phase 9G');
-    expect(providerHandoff.lastCompletedPhase).toBe('9G');
-    expect(providerHandoff.nextRecommendedPhase).toBe('9H');
+    expect(providerHandoff.currentTask).toContain('Phase 9H');
+    expect(providerHandoff.lastCompletedPhase).toBe('9H');
+    expect(providerHandoff.nextRecommendedPhase).toBe('9I');
     expect(providerHandoff.nextRequiredReadFiles).toContain(
       'docs/app-roadmap/app-technology-route-decision.md',
     );
@@ -103,13 +103,13 @@ describe('Phase 8A documentation recovery', () => {
     );
 
     const latestHandoff = readJson<LatestHandoff>('project-state/latest-handoff.json');
-    expect(latestHandoff.fromPhase).toBe('9G');
-    expect(latestHandoff.toPhase).toBe('9H');
+    expect(latestHandoff.fromPhase).toBe('9H');
+    expect(latestHandoff.toPhase).toBe('9I');
     expect(latestHandoff.routeDecision.selectedRoute).toBe('React Web / PWA MVP first');
     expect(latestHandoff.routeDecision.handoffContract).toBe('UserAppTemplatePackage');
 
     const guardrails = readJson<GuardrailState>('project-state/guardrails.json');
-    expect(guardrails.phase).toBe('9G');
+    expect(guardrails.phase).toBe('9H');
     expect(guardrails.guardrails.map((guardrail) => guardrail.id)).toEqual(
       expect.arrayContaining([
         'phase_8a_planning_only',

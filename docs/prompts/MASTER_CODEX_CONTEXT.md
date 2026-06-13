@@ -12,14 +12,15 @@ It produces templates, template evidence, correction records, review state, loca
 
 ## Current Phase
 
-- Current business phase: `Phase 9G completed`
-- Last completed phase: `Phase 9G`
-- Last completed phase name: `Phase 9G - Anonymous Internal Trial Dry Run Pack`
-- Next recommended phase: `Phase 9H - Anonymous Internal Trial Launch Pack`
+- Current business phase: `Phase 9H completed`
+- Last completed phase: `Phase 9H`
+- Last completed phase name: `Phase 9H - Anonymous Internal Trial Launch Pack`
+- Next recommended phase: `Phase 9I - Anonymous Internal Trial Evidence Review`
 
 Historical recovery marker retained for Phase 9C tests: `Phase 9C completed`.
 Historical recovery marker retained for Phase 9E tests: `Phase 9E completed`.
 Historical recovery marker retained for Phase 9F tests: `Phase 9F completed`.
+Historical recovery marker retained for Phase 9G tests: `Phase 9G completed`.
 Historical recovery milestone retained for older phase tests: `Phase 8A completed` / `Phase 8A - Product Route Decision / App MVP Planning`.
 Historical recovery milestone retained for Phase 8B tests: `Phase 8B completed` / `Phase 8B - PWA / Mobile Web MVP Polish`.
 Historical recovery milestone retained for Phase 8C tests: `Phase 8C completed` / `Phase 8C - User App MVP Trial Pack`.
@@ -68,6 +69,7 @@ Real Photo
 -> Internal Trial Evidence Pack
 -> Internal Trial Evidence Collection Preparation
 -> Anonymous Internal Trial Dry Run Pack
+-> Anonymous Internal Trial Launch Pack
 -> Phase 8 Roadmap / V1 Non-Goals
 -> User App Consumption Manifest
 -> Dataset Review
@@ -85,7 +87,7 @@ Important boundary: `SourceImagePackage` can enter Vision Analysis through opera
 - `src/template-engine/production`: production queue, state machine, QA rules, rebinding recovery, analysis handoff, review lifecycle, smoke checklist.
 - `src/template-engine/library`: production task to library entry conversion, template versioning, and local library lifecycle.
 - `src/template-engine/app-contract`: publish package to user app contract adapter, makeup step normalization, compatibility validation, and prototype consumer view models.
-- `src/user-app`: local User App MVP Shell view models, navigation, progress, guidance UX, friendly messages, state, photo intake placeholder, personalization placeholder, local onboarding, local preferences, guidance hints, discovery, recommendation placeholders, local session persistence/recovery, privacy boundary utilities, mobile QA, app readiness gating, browser/mobile QA reports, trial operations, trial result review, issue taxonomy, decision framework, iteration backlog, priority framework, iteration plan, learning decision gate, evidence pack models, evidence collection preparation models, and anonymous dry run models.
+- `src/user-app`: local User App MVP Shell view models, navigation, progress, guidance UX, friendly messages, state, photo intake placeholder, personalization placeholder, local onboarding, local preferences, guidance hints, discovery, recommendation placeholders, local session persistence/recovery, privacy boundary utilities, mobile QA, app readiness gating, browser/mobile QA reports, trial operations, trial result review, issue taxonomy, decision framework, iteration backlog, priority framework, iteration plan, learning decision gate, evidence pack models, evidence collection preparation models, anonymous dry run models, and anonymous launch models.
 - `src/components/user-app`: local shell UI for package summary, template list/detail, hardened step guidance, region instructions, tools/products, compatibility, progress, disabled photo intake placeholder, personalization placeholder, local onboarding, local preferences, discovery/recommendation UI, session controls, recovery notices, app readiness, mobile QA, interaction checklist, privacy notice, and administrator trial readiness/operations/review panels.
 - `src/training`: source image import, artifact handling, deterministic training/evaluation/export utilities.
 - `src/components/template-studio`: operator UI for source image intake, artifact binding, production QA, library management, package preview, app contract preview, prototype consumer preview, mask editing, evidence, review, and dataset panels.
@@ -315,3 +317,4 @@ When finishing a round, report in this order:
 - Phase 9E should create an internal trial evidence pack using privacy-safe anonymous/mock/example summaries only.
 - Phase 9F completed privacy-safe internal trial evidence collection preparation only, not real data collection.
 - Phase 9G completed anonymous internal trial dry run pack only, not real trial launch or MVP validation planning.
+- Phase 9H completed anonymous internal trial launch pack only, not public recruitment, production launch, backend collection, AI analysis, training, or MVP validation planning.

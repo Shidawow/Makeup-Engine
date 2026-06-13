@@ -70,11 +70,11 @@ describe('Phase 9B documentation recovery', () => {
     );
 
     const snapshot = readJson<ProjectSnapshot>('project-state/project-state.snapshot.json');
-    expect(snapshot.lastCompletedPhase).toBe('9G');
-    expect(snapshot.lastCompletedBusinessPhase).toBe('9G');
-    expect(snapshot.currentPhaseId).toBe('9G');
-    expect(snapshot.nextRecommendedPhase).toBe('9H');
-    expect(snapshot.nextRecommendedPhaseName).toContain('Anonymous Internal Trial Launch Pack');
+    expect(snapshot.lastCompletedPhase).toBe('9H');
+    expect(snapshot.lastCompletedBusinessPhase).toBe('9H');
+    expect(snapshot.currentPhaseId).toBe('9H');
+    expect(snapshot.nextRecommendedPhase).toBe('9I');
+    expect(snapshot.nextRecommendedPhaseName).toContain('Anonymous Internal Trial Evidence Review');
     expect(snapshot.mainDataFlow).toEqual(
       expect.arrayContaining([
         'UserAppTrialResultReview',
@@ -101,24 +101,24 @@ describe('Phase 9B documentation recovery', () => {
     expect(snapshot.forbiddenActions.join('\n')).toContain('real user names');
 
     const providerHandoff = readJson<ProviderHandoff>('project-state/provider-handoff.json');
-    expect(providerHandoff.currentTask).toContain('Phase 9G');
-    expect(providerHandoff.lastCompletedPhase).toBe('9G');
-    expect(providerHandoff.nextRecommendedPhase).toBe('9H');
+    expect(providerHandoff.currentTask).toContain('Phase 9H');
+    expect(providerHandoff.lastCompletedPhase).toBe('9H');
+    expect(providerHandoff.nextRecommendedPhase).toBe('9I');
     expect(providerHandoff.nextRecommendedPhaseName).toContain(
-      'Anonymous Internal Trial Launch Pack',
+      'Anonymous Internal Trial Evidence Review',
     );
     expect(providerHandoff.nextRequiredReadFiles).toContain('docs/phases/phase-9B.md');
     expect(providerHandoff.nextRequiredReadFiles).toContain(
       'docs/product/internal-trial-result-review-framework.md',
     );
     expect(providerHandoff.handoffNotes.join('\n')).toContain(
-      'Phase 9H should prepare an anonymous internal trial launch pack',
+      'Phase 9I should review anonymous internal trial evidence only',
     );
 
     const latestHandoff = readJson<LatestHandoff>('project-state/latest-handoff.json');
-    expect(latestHandoff.fromPhase).toBe('9G');
-    expect(latestHandoff.toPhase).toBe('9H');
-    expect(latestHandoff.nextAction).toContain('Phase 9H');
+    expect(latestHandoff.fromPhase).toBe('9H');
+    expect(latestHandoff.toPhase).toBe('9I');
+    expect(latestHandoff.nextAction).toContain('Phase 9I');
     expect(latestHandoff.internalTrialResultReviewDecision.phase9BResult).toContain(
       'internal trial result review framework',
     );
@@ -133,7 +133,7 @@ describe('Phase 9B documentation recovery', () => {
     );
 
     const guardrails = readJson<GuardrailState>('project-state/guardrails.json');
-    expect(guardrails.phase).toBe('9G');
+    expect(guardrails.phase).toBe('9H');
     expect(guardrails.guardrails.map((guardrail) => guardrail.id)).toEqual(
       expect.arrayContaining([
         'phase_9b_internal_trial_result_review_only',

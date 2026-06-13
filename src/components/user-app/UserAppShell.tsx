@@ -31,6 +31,9 @@ import {
   createUserAppAnonymousTrialDryRunChecklist,
   createUserAppAnonymousTrialDryRunPack,
   createUserAppAnonymousTrialDryRunReview,
+  createUserAppAnonymousTrialLaunchPack,
+  createUserAppAnonymousTrialLaunchReadiness,
+  createUserAppAnonymousTrialPostLaunchHandoff,
   createUserAppInternalTrialEvidencePack,
   createUserAppInternalTrialLearningSummary,
   createUserAppNextPhaseRecommendation,
@@ -70,6 +73,9 @@ import { userAppTrialObservationMockSummary } from '../../templates/examples/use
 import { UserAppAnonymousTrialDryRunChecklistPanel } from './UserAppAnonymousTrialDryRunChecklistPanel';
 import { UserAppAnonymousTrialDryRunPackPanel } from './UserAppAnonymousTrialDryRunPackPanel';
 import { UserAppAnonymousTrialDryRunReviewPanel } from './UserAppAnonymousTrialDryRunReviewPanel';
+import { UserAppAnonymousTrialLaunchPackPanel } from './UserAppAnonymousTrialLaunchPackPanel';
+import { UserAppAnonymousTrialLaunchReadinessPanel } from './UserAppAnonymousTrialLaunchReadinessPanel';
+import { UserAppAnonymousTrialPostLaunchHandoffPanel } from './UserAppAnonymousTrialPostLaunchHandoffPanel';
 import { UserAppCompatibilityBanner } from './UserAppCompatibilityBanner';
 import { UserAppEvidenceCollectionChecklistPanel } from './UserAppEvidenceCollectionChecklistPanel';
 import { UserAppEvidenceCollectionProtocolPanel } from './UserAppEvidenceCollectionProtocolPanel';
@@ -163,6 +169,9 @@ const adminSectionTabs: Array<{ tabId: UserAppShellSection; label: string }> = [
   { tabId: 'anonymousTrialDryRunPack', label: '匿名内部试用 dry run' },
   { tabId: 'anonymousTrialDryRunChecklist', label: 'dry run checklist' },
   { tabId: 'anonymousTrialDryRunReview', label: 'dry run 复盘' },
+  { tabId: 'anonymousTrialLaunchPack', label: '匿名内部试用启动包' },
+  { tabId: 'anonymousTrialLaunchReadiness', label: '启动就绪度' },
+  { tabId: 'anonymousTrialPostLaunchHandoff', label: '试用后 handoff' },
   { tabId: 'pwa', label: 'PWA 检查' },
   { tabId: 'mvpPolish', label: 'MVP 打磨' },
   { tabId: 'readiness', label: 'App 就绪度' },
@@ -481,6 +490,24 @@ export function UserAppShell({
       evidenceCollectionProtocol,
       evidenceCollectionQualityGate,
     ],
+  );
+  const anonymousTrialLaunchPack = useMemo(
+    () => createUserAppAnonymousTrialLaunchPack(),
+    [],
+  );
+  const anonymousTrialLaunchReadiness = useMemo(
+    () =>
+      createUserAppAnonymousTrialLaunchReadiness({
+        pack: anonymousTrialLaunchPack,
+      }),
+    [anonymousTrialLaunchPack],
+  );
+  const anonymousTrialPostLaunchHandoff = useMemo(
+    () =>
+      createUserAppAnonymousTrialPostLaunchHandoff({
+        launchReadiness: anonymousTrialLaunchReadiness,
+      }),
+    [anonymousTrialLaunchReadiness],
   );
   const readinessReport = useMemo(
     () =>
@@ -1029,6 +1056,22 @@ export function UserAppShell({
 
               {boundaryTab === 'anonymousTrialDryRunReview' ? (
                 <UserAppAnonymousTrialDryRunReviewPanel review={anonymousTrialDryRunReview} />
+              ) : null}
+
+              {boundaryTab === 'anonymousTrialLaunchPack' ? (
+                <UserAppAnonymousTrialLaunchPackPanel pack={anonymousTrialLaunchPack} />
+              ) : null}
+
+              {boundaryTab === 'anonymousTrialLaunchReadiness' ? (
+                <UserAppAnonymousTrialLaunchReadinessPanel
+                  readiness={anonymousTrialLaunchReadiness}
+                />
+              ) : null}
+
+              {boundaryTab === 'anonymousTrialPostLaunchHandoff' ? (
+                <UserAppAnonymousTrialPostLaunchHandoffPanel
+                  handoff={anonymousTrialPostLaunchHandoff}
+                />
               ) : null}
 
               {boundaryTab === 'mvpPolish' ? (

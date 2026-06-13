@@ -1,16 +1,6 @@
 {
   "commands": [
     {
-      "command": "npm run test -- tests/user-app-anonymous-trial-dry-run-pack.test.ts tests/user-app-anonymous-trial-dry-run-checklist.test.ts tests/user-app-anonymous-trial-dry-run-review.test.ts tests/user-app-anonymous-trial-dry-run-pack-panel.test.tsx tests/user-app-anonymous-trial-dry-run-checklist-panel.test.tsx tests/user-app-anonymous-trial-dry-run-review-panel.test.tsx tests/user-app-shell-anonymous-trial-dry-run-flow.test.tsx",
-      "status": "passed",
-      "notes": "Initial Phase 9G model, panel, and shell wiring tests passed."
-    },
-    {
-      "command": "npm run test -- tests/user-app-anonymous-trial-dry-run-pack.test.ts tests/user-app-anonymous-trial-dry-run-checklist.test.ts tests/user-app-anonymous-trial-dry-run-review.test.ts tests/user-app-anonymous-trial-dry-run-pack-panel.test.tsx tests/user-app-anonymous-trial-dry-run-checklist-panel.test.tsx tests/user-app-anonymous-trial-dry-run-review-panel.test.tsx tests/user-app-shell-anonymous-trial-dry-run-flow.test.tsx tests/phase-9G-documentation-recovery.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
-      "status": "passed",
-      "notes": "Required Phase 9G scoped acceptance tests pending final docs/project-state update."
-    },
-    {
       "command": "npm run typecheck",
       "status": "passed"
     },
@@ -37,12 +27,31 @@
     {
       "command": "node scripts/context-pack.mjs --json",
       "status": "passed"
+    },
+    {
+      "command": "npm run test -- tests/user-app-anonymous-trial-launch-pack.test.ts tests/user-app-anonymous-trial-launch-readiness.test.ts tests/user-app-anonymous-trial-post-launch-handoff.test.ts tests/user-app-anonymous-trial-launch-pack-panel.test.tsx tests/user-app-anonymous-trial-launch-readiness-panel.test.tsx tests/user-app-anonymous-trial-post-launch-handoff-panel.test.tsx tests/user-app-shell-anonymous-trial-launch-flow.test.tsx tests/phase-9H-documentation-recovery.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
+      "status": "passed"
+    },
+    {
+      "command": "npm run test -- tests/user-app-anonymous-trial-dry-run-pack.test.ts tests/user-app-anonymous-trial-dry-run-checklist.test.ts tests/user-app-anonymous-trial-dry-run-review.test.ts tests/user-app-anonymous-trial-dry-run-pack-panel.test.tsx tests/user-app-anonymous-trial-dry-run-checklist-panel.test.tsx tests/user-app-anonymous-trial-dry-run-review-panel.test.tsx tests/user-app-shell-anonymous-trial-dry-run-flow.test.tsx",
+      "status": "passed",
+      "notes": "Initial Phase 9G model, panel, and shell wiring tests passed."
+    },
+    {
+      "command": "npm run test -- tests/user-app-anonymous-trial-dry-run-pack.test.ts tests/user-app-anonymous-trial-dry-run-checklist.test.ts tests/user-app-anonymous-trial-dry-run-review.test.ts tests/user-app-anonymous-trial-dry-run-pack-panel.test.tsx tests/user-app-anonymous-trial-dry-run-checklist-panel.test.tsx tests/user-app-anonymous-trial-dry-run-review-panel.test.tsx tests/user-app-shell-anonymous-trial-dry-run-flow.test.tsx tests/phase-9G-documentation-recovery.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
+      "status": "passed",
+      "notes": "Required Phase 9G scoped acceptance tests pending final docs/project-state update."
+    },
+    {
+      "command": "npm run test -- tests/user-app-anonymous-trial-launch-pack.test.ts tests/user-app-anonymous-trial-launch-readiness.test.ts tests/user-app-anonymous-trial-post-launch-handoff.test.ts tests/user-app-anonymous-trial-launch-pack-panel.test.tsx tests/user-app-anonymous-trial-launch-readiness-panel.test.tsx tests/user-app-anonymous-trial-post-launch-handoff-panel.test.tsx tests/user-app-shell-anonymous-trial-launch-flow.test.tsx",
+      "status": "passed",
+      "notes": "Initial Phase 9H model, panel, and shell wiring tests passed."
     }
   ],
-  "lastUpdatedPhase": "9F",
-  "phase": "9G",
-  "lastCompletedPhase": "9F",
-  "currentPhase": "9F",
-  "nextRecommendedPhase": "9G",
-  "updatedAt": "2026-06-12T01:08:00.000+08:00"
+  "lastUpdatedPhase": "9H",
+  "phase": "9H",
+  "lastCompletedPhase": "9H",
+  "currentPhase": "9H",
+  "nextRecommendedPhase": "9I",
+  "updatedAt": "2026-06-13T11:13:00.000+08:00"
 }
