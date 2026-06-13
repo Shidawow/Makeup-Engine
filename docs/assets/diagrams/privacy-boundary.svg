@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="610" viewBox="0 0 920 610">
+<defs>
+<marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+<path d="M0,0 L0,6 L9,3 z" fill="#5A6673"/>
+</marker>
+</defs>
+<rect x="0" y="0" width="920" height="610" rx="18" fill="#F8FAFD"/>
+<text x="46" y="48" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#0B2545">Privacy Boundary</text>
+<rect x="110" y="90" width="700" height="54" rx="10" fill="#FFFFFF" stroke="#2E74B5" stroke-width="2"/>
+<text x="132" y="115" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="600" fill="#0B2545">Allowed: anonymous notes and aggregated issue counts</text>
+<line x1="460.0" y1="152" x2="460.0" y2="172" stroke="#5A6673" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="110" y="182" width="700" height="54" rx="10" fill="#FFFFFF" stroke="#1F4D78" stroke-width="2"/>
+<text x="132" y="198" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="600" fill="#0B2545">Forbidden: photos, names, contact, health, sensitive</text>
+<text x="132" y="216" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="600" fill="#0B2545">identity</text>
+<line x1="460.0" y1="244" x2="460.0" y2="264" stroke="#5A6673" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="110" y="274" width="700" height="54" rx="10" fill="#FFFFFF" stroke="#2E7D5F" stroke-width="2"/>
+<text x="132" y="290" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="600" fill="#0B2545">Forbidden: image bytes, base64, object URLs, local</text>
+<text x="132" y="308" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="600" fill="#0B2545">paths</text>
+<line x1="460.0" y1="336" x2="460.0" y2="356" stroke="#5A6673" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="110" y="366" width="700" height="54" rx="10" fill="#FFFFFF" stroke="#8A6D1D" stroke-width="2"/>
+<text x="132" y="382" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="600" fill="#0B2545">No backend, no analytics, no OpenAI/external API, no</text>
+<text x="132" y="400" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="600" fill="#0B2545">training</text>
+<line x1="460.0" y1="428" x2="460.0" y2="448" stroke="#5A6673" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="110" y="458" width="700" height="54" rx="10" fill="#FFFFFF" stroke="#5A6673" stroke-width="2"/>
+<text x="132" y="483" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="600" fill="#0B2545">No real user trial records in project-state</text>
+</svg>
