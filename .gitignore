@@ -9,3 +9,5 @@ public/mediapipe
 .env.local
 *.local
 *.tsbuildinfo
+
+.DS_Store
