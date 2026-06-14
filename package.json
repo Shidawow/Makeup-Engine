@@ -9,6 +9,8 @@
     "test": "vitest run",
     "test:browser": "vitest run",
     "build:training-dataset": "node scripts/build-training-dataset.mjs",
+    "mediapipe:prepare": "node scripts/prepare-mediapipe-assets.mjs --download-model",
+    "mediapipe:check": "node scripts/prepare-mediapipe-assets.mjs --check",
     "training:preflight": "node scripts/training-preflight.mjs",
     "training:baseline": "node scripts/train-baseline-segmentation.mjs",
     "training:image-conditioned": "node scripts/train-image-conditioned-segmentation.mjs",

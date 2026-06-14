@@ -167,6 +167,7 @@ SourceImagePackage manifest
 - Render Phase 9I anonymous internal trial evidence review, evidence gap review, and decision input administrator panels for anonymous local post-trial review.
 - Render Phase 9J anonymous internal trial follow-up iteration, gap action plan, and follow-up readiness administrator panels for conservative next-iteration planning.
 - Continue from Vision Analysis into mask editing, evidence capture, dataset review, materialized training datasets, and lightweight model artifact workflows.
+- Run real local MediaPipe FaceMesh after preparing ignored local assets with `npm run mediapipe:prepare`; see `docs/setup/local-mediapipe-assets.md`.
 
 ## What The System Must Not Do
 
