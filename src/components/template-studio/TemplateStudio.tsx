@@ -11,9 +11,8 @@ import {
   createEditableCosmeticMask,
   createMediaPipeFaceMeshProvider,
   createMockVisionProvider,
-  formatMediaPipeLocalAssetRecoveryMessage,
+  formatVisionAnalysisErrorForUser,
   hasEditableMaskChanges,
-  isMediaPipeLocalAssetMissingError,
   loadImagePixelDataFromUrl,
   recomputeInvalidatedRegions,
   reanalyzeMakeupWithEditableMasksBatch,
@@ -22,7 +21,7 @@ import {
   resetEditableMaskToBase,
   restoreEditableMaskSnapshot,
   runMakeupAnalysisPipeline,
-  shouldUseMediaPipeDevelopmentFallback,
+  shouldUseVisionAnalysisDevelopmentFallback,
   undoMaskEdit,
   type CosmeticSegmentationTarget,
   type EditableCosmeticMask,
@@ -697,9 +696,9 @@ export function TemplateStudio() {
       try {
         await mediaPipeProvider.initialize();
       } catch (nextError) {
-        if (shouldUseMediaPipeDevelopmentFallback(nextError)) {
+        if (shouldUseVisionAnalysisDevelopmentFallback(nextError)) {
           currentProvider = createMockVisionProvider();
-          setRuntimeNotice(formatMediaPipeLocalAssetRecoveryMessage(nextError));
+          setRuntimeNotice(formatVisionAnalysisErrorForUser(nextError));
           setStatus('public/mediapipe 缺失，已使用 mock vision fallback');
         } else {
           throw nextError;
@@ -748,13 +747,7 @@ export function TemplateStudio() {
       }
       setStatus('分析完成');
     } catch (nextError) {
-      setError(
-        isMediaPipeLocalAssetMissingError(nextError)
-          ? formatMediaPipeLocalAssetRecoveryMessage(nextError)
-          : nextError instanceof Error
-            ? nextError.message
-            : '模板工作台分析失败。',
-      );
+      setError(formatVisionAnalysisErrorForUser(nextError));
       setStatus('分析失败');
     } finally {
       setLoading(false);
@@ -1592,9 +1585,10 @@ export function TemplateStudio() {
                   {' '}
                   和
                   {' '}
-                  <code>public/mediapipe/wasm/</code>
+                  <code>public/mediapipe/wasm/vision_wasm_internal.js</code>
                   。如果资源缺失，页面会显示明确原因和恢复说明；localhost
-                  开发环境会自动 fallback 到 mock vision provider。
+                  开发环境会自动 fallback 到 mock vision provider。如果需要真实 FaceMesh，请把 MediaPipe
+                  model/wasm 文件放回 public/mediapipe。
                 </div>
               )}
             </section>

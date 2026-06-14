@@ -1,4 +1,5 @@
 export * from './image-input';
+export * from './errors';
 export * from './face-analysis';
 export * from './face-detection';
 export * from './landmarks';

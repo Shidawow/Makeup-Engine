@@ -1,4 +1,14 @@
 import type { FaceLandmarker } from '@mediapipe/tasks-vision';
+import {
+  MEDIA_PIPE_LOCAL_MODEL_ASSET_PATH,
+  MEDIA_PIPE_LOCAL_WASM_READY_PATH,
+  VisionAnalysisError,
+  formatVisionAnalysisErrorForUser,
+  getVisionAnalysisRecoveryHint,
+  isMissingMediaPipeAssetsError,
+  isVisionAnalysisDevelopmentFallbackAllowed,
+  shouldUseVisionAnalysisDevelopmentFallback,
+} from '../../../errors';
 import type { MakeupPhotoInput } from '../../../image-input';
 import type { MediaPipeFaceMeshResult } from '../faceMeshAdapter';
 import type {
@@ -9,9 +19,12 @@ import type {
 
 const LOCAL_WASM_BASE_URL = '/mediapipe/wasm';
 
-const LOCAL_MODEL_ASSET_PATH = '/mediapipe/face_landmarker.task';
+const LOCAL_MODEL_ASSET_PATH = MEDIA_PIPE_LOCAL_MODEL_ASSET_PATH;
 
-const LOCAL_WASM_READY_CHECK_PATH = '/vision_wasm_internal.js';
+const LOCAL_WASM_READY_CHECK_PATH = MEDIA_PIPE_LOCAL_WASM_READY_PATH.replace(
+  LOCAL_WASM_BASE_URL,
+  '',
+);
 
 export const MEDIA_PIPE_LOCAL_ASSET_RECOVERY_STEPS = [
   '确认仓库根目录下存在 public/mediapipe/。',
@@ -21,15 +34,19 @@ export const MEDIA_PIPE_LOCAL_ASSET_RECOVERY_STEPS = [
   '重新运行 npm run dev 并刷新浏览器页面。',
 ] as const;
 
-export class MediaPipeLocalAssetMissingError extends Error {
+export class MediaPipeLocalAssetMissingError extends VisionAnalysisError {
   readonly assetPath: string;
   readonly recoverySteps = MEDIA_PIPE_LOCAL_ASSET_RECOVERY_STEPS;
   readonly fallbackAvailableInDevelopment = true;
 
   constructor(assetPath: string) {
-    super(
-      `MediaPipe local asset is missing: ${assetPath}. public/mediapipe must be prepared before running real FaceMesh.`,
-    );
+    super({
+      code: 'missing_mediapipe_assets',
+      message: `MediaPipe local asset is missing: ${assetPath}. public/mediapipe must be prepared before running real FaceMesh.`,
+      assetPath,
+      recoveryHint: getVisionAnalysisRecoveryHint(assetPath),
+      fallbackAvailableInDevelopment: true,
+    });
     this.name = 'MediaPipeLocalAssetMissingError';
     this.assetPath = assetPath;
   }
@@ -39,34 +56,16 @@ export const isMediaPipeLocalAssetMissingError = (
   error: unknown,
 ): error is MediaPipeLocalAssetMissingError =>
   error instanceof MediaPipeLocalAssetMissingError ||
-  (error instanceof Error && error.name === 'MediaPipeLocalAssetMissingError');
+  isMissingMediaPipeAssetsError(error);
 
-export const formatMediaPipeLocalAssetRecoveryMessage = (error: unknown): string => {
-  if (!isMediaPipeLocalAssetMissingError(error)) {
-    return error instanceof Error && error.message
-      ? error.message
-      : 'FaceMesh 分析失败：未返回具体错误原因。';
-  }
+export const formatMediaPipeLocalAssetRecoveryMessage =
+  formatVisionAnalysisErrorForUser;
 
-  return [
-    `MediaPipe 本地资源缺失：${error.assetPath}`,
-    '原因：public/mediapipe 未准备或没有被本地 dev server 提供，真实 FaceMesh 无法启动。',
-    '需要检查：/mediapipe/face_landmarker.task 和 /mediapipe/wasm/vision_wasm_internal.js。',
-    `恢复说明：${error.recoverySteps.join(' ')}`,
-    '开发环境说明：localhost/127.0.0.1 会自动 fallback 到 mock vision provider，方便继续调试页面；如果需要真实 FaceMesh，需要把 MediaPipe model/wasm 文件放回 public/mediapipe。',
-  ].join('\n');
-};
-
-export const isMediaPipeDevelopmentFallbackAllowed = (): boolean => {
-  if (typeof window === 'undefined') {
-    return false;
-  }
-
-  return ['localhost', '127.0.0.1', '0.0.0.0', '::1'].includes(window.location.hostname);
-};
+export const isMediaPipeDevelopmentFallbackAllowed =
+  isVisionAnalysisDevelopmentFallbackAllowed;
 
 export const shouldUseMediaPipeDevelopmentFallback = (error: unknown): boolean =>
-  isMediaPipeLocalAssetMissingError(error) && isMediaPipeDevelopmentFallbackAllowed();
+  shouldUseVisionAnalysisDevelopmentFallback(error);
 
 const toAbsoluteAssetUrl = (assetPath: string): string => {
   if (/^https?:\/\//.test(assetPath)) {
