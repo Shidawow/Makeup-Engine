@@ -10,6 +10,7 @@ export type MediaPipeRuntimeState =
 export interface MediaPipeFaceMeshRuntimeConfig {
   wasmBaseUrl?: string;
   modelAssetPath?: string;
+  checkLocalAssets?: boolean;
   minFaceDetectionConfidence?: number;
   minFacePresenceConfidence?: number;
   minTrackingConfidence?: number;
@@ -22,4 +23,3 @@ export interface MediaPipeFaceMeshRuntime {
   detect(image: MakeupPhotoInput): Promise<MediaPipeFaceMeshResult | null>;
   dispose(): void;
 }
-

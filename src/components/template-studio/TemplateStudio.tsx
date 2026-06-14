@@ -10,7 +10,10 @@ import {
   applyMaskBrushEdit,
   createEditableCosmeticMask,
   createMediaPipeFaceMeshProvider,
+  createMockVisionProvider,
+  formatMediaPipeLocalAssetRecoveryMessage,
   hasEditableMaskChanges,
+  isMediaPipeLocalAssetMissingError,
   loadImagePixelDataFromUrl,
   recomputeInvalidatedRegions,
   reanalyzeMakeupWithEditableMasksBatch,
@@ -19,6 +22,7 @@ import {
   resetEditableMaskToBase,
   restoreEditableMaskSnapshot,
   runMakeupAnalysisPipeline,
+  shouldUseMediaPipeDevelopmentFallback,
   undoMaskEdit,
   type CosmeticSegmentationTarget,
   type EditableCosmeticMask,
@@ -27,6 +31,7 @@ import {
   type MakeupAnalysisPipelineResult,
   type MakeupPhotoInput,
   type MaskBrushPoint,
+  type VisionProvider,
 } from '../../vision';
 import {
   buildMakeupTemplateFromVisionAnalysis,
@@ -263,6 +268,7 @@ export function TemplateStudio() {
   const [loading, setLoading] = useState(false);
   const [reanalyzing, setReanalyzing] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [runtimeNotice, setRuntimeNotice] = useState<string | null>(null);
   const [status, setStatus] = useState('准备就绪');
   const [correctionRecords, setCorrectionRecords] = useState<VisionCorrectionRecord[]>(
     () => visionCorrectionStorage.list(),
@@ -681,12 +687,25 @@ export function TemplateStudio() {
 
     setLoading(true);
     setError(null);
+    setRuntimeNotice(null);
     setStatus('正在运行 FaceMesh 与蒙版分割');
 
     try {
-      const currentProvider = provider();
+      const mediaPipeProvider = provider();
+      let currentProvider: VisionProvider = mediaPipeProvider;
 
-      await currentProvider.initialize();
+      try {
+        await mediaPipeProvider.initialize();
+      } catch (nextError) {
+        if (shouldUseMediaPipeDevelopmentFallback(nextError)) {
+          currentProvider = createMockVisionProvider();
+          setRuntimeNotice(formatMediaPipeLocalAssetRecoveryMessage(nextError));
+          setStatus('public/mediapipe 缺失，已使用 mock vision fallback');
+        } else {
+          throw nextError;
+        }
+      }
+
       const nextPixelData = await loadImagePixelDataFromUrl(photo.imageUrl ?? '');
       const nextAnalysis = await runMakeupAnalysisPipeline({
         image: photo,
@@ -730,7 +749,11 @@ export function TemplateStudio() {
       setStatus('分析完成');
     } catch (nextError) {
       setError(
-        nextError instanceof Error ? nextError.message : '模板工作台分析失败。',
+        isMediaPipeLocalAssetMissingError(nextError)
+          ? formatMediaPipeLocalAssetRecoveryMessage(nextError)
+          : nextError instanceof Error
+            ? nextError.message
+            : '模板工作台分析失败。',
       );
       setStatus('分析失败');
     } finally {
@@ -1553,10 +1576,27 @@ export function TemplateStudio() {
               </div>
 
               {error ? (
-                <div className="mt-3 rounded-md border border-rose-200 bg-rose-50 p-3 text-sm text-rose-700">
+                <div className="mt-3 whitespace-pre-line rounded-md border border-rose-200 bg-rose-50 p-3 text-sm text-rose-700">
                   {error}
                 </div>
               ) : null}
+              {runtimeNotice ? (
+                <div className="mt-3 whitespace-pre-line rounded-md border border-amber-200 bg-amber-50 p-3 text-sm text-amber-800">
+                  {runtimeNotice}
+                </div>
+              ) : (
+                <div className="mt-3 rounded-md border border-stone-200 bg-stone-50 p-3 text-xs text-stone-600">
+                  MediaPipe 本地资源要求：真实 FaceMesh 需要
+                  {' '}
+                  <code>public/mediapipe/face_landmarker.task</code>
+                  {' '}
+                  和
+                  {' '}
+                  <code>public/mediapipe/wasm/</code>
+                  。如果资源缺失，页面会显示明确原因和恢复说明；localhost
+                  开发环境会自动 fallback 到 mock vision provider。
+                </div>
+              )}
             </section>
 
             <section className="grid gap-3 rounded-lg border border-stone-200 bg-white p-4 shadow-soft md:grid-cols-4">

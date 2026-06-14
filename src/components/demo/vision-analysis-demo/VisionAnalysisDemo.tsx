@@ -11,15 +11,20 @@ import {
   applyMaskBrushEdit,
   createEditableCosmeticMask,
   createMediaPipeFaceMeshProvider,
+  createMockVisionProvider,
+  formatMediaPipeLocalAssetRecoveryMessage,
+  isMediaPipeLocalAssetMissingError,
   loadImagePixelDataFromUrl,
   reanalyzeMakeupWithEditableMasks,
   runMakeupAnalysisPipeline,
+  shouldUseMediaPipeDevelopmentFallback,
   type CosmeticSegmentationTarget,
   type EditableCosmeticMask,
   type ImagePixelData,
   type MakeupAnalysisPipelineResult,
   type MakeupPhotoInput,
   type MaskEditTool,
+  type VisionProvider,
 } from '../../../vision';
 import {
   buildMakeupTemplateFromVisionAnalysis,
@@ -132,6 +137,7 @@ export function VisionAnalysisDemo({
   const [loading, setLoading] = useState(false);
   const [reanalyzing, setReanalyzing] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [runtimeNotice, setRuntimeNotice] = useState<string | null>(null);
   const [editingEnabled, setEditingEnabled] = useState(false);
   const [activeTarget, setActiveTarget] =
     useState<CosmeticSegmentationTarget>('lips');
@@ -239,13 +245,27 @@ export function VisionAnalysisDemo({
 
     setLoading(true);
     setError(null);
+    setRuntimeNotice(null);
 
     try {
-      await providerRef.current.initialize();
+      const mediaPipeProvider = providerRef.current;
+      let currentProvider: VisionProvider = mediaPipeProvider;
+
+      try {
+        await mediaPipeProvider.initialize();
+      } catch (nextError) {
+        if (shouldUseMediaPipeDevelopmentFallback(nextError)) {
+          currentProvider = createMockVisionProvider();
+          setRuntimeNotice(formatMediaPipeLocalAssetRecoveryMessage(nextError));
+        } else {
+          throw nextError;
+        }
+      }
+
       const nextPixelData = await loadImagePixelDataFromUrl(targetPhoto.imageUrl ?? '');
       const nextResult = await runMakeupAnalysisPipeline({
         image: targetPhoto,
-        provider: providerRef.current,
+        provider: currentProvider,
         pixelData: nextPixelData,
       });
 
@@ -257,7 +277,13 @@ export function VisionAnalysisDemo({
       setAdjustedTargets([]);
       setShowDebugLayers(false);
     } catch (nextError) {
-      setError(nextError instanceof Error ? nextError.message : 'FaceMesh 分析失败。');
+      setError(
+        isMediaPipeLocalAssetMissingError(nextError)
+          ? formatMediaPipeLocalAssetRecoveryMessage(nextError)
+          : nextError instanceof Error
+            ? nextError.message
+            : 'FaceMesh 分析失败。',
+      );
     } finally {
       setLoading(false);
     }
@@ -519,10 +545,26 @@ export function VisionAnalysisDemo({
               </div>
 
               {error ? (
-                <div className="mt-3 rounded-md border border-rose-200 bg-rose-50 p-3 text-sm text-rose-700">
+                <div className="mt-3 whitespace-pre-line rounded-md border border-rose-200 bg-rose-50 p-3 text-sm text-rose-700">
                   {error}
                 </div>
               ) : null}
+              {runtimeNotice ? (
+                <div className="mt-3 whitespace-pre-line rounded-md border border-amber-200 bg-amber-50 p-3 text-sm text-amber-800">
+                  {runtimeNotice}
+                </div>
+              ) : (
+                <div className="mt-3 rounded-md border border-stone-200 bg-stone-50 p-3 text-xs text-stone-600">
+                  真实 FaceMesh 需要
+                  {' '}
+                  <code>public/mediapipe/face_landmarker.task</code>
+                  {' '}
+                  和
+                  {' '}
+                  <code>public/mediapipe/wasm/</code>
+                  。如果缺失，localhost 开发环境会自动 fallback 到 mock vision provider，并显示恢复说明。
+                </div>
+              )}
             </section>
 
             <section className="grid gap-3 rounded-lg border border-stone-200 bg-white p-4 shadow-soft md:grid-cols-4">
