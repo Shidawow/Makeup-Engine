@@ -45,7 +45,9 @@ describe('MediaPipe local asset readiness', () => {
     expect(isMediaPipeLocalAssetMissingError(error)).toBe(true);
     expect(shouldUseMediaPipeDevelopmentFallback(error)).toBe(true);
     expect(formatMediaPipeLocalAssetRecoveryMessage(error)).toContain('public/mediapipe');
+    expect(formatMediaPipeLocalAssetRecoveryMessage(error)).toContain('/mediapipe/wasm/vision_wasm_internal.js');
     expect(formatMediaPipeLocalAssetRecoveryMessage(error)).toContain('mock vision provider');
+    expect(formatMediaPipeLocalAssetRecoveryMessage(error)).toContain('MediaPipe model/wasm 文件放回 public/mediapipe');
 
     stubBrowser('example.com');
     expect(shouldUseMediaPipeDevelopmentFallback(error)).toBe(false);

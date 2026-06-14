@@ -115,6 +115,25 @@ const createSeedPhotoInput = (
   uploadedAt: seed.createdAt,
 });
 
+export const VISION_ANALYSIS_MEDIAPIPE_RECOVERY_HINT = [
+  '缺少本地 MediaPipe 资源，真实 FaceMesh 无法启动。',
+  '需要检查：/mediapipe/face_landmarker.task 和 /mediapipe/wasm/vision_wasm_internal.js。',
+  '本地 localhost 环境会 fallback 到 mock vision provider，方便继续调试图片与蒙版页面。',
+  '如果需要真实 FaceMesh，需要把 MediaPipe model/wasm 文件放回 public/mediapipe。',
+].join('\n');
+
+export const formatVisionAnalysisFailureMessage = (error: unknown): string => {
+  if (isMediaPipeLocalAssetMissingError(error)) {
+    return formatMediaPipeLocalAssetRecoveryMessage(error);
+  }
+
+  if (error instanceof Error && error.message && error.message !== 'FaceMesh 分析失败。') {
+    return error.message;
+  }
+
+  return VISION_ANALYSIS_MEDIAPIPE_RECOVERY_HINT;
+};
+
 export interface VisionAnalysisDemoProps {
   templateAnalysisSeed?: TemplateAnalysisSeed | null;
 }
@@ -277,13 +296,7 @@ export function VisionAnalysisDemo({
       setAdjustedTargets([]);
       setShowDebugLayers(false);
     } catch (nextError) {
-      setError(
-        isMediaPipeLocalAssetMissingError(nextError)
-          ? formatMediaPipeLocalAssetRecoveryMessage(nextError)
-          : nextError instanceof Error
-            ? nextError.message
-            : 'FaceMesh 分析失败。',
-      );
+      setError(formatVisionAnalysisFailureMessage(nextError));
     } finally {
       setLoading(false);
     }
@@ -561,8 +574,9 @@ export function VisionAnalysisDemo({
                   {' '}
                   和
                   {' '}
-                  <code>public/mediapipe/wasm/</code>
-                  。如果缺失，localhost 开发环境会自动 fallback 到 mock vision provider，并显示恢复说明。
+                  <code>public/mediapipe/wasm/vision_wasm_internal.js</code>
+                  。如果缺失，localhost 开发环境会自动 fallback 到 mock vision provider；如果需要真实
+                  FaceMesh，需要把 MediaPipe model/wasm 文件放回 public/mediapipe。
                 </div>
               )}
             </section>

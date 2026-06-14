@@ -16,7 +16,8 @@ const LOCAL_WASM_READY_CHECK_PATH = '/vision_wasm_internal.js';
 export const MEDIA_PIPE_LOCAL_ASSET_RECOVERY_STEPS = [
   '确认仓库根目录下存在 public/mediapipe/。',
   '确认 public/mediapipe/face_landmarker.task 存在。',
-  '确认 public/mediapipe/wasm/ 内存在 MediaPipe Tasks Vision wasm/js 文件。',
+  '确认 public/mediapipe/wasm/vision_wasm_internal.js 存在。',
+  '确认 public/mediapipe/wasm/ 内存在其他 MediaPipe Tasks Vision wasm/js 文件。',
   '重新运行 npm run dev 并刷新浏览器页面。',
 ] as const;
 
@@ -42,14 +43,17 @@ export const isMediaPipeLocalAssetMissingError = (
 
 export const formatMediaPipeLocalAssetRecoveryMessage = (error: unknown): string => {
   if (!isMediaPipeLocalAssetMissingError(error)) {
-    return error instanceof Error ? error.message : 'FaceMesh 分析失败。';
+    return error instanceof Error && error.message
+      ? error.message
+      : 'FaceMesh 分析失败：未返回具体错误原因。';
   }
 
   return [
     `MediaPipe 本地资源缺失：${error.assetPath}`,
     '原因：public/mediapipe 未准备或没有被本地 dev server 提供，真实 FaceMesh 无法启动。',
+    '需要检查：/mediapipe/face_landmarker.task 和 /mediapipe/wasm/vision_wasm_internal.js。',
     `恢复说明：${error.recoverySteps.join(' ')}`,
-    '开发环境说明：localhost/127.0.0.1 会自动 fallback 到 mock vision provider，方便继续调试页面；非本地环境不会自动 fallback。',
+    '开发环境说明：localhost/127.0.0.1 会自动 fallback 到 mock vision provider，方便继续调试页面；如果需要真实 FaceMesh，需要把 MediaPipe model/wasm 文件放回 public/mediapipe。',
   ].join('\n');
 };
 
