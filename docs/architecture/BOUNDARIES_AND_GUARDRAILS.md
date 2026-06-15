@@ -98,6 +98,13 @@
 - A compatibility target such as `ios-app-v0` or `web-app-v0` describes intended consumers only; it does not create an iOS app, Web app, backend, or online release.
 - Rejected, archived, or deprecated library entries must not enter publish packages by default.
 - Legacy runtime areas no longer carry new mainline features.
+- Phase 10A FaceMesh-driven makeup intelligence creates local candidate and
+  draft artifacts only. It must not be treated as final makeup recognition,
+  production user guidance, automatic template publishing, training data,
+  backend analytics, OpenAI/external API output, camera capture, AR, or a
+  mutation path for `UserAppTemplatePackage`.
+- Local MediaPipe runtime assets under `public/mediapipe/**` are machine-local
+  ignored assets and must not be staged or committed.
 
 ## Module Boundaries
 

@@ -1,5 +1,5 @@
 {
-  "phase": "9J",
+  "phase": "10A",
   "guardrails": [
     {
       "id": "source-image-not-training-data",
@@ -508,6 +508,22 @@
     {
       "id": "phase_9j_no_project_state_user_records",
       "rule": "Phase 9J can update project-state governance only and must not write real user trial records into project-state."
+    },
+    {
+      "id": "phase_10a_candidate_draft_only",
+      "rule": "Phase 10A FaceMesh outputs are candidate/draft-only and require human review before any template library or app contract handoff."
+    },
+    {
+      "id": "phase_10a_no_auto_publish",
+      "rule": "Phase 10A must not automatically publish templates or mutate UserAppTemplatePackage."
+    },
+    {
+      "id": "phase_10a_no_backend_camera_ar_ai_training",
+      "rule": "Phase 10A must not add backend, database, camera capture, AR, OpenAI/external APIs, analytics, or training from drafts."
+    },
+    {
+      "id": "phase_10a_no_mediapipe_asset_commit",
+      "rule": "public/mediapipe model and wasm assets are local ignored runtime assets and must not be staged or committed."
     }
   ],
   "legacyFrozenModules": [

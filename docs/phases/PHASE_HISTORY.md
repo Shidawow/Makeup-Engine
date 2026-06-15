@@ -791,3 +791,35 @@ What still cannot happen:
 Why Phase 9K follows:
 
 The follow-up iteration framework is ready to prepare a second anonymous internal evidence round. The next conservative step is Phase 9K - Anonymous Internal Trial Evidence Round 2 Pack.
+
+## Phase 10A
+
+Added the FaceMesh-driven Makeup Intelligence Baseline.
+
+What changed:
+
+- Added FaceMesh region QA for landmark count, confidence, normalized coordinate
+  readiness, makeup-region coverage, and crop warnings.
+- Added deterministic makeup attribute candidates for lip color, lip finish,
+  blush placement, eye definition, eyeshadow depth, and contour softness.
+- Added rule-based draft step generation with ordered steps and source
+  candidate ids.
+- Added draft-only template generation with human review required and publishing
+  blocked.
+- Added Template Studio administrator panel for FaceMesh region QA, candidates,
+  draft steps, and template draft status.
+- Added examples, tests, product docs, phase docs, and project-state recovery.
+
+What still cannot happen:
+
+- Phase 10A candidates, steps, and templates are not final recognition results,
+  production user guidance, automatic publishing, backend records, analytics,
+  external AI output, OpenAI API output, AR state, camera capture, or training
+  data.
+- Phase 10A cannot mutate `UserAppTemplatePackage` and cannot commit local
+  MediaPipe runtime assets from `public/mediapipe/**`.
+
+Why Phase 10B follows:
+
+The FaceMesh baseline now creates reviewable drafts. The next safe step is Phase
+10B - Template Draft QA & Human Review Workflow.

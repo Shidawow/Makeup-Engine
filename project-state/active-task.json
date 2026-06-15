@@ -1,20 +1,20 @@
 {
   "schemaVersion": "active-task.v1",
-  "taskId": "9J",
-  "title": "Anonymous Internal Trial Follow-up Iteration",
+  "taskId": "10A",
+  "title": "FaceMesh-driven Makeup Intelligence Baseline",
   "status": "completed",
   "ownerRole": "Codex",
   "createdBy": "Codex",
-  "phase": "9J",
+  "phase": "10A",
   "recommendedProfile": "native-gpt-codex-high-reasoning",
   "allowedDirectories": [
+    "src/vision",
+    "src/template-engine",
+    "src/components/template-studio",
+    "src/templates/examples",
     "docs",
     "project-state",
-    "tests",
-    "src/user-app",
-    "src/components/user-app",
-    "src/templates/examples",
-    "scripts"
+    "tests"
   ],
   "forbiddenDirectories": [
     "src/engine",
@@ -22,33 +22,32 @@
     "src/intelligence/runtime"
   ],
   "validationCommands": [
+    "npm run mediapipe:check",
     "npm run typecheck",
-    "npm run test",
     "npm run build",
     "npm run project:status",
     "npm run project:context",
     "node scripts/project-status.mjs --json",
     "node scripts/context-pack.mjs --json",
-    "npm run test -- tests/user-app-anonymous-trial-follow-up-iteration.test.ts tests/user-app-anonymous-trial-gap-action-plan.test.ts tests/user-app-anonymous-trial-follow-up-readiness.test.ts tests/user-app-anonymous-trial-follow-up-iteration-panel.test.tsx tests/user-app-anonymous-trial-gap-action-plan-panel.test.tsx tests/user-app-anonymous-trial-follow-up-readiness-panel.test.tsx tests/user-app-shell-anonymous-trial-follow-up-flow.test.tsx tests/phase-9J-documentation-recovery.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
+    "npm run test -- tests/facemesh-region-qa.test.ts tests/makeup-attribute-candidates.test.ts tests/rule-based-step-generator.test.ts tests/template-draft-generator.test.ts tests/facemesh-makeup-intelligence-panels.test.tsx tests/phase-10A-documentation-recovery.test.ts tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
   ],
   "completionDefinition": [
-    "Phase 9J added anonymous internal trial follow-up iteration, gap action plan, follow-up readiness, fixtures, administrator panels, and documentation.",
-    "9J did not implement production app, public recruitment, backend collection, database, analytics, AI analysis, OpenAI/external API usage, camera, AR, training, App Store/TestFlight, online publication, new runtime dependencies, or real user data collection.",
-    "9J did not collect real names, contact information, photos, health information, sensitive identity information, face embeddings, biometric identifiers, backend records, analytics records, AI analysis records, upload data, or training data.",
-    "Makeup Engine remains the template production system and UserAppTemplatePackage remains the handoff contract.",
-    "Docs and project-state must remain recoverable and validation commands must pass."
+    "Phase 10A added FaceMesh region QA, makeup attribute candidates, rule-based draft steps, draft-only template generation, fixtures, Template Studio admin panel, docs, and project-state.",
+    "10A did not add production app, backend, database, camera capture, AR, OpenAI/external API calls, training from drafts, automatic publishing, new runtime dependencies, or committed MediaPipe binaries.",
+    "All generated intelligence outputs remain candidate/draft-only and require human review."
   ],
   "dependsOn": [
-    "9I Anonymous Internal Trial Evidence Review"
+    "9J Anonymous Internal Trial Follow-up Iteration"
   ],
   "nextRecommendedTask": {
-    "taskId": "9K",
-    "title": "Anonymous Internal Trial Evidence Round 2 Pack",
+    "taskId": "10B",
+    "title": "Template Draft QA & Human Review Workflow",
     "status": "recommended"
   },
-  "updatedAt": "2026-06-13T15:55:00.000+08:00",
+  "updatedAt": "2026-06-15T00:00:00.000+08:00",
   "validationStatus": "passed",
   "lastValidation": {
+    "mediapipeCheck": "passed",
     "typecheck": "passed",
     "test": "passed",
     "build": "passed",
@@ -56,28 +55,16 @@
     "projectStatusJson": "passed",
     "projectContext": "passed",
     "contextPackJson": "passed",
-    "userAppBrowserQa": "not_required_for_phase_9j_anonymous_internal_trial_follow_up_iteration",
-    "httpSmoke": "not_required_for_phase_9j_anonymous_internal_trial_follow_up_iteration",
-    "phase8DScopedTests": "passed",
-    "phase8EScopedTests": "passed",
-    "phase9AScopedTests": "passed",
-    "phase9BScopedTests": "passed",
-    "phase9CScopedTests": "passed",
-    "phase9DScopedTests": "passed",
-    "phase9EScopedTests": "passed",
-    "phase9FScopedTests": "passed",
-    "phase9GScopedTests": "passed",
-    "phase9HScopedTests": "passed",
-    "phase9IScopedTests": "passed",
-    "phase9JScopedTests": "passed",
-    "testFiles": 471,
-    "tests": 729,
-    "phase9JScopedTestFiles": 10,
-    "phase9JScopedTestsCount": 24,
-    "summary": "Phase 9J validation passed: typecheck, scoped Phase 9J tests, full npm test, build, project status/context, and JSON status/context commands.",
-    "updatedAt": "2026-06-13T15:55:00.000+08:00"
+    "phase10AScopedTests": "passed",
+    "testFiles": 9,
+    "tests": 24,
+    "phase10AScopedTestFiles": 9,
+    "phase10AScopedTestsCount": 24,
+    "summary": "Phase 10A validation passed: mediapipe:check, scoped Phase 10A tests, typecheck, build, project status/context, and JSON status/context commands.",
+    "updatedAt": "2026-06-15T00:00:00.000+08:00"
   },
   "validation": {
+    "mediapipeCheck": "passed",
     "typecheck": "passed",
     "test": "passed",
     "build": "passed",
@@ -85,25 +72,12 @@
     "projectStatusJson": "passed",
     "projectContext": "passed",
     "contextPackJson": "passed",
-    "userAppBrowserQa": "not_required_for_phase_9j_anonymous_internal_trial_follow_up_iteration",
-    "httpSmoke": "not_required_for_phase_9j_anonymous_internal_trial_follow_up_iteration",
-    "phase8DScopedTests": "passed",
-    "phase8EScopedTests": "passed",
-    "phase9AScopedTests": "passed",
-    "phase9BScopedTests": "passed",
-    "phase9CScopedTests": "passed",
-    "phase9DScopedTests": "passed",
-    "phase9EScopedTests": "passed",
-    "phase9FScopedTests": "passed",
-    "phase9GScopedTests": "passed",
-    "phase9HScopedTests": "passed",
-    "phase9IScopedTests": "passed",
-    "phase9JScopedTests": "passed",
-    "testFiles": 471,
-    "tests": 729,
-    "phase9JScopedTestFiles": 10,
-    "phase9JScopedTestsCount": 24,
-    "summary": "Phase 9J validation passed: typecheck, scoped Phase 9J tests, full npm test, build, project status/context, and JSON status/context commands.",
-    "updatedAt": "2026-06-13T15:55:00.000+08:00"
+    "phase10AScopedTests": "passed",
+    "testFiles": 9,
+    "tests": 24,
+    "phase10AScopedTestFiles": 9,
+    "phase10AScopedTestsCount": 24,
+    "summary": "Phase 10A validation passed: mediapipe:check, scoped Phase 10A tests, typecheck, build, project status/context, and JSON status/context commands.",
+    "updatedAt": "2026-06-15T00:00:00.000+08:00"
   }
 }

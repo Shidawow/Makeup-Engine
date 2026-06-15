@@ -47,3 +47,7 @@ export * from './user-app-anonymous-trial-decision-input.example';
 export * from './user-app-anonymous-trial-gap-action-plan.example';
 export * from './user-app-anonymous-trial-follow-up-iteration.example';
 export * from './user-app-anonymous-trial-follow-up-readiness.example';
+export * from './facemesh-region-qa.example';
+export * from './makeup-attribute-candidates.example';
+export * from './rule-based-step-sequence.example';
+export * from './makeup-template-draft.example';

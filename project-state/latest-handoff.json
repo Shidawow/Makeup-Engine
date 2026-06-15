@@ -1,7 +1,7 @@
 {
-  "fromPhase": "9J",
-  "toPhase": "9K",
-  "summary": "Phase 9J completed the anonymous internal trial follow-up iteration, gap action plan, follow-up readiness, fixtures, administrator panels, documentation, and recovery state.",
+  "fromPhase": "10A",
+  "toPhase": "10B",
+  "summary": "Phase 10A completed the FaceMesh-driven makeup intelligence baseline: region QA, attribute candidates, rule-based draft steps, draft-only template generation, examples, tests, docs, project-state, and Template Studio administrator panel.",
   "routeDecision": {
     "selectedRoute": "React Web / PWA MVP first",
     "futureAppOwnership": "separate user-facing app surface/repository after a future explicit phase gate",
@@ -127,9 +127,13 @@
     "docs/product/anonymous-internal-trial-follow-up-iteration.md",
     "docs/product/anonymous-internal-trial-gap-action-plan.md",
     "docs/product/anonymous-internal-trial-follow-up-readiness.md",
-    "docs/phases/phase-9J.md"
+    "docs/phases/phase-9J.md",
+    "docs/product/facemesh-region-qa-baseline.md",
+    "docs/product/makeup-attribute-candidate-baseline.md",
+    "docs/product/rule-based-template-draft-baseline.md",
+    "docs/phases/phase-10A.md"
   ],
-  "nextAction": "Proceed to Phase 9K: Anonymous Internal Trial Evidence Round 2 Pack. Phase 9J is complete. Use the follow-up iteration, gap action plan, and follow-up readiness gate to prepare a conservative second anonymous internal evidence round only; do not add production app, public recruitment, backend, database, camera, AR, training, OpenAI API, external API, native iOS, React Native, Flutter, ecommerce, community, paid features, analytics, accounts, online publication, App Store/TestFlight, service worker, offline cache, push notification, background sync, install tracking, AI analysis, real sensitive data collection, or real user records in project-state.",
+  "nextAction": "Proceed to Phase 10B: Template Draft QA & Human Review Workflow. Keep Phase 10A outputs candidate/draft-only and human-review-required; do not publish automatically, mutate UserAppTemplatePackage, add backend/camera/AR/OpenAI/external APIs/training, or commit MediaPipe binaries.",
   "risks": [
     "Letting Phase 9F become real data collection instead of local anonymous preparation",
     "Collecting real names, contact information, photos, health data, sensitive identity data, analytics records, backend records, AI analysis records, upload data, or training data before a future explicit approval gate",
@@ -356,5 +360,16 @@
     "planningBoundary": "anonymous/internal/local follow-up planning only; not production roadmap approval, production analytics, backend collection, AI analysis, training, MVP validation approval, public recruitment, or production release",
     "defaultDecision": "repeat_dry_run_before_trial or revise protocol/launch pack when evidence is mock/example, insufficient, or structurally incomplete",
     "nextPhase": "Phase 9K - Anonymous Internal Trial Evidence Round 2 Pack"
+  },
+  "faceMeshMakeupIntelligenceDecision": {
+    "phase10AResult": [
+      "FaceMesh region QA report with coverage, confidence, crop risk, and blocking checks",
+      "makeup attribute candidate report from local FaceMesh, pixel, semantic, and rule-based signals",
+      "rule-based ordered draft step sequence with human review status",
+      "draft-only MakeupTemplate report with publishing blocked",
+      "Template Studio administrator panel for candidate/draft review"
+    ],
+    "draftBoundary": "candidate/draft-only; local administrator review input; no automatic publishing or UserAppTemplatePackage mutation",
+    "nextPhase": "Phase 10B Template Draft QA & Human Review Workflow"
   }
 }

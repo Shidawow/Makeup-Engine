@@ -2,73 +2,65 @@
 
 ## Current Phase
 
-Phase 9J: Anonymous Internal Trial Follow-up Iteration is complete.
+Phase 10A: FaceMesh-driven Makeup Intelligence Baseline is complete.
 
-Last completed business phase: Phase 9J.
+Last completed business phase: Phase 10A.
 
-Next recommended phase: Phase 9K, Anonymous Internal Trial Evidence Round 2 Pack.
+Next recommended phase: Phase 10B, Template Draft QA & Human Review Workflow.
 
-Phase 9J adds local anonymous follow-up iteration, gap action plan, and
-follow-up readiness structures after the Phase 9I evidence review. Makeup Engine remains the
-makeup template production system and local contract prototype. Future
-production user app work should still be planned as a separate app surface or
-repository after an explicit phase gate.
+Phase 10A adds local FaceMesh region QA, makeup attribute candidates,
+rule-based draft step generation, and draft-only template generation inside
+Template Studio. Makeup Engine remains the makeup template production system,
+not the production user-facing app and not a backend publication system.
 
 ## What The System Can Do
 
 - Produce and review local template production artifacts through the Makeup
   Engine pipeline.
-- Export local publish packages and `UserAppTemplatePackage` contract data.
+- Run real local MediaPipe FaceMesh when ignored local assets under
+  `public/mediapipe/**` are present.
+- Evaluate FaceMesh landmark coverage, confidence, normalized coordinates, and
+  cropping risk through `FaceMeshRegionQaReport`.
+- Generate deterministic makeup attribute candidates from local FaceMesh, pixel,
+  semantic, and conservative rule-based signals.
+- Generate ordered rule-based makeup step drafts.
+- Generate a draft-only `MakeupTemplate` that is blocked from publishing and
+  requires human review.
+- Render the Template Studio FaceMesh 妆容智能基线 panel for administrator review.
+- Export local publish packages and `UserAppTemplatePackage` contract data from
+  the existing reviewed package workflow.
 - Render the local User App MVP Shell from `UserAppTemplatePackage`.
-- Render Phase 8B PWA/mobile shell polish through Phase 9H anonymous launch
-  administrator panels.
-- Render Phase 9H anonymous internal trial launch pack, launch readiness, and
-  post-launch handoff administrator panels.
-- Render Phase 9I anonymous internal trial evidence review, evidence gap review,
-  and decision input administrator panels.
-- Render Phase 9J anonymous internal trial follow-up iteration, gap action plan,
-  and follow-up readiness administrator panels.
-- Turn evidence gaps into conservative next actions while keeping production,
-  public recruitment, backend, analytics, AI analysis, and training out of scope.
 
 ## What The System Cannot Do
 
 - It cannot act as the production end-user makeup coaching app.
-- It cannot collect, upload, analyze, store, preview, or train on real user
-  photos.
+- It cannot treat Phase 10A outputs as final makeup recognition or production
+  user guidance.
+- It cannot publish Phase 10A drafts automatically.
+- It cannot mutate `UserAppTemplatePackage` from FaceMesh QA, attribute
+  candidates, generated steps, or template drafts.
+- It cannot collect, upload, store, or train on real user photos through the
+  User App Shell.
 - It cannot request camera permissions or call browser camera APIs.
-- It cannot collect real names, contact information, health information,
-  sensitive identity information, photos, face embeddings, biometric
-  identifiers, backend trial records, analytics records, AI analysis records, or
-  training data through launch workflows.
-- It cannot treat Phase 9H launch pack, readiness, or handoff as public
-  recruitment, production app launch, production analytics, backend collection,
-  AI analysis, MVP validation approval, production app approval, or production
-  release approval.
-- It cannot treat Phase 9I evidence review, gap review, or decision input as
-  production analytics, backend evidence collection, AI analysis, training,
-  public recruitment, production app approval, production release approval, or
-  automatic MVP validation approval.
-- It cannot treat Phase 9J follow-up iteration, gap action plan, or readiness
-  as production roadmap approval, public recruitment, production analytics,
-  backend evidence collection, AI analysis, training, production app approval,
-  production release approval, or automatic MVP validation approval.
-- It cannot write real user trial records into `project-state`.
-- It cannot mutate `UserAppTemplatePackage` from launch pack, readiness,
-  handoff, dry run, evidence collection preparation, sessions, preferences,
-  recommendations, content QA, feedback, or admin panels.
-- It cannot publish to a backend, online template library, or app store.
+- It cannot add backend, database, accounts, analytics, AR, OpenAI API,
+  external AI/CV APIs, service worker, native app scope, or new runtime
+  dependencies in Phase 10A.
+- It cannot commit local MediaPipe `.task` or `.wasm` files from
+  `public/mediapipe/**`.
 - It cannot modify legacy `src/engine`, `src/runtime`, or
   `src/intelligence/runtime` for new mainline work.
 
 ## Core Module Status
 
-- `src/user-app`: active local user app shell models, trial planning, review,
-  iteration, learning decision, evidence pack, evidence collection preparation,
-  anonymous dry run, anonymous launch, and anonymous evidence review models.
-- `src/components/user-app`: active local shell UI and administrator QA/evidence
-  / dry run / launch / evidence review panels.
+- `src/vision`: active local vision, FaceMesh runtime, FaceMesh region QA,
+  segmentation, pixel analysis, and pipeline logic.
+- `src/template-engine`: active local template production plus Phase 10A
+  candidate, step, and draft generation.
+- `src/components/template-studio`: active operator UI including the Phase 10A
+  FaceMesh makeup intelligence baseline panel.
 - `src/templates/examples`: active deterministic examples and fixtures.
+- `src/user-app` and `src/components/user-app`: active local shell and admin
+  trial readiness panels; still not production app code.
 - `docs`, `project-state`, and `tests`: active recovery, architecture,
   validation, provider handoff, and regression coverage.
 - `src/engine`, `src/runtime`, and `src/intelligence/runtime`: legacy frozen
@@ -76,11 +68,11 @@ repository after an explicit phase gate.
 
 ## Recent Validation
 
-Phase 9J validation must include:
+Phase 10A validation must include:
 
 ```bash
+npm run mediapipe:check
 npm run typecheck
-npm run test
 npm run build
 npm run project:status
 npm run project:context
@@ -92,10 +84,11 @@ The latest completed validation is recorded in `project-state/test-status.json`.
 
 ## Next Phase Recommendation
 
-Proceed to Phase 9K: Anonymous Internal Trial Evidence Round 2 Pack.
+Proceed to Phase 10B: Template Draft QA & Human Review Workflow.
 
-Phase 9K should use the follow-up iteration and readiness output to prepare a
-second anonymous internal evidence round. It must still keep backend, database, camera, AR,
-analytics, App Store/TestFlight, AI analysis, OpenAI/external APIs, training,
-real user record storage, sensitive data collection, and production release out
-of scope unless a future explicit gate expands scope.
+Phase 10B should add the human review workflow for Phase 10A template drafts:
+review status, reviewer notes, accept/revise/reject decisions, draft QA
+criteria, and safe handoff rules. It must still keep backend, database, camera,
+AR, analytics, production app scope, OpenAI/external APIs, training from drafts,
+automatic publishing, and committed MediaPipe runtime assets out of scope unless
+a future explicit gate expands scope.

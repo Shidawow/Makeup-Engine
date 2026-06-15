@@ -13,6 +13,7 @@ Real Photo
 -> TemplateProductionBatch / TemplateProductionTask
 -> Production QA Report
 -> Vision Analysis
+-> FaceMesh Region QA / Attribute Candidates / Rule-based Template Draft
 -> Editable Masks
 -> Human Correction
 -> Template Evidence
@@ -59,6 +60,10 @@ Real Photo
 - `TemplateProductionBatch / TemplateProductionTask`: local administrator queue that tracks seed readiness, analysis, mask review, evidence, and review/publish lifecycle.
 - `Production QA Report`: deterministic operator diagnostics for missing binding, blocked images, analysis status, evidence status, reject reasons, publish confirmation, and rebinding recovery.
 - `Vision Analysis`: local CV and rule-based analysis.
+- `FaceMesh Region QA / Attribute Candidates / Rule-based Template Draft`:
+  Phase 10A local draft branch for FaceMesh region readiness, candidate makeup
+  attributes, rule-based draft steps, and draft-only template generation. It
+  requires human review and does not publish or mutate `UserAppTemplatePackage`.
 - `Editable Masks`: generated and human-editable mask artifacts.
 - `Human Correction`: correction records produced by human review and mask editing.
 - `Template Evidence`: structured evidence supporting extracted template decisions.
@@ -326,3 +331,19 @@ The flow is local, anonymous, internal, non-public, and administrator-only. It c
 -> next recommendation for Phase 9J anonymous internal trial follow-up iteration.
 
 The flow is local, anonymous, post-trial review-only, and administrator-only. It can review evidence completeness, evidence gaps, privacy incidents, stopped or paused sessions, learning signals, and decision inputs. It cannot create production analytics, backend records, AI analysis records, uploads, training data, photos, contact data, health data, sensitive identity data, biometrics, MVP validation approval, production app approval, production release approval, or real user trial records in project-state.
+
+## Phase 10A FaceMesh Makeup Intelligence Draft Flow
+
+`MakeupAnalysisPipelineResult`
+-> `FaceMeshRegionQaReport`
+-> `MakeupAttributeCandidateReport`
+-> `RuleBasedStepSequence`
+-> `MakeupTemplateDraftReport`
+-> human review required.
+
+The flow is local, deterministic, draft-only, and administrator-facing. It can
+prepare reviewable makeup candidates and template drafts from real local
+FaceMesh and local analysis results. It cannot publish templates, export
+`UserAppTemplatePackage`, mutate user app contracts, create backend records,
+call OpenAI/external AI APIs, request camera permissions, create AR state,
+commit MediaPipe binaries, or enter training datasets automatically.

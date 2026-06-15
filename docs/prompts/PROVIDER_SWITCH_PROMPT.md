@@ -6,11 +6,11 @@ Default to compact context. Do not copy full historical chat transcripts. Do not
 
 ## Current State
 
-- `lastCompletedPhase: 9J`
-- `nextRecommendedPhase: 9K`
-- `nextRecommendedPhaseName: Anonymous Internal Trial Evidence Round 2 Pack`
+- `lastCompletedPhase: 10A`
+- `nextRecommendedPhase: 10B`
+- `nextRecommendedPhaseName: Template Draft QA & Human Review Workflow`
 - Project role: Makeup template production system with a local contract-driven user app shell prototype, not a production user app.
-- Current capability: Phase 9J - Anonymous Internal Trial Follow-up Iteration added local anonymous follow-up iteration, gap action plan, follow-up readiness, fixtures, and administrator follow-up panels after Phase 9I evidence review.
+- Current capability: Phase 10A - FaceMesh-driven Makeup Intelligence Baseline adds local FaceMesh region QA, makeup attribute candidates, rule-based draft steps, draft-only template generation, fixtures, and a Template Studio administrator panel.
 
 Historical handoff marker retained for recovery tests: `lastCompletedPhase: 8A`, `nextRecommendedPhase: 8B`.
 Historical handoff marker retained for Phase 8B recovery tests: `lastCompletedPhase: 8B`, `nextRecommendedPhase: 8C`.
@@ -26,6 +26,7 @@ Historical handoff marker retained for Phase 9F recovery tests: `lastCompletedPh
 Historical handoff marker retained for Phase 9G recovery tests: `lastCompletedPhase: 9G`, `nextRecommendedPhase: 9H`.
 Historical handoff marker retained for Phase 9H recovery tests: `lastCompletedPhase: 9H`, `nextRecommendedPhase: 9I`.
 Historical handoff marker retained for Phase 9I recovery tests: `lastCompletedPhase: 9I`, `nextRecommendedPhase: 9J`.
+Historical handoff marker retained for Phase 9J recovery tests: `lastCompletedPhase: 9J`, `nextRecommendedPhase: 9K` - Anonymous Internal Trial Follow-up Iteration -> Anonymous Internal Trial Evidence Round 2 Pack.
 
 ## Relevant skills
 
@@ -40,11 +41,11 @@ Historical handoff marker retained for Phase 9I recovery tests: `lastCompletedPh
 You are continuing Makeup Engine on native GPT / Codex Desktop.
 
 Current state:
-- lastCompletedPhase: 9J
-- nextRecommendedPhase: 9K
-- nextRecommendedPhaseName: Anonymous Internal Trial Evidence Round 2 Pack
+- lastCompletedPhase: 10A
+- nextRecommendedPhase: 10B
+- nextRecommendedPhaseName: Template Draft QA & Human Review Workflow
 - project role: Makeup template production system with a local contract-driven user app shell prototype, not a production user app
-- current capability: React Web / PWA MVP first is selected; Phase 8B local PWA/mobile shell polish, Phase 8C local MVP trial pack, Phase 8D template content QA, Phase 8E MVP release readiness gate, Phase 9A internal trial operations pack, Phase 9B internal trial result review framework, Phase 9C internal trial iteration plan, Phase 9D internal trial learning decision gate, Phase 9E internal trial evidence pack, Phase 9F evidence collection preparation, Phase 9G anonymous internal trial dry run pack, Phase 9H anonymous internal trial launch pack, Phase 9I anonymous internal trial evidence review, and Phase 9J anonymous internal trial follow-up iteration are complete; Makeup Engine remains the template production system and the future user-facing app should be planned separately
+- current capability: React Web / PWA MVP first is selected; Phases 8B through 9J are complete; Phase 10A FaceMesh-driven Makeup Intelligence Baseline is complete with local FaceMesh region QA, candidate attributes, rule-based draft steps, draft-only template generation, and Template Studio admin panel; Makeup Engine remains the template production system and the future user-facing app should be planned separately
 
 Compact context:
 - Use repository documents as source of truth; do not copy full historical chat.
@@ -101,7 +102,11 @@ Read these files first:
 44. docs/product/internal-trial-evidence-collection-checklist.md
 45. docs/product/internal-trial-evidence-quality-gate.md
 46. docs/phases/phase-9F.md
-47. docs/user-app/user-app-browser-mobile-qa.md
+47. docs/product/facemesh-region-qa-baseline.md
+48. docs/product/makeup-attribute-candidate-baseline.md
+49. docs/product/rule-based-template-draft-baseline.md
+50. docs/phases/phase-10A.md
+51. docs/user-app/user-app-browser-mobile-qa.md
 21. docs/user-app/user-app-e2e-readiness.md
 22. docs/user-app/user-app-mobile-interaction-qa.md
 23. docs/user-app/user-app-readiness-gate.md

@@ -1,6 +1,7 @@
 export * from './image-input';
 export * from './errors';
 export * from './face-analysis';
+export * from './facemeshRegionQa';
 export * from './face-detection';
 export * from './landmarks';
 export * from './makeup-region-detection';

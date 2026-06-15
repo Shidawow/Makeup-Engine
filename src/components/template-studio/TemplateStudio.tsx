@@ -23,6 +23,7 @@ import {
   runMakeupAnalysisPipeline,
   shouldUseVisionAnalysisDevelopmentFallback,
   undoMaskEdit,
+  evaluateFaceMeshRegionQa,
   type CosmeticSegmentationTarget,
   type EditableCosmeticMask,
   type ImagePixelData,
@@ -36,6 +37,9 @@ import {
   buildMakeupTemplateFromVisionAnalysis,
   convergeTemplateWithHumanCorrections,
   diffTemplatesForConvergence,
+  generateMakeupAttributeCandidates,
+  generateMakeupTemplateDraft,
+  generateRuleBasedStepSequence,
   summarizeBatchTaskIssues,
   summarizeTemplateProductionBatch,
   updateProductionTaskFromAnalysis,
@@ -95,6 +99,7 @@ import {
 } from './dataset-review-panel';
 import { DatasetReplayViewer } from './dataset-replay-viewer';
 import { EvidencePanel } from './evidence-panel';
+import { FaceMeshMakeupIntelligencePanel } from './FaceMeshMakeupIntelligencePanel';
 import { TrainingAdapterPanel } from './training-adapter-panel';
 import { OfflinePackagePanel } from './offline-package-panel';
 import { SourceImageIntakePanel } from './source-image-intake-panel';
@@ -392,6 +397,49 @@ export function TemplateStudio() {
   const humanVerifiedTemplate = convergenceResult?.template ?? aiOnlyTemplate;
   const templateEvidence = convergenceResult?.evidence ?? humanVerifiedTemplate?.evidence ?? null;
   const correctionDatasetSamples = convergenceResult?.correctionDatasetSamples ?? [];
+
+  const faceMeshRegionQa = useMemo(
+    () =>
+      analysis
+        ? evaluateFaceMeshRegionQa({
+            faceMesh: analysis.faceMesh,
+            providerId: analysis.providerId,
+          })
+        : null,
+    [analysis],
+  );
+
+  const makeupAttributeCandidates = useMemo(
+    () =>
+      faceMeshRegionQa
+        ? generateMakeupAttributeCandidates({
+            analysis,
+            regionQa: faceMeshRegionQa,
+          })
+        : null,
+    [analysis, faceMeshRegionQa],
+  );
+
+  const ruleBasedStepSequence = useMemo(
+    () =>
+      makeupAttributeCandidates
+        ? generateRuleBasedStepSequence(makeupAttributeCandidates)
+        : null,
+    [makeupAttributeCandidates],
+  );
+
+  const makeupTemplateDraft = useMemo(
+    () =>
+      faceMeshRegionQa && makeupAttributeCandidates && ruleBasedStepSequence
+        ? generateMakeupTemplateDraft({
+            analysis,
+            regionQa: faceMeshRegionQa,
+            attributeCandidates: makeupAttributeCandidates,
+            stepSequence: ruleBasedStepSequence,
+          })
+        : null,
+    [analysis, faceMeshRegionQa, makeupAttributeCandidates, ruleBasedStepSequence],
+  );
 
   const correctionDataset = useMemo(
     () =>
@@ -1765,6 +1813,13 @@ export function TemplateStudio() {
             />
 
             <UserAppShell packageData={activeUserAppTemplatePackage} />
+
+            <FaceMeshMakeupIntelligencePanel
+              attributeCandidates={makeupAttributeCandidates}
+              regionQa={faceMeshRegionQa}
+              stepSequence={ruleBasedStepSequence}
+              templateDraft={makeupTemplateDraft}
+            />
 
             <MaskEditingToolbar
               activeRegion={activeRegion}

@@ -74,7 +74,9 @@
     "Phase 9B trial result review, issue taxonomy, and decision framework are local admin review metadata, not backend records, analytics records, real user records, AI analysis records, production release records, or training input.",
     "Phase 9C trial iteration plan, backlog, and priority framework are local admin planning metadata, not formal production roadmap records, backend issue tracker records, analytics records, real user records, AI analysis records, production release records, or training input.",
     "Phase 9H anonymous internal trial launch pack, readiness, and post-launch handoff are local admin launch preparation metadata, not public recruitment, backend records, analytics records, real user records, AI analysis records, production release records, or training input.",
-    "Phase 9I anonymous internal trial evidence review, gap review, and decision input are local admin review metadata, not production analytics, backend records, real user records, AI analysis records, MVP validation approval, production release records, or training input."
+    "Phase 9I anonymous internal trial evidence review, gap review, and decision input are local admin review metadata, not production analytics, backend records, real user records, AI analysis records, MVP validation approval, production release records, or training input.",
+    "Phase 10A FaceMesh region QA, attribute candidates, rule-based steps, and template draft reports are local draft metadata, not backend records, user app contract exports, automatic publishing, or training input.",
+    "public/mediapipe .task and .wasm files are local ignored runtime assets and must not be committed."
   ],
   "materializedDatasetOutputs": [
     "tmp/datasets/realistic-synthetic-png-image-v0/package.json",
@@ -124,7 +126,11 @@
     "docs/product/anonymous-internal-trial-evidence-review.md",
     "docs/product/anonymous-internal-trial-evidence-gap-review.md",
     "docs/product/anonymous-internal-trial-decision-input.md",
-    "docs/phases/phase-9I.md"
+    "docs/phases/phase-9I.md",
+    "docs/product/facemesh-region-qa-baseline.md",
+    "docs/product/makeup-attribute-candidate-baseline.md",
+    "docs/product/rule-based-template-draft-baseline.md",
+    "docs/phases/phase-10A.md"
   ],
   "userAppConsumptionOutputs": [
     "UserAppTemplatePackage JSON",
@@ -445,5 +451,12 @@
     "docs/product/anonymous-internal-trial-gap-action-plan.md",
     "docs/product/anonymous-internal-trial-follow-up-readiness.md",
     "docs/phases/phase-9J.md"
+  ],
+  "faceMeshMakeupIntelligenceOutputs": [
+    "FaceMeshRegionQaReport local JSON-ready metadata",
+    "MakeupAttributeCandidateReport local JSON-ready metadata",
+    "RuleBasedStepSequence local JSON-ready metadata",
+    "MakeupTemplateDraftReport local draft metadata with publishing blocked",
+    "Template Studio FaceMesh makeup intelligence panel preview"
   ]
 }

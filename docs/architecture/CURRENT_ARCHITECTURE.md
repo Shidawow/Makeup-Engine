@@ -100,6 +100,20 @@ Phase 9C adds local iteration planning structures for anonymous/mock next-iterat
 
 Phase 9D adds local learning and product decision structures for anonymous/mock internal trial summaries. `src/user-app/userAppInternalTrialLearningSummary.ts` owns learning themes, signals, insights, risks, and status. `src/user-app/userAppProductDecisionGate.ts` owns decisions for continuing trials, revising content, revising the Shell, revising trial ops, pausing, planning MVP validation, exploring production app discovery, or no-go. `src/user-app/userAppNextPhaseRecommendation.ts` owns recommendations for Phase 9E, Phase 10A, Phase 10B, DOC-ILLUSTRATED, or Phase 9D-Fix. `src/components/user-app` renders 试用学习总结, 产品决策门, and 下一阶段建议 panels inside the administrator checks area. It does not add production analytics, backend forms, real user record storage, camera, AR, AI analysis, OpenAI/external API usage, training, App Store/TestFlight, online publication, production app approval, or new runtime dependencies.
 
+### FaceMesh-driven Makeup Intelligence Baseline
+
+Phase 10A adds local template-production intelligence on top of the existing
+Vision Analysis pipeline. `src/vision/facemeshRegionQa.ts` evaluates real local
+FaceMesh landmark coverage, confidence, normalized coordinates, key makeup
+region readiness, and crop warnings. `src/template-engine/makeupAttributeCandidates.ts`
+generates deterministic candidate makeup attributes. `src/template-engine/ruleBasedStepGenerator.ts`
+creates ordered draft steps, and `src/template-engine/templateDraftGenerator.ts`
+creates a draft-only `MakeupTemplate` with publishing blocked and human review
+required. `src/components/template-studio/FaceMeshMakeupIntelligencePanel.tsx`
+renders the administrator panel. Phase 10A does not publish drafts, mutate
+`UserAppTemplatePackage`, add backend/camera/AR/OpenAI/external APIs/training,
+or commit local MediaPipe assets.
+
 ### Vision Analysis
 
 `src/vision` owns local face, cosmetic, pixel, region, quality, provider, and pipeline logic. It consumes `TemplateAnalysisSeed` records when they are ready for Vision Analysis.

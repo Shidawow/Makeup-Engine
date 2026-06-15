@@ -77,3 +77,13 @@
 - Phase 9I evidence review, gap review, and decision input cannot collect real names, contact information, photos, health information, sensitive identity information, biometrics, backend records, analytics records, AI analysis records, training labels, upload data, or real user trial records in project-state.
 - Phase 9J anonymous internal trial follow-up iteration is local administrator planning only; it is not production roadmap approval, production analytics, backend evidence collection, AI analysis, training, public recruitment, MVP validation approval, production app approval, or production release approval.
 - Phase 9J follow-up iteration, gap action plan, and readiness cannot collect real names, contact information, photos, health information, sensitive identity information, biometrics, backend records, analytics records, AI analysis records, training labels, upload data, or real user trial records in project-state.
+- Phase 10A FaceMesh-driven makeup intelligence is a local template production
+  baseline only; it is not final makeup recognition, automatic publishing,
+  production user app behavior, backend analytics, AI analysis, OpenAI/external
+  API usage, AR, camera capture, or training approval.
+- Phase 10A FaceMesh region QA, attribute candidates, rule-based steps, and
+  template drafts require human review and cannot mutate `UserAppTemplatePackage`
+  or enter training datasets automatically.
+- Phase 10A uses machine-local ignored MediaPipe assets under
+  `public/mediapipe/**`; `.task`, `.wasm`, and large runtime files must remain
+  uncommitted.

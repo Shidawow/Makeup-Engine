@@ -12,10 +12,10 @@ It produces templates, template evidence, correction records, review state, loca
 
 ## Current Phase
 
-- Current business phase: `Phase 9J completed`
-- Last completed phase: `Phase 9J`
-- Last completed phase name: `Phase 9J - Anonymous Internal Trial Follow-up Iteration`
-- Next recommended phase: `Phase 9K - Anonymous Internal Trial Evidence Round 2 Pack`
+- Current business phase: `Phase 10A completed`
+- Last completed phase: `Phase 10A`
+- Last completed phase name: `Phase 10A - FaceMesh-driven Makeup Intelligence Baseline`
+- Next recommended phase: `Phase 10B - Template Draft QA & Human Review Workflow`
 
 Historical recovery marker retained for Phase 9C tests: `Phase 9C completed`.
 Historical recovery marker retained for Phase 9E tests: `Phase 9E completed`.
@@ -23,6 +23,7 @@ Historical recovery marker retained for Phase 9F tests: `Phase 9F completed`.
 Historical recovery marker retained for Phase 9G tests: `Phase 9G completed`.
 Historical recovery marker retained for Phase 9H tests: `Phase 9H completed`.
 Historical recovery marker retained for Phase 9I tests: `Phase 9I completed`.
+Historical recovery marker retained for Phase 9J tests: `Phase 9J completed`.
 Historical recovery milestone retained for older phase tests: `Phase 8A completed` / `Phase 8A - Product Route Decision / App MVP Planning`.
 Historical recovery milestone retained for Phase 8B tests: `Phase 8B completed` / `Phase 8B - PWA / Mobile Web MVP Polish`.
 Historical recovery milestone retained for Phase 8C tests: `Phase 8C completed` / `Phase 8C - User App MVP Trial Pack`.
@@ -74,6 +75,7 @@ Real Photo
 -> Anonymous Internal Trial Launch Pack
 -> Anonymous Internal Trial Evidence Review
 -> Anonymous Internal Trial Follow-up Iteration
+-> FaceMesh-driven Makeup Intelligence Baseline
 -> Phase 8 Roadmap / V1 Non-Goals
 -> User App Consumption Manifest
 -> Dataset Review
@@ -87,6 +89,10 @@ Important boundary: `SourceImagePackage` can enter Vision Analysis through opera
 ## Current Main Modules
 
 - `src/vision`: local vision analysis, segmentation boundaries, image quality, geometry, and pixel analysis.
+- `src/vision/facemeshRegionQa.ts`: Phase 10A FaceMesh region QA for local
+  template-production drafting.
+- `src/template-engine/makeupAttributeCandidates.ts`, `src/template-engine/ruleBasedStepGenerator.ts`, and `src/template-engine/templateDraftGenerator.ts`:
+  Phase 10A candidate, rule-based step, and draft-only template generation.
 - `src/templates`: schemas, storage, review, corrections, evidence, dataset materialization, source image binding, production batch storage/export, template library storage, and publish package export.
 - `src/template-engine/production`: production queue, state machine, QA rules, rebinding recovery, analysis handoff, review lifecycle, smoke checklist.
 - `src/template-engine/library`: production task to library entry conversion, template versioning, and local library lifecycle.
@@ -147,6 +153,9 @@ These areas are retained for compatibility and historical runtime work, but they
 - Render Phase 9B internal trial result review, issue taxonomy, and decision framework administrator panels for anonymous/mock local trial result review.
 - Render Phase 9C internal trial iteration plan; Phase 9D internal trial learning decision gate, backlog, and priority administrator panels for anonymous/mock local next-iteration planning.
 - Render Phase 9J anonymous internal trial follow-up iteration, gap action plan, and follow-up readiness administrator panels for conservative next-round planning.
+- Generate FaceMesh region QA, makeup attribute candidates, rule-based draft
+  steps, and draft-only templates from local Template Studio analysis results
+  while requiring human review and keeping publishing blocked.
 - Export user app consumption manifest and handoff JSON.
 - Evaluate batch QA issues, task readiness diagnostics, reject reasons, publish confirmation, rebinding recovery, library lifecycle, and operator handoff reports.
 - Continue into mask editing, template evidence capture, dataset review, and training dataset materialization.
