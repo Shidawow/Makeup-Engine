@@ -12,10 +12,10 @@ It produces templates, template evidence, correction records, review state, loca
 
 ## Current Phase
 
-- Current business phase: `Phase 10A completed`
-- Last completed phase: `Phase 10A`
-- Last completed phase name: `Phase 10A - FaceMesh-driven Makeup Intelligence Baseline`
-- Next recommended phase: `Phase 10B - Template Draft QA & Human Review Workflow`
+- Current business phase: `Phase 10B completed`
+- Last completed phase: `Phase 10B`
+- Last completed phase name: `Phase 10B - Template Draft Review Workflow`
+- Next recommended phase: `Phase 10C - Template Library Candidate Packaging`
 
 Historical recovery marker retained for Phase 9C tests: `Phase 9C completed`.
 Historical recovery marker retained for Phase 9E tests: `Phase 9E completed`.
@@ -76,6 +76,7 @@ Real Photo
 -> Anonymous Internal Trial Evidence Review
 -> Anonymous Internal Trial Follow-up Iteration
 -> FaceMesh-driven Makeup Intelligence Baseline
+-> Template Draft Review Workflow
 -> Phase 8 Roadmap / V1 Non-Goals
 -> User App Consumption Manifest
 -> Dataset Review

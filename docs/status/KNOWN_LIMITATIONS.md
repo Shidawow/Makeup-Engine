@@ -87,3 +87,9 @@
 - Phase 10A uses machine-local ignored MediaPipe assets under
   `public/mediapipe/**`; `.task`, `.wasm`, and large runtime files must remain
   uncommitted.
+- Phase 10B template draft QA and human review are local administrator workflow
+  aids only; they are not final recognition, production publishing, backend
+  workflow, AI approval, training approval, or production user app behavior.
+- Phase 10B approval means template library candidate only and cannot
+  automatically publish, write a formal template library entry, generate
+  `UserAppTemplatePackage`, call external APIs, or enter training datasets.

@@ -58,23 +58,17 @@ describe('Phase 10A documentation recovery', () => {
     expect(readText('docs/phases/phase-10A.md')).toContain(
       'FaceMesh-driven Makeup Intelligence Baseline',
     );
-    expect(readText('docs/status/NEXT_ACTION.md')).toContain('Phase 10B');
-    expect(readText('docs/prompts/MASTER_CODEX_CONTEXT.md')).toContain(
-      'Phase 10A completed',
-    );
-    expect(readText('docs/prompts/PROVIDER_SWITCH_PROMPT.md')).toContain(
-      'lastCompletedPhase: 10A',
-    );
-    expect(readText('docs/prompts/PROVIDER_SWITCH_PROMPT.md')).toContain(
-      'nextRecommendedPhase: 10B',
-    );
+    expect(readText('docs/status/NEXT_ACTION.md')).toContain('Phase 10C');
+    expect(readText('docs/prompts/MASTER_CODEX_CONTEXT.md')).toContain('Phase 10B completed');
+    expect(readText('docs/prompts/PROVIDER_SWITCH_PROMPT.md')).toContain('lastCompletedPhase: 10B');
+    expect(readText('docs/prompts/PROVIDER_SWITCH_PROMPT.md')).toContain('nextRecommendedPhase: 10C');
 
     const snapshot = readJson<ProjectSnapshot>('project-state/project-state.snapshot.json');
-    expect(snapshot.lastCompletedPhase).toBe('10A');
-    expect(snapshot.lastCompletedBusinessPhase).toBe('10A');
-    expect(snapshot.currentPhaseId).toBe('10A');
-    expect(snapshot.nextRecommendedPhase).toBe('10B');
-    expect(snapshot.nextRecommendedPhaseName).toContain('Template Draft QA');
+    expect(snapshot.lastCompletedPhase).toBe('10B');
+    expect(snapshot.lastCompletedBusinessPhase).toBe('10B');
+    expect(snapshot.currentPhaseId).toBe('10B');
+    expect(snapshot.nextRecommendedPhase).toBe('10C');
+    expect(snapshot.nextRecommendedPhaseName).toContain('Template Library Candidate Packaging');
     expect(snapshot.mainDataFlow).toEqual(
       expect.arrayContaining([
         'FaceMeshRegionQaReport',
@@ -98,25 +92,22 @@ describe('Phase 10A documentation recovery', () => {
     );
 
     const providerHandoff = readJson<ProviderHandoff>('project-state/provider-handoff.json');
-    expect(providerHandoff.currentTask).toContain('Phase 10A');
-    expect(providerHandoff.lastCompletedPhase).toBe('10A');
-    expect(providerHandoff.nextRecommendedPhase).toBe('10B');
-    expect(providerHandoff.nextRecommendedPhaseName).toContain('Template Draft QA');
+    expect(providerHandoff.currentTask).toContain('Phase 10B');
+    expect(providerHandoff.lastCompletedPhase).toBe('10B');
+    expect(providerHandoff.nextRecommendedPhase).toBe('10C');
+    expect(providerHandoff.nextRecommendedPhaseName).toContain('Template Library Candidate Packaging');
     expect(providerHandoff.nextRequiredReadFiles).toContain('docs/phases/phase-10A.md');
     expect(providerHandoff.handoffNotes.join('\n')).toContain(
-      'Phase 10B should add human review workflow',
+      'Phase 10B completed draft QA',
     );
 
     const latestHandoff = readJson<LatestHandoff>('project-state/latest-handoff.json');
-    expect(latestHandoff.fromPhase).toBe('10A');
-    expect(latestHandoff.toPhase).toBe('10B');
-    expect(latestHandoff.nextAction).toContain('Phase 10B');
-    expect(latestHandoff.faceMeshMakeupIntelligenceDecision.nextPhase).toContain(
-      'Phase 10B',
-    );
+    expect(latestHandoff.fromPhase).toBe('10B');
+    expect(latestHandoff.toPhase).toBe('10C');
+    expect(latestHandoff.nextAction).toContain('Phase 10C');
 
     const guardrails = readJson<GuardrailState>('project-state/guardrails.json');
-    expect(guardrails.phase).toBe('10A');
+    expect(guardrails.phase).toBe('10B');
     expect(guardrails.guardrails.map((guardrail) => guardrail.id)).toEqual(
       expect.arrayContaining([
         'phase_10a_candidate_draft_only',

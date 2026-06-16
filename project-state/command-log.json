@@ -65,14 +65,66 @@
     {
       "command": "npm run test -- tests/facemesh-region-qa.test.ts tests/makeup-attribute-candidates.test.ts tests/rule-based-step-generator.test.ts tests/template-draft-generator.test.ts tests/facemesh-makeup-intelligence-panels.test.tsx tests/phase-10A-documentation-recovery.test.ts tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
       "status": "passed"
+    },
+    {
+      "command": "npm run test -- tests/template-draft-qa.test.ts tests/template-draft-human-review.test.ts tests/template-draft-review-workflow.test.ts tests/template-studio-workflow-ia.test.ts tests/template-draft-review-workflow-panel.test.tsx tests/template-studio-tab-boundary.test.tsx tests/facemesh-makeup-intelligence-panels.test.tsx tests/template-draft-generator.test.ts",
+      "status": "passed-after-iteration",
+      "phase": "10B",
+      "notes": "Initial Phase 10B model and IA tests were iterated until passing except final scoped command pending."
+    },
+    {
+      "command": "npm run mediapipe:check",
+      "status": "passed",
+      "phase": "10B"
+    },
+    {
+      "command": "npm run typecheck",
+      "status": "passed",
+      "phase": "10B"
+    },
+    {
+      "command": "npm run build",
+      "status": "passed",
+      "phase": "10B"
+    },
+    {
+      "command": "npm run test -- tests/template-draft-qa.test.ts tests/template-draft-human-review.test.ts tests/template-draft-review-workflow.test.ts tests/template-draft-review-workflow-panel.test.tsx tests/template-studio-workflow-ia.test.ts tests/template-studio-tab-boundary.test.tsx tests/phase-10B-documentation-recovery.test.ts tests/template-draft-generator.test.ts tests/facemesh-makeup-intelligence-panels.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
+      "status": "passed",
+      "phase": "10B",
+      "notes": "12 files / 40 tests passed."
+    },
+    {
+      "command": "npm run project:status",
+      "status": "passed",
+      "phase": "10B"
+    },
+    {
+      "command": "npm run project:context",
+      "status": "passed",
+      "phase": "10B"
+    },
+    {
+      "command": "node scripts/project-status.mjs --json",
+      "status": "passed",
+      "phase": "10B"
+    },
+    {
+      "command": "node scripts/context-pack.mjs --json",
+      "status": "passed",
+      "phase": "10B"
+    },
+    {
+      "command": "Browser verification of Vision Analysis and Template Workbench tab boundaries",
+      "status": "passed",
+      "phase": "10B"
     }
   ],
-  "lastUpdatedPhase": "10A",
-  "phase": "10A",
-  "lastCompletedPhase": "10A",
-  "currentPhase": "10A",
-  "nextRecommendedPhase": "10B",
-  "updatedAt": "2026-06-15T00:00:00.000+08:00",
+  "lastUpdatedPhase": "10B",
+  "phase": "10B",
+  "lastCompletedPhase": "10B",
+  "currentPhase": "10B",
+  "nextRecommendedPhase": "10C",
+  "updatedAt": "2026-06-16T00:00:00.000+08:00",
   "lastValidation": {
     "mediapipeCheck": "passed",
     "typecheck": "passed",
@@ -82,13 +134,14 @@
     "projectStatusJson": "passed",
     "projectContext": "passed",
     "contextPackJson": "passed",
-    "phase10AScopedTests": "passed",
-    "testFiles": 9,
-    "tests": 24,
-    "phase10AScopedTestFiles": 9,
-    "phase10AScopedTestsCount": 24,
-    "summary": "Phase 10A validation passed: mediapipe:check, scoped Phase 10A tests, typecheck, build, project status/context, and JSON status/context commands.",
-    "updatedAt": "2026-06-15T00:00:00.000+08:00"
+    "browserVerification": "passed",
+    "phase10BScopedTests": "passed",
+    "testFiles": 12,
+    "tests": 40,
+    "phase10BScopedTestFiles": 12,
+    "phase10BScopedTestsCount": 40,
+    "summary": "Phase 10B validation passed: mediapipe:check, scoped Phase 10B tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
+    "updatedAt": "2026-06-16T00:00:00.000+08:00"
   },
   "validation": {
     "mediapipeCheck": "passed",
@@ -99,14 +152,15 @@
     "projectStatusJson": "passed",
     "projectContext": "passed",
     "contextPackJson": "passed",
-    "phase10AScopedTests": "passed",
-    "testFiles": 9,
-    "tests": 24,
-    "phase10AScopedTestFiles": 9,
-    "phase10AScopedTestsCount": 24,
-    "summary": "Phase 10A validation passed: mediapipe:check, scoped Phase 10A tests, typecheck, build, project status/context, and JSON status/context commands.",
-    "updatedAt": "2026-06-15T00:00:00.000+08:00"
+    "browserVerification": "passed",
+    "phase10BScopedTests": "passed",
+    "testFiles": 12,
+    "tests": 40,
+    "phase10BScopedTestFiles": 12,
+    "phase10BScopedTestsCount": 40,
+    "summary": "Phase 10B validation passed: mediapipe:check, scoped Phase 10B tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
+    "updatedAt": "2026-06-16T00:00:00.000+08:00"
   },
   "status": "passed",
-  "summary": "Phase 10A validation passed: mediapipe:check, scoped Phase 10A tests, typecheck, build, project status/context, and JSON status/context commands."
+  "summary": "Phase 10B validation passed: mediapipe:check, scoped Phase 10B tests, typecheck, build, browser verification, project status/context, and JSON status/context commands."
 }

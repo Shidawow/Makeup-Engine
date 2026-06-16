@@ -2,6 +2,36 @@
 
 This history is a recovery summary based on current project reports, current source layout, tests, and documentation. Earlier phase details are summarized when exact original phase reports are not available.
 
+## Phase 10B
+
+Added the local Template Draft Review Workflow on top of the Phase 10A
+FaceMesh-driven draft baseline.
+
+What changed:
+
+- Added template draft QA checks for region QA, candidates, generated steps,
+  beginner guidance, placeholder products, final/medical/shade claims, publish
+  blocking, human review, user app contract boundary, and privacy boundary.
+- Added human review checklist and decisions.
+- Added review queue status, priority, next action, and candidate handoff.
+- Added a Template Studio workflow state that separates Vision Analysis from
+  Template Workbench.
+- Updated Template Studio UI into compact summaries, stepper, next-action card,
+  blocked-reason card, and collapsible details.
+
+What still cannot happen:
+
+- Approval is only template library candidate handoff.
+- No automatic publishing.
+- No automatic `UserAppTemplatePackage` generation.
+- No backend, camera, AR, OpenAI/external API, training, or committed MediaPipe
+  runtime assets.
+
+Why Phase 10C follows:
+
+Approved candidates now need a local packaging layer before any later library or
+app-contract workflow can consume them.
+
 ## Phase 4A
 
 Focused on the first stable template and engine foundation: schema-driven makeup templates, validation, editor surfaces, and deterministic local behaviors.

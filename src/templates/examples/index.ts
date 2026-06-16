@@ -51,3 +51,6 @@ export * from './facemesh-region-qa.example';
 export * from './makeup-attribute-candidates.example';
 export * from './rule-based-step-sequence.example';
 export * from './makeup-template-draft.example';
+export * from './template-draft-qa.example';
+export * from './template-draft-human-review.example';
+export * from './template-draft-review-workflow.example';

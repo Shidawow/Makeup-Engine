@@ -34,9 +34,13 @@ import {
   type VisionProvider,
 } from '../../vision';
 import {
+  buildTemplateStudioWorkflowState,
   buildMakeupTemplateFromVisionAnalysis,
   convergeTemplateWithHumanCorrections,
+  createTemplateDraftReviewWorkflow,
   diffTemplatesForConvergence,
+  evaluateTemplateDraftHumanReview,
+  evaluateTemplateDraftQa,
   generateMakeupAttributeCandidates,
   generateMakeupTemplateDraft,
   generateRuleBasedStepSequence,
@@ -439,6 +443,57 @@ export function TemplateStudio() {
           })
         : null,
     [analysis, faceMeshRegionQa, makeupAttributeCandidates, ruleBasedStepSequence],
+  );
+
+  const templateDraftQa = useMemo(
+    () =>
+      faceMeshRegionQa && makeupAttributeCandidates && ruleBasedStepSequence && makeupTemplateDraft
+        ? evaluateTemplateDraftQa({
+            regionQa: faceMeshRegionQa,
+            attributeCandidates: makeupAttributeCandidates,
+            stepSequence: ruleBasedStepSequence,
+            templateDraft: makeupTemplateDraft,
+          })
+        : null,
+    [faceMeshRegionQa, makeupAttributeCandidates, makeupTemplateDraft, ruleBasedStepSequence],
+  );
+
+  const templateDraftHumanReview = useMemo(
+    () => (templateDraftQa ? evaluateTemplateDraftHumanReview({ qa: templateDraftQa }) : null),
+    [templateDraftQa],
+  );
+
+  const templateDraftReviewWorkflow = useMemo(
+    () =>
+      templateDraftQa && templateDraftHumanReview
+        ? createTemplateDraftReviewWorkflow({
+            qa: templateDraftQa,
+            review: templateDraftHumanReview,
+          })
+        : null,
+    [templateDraftHumanReview, templateDraftQa],
+  );
+
+  const templateStudioWorkflow = useMemo(
+    () =>
+      buildTemplateStudioWorkflowState({
+        regionQa: faceMeshRegionQa,
+        attributeCandidates: makeupAttributeCandidates,
+        stepSequence: ruleBasedStepSequence,
+        templateDraft: makeupTemplateDraft,
+        draftQa: templateDraftQa,
+        humanReview: templateDraftHumanReview,
+        reviewWorkflow: templateDraftReviewWorkflow,
+      }),
+    [
+      faceMeshRegionQa,
+      makeupAttributeCandidates,
+      makeupTemplateDraft,
+      ruleBasedStepSequence,
+      templateDraftHumanReview,
+      templateDraftQa,
+      templateDraftReviewWorkflow,
+    ],
   );
 
   const correctionDataset = useMemo(
@@ -1816,8 +1871,12 @@ export function TemplateStudio() {
 
             <FaceMeshMakeupIntelligencePanel
               attributeCandidates={makeupAttributeCandidates}
+              draftQa={templateDraftQa}
+              humanReview={templateDraftHumanReview}
               regionQa={faceMeshRegionQa}
+              reviewWorkflow={templateDraftReviewWorkflow}
               stepSequence={ruleBasedStepSequence}
+              studioWorkflow={templateStudioWorkflow}
               templateDraft={makeupTemplateDraft}
             />
 

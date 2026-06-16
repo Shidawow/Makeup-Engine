@@ -347,3 +347,19 @@ FaceMesh and local analysis results. It cannot publish templates, export
 `UserAppTemplatePackage`, mutate user app contracts, create backend records,
 call OpenAI/external AI APIs, request camera permissions, create AR state,
 commit MediaPipe binaries, or enter training datasets automatically.
+
+## Phase 10B Template Draft Review Flow
+
+`MakeupTemplateDraftReport`
+-> `TemplateDraftQaResult`
+-> `TemplateDraftHumanReview`
+-> `TemplateDraftReviewWorkflow`
+-> `TemplateDraftCandidateHandoff`
+-> next recommendation for Phase 10C template library candidate packaging.
+
+The flow is local, deterministic, administrator-only, and review-only. Vision
+Analysis supplies image, FaceMesh, and region readiness; Template Workbench
+handles candidate attributes, step drafts, template draft QA, human review, and
+candidate handoff. It cannot publish, cannot generate `UserAppTemplatePackage`,
+cannot call backend or external APIs, and cannot write draft outputs into
+training datasets.

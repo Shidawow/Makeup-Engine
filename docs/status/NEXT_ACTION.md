@@ -2,36 +2,33 @@
 
 ## What To Do Next
 
-Proceed to Phase 10B: Template Draft QA & Human Review Workflow.
+Proceed to Phase 10C: Template Library Candidate Packaging.
 
 ## Why
 
-Phase 10A added the first FaceMesh-driven makeup intelligence baseline. The
-system can now turn real local FaceMesh landmarks into region QA, candidate
-makeup attributes, rule-based draft steps, and a draft-only template. The next
-safe step is not production publishing; it is human review workflow around those
-drafts.
+Phase 10B separated Vision Analysis from Template Workbench and added draft QA,
+human review, review queue status, and candidate handoff. The next safe step is
+to define how approved template library candidates are packaged without
+claiming production publication or automatic User App template export.
 
-## Recommended 10B Scope
+## Recommended 10C Scope
 
-- Add draft QA checks for region coverage, candidate confidence, step order,
-  wording, and template safety.
-- Add reviewer decisions: accept as draft, request revision, reject, or block.
-- Add reviewer notes and next-action summaries.
-- Keep draft review local and administrator-only.
-- Preserve `UserAppTemplatePackage` as a separate export contract that Phase 10A
-  drafts cannot mutate automatically.
+- Package approved template library candidates as local candidate artifacts.
+- Preserve draft QA and human review lineage.
+- Keep candidate package status separate from published template status.
+- Keep `UserAppTemplatePackage` generation as a later explicit workflow.
+- Add docs, fixtures, and tests for candidate packaging boundaries.
 
 ## What Not To Do
 
 - Do not build the production user app inside this repository.
-- Do not publish Phase 10A drafts automatically.
+- Do not publish template candidates automatically.
 - Do not add backend, database, account system, cloud sync, analytics, camera
   capture, AR, OpenAI/external API calls, native app implementation, React
   Native, Flutter, App Store/TestFlight work, service worker, ecommerce,
   community, paid features, or new runtime dependencies.
-- Do not train on Phase 10A candidates, draft steps, template drafts, user app
-  state, or real user photos.
+- Do not train on FaceMesh candidates, draft steps, template drafts, human
+  review records, user app state, or real user photos.
 - Do not commit `public/mediapipe/**` `.task` or `.wasm` assets.
 - Do not modify legacy runtime areas.
 
@@ -48,12 +45,15 @@ Read these files first:
 7. `docs/product/facemesh-region-qa-baseline.md`
 8. `docs/product/makeup-attribute-candidate-baseline.md`
 9. `docs/product/rule-based-template-draft-baseline.md`
-10. `docs/phases/phase-10A.md`
-11. `project-state/project-state.snapshot.json`
-12. `project-state/latest-handoff.json`
-13. `project-state/provider-handoff.json`
-14. `project-state/active-task.json`
-15. `project-state/guardrails.json`
+10. `docs/product/template-draft-qa.md`
+11. `docs/product/template-draft-human-review-workflow.md`
+12. `docs/product/template-draft-review-workflow.md`
+13. `docs/phases/phase-10B.md`
+14. `project-state/project-state.snapshot.json`
+15. `project-state/latest-handoff.json`
+16. `project-state/provider-handoff.json`
+17. `project-state/active-task.json`
+18. `project-state/guardrails.json`
 
 Then run:
 

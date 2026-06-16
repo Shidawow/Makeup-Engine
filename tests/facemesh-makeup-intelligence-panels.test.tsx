@@ -23,10 +23,10 @@ describe('FaceMesh makeup intelligence panels', () => {
     expect(html).toContain('FaceMesh 妆容智能基线');
     expect(html).toContain('妆容属性候选');
     expect(html).toContain('规则步骤草稿');
-    expect(html).toContain('模板草稿与人工审核');
+    expect(html).toContain('模板草稿审核工作流');
     expect(html).toContain('候选 / 草稿');
     expect(html).toContain('必须人工审核');
-    expect(html).toContain('发布被阻止');
+    expect(html).toContain('仅用于草稿审核');
     expect(html).toContain('Landmarks');
   });
 

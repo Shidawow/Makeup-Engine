@@ -1,15 +1,30 @@
 import type { FaceMeshRegionQaReport } from '../../vision';
-import type {
+import {
+  buildTemplateStudioWorkflowState,
+  createTemplateDraftReviewWorkflow,
+  evaluateTemplateDraftHumanReview,
+  evaluateTemplateDraftQa,
   MakeupAttributeCandidateReport,
   MakeupTemplateDraftReport,
   RuleBasedStepSequence,
 } from '../../template-engine';
+import type {
+  TemplateDraftHumanReview,
+  TemplateDraftQaResult,
+  TemplateDraftReviewWorkflow,
+  TemplateStudioWorkflowReport,
+} from '../../template-engine';
+import { TemplateDraftReviewWorkflowPanel } from './TemplateDraftReviewWorkflowPanel';
 
 export interface FaceMeshMakeupIntelligencePanelProps {
   regionQa: FaceMeshRegionQaReport | null;
   attributeCandidates: MakeupAttributeCandidateReport | null;
   stepSequence: RuleBasedStepSequence | null;
   templateDraft: MakeupTemplateDraftReport | null;
+  draftQa?: TemplateDraftQaResult | null;
+  humanReview?: TemplateDraftHumanReview | null;
+  reviewWorkflow?: TemplateDraftReviewWorkflow | null;
+  studioWorkflow?: TemplateStudioWorkflowReport | null;
 }
 
 const statusLabel: Record<string, string> = {
@@ -34,6 +49,10 @@ export function FaceMeshMakeupIntelligencePanel({
   attributeCandidates,
   stepSequence,
   templateDraft,
+  draftQa,
+  humanReview,
+  reviewWorkflow,
+  studioWorkflow,
 }: FaceMeshMakeupIntelligencePanelProps) {
   if (!regionQa || !attributeCandidates || !stepSequence || !templateDraft) {
     return (
@@ -42,50 +61,79 @@ export function FaceMeshMakeupIntelligencePanel({
         <p className="mt-2 text-sm text-stone-500">
           运行真实 FaceMesh 分析后，这里会显示区域 QA、妆容属性候选、规则步骤和模板草稿。所有输出都只是候选 / 草稿，需要人工审核。
         </p>
+        <div className="mt-3 rounded-md border border-amber-200 bg-amber-50 p-3 text-sm text-amber-900">
+          <p className="font-semibold">模板草稿审核工作流</p>
+          <p className="mt-1 text-xs leading-5">
+            先完成视觉分析和区域 QA；区域就绪后，模板工作台会进入草稿 QA、人工审核 checklist、请求修改 / 拒绝 / 阻断、候选入库 handoff。
+          </p>
+          <p className="mt-1 text-xs leading-5">
+            空状态不会重复展示候选属性、步骤草稿或模板草稿；不会自动生成 UserAppTemplatePackage。
+          </p>
+        </div>
       </section>
     );
   }
 
+  const resolvedDraftQa =
+    draftQa ??
+    evaluateTemplateDraftQa({
+      regionQa,
+      attributeCandidates,
+      stepSequence,
+      templateDraft,
+    });
+  const resolvedHumanReview =
+    humanReview ?? evaluateTemplateDraftHumanReview({ qa: resolvedDraftQa });
+  const resolvedReviewWorkflow =
+    reviewWorkflow ??
+    createTemplateDraftReviewWorkflow({
+      qa: resolvedDraftQa,
+      review: resolvedHumanReview,
+    });
+  const resolvedStudioWorkflow =
+    studioWorkflow ??
+    buildTemplateStudioWorkflowState({
+      regionQa,
+      attributeCandidates,
+      stepSequence,
+      templateDraft,
+      draftQa: resolvedDraftQa,
+      humanReview: resolvedHumanReview,
+      reviewWorkflow: resolvedReviewWorkflow,
+    });
+
   return (
-    <section className="rounded-lg border border-teal-100 bg-white p-4 shadow-soft">
+    <section className="grid gap-4">
+      <section className="rounded-lg border border-teal-100 bg-white p-4 shadow-soft">
       <div className="flex items-start justify-between gap-3">
         <div>
           <h2 className="text-base font-semibold">FaceMesh 妆容智能基线</h2>
           <p className="mt-1 text-xs leading-5 text-stone-500">
-            基于真实 FaceMesh landmarks、局部像素和语义规则生成候选 / 草稿；不是 AI 自动最终结果，必须人工审核后才可进入模板库流程。
+            模板工作台读取视觉分析摘要，生成候选属性、规则步骤和模板草稿；所有内容都是候选 / 草稿，必须人工审核。
           </p>
         </div>
         <span className="rounded-md bg-teal-50 px-2.5 py-1 text-xs font-semibold text-teal-900">
-          Phase 10A draft-only
+          Phase 10B review-only
         </span>
       </div>
 
-      <div className="mt-4 grid gap-3">
-        <div className="rounded-md bg-stone-50 p-3">
-          <h3 className="text-sm font-semibold">FaceMesh 区域 QA</h3>
+      <div className="mt-4 grid gap-3 md:grid-cols-2">
+        <div className="rounded-md border border-stone-200 bg-stone-50 p-3">
+          <h3 className="text-sm font-semibold">视觉分析摘要</h3>
           <div className="mt-2 grid gap-1 text-xs text-stone-600">
             <p>状态：{statusLabel[regionQa.status]}</p>
             <p>Provider：{regionQa.provider}</p>
             <p>Landmarks：{regionQa.landmarkCount}</p>
             <p>置信度：{formatPercent(regionQa.confidence)}</p>
           </div>
-          <div className="mt-2 flex flex-wrap gap-2">
-            {regionQa.regionCoverage.map((region) => (
-              <span
-                className={`rounded-md px-2 py-1 text-xs ${
-                  region.ready
-                    ? 'bg-teal-50 text-teal-900'
-                    : 'bg-rose-50 text-rose-800'
-                }`}
-                key={region.region}
-              >
-                {region.region}: {formatPercent(region.coverage)}
-              </span>
-            ))}
-          </div>
+          <p className="mt-2 rounded-md bg-white p-2 text-xs text-stone-500">
+            {regionQa.status === 'region_qa_blocked'
+              ? '视觉分析质量不足，需回到视觉分析 Tab 修正图片/区域后再生成草稿。'
+              : '可以进入模板工作台生成/审核模板草稿。'}
+          </p>
         </div>
 
-        <div className="rounded-md bg-stone-50 p-3">
+        <div className="rounded-md border border-stone-200 bg-stone-50 p-3">
           <h3 className="text-sm font-semibold">妆容属性候选</h3>
           <p className="mt-1 text-xs text-stone-500">
             状态：{statusLabel[attributeCandidates.status]} / 全部需要人工审核
@@ -102,10 +150,10 @@ export function FaceMeshMakeupIntelligencePanel({
           </div>
         </div>
 
-        <div className="rounded-md bg-stone-50 p-3">
+        <div className="rounded-md border border-stone-200 bg-stone-50 p-3">
           <h3 className="text-sm font-semibold">规则步骤草稿</h3>
           <p className="mt-1 text-xs text-stone-500">
-            状态：{statusLabel[stepSequence.status]} / 发布被阻止
+            状态：{statusLabel[stepSequence.status]} / 仅用于草稿审核
           </p>
           <ol className="mt-2 grid gap-1 text-xs text-stone-600">
             {stepSequence.steps.slice(0, 6).map((step) => (
@@ -116,17 +164,45 @@ export function FaceMeshMakeupIntelligencePanel({
           </ol>
         </div>
 
-        <div className="rounded-md border border-amber-200 bg-amber-50 p-3">
-          <h3 className="text-sm font-semibold text-amber-950">模板草稿与人工审核</h3>
+        <div className="rounded-md border border-stone-200 bg-stone-50 p-3">
+          <h3 className="text-sm font-semibold">模板草稿摘要</h3>
           <div className="mt-2 grid gap-1 text-xs text-amber-900">
             <p>状态：{statusLabel[templateDraft.status]}</p>
             <p>草稿：{templateDraft.draft?.name ?? '未生成'}</p>
-            <p>人工审核：{templateDraft.humanReviewRequired ? '必须' : '否'}</p>
-            <p>发布：{templateDraft.publishBlocked ? '已阻止' : '可发布'}</p>
+            <p>人工审核：{templateDraft.humanReviewRequired ? '必须' : '未开启'}</p>
+            <p>出库边界：只能进入模板库候选流程。</p>
             <p>边界：不接后端、不上传、不训练、不调用 OpenAI 或外部 AI。</p>
           </div>
         </div>
       </div>
+
+      <details className="mt-3 rounded-md border border-stone-200 bg-stone-50 p-3">
+        <summary className="cursor-pointer text-sm font-semibold text-stone-800">
+          查看区域覆盖详情
+        </summary>
+        <div className="mt-2 flex flex-wrap gap-2">
+          {regionQa.regionCoverage.map((region) => (
+            <span
+              className={`rounded-md px-2 py-1 text-xs ${
+                region.ready
+                  ? 'bg-teal-50 text-teal-900'
+                  : 'bg-rose-50 text-rose-800'
+              }`}
+              key={region.region}
+            >
+              {region.region}: {formatPercent(region.coverage)}
+            </span>
+          ))}
+        </div>
+      </details>
+      </section>
+
+      <TemplateDraftReviewWorkflowPanel
+        draftQa={resolvedDraftQa}
+        humanReview={resolvedHumanReview}
+        reviewWorkflow={resolvedReviewWorkflow}
+        studioWorkflow={resolvedStudioWorkflow}
+      />
     </section>
   );
 }

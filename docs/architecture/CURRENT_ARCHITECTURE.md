@@ -444,3 +444,19 @@ area. It does not add production roadmap approval, production analytics,
 backend evidence storage, camera, AR, AI analysis, OpenAI/external API usage,
 training, public recruitment, MVP validation approval, production app approval,
 production release approval, or new runtime dependencies.
+
+### Template Draft Review Workflow
+
+Phase 10B adds local administrator review structures for FaceMesh-driven
+template drafts. `src/template-engine/templateDraftQa.ts` owns deterministic
+draft QA checks. `src/template-engine/templateDraftHumanReview.ts` owns the
+human review checklist and decisions. `src/template-engine/templateDraftReviewWorkflow.ts`
+owns review queue status, priority, next action, and candidate handoff.
+`src/template-engine/templateStudioWorkflow.ts` owns the cross-tab workflow
+state between Vision Analysis and Template Workbench.
+
+Vision Analysis owns FaceMesh, overlay/mask, region QA, image quality,
+MediaPipe recovery hints, mock fallback, and readiness summary. Template
+Workbench owns candidates, step drafts, template draft, draft QA, human review,
+and candidate handoff. Approval means template library candidate only; it does
+not publish and does not generate `UserAppTemplatePackage`.

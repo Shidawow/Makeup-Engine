@@ -5,9 +5,9 @@ Makeup Engine is the makeup template production system for a future makeup coach
 ## Current Position
 
 - Project role: makeup template production system plus a local contract-driven user app shell prototype.
-- Last completed phase: `Phase 10A`.
-- Current completed business phase: `Phase 10A - FaceMesh-driven Makeup Intelligence Baseline`.
-- Next recommended phase: `Phase 10B - Template Draft QA & Human Review Workflow`.
+- Last completed phase: `Phase 10B`.
+- Current completed business phase: `Phase 10B - Template Draft Review Workflow`.
+- Next recommended phase: `Phase 10C - Template Library Candidate Packaging`.
 - Recent recovery milestones retained in phase docs: `Phase 6K`, `Phase 6L`, `Phase 6L-1`, `Phase 7A`, `Phase 7B`, `Phase 7C`, `Phase 7D`, `Phase 7E`, `Phase 7F`, `Phase 7G`, `Phase 7H`, and `Phase 8A`.
 - Historical route-planning milestone: `Phase 8A - Product Route Decision / App MVP Planning`.
 
@@ -52,6 +52,7 @@ SourceImagePackage manifest
 -> Anonymous Internal Trial Evidence Review
 -> Anonymous Internal Trial Follow-up Iteration
 -> FaceMesh-driven Makeup Intelligence Baseline
+-> Template Draft Review Workflow
 -> Phase 8 Roadmap / V1 Non-Goals
 -> Consumption Manifest
 -> Dataset Review
@@ -140,11 +141,15 @@ SourceImagePackage manifest
 76. `docs/product/makeup-attribute-candidate-baseline.md`
 77. `docs/product/rule-based-template-draft-baseline.md`
 78. `docs/phases/phase-10A.md`
-79. `docs/phases/phase-7H.md`
-80. `project-state/project-state.snapshot.json`
-81. `project-state/provider-handoff.json`
-82. `project-state/latest-handoff.json`
-83. `project-state/active-task.json`
+79. `docs/product/template-draft-qa.md`
+80. `docs/product/template-draft-human-review-workflow.md`
+81. `docs/product/template-draft-review-workflow.md`
+82. `docs/phases/phase-10B.md`
+83. `docs/phases/phase-7H.md`
+84. `project-state/project-state.snapshot.json`
+85. `project-state/provider-handoff.json`
+86. `project-state/latest-handoff.json`
+87. `project-state/active-task.json`
 
 ## What The System Can Do Now
 
@@ -175,6 +180,9 @@ SourceImagePackage manifest
   `public/mediapipe/**` assets are present, then generate FaceMesh region QA,
   makeup attribute candidates, rule-based draft steps, and a draft-only template
   for human review.
+- Run Phase 10B template draft QA and human review workflow, with Vision
+  Analysis owning image/region quality and Template Workbench owning candidates,
+  step drafts, template draft QA, human review, and candidate handoff.
 - Continue from Vision Analysis into mask editing, evidence capture, dataset review, materialized training datasets, and lightweight model artifact workflows.
 - Run real local MediaPipe FaceMesh after preparing ignored local assets with `npm run mediapipe:prepare`; see `docs/setup/local-mediapipe-assets.md`.
 

@@ -12,6 +12,7 @@ import {
   createEditableCosmeticMask,
   createMediaPipeFaceMeshProvider,
   createMockVisionProvider,
+  evaluateFaceMeshRegionQa,
   formatVisionAnalysisErrorForUser,
   loadImagePixelDataFromUrl,
   reanalyzeMakeupWithEditableMasks,
@@ -35,6 +36,7 @@ import {
   type VisionDebugOverlayLayers,
 } from '../../template-studio/vision-debug-overlay';
 import { VisionQaPanel } from '../../template-studio/VisionQaPanel';
+import { VisionAnalysisReadinessSummary } from './VisionAnalysisReadinessSummary';
 import type { TemplateAnalysisSeed } from '../../../templates/schema';
 import { loadTemplateAnalysisSeedImageData } from '../../../templates/storage';
 
@@ -196,6 +198,16 @@ export function VisionAnalysisDemo({
           }).template
         : templatePreview,
     [adjustedTargets, editableMasks, result, templatePreview],
+  );
+  const faceMeshRegionQa = useMemo(
+    () =>
+      result
+        ? evaluateFaceMeshRegionQa({
+            faceMesh: result.faceMesh,
+            providerId: result.providerId,
+          })
+        : null,
+    [result],
   );
 
   useEffect(() => {
@@ -776,6 +788,11 @@ export function VisionAnalysisDemo({
               }
               template={convergedTemplatePreview}
               visibleRegions={adjustedTargets}
+            />
+
+            <VisionAnalysisReadinessSummary
+              regionQa={faceMeshRegionQa}
+              runtimeNotice={runtimeNotice}
             />
 
             <section className="rounded-lg border border-stone-200 bg-stone-950 p-4 text-stone-100 shadow-soft">

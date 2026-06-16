@@ -1,5 +1,5 @@
 {
-  "phase": "10A",
+  "phase": "10B",
   "guardrails": [
     {
       "id": "source-image-not-training-data",
@@ -524,6 +524,22 @@
     {
       "id": "phase_10a_no_mediapipe_asset_commit",
       "rule": "public/mediapipe model and wasm assets are local ignored runtime assets and must not be staged or committed."
+    },
+    {
+      "id": "phase_10b_review_only",
+      "rule": "Phase 10B draft QA and human review are local administrator review aids only."
+    },
+    {
+      "id": "phase_10b_approve_candidate_only",
+      "rule": "Phase 10B approval means template library candidate only, not published."
+    },
+    {
+      "id": "phase_10b_no_user_app_package_auto_generation",
+      "rule": "Phase 10B must not automatically generate or mutate UserAppTemplatePackage."
+    },
+    {
+      "id": "phase_10b_tab_boundary",
+      "rule": "Vision Analysis owns image and region quality; Template Workbench owns candidates, drafts, QA, human review, and handoff."
     }
   ],
   "legacyFrozenModules": [
@@ -532,5 +548,5 @@
     "src/intelligence/runtime"
   ],
   "externalApiUsageAllowedInDoc1": false,
-  "updatedAt": "2026-06-13T15:40:00.000+08:00"
+  "updatedAt": "2026-06-16T00:00:00.000+08:00"
 }

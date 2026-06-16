@@ -1,11 +1,11 @@
 {
   "schemaVersion": "active-task.v1",
-  "taskId": "10A",
-  "title": "FaceMesh-driven Makeup Intelligence Baseline",
+  "taskId": "10B",
+  "title": "Template Draft Review Workflow",
   "status": "completed",
   "ownerRole": "Codex",
   "createdBy": "Codex",
-  "phase": "10A",
+  "phase": "10B",
   "recommendedProfile": "native-gpt-codex-high-reasoning",
   "allowedDirectories": [
     "src/vision",
@@ -14,7 +14,8 @@
     "src/templates/examples",
     "docs",
     "project-state",
-    "tests"
+    "tests",
+    "src/components/demo"
   ],
   "forbiddenDirectories": [
     "src/engine",
@@ -29,22 +30,23 @@
     "npm run project:context",
     "node scripts/project-status.mjs --json",
     "node scripts/context-pack.mjs --json",
-    "npm run test -- tests/facemesh-region-qa.test.ts tests/makeup-attribute-candidates.test.ts tests/rule-based-step-generator.test.ts tests/template-draft-generator.test.ts tests/facemesh-makeup-intelligence-panels.test.tsx tests/phase-10A-documentation-recovery.test.ts tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
+    "npm run test -- tests/template-draft-qa.test.ts tests/template-draft-human-review.test.ts tests/template-draft-review-workflow.test.ts tests/template-draft-review-workflow-panel.test.tsx tests/template-studio-workflow-ia.test.ts tests/template-studio-tab-boundary.test.tsx tests/phase-10B-documentation-recovery.test.ts tests/template-draft-generator.test.ts tests/facemesh-makeup-intelligence-panels.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
   ],
   "completionDefinition": [
-    "Phase 10A added FaceMesh region QA, makeup attribute candidates, rule-based draft steps, draft-only template generation, fixtures, Template Studio admin panel, docs, and project-state.",
-    "10A did not add production app, backend, database, camera capture, AR, OpenAI/external API calls, training from drafts, automatic publishing, new runtime dependencies, or committed MediaPipe binaries.",
-    "All generated intelligence outputs remain candidate/draft-only and require human review."
+    "Phase 10B added template draft QA, human review, review workflow, workflow stepper, candidate handoff, fixtures, UI, docs, and project-state.",
+    "Vision Analysis owns FaceMesh, overlay/mask, region QA, image quality, recovery hints, mock fallback, and readiness summary.",
+    "Template Workbench owns candidates, step drafts, template draft, draft QA, human review, and candidate handoff.",
+    "10B did not add production app, backend, database, camera capture, AR, OpenAI/external API calls, training from drafts, automatic publishing, automatic UserAppTemplatePackage generation, new runtime dependencies, or committed MediaPipe binaries."
   ],
   "dependsOn": [
-    "9J Anonymous Internal Trial Follow-up Iteration"
+    "10A FaceMesh-driven Makeup Intelligence Baseline"
   ],
   "nextRecommendedTask": {
-    "taskId": "10B",
-    "title": "Template Draft QA & Human Review Workflow",
+    "taskId": "10C",
+    "title": "Template Library Candidate Packaging",
     "status": "recommended"
   },
-  "updatedAt": "2026-06-15T00:00:00.000+08:00",
+  "updatedAt": "2026-06-16T00:00:00.000+08:00",
   "validationStatus": "passed",
   "lastValidation": {
     "mediapipeCheck": "passed",
@@ -55,13 +57,14 @@
     "projectStatusJson": "passed",
     "projectContext": "passed",
     "contextPackJson": "passed",
-    "phase10AScopedTests": "passed",
-    "testFiles": 9,
-    "tests": 24,
-    "phase10AScopedTestFiles": 9,
-    "phase10AScopedTestsCount": 24,
-    "summary": "Phase 10A validation passed: mediapipe:check, scoped Phase 10A tests, typecheck, build, project status/context, and JSON status/context commands.",
-    "updatedAt": "2026-06-15T00:00:00.000+08:00"
+    "browserVerification": "passed",
+    "phase10BScopedTests": "passed",
+    "testFiles": 12,
+    "tests": 40,
+    "phase10BScopedTestFiles": 12,
+    "phase10BScopedTestsCount": 40,
+    "summary": "Phase 10B validation passed: mediapipe:check, scoped Phase 10B tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
+    "updatedAt": "2026-06-16T00:00:00.000+08:00"
   },
   "validation": {
     "mediapipeCheck": "passed",
@@ -72,12 +75,14 @@
     "projectStatusJson": "passed",
     "projectContext": "passed",
     "contextPackJson": "passed",
-    "phase10AScopedTests": "passed",
-    "testFiles": 9,
-    "tests": 24,
-    "phase10AScopedTestFiles": 9,
-    "phase10AScopedTestsCount": 24,
-    "summary": "Phase 10A validation passed: mediapipe:check, scoped Phase 10A tests, typecheck, build, project status/context, and JSON status/context commands.",
-    "updatedAt": "2026-06-15T00:00:00.000+08:00"
-  }
+    "browserVerification": "passed",
+    "phase10BScopedTests": "passed",
+    "testFiles": 12,
+    "tests": 40,
+    "phase10BScopedTestFiles": 12,
+    "phase10BScopedTestsCount": 40,
+    "summary": "Phase 10B validation passed: mediapipe:check, scoped Phase 10B tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
+    "updatedAt": "2026-06-16T00:00:00.000+08:00"
+  },
+  "summary": "Phase 10B validation passed: mediapipe:check, scoped Phase 10B tests, typecheck, build, browser verification, project status/context, and JSON status/context commands."
 }

@@ -191,3 +191,23 @@ must not collect or store real names, contacts, photos, health information,
 sensitive identity information, biometric identifiers, face embeddings, camera
 data, uploaded images, backend records, analytics records, AI analysis records,
 training labels, upload data, or real user trial records in project-state.
+
+## Phase 10B Template Draft Review Boundary
+
+Phase 10B draft QA, human review, review queue, workflow stepper, and candidate
+handoff are local administrator aids only. They must not become final makeup
+recognition, automatic publishing, backend workflow, AI approval, production
+user app behavior, training approval, or App Store/TestFlight readiness.
+
+Vision Analysis owns image understanding, FaceMesh runtime state, overlay/mask,
+region QA, image quality, MediaPipe missing-assets recovery, mock fallback, and
+readiness to enter Template Workbench.
+
+Template Workbench owns candidate attributes, generated step drafts, template
+drafts, draft QA, human review checklist, decisions, revision/rejection/blocking,
+and candidate handoff.
+
+Approve means template library candidate only. It cannot publish, cannot write a
+formal template library entry by itself, cannot generate `UserAppTemplatePackage`,
+cannot call OpenAI/external AI/CV APIs, cannot train models, and cannot persist
+real user data.

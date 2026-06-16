@@ -1,14 +1,14 @@
 {
   "projectName": "Makeup Engine",
-  "projectRole": "Makeup template production system with completed FaceMesh-driven makeup intelligence baseline for template-production drafts and a local contract-driven user app shell prototype for a future separate user app MVP",
+  "projectRole": "Makeup template production system with completed FaceMesh-driven draft QA and human review workflow plus a local contract-driven user app shell prototype for a future separate user app MVP",
   "projectIsUserFacingApp": false,
-  "lastCompletedPhase": "10A",
-  "lastCompletedBusinessPhase": "10A",
-  "currentPhase": "FaceMesh-driven Makeup Intelligence Baseline",
-  "currentPhaseId": "10A",
-  "nextRecommendedPhase": "10B",
-  "nextRecommendedPhaseName": "Template Draft QA & Human Review Workflow",
-  "nextAction": "Proceed to Phase 10B: Template Draft QA & Human Review Workflow. Phase 10A is complete. Use FaceMesh region QA, candidate makeup attributes, rule-based draft steps, and draft-only templates as local administrator review inputs only; do not add production app, backend, database, camera capture, AR, OpenAI/external API calls, automatic publishing, training from drafts, or committed MediaPipe binaries.",
+  "lastCompletedPhase": "10B",
+  "lastCompletedBusinessPhase": "10B",
+  "currentPhase": "Template Draft Review Workflow",
+  "currentPhaseId": "10B",
+  "nextRecommendedPhase": "10C",
+  "nextRecommendedPhaseName": "Template Library Candidate Packaging",
+  "nextAction": "Proceed to Phase 10C: Template Library Candidate Packaging. Phase 10B is complete. Use FaceMesh region QA, candidate makeup attributes, rule-based draft steps, template draft QA, human review, and candidate handoff as local administrator inputs only; do not add production app, backend, database, camera capture, AR, OpenAI/external API calls, automatic publishing, training from drafts, automatic UserAppTemplatePackage generation, or committed MediaPipe binaries.",
   "mainDataFlow": [
     "SourceImagePackage",
     "SourceImageEntry",
@@ -120,7 +120,14 @@
     "MakeupAttributeCandidateReport",
     "RuleBasedStepSequence",
     "MakeupTemplateDraftReport",
-    "FaceMeshMakeupIntelligenceAdminPanel"
+    "FaceMeshMakeupIntelligenceAdminPanel",
+    "TemplateDraftQaResult",
+    "TemplateDraftHumanReview",
+    "TemplateDraftReviewWorkflow",
+    "TemplateDraftCandidateHandoff",
+    "TemplateStudioWorkflowState",
+    "VisionAnalysisReadinessSummary",
+    "TemplateDraftReviewWorkflowPanel"
   ],
   "mainModules": [
     "src/vision",
@@ -163,13 +170,14 @@
     "projectStatusJson": "passed",
     "projectContext": "passed",
     "contextPackJson": "passed",
-    "phase10AScopedTests": "passed",
-    "testFiles": 9,
-    "tests": 24,
-    "phase10AScopedTestFiles": 9,
-    "phase10AScopedTestsCount": 24,
-    "summary": "Phase 10A validation passed: mediapipe:check, scoped Phase 10A tests, typecheck, build, project status/context, and JSON status/context commands.",
-    "updatedAt": "2026-06-15T00:00:00.000+08:00"
+    "browserVerification": "passed",
+    "phase10BScopedTests": "passed",
+    "testFiles": 12,
+    "tests": 40,
+    "phase10BScopedTestFiles": 12,
+    "phase10BScopedTestsCount": 40,
+    "summary": "Phase 10B validation passed: mediapipe:check, scoped Phase 10B tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
+    "updatedAt": "2026-06-16T00:00:00.000+08:00"
   },
   "knownLimitations": [
     "SourceImagePackage is not a training dataset",
@@ -233,7 +241,9 @@
     "Phase 9J anonymous internal trial follow-up iteration is local administrator planning only; it is not production roadmap approval, production analytics, backend evidence collection, AI analysis, training, public recruitment, MVP validation approval, production app approval, or production release approval.",
     "Phase 9J follow-up iteration, gap action plan, and readiness cannot collect real names, contact information, photos, health information, sensitive identity information, biometrics, backend records, analytics records, AI analysis records, training labels, upload data, or real user trial records in project-state.",
     "Phase 10A FaceMesh-driven makeup intelligence is candidate/draft-only and requires human review before any template library or user app contract handoff.",
-    "Phase 10A cannot mutate UserAppTemplatePackage, publish templates automatically, train on draft outputs, call external AI APIs, request camera permission, or commit public/mediapipe runtime assets."
+    "Phase 10A cannot mutate UserAppTemplatePackage, publish templates automatically, train on draft outputs, call external AI APIs, request camera permission, or commit public/mediapipe runtime assets.",
+    "Phase 10B template draft QA and human review are local administrator workflow aids only; they are not final recognition, production publishing, backend workflow, AI approval, training approval, or production user app behavior.",
+    "Phase 10B approval means template library candidate only and cannot automatically publish, write a formal template library entry, generate UserAppTemplatePackage, call external APIs, or enter training datasets."
   ],
   "recoveryEntryFiles": [
     "START_HERE.md",
@@ -348,7 +358,11 @@
     "docs/product/facemesh-region-qa-baseline.md",
     "docs/product/makeup-attribute-candidate-baseline.md",
     "docs/product/rule-based-template-draft-baseline.md",
-    "docs/phases/phase-10A.md"
+    "docs/phases/phase-10A.md",
+    "docs/product/template-draft-qa.md",
+    "docs/product/template-draft-human-review-workflow.md",
+    "docs/product/template-draft-review-workflow.md",
+    "docs/phases/phase-10B.md"
   ],
   "forbiddenActions": [
     "Do not build the full production user-side app in the local admin workbench",
@@ -408,7 +422,10 @@
     "Do not treat Phase 9J evidence follow-up iteration, gap action plan, or readiness as production roadmap approval, production analytics, backend evidence collection, AI analysis, training, public recruitment, MVP validation approval, production app approval, or production release approval.",
     "Do not use Phase 9J follow-up planning as permission to collect real user names, contacts, photos, health information, sensitive identity data, biometrics, backend records, analytics records, AI analysis records, upload data, or training data.",
     "Do not treat Phase 10A candidates, draft steps, or template drafts as final makeup recognition, production user guidance, automatic publishing, training input, backend records, or UserAppTemplatePackage mutation.",
-    "Do not stage or commit public/mediapipe .task or .wasm assets; they are local ignored runtime resources only."
+    "Do not stage or commit public/mediapipe .task or .wasm assets; they are local ignored runtime resources only.",
+    "Do not automatically publish Phase 10B draft reviews.",
+    "Do not automatically generate UserAppTemplatePackage from Phase 10B draft QA or human review.",
+    "Do not commit public/mediapipe .task or .wasm assets."
   ],
   "currentPhaseName": "Anonymous Internal Trial Follow-up Iteration",
   "validation": {
@@ -420,15 +437,16 @@
     "projectStatusJson": "passed",
     "projectContext": "passed",
     "contextPackJson": "passed",
-    "phase10AScopedTests": "passed",
-    "testFiles": 9,
-    "tests": 24,
-    "phase10AScopedTestFiles": 9,
-    "phase10AScopedTestsCount": 24,
-    "summary": "Phase 10A validation passed: mediapipe:check, scoped Phase 10A tests, typecheck, build, project status/context, and JSON status/context commands.",
-    "updatedAt": "2026-06-15T00:00:00.000+08:00"
+    "browserVerification": "passed",
+    "phase10BScopedTests": "passed",
+    "testFiles": 12,
+    "tests": 40,
+    "phase10BScopedTestFiles": 12,
+    "phase10BScopedTestsCount": 40,
+    "summary": "Phase 10B validation passed: mediapipe:check, scoped Phase 10B tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
+    "updatedAt": "2026-06-16T00:00:00.000+08:00"
   },
-  "updatedAt": "2026-06-15T00:00:00.000+08:00",
+  "updatedAt": "2026-06-16T00:00:00.000+08:00",
   "anonymousTrialDryRunDecision": {
     "phase9GResult": [
       "anonymous internal trial dry run pack with required scenarios",
@@ -479,5 +497,17 @@
     ],
     "draftBoundary": "candidate/draft-only; local administrator review input; no automatic publishing or UserAppTemplatePackage mutation",
     "nextPhase": "Phase 10B Template Draft QA & Human Review Workflow"
-  }
+  },
+  "templateDraftReviewWorkflowDecision": {
+    "phase10BResult": [
+      "Template draft QA checks region readiness, candidate metadata, generated step quality, claims safety, publish blocking, human review requirement, user app contract boundary, and privacy boundary",
+      "Human review supports approve-as-template-library-candidate, request revision, reject, region quality block, privacy/scope block, and example-only decisions",
+      "Template Studio workflow stepper separates Vision Analysis ownership from Template Workbench ownership"
+    ],
+    "visionAnalysisBoundary": "Vision Analysis owns FaceMesh, overlay/mask, region QA, image quality, MediaPipe recovery, mock fallback, and readiness summary.",
+    "templateWorkbenchBoundary": "Template Workbench owns attribute candidates, step drafts, template draft, draft QA, human review, and candidate handoff.",
+    "publishBoundary": "Approval means template library candidate only; no automatic publish and no automatic UserAppTemplatePackage generation.",
+    "nextPhase": "Phase 10C - Template Library Candidate Packaging"
+  },
+  "summary": "Phase 10B validation passed: mediapipe:check, scoped Phase 10B tests, typecheck, build, browser verification, project status/context, and JSON status/context commands."
 }

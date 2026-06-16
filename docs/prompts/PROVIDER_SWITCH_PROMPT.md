@@ -6,11 +6,11 @@ Default to compact context. Do not copy full historical chat transcripts. Do not
 
 ## Current State
 
-- `lastCompletedPhase: 10A`
-- `nextRecommendedPhase: 10B`
-- `nextRecommendedPhaseName: Template Draft QA & Human Review Workflow`
+- `lastCompletedPhase: 10B`
+- `nextRecommendedPhase: 10C`
+- `nextRecommendedPhaseName: Template Library Candidate Packaging`
 - Project role: Makeup template production system with a local contract-driven user app shell prototype, not a production user app.
-- Current capability: Phase 10A - FaceMesh-driven Makeup Intelligence Baseline adds local FaceMesh region QA, makeup attribute candidates, rule-based draft steps, draft-only template generation, fixtures, and a Template Studio administrator panel.
+- Current capability: Phase 10B - Template Draft Review Workflow adds draft QA, human review checklist, review queue status, candidate handoff, and a clearer Vision Analysis vs Template Workbench workflow boundary.
 
 Historical handoff marker retained for recovery tests: `lastCompletedPhase: 8A`, `nextRecommendedPhase: 8B`.
 Historical handoff marker retained for Phase 8B recovery tests: `lastCompletedPhase: 8B`, `nextRecommendedPhase: 8C`.
@@ -41,11 +41,11 @@ Historical handoff marker retained for Phase 9J recovery tests: `lastCompletedPh
 You are continuing Makeup Engine on native GPT / Codex Desktop.
 
 Current state:
-- lastCompletedPhase: 10A
-- nextRecommendedPhase: 10B
-- nextRecommendedPhaseName: Template Draft QA & Human Review Workflow
+- lastCompletedPhase: 10B
+- nextRecommendedPhase: 10C
+- nextRecommendedPhaseName: Template Library Candidate Packaging
 - project role: Makeup template production system with a local contract-driven user app shell prototype, not a production user app
-- current capability: React Web / PWA MVP first is selected; Phases 8B through 9J are complete; Phase 10A FaceMesh-driven Makeup Intelligence Baseline is complete with local FaceMesh region QA, candidate attributes, rule-based draft steps, draft-only template generation, and Template Studio admin panel; Makeup Engine remains the template production system and the future user-facing app should be planned separately
+- current capability: React Web / PWA MVP first is selected; Phases 8B through 9J are complete; Phase 10A FaceMesh-driven Makeup Intelligence Baseline and Phase 10B Template Draft Review Workflow are complete with local FaceMesh region QA, candidate attributes, rule-based draft steps, draft QA, human review, candidate handoff, and clear Vision Analysis / Template Workbench boundaries; Makeup Engine remains the template production system and the future user-facing app should be planned separately
 
 Compact context:
 - Use repository documents as source of truth; do not copy full historical chat.

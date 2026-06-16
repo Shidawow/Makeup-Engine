@@ -76,7 +76,8 @@
     "Phase 9H anonymous internal trial launch pack, readiness, and post-launch handoff are local admin launch preparation metadata, not public recruitment, backend records, analytics records, real user records, AI analysis records, production release records, or training input.",
     "Phase 9I anonymous internal trial evidence review, gap review, and decision input are local admin review metadata, not production analytics, backend records, real user records, AI analysis records, MVP validation approval, production release records, or training input.",
     "Phase 10A FaceMesh region QA, attribute candidates, rule-based steps, and template draft reports are local draft metadata, not backend records, user app contract exports, automatic publishing, or training input.",
-    "public/mediapipe .task and .wasm files are local ignored runtime assets and must not be committed."
+    "public/mediapipe .task and .wasm files are local ignored runtime assets and must not be committed.",
+    "Phase 10B TemplateDraftQaResult, TemplateDraftHumanReview, TemplateDraftReviewWorkflow, and TemplateStudioWorkflowState are local admin review metadata, not backend records, final recognition, automatic publishing, UserAppTemplatePackage generation, or training input."
   ],
   "materializedDatasetOutputs": [
     "tmp/datasets/realistic-synthetic-png-image-v0/package.json",
@@ -130,7 +131,11 @@
     "docs/product/facemesh-region-qa-baseline.md",
     "docs/product/makeup-attribute-candidate-baseline.md",
     "docs/product/rule-based-template-draft-baseline.md",
-    "docs/phases/phase-10A.md"
+    "docs/phases/phase-10A.md",
+    "docs/product/template-draft-qa.md",
+    "docs/product/template-draft-human-review-workflow.md",
+    "docs/product/template-draft-review-workflow.md",
+    "docs/phases/phase-10B.md"
   ],
   "userAppConsumptionOutputs": [
     "UserAppTemplatePackage JSON",
@@ -375,11 +380,11 @@
     "Observation template documentation",
     "Outcome review documentation"
   ],
-  "phase": "9J",
-  "lastCompletedPhase": "9J",
+  "phase": "10B",
+  "lastCompletedPhase": "10B",
   "currentPhase": "9J",
-  "nextRecommendedPhase": "9K",
-  "updatedAt": "2026-06-13T15:40:00.000+08:00",
+  "nextRecommendedPhase": "10C",
+  "updatedAt": "2026-06-16T00:00:00.000+08:00",
   "artifacts": [
     "docs/product/internal-trial-learning-summary.md",
     "docs/product/product-decision-gate.md",
