@@ -16,6 +16,7 @@ Real Photo
 -> FaceMesh Region QA / Attribute Candidates / Rule-based Template Draft
 -> Template Draft Review Workflow
 -> Template Library Candidate Package
+-> Candidate-to-App Package Contract Preparation
 -> Editable Masks
 -> Human Correction
 -> Template Evidence
@@ -73,6 +74,12 @@ Real Photo
   validation, and handoff branch. It preserves QA, human review, and privacy
   trace but does not publish, write the formal Template Library, or generate
   `UserAppTemplatePackage`.
+- `Candidate-to-App Package Contract Preparation`: Phase 10D local mapping
+  preview, validation, and handoff branch. It prepares candidate package fields
+  for a future app package draft preview while preserving QA, human review,
+  privacy, and candidate trace. It does not generate a formal
+  `UserAppTemplatePackage`, publish to the user app, or write a user app package
+  registry.
 - `Editable Masks`: generated and human-editable mask artifacts.
 - `Human Correction`: correction records produced by human review and mask editing.
 - `Template Evidence`: structured evidence supporting extracted template decisions.

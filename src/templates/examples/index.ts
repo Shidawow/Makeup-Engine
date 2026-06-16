@@ -57,3 +57,6 @@ export * from './template-draft-review-workflow.example';
 export * from './template-library-candidate-package.example';
 export * from './template-library-candidate-validation.example';
 export * from './template-library-candidate-handoff.example';
+export * from './candidate-to-app-package-contract.example';
+export * from './candidate-to-app-package-validation.example';
+export * from './candidate-to-app-package-handoff.example';

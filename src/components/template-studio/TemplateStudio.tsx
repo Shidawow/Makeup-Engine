@@ -1689,9 +1689,8 @@ export function TemplateStudio() {
                   和
                   {' '}
                   <code>public/mediapipe/wasm/vision_wasm_internal.js</code>
-                  。如果资源缺失，页面会显示明确原因和恢复说明；localhost
-                  开发环境会自动 fallback 到 mock vision provider。如果需要真实 FaceMesh，请把 MediaPipe
-                  model/wasm 文件放回 public/mediapipe。
+                  。如果资源缺失，页面会显示明确原因和恢复说明。如果需要真实 FaceMesh，请确认
+                  MediaPipe model/wasm 文件已放回 public/mediapipe。
                 </div>
               )}
             </section>

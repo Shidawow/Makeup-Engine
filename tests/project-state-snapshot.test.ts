@@ -31,13 +31,13 @@ describe('project state snapshot', () => {
 
     expect(snapshot.projectName).toBe('Makeup Engine');
     expect(snapshot.projectRole).toContain('Makeup template production system');
-    expect(snapshot.lastCompletedPhase).toBe('10C');
-    expect(snapshot.lastCompletedBusinessPhase).toBe('10C');
-    expect(snapshot.currentPhaseId).toBe('10C');
+    expect(snapshot.lastCompletedPhase).toBe('10D');
+    expect(snapshot.lastCompletedBusinessPhase).toBe('10D');
+    expect(snapshot.currentPhaseId).toBe('10D');
     expect(snapshot.currentPhase).toBeTruthy();
-    expect(snapshot.nextRecommendedPhase).toBe('10D');
-    expect(snapshot.nextRecommendedPhaseName).toContain('Candidate-to-App Package Contract Preparation');
-    expect(snapshot.nextAction).toContain('Phase 10D');
+    expect(snapshot.nextRecommendedPhase).toBe('10E');
+    expect(snapshot.nextRecommendedPhaseName).toContain('User App Package Draft Preview');
+    expect(snapshot.nextAction).toContain('Phase 10E');
     expect(snapshot.mainDataFlow).toEqual(
       expect.arrayContaining([
         'SourceImagePackage',
@@ -112,6 +112,10 @@ describe('project state snapshot', () => {
         'TemplateLibraryCandidateValidationResult',
         'TemplateLibraryCandidateHandoff',
         'TemplateLibraryCandidatePackagingPanel',
+        'CandidateToAppPackageContractPreparation',
+        'CandidateToAppPackageValidationResult',
+        'CandidateToAppPackageHandoff',
+        'CandidateToAppPackageContractPanel',
         'FaceMeshMakeupIntelligenceAdminPanel',
         'MaterializedTrainingDataset',
       ]),
@@ -139,6 +143,7 @@ describe('project state snapshot', () => {
     expect(snapshot.knownLimitations.join('\n')).toContain('Phase 10A FaceMesh-driven makeup intelligence');
     expect(snapshot.knownLimitations.join('\n')).toContain('Phase 10B template draft QA');
     expect(snapshot.knownLimitations.join('\n')).toContain('Phase 10C template library candidate packages');
+    expect(snapshot.knownLimitations.join('\n')).toContain('Phase 10D candidate-to-app contract preparation');
     expect(snapshot.knownLimitations.join('\n')).toContain('real names');
     expect(snapshot.knownLimitations.join('\n')).toContain('service worker');
     expect(snapshot.knownLimitations).toContain('raw RGBA is currently summary-only in Studio');

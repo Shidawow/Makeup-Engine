@@ -101,3 +101,13 @@
   state, privacy/scope risk, raw image references, object URLs, base64, local
   image paths, real personal data, product shade claims, medical claims,
   unsupported final claims, and UserAppTemplatePackage mutation markers.
+- Phase 10D candidate-to-app contract preparation is a local administrator
+  mapping preview, validation, and handoff layer only. It is not formal
+  `UserAppTemplatePackage` generation, not a user app package registry write,
+  not user app publication, not backend work, not production app readiness, and
+  not training input.
+- Phase 10D must block missing candidate validation, missing human review trace,
+  unsafe privacy trace, raw image references, local paths, object URLs, base64,
+  MediaPipe runtime asset names, personal data, product shade claims, medical
+  claims, unsupported final claims, missing region guidance, and
+  `UserAppTemplatePackage` mutation markers.

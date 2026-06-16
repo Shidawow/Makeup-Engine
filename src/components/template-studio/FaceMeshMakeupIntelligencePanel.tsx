@@ -1,6 +1,8 @@
 import type { FaceMeshRegionQaReport } from '../../vision';
 import {
   buildTemplateStudioWorkflowState,
+  createCandidateToAppPackageContractPreparation,
+  createCandidateToAppPackageHandoff,
   createTemplateLibraryCandidateHandoff,
   createTemplateLibraryCandidatePackage,
   createTemplateDraftReviewWorkflow,
@@ -9,6 +11,7 @@ import {
   MakeupAttributeCandidateReport,
   MakeupTemplateDraftReport,
   RuleBasedStepSequence,
+  validateCandidateToAppPackageContract,
   validateTemplateLibraryCandidatePackage,
 } from '../../template-engine';
 import type {
@@ -19,6 +22,7 @@ import type {
 } from '../../template-engine';
 import { TemplateDraftReviewWorkflowPanel } from './TemplateDraftReviewWorkflowPanel';
 import { TemplateLibraryCandidatePackagingPanel } from './TemplateLibraryCandidatePackagingPanel';
+import { CandidateToAppPackageContractPanel } from './CandidateToAppPackageContractPanel';
 
 export interface FaceMeshMakeupIntelligencePanelProps {
   regionQa: FaceMeshRegionQaReport | null;
@@ -94,6 +98,26 @@ export function FaceMeshMakeupIntelligencePanel({
             </p>
           </div>
         </div>
+        <div className="mt-3 grid gap-2 rounded-md border border-indigo-200 bg-indigo-50 p-3 text-sm text-indigo-900 md:grid-cols-3">
+          <div>
+            <p className="font-semibold">候选 App 包契约准备</p>
+            <p className="mt-1 text-xs leading-5">
+              Contract Preparation blocked：缺少 approved candidate package。
+            </p>
+          </div>
+          <div>
+            <p className="font-semibold">App Contract Validation</p>
+            <p className="mt-1 text-xs leading-5">
+              需要 candidate validation ready、QA trace、human review trace 和 privacy trace。
+            </p>
+          </div>
+          <div>
+            <p className="font-semibold">App Package Handoff</p>
+            <p className="mt-1 text-xs leading-5">
+              不是正式 UserAppTemplatePackage，不会自动生成用户 App 模板包。
+            </p>
+          </div>
+        </div>
       </section>
     );
   }
@@ -138,6 +162,16 @@ export function FaceMeshMakeupIntelligencePanel({
   const candidateHandoff = createTemplateLibraryCandidateHandoff({
     candidatePackage,
     validation: candidateValidation,
+  });
+  const appContractPreparation = createCandidateToAppPackageContractPreparation({
+    candidatePackage,
+    candidateValidation,
+  });
+  const appContractValidation =
+    validateCandidateToAppPackageContract(appContractPreparation);
+  const appPackageHandoff = createCandidateToAppPackageHandoff({
+    preparation: appContractPreparation,
+    validation: appContractValidation,
   });
 
   return (
@@ -245,6 +279,11 @@ export function FaceMeshMakeupIntelligencePanel({
         candidatePackage={candidatePackage}
         handoff={candidateHandoff}
         validation={candidateValidation}
+      />
+      <CandidateToAppPackageContractPanel
+        handoff={appPackageHandoff}
+        preparation={appContractPreparation}
+        validation={appContractValidation}
       />
     </section>
   );

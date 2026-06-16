@@ -26,6 +26,8 @@ describe('Template Studio tab boundary', () => {
     expect(html).not.toContain('已作为模板库候选');
     expect(html).not.toContain('模板库候选包');
     expect(html).not.toContain('Candidate Handoff');
+    expect(html).not.toContain('候选 App 包契约准备');
+    expect(html).not.toContain('App Contract Validation');
   });
 
   it('tells the template workbench to return to Vision Analysis when Region QA is blocked', () => {
@@ -41,7 +43,7 @@ describe('Template Studio tab boundary', () => {
     expect(html).toContain('视觉分析质量不足，需回到视觉分析 Tab');
   });
 
-  it('renders candidates, steps, draft QA, human review, and candidate packaging in the template workbench', () => {
+  it('renders candidates, steps, draft QA, human review, candidate packaging, and app contract preparation in the template workbench', () => {
     const html = renderToStaticMarkup(
       <FaceMeshMakeupIntelligencePanel
         attributeCandidates={makeupAttributeCandidatesReadyExample}
@@ -59,8 +61,14 @@ describe('Template Studio tab boundary', () => {
     expect(html).toContain('模板库候选包');
     expect(html).toContain('Candidate Validation');
     expect(html).toContain('Candidate Handoff');
+    expect(html).toContain('候选 App 包契约准备');
+    expect(html).toContain('App Contract Validation');
+    expect(html).toContain('App Package Handoff');
+    expect(html).toContain('不是正式 UserAppTemplatePackage');
     expect(html).not.toContain('AI 已确认');
     expect(html).not.toContain('已生成正式用户模板包');
+    expect(html).not.toContain('已生成正式 UserAppTemplatePackage');
+    expect(html).not.toContain('已发布到用户 App');
     expect(html).not.toContain('发布成功');
   });
 
@@ -74,5 +82,8 @@ describe('Template Studio tab boundary', () => {
     expect(userPath).not.toContain('人工审核');
     expect(userPath).not.toContain('模板库候选包');
     expect(userPath).not.toContain('candidate packaging');
+    expect(userPath).not.toContain('候选 App 包契约准备');
+    expect(userPath).not.toContain('candidate-to-app');
+    expect(userPath).not.toContain('App Contract Validation');
   });
 });

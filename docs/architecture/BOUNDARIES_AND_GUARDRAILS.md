@@ -230,3 +230,26 @@ Candidate handoff can recommend candidate library review, copy polish, region
 fix, step revision, privacy review, example-only retention, or blocking. It
 cannot publish, cannot write a formal library entry, and cannot generate
 `UserAppTemplatePackage`.
+
+## Phase 10D Candidate-to-App Package Contract Preparation Boundary
+
+Phase 10D contract preparation, validation, mapping preview, and handoff are
+local administrator aids only. They must not become formal
+`UserAppTemplatePackage` generation, a user app package registry write, user app
+publication, backend records, production app behavior, AI approval, training
+approval, or App Store/TestFlight readiness.
+
+Candidate-to-app preparation can preserve title, summary, style tags,
+difficulty, estimated time, suitable scenarios, tools, product placeholders,
+reviewed steps, region guidance, QA trace, human review trace, privacy trace,
+and candidate lineage as preview mappings. It cannot contain raw image
+references, base64, object URLs, local paths, MediaPipe runtime assets, real
+personal data, health data, contact data, biometric data, product shade claims,
+medical claims, unsupported final claims, or `UserAppTemplatePackage` mutation
+markers.
+
+Candidate-to-app handoff can recommend user app package draft preview, copy
+polish, step revision, region guidance revision, privacy review,
+template-library-candidate-only retention, or blocking. It cannot generate a
+formal `UserAppTemplatePackage`, cannot publish to the user app, and cannot
+write a user app package registry.

@@ -2,16 +2,16 @@
 
 ## Current Phase
 
-Phase 10C: Template Library Candidate Packaging is complete.
+Phase 10D: Candidate-to-App Package Contract Preparation is complete.
 
-Last completed business phase: Phase 10C.
+Last completed business phase: Phase 10D.
 
-Next recommended phase: Phase 10D, Candidate-to-App Package Contract Preparation.
+Next recommended phase: Phase 10E, User App Package Draft Preview.
 
-Phase 10C turns Phase 10B approved template library candidates into local,
-verifiable Template Library Candidate Packages with validation and handoff,
-while keeping them separate from publication, formal Template Library writes,
-and automatic `UserAppTemplatePackage` generation.
+Phase 10D turns Phase 10C candidate packages into local candidate-to-app
+contract preparation previews with validation and handoff, while keeping them
+separate from publication, app package registry writes, and automatic formal
+`UserAppTemplatePackage` generation.
 
 ## What The System Can Do
 
@@ -33,6 +33,17 @@ and automatic `UserAppTemplatePackage` generation.
 - Generate local candidate handoff next actions for candidate library review,
   copy polish, region fix, step revision, privacy review, example-only, or
   blocked package.
+- Prepare candidate-to-app mapping previews for title, summary, tags,
+  difficulty, duration, scenarios, tools, product placeholders, step sequence,
+  region guidance, privacy trace, QA trace, human review trace, and candidate
+  lineage.
+- Validate app contract preparation for source candidate readiness, required
+  mappings, no raw image references, no personal data, no automatic publish, no
+  `UserAppTemplatePackage` mutation, trace preservation, and JSON round-trip
+  stability.
+- Generate local candidate-to-app handoff next actions for user app package
+  draft preview, copy polish, step revision, region guidance revision, privacy
+  review, template-library-candidate-only retention, or blocked preparation.
 - Render a compact Template Studio workflow stepper, next-action card,
   blocked-reason card, and collapsible details.
 - Keep ordinary User App Shell paths separate from administrator-only vision,
@@ -50,6 +61,8 @@ and automatic `UserAppTemplatePackage` generation.
 - It cannot generate or mutate `UserAppTemplatePackage` from FaceMesh QA,
   candidates, generated steps, draft QA, human review, candidate handoff, or
   candidate package handoff.
+- It cannot treat candidate-to-app contract preparation as formal
+  `UserAppTemplatePackage` generation or a user app package registry write.
 - It cannot collect, upload, store, or train on real user photos through the
   User App Shell.
 - It cannot request camera permissions or call browser camera APIs.
@@ -82,7 +95,7 @@ and automatic `UserAppTemplatePackage` generation.
 
 ## Recent Validation
 
-Phase 10C validation must include:
+Phase 10D validation must include:
 
 ```bash
 npm run mediapipe:check
@@ -98,8 +111,8 @@ The latest completed validation is recorded in `project-state/test-status.json`.
 
 ## Next Phase Recommendation
 
-Proceed to Phase 10D: Candidate-to-App Package Contract Preparation.
+Proceed to Phase 10E: User App Package Draft Preview.
 
-Phase 10D should prepare the explicit contract boundary between candidate
-packages and future app-facing package generation without automatically
-creating or mutating `UserAppTemplatePackage`.
+Phase 10E should preview a draft app package from validated candidate-to-app
+contract preparation without publishing, writing a registry, or creating a
+formal production app package.

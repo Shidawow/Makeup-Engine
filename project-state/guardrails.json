@@ -1,5 +1,5 @@
 {
-  "phase": "10C",
+  "phase": "10D",
   "guardrails": [
     {
       "id": "source-image-not-training-data",
@@ -556,6 +556,22 @@
     {
       "id": "phase_10c_block_unsafe_payloads",
       "rule": "Phase 10C must block raw image references, object URLs, base64, local paths, personal data, final claims, medical claims, shade claims, and privacy/scope risk."
+    },
+    {
+      "id": "phase_10d_preview_only",
+      "rule": "Phase 10D candidate-to-app preparation is mapping preview only and cannot become formal UserAppTemplatePackage generation."
+    },
+    {
+      "id": "phase_10d_no_registry_write",
+      "rule": "Phase 10D cannot write a user app package registry or publish to the user app."
+    },
+    {
+      "id": "phase_10d_preserve_trace",
+      "rule": "Phase 10D must preserve QA trace, human review trace, privacy trace, and candidate lineage."
+    },
+    {
+      "id": "phase_10d_block_unsafe_payloads",
+      "rule": "Phase 10D blocks raw image references, local paths, object URLs, base64, MediaPipe asset names, personal data, final claims, medical claims, shade claims, and UserAppTemplatePackage mutation markers."
     }
   ],
   "legacyFrozenModules": [

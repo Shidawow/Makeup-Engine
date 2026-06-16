@@ -133,6 +133,23 @@ summary. Candidate packaging does not appear in Vision Analysis and does not
 publish, write the formal Template Library, generate `UserAppTemplatePackage`,
 call backend/API services, or train models.
 
+### Candidate-to-App Package Contract Preparation
+
+Phase 10D adds a local contract preparation layer after Phase 10C candidate
+validation. `src/template-engine/candidateToAppPackageContract.ts` creates
+mapping previews from a validated `TemplateLibraryCandidatePackage` into future
+app-facing contract fields. `candidateToAppPackageValidation.ts` checks source
+candidate readiness, required mappings, raw image boundaries, personal data
+boundaries, no automatic publish, no `UserAppTemplatePackage` mutation, trace
+preservation, and JSON round-trip safety. `candidateToAppPackageHandoff.ts`
+creates local next actions for a later User App Package Draft Preview.
+
+`src/components/template-studio/CandidateToAppPackageContractPanel.tsx` renders
+the Template Workbench contract preparation, validation, and handoff summary.
+Candidate-to-app preparation does not appear in Vision Analysis and does not
+generate a formal `UserAppTemplatePackage`, write a user app package registry,
+publish to the user app, call backend/API services, or train models.
+
 ### Vision Analysis
 
 `src/vision` owns local face, cosmetic, pixel, region, quality, provider, and pipeline logic. It consumes `TemplateAnalysisSeed` records when they are ready for Vision Analysis.

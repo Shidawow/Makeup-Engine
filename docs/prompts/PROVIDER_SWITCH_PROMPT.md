@@ -6,11 +6,13 @@ Default to compact context. Do not copy full historical chat transcripts. Do not
 
 ## Current State
 
-- `lastCompletedPhase: 10C`
-- `nextRecommendedPhase: 10D`
-- `nextRecommendedPhaseName: Candidate-to-App Package Contract Preparation`
+- `lastCompletedPhase: 10D`
+- `nextRecommendedPhase: 10E`
+- `nextRecommendedPhaseName: User App Package Draft Preview`
 - Project role: Makeup template production system with a local contract-driven user app shell prototype, not a production user app.
-- Current capability: Phase 10C - Template Library Candidate Packaging adds local candidate package, validation, and handoff after Phase 10B approval while preserving no-publish, no-formal-library-write, and no-auto-UserAppTemplatePackage boundaries.
+- Current capability: Phase 10D - Candidate-to-App Package Contract Preparation adds local mapping preview, validation, and handoff after Phase 10C candidate validation while preserving no-publish, no-registry-write, and no-formal-UserAppTemplatePackage boundaries.
+
+Historical handoff marker retained for Phase 10C recovery tests: `lastCompletedPhase: 10C`, `nextRecommendedPhase: 10D`.
 
 Historical handoff marker retained for recovery tests: `lastCompletedPhase: 8A`, `nextRecommendedPhase: 8B`.
 Historical handoff marker retained for Phase 8B recovery tests: `lastCompletedPhase: 8B`, `nextRecommendedPhase: 8C`.
@@ -41,11 +43,11 @@ Historical handoff marker retained for Phase 9J recovery tests: `lastCompletedPh
 You are continuing Makeup Engine on native GPT / Codex Desktop.
 
 Current state:
-- lastCompletedPhase: 10C
-- nextRecommendedPhase: 10D
-- nextRecommendedPhaseName: Candidate-to-App Package Contract Preparation
+- lastCompletedPhase: 10D
+- nextRecommendedPhase: 10E
+- nextRecommendedPhaseName: User App Package Draft Preview
 - project role: Makeup template production system with a local contract-driven user app shell prototype, not a production user app
-- current capability: React Web / PWA MVP first is selected; Phases 8B through 9J are complete; Phase 10A FaceMesh-driven Makeup Intelligence Baseline, Phase 10B Template Draft Review Workflow, and Phase 10C Template Library Candidate Packaging are complete with local FaceMesh region QA, candidate attributes, rule-based draft steps, draft QA, human review, candidate package validation, candidate handoff, and clear Vision Analysis / Template Workbench boundaries; Makeup Engine remains the template production system and the future user-facing app should be planned separately
+- current capability: React Web / PWA MVP first is selected; Phases 8B through 9J are complete; Phase 10A FaceMesh-driven Makeup Intelligence Baseline, Phase 10B Template Draft Review Workflow, Phase 10C Template Library Candidate Packaging, and Phase 10D Candidate-to-App Package Contract Preparation are complete with local FaceMesh region QA, candidate attributes, rule-based draft steps, draft QA, human review, candidate package validation, candidate handoff, app contract mapping preview, app contract validation, app package handoff, and clear Vision Analysis / Template Workbench boundaries; Makeup Engine remains the template production system and the future user-facing app should be planned separately
 
 Compact context:
 - Use repository documents as source of truth; do not copy full historical chat.
@@ -106,6 +108,10 @@ Read these files first:
 48. docs/product/makeup-attribute-candidate-baseline.md
 49. docs/product/rule-based-template-draft-baseline.md
 50. docs/phases/phase-10A.md
+51. docs/product/candidate-to-app-package-contract-preparation.md
+52. docs/product/candidate-to-app-package-validation.md
+53. docs/product/candidate-to-app-package-handoff.md
+54. docs/phases/phase-10D.md
 51. docs/user-app/user-app-browser-mobile-qa.md
 21. docs/user-app/user-app-e2e-readiness.md
 22. docs/user-app/user-app-mobile-interaction-qa.md
@@ -144,6 +150,7 @@ Forbidden:
 - Do not treat the Phase 9D internal trial learning decision gate as production analytics, production app approval, backend collection, AI analysis, training, public recruitment, production roadmap approval, or production release approval.
 - Do not treat the Phase 9E internal trial evidence pack, evidence summary, or sufficiency gate as production analytics, backend evidence collection, AI analysis, training, public recruitment, production app approval, or production release approval.
 - Do not treat the Phase 9F evidence collection protocol, checklist, or quality gate as real data collection, production analytics, backend evidence collection, AI analysis, training, MVP validation approval, public recruitment, production app approval, or production release approval.
+- Do not treat Phase 10D candidate-to-app contract preparation as formal UserAppTemplatePackage generation, a user app package registry write, user app publication, production app readiness, backend work, AI API work, or training approval.
 - Do not add service worker, offline cache, push notification, background sync, install tracking, analytics, backend, camera, AR, external API, native app, training, online publication, or app store release work unless a future explicit phase gate expands scope.
 - Do not build or bootstrap the separate production user app repository unless a future explicit phase gate expands scope.
 - Do not add real camera capture, AR, backend, database, account systems, cloud sync, analytics, ecommerce, community, paid features, online publishing, training, native iOS, React Native, Flutter, app store release work, or new runtime dependencies.

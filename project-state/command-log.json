@@ -173,13 +173,73 @@
       "status": "passed",
       "phase": "10C",
       "notes": "Phase 10C JSON context pack command passed."
+    },
+    {
+      "command": "npm run test -- tests/candidate-to-app-package-contract.test.ts tests/candidate-to-app-package-validation.test.ts tests/candidate-to-app-package-handoff.test.ts tests/candidate-to-app-package-panels.test.tsx tests/template-studio-tab-boundary.test.tsx",
+      "status": "passed",
+      "phase": "10D",
+      "notes": "Initial Phase 10D model, panel, and tab boundary tests passed."
+    },
+    {
+      "command": "npm run mediapipe:check",
+      "status": "passed",
+      "phase": "10D",
+      "notes": "Phase 10D MediaPipe local asset check passed."
+    },
+    {
+      "command": "npm run typecheck",
+      "status": "passed",
+      "phase": "10D",
+      "notes": "Phase 10D typecheck passed."
+    },
+    {
+      "command": "npm run build",
+      "status": "passed",
+      "phase": "10D",
+      "notes": "Phase 10D build passed with existing chunk-size warning."
+    },
+    {
+      "command": "npm run test -- tests/candidate-to-app-package-contract.test.ts tests/candidate-to-app-package-validation.test.ts tests/candidate-to-app-package-handoff.test.ts tests/candidate-to-app-package-panels.test.tsx tests/phase-10D-documentation-recovery.test.ts tests/template-library-candidate-package.test.ts tests/template-library-candidate-panels.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
+      "status": "passed",
+      "phase": "10D",
+      "notes": "10 files / 39 tests passed."
+    },
+    {
+      "command": "Browser verification for Phase 10D Template Studio tabs",
+      "status": "passed",
+      "phase": "10D",
+      "notes": "Vision Analysis does not show candidate-to-app contract; Template Workbench shows preparation, validation, handoff, blocked state, and no forbidden publish/package copy."
+    },
+    {
+      "command": "npm run project:status",
+      "status": "passed",
+      "phase": "10D",
+      "notes": "Phase 10D final project status command passed."
+    },
+    {
+      "command": "npm run project:context",
+      "status": "passed",
+      "phase": "10D",
+      "notes": "Phase 10D final project context command passed."
+    },
+    {
+      "command": "node scripts/project-status.mjs --json",
+      "status": "passed",
+      "phase": "10D",
+      "notes": "Phase 10D JSON project status command passed."
+    },
+    {
+      "command": "node scripts/context-pack.mjs --json",
+      "status": "passed",
+      "phase": "10D",
+      "notes": "Phase 10D JSON context pack command passed."
     }
   ],
-  "lastUpdatedPhase": "10C",
-  "phase": "10C",
-  "lastCompletedPhase": "10C",
-  "currentPhase": "10C",
-  "nextRecommendedPhase": "10D",
+  "lastUpdatedPhase": "10D",
+  "phase": "10D",
+  "lastCompletedPhase": "10D",
+  "currentPhase": "10D",
+  "nextRecommendedPhase": "10E",
   "updatedAt": "2026-06-16T00:00:00.000+08:00",
   "lastValidation": {
     "mediapipeCheck": "passed",
@@ -191,12 +251,12 @@
     "projectContext": "passed",
     "contextPackJson": "passed",
     "browserVerification": "passed",
-    "phase10CScopedTests": "passed",
+    "phase10DScopedTests": "passed",
     "testFiles": 10,
-    "tests": 37,
-    "phase10CScopedTestFiles": 10,
-    "phase10CScopedTestsCount": 37,
-    "summary": "Phase 10C validation passed: mediapipe:check, scoped Phase 10C tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
+    "tests": 39,
+    "phase10DScopedTestFiles": 10,
+    "phase10DScopedTestsCount": 39,
+    "summary": "Phase 10D validation passed: mediapipe:check, scoped Phase 10D tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
     "updatedAt": "2026-06-16T00:00:00.000+08:00"
   },
   "validation": {
@@ -209,14 +269,14 @@
     "projectContext": "passed",
     "contextPackJson": "passed",
     "browserVerification": "passed",
-    "phase10CScopedTests": "passed",
+    "phase10DScopedTests": "passed",
     "testFiles": 10,
-    "tests": 37,
-    "phase10CScopedTestFiles": 10,
-    "phase10CScopedTestsCount": 37,
-    "summary": "Phase 10C validation passed: mediapipe:check, scoped Phase 10C tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
+    "tests": 39,
+    "phase10DScopedTestFiles": 10,
+    "phase10DScopedTestsCount": 39,
+    "summary": "Phase 10D validation passed: mediapipe:check, scoped Phase 10D tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
     "updatedAt": "2026-06-16T00:00:00.000+08:00"
   },
   "status": "passed",
-  "summary": "Phase 10C validation passed: mediapipe:check, scoped Phase 10C tests, typecheck, build, browser verification, project status/context, and JSON status/context commands."
+  "summary": "Phase 10D validation passed: mediapipe:check, scoped Phase 10D tests, typecheck, build, browser verification, project status/context, and JSON status/context commands."
 }

@@ -15,8 +15,9 @@ describe('MediaPipe fallback copy', () => {
     expect(html).toContain('MediaPipe 本地资源要求');
     expect(html).toContain('public/mediapipe/face_landmarker.task');
     expect(html).toContain('public/mediapipe/wasm/vision_wasm_internal.js');
-    expect(html).toContain('自动 fallback 到 mock vision provider');
-    expect(html).toContain('MediaPipe model/wasm 文件放回 public/mediapipe');
+    expect(html).toContain('资源缺失');
+    expect(html).toContain('MediaPipe model/wasm 文件已放回 public/mediapipe');
+    expect(html).not.toContain('自动 fallback 到 mock vision provider');
     expect(html).not.toContain('模板工作台分析失败。');
   });
 
@@ -26,8 +27,9 @@ describe('MediaPipe fallback copy', () => {
     expect(html).toContain('真实 FaceMesh 需要');
     expect(html).toContain('public/mediapipe/face_landmarker.task');
     expect(html).toContain('public/mediapipe/wasm/vision_wasm_internal.js');
-    expect(html).toContain('localhost 开发环境会自动 fallback 到 mock vision provider');
-    expect(html).toContain('MediaPipe model/wasm 文件放回 public/mediapipe');
+    expect(html).toContain('资源缺失时页面会显示明确错误原因和恢复说明');
+    expect(html).toContain('MediaPipe model/wasm 文件已放回 public/mediapipe');
+    expect(html).not.toContain('localhost 开发环境会自动 fallback 到 mock vision provider');
     expect(html).not.toContain('FaceMesh 分析失败。');
   });
 

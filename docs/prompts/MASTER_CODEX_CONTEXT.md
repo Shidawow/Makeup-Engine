@@ -12,10 +12,10 @@ It produces templates, template evidence, correction records, review state, loca
 
 ## Current Phase
 
-- Current business phase: `Phase 10C completed`
-- Last completed phase: `Phase 10C`
-- Last completed phase name: `Phase 10C - Template Library Candidate Packaging`
-- Next recommended phase: `Phase 10D - Candidate-to-App Package Contract Preparation`
+- Current business phase: `Phase 10D completed`
+- Last completed phase: `Phase 10D`
+- Last completed phase name: `Phase 10D - Candidate-to-App Package Contract Preparation`
+- Next recommended phase: `Phase 10E - User App Package Draft Preview`
 
 Historical recovery marker retained for Phase 9C tests: `Phase 9C completed`.
 Historical recovery marker retained for Phase 9E tests: `Phase 9E completed`.
@@ -78,6 +78,7 @@ Real Photo
 -> FaceMesh-driven Makeup Intelligence Baseline
 -> Template Draft Review Workflow
 -> Template Library Candidate Packaging
+-> Candidate-to-App Package Contract Preparation
 -> Phase 8 Roadmap / V1 Non-Goals
 -> User App Consumption Manifest
 -> Dataset Review
@@ -101,6 +102,13 @@ Important boundary: `SourceImagePackage` can enter Vision Analysis through opera
   candidate package, validation, and handoff logic after Phase 10B human
   approval. They do not publish, write the formal Template Library, or generate
   `UserAppTemplatePackage`.
+- `src/template-engine/candidateToAppPackageContract.ts`,
+  `src/template-engine/candidateToAppPackageValidation.ts`, and
+  `src/template-engine/candidateToAppPackageHandoff.ts`: Phase 10D local
+  candidate-to-app contract preparation, validation, and handoff logic after
+  Phase 10C candidate validation. They create mapping previews only and do not
+  generate formal `UserAppTemplatePackage`, publish, write a user app package
+  registry, or train models.
 - `src/templates`: schemas, storage, review, corrections, evidence, dataset materialization, source image binding, production batch storage/export, template library storage, and publish package export.
 - `src/template-engine/production`: production queue, state machine, QA rules, rebinding recovery, analysis handoff, review lifecycle, smoke checklist.
 - `src/template-engine/library`: production task to library entry conversion, template versioning, and local library lifecycle.
@@ -210,6 +218,7 @@ These areas are retained for compatibility and historical runtime work, but they
 - Phase 9G anonymous internal trial dry run adds only local rehearsal pack, checklist, participant notice, stop conditions, and review structures; it is not real trial launch, backend evidence storage, public recruitment, AI analysis, training, MVP validation approval, production app approval, or production release approval.
 - Phase 9H completed anonymous internal trial launch pack only, not public recruitment, production launch, backend collection, AI analysis, training, or MVP validation planning.
 - Phase 9I anonymous internal trial evidence review adds only local anonymous evidence review, gap review, and decision input structures; it is not production analytics, backend evidence collection, AI analysis, training, public recruitment, MVP validation approval, production app approval, or production release approval.
+- Phase 10D candidate-to-app contract preparation adds only local mapping preview, validation, and handoff structures. It is not formal `UserAppTemplatePackage` generation, user app package registry writing, user app publication, production app readiness, backend work, OpenAI/external API usage, camera/AR work, or training.
 - Future production user-facing app work should be planned as a separate app surface or repository after an explicit phase gate. Makeup Engine remains the template production system and `UserAppTemplatePackage` remains the handoff contract.
 - User photo data, face embeddings, biometric identifiers, sensitive profile data, and user photo references must not enter durable export, training, model artifacts, or project-state.
 - User app consumption exports cannot persist object URLs, local absolute paths, large image bytes, or React state.

@@ -16,7 +16,7 @@ export function VisionAnalysisReadinessSummary({
       <section className="rounded-lg border border-stone-200 bg-white p-4 shadow-soft">
         <h2 className="text-base font-semibold">视觉分析 readiness</h2>
         <p className="mt-2 text-sm text-stone-500">
-          上传图片并运行 FaceMesh 后，这里只汇总图像理解、区域 QA、图片质量和 mock fallback 状态。
+          上传图片并运行 FaceMesh 后，这里只汇总图像理解、区域 QA、图片质量和 runtime 状态。
         </p>
       </section>
     );

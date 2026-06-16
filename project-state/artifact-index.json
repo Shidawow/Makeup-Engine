@@ -78,7 +78,8 @@
     "Phase 10A FaceMesh region QA, attribute candidates, rule-based steps, and template draft reports are local draft metadata, not backend records, user app contract exports, automatic publishing, or training input.",
     "public/mediapipe .task and .wasm files are local ignored runtime assets and must not be committed.",
     "Phase 10B TemplateDraftQaResult, TemplateDraftHumanReview, TemplateDraftReviewWorkflow, and TemplateStudioWorkflowState are local admin review metadata, not backend records, final recognition, automatic publishing, UserAppTemplatePackage generation, or training input.",
-    "Phase 10C TemplateLibraryCandidatePackage, TemplateLibraryCandidateValidationResult, and TemplateLibraryCandidateHandoff are local admin packaging metadata, not published templates, formal Template Library writes, UserAppTemplatePackage exports, backend records, or training input."
+    "Phase 10C TemplateLibraryCandidatePackage, TemplateLibraryCandidateValidationResult, and TemplateLibraryCandidateHandoff are local admin packaging metadata, not published templates, formal Template Library writes, UserAppTemplatePackage exports, backend records, or training input.",
+    "Phase 10D CandidateToAppPackageContractPreparation, CandidateToAppPackageValidationResult, and CandidateToAppPackageHandoff are local admin mapping preview metadata, not formal UserAppTemplatePackage exports, user app package registry writes, backend records, or training input."
   ],
   "materializedDatasetOutputs": [
     "tmp/datasets/realistic-synthetic-png-image-v0/package.json",
@@ -140,7 +141,11 @@
     "docs/product/template-library-candidate-package.md",
     "docs/product/template-library-candidate-validation.md",
     "docs/product/template-library-candidate-handoff.md",
-    "docs/phases/phase-10C.md"
+    "docs/phases/phase-10C.md",
+    "docs/product/candidate-to-app-package-contract-preparation.md",
+    "docs/product/candidate-to-app-package-validation.md",
+    "docs/product/candidate-to-app-package-handoff.md",
+    "docs/phases/phase-10D.md"
   ],
   "userAppConsumptionOutputs": [
     "UserAppTemplatePackage JSON",
@@ -474,5 +479,12 @@
     "TemplateLibraryCandidateValidationResult metadata",
     "TemplateLibraryCandidateHandoff metadata",
     "Template Library Candidate Packaging admin panel summary"
+  ],
+  "candidateToAppPackageContractOutputs": [
+    "CandidateToAppPackageContractPreparation metadata",
+    "CandidateToAppPackageFieldMapping preview metadata",
+    "CandidateToAppPackageValidationResult metadata",
+    "CandidateToAppPackageHandoff metadata",
+    "Candidate-to-App Contract Preparation UI preview"
   ]
 }

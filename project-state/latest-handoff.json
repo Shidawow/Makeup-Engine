@@ -1,7 +1,7 @@
 {
-  "fromPhase": "10C",
-  "toPhase": "10D",
-  "summary": "Phase 10C completed Template Library Candidate Packaging with local candidate packages, validation, handoff, fixtures, UI, docs, and scoped tests.",
+  "fromPhase": "10D",
+  "toPhase": "10E",
+  "summary": "Phase 10D completed Candidate-to-App Package Contract Preparation with mapping preview, validation, handoff, fixtures, UI, docs, and scoped tests pending final validation.",
   "routeDecision": {
     "selectedRoute": "React Web / PWA MVP first",
     "futureAppOwnership": "separate user-facing app surface/repository after a future explicit phase gate",
@@ -139,9 +139,13 @@
     "docs/product/template-library-candidate-package.md",
     "docs/product/template-library-candidate-validation.md",
     "docs/product/template-library-candidate-handoff.md",
-    "docs/phases/phase-10C.md"
+    "docs/phases/phase-10C.md",
+    "docs/product/candidate-to-app-package-contract-preparation.md",
+    "docs/product/candidate-to-app-package-validation.md",
+    "docs/product/candidate-to-app-package-handoff.md",
+    "docs/phases/phase-10D.md"
   ],
-  "nextAction": "Proceed to Phase 10D: Candidate-to-App Package Contract Preparation.",
+  "nextAction": "Proceed to Phase 10E: User App Package Draft Preview.",
   "risks": [
     "Letting Phase 9F become real data collection instead of local anonymous preparation",
     "Collecting real names, contact information, photos, health data, sensitive identity data, analytics records, backend records, AI analysis records, upload data, or training data before a future explicit approval gate",
@@ -384,5 +388,9 @@
     "validationBoundary": "Validation blocks missing approval, QA blocked state, privacy risk, raw image references, final/medical/shade claims, and UserAppTemplatePackage mutation markers.",
     "handoffBoundary": "Handoff is for candidate library review or revision only and does not write formal Template Library or generate UserAppTemplatePackage.",
     "nextPhase": "Phase 10D - Candidate-to-App Package Contract Preparation"
+  },
+  "candidateToAppPackageContractDecision": {
+    "nextPhase": "Phase 10E - User App Package Draft Preview",
+    "boundary": "10D prepares preview mappings only and does not generate formal UserAppTemplatePackage."
   }
 }

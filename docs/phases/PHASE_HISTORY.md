@@ -2,6 +2,40 @@
 
 This history is a recovery summary based on current project reports, current source layout, tests, and documentation. Earlier phase details are summarized when exact original phase reports are not available.
 
+## Phase 10D
+
+Added local Candidate-to-App Package Contract Preparation after Phase 10C
+candidate validation.
+
+What changed:
+
+- Added candidate-to-app contract preparation mapping previews for title,
+  summary, style tags, difficulty, estimated time, scenarios, tools, product
+  placeholders, steps, region guidance, privacy trace, QA trace, human review
+  trace, and candidate lineage.
+- Added validation for source candidate readiness, required mappings, no raw
+  image references, no personal data, no automatic publish, no user app package
+  mutation, contract boundary safety, trace preservation, and JSON round-trip
+  safety.
+- Added app package handoff next actions for user app package draft preview,
+  copy polish, step revision, region guidance revision, privacy review,
+  candidate-only retention, and blocked preparation.
+- Added compact Template Workbench UI for contract preparation / validation /
+  handoff without putting candidate-to-app preparation in Vision Analysis.
+
+What still cannot happen:
+
+- Contract preparation is not formal `UserAppTemplatePackage` generation.
+- Contract preparation does not write a user app package registry.
+- Contract preparation does not publish to the user app.
+- No backend, camera, AR, OpenAI/external API, training, or committed MediaPipe
+  runtime assets.
+
+Why Phase 10E follows:
+
+Validated candidate-to-app contract preparation can feed a later User App
+Package Draft Preview while still avoiding formal package generation.
+
 ## Phase 10C
 
 Added local Template Library Candidate Packaging after the Phase 10B human

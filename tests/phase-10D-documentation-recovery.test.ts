@@ -14,8 +14,8 @@ interface ProjectSnapshot {
   recoveryEntryFiles: string[];
   knownLimitations: string[];
   forbiddenActions: string[];
-  templateLibraryCandidatePackagingDecision: {
-    packageBoundary: string;
+  candidateToAppPackageContractDecision: {
+    preparationBoundary: string;
     validationBoundary: string;
     handoffBoundary: string;
     nextPhase: string;
@@ -35,9 +35,6 @@ interface LatestHandoff {
   fromPhase: string;
   toPhase: string;
   nextAction: string;
-  templateLibraryCandidatePackagingDecision: {
-    nextPhase: string;
-  };
   candidateToAppPackageContractDecision: {
     nextPhase: string;
   };
@@ -48,29 +45,29 @@ interface GuardrailState {
   guardrails: Array<{ id: string; rule: string }>;
 }
 
-describe('Phase 10C documentation recovery', () => {
-  it('documents candidate packaging without publish or app package scope creep', () => {
-    expect(readText('docs/product/template-library-candidate-package.md')).toContain(
-      'Template Library Candidate Package',
+describe('Phase 10D documentation recovery', () => {
+  it('documents candidate-to-app contract preparation without app package generation scope creep', () => {
+    expect(readText('docs/product/candidate-to-app-package-contract-preparation.md')).toContain(
+      'Candidate-to-App Package Contract Preparation',
     );
-    expect(readText('docs/product/template-library-candidate-validation.md')).toContain(
-      'Template Library Candidate Validation',
+    expect(readText('docs/product/candidate-to-app-package-validation.md')).toContain(
+      'Candidate-to-App Package Validation',
     );
-    expect(readText('docs/product/template-library-candidate-handoff.md')).toContain(
-      'Template Library Candidate Handoff',
+    expect(readText('docs/product/candidate-to-app-package-handoff.md')).toContain(
+      'Candidate-to-App Package Handoff',
     );
-    expect(readText('docs/phases/phase-10C.md')).toContain(
-      'Template Library Candidate Packaging',
+    expect(readText('docs/phases/phase-10D.md')).toContain(
+      'Candidate-to-App Package Contract Preparation',
     );
     expect(readText('docs/status/NEXT_ACTION.md')).toContain('Phase 10E');
-    expect(readText('docs/prompts/PROVIDER_SWITCH_PROMPT.md')).toContain(
-      'Historical handoff marker retained for Phase 10C recovery tests',
+    expect(readText('docs/prompts/MASTER_CODEX_CONTEXT.md')).toContain(
+      'Phase 10D completed',
     );
     expect(readText('docs/prompts/PROVIDER_SWITCH_PROMPT.md')).toContain(
-      'lastCompletedPhase: 10C',
+      'lastCompletedPhase: 10D',
     );
     expect(readText('docs/prompts/PROVIDER_SWITCH_PROMPT.md')).toContain(
-      'nextRecommendedPhase: 10D',
+      'nextRecommendedPhase: 10E',
     );
 
     const snapshot = readJson<ProjectSnapshot>('project-state/project-state.snapshot.json');
@@ -81,38 +78,36 @@ describe('Phase 10C documentation recovery', () => {
     expect(snapshot.nextRecommendedPhaseName).toContain('User App Package Draft Preview');
     expect(snapshot.mainDataFlow).toEqual(
       expect.arrayContaining([
-        'TemplateLibraryCandidatePackage',
-        'TemplateLibraryCandidateValidationResult',
-        'TemplateLibraryCandidateHandoff',
-        'TemplateLibraryCandidatePackagingPanel',
+        'CandidateToAppPackageContractPreparation',
+        'CandidateToAppPackageValidationResult',
+        'CandidateToAppPackageHandoff',
+        'CandidateToAppPackageContractPanel',
       ]),
     );
     expect(snapshot.recoveryEntryFiles).toContain(
-      'docs/product/template-library-candidate-package.md',
+      'docs/product/candidate-to-app-package-contract-preparation.md',
     );
-    expect(snapshot.recoveryEntryFiles).toContain('docs/phases/phase-10C.md');
-    expect(snapshot.knownLimitations.join('\n')).toContain('Phase 10C');
-    expect(snapshot.knownLimitations.join('\n')).toContain('not published templates');
-    expect(snapshot.forbiddenActions.join('\n')).toContain('UserAppTemplatePackage');
-    expect(snapshot.templateLibraryCandidatePackagingDecision.packageBoundary).toContain(
-      'not a published template',
+    expect(snapshot.recoveryEntryFiles).toContain('docs/phases/phase-10D.md');
+    expect(snapshot.knownLimitations.join('\n')).toContain('Phase 10D');
+    expect(snapshot.knownLimitations.join('\n')).toContain('not formal UserAppTemplatePackage generation');
+    expect(snapshot.forbiddenActions.join('\n')).toContain('Phase 10D');
+    expect(snapshot.candidateToAppPackageContractDecision.preparationBoundary).toContain(
+      'mapping preview only',
     );
-    expect(snapshot.templateLibraryCandidatePackagingDecision.validationBoundary).toContain(
+    expect(snapshot.candidateToAppPackageContractDecision.validationBoundary).toContain(
       'raw image references',
     );
-    expect(snapshot.templateLibraryCandidatePackagingDecision.handoffBoundary).toContain(
-      'does not write formal Template Library',
+    expect(snapshot.candidateToAppPackageContractDecision.handoffBoundary).toContain(
+      'does not publish',
     );
 
     const providerHandoff = readJson<ProviderHandoff>('project-state/provider-handoff.json');
     expect(providerHandoff.currentTask).toContain('Phase 10D');
     expect(providerHandoff.lastCompletedPhase).toBe('10D');
     expect(providerHandoff.nextRecommendedPhase).toBe('10E');
-    expect(providerHandoff.nextRecommendedPhaseName).toContain(
-      'User App Package Draft Preview',
-    );
-    expect(providerHandoff.nextRequiredReadFiles).toContain('docs/phases/phase-10C.md');
-    expect(providerHandoff.handoffNotes.join('\n')).toContain('Candidate Package');
+    expect(providerHandoff.nextRecommendedPhaseName).toContain('User App Package Draft Preview');
+    expect(providerHandoff.nextRequiredReadFiles).toContain('docs/phases/phase-10D.md');
+    expect(providerHandoff.handoffNotes.join('\n')).toContain('mapping preview only');
 
     const latestHandoff = readJson<LatestHandoff>('project-state/latest-handoff.json');
     expect(latestHandoff.fromPhase).toBe('10D');
@@ -126,10 +121,10 @@ describe('Phase 10C documentation recovery', () => {
     expect(guardrails.phase).toBe('10D');
     expect(guardrails.guardrails.map((guardrail) => guardrail.id)).toEqual(
       expect.arrayContaining([
-        'phase_10c_candidate_only',
-        'phase_10c_no_formal_library_write',
-        'phase_10c_no_user_app_package_auto_generation',
-        'phase_10c_block_unsafe_payloads',
+        'phase_10d_preview_only',
+        'phase_10d_no_registry_write',
+        'phase_10d_preserve_trace',
+        'phase_10d_block_unsafe_payloads',
       ]),
     );
   });

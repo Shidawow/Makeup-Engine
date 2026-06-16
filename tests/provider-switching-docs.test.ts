@@ -40,18 +40,22 @@ describe('provider switching docs', () => {
     expect(combined).toContain('src/intelligence/runtime');
   });
 
-  it('provides phase 10C to 10D switch templates with historical 10A, 9J, and older markers', async () => {
+  it('provides phase 10D to 10E switch templates with historical 10C, 10A, 9J, and older markers', async () => {
     const prompt = await readFile('docs/prompts/PROVIDER_SWITCH_PROMPT.md', 'utf8');
 
     expect(prompt).toContain('Switch To Native GPT / Codex Desktop');
     expect(prompt).toContain('Switch To PackyAPI + CLI');
     expect(prompt).toContain('Return From PackyAPI To ChatGPT');
-    expect(prompt).toContain('lastCompletedPhase: 10C');
-    expect(prompt).toContain('nextRecommendedPhase: 10D');
+    expect(prompt).toContain('lastCompletedPhase: 10D');
+    expect(prompt).toContain('nextRecommendedPhase: 10E');
     expect(prompt).toContain('FaceMesh-driven Makeup Intelligence Baseline');
     expect(prompt).toContain('Template Draft Review Workflow');
     expect(prompt).toContain('Template Library Candidate Packaging');
     expect(prompt).toContain('Candidate-to-App Package Contract Preparation');
+    expect(prompt).toContain('User App Package Draft Preview');
+    expect(prompt).toContain('Historical handoff marker retained for Phase 10C recovery tests');
+    expect(prompt).toContain('lastCompletedPhase: 10C');
+    expect(prompt).toContain('nextRecommendedPhase: 10D');
     expect(prompt).toContain('lastCompletedPhase: 9J');
     expect(prompt).toContain('nextRecommendedPhase: 9K');
     expect(prompt).toContain('lastCompletedPhase: 9I');

@@ -1,11 +1,11 @@
 {
   "schemaVersion": "active-task.v1",
-  "taskId": "10C",
-  "title": "Template Library Candidate Packaging",
+  "taskId": "10D",
+  "title": "Candidate-to-App Package Contract Preparation",
   "status": "passed",
   "ownerRole": "Codex",
   "createdBy": "Codex",
-  "phase": "10C",
+  "phase": "10D",
   "recommendedProfile": "native-gpt-codex-high-reasoning",
   "allowedDirectories": [
     "src/vision",
@@ -30,19 +30,19 @@
     "npm run project:context",
     "node scripts/project-status.mjs --json",
     "node scripts/context-pack.mjs --json",
-    "npm run test -- tests/template-library-candidate-package.test.ts tests/template-library-candidate-validation.test.ts tests/template-library-candidate-handoff.test.ts tests/template-library-candidate-panels.test.tsx tests/phase-10C-documentation-recovery.test.ts tests/template-draft-review-workflow.test.ts tests/template-draft-review-workflow-panel.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
+    "npm run test -- tests/candidate-to-app-package-contract.test.ts tests/candidate-to-app-package-validation.test.ts tests/candidate-to-app-package-handoff.test.ts tests/candidate-to-app-package-panels.test.tsx tests/phase-10D-documentation-recovery.test.ts tests/template-library-candidate-package.test.ts tests/template-library-candidate-panels.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
   ],
   "completionDefinition": [
-    "Phase 10C added local Template Library Candidate Package, validation, handoff, fixtures, UI, docs, and project-state updates.",
-    "Candidate packaging only accepts Phase 10B approved candidates and preserves QA/human/privacy trace.",
-    "10C did not publish, write formal Template Library, generate UserAppTemplatePackage, add backend, camera, AR, OpenAI/external APIs, training, runtime dependencies, or committed MediaPipe binaries."
+    "Phase 10D added local Candidate-to-App Package Contract Preparation, validation, handoff, fixtures, UI, docs, and project-state updates.",
+    "Contract preparation only accepts Phase 10C candidate validation ready or ready-with-warnings sources and preserves QA/human/privacy trace.",
+    "10D did not publish, write a user app package registry, generate formal UserAppTemplatePackage, add backend, camera, AR, OpenAI/external APIs, training, runtime dependencies, or committed MediaPipe binaries."
   ],
   "dependsOn": [
-    "10B Template Draft Review Workflow"
+    "10C Template Library Candidate Packaging"
   ],
   "nextRecommendedTask": {
-    "taskId": "10D",
-    "title": "Candidate-to-App Package Contract Preparation",
+    "taskId": "10E",
+    "title": "User App Package Draft Preview",
     "status": "recommended"
   },
   "updatedAt": "2026-06-16T00:00:00.000+08:00",
@@ -57,12 +57,12 @@
     "projectContext": "passed",
     "contextPackJson": "passed",
     "browserVerification": "passed",
-    "phase10CScopedTests": "passed",
+    "phase10DScopedTests": "passed",
     "testFiles": 10,
-    "tests": 37,
-    "phase10CScopedTestFiles": 10,
-    "phase10CScopedTestsCount": 37,
-    "summary": "Phase 10C validation passed: mediapipe:check, scoped Phase 10C tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
+    "tests": 39,
+    "phase10DScopedTestFiles": 10,
+    "phase10DScopedTestsCount": 39,
+    "summary": "Phase 10D validation passed: mediapipe:check, scoped Phase 10D tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
     "updatedAt": "2026-06-16T00:00:00.000+08:00"
   },
   "validation": {
@@ -75,13 +75,13 @@
     "projectContext": "passed",
     "contextPackJson": "passed",
     "browserVerification": "passed",
-    "phase10CScopedTests": "passed",
+    "phase10DScopedTests": "passed",
     "testFiles": 10,
-    "tests": 37,
-    "phase10CScopedTestFiles": 10,
-    "phase10CScopedTestsCount": 37,
-    "summary": "Phase 10C validation passed: mediapipe:check, scoped Phase 10C tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
+    "tests": 39,
+    "phase10DScopedTestFiles": 10,
+    "phase10DScopedTestsCount": 39,
+    "summary": "Phase 10D validation passed: mediapipe:check, scoped Phase 10D tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
     "updatedAt": "2026-06-16T00:00:00.000+08:00"
   },
-  "summary": "Phase 10C validation passed: mediapipe:check, scoped Phase 10C tests, typecheck, build, browser verification, project status/context, and JSON status/context commands."
+  "summary": "Phase 10D validation passed: mediapipe:check, scoped Phase 10D tests, typecheck, build, browser verification, project status/context, and JSON status/context commands."
 }
