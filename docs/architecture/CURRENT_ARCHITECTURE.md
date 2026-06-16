@@ -112,7 +112,26 @@ creates a draft-only `MakeupTemplate` with publishing blocked and human review
 required. `src/components/template-studio/FaceMeshMakeupIntelligencePanel.tsx`
 renders the administrator panel. Phase 10A does not publish drafts, mutate
 `UserAppTemplatePackage`, add backend/camera/AR/OpenAI/external APIs/training,
-or commit local MediaPipe assets.
+  or commit local MediaPipe assets.
+
+### Template Library Candidate Packaging
+
+Phase 10C adds a local candidate packaging layer after Phase 10B human review.
+`src/template-engine/templateLibraryCandidatePackage.ts` creates
+`TemplateLibraryCandidatePackage` artifacts from approved draft review workflow
+outputs. `templateLibraryCandidateValidation.ts` validates approval trace, QA
+trace, reviewed steps, region guidance, product placeholders, privacy boundary,
+raw image reference blocking, no automatic publication, no user app package
+mutation, and JSON round-trip stability. `templateLibraryCandidateHandoff.ts`
+creates local next-action summaries for candidate library review, copy polish,
+region fix, step revision, privacy review, example-only retention, or blocked
+packages.
+
+`src/components/template-studio/TemplateLibraryCandidatePackagingPanel.tsx`
+renders the Template Workbench candidate package, validation, and handoff
+summary. Candidate packaging does not appear in Vision Analysis and does not
+publish, write the formal Template Library, generate `UserAppTemplatePackage`,
+call backend/API services, or train models.
 
 ### Vision Analysis
 

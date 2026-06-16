@@ -54,3 +54,6 @@ export * from './makeup-template-draft.example';
 export * from './template-draft-qa.example';
 export * from './template-draft-human-review.example';
 export * from './template-draft-review-workflow.example';
+export * from './template-library-candidate-package.example';
+export * from './template-library-candidate-validation.example';
+export * from './template-library-candidate-handoff.example';

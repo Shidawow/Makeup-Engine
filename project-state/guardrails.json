@@ -1,5 +1,5 @@
 {
-  "phase": "10B",
+  "phase": "10C",
   "guardrails": [
     {
       "id": "source-image-not-training-data",
@@ -540,6 +540,22 @@
     {
       "id": "phase_10b_tab_boundary",
       "rule": "Vision Analysis owns image and region quality; Template Workbench owns candidates, drafts, QA, human review, and handoff."
+    },
+    {
+      "id": "phase_10c_candidate_only",
+      "rule": "TemplateLibraryCandidatePackage is candidate-only and is not a published template."
+    },
+    {
+      "id": "phase_10c_no_formal_library_write",
+      "rule": "Phase 10C must not write candidate packages into the formal Template Library automatically."
+    },
+    {
+      "id": "phase_10c_no_user_app_package_auto_generation",
+      "rule": "Phase 10C must not generate or mutate UserAppTemplatePackage."
+    },
+    {
+      "id": "phase_10c_block_unsafe_payloads",
+      "rule": "Phase 10C must block raw image references, object URLs, base64, local paths, personal data, final claims, medical claims, shade claims, and privacy/scope risk."
     }
   ],
   "legacyFrozenModules": [

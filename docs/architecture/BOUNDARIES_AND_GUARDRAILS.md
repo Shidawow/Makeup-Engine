@@ -211,3 +211,22 @@ Approve means template library candidate only. It cannot publish, cannot write a
 formal template library entry by itself, cannot generate `UserAppTemplatePackage`,
 cannot call OpenAI/external AI/CV APIs, cannot train models, and cannot persist
 real user data.
+
+## Phase 10C Template Library Candidate Packaging Boundary
+
+Phase 10C candidate package, validation, and handoff are local administrator
+packaging aids only. They must not become published templates, formal Template
+Library writes, backend records, production app behavior, AI approval, training
+approval, or App Store/TestFlight readiness.
+
+Candidate packages can preserve QA trace, human review trace, reviewed
+candidate attributes, reviewed draft steps, privacy trace, warnings, and
+blocked reasons. They cannot contain image bytes, base64, object URLs, local
+image paths, real personal data, health data, contact data, biometric data,
+MediaPipe runtime assets, product shade claims, medical claims, unsupported
+final claims, or `UserAppTemplatePackage` mutation markers.
+
+Candidate handoff can recommend candidate library review, copy polish, region
+fix, step revision, privacy review, example-only retention, or blocking. It
+cannot publish, cannot write a formal library entry, and cannot generate
+`UserAppTemplatePackage`.

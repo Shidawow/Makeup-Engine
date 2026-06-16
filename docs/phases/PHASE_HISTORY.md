@@ -2,6 +2,38 @@
 
 This history is a recovery summary based on current project reports, current source layout, tests, and documentation. Earlier phase details are summarized when exact original phase reports are not available.
 
+## Phase 10C
+
+Added local Template Library Candidate Packaging after the Phase 10B human
+review workflow.
+
+What changed:
+
+- Added candidate package creation from approved Phase 10B draft workflow
+  outputs.
+- Added validation for approval trace, source draft trace, QA trace, title,
+  steps, region guidance, tools, product placeholders, privacy boundary, no raw
+  image references, no automatic publication, no user app package mutation, and
+  JSON round-trip safety.
+- Added candidate handoff next actions for candidate library review, copy
+  polish, region fix, step revision, privacy review, example-only retention, and
+  blocked package.
+- Added compact Template Workbench UI for candidate package / validation /
+  handoff without putting candidate packaging in Vision Analysis.
+
+What still cannot happen:
+
+- Candidate packages are not published templates.
+- Candidate packages do not write the formal Template Library automatically.
+- Candidate packages do not generate `UserAppTemplatePackage` automatically.
+- No backend, camera, AR, OpenAI/external API, training, or committed MediaPipe
+  runtime assets.
+
+Why Phase 10D follows:
+
+Approved and validated candidate packages now need an explicit candidate-to-app
+contract preparation boundary before any later app-facing package generation.
+
 ## Phase 10B
 
 Added the local Template Draft Review Workflow on top of the Phase 10A

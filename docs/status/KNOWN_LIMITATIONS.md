@@ -93,3 +93,11 @@
 - Phase 10B approval means template library candidate only and cannot
   automatically publish, write a formal template library entry, generate
   `UserAppTemplatePackage`, call external APIs, or enter training datasets.
+- Phase 10C template library candidate packaging is a local administrator
+  packaging, validation, and handoff layer only. Candidate packages are not
+  published templates, not formal Template Library entries, not backend records,
+  not training input, and not `UserAppTemplatePackage` exports.
+- Phase 10C candidate packages must block missing human approval, QA blocked
+  state, privacy/scope risk, raw image references, object URLs, base64, local
+  image paths, real personal data, product shade claims, medical claims,
+  unsupported final claims, and UserAppTemplatePackage mutation markers.

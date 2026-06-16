@@ -24,6 +24,8 @@ describe('Template Studio tab boundary', () => {
     expect(html).toContain('可以进入模板工作台生成/审核模板草稿。');
     expect(html).not.toContain('人工审核 checklist');
     expect(html).not.toContain('已作为模板库候选');
+    expect(html).not.toContain('模板库候选包');
+    expect(html).not.toContain('Candidate Handoff');
   });
 
   it('tells the template workbench to return to Vision Analysis when Region QA is blocked', () => {
@@ -39,7 +41,7 @@ describe('Template Studio tab boundary', () => {
     expect(html).toContain('视觉分析质量不足，需回到视觉分析 Tab');
   });
 
-  it('renders candidates, steps, draft QA, and human review in the template workbench', () => {
+  it('renders candidates, steps, draft QA, human review, and candidate packaging in the template workbench', () => {
     const html = renderToStaticMarkup(
       <FaceMeshMakeupIntelligencePanel
         attributeCandidates={makeupAttributeCandidatesReadyExample}
@@ -54,8 +56,12 @@ describe('Template Studio tab boundary', () => {
     expect(html).toContain('模板草稿摘要');
     expect(html).toContain('草稿 QA');
     expect(html).toContain('人工审核 checklist');
+    expect(html).toContain('模板库候选包');
+    expect(html).toContain('Candidate Validation');
+    expect(html).toContain('Candidate Handoff');
     expect(html).not.toContain('AI 已确认');
     expect(html).not.toContain('已生成正式用户模板包');
+    expect(html).not.toContain('发布成功');
   });
 
   it('does not expose backend review terminology in the ordinary user path', () => {
@@ -66,5 +72,7 @@ describe('Template Studio tab boundary', () => {
     expect(userPath).not.toContain('模板工作台');
     expect(userPath).not.toContain('草稿 QA');
     expect(userPath).not.toContain('人工审核');
+    expect(userPath).not.toContain('模板库候选包');
+    expect(userPath).not.toContain('candidate packaging');
   });
 });

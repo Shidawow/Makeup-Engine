@@ -77,7 +77,8 @@
     "Phase 9I anonymous internal trial evidence review, gap review, and decision input are local admin review metadata, not production analytics, backend records, real user records, AI analysis records, MVP validation approval, production release records, or training input.",
     "Phase 10A FaceMesh region QA, attribute candidates, rule-based steps, and template draft reports are local draft metadata, not backend records, user app contract exports, automatic publishing, or training input.",
     "public/mediapipe .task and .wasm files are local ignored runtime assets and must not be committed.",
-    "Phase 10B TemplateDraftQaResult, TemplateDraftHumanReview, TemplateDraftReviewWorkflow, and TemplateStudioWorkflowState are local admin review metadata, not backend records, final recognition, automatic publishing, UserAppTemplatePackage generation, or training input."
+    "Phase 10B TemplateDraftQaResult, TemplateDraftHumanReview, TemplateDraftReviewWorkflow, and TemplateStudioWorkflowState are local admin review metadata, not backend records, final recognition, automatic publishing, UserAppTemplatePackage generation, or training input.",
+    "Phase 10C TemplateLibraryCandidatePackage, TemplateLibraryCandidateValidationResult, and TemplateLibraryCandidateHandoff are local admin packaging metadata, not published templates, formal Template Library writes, UserAppTemplatePackage exports, backend records, or training input."
   ],
   "materializedDatasetOutputs": [
     "tmp/datasets/realistic-synthetic-png-image-v0/package.json",
@@ -135,7 +136,11 @@
     "docs/product/template-draft-qa.md",
     "docs/product/template-draft-human-review-workflow.md",
     "docs/product/template-draft-review-workflow.md",
-    "docs/phases/phase-10B.md"
+    "docs/phases/phase-10B.md",
+    "docs/product/template-library-candidate-package.md",
+    "docs/product/template-library-candidate-validation.md",
+    "docs/product/template-library-candidate-handoff.md",
+    "docs/phases/phase-10C.md"
   ],
   "userAppConsumptionOutputs": [
     "UserAppTemplatePackage JSON",
@@ -380,7 +385,7 @@
     "Observation template documentation",
     "Outcome review documentation"
   ],
-  "phase": "10B",
+  "phase": "10C",
   "lastCompletedPhase": "10B",
   "currentPhase": "9J",
   "nextRecommendedPhase": "10C",
@@ -463,5 +468,11 @@
     "RuleBasedStepSequence local JSON-ready metadata",
     "MakeupTemplateDraftReport local draft metadata with publishing blocked",
     "Template Studio FaceMesh makeup intelligence panel preview"
+  ],
+  "templateLibraryCandidateOutputs": [
+    "TemplateLibraryCandidatePackage JSON-safe metadata",
+    "TemplateLibraryCandidateValidationResult metadata",
+    "TemplateLibraryCandidateHandoff metadata",
+    "Template Library Candidate Packaging admin panel summary"
   ]
 }

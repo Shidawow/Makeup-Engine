@@ -1,14 +1,14 @@
 {
   "projectName": "Makeup Engine",
-  "projectRole": "Makeup template production system with completed FaceMesh-driven draft QA and human review workflow plus a local contract-driven user app shell prototype for a future separate user app MVP",
+  "projectRole": "Makeup template production system with completed Template Library Candidate Packaging plus a local contract-driven user app shell prototype for a future separate user app MVP",
   "projectIsUserFacingApp": false,
-  "lastCompletedPhase": "10B",
-  "lastCompletedBusinessPhase": "10B",
-  "currentPhase": "Template Draft Review Workflow",
-  "currentPhaseId": "10B",
-  "nextRecommendedPhase": "10C",
-  "nextRecommendedPhaseName": "Template Library Candidate Packaging",
-  "nextAction": "Proceed to Phase 10C: Template Library Candidate Packaging. Phase 10B is complete. Use FaceMesh region QA, candidate makeup attributes, rule-based draft steps, template draft QA, human review, and candidate handoff as local administrator inputs only; do not add production app, backend, database, camera capture, AR, OpenAI/external API calls, automatic publishing, training from drafts, automatic UserAppTemplatePackage generation, or committed MediaPipe binaries.",
+  "lastCompletedPhase": "10C",
+  "lastCompletedBusinessPhase": "10C",
+  "currentPhase": "Template Library Candidate Packaging",
+  "currentPhaseId": "10C",
+  "nextRecommendedPhase": "10D",
+  "nextRecommendedPhaseName": "Candidate-to-App Package Contract Preparation",
+  "nextAction": "Proceed to Phase 10D: Candidate-to-App Package Contract Preparation. Phase 10C is complete. Use candidate packages, validation, and handoff as local administrator inputs only; do not publish, write the formal Template Library, generate UserAppTemplatePackage, add backend/database/camera/AR/OpenAI/external APIs, train from candidate packages, or commit MediaPipe binaries.",
   "mainDataFlow": [
     "SourceImagePackage",
     "SourceImageEntry",
@@ -127,7 +127,11 @@
     "TemplateDraftCandidateHandoff",
     "TemplateStudioWorkflowState",
     "VisionAnalysisReadinessSummary",
-    "TemplateDraftReviewWorkflowPanel"
+    "TemplateDraftReviewWorkflowPanel",
+    "TemplateLibraryCandidatePackage",
+    "TemplateLibraryCandidateValidationResult",
+    "TemplateLibraryCandidateHandoff",
+    "TemplateLibraryCandidatePackagingPanel"
   ],
   "mainModules": [
     "src/vision",
@@ -171,12 +175,12 @@
     "projectContext": "passed",
     "contextPackJson": "passed",
     "browserVerification": "passed",
-    "phase10BScopedTests": "passed",
-    "testFiles": 12,
-    "tests": 40,
-    "phase10BScopedTestFiles": 12,
-    "phase10BScopedTestsCount": 40,
-    "summary": "Phase 10B validation passed: mediapipe:check, scoped Phase 10B tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
+    "phase10CScopedTests": "passed",
+    "testFiles": 10,
+    "tests": 37,
+    "phase10CScopedTestFiles": 10,
+    "phase10CScopedTestsCount": 37,
+    "summary": "Phase 10C validation passed: mediapipe:check, scoped Phase 10C tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
     "updatedAt": "2026-06-16T00:00:00.000+08:00"
   },
   "knownLimitations": [
@@ -243,7 +247,9 @@
     "Phase 10A FaceMesh-driven makeup intelligence is candidate/draft-only and requires human review before any template library or user app contract handoff.",
     "Phase 10A cannot mutate UserAppTemplatePackage, publish templates automatically, train on draft outputs, call external AI APIs, request camera permission, or commit public/mediapipe runtime assets.",
     "Phase 10B template draft QA and human review are local administrator workflow aids only; they are not final recognition, production publishing, backend workflow, AI approval, training approval, or production user app behavior.",
-    "Phase 10B approval means template library candidate only and cannot automatically publish, write a formal template library entry, generate UserAppTemplatePackage, call external APIs, or enter training datasets."
+    "Phase 10B approval means template library candidate only and cannot automatically publish, write a formal template library entry, generate UserAppTemplatePackage, call external APIs, or enter training datasets.",
+    "Phase 10C template library candidate packages are local administrator packaging artifacts only and are not published templates, formal Template Library entries, backend records, training input, or UserAppTemplatePackage exports.",
+    "Phase 10C candidate validation must block missing human approval, QA blocked state, privacy/scope risk, raw image references, product shade claims, medical claims, unsupported final claims, and UserAppTemplatePackage mutation markers."
   ],
   "recoveryEntryFiles": [
     "START_HERE.md",
@@ -362,7 +368,11 @@
     "docs/product/template-draft-qa.md",
     "docs/product/template-draft-human-review-workflow.md",
     "docs/product/template-draft-review-workflow.md",
-    "docs/phases/phase-10B.md"
+    "docs/phases/phase-10B.md",
+    "docs/product/template-library-candidate-package.md",
+    "docs/product/template-library-candidate-validation.md",
+    "docs/product/template-library-candidate-handoff.md",
+    "docs/phases/phase-10C.md"
   ],
   "forbiddenActions": [
     "Do not build the full production user-side app in the local admin workbench",
@@ -425,7 +435,9 @@
     "Do not stage or commit public/mediapipe .task or .wasm assets; they are local ignored runtime resources only.",
     "Do not automatically publish Phase 10B draft reviews.",
     "Do not automatically generate UserAppTemplatePackage from Phase 10B draft QA or human review.",
-    "Do not commit public/mediapipe .task or .wasm assets."
+    "Do not commit public/mediapipe .task or .wasm assets.",
+    "Do not treat Phase 10C candidate packages as published templates or formal Template Library entries.",
+    "Do not generate or mutate UserAppTemplatePackage from Phase 10C candidate packages."
   ],
   "currentPhaseName": "Anonymous Internal Trial Follow-up Iteration",
   "validation": {
@@ -438,12 +450,12 @@
     "projectContext": "passed",
     "contextPackJson": "passed",
     "browserVerification": "passed",
-    "phase10BScopedTests": "passed",
-    "testFiles": 12,
-    "tests": 40,
-    "phase10BScopedTestFiles": 12,
-    "phase10BScopedTestsCount": 40,
-    "summary": "Phase 10B validation passed: mediapipe:check, scoped Phase 10B tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
+    "phase10CScopedTests": "passed",
+    "testFiles": 10,
+    "tests": 37,
+    "phase10CScopedTestFiles": 10,
+    "phase10CScopedTestsCount": 37,
+    "summary": "Phase 10C validation passed: mediapipe:check, scoped Phase 10C tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
     "updatedAt": "2026-06-16T00:00:00.000+08:00"
   },
   "updatedAt": "2026-06-16T00:00:00.000+08:00",
@@ -509,5 +521,11 @@
     "publishBoundary": "Approval means template library candidate only; no automatic publish and no automatic UserAppTemplatePackage generation.",
     "nextPhase": "Phase 10C - Template Library Candidate Packaging"
   },
-  "summary": "Phase 10B validation passed: mediapipe:check, scoped Phase 10B tests, typecheck, build, browser verification, project status/context, and JSON status/context commands."
+  "summary": "Phase 10C validation passed: mediapipe:check, scoped Phase 10C tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
+  "templateLibraryCandidatePackagingDecision": {
+    "packageBoundary": "Candidate package is local, reviewable, and not a published template.",
+    "validationBoundary": "Validation blocks missing approval, QA blocked state, privacy risk, raw image references, final/medical/shade claims, and UserAppTemplatePackage mutation markers.",
+    "handoffBoundary": "Handoff is for candidate library review or revision only and does not write formal Template Library or generate UserAppTemplatePackage.",
+    "nextPhase": "Phase 10D - Candidate-to-App Package Contract Preparation"
+  }
 }

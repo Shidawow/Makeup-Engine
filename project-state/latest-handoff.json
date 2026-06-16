@@ -1,7 +1,7 @@
 {
-  "fromPhase": "10B",
-  "toPhase": "10C",
-  "summary": "Phase 10B completed template draft QA, human review workflow, review queue status, candidate handoff, and Vision Analysis vs Template Workbench IA split.",
+  "fromPhase": "10C",
+  "toPhase": "10D",
+  "summary": "Phase 10C completed Template Library Candidate Packaging with local candidate packages, validation, handoff, fixtures, UI, docs, and scoped tests.",
   "routeDecision": {
     "selectedRoute": "React Web / PWA MVP first",
     "futureAppOwnership": "separate user-facing app surface/repository after a future explicit phase gate",
@@ -135,9 +135,13 @@
     "docs/product/template-draft-qa.md",
     "docs/product/template-draft-human-review-workflow.md",
     "docs/product/template-draft-review-workflow.md",
-    "docs/phases/phase-10B.md"
+    "docs/phases/phase-10B.md",
+    "docs/product/template-library-candidate-package.md",
+    "docs/product/template-library-candidate-validation.md",
+    "docs/product/template-library-candidate-handoff.md",
+    "docs/phases/phase-10C.md"
   ],
-  "nextAction": "Proceed to Phase 10C: Template Library Candidate Packaging.",
+  "nextAction": "Proceed to Phase 10D: Candidate-to-App Package Contract Preparation.",
   "risks": [
     "Letting Phase 9F become real data collection instead of local anonymous preparation",
     "Collecting real names, contact information, photos, health data, sensitive identity data, analytics records, backend records, AI analysis records, upload data, or training data before a future explicit approval gate",
@@ -374,5 +378,11 @@
     "templateWorkbenchBoundary": "Template Workbench owns attribute candidates, step drafts, template draft, draft QA, human review, and candidate handoff.",
     "publishBoundary": "Approval means template library candidate only; no automatic publish and no automatic UserAppTemplatePackage generation.",
     "nextPhase": "Phase 10C - Template Library Candidate Packaging"
+  },
+  "templateLibraryCandidatePackagingDecision": {
+    "packageBoundary": "Candidate package is local, reviewable, and not a published template.",
+    "validationBoundary": "Validation blocks missing approval, QA blocked state, privacy risk, raw image references, final/medical/shade claims, and UserAppTemplatePackage mutation markers.",
+    "handoffBoundary": "Handoff is for candidate library review or revision only and does not write formal Template Library or generate UserAppTemplatePackage.",
+    "nextPhase": "Phase 10D - Candidate-to-App Package Contract Preparation"
   }
 }

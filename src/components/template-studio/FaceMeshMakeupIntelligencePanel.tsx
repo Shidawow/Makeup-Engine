@@ -1,12 +1,15 @@
 import type { FaceMeshRegionQaReport } from '../../vision';
 import {
   buildTemplateStudioWorkflowState,
+  createTemplateLibraryCandidateHandoff,
+  createTemplateLibraryCandidatePackage,
   createTemplateDraftReviewWorkflow,
   evaluateTemplateDraftHumanReview,
   evaluateTemplateDraftQa,
   MakeupAttributeCandidateReport,
   MakeupTemplateDraftReport,
   RuleBasedStepSequence,
+  validateTemplateLibraryCandidatePackage,
 } from '../../template-engine';
 import type {
   TemplateDraftHumanReview,
@@ -15,6 +18,7 @@ import type {
   TemplateStudioWorkflowReport,
 } from '../../template-engine';
 import { TemplateDraftReviewWorkflowPanel } from './TemplateDraftReviewWorkflowPanel';
+import { TemplateLibraryCandidatePackagingPanel } from './TemplateLibraryCandidatePackagingPanel';
 
 export interface FaceMeshMakeupIntelligencePanelProps {
   regionQa: FaceMeshRegionQaReport | null;
@@ -70,6 +74,26 @@ export function FaceMeshMakeupIntelligencePanel({
             空状态不会重复展示候选属性、步骤草稿或模板草稿；不会自动生成 UserAppTemplatePackage。
           </p>
         </div>
+        <div className="mt-3 grid gap-2 rounded-md border border-teal-200 bg-teal-50 p-3 text-sm text-teal-900 md:grid-cols-3">
+          <div>
+            <p className="font-semibold">模板库候选包</p>
+            <p className="mt-1 text-xs leading-5">
+              Candidate Package blocked：缺少人工审核通过结果。
+            </p>
+          </div>
+          <div>
+            <p className="font-semibold">Candidate Validation</p>
+            <p className="mt-1 text-xs leading-5">
+              需要 approved human review、QA trace 和隐私边界后才能验证。
+            </p>
+          </div>
+          <div>
+            <p className="font-semibold">Candidate Handoff</p>
+            <p className="mt-1 text-xs leading-5">
+              当前不会写正式模板库，也不是已发布模板。
+            </p>
+          </div>
+        </div>
       </section>
     );
   }
@@ -101,6 +125,20 @@ export function FaceMeshMakeupIntelligencePanel({
       humanReview: resolvedHumanReview,
       reviewWorkflow: resolvedReviewWorkflow,
     });
+  const candidatePackage = createTemplateLibraryCandidatePackage({
+    attributeCandidates,
+    stepSequence,
+    templateDraft,
+    draftQa: resolvedDraftQa,
+    humanReview: resolvedHumanReview,
+    reviewWorkflow: resolvedReviewWorkflow,
+  });
+  const candidateValidation =
+    validateTemplateLibraryCandidatePackage(candidatePackage);
+  const candidateHandoff = createTemplateLibraryCandidateHandoff({
+    candidatePackage,
+    validation: candidateValidation,
+  });
 
   return (
     <section className="grid gap-4">
@@ -202,6 +240,11 @@ export function FaceMeshMakeupIntelligencePanel({
         humanReview={resolvedHumanReview}
         reviewWorkflow={resolvedReviewWorkflow}
         studioWorkflow={resolvedStudioWorkflow}
+      />
+      <TemplateLibraryCandidatePackagingPanel
+        candidatePackage={candidatePackage}
+        handoff={candidateHandoff}
+        validation={candidateValidation}
       />
     </section>
   );

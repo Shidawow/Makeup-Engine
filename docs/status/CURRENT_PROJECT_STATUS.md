@@ -2,16 +2,16 @@
 
 ## Current Phase
 
-Phase 10B: Template Draft Review Workflow is complete.
+Phase 10C: Template Library Candidate Packaging is complete.
 
-Last completed business phase: Phase 10B.
+Last completed business phase: Phase 10C.
 
-Next recommended phase: Phase 10C, Template Library Candidate Packaging.
+Next recommended phase: Phase 10D, Candidate-to-App Package Contract Preparation.
 
-Phase 10B turns the Phase 10A FaceMesh-driven draft baseline into a clearer
-administrator workflow: Vision Analysis owns image understanding and region
-quality; Template Workbench owns candidates, draft steps, template draft QA,
-human review, and candidate handoff.
+Phase 10C turns Phase 10B approved template library candidates into local,
+verifiable Template Library Candidate Packages with validation and handoff,
+while keeping them separate from publication, formal Template Library writes,
+and automatic `UserAppTemplatePackage` generation.
 
 ## What The System Can Do
 
@@ -25,6 +25,14 @@ human review, and candidate handoff.
 - Run a local human review checklist and decision model.
 - Queue template drafts as revision, rejected, blocked, example-only, or
   approved-as-template-library-candidate.
+- Package approved candidates into local candidate packages with QA trace,
+  human review trace, privacy trace, reviewed steps, tools, and placeholders.
+- Validate candidate packages for approved review, QA trace, privacy boundary,
+  no raw image reference, no automatic publish, no user app package mutation,
+  and JSON round-trip stability.
+- Generate local candidate handoff next actions for candidate library review,
+  copy polish, region fix, step revision, privacy review, example-only, or
+  blocked package.
 - Render a compact Template Studio workflow stepper, next-action card,
   blocked-reason card, and collapsible details.
 - Keep ordinary User App Shell paths separate from administrator-only vision,
@@ -36,8 +44,12 @@ human review, and candidate handoff.
 - It cannot treat FaceMesh candidates, generated steps, or template drafts as
   final makeup recognition.
 - It cannot publish drafts automatically.
+- It cannot treat candidate packages as published templates.
+- It cannot write candidate packages into the formal Template Library
+  automatically.
 - It cannot generate or mutate `UserAppTemplatePackage` from FaceMesh QA,
-  candidates, generated steps, draft QA, human review, or candidate handoff.
+  candidates, generated steps, draft QA, human review, candidate handoff, or
+  candidate package handoff.
 - It cannot collect, upload, store, or train on real user photos through the
   User App Shell.
 - It cannot request camera permissions or call browser camera APIs.
@@ -54,7 +66,8 @@ human review, and candidate handoff.
 - `src/vision`: active local vision, FaceMesh runtime, FaceMesh region QA,
   segmentation, pixel analysis, and pipeline logic.
 - `src/template-engine`: active local template production plus Phase 10B draft
-  QA, human review, review workflow, and Template Studio workflow state.
+  QA, human review, review workflow, Template Studio workflow state, and Phase
+  10C candidate package validation/handoff.
 - `src/components/template-studio`: active operator UI with compact Vision
   Analysis to Template Workbench workflow surfaces.
 - `src/components/demo`: Vision Analysis demo with readiness summary and
@@ -69,7 +82,7 @@ human review, and candidate handoff.
 
 ## Recent Validation
 
-Phase 10B validation must include:
+Phase 10C validation must include:
 
 ```bash
 npm run mediapipe:check
@@ -85,7 +98,8 @@ The latest completed validation is recorded in `project-state/test-status.json`.
 
 ## Next Phase Recommendation
 
-Proceed to Phase 10C: Template Library Candidate Packaging.
+Proceed to Phase 10D: Candidate-to-App Package Contract Preparation.
 
-Phase 10C should package approved template library candidates without turning
-them into published templates or automatic `UserAppTemplatePackage` exports.
+Phase 10D should prepare the explicit contract boundary between candidate
+packages and future app-facing package generation without automatically
+creating or mutating `UserAppTemplatePackage`.

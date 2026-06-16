@@ -1,5 +1,5 @@
 {
-  "phase": "10B",
+  "phase": "10C",
   "status": "passed",
   "lastValidation": {
     "mediapipeCheck": "passed",
@@ -11,12 +11,12 @@
     "projectContext": "passed",
     "contextPackJson": "passed",
     "browserVerification": "passed",
-    "phase10BScopedTests": "passed",
-    "testFiles": 12,
-    "tests": 40,
-    "phase10BScopedTestFiles": 12,
-    "phase10BScopedTestsCount": 40,
-    "summary": "Phase 10B validation passed: mediapipe:check, scoped Phase 10B tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
+    "phase10CScopedTests": "passed",
+    "testFiles": 10,
+    "tests": 37,
+    "phase10CScopedTestFiles": 10,
+    "phase10CScopedTestsCount": 37,
+    "summary": "Phase 10C validation passed: mediapipe:check, scoped Phase 10C tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
     "updatedAt": "2026-06-16T00:00:00.000+08:00"
   },
   "lastKnownPreDoc0Validation": {
@@ -34,17 +34,17 @@
     "npm run project:context",
     "node scripts/project-status.mjs --json",
     "node scripts/context-pack.mjs --json",
-    "npm run test -- tests/template-draft-qa.test.ts tests/template-draft-human-review.test.ts tests/template-draft-review-workflow.test.ts tests/template-draft-review-workflow-panel.test.tsx tests/template-studio-workflow-ia.test.ts tests/template-studio-tab-boundary.test.tsx tests/phase-10B-documentation-recovery.test.ts tests/template-draft-generator.test.ts tests/facemesh-makeup-intelligence-panels.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
+    "npm run test -- tests/template-library-candidate-package.test.ts tests/template-library-candidate-validation.test.ts tests/template-library-candidate-handoff.test.ts tests/template-library-candidate-panels.test.tsx tests/phase-10C-documentation-recovery.test.ts tests/template-draft-review-workflow.test.ts tests/template-draft-review-workflow-panel.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
   ],
   "notes": [
     "Phase 10A initial model/panel tests and typecheck passed before final validation.",
     "Final validation must include mediapipe:check, scoped tests, typecheck, build, project status/context, and JSON commands."
   ],
-  "lastCompletedPhase": "10B",
-  "currentPhase": "10B",
-  "nextRecommendedPhase": "10C",
+  "lastCompletedPhase": "10C",
+  "currentPhase": "10C",
+  "nextRecommendedPhase": "10D",
   "updatedAt": "2026-06-16T00:00:00.000+08:00",
-  "summary": "Phase 10B validation passed: mediapipe:check, scoped Phase 10B tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
+  "summary": "Phase 10C validation passed: mediapipe:check, scoped Phase 10C tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
   "validation": {
     "mediapipeCheck": "passed",
     "typecheck": "passed",
@@ -55,12 +55,12 @@
     "projectContext": "passed",
     "contextPackJson": "passed",
     "browserVerification": "passed",
-    "phase10BScopedTests": "passed",
-    "testFiles": 12,
-    "tests": 40,
-    "phase10BScopedTestFiles": 12,
-    "phase10BScopedTestsCount": 40,
-    "summary": "Phase 10B validation passed: mediapipe:check, scoped Phase 10B tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
+    "phase10CScopedTests": "passed",
+    "testFiles": 10,
+    "tests": 37,
+    "phase10CScopedTestFiles": 10,
+    "phase10CScopedTestsCount": 37,
+    "summary": "Phase 10C validation passed: mediapipe:check, scoped Phase 10C tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
     "updatedAt": "2026-06-16T00:00:00.000+08:00"
   }
 }

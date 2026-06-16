@@ -12,10 +12,10 @@ It produces templates, template evidence, correction records, review state, loca
 
 ## Current Phase
 
-- Current business phase: `Phase 10B completed`
-- Last completed phase: `Phase 10B`
-- Last completed phase name: `Phase 10B - Template Draft Review Workflow`
-- Next recommended phase: `Phase 10C - Template Library Candidate Packaging`
+- Current business phase: `Phase 10C completed`
+- Last completed phase: `Phase 10C`
+- Last completed phase name: `Phase 10C - Template Library Candidate Packaging`
+- Next recommended phase: `Phase 10D - Candidate-to-App Package Contract Preparation`
 
 Historical recovery marker retained for Phase 9C tests: `Phase 9C completed`.
 Historical recovery marker retained for Phase 9E tests: `Phase 9E completed`.
@@ -77,6 +77,7 @@ Real Photo
 -> Anonymous Internal Trial Follow-up Iteration
 -> FaceMesh-driven Makeup Intelligence Baseline
 -> Template Draft Review Workflow
+-> Template Library Candidate Packaging
 -> Phase 8 Roadmap / V1 Non-Goals
 -> User App Consumption Manifest
 -> Dataset Review
@@ -94,6 +95,12 @@ Important boundary: `SourceImagePackage` can enter Vision Analysis through opera
   template-production drafting.
 - `src/template-engine/makeupAttributeCandidates.ts`, `src/template-engine/ruleBasedStepGenerator.ts`, and `src/template-engine/templateDraftGenerator.ts`:
   Phase 10A candidate, rule-based step, and draft-only template generation.
+- `src/template-engine/templateLibraryCandidatePackage.ts`,
+  `src/template-engine/templateLibraryCandidateValidation.ts`, and
+  `src/template-engine/templateLibraryCandidateHandoff.ts`: Phase 10C local
+  candidate package, validation, and handoff logic after Phase 10B human
+  approval. They do not publish, write the formal Template Library, or generate
+  `UserAppTemplatePackage`.
 - `src/templates`: schemas, storage, review, corrections, evidence, dataset materialization, source image binding, production batch storage/export, template library storage, and publish package export.
 - `src/template-engine/production`: production queue, state machine, QA rules, rebinding recovery, analysis handoff, review lifecycle, smoke checklist.
 - `src/template-engine/library`: production task to library entry conversion, template versioning, and local library lifecycle.

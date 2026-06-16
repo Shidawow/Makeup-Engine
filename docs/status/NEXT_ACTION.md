@@ -2,27 +2,32 @@
 
 ## What To Do Next
 
-Proceed to Phase 10C: Template Library Candidate Packaging.
+Proceed to Phase 10D: Candidate-to-App Package Contract Preparation.
 
 ## Why
 
-Phase 10B separated Vision Analysis from Template Workbench and added draft QA,
-human review, review queue status, and candidate handoff. The next safe step is
-to define how approved template library candidates are packaged without
-claiming production publication or automatic User App template export.
+Phase 10C packages approved template library candidates with validation and
+handoff while preserving the no-publish and no-auto-`UserAppTemplatePackage`
+boundaries. The next safe step is to prepare an explicit contract bridge for a
+future candidate-to-app package workflow without generating app packages
+automatically.
 
-## Recommended 10C Scope
+## Recommended 10D Scope
 
-- Package approved template library candidates as local candidate artifacts.
-- Preserve draft QA and human review lineage.
-- Keep candidate package status separate from published template status.
-- Keep `UserAppTemplatePackage` generation as a later explicit workflow.
-- Add docs, fixtures, and tests for candidate packaging boundaries.
+- Define candidate-to-app contract preparation inputs and blockers.
+- Map candidate package fields to future app contract requirements without
+  mutating `UserAppTemplatePackage`.
+- Preserve explicit human review, QA trace, privacy trace, and package lineage.
+- Keep app package creation as a separate reviewed action.
+- Add docs, fixtures, and tests for the candidate-to-app boundary.
 
 ## What Not To Do
 
 - Do not build the production user app inside this repository.
 - Do not publish template candidates automatically.
+- Do not write candidate packages into the formal Template Library
+  automatically.
+- Do not generate or mutate `UserAppTemplatePackage` from candidate packages.
 - Do not add backend, database, account system, cloud sync, analytics, camera
   capture, AR, OpenAI/external API calls, native app implementation, React
   Native, Flutter, App Store/TestFlight work, service worker, ecommerce,
@@ -49,11 +54,15 @@ Read these files first:
 11. `docs/product/template-draft-human-review-workflow.md`
 12. `docs/product/template-draft-review-workflow.md`
 13. `docs/phases/phase-10B.md`
-14. `project-state/project-state.snapshot.json`
-15. `project-state/latest-handoff.json`
-16. `project-state/provider-handoff.json`
-17. `project-state/active-task.json`
-18. `project-state/guardrails.json`
+14. `docs/product/template-library-candidate-package.md`
+15. `docs/product/template-library-candidate-validation.md`
+16. `docs/product/template-library-candidate-handoff.md`
+17. `docs/phases/phase-10C.md`
+18. `project-state/project-state.snapshot.json`
+19. `project-state/latest-handoff.json`
+20. `project-state/provider-handoff.json`
+21. `project-state/active-task.json`
+22. `project-state/guardrails.json`
 
 Then run:
 

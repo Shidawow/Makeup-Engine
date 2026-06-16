@@ -14,6 +14,8 @@ Real Photo
 -> Production QA Report
 -> Vision Analysis
 -> FaceMesh Region QA / Attribute Candidates / Rule-based Template Draft
+-> Template Draft Review Workflow
+-> Template Library Candidate Package
 -> Editable Masks
 -> Human Correction
 -> Template Evidence
@@ -64,6 +66,13 @@ Real Photo
   Phase 10A local draft branch for FaceMesh region readiness, candidate makeup
   attributes, rule-based draft steps, and draft-only template generation. It
   requires human review and does not publish or mutate `UserAppTemplatePackage`.
+- `Template Draft Review Workflow`: Phase 10B local administrator QA and human
+  review branch for draft-only templates. Approval means template library
+  candidate only.
+- `Template Library Candidate Package`: Phase 10C local candidate packaging,
+  validation, and handoff branch. It preserves QA, human review, and privacy
+  trace but does not publish, write the formal Template Library, or generate
+  `UserAppTemplatePackage`.
 - `Editable Masks`: generated and human-editable mask artifacts.
 - `Human Correction`: correction records produced by human review and mask editing.
 - `Template Evidence`: structured evidence supporting extracted template decisions.

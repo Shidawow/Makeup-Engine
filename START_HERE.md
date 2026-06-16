@@ -5,9 +5,9 @@ Makeup Engine is the makeup template production system for a future makeup coach
 ## Current Position
 
 - Project role: makeup template production system plus a local contract-driven user app shell prototype.
-- Last completed phase: `Phase 10B`.
-- Current completed business phase: `Phase 10B - Template Draft Review Workflow`.
-- Next recommended phase: `Phase 10C - Template Library Candidate Packaging`.
+- Last completed phase: `Phase 10C`.
+- Current completed business phase: `Phase 10C - Template Library Candidate Packaging`.
+- Next recommended phase: `Phase 10D - Candidate-to-App Package Contract Preparation`.
 - Recent recovery milestones retained in phase docs: `Phase 6K`, `Phase 6L`, `Phase 6L-1`, `Phase 7A`, `Phase 7B`, `Phase 7C`, `Phase 7D`, `Phase 7E`, `Phase 7F`, `Phase 7G`, `Phase 7H`, and `Phase 8A`.
 - Historical route-planning milestone: `Phase 8A - Product Route Decision / App MVP Planning`.
 
@@ -53,6 +53,7 @@ SourceImagePackage manifest
 -> Anonymous Internal Trial Follow-up Iteration
 -> FaceMesh-driven Makeup Intelligence Baseline
 -> Template Draft Review Workflow
+-> Template Library Candidate Packaging
 -> Phase 8 Roadmap / V1 Non-Goals
 -> Consumption Manifest
 -> Dataset Review
@@ -145,11 +146,15 @@ SourceImagePackage manifest
 80. `docs/product/template-draft-human-review-workflow.md`
 81. `docs/product/template-draft-review-workflow.md`
 82. `docs/phases/phase-10B.md`
-83. `docs/phases/phase-7H.md`
-84. `project-state/project-state.snapshot.json`
-85. `project-state/provider-handoff.json`
-86. `project-state/latest-handoff.json`
-87. `project-state/active-task.json`
+83. `docs/product/template-library-candidate-package.md`
+84. `docs/product/template-library-candidate-validation.md`
+85. `docs/product/template-library-candidate-handoff.md`
+86. `docs/phases/phase-10C.md`
+87. `docs/phases/phase-7H.md`
+88. `project-state/project-state.snapshot.json`
+89. `project-state/provider-handoff.json`
+90. `project-state/latest-handoff.json`
+91. `project-state/active-task.json`
 
 ## What The System Can Do Now
 
@@ -183,6 +188,10 @@ SourceImagePackage manifest
 - Run Phase 10B template draft QA and human review workflow, with Vision
   Analysis owning image/region quality and Template Workbench owning candidates,
   step drafts, template draft QA, human review, and candidate handoff.
+- Package Phase 10B approved drafts into local Template Library Candidate
+  Packages with validation and handoff, while keeping them separate from
+  published templates, formal Template Library writes, and
+  `UserAppTemplatePackage` generation.
 - Continue from Vision Analysis into mask editing, evidence capture, dataset review, materialized training datasets, and lightweight model artifact workflows.
 - Run real local MediaPipe FaceMesh after preparing ignored local assets with `npm run mediapipe:prepare`; see `docs/setup/local-mediapipe-assets.md`.
 
@@ -198,6 +207,9 @@ SourceImagePackage manifest
 - Do not treat Phase 10A candidates, draft steps, or template draft as final
   makeup recognition, automatic publishing, training input, UserAppTemplatePackage
   mutation, production app behavior, or a replacement for human review.
+- Do not treat Phase 10C candidate packages as published templates, formal
+  Template Library entries, UserAppTemplatePackage exports, backend records, or
+  training input.
 - Do not treat Phase 8B PWA metadata, mobile shell polish, PWA readiness, or MVP polish readiness as production PWA release approval.
 - Do not treat Phase 8C trial pack, feedback preview, or trial readiness as production release, backend form, analytics, App Store/TestFlight, or real user data collection approval.
 - Do not treat Phase 8D content QA, trial template selection, or trial content readiness as production release, App Store/TestFlight, backend, AI generation, camera, AR, analytics, or training approval.
