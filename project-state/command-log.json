@@ -303,9 +303,9 @@
   ],
   "lastUpdatedPhase": "10D",
   "phase": "10D",
-  "lastCompletedPhase": "10D",
+  "lastCompletedPhase": "10F",
   "currentPhase": "10D",
-  "nextRecommendedPhase": "10E",
+  "nextRecommendedPhase": "10G",
   "updatedAt": "2026-06-16T00:00:00.000+08:00",
   "lastValidation": {
     "mediapipeCheck": "passed",
@@ -344,5 +344,73 @@
     "updatedAt": "2026-06-16T00:00:00.000+08:00"
   },
   "status": "passed",
-  "summary": "Phase 10D validation passed: mediapipe:check, scoped Phase 10D tests, typecheck, build, browser verification, project status/context, and JSON status/context commands."
+  "summary": "Phase 10D validation passed: mediapipe:check, scoped Phase 10D tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
+  "entries": [
+    {
+      "command": "npm run test -- tests/official-user-app-package-draft-gate.test.ts tests/official-user-app-package-draft-gate-handoff.test.ts tests/official-user-app-package-draft-gate-panel.test.tsx tests/template-studio-tab-boundary.test.tsx",
+      "phase": "10F",
+      "status": "passed",
+      "notes": "Initial Phase 10F model, handoff, panel, and tab boundary tests passed."
+    },
+    {
+      "command": "npm run typecheck",
+      "phase": "10F",
+      "status": "passed",
+      "notes": "Initial Phase 10F typecheck passed."
+    },
+    {
+      "command": "npm run mediapipe:check",
+      "phase": "10F",
+      "status": "passed",
+      "notes": "Phase 10F MediaPipe local asset check passed."
+    },
+    {
+      "command": "npm run test -- tests/official-user-app-package-draft-gate.test.ts tests/official-user-app-package-draft-gate-handoff.test.ts tests/official-user-app-package-draft-gate-panel.test.tsx tests/phase-10F-documentation-recovery.test.ts tests/user-app-package-draft-preview.test.ts tests/user-app-package-draft-preview-panels.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
+      "phase": "10F",
+      "status": "passed",
+      "notes": "Phase 10F scoped tests passed: 9 files / 28 tests."
+    },
+    {
+      "command": "npm run typecheck",
+      "phase": "10F",
+      "status": "passed",
+      "notes": "Phase 10F typecheck passed."
+    },
+    {
+      "command": "npm run build",
+      "phase": "10F",
+      "status": "passed",
+      "notes": "Phase 10F build passed with existing chunk-size warning."
+    },
+    {
+      "command": "Browser verification for Phase 10F Template Studio tabs",
+      "phase": "10F",
+      "status": "passed",
+      "notes": "Vision Analysis did not show the official draft gate; Template Workbench empty state showed gate blocked for missing source preview validation; forbidden publish/registry/formal package text did not appear; MediaPipe ready showed no mock fallback."
+    },
+    {
+      "command": "npm run project:status",
+      "phase": "10F",
+      "status": "passed",
+      "notes": "Phase 10F project status command passed."
+    },
+    {
+      "command": "npm run project:context",
+      "phase": "10F",
+      "status": "passed",
+      "notes": "Phase 10F project context command passed."
+    },
+    {
+      "command": "node scripts/project-status.mjs --json",
+      "phase": "10F",
+      "status": "passed",
+      "notes": "Phase 10F JSON project status command passed."
+    },
+    {
+      "command": "node scripts/context-pack.mjs --json",
+      "phase": "10F",
+      "status": "passed",
+      "notes": "Phase 10F JSON context pack command passed."
+    }
+  ]
 }

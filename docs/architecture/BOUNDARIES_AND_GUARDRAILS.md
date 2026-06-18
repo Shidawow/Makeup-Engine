@@ -275,3 +275,24 @@ package draft gate, copy revision, step guidance revision, region guidance
 revision, privacy notice revision, admin-preview-only retention, or blocking. It
 cannot generate a formal `UserAppTemplatePackage`, cannot publish to the user
 app, and cannot write a user app package registry.
+
+## Phase 10F Official User App Package Draft Gate Boundary
+
+Phase 10F official draft gate and handoff are local administrator aids only.
+They must not become formal `UserAppTemplatePackage` generation, a user app
+package registry write, user app publication, backend records, production app
+behavior, AI approval, training approval, or App Store/TestFlight readiness.
+
+Official User App Package Draft Gate can decide whether a Phase 10E draft
+preview is eligible for a future builder. It checks source preview validation,
+user-facing title and summary, step guidance, region guidance, tools checklist,
+privacy notice, QA trace, human review trace, candidate trace, contract trace,
+raw image boundaries, personal data boundaries, medical claims, product shade
+claims, unsupported final claims, registry writes, automatic publishing, formal
+`UserAppTemplatePackage` mutation, and JSON round-trip stability.
+
+Gate handoff can recommend a future official draft builder, user-facing copy
+revision, step guidance revision, region guidance revision, privacy review,
+preview-only retention, or blocking. It cannot generate a formal
+`UserAppTemplatePackage`, cannot publish to the user app, and cannot write a
+user app package registry.

@@ -1,11 +1,11 @@
 {
   "schemaVersion": "active-task.v1",
-  "taskId": "10E",
-  "title": "User App Package Draft Preview",
-  "status": "passed",
+  "taskId": "10F",
+  "title": "Official User App Package Draft Gate",
+  "status": "completed",
   "ownerRole": "Codex",
   "createdBy": "Codex",
-  "phase": "10E",
+  "phase": "10F",
   "recommendedProfile": "native-gpt-codex-high-reasoning",
   "allowedDirectories": [
     "src/vision",
@@ -30,19 +30,19 @@
     "npm run project:context",
     "node scripts/project-status.mjs --json",
     "node scripts/context-pack.mjs --json",
-    "npm run test -- tests/user-app-package-draft-preview.test.ts tests/user-app-package-draft-preview-validation.test.ts tests/user-app-package-draft-preview-handoff.test.ts tests/user-app-package-draft-preview-panels.test.tsx tests/phase-10E-documentation-recovery.test.ts tests/candidate-to-app-package-contract.test.ts tests/candidate-to-app-package-panels.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
+    "npm run test -- tests/official-user-app-package-draft-gate.test.ts tests/official-user-app-package-draft-gate-handoff.test.ts tests/official-user-app-package-draft-gate-panel.test.tsx tests/phase-10F-documentation-recovery.test.ts tests/user-app-package-draft-preview.test.ts tests/user-app-package-draft-preview-panels.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
   ],
   "completionDefinition": [
-    "Phase 10E added local User App Package Draft Preview, validation, handoff, fixtures, UI, docs, and project-state updates.",
-    "Draft preview only accepts Phase 10D app contract validation ready or ready-with-warnings sources and preserves QA/human/candidate/contract/privacy trace.",
-    "10E did not publish, write a user app package registry, generate formal UserAppTemplatePackage, add backend, camera, AR, OpenAI/external APIs, training, runtime dependencies, or committed MediaPipe binaries."
+    "Phase 10F added Official User App Package Draft Gate, handoff, fixtures, UI, docs, and project-state updates.",
+    "Gate ready only means eligible for a future Official UserAppTemplatePackage Draft Builder.",
+    "10F did not publish, write a user app package registry, generate formal UserAppTemplatePackage, add backend, camera, AR, OpenAI/external APIs, training, runtime dependencies, or committed MediaPipe binaries."
   ],
   "dependsOn": [
-    "10D Candidate-to-App Package Contract Preparation"
+    "10E User App Package Draft Preview"
   ],
   "nextRecommendedTask": {
-    "taskId": "10F",
-    "title": "Official User App Package Draft Gate",
+    "taskId": "10G",
+    "title": "Official UserAppTemplatePackage Draft Builder",
     "status": "recommended"
   },
   "updatedAt": "2026-06-18T00:00:00.000+08:00",
@@ -58,12 +58,15 @@
     "contextPackJson": "passed",
     "browserVerification": "passed",
     "phase10EScopedTests": "passed",
-    "testFiles": 10,
-    "tests": 38,
+    "testFiles": 9,
+    "tests": 28,
     "phase10EScopedTestFiles": 10,
     "phase10EScopedTestsCount": 38,
-    "summary": "Phase 10E validation passed: mediapipe:check, scoped Phase 10E tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
-    "updatedAt": "2026-06-18T00:00:00.000+08:00"
+    "summary": "Phase 10F validation passed: mediapipe:check, scoped Phase 10F tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
+    "updatedAt": "2026-06-18T00:00:00.000+08:00",
+    "phase10FScopedTests": "passed",
+    "phase10FScopedTestFiles": 9,
+    "phase10FScopedTestsCount": 28
   },
   "validation": {
     "mediapipeCheck": "passed",
@@ -76,12 +79,24 @@
     "contextPackJson": "passed",
     "browserVerification": "passed",
     "phase10EScopedTests": "passed",
-    "testFiles": 10,
-    "tests": 38,
+    "testFiles": 9,
+    "tests": 28,
     "phase10EScopedTestFiles": 10,
     "phase10EScopedTestsCount": 38,
-    "summary": "Phase 10E validation passed: mediapipe:check, scoped Phase 10E tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
-    "updatedAt": "2026-06-18T00:00:00.000+08:00"
+    "summary": "Phase 10F validation passed: mediapipe:check, scoped Phase 10F tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
+    "updatedAt": "2026-06-18T00:00:00.000+08:00",
+    "phase10FScopedTests": "passed",
+    "phase10FScopedTestFiles": 9,
+    "phase10FScopedTestsCount": 28
   },
-  "summary": "Phase 10E validation passed: mediapipe:check, scoped Phase 10E tests, typecheck, build, browser verification, project status/context, and JSON status/context commands."
+  "summary": "Phase 10F validation passed: mediapipe:check, scoped Phase 10F tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
+  "completed": [
+    "Phase 10F added Official User App Package Draft Gate model, handoff model, fixtures, UI, docs, and project-state updates.",
+    "10F did not publish, write a user app package registry, generate formal UserAppTemplatePackage, add backend, camera, AR, OpenAI/external APIs, training, runtime dependencies, or committed MediaPipe binaries."
+  ],
+  "nextTask": {
+    "taskId": "10G",
+    "title": "Official UserAppTemplatePackage Draft Builder",
+    "summary": "Prepare an official UserAppTemplatePackage draft builder only from 10F-gated inputs while preserving no registry write and no publish boundaries."
+  }
 }

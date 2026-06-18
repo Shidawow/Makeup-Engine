@@ -30,6 +30,8 @@ describe('Template Studio tab boundary', () => {
     expect(html).not.toContain('App Contract Validation');
     expect(html).not.toContain('用户 App 包草稿预览');
     expect(html).not.toContain('Preview Validation');
+    expect(html).not.toContain('正式用户 App 包草稿闸门');
+    expect(html).not.toContain('Gate Handoff');
   });
 
   it('tells the template workbench to return to Vision Analysis when Region QA is blocked', () => {
@@ -69,8 +71,13 @@ describe('Template Studio tab boundary', () => {
     expect(html).toContain('用户 App 包草稿预览');
     expect(html).toContain('Preview Validation');
     expect(html).toContain('Preview Handoff');
+    expect(html).toContain('正式用户 App 包草稿闸门');
+    expect(html).toContain('Gate Handoff');
+    expect(html).toContain('可进入正式包草稿构建器');
     expect(html).toContain('不是正式 UserAppTemplatePackage');
     expect(html).toContain('不会写入用户 App 包 registry');
+    expect(html).toContain('不会写入 registry');
+    expect(html).toContain('不会发布');
     expect(html).not.toContain('AI 已确认');
     expect(html).not.toContain('已生成正式用户模板包');
     expect(html).not.toContain('已生成正式 UserAppTemplatePackage');
@@ -95,5 +102,8 @@ describe('Template Studio tab boundary', () => {
     expect(userPath).not.toContain('用户 App 包草稿预览');
     expect(userPath).not.toContain('Preview Validation');
     expect(userPath).not.toContain('draft preview');
+    expect(userPath).not.toContain('正式用户 App 包草稿闸门');
+    expect(userPath).not.toContain('Gate Handoff');
+    expect(userPath).not.toContain('official draft gate');
   });
 });

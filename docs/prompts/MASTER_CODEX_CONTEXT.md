@@ -12,10 +12,10 @@ It produces templates, template evidence, correction records, review state, loca
 
 ## Current Phase
 
-- Current business phase: `Phase 10E completed`
-- Last completed phase: `Phase 10E`
-- Last completed phase name: `Phase 10E - User App Package Draft Preview`
-- Next recommended phase: `Phase 10F - Official User App Package Draft Gate`
+- Current business phase: `Phase 10F completed`
+- Last completed phase: `Phase 10F`
+- Last completed phase name: `Phase 10F - Official User App Package Draft Gate`
+- Next recommended phase: `Phase 10G - Official UserAppTemplatePackage Draft Builder`
 
 Historical recovery marker retained for Phase 9C tests: `Phase 9C completed`.
 Historical recovery marker retained for Phase 9E tests: `Phase 9E completed`.
@@ -80,6 +80,7 @@ Real Photo
 -> Template Library Candidate Packaging
 -> Candidate-to-App Package Contract Preparation
 -> User App Package Draft Preview
+-> Official User App Package Draft Gate
 -> Phase 8 Roadmap / V1 Non-Goals
 -> User App Consumption Manifest
 -> Dataset Review
@@ -110,6 +111,16 @@ Important boundary: `SourceImagePackage` can enter Vision Analysis through opera
   Phase 10C candidate validation. They create mapping previews only and do not
   generate formal `UserAppTemplatePackage`, publish, write a user app package
   registry, or train models.
+- `src/template-engine/userAppPackageDraftPreview.ts`,
+  `src/template-engine/userAppPackageDraftPreviewValidation.ts`, and
+  `src/template-engine/userAppPackageDraftPreviewHandoff.ts`: Phase 10E local
+  user app package draft preview, validation, and handoff logic. They preview
+  user-facing fields only and do not generate formal `UserAppTemplatePackage`.
+- `src/template-engine/officialUserAppPackageDraftGate.ts` and
+  `src/template-engine/officialUserAppPackageDraftGateHandoff.ts`: Phase 10F
+  local official draft gate and handoff logic. They decide future builder
+  eligibility only and do not write registries, publish, or generate formal app
+  packages.
 - `src/templates`: schemas, storage, review, corrections, evidence, dataset materialization, source image binding, production batch storage/export, template library storage, and publish package export.
 - `src/template-engine/production`: production queue, state machine, QA rules, rebinding recovery, analysis handoff, review lifecycle, smoke checklist.
 - `src/template-engine/library`: production task to library entry conversion, template versioning, and local library lifecycle.
@@ -353,13 +364,16 @@ When finishing a round, report in this order:
 - Phase 9G completed anonymous internal trial dry run pack only, not real trial launch or MVP validation planning.
 - Phase 9H completed anonymous internal trial launch pack only, not public recruitment, production launch, backend collection, AI analysis, training, or MVP validation planning.
 
-## Phase 10E Current Capability
+## Phase 10F Current Capability
 
-Phase 10E completed User App Package Draft Preview. It added local preview,
-validation, handoff, examples, Template Workbench UI, documentation, and recovery
-state for converting Phase 10D app contract validation into a user-facing draft
-preview. It is not formal `UserAppTemplatePackage` generation, does not write a
-user app package registry, does not publish, does not call backend/OpenAI/external
-APIs, does not use camera/AR, and does not train models.
+Phase 10F completed Official User App Package Draft Gate. It added local gate,
+handoff, examples, Template Workbench UI, documentation, and recovery state for
+deciding whether a Phase 10E draft preview is eligible for a future Official
+UserAppTemplatePackage Draft Builder. It is not formal `UserAppTemplatePackage`
+generation, does not write a user app package registry, does not publish, does
+not call backend/OpenAI/external APIs, does not use camera/AR, and does not
+train models.
 
-Next recommended phase: Phase 10F - Official User App Package Draft Gate.
+Historical marker retained for Phase 10E recovery tests: Phase 10E completed.
+
+Next recommended phase: Phase 10G - Official UserAppTemplatePackage Draft Builder.

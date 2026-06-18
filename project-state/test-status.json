@@ -1,5 +1,5 @@
 {
-  "phase": "10E",
+  "phase": "10F",
   "status": "passed",
   "lastValidation": {
     "mediapipeCheck": "passed",
@@ -12,12 +12,15 @@
     "contextPackJson": "passed",
     "browserVerification": "passed",
     "phase10EScopedTests": "passed",
-    "testFiles": 10,
-    "tests": 38,
+    "testFiles": 9,
+    "tests": 28,
     "phase10EScopedTestFiles": 10,
     "phase10EScopedTestsCount": 38,
-    "summary": "Phase 10E validation passed: mediapipe:check, scoped Phase 10E tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
-    "updatedAt": "2026-06-18T00:00:00.000+08:00"
+    "summary": "Phase 10F validation passed: mediapipe:check, scoped Phase 10F tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
+    "updatedAt": "2026-06-18T00:00:00.000+08:00",
+    "phase10FScopedTests": "passed",
+    "phase10FScopedTestFiles": 9,
+    "phase10FScopedTestsCount": 28
   },
   "lastKnownPreDoc0Validation": {
     "typecheck": "passed",
@@ -39,13 +42,14 @@
   "notes": [
     "Phase 10A initial model/panel tests and typecheck passed before final validation.",
     "Final validation must include mediapipe:check, scoped tests, typecheck, build, project status/context, and JSON commands.",
-    "Phase 10E initial model, panel, tab boundary tests, and typecheck passed before final validation."
+    "Phase 10E initial model, panel, tab boundary tests, and typecheck passed before final validation.",
+    "Phase 10F initial model, panel, tab boundary tests, and typecheck passed before final validation."
   ],
-  "lastCompletedPhase": "10E",
-  "currentPhase": "10E",
-  "nextRecommendedPhase": "10F",
+  "lastCompletedPhase": "10F",
+  "currentPhase": "10F",
+  "nextRecommendedPhase": "10G",
   "updatedAt": "2026-06-18T00:00:00.000+08:00",
-  "summary": "Phase 10E validation passed: mediapipe:check, scoped Phase 10E tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
+  "summary": "Phase 10F validation passed: mediapipe:check, scoped Phase 10F tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
   "validation": {
     "mediapipeCheck": "passed",
     "typecheck": "passed",
@@ -57,11 +61,43 @@
     "contextPackJson": "passed",
     "browserVerification": "passed",
     "phase10EScopedTests": "passed",
-    "testFiles": 10,
-    "tests": 38,
+    "testFiles": 9,
+    "tests": 28,
     "phase10EScopedTestFiles": 10,
     "phase10EScopedTestsCount": 38,
-    "summary": "Phase 10E validation passed: mediapipe:check, scoped Phase 10E tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
+    "summary": "Phase 10F validation passed: mediapipe:check, scoped Phase 10F tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
+    "updatedAt": "2026-06-18T00:00:00.000+08:00",
+    "phase10FScopedTests": "passed",
+    "phase10FScopedTestFiles": 9,
+    "phase10FScopedTestsCount": 28
+  },
+  "nextRecommendedPhaseName": "Official UserAppTemplatePackage Draft Builder",
+  "results": {
+    "phase10FScopedTests": "passed",
+    "phase10FScopedTestFiles": 9,
+    "phase10FScopedTestsCount": 28,
+    "summary": "Phase 10F validation passed: mediapipe:check, scoped Phase 10F tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
+    "mediapipeCheck": "passed",
+    "typecheck": "passed",
+    "test": "passed",
+    "build": "passed",
+    "projectStatus": "passed",
+    "projectStatusJson": "passed",
+    "projectContext": "passed",
+    "contextPackJson": "passed",
+    "browserVerification": "passed",
+    "testFiles": 9,
+    "tests": 28,
     "updatedAt": "2026-06-18T00:00:00.000+08:00"
-  }
+  },
+  "requiredCommands": [
+    "npm run mediapipe:check",
+    "npm run typecheck",
+    "npm run build",
+    "npm run project:status",
+    "npm run project:context",
+    "node scripts/project-status.mjs --json",
+    "node scripts/context-pack.mjs --json",
+    "npm run test -- tests/official-user-app-package-draft-gate.test.ts tests/official-user-app-package-draft-gate-handoff.test.ts tests/official-user-app-package-draft-gate-panel.test.tsx tests/phase-10F-documentation-recovery.test.ts tests/user-app-package-draft-preview.test.ts tests/user-app-package-draft-preview-panels.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
+  ]
 }

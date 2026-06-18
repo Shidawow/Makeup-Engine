@@ -3,6 +3,8 @@ import {
   buildTemplateStudioWorkflowState,
   createCandidateToAppPackageContractPreparation,
   createCandidateToAppPackageHandoff,
+  createOfficialUserAppPackageDraftGate,
+  createOfficialUserAppPackageDraftGateHandoff,
   createUserAppPackageDraftPreview,
   createUserAppPackageDraftPreviewHandoff,
   createTemplateLibraryCandidateHandoff,
@@ -27,6 +29,7 @@ import { TemplateDraftReviewWorkflowPanel } from './TemplateDraftReviewWorkflowP
 import { TemplateLibraryCandidatePackagingPanel } from './TemplateLibraryCandidatePackagingPanel';
 import { CandidateToAppPackageContractPanel } from './CandidateToAppPackageContractPanel';
 import { UserAppPackageDraftPreviewPanel } from './UserAppPackageDraftPreviewPanel';
+import { OfficialUserAppPackageDraftGatePanel } from './OfficialUserAppPackageDraftGatePanel';
 
 export interface FaceMeshMakeupIntelligencePanelProps {
   regionQa: FaceMeshRegionQaReport | null;
@@ -142,6 +145,26 @@ export function FaceMeshMakeupIntelligencePanel({
             </p>
           </div>
         </div>
+        <div className="mt-3 grid gap-2 rounded-md border border-blue-200 bg-blue-50 p-3 text-sm text-blue-900 md:grid-cols-3">
+          <div>
+            <p className="font-semibold">正式用户 App 包草稿闸门</p>
+            <p className="mt-1 text-xs leading-5">
+              Draft Gate blocked：缺少 source preview validation ready。
+            </p>
+          </div>
+          <div>
+            <p className="font-semibold">Gate Checks</p>
+            <p className="mt-1 text-xs leading-5">
+              需要 10E draft preview validation ready 后才能进入 gate。
+            </p>
+          </div>
+          <div>
+            <p className="font-semibold">Gate Handoff</p>
+            <p className="mt-1 text-xs leading-5">
+              不是正式 UserAppTemplatePackage，不会写入 registry，不会发布。
+            </p>
+          </div>
+        </div>
       </section>
     );
   }
@@ -207,6 +230,14 @@ export function FaceMeshMakeupIntelligencePanel({
     createUserAppPackageDraftPreviewHandoff({
       preview: userAppPackageDraftPreview,
       validation: userAppPackageDraftPreviewValidation,
+    });
+  const officialUserAppPackageDraftGate = createOfficialUserAppPackageDraftGate({
+    preview: userAppPackageDraftPreview,
+    validation: userAppPackageDraftPreviewValidation,
+  });
+  const officialUserAppPackageDraftGateHandoff =
+    createOfficialUserAppPackageDraftGateHandoff({
+      gate: officialUserAppPackageDraftGate,
     });
 
   return (
@@ -324,6 +355,10 @@ export function FaceMeshMakeupIntelligencePanel({
         handoff={userAppPackageDraftPreviewHandoff}
         preview={userAppPackageDraftPreview}
         validation={userAppPackageDraftPreviewValidation}
+      />
+      <OfficialUserAppPackageDraftGatePanel
+        gate={officialUserAppPackageDraftGate}
+        handoff={officialUserAppPackageDraftGateHandoff}
       />
     </section>
   );

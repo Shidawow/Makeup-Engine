@@ -63,3 +63,5 @@ export * from './candidate-to-app-package-handoff.example';
 export * from './user-app-package-draft-preview.example';
 export * from './user-app-package-draft-preview-validation.example';
 export * from './user-app-package-draft-preview-handoff.example';
+export * from './official-user-app-package-draft-gate.example';
+export * from './official-user-app-package-draft-gate-handoff.example';

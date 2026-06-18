@@ -514,3 +514,21 @@ Template Workbench preview, validation, and handoff summary. The preview does
 not appear in Vision Analysis and does not generate formal
 `UserAppTemplatePackage`, write a user app package registry, publish, call
 backend/API services, use camera/AR, or train models.
+
+### Official User App Package Draft Gate
+
+Phase 10F adds a local gate after Phase 10E draft preview validation.
+`src/template-engine/officialUserAppPackageDraftGate.ts` checks source preview
+validation readiness, user-facing copy, step guidance, region guidance, tools,
+privacy notice, raw image boundaries, personal data boundaries, medical/product
+claim boundaries, unsupported final claims, no registry write, no automatic
+publish, no formal `UserAppTemplatePackage` mutation, trace preservation, and
+JSON round-trip safety. `officialUserAppPackageDraftGateHandoff.ts` creates
+local next actions for a future Official UserAppTemplatePackage Draft Builder.
+
+`src/components/template-studio/OfficialUserAppPackageDraftGatePanel.tsx`
+renders the Template Workbench gate, blocked reasons, trace, and handoff
+summary. The gate does not appear in Vision Analysis and does not generate
+formal `UserAppTemplatePackage`, write a user app package registry, publish,
+call backend/API services, use camera/AR, or train models. Gate ready means
+eligible for a later builder only.

@@ -955,3 +955,37 @@ Why Phase 10F follows:
 The draft preview is ready for an explicit Official User App Package Draft Gate.
 Phase 10F should decide whether a validated preview can enter a formal draft
 preparation gate without crossing into production release or registry scope.
+
+## Phase 10F - Official User App Package Draft Gate
+
+Added local Official User App Package Draft Gate after Phase 10E draft preview
+validation.
+
+What changed:
+
+- Added official draft gate result model for source preview validation, user
+  copy, step guidance, region guidance, tools, privacy notice, raw image
+  boundaries, personal data boundaries, medical/product/final claims, registry
+  write, automatic publish, formal package mutation, trace preservation, and
+  JSON round-trip stability.
+- Added gate handoff next actions for a future official draft builder, copy
+  revision, step revision, region revision, privacy review, preview-only
+  retention, and blocked official draft creation.
+- Added Template Workbench panel for 正式用户 App 包草稿闸门 / Gate Checks /
+  Gate Handoff.
+- Kept Vision Analysis free of package gate UI and kept ordinary User App Shell
+  paths free of administrator gate terminology.
+
+What still cannot happen:
+
+- Phase 10F gate readiness is not formal `UserAppTemplatePackage` generation,
+  not a registry write, not publication, not production readiness, not backend
+  work, not camera/AR scope, not OpenAI/external API scope, and not training
+  input.
+
+Why Phase 10G follows:
+
+The official draft gate can now decide if a preview is eligible for a later
+builder. Phase 10G should prepare an Official UserAppTemplatePackage Draft
+Builder without crossing into registry write, publication, backend, or
+production app scope.

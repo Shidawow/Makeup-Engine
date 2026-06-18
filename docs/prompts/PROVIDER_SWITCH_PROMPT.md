@@ -6,12 +6,13 @@ Default to compact context. Do not copy full historical chat transcripts. Do not
 
 ## Current State
 
-- `lastCompletedPhase: 10E`
-- `nextRecommendedPhase: 10F`
-- `nextRecommendedPhaseName: Official User App Package Draft Gate`
+- `lastCompletedPhase: 10F`
+- `nextRecommendedPhase: 10G`
+- `nextRecommendedPhaseName: Official UserAppTemplatePackage Draft Builder`
 - Project role: Makeup template production system with a local contract-driven user app shell prototype, not a production user app.
-- Current capability: Phase 10E - User App Package Draft Preview adds local preview, validation, and handoff after Phase 10D app contract validation while preserving no-publish, no-registry-write, and no-formal-UserAppTemplatePackage boundaries.
+- Current capability: Phase 10F - Official User App Package Draft Gate adds local gate and handoff after Phase 10E draft preview validation while preserving no-publish, no-registry-write, and no-formal-UserAppTemplatePackage boundaries.
 
+Historical handoff marker retained for Phase 10E recovery tests: `lastCompletedPhase: 10E`, `nextRecommendedPhase: 10F`.
 Historical handoff marker retained for Phase 10D recovery tests: `lastCompletedPhase: 10D`, `nextRecommendedPhase: 10E`.
 Historical handoff marker retained for Phase 10C recovery tests: `lastCompletedPhase: 10C`, `nextRecommendedPhase: 10D`.
 
@@ -44,11 +45,11 @@ Historical handoff marker retained for Phase 9J recovery tests: `lastCompletedPh
 You are continuing Makeup Engine on native GPT / Codex Desktop.
 
 Current state:
-- lastCompletedPhase: 10E
-- nextRecommendedPhase: 10F
-- nextRecommendedPhaseName: Official User App Package Draft Gate
+- lastCompletedPhase: 10F
+- nextRecommendedPhase: 10G
+- nextRecommendedPhaseName: Official UserAppTemplatePackage Draft Builder
 - project role: Makeup template production system with a local contract-driven user app shell prototype, not a production user app
-- current capability: React Web / PWA MVP first is selected; Phases 8B through 9J are complete; Phase 10A FaceMesh-driven Makeup Intelligence Baseline, Phase 10B Template Draft Review Workflow, Phase 10C Template Library Candidate Packaging, Phase 10D Candidate-to-App Package Contract Preparation, and Phase 10E User App Package Draft Preview are complete with local FaceMesh region QA, candidate attributes, rule-based draft steps, draft QA, human review, candidate package validation, candidate handoff, app contract mapping preview, app contract validation, app package handoff, user app package draft preview, preview validation, preview handoff, and clear Vision Analysis / Template Workbench boundaries; Makeup Engine remains the template production system and the future user-facing app should be planned separately
+- current capability: React Web / PWA MVP first is selected; Phases 8B through 9J are complete; Phase 10A FaceMesh-driven Makeup Intelligence Baseline, Phase 10B Template Draft Review Workflow, Phase 10C Template Library Candidate Packaging, Phase 10D Candidate-to-App Package Contract Preparation, Phase 10E User App Package Draft Preview, and Phase 10F Official User App Package Draft Gate are complete with local FaceMesh region QA, candidate attributes, rule-based draft steps, draft QA, human review, candidate package validation, candidate handoff, app contract mapping preview, app contract validation, app package handoff, user app package draft preview, preview validation, preview handoff, official draft gate, gate handoff, and clear Vision Analysis / Template Workbench boundaries; Makeup Engine remains the template production system and the future user-facing app should be planned separately
 
 Compact context:
 - Use repository documents as source of truth; do not copy full historical chat.
@@ -285,3 +286,12 @@ and Preview Handoff in Template Workbench. It remains draft-preview-only: no
 formal UserAppTemplatePackage generation, no user app package registry write, no
 publish, no backend, no camera/AR, no OpenAI/external API, and no training. The
 next recommended phase is Phase 10F - Official User App Package Draft Gate.
+
+## Phase 10F Handoff Note
+
+Phase 10F completed local Official User App Package Draft Gate and Gate Handoff
+in Template Workbench. Gate ready means eligible for a future builder only: no
+formal UserAppTemplatePackage generation, no user app package registry write, no
+publish, no backend, no camera/AR, no OpenAI/external API, and no training. The
+next recommended phase is Phase 10G - Official UserAppTemplatePackage Draft
+Builder.

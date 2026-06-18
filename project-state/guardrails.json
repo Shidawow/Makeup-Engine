@@ -1,5 +1,5 @@
 {
-  "phase": "10E",
+  "phase": "10F",
   "guardrails": [
     {
       "id": "source-image-not-training-data",
@@ -588,6 +588,22 @@
     {
       "id": "phase_10e_block_unsafe_payloads",
       "rule": "Phase 10E must block raw image references, local paths, object URLs, base64, MediaPipe runtime asset names, personal data, medical claims, product shade claims, final claims, and UserAppTemplatePackage mutation markers."
+    },
+    {
+      "id": "phase_10f_gate_only",
+      "rule": "Phase 10F Official User App Package Draft Gate is gate-only and cannot become formal UserAppTemplatePackage generation."
+    },
+    {
+      "id": "phase_10f_no_registry_write",
+      "rule": "Phase 10F must not write a user app package registry or production app registry."
+    },
+    {
+      "id": "phase_10f_no_publish",
+      "rule": "Phase 10F must not publish to the user app or claim production readiness."
+    },
+    {
+      "id": "phase_10f_block_unsafe_payloads",
+      "rule": "Phase 10F must block raw image references, local paths, object URLs, base64, MediaPipe runtime asset names, personal data, medical claims, product shade claims, final claims, and UserAppTemplatePackage mutation markers."
     }
   ],
   "legacyFrozenModules": [

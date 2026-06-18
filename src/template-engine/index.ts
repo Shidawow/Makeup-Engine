@@ -25,6 +25,8 @@ export * from './candidateToAppPackageHandoff';
 export * from './userAppPackageDraftPreview';
 export * from './userAppPackageDraftPreviewValidation';
 export * from './userAppPackageDraftPreviewHandoff';
+export * from './officialUserAppPackageDraftGate';
+export * from './officialUserAppPackageDraftGateHandoff';
 export * from './template-builder';
 export * from './template-builder/template-builder';
 export * from './convergence';

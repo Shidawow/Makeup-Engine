@@ -14,8 +14,8 @@ interface ProjectSnapshot {
   recoveryEntryFiles: string[];
   knownLimitations: string[];
   forbiddenActions: string[];
-  userAppPackageDraftPreviewDecision: {
-    previewBoundary: string;
+  officialUserAppPackageDraftGateDecision: {
+    gateBoundary: string;
     validationBoundary: string;
     handoffBoundary: string;
     nextPhase: string;
@@ -35,7 +35,7 @@ interface LatestHandoff {
   fromPhase: string;
   toPhase: string;
   nextAction: string;
-  userAppPackageDraftPreviewDecision: {
+  officialUserAppPackageDraftGateDecision: {
     nextPhase: string;
   };
 }
@@ -45,29 +45,26 @@ interface GuardrailState {
   guardrails: Array<{ id: string; rule: string }>;
 }
 
-describe('Phase 10E documentation recovery', () => {
-  it('documents user app package draft preview without formal package scope creep', () => {
-    expect(readText('docs/product/user-app-package-draft-preview.md')).toContain(
-      'User App Package Draft Preview',
+describe('Phase 10F documentation recovery', () => {
+  it('documents official draft gate without formal package scope creep', () => {
+    expect(readText('docs/product/official-user-app-package-draft-gate.md')).toContain(
+      'Official User App Package Draft Gate',
     );
-    expect(readText('docs/product/user-app-package-draft-preview-validation.md')).toContain(
-      'User App Package Draft Preview Validation',
+    expect(readText('docs/product/official-user-app-package-draft-gate-handoff.md')).toContain(
+      'Official User App Package Draft Gate Handoff',
     );
-    expect(readText('docs/product/user-app-package-draft-preview-handoff.md')).toContain(
-      'User App Package Draft Preview Handoff',
+    expect(readText('docs/phases/phase-10F.md')).toContain(
+      'Official User App Package Draft Gate',
     );
-    expect(readText('docs/phases/phase-10E.md')).toContain(
-      'User App Package Draft Preview',
-    );
-    expect(readText('docs/status/NEXT_ACTION.md')).toContain('Phase 10F');
+    expect(readText('docs/status/NEXT_ACTION.md')).toContain('Phase 10G');
     expect(readText('docs/prompts/MASTER_CODEX_CONTEXT.md')).toContain(
-      'Phase 10E completed',
+      'Phase 10F completed',
     );
     expect(readText('docs/prompts/PROVIDER_SWITCH_PROMPT.md')).toContain(
-      'lastCompletedPhase: 10E',
+      'lastCompletedPhase: 10F',
     );
     expect(readText('docs/prompts/PROVIDER_SWITCH_PROMPT.md')).toContain(
-      'nextRecommendedPhase: 10F',
+      'nextRecommendedPhase: 10G',
     );
 
     const snapshot = readJson<ProjectSnapshot>('project-state/project-state.snapshot.json');
@@ -78,26 +75,25 @@ describe('Phase 10E documentation recovery', () => {
     expect(snapshot.nextRecommendedPhaseName).toContain('Official UserAppTemplatePackage Draft Builder');
     expect(snapshot.mainDataFlow).toEqual(
       expect.arrayContaining([
-        'UserAppPackageDraftPreview',
-        'UserAppPackageDraftPreviewValidationResult',
-        'UserAppPackageDraftPreviewHandoff',
-        'UserAppPackageDraftPreviewPanel',
+        'OfficialUserAppPackageDraftGateResult',
+        'OfficialUserAppPackageDraftGateHandoff',
+        'OfficialUserAppPackageDraftGatePanel',
       ]),
     );
     expect(snapshot.recoveryEntryFiles).toContain(
-      'docs/product/user-app-package-draft-preview.md',
+      'docs/product/official-user-app-package-draft-gate.md',
     );
-    expect(snapshot.recoveryEntryFiles).toContain('docs/phases/phase-10E.md');
-    expect(snapshot.knownLimitations.join('\n')).toContain('Phase 10E');
+    expect(snapshot.recoveryEntryFiles).toContain('docs/phases/phase-10F.md');
+    expect(snapshot.knownLimitations.join('\n')).toContain('Phase 10F');
     expect(snapshot.knownLimitations.join('\n')).toContain('not formal UserAppTemplatePackage generation');
-    expect(snapshot.forbiddenActions.join('\n')).toContain('Phase 10E');
-    expect(snapshot.userAppPackageDraftPreviewDecision.previewBoundary).toContain(
-      'draft preview only',
+    expect(snapshot.forbiddenActions.join('\n')).toContain('Phase 10F');
+    expect(snapshot.officialUserAppPackageDraftGateDecision.gateBoundary).toContain(
+      'eligible for a future builder',
     );
-    expect(snapshot.userAppPackageDraftPreviewDecision.validationBoundary).toContain(
-      'missing step',
+    expect(snapshot.officialUserAppPackageDraftGateDecision.validationBoundary).toContain(
+      'missing source preview validation',
     );
-    expect(snapshot.userAppPackageDraftPreviewDecision.handoffBoundary).toContain(
+    expect(snapshot.officialUserAppPackageDraftGateDecision.handoffBoundary).toContain(
       'does not publish',
     );
 
@@ -106,25 +102,25 @@ describe('Phase 10E documentation recovery', () => {
     expect(providerHandoff.lastCompletedPhase).toBe('10F');
     expect(providerHandoff.nextRecommendedPhase).toBe('10G');
     expect(providerHandoff.nextRecommendedPhaseName).toContain('Official UserAppTemplatePackage Draft Builder');
-    expect(providerHandoff.nextRequiredReadFiles).toContain('docs/phases/phase-10E.md');
-    expect(providerHandoff.handoffNotes.join('\n')).toContain('Draft Preview');
+    expect(providerHandoff.nextRequiredReadFiles).toContain('docs/phases/phase-10F.md');
+    expect(providerHandoff.handoffNotes.join('\n')).toContain('Official User App Package Draft Gate');
 
     const latestHandoff = readJson<LatestHandoff>('project-state/latest-handoff.json');
     expect(latestHandoff.fromPhase).toBe('10F');
     expect(latestHandoff.toPhase).toBe('10G');
     expect(latestHandoff.nextAction).toContain('Phase 10G');
-    expect(latestHandoff.userAppPackageDraftPreviewDecision.nextPhase).toContain(
-      'Phase 10F',
+    expect(latestHandoff.officialUserAppPackageDraftGateDecision.nextPhase).toContain(
+      'Phase 10G',
     );
 
     const guardrails = readJson<GuardrailState>('project-state/guardrails.json');
     expect(guardrails.phase).toBe('10F');
     expect(guardrails.guardrails.map((guardrail) => guardrail.id)).toEqual(
       expect.arrayContaining([
-        'phase_10e_preview_only',
-        'phase_10e_no_registry_write',
-        'phase_10e_no_publish',
-        'phase_10e_block_unsafe_payloads',
+        'phase_10f_gate_only',
+        'phase_10f_no_registry_write',
+        'phase_10f_no_publish',
+        'phase_10f_block_unsafe_payloads',
       ]),
     );
   });
