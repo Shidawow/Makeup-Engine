@@ -60,3 +60,6 @@ export * from './template-library-candidate-handoff.example';
 export * from './candidate-to-app-package-contract.example';
 export * from './candidate-to-app-package-validation.example';
 export * from './candidate-to-app-package-handoff.example';
+export * from './user-app-package-draft-preview.example';
+export * from './user-app-package-draft-preview-validation.example';
+export * from './user-app-package-draft-preview-handoff.example';

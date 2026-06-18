@@ -3,12 +3,12 @@
   "projectName": "Makeup Engine",
   "activeProvider": "native-gpt-codex-desktop",
   "lastProvider": "native-gpt-codex-desktop",
-  "currentTask": "Phase 10D Candidate-to-App Package Contract Preparation",
+  "currentTask": "Phase 10E User App Package Draft Preview",
   "taskStatus": "completed",
-  "lastCompletedPhase": "10D",
-  "lastCompletedBusinessPhase": "10D",
-  "nextRecommendedPhase": "10E",
-  "nextRecommendedPhaseName": "User App Package Draft Preview",
+  "lastCompletedPhase": "10E",
+  "lastCompletedBusinessPhase": "10E",
+  "nextRecommendedPhase": "10F",
+  "nextRecommendedPhaseName": "Official User App Package Draft Gate",
   "nextRequiredReadFiles": [
     "START_HERE.md",
     "AGENTS.md",
@@ -135,7 +135,11 @@
     "docs/product/candidate-to-app-package-contract-preparation.md",
     "docs/product/candidate-to-app-package-validation.md",
     "docs/product/candidate-to-app-package-handoff.md",
-    "docs/phases/phase-10D.md"
+    "docs/phases/phase-10D.md",
+    "docs/product/user-app-package-draft-preview.md",
+    "docs/product/user-app-package-draft-preview-validation.md",
+    "docs/product/user-app-package-draft-preview-handoff.md",
+    "docs/phases/phase-10E.md"
   ],
   "handoffNotes": [
     "Repository documents are the source of truth, not chat memory.",
@@ -184,7 +188,10 @@
     "Phase 10D should prepare candidate-to-app contract boundaries without automatic app package generation.",
     "Phase 10D completed local Candidate-to-App Package Contract Preparation, validation, and handoff models plus Template Workbench UI.",
     "Candidate-to-app preparation is mapping preview only and is not formal UserAppTemplatePackage generation, publication, or registry write.",
-    "Phase 10E should preview a user app package draft only if 10D validation remains ready."
+    "Phase 10E should preview a user app package draft only if 10D validation remains ready.",
+    "Phase 10E completed local User App Package Draft Preview, validation, handoff, fixtures, tests, docs, and Template Workbench UI.",
+    "User App Package Draft Preview is not formal UserAppTemplatePackage generation, publication, or user app package registry write.",
+    "Phase 10F should add an explicit Official User App Package Draft Gate before any formal draft package work."
   ],
   "allowedDirectories": [
     "src/vision",
@@ -210,13 +217,13 @@
     "projectContext": "passed",
     "contextPackJson": "passed",
     "browserVerification": "passed",
-    "phase10DScopedTests": "passed",
+    "phase10EScopedTests": "passed",
     "testFiles": 10,
-    "tests": 39,
-    "phase10DScopedTestFiles": 10,
-    "phase10DScopedTestsCount": 39,
-    "summary": "Phase 10D validation passed: mediapipe:check, scoped Phase 10D tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
-    "updatedAt": "2026-06-16T00:00:00.000+08:00"
+    "tests": 38,
+    "phase10EScopedTestFiles": 10,
+    "phase10EScopedTestsCount": 38,
+    "summary": "Phase 10E validation passed: mediapipe:check, scoped Phase 10E tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
+    "updatedAt": "2026-06-18T00:00:00.000+08:00"
   },
   "updatedAt": "2026-06-16T00:00:00.000+08:00",
   "validation": {
@@ -229,14 +236,14 @@
     "projectContext": "passed",
     "contextPackJson": "passed",
     "browserVerification": "passed",
-    "phase10DScopedTests": "passed",
+    "phase10EScopedTests": "passed",
     "testFiles": 10,
-    "tests": 39,
-    "phase10DScopedTestFiles": 10,
-    "phase10DScopedTestsCount": 39,
-    "summary": "Phase 10D validation passed: mediapipe:check, scoped Phase 10D tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
-    "updatedAt": "2026-06-16T00:00:00.000+08:00"
+    "tests": 38,
+    "phase10EScopedTestFiles": 10,
+    "phase10EScopedTestsCount": 38,
+    "summary": "Phase 10E validation passed: mediapipe:check, scoped Phase 10E tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
+    "updatedAt": "2026-06-18T00:00:00.000+08:00"
   },
   "validationStatus": "passed",
-  "summary": "Phase 10D validation passed: mediapipe:check, scoped Phase 10D tests, typecheck, build, browser verification, project status/context, and JSON status/context commands."
+  "summary": "Phase 10E validation passed: mediapipe:check, scoped Phase 10E tests, typecheck, build, browser verification, project status/context, and JSON status/context commands."
 }

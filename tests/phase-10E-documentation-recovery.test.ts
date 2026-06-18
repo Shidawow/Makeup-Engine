@@ -14,8 +14,8 @@ interface ProjectSnapshot {
   recoveryEntryFiles: string[];
   knownLimitations: string[];
   forbiddenActions: string[];
-  candidateToAppPackageContractDecision: {
-    preparationBoundary: string;
+  userAppPackageDraftPreviewDecision: {
+    previewBoundary: string;
     validationBoundary: string;
     handoffBoundary: string;
     nextPhase: string;
@@ -35,7 +35,7 @@ interface LatestHandoff {
   fromPhase: string;
   toPhase: string;
   nextAction: string;
-  candidateToAppPackageContractDecision: {
+  userAppPackageDraftPreviewDecision: {
     nextPhase: string;
   };
 }
@@ -45,32 +45,29 @@ interface GuardrailState {
   guardrails: Array<{ id: string; rule: string }>;
 }
 
-describe('Phase 10D documentation recovery', () => {
-  it('documents candidate-to-app contract preparation without app package generation scope creep', () => {
-    expect(readText('docs/product/candidate-to-app-package-contract-preparation.md')).toContain(
-      'Candidate-to-App Package Contract Preparation',
+describe('Phase 10E documentation recovery', () => {
+  it('documents user app package draft preview without formal package scope creep', () => {
+    expect(readText('docs/product/user-app-package-draft-preview.md')).toContain(
+      'User App Package Draft Preview',
     );
-    expect(readText('docs/product/candidate-to-app-package-validation.md')).toContain(
-      'Candidate-to-App Package Validation',
+    expect(readText('docs/product/user-app-package-draft-preview-validation.md')).toContain(
+      'User App Package Draft Preview Validation',
     );
-    expect(readText('docs/product/candidate-to-app-package-handoff.md')).toContain(
-      'Candidate-to-App Package Handoff',
+    expect(readText('docs/product/user-app-package-draft-preview-handoff.md')).toContain(
+      'User App Package Draft Preview Handoff',
     );
-    expect(readText('docs/phases/phase-10D.md')).toContain(
-      'Candidate-to-App Package Contract Preparation',
+    expect(readText('docs/phases/phase-10E.md')).toContain(
+      'User App Package Draft Preview',
     );
-    expect(readText('docs/status/NEXT_ACTION.md')).toContain('Phase 10E');
+    expect(readText('docs/status/NEXT_ACTION.md')).toContain('Phase 10F');
     expect(readText('docs/prompts/MASTER_CODEX_CONTEXT.md')).toContain(
-      'Phase 10D completed',
+      'Phase 10E completed',
     );
     expect(readText('docs/prompts/PROVIDER_SWITCH_PROMPT.md')).toContain(
-      'Historical handoff marker retained for Phase 10D recovery tests',
+      'lastCompletedPhase: 10E',
     );
     expect(readText('docs/prompts/PROVIDER_SWITCH_PROMPT.md')).toContain(
-      'lastCompletedPhase: 10D',
-    );
-    expect(readText('docs/prompts/PROVIDER_SWITCH_PROMPT.md')).toContain(
-      'nextRecommendedPhase: 10E',
+      'nextRecommendedPhase: 10F',
     );
 
     const snapshot = readJson<ProjectSnapshot>('project-state/project-state.snapshot.json');
@@ -81,26 +78,26 @@ describe('Phase 10D documentation recovery', () => {
     expect(snapshot.nextRecommendedPhaseName).toContain('Official User App Package Draft Gate');
     expect(snapshot.mainDataFlow).toEqual(
       expect.arrayContaining([
-        'CandidateToAppPackageContractPreparation',
-        'CandidateToAppPackageValidationResult',
-        'CandidateToAppPackageHandoff',
-        'CandidateToAppPackageContractPanel',
+        'UserAppPackageDraftPreview',
+        'UserAppPackageDraftPreviewValidationResult',
+        'UserAppPackageDraftPreviewHandoff',
+        'UserAppPackageDraftPreviewPanel',
       ]),
     );
     expect(snapshot.recoveryEntryFiles).toContain(
-      'docs/product/candidate-to-app-package-contract-preparation.md',
+      'docs/product/user-app-package-draft-preview.md',
     );
-    expect(snapshot.recoveryEntryFiles).toContain('docs/phases/phase-10D.md');
-    expect(snapshot.knownLimitations.join('\n')).toContain('Phase 10D');
+    expect(snapshot.recoveryEntryFiles).toContain('docs/phases/phase-10E.md');
+    expect(snapshot.knownLimitations.join('\n')).toContain('Phase 10E');
     expect(snapshot.knownLimitations.join('\n')).toContain('not formal UserAppTemplatePackage generation');
-    expect(snapshot.forbiddenActions.join('\n')).toContain('Phase 10D');
-    expect(snapshot.candidateToAppPackageContractDecision.preparationBoundary).toContain(
-      'mapping preview only',
+    expect(snapshot.forbiddenActions.join('\n')).toContain('Phase 10E');
+    expect(snapshot.userAppPackageDraftPreviewDecision.previewBoundary).toContain(
+      'draft preview only',
     );
-    expect(snapshot.candidateToAppPackageContractDecision.validationBoundary).toContain(
-      'raw image references',
+    expect(snapshot.userAppPackageDraftPreviewDecision.validationBoundary).toContain(
+      'missing step',
     );
-    expect(snapshot.candidateToAppPackageContractDecision.handoffBoundary).toContain(
+    expect(snapshot.userAppPackageDraftPreviewDecision.handoffBoundary).toContain(
       'does not publish',
     );
 
@@ -109,25 +106,25 @@ describe('Phase 10D documentation recovery', () => {
     expect(providerHandoff.lastCompletedPhase).toBe('10E');
     expect(providerHandoff.nextRecommendedPhase).toBe('10F');
     expect(providerHandoff.nextRecommendedPhaseName).toContain('Official User App Package Draft Gate');
-    expect(providerHandoff.nextRequiredReadFiles).toContain('docs/phases/phase-10D.md');
-    expect(providerHandoff.handoffNotes.join('\n')).toContain('mapping preview only');
+    expect(providerHandoff.nextRequiredReadFiles).toContain('docs/phases/phase-10E.md');
+    expect(providerHandoff.handoffNotes.join('\n')).toContain('Draft Preview');
 
     const latestHandoff = readJson<LatestHandoff>('project-state/latest-handoff.json');
     expect(latestHandoff.fromPhase).toBe('10E');
     expect(latestHandoff.toPhase).toBe('10F');
     expect(latestHandoff.nextAction).toContain('Phase 10F');
-    expect(latestHandoff.candidateToAppPackageContractDecision.nextPhase).toContain(
-      'Phase 10E',
+    expect(latestHandoff.userAppPackageDraftPreviewDecision.nextPhase).toContain(
+      'Phase 10F',
     );
 
     const guardrails = readJson<GuardrailState>('project-state/guardrails.json');
     expect(guardrails.phase).toBe('10E');
     expect(guardrails.guardrails.map((guardrail) => guardrail.id)).toEqual(
       expect.arrayContaining([
-        'phase_10d_preview_only',
-        'phase_10d_no_registry_write',
-        'phase_10d_preserve_trace',
-        'phase_10d_block_unsafe_payloads',
+        'phase_10e_preview_only',
+        'phase_10e_no_registry_write',
+        'phase_10e_no_publish',
+        'phase_10e_block_unsafe_payloads',
       ]),
     );
   });

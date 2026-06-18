@@ -111,3 +111,5 @@
   MediaPipe runtime asset names, personal data, product shade claims, medical
   claims, unsupported final claims, missing region guidance, and
   `UserAppTemplatePackage` mutation markers.
+- Phase 10E User App Package Draft Preview is a local administrator preview layer only. It is not formal UserAppTemplatePackage generation, official package readiness, registry write, publication, production app readiness, backend work, OpenAI/external API usage, camera/AR scope, or training input.
+- Phase 10E draft preview must block missing source contract readiness, missing step guidance, raw image references, local paths, object URLs, base64, MediaPipe runtime asset names, personal data, product shade claims, medical claims, unsupported final claims, automatic publish markers, registry write markers, and UserAppTemplatePackage mutation markers.

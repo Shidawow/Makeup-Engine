@@ -2,16 +2,16 @@
 
 ## Current Phase
 
-Phase 10D: Candidate-to-App Package Contract Preparation is complete.
+Phase 10E: User App Package Draft Preview is complete.
 
-Last completed business phase: Phase 10D.
+Last completed business phase: Phase 10E.
 
-Next recommended phase: Phase 10E, User App Package Draft Preview.
+Next recommended phase: Phase 10F, Official User App Package Draft Gate.
 
-Phase 10D turns Phase 10C candidate packages into local candidate-to-app
-contract preparation previews with validation and handoff, while keeping them
-separate from publication, app package registry writes, and automatic formal
-`UserAppTemplatePackage` generation.
+Phase 10E turns Phase 10D candidate-to-app contract preparation into a local
+administrator-only user app package draft preview with validation and handoff,
+while keeping it separate from formal `UserAppTemplatePackage` generation,
+registry writes, publication, backend services, and production app readiness.
 
 ## What The System Can Do
 
@@ -21,54 +21,58 @@ separate from publication, app package registry writes, and automatic formal
   Workbench.
 - Generate deterministic makeup attribute candidates, rule-based step drafts,
   and draft-only template data.
-- Run `TemplateDraftQaResult` checks before human review.
-- Run a local human review checklist and decision model.
-- Queue template drafts as revision, rejected, blocked, example-only, or
-  approved-as-template-library-candidate.
+- Run draft QA, human review, review workflow, and candidate handoff.
 - Package approved candidates into local candidate packages with QA trace,
   human review trace, privacy trace, reviewed steps, tools, and placeholders.
-- Validate candidate packages for approved review, QA trace, privacy boundary,
-  no raw image reference, no automatic publish, no user app package mutation,
-  and JSON round-trip stability.
-- Generate local candidate handoff next actions for candidate library review,
-  copy polish, region fix, step revision, privacy review, example-only, or
-  blocked package.
-- Prepare candidate-to-app mapping previews for title, summary, tags,
-  difficulty, duration, scenarios, tools, product placeholders, step sequence,
-  region guidance, privacy trace, QA trace, human review trace, and candidate
-  lineage.
-- Validate app contract preparation for source candidate readiness, required
-  mappings, no raw image references, no personal data, no automatic publish, no
+- Validate candidate packages and hand off approved candidate packages without
+  publishing or writing the formal Template Library automatically.
+- Prepare candidate-to-app mapping previews for future app-facing fields.
+- Validate app contract preparation for source readiness, required mappings,
+  raw image boundaries, personal data boundaries, no automatic publish, no
   `UserAppTemplatePackage` mutation, trace preservation, and JSON round-trip
   stability.
-- Generate local candidate-to-app handoff next actions for user app package
-  draft preview, copy polish, step revision, region guidance revision, privacy
-  review, template-library-candidate-only retention, or blocked preparation.
-- Render a compact Template Studio workflow stepper, next-action card,
-  blocked-reason card, and collapsible details.
-- Keep ordinary User App Shell paths separate from administrator-only vision,
-  draft QA, and human review terminology.
+- Generate a local User App Package Draft Preview with title, summary, style
+  tags, difficulty, estimated time, scenarios, tools, product placeholders,
+  step guidance, region guidance, privacy copy, QA trace, human review trace,
+  candidate trace, and contract trace.
+- Validate the draft preview for user-facing copy, step comprehensibility,
+  region safety, tools/products, privacy copy, no raw image references, no
+  personal data, no medical/product shade/final claims, no auto-publish, no
+  registry write, no formal package mutation, and JSON round-trip stability.
+- Generate preview handoff next actions for 10F official draft gate readiness,
+  copy revision, step revision, region revision, privacy revision, admin-preview
+  retention, or blocked app package creation.
+- Render compact Template Studio workflow, candidate package, candidate-to-app,
+  and user app package draft preview panels in the Template Workbench.
+- Keep Vision Analysis focused on FaceMesh, overlay/mask, region QA, and
+  readiness; keep ordinary User App Shell paths separate from administrator-only
+  vision, draft QA, human review, package preview, and registry terminology.
 
 ## What The System Cannot Do
 
 - It cannot act as the production end-user makeup coaching app.
-- It cannot treat FaceMesh candidates, generated steps, or template drafts as
-  final makeup recognition.
+- It cannot treat FaceMesh candidates, generated steps, template drafts,
+  candidate packages, contract preparations, or draft previews as final makeup
+  recognition.
 - It cannot publish drafts automatically.
 - It cannot treat candidate packages as published templates.
 - It cannot write candidate packages into the formal Template Library
   automatically.
-- It cannot generate or mutate `UserAppTemplatePackage` from FaceMesh QA,
-  candidates, generated steps, draft QA, human review, candidate handoff, or
-  candidate package handoff.
 - It cannot treat candidate-to-app contract preparation as formal
   `UserAppTemplatePackage` generation or a user app package registry write.
+- It cannot treat User App Package Draft Preview as formal
+  `UserAppTemplatePackage` generation, official package readiness, publication,
+  production readiness, or registry write.
+- It cannot generate or mutate `UserAppTemplatePackage` from FaceMesh QA,
+  candidates, generated steps, draft QA, human review, candidate handoff,
+  candidate package handoff, app contract preparation, draft preview, validation,
+  or handoff.
 - It cannot collect, upload, store, or train on real user photos through the
   User App Shell.
 - It cannot request camera permissions or call browser camera APIs.
 - It cannot add backend, database, accounts, analytics, AR, OpenAI API,
   external AI/CV APIs, service worker, native app scope, or new runtime
-  dependencies in Phase 10B.
+  dependencies in Phase 10E.
 - It cannot commit local MediaPipe `.task` or `.wasm` files from
   `public/mediapipe/**`.
 - It cannot modify legacy `src/engine`, `src/runtime`, or
@@ -79,8 +83,9 @@ separate from publication, app package registry writes, and automatic formal
 - `src/vision`: active local vision, FaceMesh runtime, FaceMesh region QA,
   segmentation, pixel analysis, and pipeline logic.
 - `src/template-engine`: active local template production plus Phase 10B draft
-  QA, human review, review workflow, Template Studio workflow state, and Phase
-  10C candidate package validation/handoff.
+  QA/human review, Phase 10C candidate package validation/handoff, Phase 10D
+  candidate-to-app contract preparation, and Phase 10E user app package draft
+  preview validation/handoff.
 - `src/components/template-studio`: active operator UI with compact Vision
   Analysis to Template Workbench workflow surfaces.
 - `src/components/demo`: Vision Analysis demo with readiness summary and
@@ -95,7 +100,7 @@ separate from publication, app package registry writes, and automatic formal
 
 ## Recent Validation
 
-Phase 10D validation must include:
+Phase 10E validation must include:
 
 ```bash
 npm run mediapipe:check
@@ -111,8 +116,8 @@ The latest completed validation is recorded in `project-state/test-status.json`.
 
 ## Next Phase Recommendation
 
-Proceed to Phase 10E: User App Package Draft Preview.
+Proceed to Phase 10F: Official User App Package Draft Gate.
 
-Phase 10E should preview a draft app package from validated candidate-to-app
-contract preparation without publishing, writing a registry, or creating a
-formal production app package.
+Phase 10F should decide whether a validated 10E draft preview can enter an
+official user app package draft gate, still without production publication,
+registry writes, backend work, or automatic `UserAppTemplatePackage` mutation.

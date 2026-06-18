@@ -2,24 +2,27 @@
 
 ## What To Do Next
 
-Proceed to Phase 10E: User App Package Draft Preview.
+Proceed to Phase 10F: Official User App Package Draft Gate.
 
 ## Why
 
-Phase 10D prepares an explicit candidate-to-app contract bridge with mapping
-preview, validation, and handoff while preserving the no-publish,
+Phase 10E creates a local user app package draft preview from validated 10D
+candidate-to-app contract preparation while preserving no-publish,
 no-registry-write, and no-formal-`UserAppTemplatePackage` boundaries. The next
-safe step is a draft preview that still remains local and reviewable.
+safe step is a gate that decides whether an official user app package draft can
+be prepared in a later explicit scope.
 
-## Recommended 10E Scope
+## Recommended 10F Scope
 
-- Create a draft preview from validated candidate-to-app contract preparation.
-- Keep the preview local, deterministic, and blocked by validation failures.
-- Preserve QA trace, human review trace, privacy trace, and candidate lineage.
-- Continue to avoid formal `UserAppTemplatePackage` generation unless an
-  explicit later phase approves it.
-- Add docs, fixtures, tests, and UI that distinguish draft preview from formal
-  package generation.
+- Evaluate whether a 10E draft preview can enter an official user app package
+  draft gate.
+- Keep the gate local, deterministic, and blocked by validation failures.
+- Preserve QA trace, human review trace, privacy trace, candidate trace,
+  contract trace, and preview validation trace.
+- Continue to avoid formal `UserAppTemplatePackage` mutation unless the 10F gate
+  explicitly defines a safe draft-only contract path.
+- Add docs, fixtures, tests, and UI that distinguish official draft gate from
+  production package generation.
 
 ## What Not To Do
 
@@ -27,14 +30,14 @@ safe step is a draft preview that still remains local and reviewable.
 - Do not publish template candidates automatically.
 - Do not write candidate packages into the formal Template Library
   automatically.
-- Do not generate or mutate formal `UserAppTemplatePackage` from candidate
-  contract preparation.
+- Do not treat 10E draft preview as an official `UserAppTemplatePackage`.
+- Do not write a user app package registry.
 - Do not add backend, database, account system, cloud sync, analytics, camera
   capture, AR, OpenAI/external API calls, native app implementation, React
   Native, Flutter, App Store/TestFlight work, service worker, ecommerce,
   community, paid features, or new runtime dependencies.
 - Do not train on FaceMesh candidates, draft steps, template drafts, human
-  review records, user app state, or real user photos.
+  review records, user app state, draft previews, or real user photos.
 - Do not commit `public/mediapipe/**` `.task` or `.wasm` assets.
 - Do not modify legacy runtime areas.
 
@@ -48,26 +51,19 @@ Read these files first:
 4. `docs/prompts/PROVIDER_SWITCH_PROMPT.md`
 5. `docs/status/CURRENT_PROJECT_STATUS.md`
 6. `docs/status/NEXT_ACTION.md`
-7. `docs/product/facemesh-region-qa-baseline.md`
-8. `docs/product/makeup-attribute-candidate-baseline.md`
-9. `docs/product/rule-based-template-draft-baseline.md`
-10. `docs/product/template-draft-qa.md`
-11. `docs/product/template-draft-human-review-workflow.md`
-12. `docs/product/template-draft-review-workflow.md`
-13. `docs/phases/phase-10B.md`
-14. `docs/product/template-library-candidate-package.md`
-15. `docs/product/template-library-candidate-validation.md`
-16. `docs/product/template-library-candidate-handoff.md`
-17. `docs/phases/phase-10C.md`
-18. `docs/product/candidate-to-app-package-contract-preparation.md`
-19. `docs/product/candidate-to-app-package-validation.md`
-20. `docs/product/candidate-to-app-package-handoff.md`
-21. `docs/phases/phase-10D.md`
-22. `project-state/project-state.snapshot.json`
-23. `project-state/latest-handoff.json`
-24. `project-state/provider-handoff.json`
-25. `project-state/active-task.json`
-26. `project-state/guardrails.json`
+7. `docs/product/candidate-to-app-package-contract-preparation.md`
+8. `docs/product/candidate-to-app-package-validation.md`
+9. `docs/product/candidate-to-app-package-handoff.md`
+10. `docs/product/user-app-package-draft-preview.md`
+11. `docs/product/user-app-package-draft-preview-validation.md`
+12. `docs/product/user-app-package-draft-preview-handoff.md`
+13. `docs/phases/phase-10D.md`
+14. `docs/phases/phase-10E.md`
+15. `project-state/project-state.snapshot.json`
+16. `project-state/latest-handoff.json`
+17. `project-state/provider-handoff.json`
+18. `project-state/active-task.json`
+19. `project-state/guardrails.json`
 
 Then run:
 

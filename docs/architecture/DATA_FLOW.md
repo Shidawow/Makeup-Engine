@@ -17,6 +17,7 @@ Real Photo
 -> Template Draft Review Workflow
 -> Template Library Candidate Package
 -> Candidate-to-App Package Contract Preparation
+-> User App Package Draft Preview
 -> Editable Masks
 -> Human Correction
 -> Template Evidence
@@ -80,6 +81,7 @@ Real Photo
   privacy, and candidate trace. It does not generate a formal
   `UserAppTemplatePackage`, publish to the user app, or write a user app package
   registry.
+- `User App Package Draft Preview`: Phase 10E local preview, validation, and handoff branch. It renders future user-facing title, summary, difficulty, time, scenarios, tools, product placeholders, step guidance, region guidance, privacy notice, and trace from 10D contract preparation. It does not generate formal `UserAppTemplatePackage`, publish to the user app, or write a user app package registry.
 - `Editable Masks`: generated and human-editable mask artifacts.
 - `Human Correction`: correction records produced by human review and mask editing.
 - `Template Evidence`: structured evidence supporting extracted template decisions.

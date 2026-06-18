@@ -919,3 +919,39 @@ Why Phase 10B follows:
 
 The FaceMesh baseline now creates reviewable drafts. The next safe step is Phase
 10B - Template Draft QA & Human Review Workflow.
+
+## Phase 10E - User App Package Draft Preview
+
+Added local User App Package Draft Preview after Phase 10D app contract
+validation.
+
+What changed:
+
+- Added draft preview model for title, summary, style tags, difficulty,
+  estimated time, suitable scenarios, tools, product placeholders, step guidance,
+  region guidance, privacy notice, and trace.
+- Added preview validation for source contract readiness, user-facing copy,
+  step guidance, region guidance, tools/products, privacy copy, raw image
+  boundaries, personal data boundaries, medical/product/final claims,
+  no auto-publish, no registry write, no formal `UserAppTemplatePackage`
+  mutation, and JSON round-trip stability.
+- Added preview handoff next actions for 10F official draft gate readiness,
+  copy revision, step revision, region revision, privacy revision,
+  admin-preview-only retention, and blocked app package creation.
+- Added Template Workbench panel for 用户 App 包草稿预览 / Preview Validation /
+  Preview Handoff.
+- Kept Vision Analysis free of user app package draft preview and kept ordinary
+  User App Shell paths free of administrator package preview terminology.
+
+What still cannot happen:
+
+- Phase 10E is not formal `UserAppTemplatePackage` generation, not a user app
+  package registry write, not publication, not production readiness, not backend
+  work, not camera/AR scope, not OpenAI/external API scope, and not training
+  input.
+
+Why Phase 10F follows:
+
+The draft preview is ready for an explicit Official User App Package Draft Gate.
+Phase 10F should decide whether a validated preview can enter a formal draft
+preparation gate without crossing into production release or registry scope.

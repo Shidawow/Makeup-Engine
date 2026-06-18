@@ -253,3 +253,25 @@ polish, step revision, region guidance revision, privacy review,
 template-library-candidate-only retention, or blocking. It cannot generate a
 formal `UserAppTemplatePackage`, cannot publish to the user app, and cannot
 write a user app package registry.
+
+## Phase 10E User App Package Draft Preview Boundary
+
+Phase 10E draft preview, validation, and handoff are local administrator aids
+only. They must not become formal `UserAppTemplatePackage` generation, a user
+app package registry write, user app publication, backend records, production
+app behavior, AI approval, training approval, or App Store/TestFlight readiness.
+
+User App Package Draft Preview can preserve title, summary, style tags,
+difficulty, estimated time, suitable scenarios, tools, product placeholders,
+step guidance, region guidance, privacy notice, QA trace, human review trace,
+candidate trace, and 10D contract trace. It cannot contain raw image references,
+base64, object URLs, local paths, MediaPipe runtime assets, real personal data,
+health data, contact data, biometric data, product shade claims, medical claims,
+unsupported final claims, automatic publish markers, registry write markers, or
+`UserAppTemplatePackage` mutation markers.
+
+User App Package Draft Preview handoff can recommend a later official user app
+package draft gate, copy revision, step guidance revision, region guidance
+revision, privacy notice revision, admin-preview-only retention, or blocking. It
+cannot generate a formal `UserAppTemplatePackage`, cannot publish to the user
+app, and cannot write a user app package registry.

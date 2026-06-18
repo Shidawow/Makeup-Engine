@@ -12,10 +12,10 @@ It produces templates, template evidence, correction records, review state, loca
 
 ## Current Phase
 
-- Current business phase: `Phase 10D completed`
-- Last completed phase: `Phase 10D`
-- Last completed phase name: `Phase 10D - Candidate-to-App Package Contract Preparation`
-- Next recommended phase: `Phase 10E - User App Package Draft Preview`
+- Current business phase: `Phase 10E completed`
+- Last completed phase: `Phase 10E`
+- Last completed phase name: `Phase 10E - User App Package Draft Preview`
+- Next recommended phase: `Phase 10F - Official User App Package Draft Gate`
 
 Historical recovery marker retained for Phase 9C tests: `Phase 9C completed`.
 Historical recovery marker retained for Phase 9E tests: `Phase 9E completed`.
@@ -79,6 +79,7 @@ Real Photo
 -> Template Draft Review Workflow
 -> Template Library Candidate Packaging
 -> Candidate-to-App Package Contract Preparation
+-> User App Package Draft Preview
 -> Phase 8 Roadmap / V1 Non-Goals
 -> User App Consumption Manifest
 -> Dataset Review
@@ -351,3 +352,14 @@ When finishing a round, report in this order:
 - Phase 9F completed privacy-safe internal trial evidence collection preparation only, not real data collection.
 - Phase 9G completed anonymous internal trial dry run pack only, not real trial launch or MVP validation planning.
 - Phase 9H completed anonymous internal trial launch pack only, not public recruitment, production launch, backend collection, AI analysis, training, or MVP validation planning.
+
+## Phase 10E Current Capability
+
+Phase 10E completed User App Package Draft Preview. It added local preview,
+validation, handoff, examples, Template Workbench UI, documentation, and recovery
+state for converting Phase 10D app contract validation into a user-facing draft
+preview. It is not formal `UserAppTemplatePackage` generation, does not write a
+user app package registry, does not publish, does not call backend/OpenAI/external
+APIs, does not use camera/AR, and does not train models.
+
+Next recommended phase: Phase 10F - Official User App Package Draft Gate.

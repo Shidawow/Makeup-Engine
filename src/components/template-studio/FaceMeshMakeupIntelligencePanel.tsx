@@ -3,6 +3,8 @@ import {
   buildTemplateStudioWorkflowState,
   createCandidateToAppPackageContractPreparation,
   createCandidateToAppPackageHandoff,
+  createUserAppPackageDraftPreview,
+  createUserAppPackageDraftPreviewHandoff,
   createTemplateLibraryCandidateHandoff,
   createTemplateLibraryCandidatePackage,
   createTemplateDraftReviewWorkflow,
@@ -12,6 +14,7 @@ import {
   MakeupTemplateDraftReport,
   RuleBasedStepSequence,
   validateCandidateToAppPackageContract,
+  validateUserAppPackageDraftPreview,
   validateTemplateLibraryCandidatePackage,
 } from '../../template-engine';
 import type {
@@ -23,6 +26,7 @@ import type {
 import { TemplateDraftReviewWorkflowPanel } from './TemplateDraftReviewWorkflowPanel';
 import { TemplateLibraryCandidatePackagingPanel } from './TemplateLibraryCandidatePackagingPanel';
 import { CandidateToAppPackageContractPanel } from './CandidateToAppPackageContractPanel';
+import { UserAppPackageDraftPreviewPanel } from './UserAppPackageDraftPreviewPanel';
 
 export interface FaceMeshMakeupIntelligencePanelProps {
   regionQa: FaceMeshRegionQaReport | null;
@@ -118,6 +122,26 @@ export function FaceMeshMakeupIntelligencePanel({
             </p>
           </div>
         </div>
+        <div className="mt-3 grid gap-2 rounded-md border border-emerald-200 bg-emerald-50 p-3 text-sm text-emerald-900 md:grid-cols-3">
+          <div>
+            <p className="font-semibold">用户 App 包草稿预览</p>
+            <p className="mt-1 text-xs leading-5">
+              Draft Preview blocked：缺少 source contract ready。
+            </p>
+          </div>
+          <div>
+            <p className="font-semibold">Preview Validation</p>
+            <p className="mt-1 text-xs leading-5">
+              需要 10D app contract validation ready 后才能预览用户侧字段。
+            </p>
+          </div>
+          <div>
+            <p className="font-semibold">Preview Handoff</p>
+            <p className="mt-1 text-xs leading-5">
+              不是正式 UserAppTemplatePackage，不会写入用户 App 包 registry。
+            </p>
+          </div>
+        </div>
       </section>
     );
   }
@@ -173,6 +197,17 @@ export function FaceMeshMakeupIntelligencePanel({
     preparation: appContractPreparation,
     validation: appContractValidation,
   });
+  const userAppPackageDraftPreview = createUserAppPackageDraftPreview({
+    preparation: appContractPreparation,
+    validation: appContractValidation,
+  });
+  const userAppPackageDraftPreviewValidation =
+    validateUserAppPackageDraftPreview(userAppPackageDraftPreview);
+  const userAppPackageDraftPreviewHandoff =
+    createUserAppPackageDraftPreviewHandoff({
+      preview: userAppPackageDraftPreview,
+      validation: userAppPackageDraftPreviewValidation,
+    });
 
   return (
     <section className="grid gap-4">
@@ -284,6 +319,11 @@ export function FaceMeshMakeupIntelligencePanel({
         handoff={appPackageHandoff}
         preparation={appContractPreparation}
         validation={appContractValidation}
+      />
+      <UserAppPackageDraftPreviewPanel
+        handoff={userAppPackageDraftPreviewHandoff}
+        preview={userAppPackageDraftPreview}
+        validation={userAppPackageDraftPreviewValidation}
       />
     </section>
   );

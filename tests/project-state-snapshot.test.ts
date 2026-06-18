@@ -31,13 +31,13 @@ describe('project state snapshot', () => {
 
     expect(snapshot.projectName).toBe('Makeup Engine');
     expect(snapshot.projectRole).toContain('Makeup template production system');
-    expect(snapshot.lastCompletedPhase).toBe('10D');
-    expect(snapshot.lastCompletedBusinessPhase).toBe('10D');
-    expect(snapshot.currentPhaseId).toBe('10D');
+    expect(snapshot.lastCompletedPhase).toBe('10E');
+    expect(snapshot.lastCompletedBusinessPhase).toBe('10E');
+    expect(snapshot.currentPhaseId).toBe('10E');
     expect(snapshot.currentPhase).toBeTruthy();
-    expect(snapshot.nextRecommendedPhase).toBe('10E');
-    expect(snapshot.nextRecommendedPhaseName).toContain('User App Package Draft Preview');
-    expect(snapshot.nextAction).toContain('Phase 10E');
+    expect(snapshot.nextRecommendedPhase).toBe('10F');
+    expect(snapshot.nextRecommendedPhaseName).toContain('Official User App Package Draft Gate');
+    expect(snapshot.nextAction).toContain('Phase 10F');
     expect(snapshot.mainDataFlow).toEqual(
       expect.arrayContaining([
         'SourceImagePackage',
@@ -116,6 +116,10 @@ describe('project state snapshot', () => {
         'CandidateToAppPackageValidationResult',
         'CandidateToAppPackageHandoff',
         'CandidateToAppPackageContractPanel',
+        'UserAppPackageDraftPreview',
+        'UserAppPackageDraftPreviewValidationResult',
+        'UserAppPackageDraftPreviewHandoff',
+        'UserAppPackageDraftPreviewPanel',
         'FaceMeshMakeupIntelligenceAdminPanel',
         'MaterializedTrainingDataset',
       ]),
@@ -144,6 +148,7 @@ describe('project state snapshot', () => {
     expect(snapshot.knownLimitations.join('\n')).toContain('Phase 10B template draft QA');
     expect(snapshot.knownLimitations.join('\n')).toContain('Phase 10C template library candidate packages');
     expect(snapshot.knownLimitations.join('\n')).toContain('Phase 10D candidate-to-app contract preparation');
+    expect(snapshot.knownLimitations.join('\n')).toContain('Phase 10E User App Package Draft Preview');
     expect(snapshot.knownLimitations.join('\n')).toContain('real names');
     expect(snapshot.knownLimitations.join('\n')).toContain('service worker');
     expect(snapshot.knownLimitations).toContain('raw RGBA is currently summary-only in Studio');

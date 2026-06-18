@@ -233,6 +233,72 @@
       "status": "passed",
       "phase": "10D",
       "notes": "Phase 10D JSON context pack command passed."
+    },
+    {
+      "command": "npm run test -- tests/user-app-package-draft-preview.test.ts tests/user-app-package-draft-preview-validation.test.ts tests/user-app-package-draft-preview-handoff.test.ts tests/user-app-package-draft-preview-panels.test.tsx tests/template-studio-tab-boundary.test.tsx",
+      "status": "passed",
+      "phase": "10E",
+      "notes": "Initial Phase 10E model, panel, and tab boundary tests passed."
+    },
+    {
+      "command": "npm run typecheck",
+      "status": "passed",
+      "phase": "10E",
+      "notes": "Initial Phase 10E typecheck passed."
+    },
+    {
+      "command": "npm run mediapipe:check",
+      "status": "passed",
+      "phase": "10E",
+      "notes": "Phase 10E MediaPipe local asset check passed."
+    },
+    {
+      "command": "npm run typecheck",
+      "status": "passed",
+      "phase": "10E",
+      "notes": "Phase 10E typecheck passed."
+    },
+    {
+      "command": "npm run build",
+      "status": "passed",
+      "phase": "10E",
+      "notes": "Phase 10E build passed with existing chunk-size warning."
+    },
+    {
+      "command": "npm run test -- tests/user-app-package-draft-preview.test.ts tests/user-app-package-draft-preview-validation.test.ts tests/user-app-package-draft-preview-handoff.test.ts tests/user-app-package-draft-preview-panels.test.tsx tests/phase-10E-documentation-recovery.test.ts tests/candidate-to-app-package-contract.test.ts tests/candidate-to-app-package-panels.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
+      "status": "passed",
+      "phase": "10E",
+      "notes": "10 files / 38 tests passed."
+    },
+    {
+      "command": "Browser verification for Phase 10E Template Studio tabs",
+      "status": "passed",
+      "phase": "10E",
+      "notes": "Vision Analysis does not show user app package draft preview; Template Workbench shows draft preview, validation, handoff, blocked state, and no forbidden publish/package/registry copy; MediaPipe ready shows no mock fallback."
+    },
+    {
+      "command": "npm run project:status",
+      "status": "passed",
+      "phase": "10E",
+      "notes": "Phase 10E project status command passed."
+    },
+    {
+      "command": "npm run project:context",
+      "status": "passed",
+      "phase": "10E",
+      "notes": "Phase 10E project context command passed."
+    },
+    {
+      "command": "node scripts/project-status.mjs --json",
+      "status": "passed",
+      "phase": "10E",
+      "notes": "Phase 10E JSON project status command passed."
+    },
+    {
+      "command": "node scripts/context-pack.mjs --json",
+      "status": "passed",
+      "phase": "10E",
+      "notes": "Phase 10E JSON context pack command passed."
     }
   ],
   "lastUpdatedPhase": "10D",

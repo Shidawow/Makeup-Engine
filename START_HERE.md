@@ -5,9 +5,9 @@ Makeup Engine is the makeup template production system for a future makeup coach
 ## Current Position
 
 - Project role: makeup template production system plus a local contract-driven user app shell prototype.
-- Last completed phase: `Phase 10D`.
-- Current completed business phase: `Phase 10D - Candidate-to-App Package Contract Preparation`.
-- Next recommended phase: `Phase 10E - User App Package Draft Preview`.
+- Last completed phase: `Phase 10E`.
+- Current completed business phase: `Phase 10E - User App Package Draft Preview`.
+- Next recommended phase: `Phase 10F - Official User App Package Draft Gate`.
 - Recent recovery milestones retained in phase docs: `Phase 6K`, `Phase 6L`, `Phase 6L-1`, `Phase 7A`, `Phase 7B`, `Phase 7C`, `Phase 7D`, `Phase 7E`, `Phase 7F`, `Phase 7G`, `Phase 7H`, and `Phase 8A`.
 - Historical route-planning milestone: `Phase 8A - Product Route Decision / App MVP Planning`.
 
@@ -55,6 +55,7 @@ SourceImagePackage manifest
 -> Template Draft Review Workflow
 -> Template Library Candidate Packaging
 -> Candidate-to-App Package Contract Preparation
+-> User App Package Draft Preview
 -> Phase 8 Roadmap / V1 Non-Goals
 -> Consumption Manifest
 -> Dataset Review
@@ -155,6 +156,10 @@ SourceImagePackage manifest
 88. `docs/product/candidate-to-app-package-validation.md`
 89. `docs/product/candidate-to-app-package-handoff.md`
 90. `docs/phases/phase-10D.md`
+91. `docs/product/user-app-package-draft-preview.md`
+92. `docs/product/user-app-package-draft-preview-validation.md`
+93. `docs/product/user-app-package-draft-preview-handoff.md`
+94. `docs/phases/phase-10E.md`
 91. `docs/phases/phase-7H.md`
 92. `project-state/project-state.snapshot.json`
 93. `project-state/provider-handoff.json`

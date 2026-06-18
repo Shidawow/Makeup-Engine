@@ -496,3 +496,21 @@ MediaPipe recovery hints, mock fallback, and readiness summary. Template
 Workbench owns candidates, step drafts, template draft, draft QA, human review,
 and candidate handoff. Approval means template library candidate only; it does
 not publish and does not generate `UserAppTemplatePackage`.
+
+### User App Package Draft Preview
+
+Phase 10E adds a local draft preview layer after Phase 10D app contract
+validation. `src/template-engine/userAppPackageDraftPreview.ts` creates preview
+fields for future user app package drafts. `userAppPackageDraftPreviewValidation.ts`
+checks source readiness, user-facing copy, step guidance, region guidance,
+privacy copy, raw image boundaries, personal data boundaries, medical/product
+claim boundaries, no automatic publish, no registry write, no formal
+`UserAppTemplatePackage` mutation, and JSON round-trip safety.
+`userAppPackageDraftPreviewHandoff.ts` creates local next actions for a later
+Official User App Package Draft Gate.
+
+`src/components/template-studio/UserAppPackageDraftPreviewPanel.tsx` renders the
+Template Workbench preview, validation, and handoff summary. The preview does
+not appear in Vision Analysis and does not generate formal
+`UserAppTemplatePackage`, write a user app package registry, publish, call
+backend/API services, use camera/AR, or train models.
