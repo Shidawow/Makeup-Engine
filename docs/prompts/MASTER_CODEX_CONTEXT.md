@@ -12,10 +12,10 @@ It produces templates, template evidence, correction records, review state, loca
 
 ## Current Phase
 
-- Current business phase: `Phase 10I completed`
-- Last completed phase: `Phase 10I`
-- Last completed phase name: `Phase 10I - UserAppTemplatePackage Registry Preparation`
-- Next recommended phase: `Phase 10J - UserAppTemplatePackage Registry Write Gate`
+- Current business phase: `Phase 10J completed`
+- Last completed phase: `Phase 10J`
+- Last completed phase name: `Phase 10J - UserAppTemplatePackage Registry Write Gate`
+- Next recommended phase: `Phase 10K - Controlled UserAppTemplatePackage Registry Writer Draft`
 
 Historical recovery marker retained for Phase 9C tests: `Phase 9C completed`.
 Historical recovery marker retained for Phase 9E tests: `Phase 9E completed`.
@@ -84,6 +84,7 @@ Real Photo
 -> Official UserAppTemplatePackage Draft Builder
 -> UserAppTemplatePackage Draft Publish Gate
 -> UserAppTemplatePackage Registry Preparation
+-> UserAppTemplatePackage Registry Write Gate
 -> Phase 8 Roadmap / V1 Non-Goals
 -> User App Consumption Manifest
 -> Dataset Review
@@ -141,6 +142,11 @@ Important boundary: `SourceImagePackage` can enter Vision Analysis through opera
   and `src/template-engine/userAppTemplatePackageRegistryPreparationHandoff.ts`:
   Phase 10I local registry preparation, validation, and handoff logic. They
   prepare registry entry previews only and do not write registries, publish,
+  replace the current User App Shell package, or mark production readiness.
+- `src/template-engine/userAppTemplatePackageRegistryWriteGate.ts` and
+  `src/template-engine/userAppTemplatePackageRegistryWriteGateHandoff.ts`:
+  Phase 10J local registry write gate and handoff logic. They check future
+  controlled-writer eligibility only and do not write registries, publish,
   replace the current User App Shell package, or mark production readiness.
 - `src/templates`: schemas, storage, review, corrections, evidence, dataset materialization, source image binding, production batch storage/export, template library storage, and publish package export.
 - `src/template-engine/production`: production queue, state machine, QA rules, rebinding recovery, analysis handoff, review lifecycle, smoke checklist.
@@ -398,3 +404,17 @@ train models.
 Historical marker retained for Phase 10E recovery tests: Phase 10E completed.
 
 Next recommended phase: Phase 10G - Official UserAppTemplatePackage Draft Builder.
+
+## Phase 10J Current Capability
+
+Phase 10J completed UserAppTemplatePackage Registry Write Gate. It added a
+local gate, handoff, examples, Template Workbench UI, documentation, and
+recovery state for deciding whether a Phase 10I registry preparation validation
+result is eligible for a future controlled registry writer draft. It is not an
+actual registry write, does not publish, does not replace the current User App
+Shell package, does not mark production readiness, does not call
+backend/OpenAI/external APIs, does not use camera/AR, and does not train models.
+
+Historical marker retained for Phase 10I recovery tests: Phase 10I completed.
+
+Next recommended phase: Phase 10K - Controlled UserAppTemplatePackage Registry Writer Draft.

@@ -1,5 +1,5 @@
 {
-  "phase": "10I",
+  "phase": "10J",
   "guardrails": [
     {
       "id": "source-image-not-training-data",
@@ -660,6 +660,26 @@
     {
       "id": "phase_10i_no_production_readiness",
       "rule": "Phase 10I must not mark production readiness or production UserAppTemplatePackage output."
+    },
+    {
+      "id": "phase_10j_gate_only",
+      "rule": "Phase 10J is a registry write gate only and must not become a controlled writer or actual registry write."
+    },
+    {
+      "id": "phase_10j_no_actual_registry_write",
+      "rule": "Phase 10J must not write, persist, or mark a UserAppTemplatePackage registry entry as written."
+    },
+    {
+      "id": "phase_10j_no_publish",
+      "rule": "Phase 10J must not publish to the user app or mark production readiness."
+    },
+    {
+      "id": "phase_10j_no_shell_package_replacement",
+      "rule": "Phase 10J must not replace the current User App Shell package."
+    },
+    {
+      "id": "phase_10j_no_production_package",
+      "rule": "Phase 10J must not create or mark a production UserAppTemplatePackage."
     }
   ],
   "legacyFrozenModules": [

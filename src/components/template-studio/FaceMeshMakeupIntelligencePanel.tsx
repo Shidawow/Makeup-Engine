@@ -13,6 +13,8 @@ import {
   createUserAppTemplatePackageDraftPublishGateHandoff,
   createUserAppTemplatePackageRegistryPreparation,
   createUserAppTemplatePackageRegistryPreparationHandoff,
+  createUserAppTemplatePackageRegistryWriteGate,
+  createUserAppTemplatePackageRegistryWriteGateHandoff,
   createTemplateLibraryCandidateHandoff,
   createTemplateLibraryCandidatePackage,
   createTemplateDraftReviewWorkflow,
@@ -41,6 +43,7 @@ import { OfficialUserAppPackageDraftGatePanel } from './OfficialUserAppPackageDr
 import { OfficialUserAppTemplatePackageDraftBuilderPanel } from './OfficialUserAppTemplatePackageDraftBuilderPanel';
 import { UserAppTemplatePackageDraftPublishGatePanel } from './UserAppTemplatePackageDraftPublishGatePanel';
 import { UserAppTemplatePackageRegistryPreparationPanel } from './UserAppTemplatePackageRegistryPreparationPanel';
+import { UserAppTemplatePackageRegistryWriteGatePanel } from './UserAppTemplatePackageRegistryWriteGatePanel';
 
 export interface FaceMeshMakeupIntelligencePanelProps {
   regionQa: FaceMeshRegionQaReport | null;
@@ -236,6 +239,26 @@ export function FaceMeshMakeupIntelligencePanel({
             </p>
           </div>
         </div>
+        <div className="mt-3 grid gap-2 rounded-md border border-sky-200 bg-sky-50 p-3 text-sm text-sky-900 md:grid-cols-3">
+          <div>
+            <p className="font-semibold">用户 App 模板包 Registry 写入闸门</p>
+            <p className="mt-1 text-xs leading-5">
+              Registry Write Gate blocked：缺少 10I registry preparation validation ready。
+            </p>
+          </div>
+          <div>
+            <p className="font-semibold">Gate Checks</p>
+            <p className="mt-1 text-xs leading-5">
+              只判断是否可进入未来受控 registry writer，不是实际写入。
+            </p>
+          </div>
+          <div>
+            <p className="font-semibold">Writer Handoff</p>
+            <p className="mt-1 text-xs leading-5">
+              不会写入 registry，不会发布，也不会替换当前用户 App 包。
+            </p>
+          </div>
+        </div>
       </section>
     );
   }
@@ -347,6 +370,15 @@ export function FaceMeshMakeupIntelligencePanel({
     createUserAppTemplatePackageRegistryPreparationHandoff({
       preparation: userAppTemplatePackageRegistryPreparation,
       validation: userAppTemplatePackageRegistryPreparationValidation,
+    });
+  const userAppTemplatePackageRegistryWriteGate =
+    createUserAppTemplatePackageRegistryWriteGate({
+      preparation: userAppTemplatePackageRegistryPreparation,
+      validation: userAppTemplatePackageRegistryPreparationValidation,
+    });
+  const userAppTemplatePackageRegistryWriteGateHandoff =
+    createUserAppTemplatePackageRegistryWriteGateHandoff({
+      gate: userAppTemplatePackageRegistryWriteGate,
     });
 
   return (
@@ -482,6 +514,10 @@ export function FaceMeshMakeupIntelligencePanel({
         handoff={userAppTemplatePackageRegistryPreparationHandoff}
         preparation={userAppTemplatePackageRegistryPreparation}
         validation={userAppTemplatePackageRegistryPreparationValidation}
+      />
+      <UserAppTemplatePackageRegistryWriteGatePanel
+        gate={userAppTemplatePackageRegistryWriteGate}
+        handoff={userAppTemplatePackageRegistryWriteGateHandoff}
       />
     </section>
   );

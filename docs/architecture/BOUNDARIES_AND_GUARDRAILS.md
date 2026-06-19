@@ -369,3 +369,25 @@ package metadata revision, versioning review, privacy review, User App Shell
 boundary review, preview-only retention, or blocking. It cannot write the
 registry, cannot publish, cannot mark a production package, and cannot replace
 the current User App Shell package.
+
+## Phase 10J UserAppTemplatePackage Registry Write Gate Boundary
+
+Phase 10J registry write gate and handoff are local administrator aids only.
+Gate ready means eligible for a future controlled registry writer draft; it is
+not registry write execution, publication, production readiness, production
+package creation, or a User App Shell package replacement.
+
+The gate checks Phase 10I registry preparation validation readiness, registry
+entry preview presence, package id/version candidates, `draftOnly`,
+`publishBlocked`, `registryWriteBlocked`, QA trace, human review trace,
+candidate trace, contract trace, preview trace, publish gate trace, registry
+preparation trace, raw image boundaries, personal data boundaries, medical
+claims, product shade claims, unsupported final claims, actual registry write
+markers, User App Shell package replacement markers, production package
+markers, User App contract boundary safety, and JSON round-trip stability.
+
+Registry write gate handoff can recommend a future controlled registry writer,
+package metadata revision, versioning review, privacy review, User App Shell
+boundary review, preview-only retention, or blocking. It cannot write the
+registry, cannot publish, cannot mark a production package, and cannot replace
+the current User App Shell package.

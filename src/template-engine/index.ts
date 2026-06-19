@@ -36,6 +36,8 @@ export * from './userAppTemplatePackageDraftPublishGateHandoff';
 export * from './userAppTemplatePackageRegistryPreparation';
 export * from './userAppTemplatePackageRegistryPreparationValidation';
 export * from './userAppTemplatePackageRegistryPreparationHandoff';
+export * from './userAppTemplatePackageRegistryWriteGate';
+export * from './userAppTemplatePackageRegistryWriteGateHandoff';
 export * from './template-builder';
 export * from './template-builder/template-builder';
 export * from './convergence';

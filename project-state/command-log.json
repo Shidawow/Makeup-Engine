@@ -407,13 +407,67 @@
       "status": "passed",
       "phase": "10I",
       "notes": "Vision Analysis does not show registry preparation; Template Workbench shows registry preparation, validation, handoff, blocked state, and no forbidden write/publish/shell replacement copy."
+    },
+    {
+      "command": "npm run mediapipe:check",
+      "status": "passed",
+      "phase": "10J",
+      "notes": "Phase 10J required validation command."
+    },
+    {
+      "command": "npm run typecheck",
+      "status": "passed",
+      "phase": "10J",
+      "notes": "Phase 10J required validation command."
+    },
+    {
+      "command": "npm run build",
+      "status": "passed",
+      "phase": "10J",
+      "notes": "Phase 10J required validation command."
+    },
+    {
+      "command": "npm run project:status",
+      "status": "passed",
+      "phase": "10J",
+      "notes": "Phase 10J required validation command."
+    },
+    {
+      "command": "npm run project:context",
+      "status": "passed",
+      "phase": "10J",
+      "notes": "Phase 10J required validation command."
+    },
+    {
+      "command": "node scripts/project-status.mjs --json",
+      "status": "passed",
+      "phase": "10J",
+      "notes": "Phase 10J required validation command."
+    },
+    {
+      "command": "node scripts/context-pack.mjs --json",
+      "status": "passed",
+      "phase": "10J",
+      "notes": "Phase 10J required validation command."
+    },
+    {
+      "command": "npm run test -- tests/user-app-template-package-registry-write-gate.test.ts tests/user-app-template-package-registry-write-gate-handoff.test.ts tests/user-app-template-package-registry-write-gate-panel.test.tsx tests/phase-10J-documentation-recovery.test.ts tests/user-app-template-package-registry-preparation.test.ts tests/user-app-template-package-registry-preparation-panel.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
+      "status": "passed",
+      "phase": "10J",
+      "notes": "Phase 10J required validation command."
+    },
+    {
+      "command": "Browser verification for Phase 10J Template Studio tabs",
+      "status": "passed",
+      "phase": "10J",
+      "notes": "Vision Analysis does not show registry write gate; Template Workbench shows gate/handoff, blocked state, and no forbidden write/publish/replacement copy."
     }
   ],
-  "lastUpdatedPhase": "10I",
-  "phase": "10I",
-  "lastCompletedPhase": "10I",
-  "currentPhase": "10I",
-  "nextRecommendedPhase": "10J",
+  "lastUpdatedPhase": "10J",
+  "phase": "10J",
+  "lastCompletedPhase": "10J",
+  "currentPhase": "10J",
+  "nextRecommendedPhase": "10K",
   "updatedAt": "2026-06-19",
   "lastValidation": {
     "mediapipeCheck": "passed",
@@ -509,8 +563,8 @@
       "notes": "Phase 10I JSON context pack command passed."
     }
   ],
-  "currentPhaseId": "10I",
-  "nextRecommendedPhaseName": "UserAppTemplatePackage Registry Write Gate",
-  "currentPhaseName": "UserAppTemplatePackage Registry Preparation",
+  "currentPhaseId": "10J",
+  "nextRecommendedPhaseName": "Controlled UserAppTemplatePackage Registry Writer Draft",
+  "currentPhaseName": "UserAppTemplatePackage Registry Write Gate",
   "validationStatus": "passed"
 }

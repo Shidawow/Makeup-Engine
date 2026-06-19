@@ -5,9 +5,9 @@ Makeup Engine is the makeup template production system for a future makeup coach
 ## Current Position
 
 - Project role: makeup template production system plus a local contract-driven user app shell prototype.
-- Last completed phase: `Phase 10I`.
-- Current completed business phase: `Phase 10I - UserAppTemplatePackage Registry Preparation`.
-- Next recommended phase: `Phase 10J - UserAppTemplatePackage Registry Write Gate`.
+- Last completed phase: `Phase 10J`.
+- Current completed business phase: `Phase 10J - UserAppTemplatePackage Registry Write Gate`.
+- Next recommended phase: `Phase 10K - Controlled UserAppTemplatePackage Registry Writer Draft`.
 - Recent recovery milestones retained in phase docs: `Phase 6K`, `Phase 6L`, `Phase 6L-1`, `Phase 7A`, `Phase 7B`, `Phase 7C`, `Phase 7D`, `Phase 7E`, `Phase 7F`, `Phase 7G`, `Phase 7H`, and `Phase 8A`.
 - Historical route-planning milestone: `Phase 8A - Product Route Decision / App MVP Planning`.
 
@@ -60,6 +60,7 @@ SourceImagePackage manifest
 -> Official UserAppTemplatePackage Draft Builder
 -> UserAppTemplatePackage Draft Publish Gate
 -> UserAppTemplatePackage Registry Preparation
+-> UserAppTemplatePackage Registry Write Gate
 -> Phase 8 Roadmap / V1 Non-Goals
 -> Consumption Manifest
 -> Dataset Review
@@ -177,12 +178,14 @@ SourceImagePackage manifest
 105. `docs/product/user-app-template-package-registry-preparation.md`
 106. `docs/product/user-app-template-package-registry-preparation-validation.md`
 107. `docs/product/user-app-template-package-registry-preparation-handoff.md`
-108. `docs/phases/phase-10I.md`
-109. `docs/phases/phase-7H.md`
-110. `project-state/project-state.snapshot.json`
-111. `project-state/provider-handoff.json`
-112. `project-state/latest-handoff.json`
-113. `project-state/active-task.json`
+108. `docs/product/user-app-template-package-registry-write-gate.md`
+109. `docs/product/user-app-template-package-registry-write-gate-handoff.md`
+110. `docs/phases/phase-10J.md`
+111. `docs/phases/phase-7H.md`
+112. `project-state/project-state.snapshot.json`
+113. `project-state/provider-handoff.json`
+114. `project-state/latest-handoff.json`
+115. `project-state/active-task.json`
 
 ## What The System Can Do Now
 
@@ -231,9 +234,10 @@ SourceImagePackage manifest
   evaluate Phase 10H draft publish gate eligibility for future registry
   preparation without publishing, writing registry data, replacing the current
   User App Shell package, or marking production readiness.
-- Prepare Phase 10I UserAppTemplatePackage registry entry previews, validation,
-  and handoff in Template Workbench while still blocking actual registry writes,
-  publication, production markers, and User App Shell package replacement.
+- Prepare Phase 10I UserAppTemplatePackage registry entry previews, then run
+  Phase 10J registry write gate and handoff in Template Workbench while still
+  blocking actual registry writes, publication, production markers, and User
+  App Shell package replacement.
 - Continue from Vision Analysis into mask editing, evidence capture, dataset review, materialized training datasets, and lightweight model artifact workflows.
 - Run real local MediaPipe FaceMesh after preparing ignored local assets with `npm run mediapipe:prepare`; see `docs/setup/local-mediapipe-assets.md`.
 
@@ -259,9 +263,9 @@ SourceImagePackage manifest
   formal `UserAppTemplatePackage`, registry write, user app publication,
   production readiness approval, or automatic app package builder.
 - Do not treat Phase 10G official draft builder output, Phase 10H draft publish
-  gate readiness, or Phase 10I registry preparation as publication, a user app
-  package registry write, production readiness, or current User App Shell
-  package replacement.
+  gate readiness, Phase 10I registry preparation, or Phase 10J registry write
+  gate readiness as publication, actual user app package registry write,
+  production readiness, or current User App Shell package replacement.
 - Do not treat Phase 8B PWA metadata, mobile shell polish, PWA readiness, or MVP polish readiness as production PWA release approval.
 - Do not treat Phase 8C trial pack, feedback preview, or trial readiness as production release, backend form, analytics, App Store/TestFlight, or real user data collection approval.
 - Do not treat Phase 8D content QA, trial template selection, or trial content readiness as production release, App Store/TestFlight, backend, AI generation, camera, AR, analytics, or training approval.

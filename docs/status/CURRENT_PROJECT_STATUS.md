@@ -2,18 +2,17 @@
 
 ## Current Phase
 
-Phase 10I: UserAppTemplatePackage Registry Preparation is complete.
+Phase 10J: UserAppTemplatePackage Registry Write Gate is complete.
 
-Last completed business phase: Phase 10I.
+Last completed business phase: Phase 10J.
 
-Next recommended phase: Phase 10J, UserAppTemplatePackage Registry Write Gate.
+Next recommended phase: Phase 10K, Controlled UserAppTemplatePackage Registry Writer Draft.
 
-Phase 10I prepares a local administrator-only registry entry preview from the
-Phase 10H draft publish gate, validates draft-only / publish-blocked /
-registry-write-blocked boundaries, and hands it off to a future registry write
-gate. The preparation is still not a registry write, publication, production
-package creation, User App Shell package replacement, backend service, or
-production app readiness marker.
+Phase 10J adds a local administrator-only registry write gate over the Phase
+10I registry preparation validation result. Gate ready means eligible for a
+future controlled registry writer draft only. It is still not an actual
+registry write, publication, production package creation, User App Shell
+package replacement, backend service, or production app readiness marker.
 
 ## What The System Can Do
 
@@ -61,10 +60,14 @@ production app readiness marker.
 - Prepare Phase 10I registry entry previews with package id/version candidates,
   safety flags, trace preservation, validation, and handoff for a future
   registry write gate while still blocking actual writes.
+- Evaluate Phase 10J registry write gate readiness over Phase 10I preparation
+  validation while preserving draft-only, publish-blocked,
+  registry-write-blocked, no-shell-replacement, no-production-package, trace,
+  and JSON round-trip boundaries.
 - Render compact Template Studio workflow, candidate package, candidate-to-app,
   user app package draft preview, official draft gate, and official draft
-  builder, draft publish gate, and registry preparation panels in the Template
-  Workbench.
+  builder, draft publish gate, registry preparation, and registry write gate
+  panels in the Template Workbench.
 - Keep Vision Analysis focused on FaceMesh, overlay/mask, region QA, and
   readiness; keep ordinary User App Shell paths separate from administrator-only
   vision, draft QA, human review, package preview, and registry terminology.
@@ -96,6 +99,9 @@ production app readiness marker.
 - It cannot treat Phase 10I registry preparation, validation, or handoff as a
   registry write, publication, production readiness, or replacement for the
   current User App Shell package.
+- It cannot treat Phase 10J registry write gate readiness or handoff as actual
+  registry write execution, publication, production readiness, production
+  package creation, or replacement for the current User App Shell package.
 - It cannot generate or mutate `UserAppTemplatePackage` from FaceMesh QA,
   candidates, generated steps, draft QA, human review, candidate handoff,
   candidate package handoff, app contract preparation, draft preview, validation,
@@ -105,7 +111,7 @@ production app readiness marker.
 - It cannot request camera permissions or call browser camera APIs.
 - It cannot add backend, database, accounts, analytics, AR, OpenAI API,
   external AI/CV APIs, service worker, native app scope, or new runtime
-  dependencies in Phase 10I.
+  dependencies in Phase 10J.
 - It cannot commit local MediaPipe `.task` or `.wasm` files from
   `public/mediapipe/**`.
 - It cannot modify legacy `src/engine`, `src/runtime`, or
@@ -119,8 +125,8 @@ production app readiness marker.
   QA/human review, Phase 10C candidate package validation/handoff, Phase 10D
   candidate-to-app contract preparation, Phase 10E user app package draft
   preview validation/handoff, Phase 10F official draft gate/handoff, Phase 10G
-  official draft builder, Phase 10H draft publish gate, and Phase 10I registry
-  preparation.
+  official draft builder, Phase 10H draft publish gate, Phase 10I registry
+  preparation, and Phase 10J registry write gate.
 - `src/components/template-studio`: active operator UI with compact Vision
   Analysis to Template Workbench workflow surfaces.
 - `src/components/demo`: Vision Analysis demo with readiness summary and
@@ -135,7 +141,7 @@ production app readiness marker.
 
 ## Recent Validation
 
-Phase 10I validation must include:
+Phase 10J validation must include:
 
 ```bash
 npm run mediapipe:check
@@ -151,8 +157,9 @@ The latest completed validation is recorded in `project-state/test-status.json`.
 
 ## Next Phase Recommendation
 
-Proceed to Phase 10J: UserAppTemplatePackage Registry Write Gate.
+Proceed to Phase 10K: Controlled UserAppTemplatePackage Registry Writer Draft.
 
-Phase 10J may add an explicit write gate over the Phase 10I registry
-preparation output, still without automatic publication, backend work, online
-release, production readiness, or current User App Shell package replacement.
+Phase 10K may draft a controlled registry writer around the Phase 10J gate
+output, still without automatic publication, backend work, online release,
+production readiness, or current User App Shell package replacement unless a
+future explicit gate approves it.

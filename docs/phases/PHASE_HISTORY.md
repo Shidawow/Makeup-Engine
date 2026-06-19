@@ -1100,3 +1100,38 @@ The registry preparation layer can now produce a local registry entry preview.
 Phase 10J should add an explicit registry write gate without silently writing a
 registry, publishing, replacing the User App Shell package, or marking
 production readiness.
+
+## Phase 10J - UserAppTemplatePackage Registry Write Gate
+
+Added local UserAppTemplatePackage Registry Write Gate after Phase 10I registry
+preparation validation.
+
+What changed:
+
+- Added registry write gate result model for source preparation validation,
+  registry entry preview, package id/version candidates, draft-only flags,
+  publish-blocked flags, registry-write-blocked flags, trace preservation,
+  unsafe payload blocking, no actual registry write, no User App Shell package
+  replacement, no production marker, User App contract boundary safety, and JSON
+  round-trip stability.
+- Added registry write gate handoff next actions for a future controlled
+  registry writer, metadata revision, versioning review, privacy review, User
+  App Shell boundary review, preview-only retention, or blocking.
+- Added Template Workbench panel for 用户 App 模板包 Registry 写入闸门 / Gate
+  Checks / Registry Writer Handoff.
+- Kept Vision Analysis free of registry write gate UI and kept ordinary User App
+  Shell paths free of administrator registry write gate terminology.
+
+What still cannot happen:
+
+- Phase 10J gate ready is not registry write execution, not publication, not
+  production readiness, not backend work, not camera/AR scope, not
+  OpenAI/external API scope, not training input, and not a replacement for the
+  current User App Shell package.
+
+Why Phase 10K follows:
+
+The registry write gate can now determine eligibility for a future controlled
+writer. Phase 10K should draft that controlled writer while still avoiding
+automatic registry writes, publication, backend work, or production package
+replacement.

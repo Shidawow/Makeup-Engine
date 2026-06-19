@@ -2,26 +2,27 @@
 
 ## What To Do Next
 
-Proceed to Phase 10J: UserAppTemplatePackage Registry Write Gate.
+Proceed to Phase 10K: Controlled UserAppTemplatePackage Registry Writer Draft.
 
 ## Why
 
-Phase 10I adds a local registry preparation layer over the Phase 10H draft
-publish gate while preserving no actual registry write, no publication, no
-production package, and no User App Shell package replacement boundaries. The
-next safe step is an explicit registry write gate that can review whether the
-prepared entry is eligible for a later write action without silently writing or
-publishing anything.
+Phase 10J adds a local registry write gate over the Phase 10I registry
+preparation validation result while preserving no actual registry write, no
+publication, no production package, and no User App Shell package replacement
+boundaries. The next safe step is a controlled registry writer draft that can be
+designed behind the gate without silently writing, publishing, or replacing
+anything.
 
-## Recommended 10J Scope
+## Recommended 10K Scope
 
-- Build a local UserAppTemplatePackage registry write gate over Phase 10I
-  registry preparation ready or ready-with-warnings inputs.
-- Keep the write gate local, deterministic, reviewable, and explicitly blocked
-  from automatic publication or production replacement.
+- Draft a controlled UserAppTemplatePackage registry writer interface over Phase
+  10J gate-ready or gate-ready-with-warnings inputs.
+- Keep the writer draft local, deterministic, reviewable, and explicitly
+  blocked from automatic publication, production replacement, or uncontrolled
+  registry mutation.
 - Preserve QA trace, human review trace, privacy trace, candidate trace,
   contract trace, preview trace, official draft trace, publish gate trace, and
-  registry preparation trace.
+  registry preparation / write gate trace.
 - Continue to avoid automatic publication, backend work, online release,
   production readiness, or current User App Shell package replacement.
 
@@ -37,7 +38,10 @@ publishing anything.
   package replacement, or publication.
 - Do not treat 10I registry preparation as registry write execution, User App
   Shell package replacement, production readiness, or publication.
-- Do not write a user app package registry.
+- Do not treat 10J registry write gate readiness as registry write execution,
+  User App Shell package replacement, production readiness, or publication.
+- Do not write a user app package registry unless a later explicit controlled
+  writer phase remains draft-only and blocked from persistence.
 - Do not add backend, database, account system, cloud sync, analytics, camera
   capture, AR, OpenAI/external API calls, native app implementation, React
   Native, Flutter, App Store/TestFlight work, service worker, ecommerce,
@@ -70,15 +74,18 @@ Read these files first:
 17. `docs/product/user-app-template-package-registry-preparation.md`
 18. `docs/product/user-app-template-package-registry-preparation-validation.md`
 19. `docs/product/user-app-template-package-registry-preparation-handoff.md`
-20. `docs/phases/phase-10F.md`
-21. `docs/phases/phase-10G.md`
-22. `docs/phases/phase-10H.md`
-23. `docs/phases/phase-10I.md`
-24. `project-state/project-state.snapshot.json`
-25. `project-state/latest-handoff.json`
-26. `project-state/provider-handoff.json`
-27. `project-state/active-task.json`
-28. `project-state/guardrails.json`
+20. `docs/product/user-app-template-package-registry-write-gate.md`
+21. `docs/product/user-app-template-package-registry-write-gate-handoff.md`
+22. `docs/phases/phase-10F.md`
+23. `docs/phases/phase-10G.md`
+24. `docs/phases/phase-10H.md`
+25. `docs/phases/phase-10I.md`
+26. `docs/phases/phase-10J.md`
+27. `project-state/project-state.snapshot.json`
+28. `project-state/latest-handoff.json`
+29. `project-state/provider-handoff.json`
+30. `project-state/active-task.json`
+31. `project-state/guardrails.json`
 
 Then run:
 
