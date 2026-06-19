@@ -353,13 +353,67 @@
       "status": "passed",
       "phase": "10H",
       "notes": "Phase 10H JSON context pack command passed."
+    },
+    {
+      "command": "npm run mediapipe:check",
+      "status": "passed",
+      "phase": "10I",
+      "notes": "Phase 10I acceptance command."
+    },
+    {
+      "command": "npm run typecheck",
+      "status": "passed",
+      "phase": "10I",
+      "notes": "Phase 10I acceptance command."
+    },
+    {
+      "command": "npm run build",
+      "status": "passed",
+      "phase": "10I",
+      "notes": "Phase 10I acceptance command."
+    },
+    {
+      "command": "npm run project:status",
+      "status": "passed",
+      "phase": "10I",
+      "notes": "Phase 10I acceptance command."
+    },
+    {
+      "command": "npm run project:context",
+      "status": "passed",
+      "phase": "10I",
+      "notes": "Phase 10I acceptance command."
+    },
+    {
+      "command": "node scripts/project-status.mjs --json",
+      "status": "passed",
+      "phase": "10I",
+      "notes": "Phase 10I acceptance command."
+    },
+    {
+      "command": "node scripts/context-pack.mjs --json",
+      "status": "passed",
+      "phase": "10I",
+      "notes": "Phase 10I acceptance command."
+    },
+    {
+      "command": "npm run test -- tests/user-app-template-package-registry-preparation.test.ts tests/user-app-template-package-registry-preparation-validation.test.ts tests/user-app-template-package-registry-preparation-handoff.test.ts tests/user-app-template-package-registry-preparation-panel.test.tsx tests/phase-10I-documentation-recovery.test.ts tests/user-app-template-package-draft-publish-gate.test.ts tests/user-app-template-package-draft-publish-gate-panel.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
+      "status": "passed",
+      "phase": "10I",
+      "notes": "Phase 10I acceptance command."
+    },
+    {
+      "command": "Browser verification of Phase 10I Template Studio tabs",
+      "status": "passed",
+      "phase": "10I",
+      "notes": "Vision Analysis does not show registry preparation; Template Workbench shows registry preparation, validation, handoff, blocked state, and no forbidden write/publish/shell replacement copy."
     }
   ],
-  "lastUpdatedPhase": "10H",
-  "phase": "10H",
-  "lastCompletedPhase": "10H",
-  "currentPhase": "10H",
-  "nextRecommendedPhase": "10I",
+  "lastUpdatedPhase": "10I",
+  "phase": "10I",
+  "lastCompletedPhase": "10I",
+  "currentPhase": "10I",
+  "nextRecommendedPhase": "10J",
   "updatedAt": "2026-06-19",
   "lastValidation": {
     "mediapipeCheck": "passed",
@@ -371,12 +425,12 @@
     "projectContext": "passed",
     "contextPackJson": "passed",
     "browserVerification": "passed",
-    "phase10HScopedTests": "passed",
-    "testFiles": 9,
-    "tests": 27,
-    "phase10HScopedTestFiles": 9,
-    "phase10HScopedTestsCount": 27,
-    "summary": "Phase 10H validation passed: mediapipe:check, draft publish gate scoped tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
+    "phase10IScopedTests": "passed",
+    "testFiles": 10,
+    "tests": 36,
+    "phase10IScopedTestFiles": 10,
+    "phase10IScopedTestsCount": 36,
+    "summary": "Phase 10I validation passed: mediapipe:check, registry preparation scoped tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
     "updatedAt": "2026-06-19"
   },
   "validation": {
@@ -389,70 +443,74 @@
     "projectContext": "passed",
     "contextPackJson": "passed",
     "browserVerification": "passed",
-    "phase10HScopedTests": "passed",
-    "testFiles": 9,
-    "tests": 27,
-    "phase10HScopedTestFiles": 9,
-    "phase10HScopedTestsCount": 27,
-    "summary": "Phase 10H validation passed: mediapipe:check, draft publish gate scoped tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
+    "phase10IScopedTests": "passed",
+    "testFiles": 10,
+    "tests": 36,
+    "phase10IScopedTestFiles": 10,
+    "phase10IScopedTestsCount": 36,
+    "summary": "Phase 10I validation passed: mediapipe:check, registry preparation scoped tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
     "updatedAt": "2026-06-19"
   },
   "status": "passed",
-  "summary": "Phase 10H validation passed: mediapipe:check, draft publish gate scoped tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
+  "summary": "Phase 10I validation passed: mediapipe:check, registry preparation scoped tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
   "entries": [
     {
       "command": "npm run mediapipe:check",
-      "phase": "10H",
+      "phase": "10I",
       "status": "passed",
-      "notes": "Phase 10H MediaPipe local asset check passed; public/mediapipe remains ignored and is not staged."
+      "notes": "Phase 10I MediaPipe local asset check passed; public/mediapipe remains ignored and is not staged."
     },
     {
-      "command": "npm run test -- tests/user-app-template-package-draft-publish-gate.test.ts tests/user-app-template-package-draft-publish-gate-handoff.test.ts tests/user-app-template-package-draft-publish-gate-panel.test.tsx tests/phase-10H-documentation-recovery.test.ts tests/official-user-app-template-package-draft.test.ts tests/official-user-app-template-package-draft-builder-panel.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
-      "phase": "10H",
+      "command": "npm run test -- tests/user-app-template-package-registry-preparation.test.ts tests/user-app-template-package-registry-preparation-validation.test.ts tests/user-app-template-package-registry-preparation-handoff.test.ts tests/user-app-template-package-registry-preparation-panel.test.tsx tests/phase-10I-documentation-recovery.test.ts tests/user-app-template-package-draft-publish-gate.test.ts tests/user-app-template-package-draft-publish-gate-panel.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
+      "phase": "10I",
       "status": "passed",
-      "notes": "Phase 10H scoped tests passed: 9 files / 27 tests."
+      "notes": "Phase 10I scoped tests passed: 10 files / 36 tests."
     },
     {
       "command": "npm run typecheck",
-      "phase": "10H",
+      "phase": "10I",
       "status": "passed",
-      "notes": "Phase 10H typecheck passed."
+      "notes": "Phase 10I typecheck passed."
     },
     {
       "command": "npm run build",
-      "phase": "10H",
+      "phase": "10I",
       "status": "passed",
-      "notes": "Phase 10H build passed with existing Vite chunk-size warning."
+      "notes": "Phase 10I build passed with existing Vite chunk-size warning if present."
     },
     {
-      "command": "Browser verification for Phase 10H Template Studio tabs",
-      "phase": "10H",
+      "command": "Browser verification for Phase 10I Template Studio tabs",
+      "phase": "10I",
       "status": "passed",
-      "notes": "Vision Analysis did not show the draft publish gate; Template Workbench showed 10H gate, blocked state, future registry-preparation copy, handoff, and no forbidden publish/registry/shell replacement wording; MediaPipe ready showed no mock fallback."
+      "notes": "Vision Analysis did not show registry preparation; Template Workbench showed 10I preparation, blocked state, future registry-write-gate copy, handoff, and no forbidden write/publish/shell replacement wording; MediaPipe ready showed no mock fallback."
     },
     {
       "command": "npm run project:status",
-      "phase": "10H",
+      "phase": "10I",
       "status": "passed",
-      "notes": "Phase 10H project status command passed."
+      "notes": "Phase 10I project status command passed."
     },
     {
       "command": "npm run project:context",
-      "phase": "10H",
+      "phase": "10I",
       "status": "passed",
-      "notes": "Phase 10H project context command passed."
+      "notes": "Phase 10I project context command passed."
     },
     {
       "command": "node scripts/project-status.mjs --json",
-      "phase": "10H",
+      "phase": "10I",
       "status": "passed",
-      "notes": "Phase 10H JSON project status command passed."
+      "notes": "Phase 10I JSON project status command passed."
     },
     {
       "command": "node scripts/context-pack.mjs --json",
-      "phase": "10H",
+      "phase": "10I",
       "status": "passed",
-      "notes": "Phase 10H JSON context pack command passed."
+      "notes": "Phase 10I JSON context pack command passed."
     }
-  ]
+  ],
+  "currentPhaseId": "10I",
+  "nextRecommendedPhaseName": "UserAppTemplatePackage Registry Write Gate",
+  "currentPhaseName": "UserAppTemplatePackage Registry Preparation",
+  "validationStatus": "passed"
 }

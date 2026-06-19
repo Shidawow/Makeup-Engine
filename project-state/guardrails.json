@@ -1,5 +1,5 @@
 {
-  "phase": "10H",
+  "phase": "10I",
   "guardrails": [
     {
       "id": "source-image-not-training-data",
@@ -640,6 +640,26 @@
     {
       "id": "phase_10h_no_production_readiness",
       "rule": "Do not mark draft publish gate output as production-ready in Phase 10H."
+    },
+    {
+      "id": "phase_10i_preparation_only",
+      "rule": "Phase 10I registry preparation is local administrator preparation only; it is not a registry write, publication, or production readiness marker."
+    },
+    {
+      "id": "phase_10i_no_actual_registry_write",
+      "rule": "Phase 10I must not execute, persist, or mark an actual user app package registry write."
+    },
+    {
+      "id": "phase_10i_no_publish",
+      "rule": "Phase 10I must not publish to the user app or claim a published package."
+    },
+    {
+      "id": "phase_10i_no_shell_package_replacement",
+      "rule": "Phase 10I must not replace the current User App Shell package."
+    },
+    {
+      "id": "phase_10i_no_production_readiness",
+      "rule": "Phase 10I must not mark production readiness or production UserAppTemplatePackage output."
     }
   ],
   "legacyFrozenModules": [

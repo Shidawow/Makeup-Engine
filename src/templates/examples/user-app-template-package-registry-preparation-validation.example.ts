@@ -1,0 +1,51 @@
+import { validateUserAppTemplatePackageRegistryPreparation } from '../../template-engine';
+import {
+  userAppTemplatePackageRegistryPreparationActualRegistryWriteBlockedExample,
+  userAppTemplatePackageRegistryPreparationMissingPublishGateExample,
+  userAppTemplatePackageRegistryPreparationPersonalDataBlockedExample,
+  userAppTemplatePackageRegistryPreparationPrivacyReviewExample,
+  userAppTemplatePackageRegistryPreparationReadyExample,
+  userAppTemplatePackageRegistryPreparationShellBoundaryReviewExample,
+  userAppTemplatePackageRegistryPreparationShellReplacementBlockedExample,
+  userAppTemplatePackageRegistryPreparationWarningExample,
+} from './user-app-template-package-registry-preparation.example';
+
+export const userAppTemplatePackageRegistryPreparationValidationReadyExample =
+  validateUserAppTemplatePackageRegistryPreparation(
+    userAppTemplatePackageRegistryPreparationReadyExample,
+  );
+
+export const userAppTemplatePackageRegistryPreparationValidationWarningExample =
+  validateUserAppTemplatePackageRegistryPreparation(
+    userAppTemplatePackageRegistryPreparationWarningExample,
+  );
+
+export const userAppTemplatePackageRegistryPreparationValidationMissingPublishGateExample =
+  validateUserAppTemplatePackageRegistryPreparation(
+    userAppTemplatePackageRegistryPreparationMissingPublishGateExample,
+  );
+
+export const userAppTemplatePackageRegistryPreparationValidationActualRegistryWriteExample =
+  validateUserAppTemplatePackageRegistryPreparation(
+    userAppTemplatePackageRegistryPreparationActualRegistryWriteBlockedExample,
+  );
+
+export const userAppTemplatePackageRegistryPreparationValidationPersonalDataExample =
+  validateUserAppTemplatePackageRegistryPreparation(
+    userAppTemplatePackageRegistryPreparationPersonalDataBlockedExample,
+  );
+
+export const userAppTemplatePackageRegistryPreparationValidationShellReplacementExample =
+  validateUserAppTemplatePackageRegistryPreparation(
+    userAppTemplatePackageRegistryPreparationShellReplacementBlockedExample,
+  );
+
+export const userAppTemplatePackageRegistryPreparationValidationPrivacyReviewExample =
+  validateUserAppTemplatePackageRegistryPreparation(
+    userAppTemplatePackageRegistryPreparationPrivacyReviewExample,
+  );
+
+export const userAppTemplatePackageRegistryPreparationValidationShellBoundaryReviewExample =
+  validateUserAppTemplatePackageRegistryPreparation(
+    userAppTemplatePackageRegistryPreparationShellBoundaryReviewExample,
+  );

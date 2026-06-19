@@ -71,3 +71,6 @@ export * from './official-user-app-template-package-draft-validation.example';
 export * from './official-user-app-template-package-draft-handoff.example';
 export * from './user-app-template-package-draft-publish-gate.example';
 export * from './user-app-template-package-draft-publish-gate-handoff.example';
+export * from './user-app-template-package-registry-preparation.example';
+export * from './user-app-template-package-registry-preparation-validation.example';
+export * from './user-app-template-package-registry-preparation-handoff.example';

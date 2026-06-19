@@ -573,3 +573,29 @@ handoff summary. The gate does not appear in Vision Analysis and does not
 publish, write a user app package registry, replace the current User App Shell
 package, call backend/API services, use camera/AR, or train models. Gate ready
 means eligible for future registry preparation only.
+
+### UserAppTemplatePackage Registry Preparation
+
+Phase 10I adds local registry preparation after Phase 10H draft publish gate.
+`src/template-engine/userAppTemplatePackageRegistryPreparation.ts` prepares a
+registry entry preview with package id/version candidates, title, summary,
+style tags, difficulty, estimated time, step count, safety flags, privacy
+notice, source trace, and explicit draft-only / publish-blocked /
+registry-write-blocked flags.
+
+`userAppTemplatePackageRegistryPreparationValidation.ts` checks source publish
+gate readiness, registry entry preview presence, package id/version candidates,
+draft-only flags, publish block flags, registry-write-blocked flags, trace
+preservation, raw image boundaries, personal data boundaries, medical/product
+claim boundaries, unsupported final claims, no actual registry write, no User
+App Shell package replacement, no production markers, and JSON round-trip
+stability. `userAppTemplatePackageRegistryPreparationHandoff.ts` creates local
+next actions for a future registry write gate, metadata/version/privacy/shell
+boundary review, preview-only retention, or blocking.
+
+`src/components/template-studio/UserAppTemplatePackageRegistryPreparationPanel.tsx`
+renders the Template Workbench preparation, validation, blocked reasons, trace,
+and handoff summary. The panel does not appear in Vision Analysis and does not
+write a registry, publish, replace the current User App Shell package, call
+backend/API services, use camera/AR, or train models. Preparation ready means
+eligible for a future registry write gate only.

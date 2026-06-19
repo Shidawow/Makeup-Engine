@@ -1,0 +1,61 @@
+import { createUserAppTemplatePackageRegistryPreparationHandoff } from '../../template-engine';
+import {
+  userAppTemplatePackageRegistryPreparationActualRegistryWriteBlockedExample,
+  userAppTemplatePackageRegistryPreparationPersonalDataBlockedExample,
+  userAppTemplatePackageRegistryPreparationPrivacyReviewExample,
+  userAppTemplatePackageRegistryPreparationReadyExample,
+  userAppTemplatePackageRegistryPreparationShellBoundaryReviewExample,
+  userAppTemplatePackageRegistryPreparationShellReplacementBlockedExample,
+  userAppTemplatePackageRegistryPreparationWarningExample,
+} from './user-app-template-package-registry-preparation.example';
+import {
+  userAppTemplatePackageRegistryPreparationValidationActualRegistryWriteExample,
+  userAppTemplatePackageRegistryPreparationValidationPersonalDataExample,
+  userAppTemplatePackageRegistryPreparationValidationPrivacyReviewExample,
+  userAppTemplatePackageRegistryPreparationValidationReadyExample,
+  userAppTemplatePackageRegistryPreparationValidationShellBoundaryReviewExample,
+  userAppTemplatePackageRegistryPreparationValidationShellReplacementExample,
+  userAppTemplatePackageRegistryPreparationValidationWarningExample,
+} from './user-app-template-package-registry-preparation-validation.example';
+
+export const userAppTemplatePackageRegistryPreparationHandoffReadyExample =
+  createUserAppTemplatePackageRegistryPreparationHandoff({
+    preparation: userAppTemplatePackageRegistryPreparationReadyExample,
+    validation: userAppTemplatePackageRegistryPreparationValidationReadyExample,
+  });
+
+export const userAppTemplatePackageRegistryPreparationHandoffPreviewOnlyExample =
+  createUserAppTemplatePackageRegistryPreparationHandoff({
+    preparation: userAppTemplatePackageRegistryPreparationWarningExample,
+    validation: userAppTemplatePackageRegistryPreparationValidationWarningExample,
+  });
+
+export const userAppTemplatePackageRegistryPreparationHandoffPrivacyReviewExample =
+  createUserAppTemplatePackageRegistryPreparationHandoff({
+    preparation: userAppTemplatePackageRegistryPreparationPrivacyReviewExample,
+    validation: userAppTemplatePackageRegistryPreparationValidationPrivacyReviewExample,
+  });
+
+export const userAppTemplatePackageRegistryPreparationHandoffShellBoundaryExample =
+  createUserAppTemplatePackageRegistryPreparationHandoff({
+    preparation: userAppTemplatePackageRegistryPreparationShellBoundaryReviewExample,
+    validation: userAppTemplatePackageRegistryPreparationValidationShellBoundaryReviewExample,
+  });
+
+export const userAppTemplatePackageRegistryPreparationHandoffBlockedExample =
+  createUserAppTemplatePackageRegistryPreparationHandoff({
+    preparation: userAppTemplatePackageRegistryPreparationActualRegistryWriteBlockedExample,
+    validation: userAppTemplatePackageRegistryPreparationValidationActualRegistryWriteExample,
+  });
+
+export const userAppTemplatePackageRegistryPreparationHandoffPersonalDataBlockedExample =
+  createUserAppTemplatePackageRegistryPreparationHandoff({
+    preparation: userAppTemplatePackageRegistryPreparationPersonalDataBlockedExample,
+    validation: userAppTemplatePackageRegistryPreparationValidationPersonalDataExample,
+  });
+
+export const userAppTemplatePackageRegistryPreparationHandoffShellReplacementBlockedExample =
+  createUserAppTemplatePackageRegistryPreparationHandoff({
+    preparation: userAppTemplatePackageRegistryPreparationShellReplacementBlockedExample,
+    validation: userAppTemplatePackageRegistryPreparationValidationShellReplacementExample,
+  });

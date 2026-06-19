@@ -343,3 +343,29 @@ facing copy revision, step guidance revision, region guidance revision, privacy
 notice revision, draft-only retention, or blocking. It cannot publish, cannot
 write a user app package registry, and cannot replace the current User App
 Shell package.
+
+## Phase 10I UserAppTemplatePackage Registry Preparation Boundary
+
+Phase 10I registry preparation, validation, and handoff are local administrator
+aids only. Preparation ready means eligible for a future registry write gate; it
+is not registry write execution, publication, production readiness, or a User
+App Shell package replacement.
+
+The preparation can create a registry entry preview with package id/version
+candidates, title, summary, style tags, difficulty, estimated time, step count,
+safety flags, privacy notice, QA trace, human review trace, candidate trace,
+contract trace, preview trace, official draft trace, and publish gate trace.
+
+Validation must block missing Phase 10H source gate readiness, missing
+registry entry preview, missing package id/version candidates, missing
+`draftOnly`, missing `publishBlocked`, missing `registryWriteBlocked`, raw image
+references, base64, object URLs, local paths, MediaPipe runtime assets, personal
+data, health data, contact data, biometric data, product shade claims, medical
+claims, unsupported final claims, actual registry write markers, User App Shell
+package replacement markers, production package markers, and unstable JSON.
+
+Registry preparation handoff can recommend a future registry write gate,
+package metadata revision, versioning review, privacy review, User App Shell
+boundary review, preview-only retention, or blocking. It cannot write the
+registry, cannot publish, cannot mark a production package, and cannot replace
+the current User App Shell package.

@@ -11,6 +11,8 @@ import {
   createUserAppPackageDraftPreviewHandoff,
   createUserAppTemplatePackageDraftPublishGate,
   createUserAppTemplatePackageDraftPublishGateHandoff,
+  createUserAppTemplatePackageRegistryPreparation,
+  createUserAppTemplatePackageRegistryPreparationHandoff,
   createTemplateLibraryCandidateHandoff,
   createTemplateLibraryCandidatePackage,
   createTemplateDraftReviewWorkflow,
@@ -22,6 +24,7 @@ import {
   validateCandidateToAppPackageContract,
   validateOfficialUserAppTemplatePackageDraft,
   validateUserAppPackageDraftPreview,
+  validateUserAppTemplatePackageRegistryPreparation,
   validateTemplateLibraryCandidatePackage,
 } from '../../template-engine';
 import type {
@@ -37,6 +40,7 @@ import { UserAppPackageDraftPreviewPanel } from './UserAppPackageDraftPreviewPan
 import { OfficialUserAppPackageDraftGatePanel } from './OfficialUserAppPackageDraftGatePanel';
 import { OfficialUserAppTemplatePackageDraftBuilderPanel } from './OfficialUserAppTemplatePackageDraftBuilderPanel';
 import { UserAppTemplatePackageDraftPublishGatePanel } from './UserAppTemplatePackageDraftPublishGatePanel';
+import { UserAppTemplatePackageRegistryPreparationPanel } from './UserAppTemplatePackageRegistryPreparationPanel';
 
 export interface FaceMeshMakeupIntelligencePanelProps {
   regionQa: FaceMeshRegionQaReport | null;
@@ -212,6 +216,26 @@ export function FaceMeshMakeupIntelligencePanel({
             </p>
           </div>
         </div>
+        <div className="mt-3 grid gap-2 rounded-md border border-cyan-200 bg-cyan-50 p-3 text-sm text-cyan-900 md:grid-cols-3">
+          <div>
+            <p className="font-semibold">用户 App 模板包 Registry 准备</p>
+            <p className="mt-1 text-xs leading-5">
+              Registry Preparation blocked：缺少 10H draft publish gate ready。
+            </p>
+          </div>
+          <div>
+            <p className="font-semibold">Preparation Validation</p>
+            <p className="mt-1 text-xs leading-5">
+              需要 10H gate ready 后才能准备 registry entry 预览。
+            </p>
+          </div>
+          <div>
+            <p className="font-semibold">Registry Handoff</p>
+            <p className="mt-1 text-xs leading-5">
+              只是 registry 准备，不是写入；不会发布，也不会替换当前用户 App 包。
+            </p>
+          </div>
+        </div>
       </section>
     );
   }
@@ -309,6 +333,20 @@ export function FaceMeshMakeupIntelligencePanel({
   const userAppTemplatePackageDraftPublishGateHandoff =
     createUserAppTemplatePackageDraftPublishGateHandoff({
       gate: userAppTemplatePackageDraftPublishGate,
+    });
+  const userAppTemplatePackageRegistryPreparation =
+    createUserAppTemplatePackageRegistryPreparation({
+      draft: officialUserAppTemplatePackageDraftBuilder.draft,
+      gate: userAppTemplatePackageDraftPublishGate,
+    });
+  const userAppTemplatePackageRegistryPreparationValidation =
+    validateUserAppTemplatePackageRegistryPreparation(
+      userAppTemplatePackageRegistryPreparation,
+    );
+  const userAppTemplatePackageRegistryPreparationHandoff =
+    createUserAppTemplatePackageRegistryPreparationHandoff({
+      preparation: userAppTemplatePackageRegistryPreparation,
+      validation: userAppTemplatePackageRegistryPreparationValidation,
     });
 
   return (
@@ -439,6 +477,11 @@ export function FaceMeshMakeupIntelligencePanel({
       <UserAppTemplatePackageDraftPublishGatePanel
         gate={userAppTemplatePackageDraftPublishGate}
         handoff={userAppTemplatePackageDraftPublishGateHandoff}
+      />
+      <UserAppTemplatePackageRegistryPreparationPanel
+        handoff={userAppTemplatePackageRegistryPreparationHandoff}
+        preparation={userAppTemplatePackageRegistryPreparation}
+        validation={userAppTemplatePackageRegistryPreparationValidation}
       />
     </section>
   );

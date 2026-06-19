@@ -1063,3 +1063,40 @@ The draft publish gate can now decide whether a draft is eligible for future
 registry preparation. Phase 10I should prepare UserAppTemplatePackage registry
 preparation without crossing into publication, backend, or production app
 scope.
+
+## Phase 10I - UserAppTemplatePackage Registry Preparation
+
+Added local UserAppTemplatePackage Registry Preparation after Phase 10H draft
+publish gate.
+
+What changed:
+
+- Added registry preparation model for package id/version candidates, registry
+  entry preview fields, safety flags, trace preservation, and explicit
+  draft-only / publish-blocked / registry-write-blocked boundaries.
+- Added registry preparation validation for source publish gate readiness,
+  registry entry preview, package id/version candidates, draft-only flags,
+  publish-blocked flags, registry-write-blocked flags, trace, unsafe payload,
+  no actual registry write, no User App Shell package replacement, no
+  production marker, and JSON round-trip stability.
+- Added registry preparation handoff next actions for a future registry write
+  gate, metadata revision, versioning review, privacy review, User App Shell
+  boundary review, preview-only retention, or blocking.
+- Added Template Workbench panel for 用户 App 模板包 Registry 准备 / Registry
+  Preparation Validation / Registry Handoff.
+- Kept Vision Analysis free of registry preparation UI and kept ordinary User
+  App Shell paths free of administrator registry preparation terminology.
+
+What still cannot happen:
+
+- Phase 10I preparation ready is not registry write execution, not publication,
+  not production readiness, not backend work, not camera/AR scope, not
+  OpenAI/external API scope, not training input, and not a replacement for the
+  current User App Shell package.
+
+Why Phase 10J follows:
+
+The registry preparation layer can now produce a local registry entry preview.
+Phase 10J should add an explicit registry write gate without silently writing a
+registry, publishing, replacing the User App Shell package, or marking
+production readiness.
