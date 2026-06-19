@@ -1135,3 +1135,42 @@ The registry write gate can now determine eligibility for a future controlled
 writer. Phase 10K should draft that controlled writer while still avoiding
 automatic registry writes, publication, backend work, or production package
 replacement.
+
+## Phase 10K - Controlled UserAppTemplatePackage Registry Writer Draft
+
+Added a local controlled UserAppTemplatePackage Registry Writer Draft after
+Phase 10J registry write gate.
+
+What changed:
+
+- Added controlled writer draft model for Phase 10J gate-ready sources,
+  package id/version candidates, proposed registry entry preview, existing
+  entry preview, dry-run write plan, diff preview, rollback plan, trace
+  preservation, warnings, blocked reasons, and JSON round-trip stability.
+- Added controlled writer validation for source gate readiness, dry-run-only
+  flags, actual-write-blocked flags, publish-blocked flags,
+  package-replacement-blocked flags, write plan, diff preview, rollback plan,
+  trace, unsafe payload blocking, no actual registry write, no User App Shell
+  package replacement, no production marker, and JSON round-trip stability.
+- Added controlled writer handoff next actions for a future explicit write
+  authorization gate, write-plan revision, versioning review, rollback review,
+  privacy review, User App Shell boundary review, dry-run-only retention, or
+  blocking.
+- Added Template Workbench panel for 受控 Registry 写入器草稿 / Writer Draft /
+  Write Plan / Diff Preview / Rollback Plan / Writer Handoff.
+- Kept Vision Analysis free of controlled writer UI and kept ordinary User App
+  Shell paths free of administrator registry writer terminology.
+
+What still cannot happen:
+
+- Phase 10K writer ready is still dry-run only. It is not registry write
+  execution, not publication, not production readiness, not backend work, not
+  camera/AR scope, not OpenAI/external API scope, not training input, and not a
+  replacement for the current User App Shell package.
+
+Why Phase 10L follows:
+
+The controlled writer draft can now show an auditable write plan, diff preview,
+and rollback plan without mutation. Phase 10L should add an explicit registry
+write authorization gate before any future implementation can even consider
+executing a write.

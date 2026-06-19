@@ -105,6 +105,10 @@
   mutation path for `UserAppTemplatePackage`.
 - Local MediaPipe runtime assets under `public/mediapipe/**` are machine-local
   ignored assets and must not be staged or committed.
+- Phase 10K controlled registry writer draft is dry-run-only. It must not
+  execute registry writes, publish, create a production package, replace the
+  current User App Shell package, call backend/API services, call OpenAI or
+  external AI/CV APIs, train models, or treat writer readiness as authorization.
 
 ## Module Boundaries
 
@@ -238,6 +242,24 @@ local administrator aids only. They must not become formal
 `UserAppTemplatePackage` generation, a user app package registry write, user app
 publication, backend records, production app behavior, AI approval, training
 approval, or App Store/TestFlight readiness.
+
+## Phase 10K Controlled Registry Writer Draft Boundary
+
+Phase 10K controlled writer draft, validation, and handoff are local
+administrator dry-run aids only. They may produce a proposed registry entry
+preview, existing entry preview, write plan, diff preview, rollback plan, and
+handoff for a future explicit authorization gate, but they must not execute a
+registry write, publish, create a production package, replace the current User
+App Shell package, or authorize mutation.
+
+Phase 10K may use only Phase 10J gate-ready or gate-ready-with-warnings sources.
+It must preserve dry-run-only, actual-write-blocked, publish-blocked,
+package-replacement-blocked, no-production-package, trace, privacy, User App
+contract boundary, and JSON round-trip stability. It must block raw image
+references, local paths, object URLs, base64, MediaPipe runtime asset names,
+personal data, product shade claims, medical claims, unsupported final claims,
+actual registry write markers, production package markers, User App Shell
+package replacement markers, and unstable JSON.
 
 Candidate-to-app preparation can preserve title, summary, style tags,
 difficulty, estimated time, suitable scenarios, tools, product placeholders,

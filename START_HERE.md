@@ -5,9 +5,9 @@ Makeup Engine is the makeup template production system for a future makeup coach
 ## Current Position
 
 - Project role: makeup template production system plus a local contract-driven user app shell prototype.
-- Last completed phase: `Phase 10J`.
-- Current completed business phase: `Phase 10J - UserAppTemplatePackage Registry Write Gate`.
-- Next recommended phase: `Phase 10K - Controlled UserAppTemplatePackage Registry Writer Draft`.
+- Last completed phase: `Phase 10K`.
+- Current completed business phase: `Phase 10K - Controlled UserAppTemplatePackage Registry Writer Draft`.
+- Next recommended phase: `Phase 10L - Explicit Registry Write Authorization Gate`.
 - Recent recovery milestones retained in phase docs: `Phase 6K`, `Phase 6L`, `Phase 6L-1`, `Phase 7A`, `Phase 7B`, `Phase 7C`, `Phase 7D`, `Phase 7E`, `Phase 7F`, `Phase 7G`, `Phase 7H`, and `Phase 8A`.
 - Historical route-planning milestone: `Phase 8A - Product Route Decision / App MVP Planning`.
 
@@ -61,6 +61,7 @@ SourceImagePackage manifest
 -> UserAppTemplatePackage Draft Publish Gate
 -> UserAppTemplatePackage Registry Preparation
 -> UserAppTemplatePackage Registry Write Gate
+-> Controlled UserAppTemplatePackage Registry Writer Draft
 -> Phase 8 Roadmap / V1 Non-Goals
 -> Consumption Manifest
 -> Dataset Review
@@ -181,11 +182,15 @@ SourceImagePackage manifest
 108. `docs/product/user-app-template-package-registry-write-gate.md`
 109. `docs/product/user-app-template-package-registry-write-gate-handoff.md`
 110. `docs/phases/phase-10J.md`
-111. `docs/phases/phase-7H.md`
-112. `project-state/project-state.snapshot.json`
-113. `project-state/provider-handoff.json`
-114. `project-state/latest-handoff.json`
-115. `project-state/active-task.json`
+111. `docs/product/controlled-user-app-template-package-registry-writer-draft.md`
+112. `docs/product/controlled-user-app-template-package-registry-writer-validation.md`
+113. `docs/product/controlled-user-app-template-package-registry-writer-handoff.md`
+114. `docs/phases/phase-10K.md`
+115. `docs/phases/phase-7H.md`
+116. `project-state/project-state.snapshot.json`
+117. `project-state/provider-handoff.json`
+118. `project-state/latest-handoff.json`
+119. `project-state/active-task.json`
 
 ## What The System Can Do Now
 
@@ -238,6 +243,11 @@ SourceImagePackage manifest
   Phase 10J registry write gate and handoff in Template Workbench while still
   blocking actual registry writes, publication, production markers, and User
   App Shell package replacement.
+- Draft Phase 10K controlled UserAppTemplatePackage registry writer dry-run
+  plans with write plan, diff preview, existing entry preview, rollback plan,
+  validation, and handoff while still blocking actual registry writes,
+  publication, production markers, and current User App Shell package
+  replacement.
 - Continue from Vision Analysis into mask editing, evidence capture, dataset review, materialized training datasets, and lightweight model artifact workflows.
 - Run real local MediaPipe FaceMesh after preparing ignored local assets with `npm run mediapipe:prepare`; see `docs/setup/local-mediapipe-assets.md`.
 
@@ -266,6 +276,9 @@ SourceImagePackage manifest
   gate readiness, Phase 10I registry preparation, or Phase 10J registry write
   gate readiness as publication, actual user app package registry write,
   production readiness, or current User App Shell package replacement.
+- Do not treat Phase 10K controlled registry writer draft readiness as
+  permission to execute a registry write, publish, create a production package,
+  or replace the current User App Shell package.
 - Do not treat Phase 8B PWA metadata, mobile shell polish, PWA readiness, or MVP polish readiness as production PWA release approval.
 - Do not treat Phase 8C trial pack, feedback preview, or trial readiness as production release, backend form, analytics, App Store/TestFlight, or real user data collection approval.
 - Do not treat Phase 8D content QA, trial template selection, or trial content readiness as production release, App Store/TestFlight, backend, AI generation, camera, AR, analytics, or training approval.

@@ -1,6 +1,8 @@
 import type { FaceMeshRegionQaReport } from '../../vision';
 import {
   buildTemplateStudioWorkflowState,
+  createControlledUserAppTemplatePackageRegistryWriterDraft,
+  createControlledUserAppTemplatePackageRegistryWriterHandoff,
   buildOfficialUserAppTemplatePackageDraft,
   createCandidateToAppPackageContractPreparation,
   createCandidateToAppPackageHandoff,
@@ -24,6 +26,7 @@ import {
   MakeupTemplateDraftReport,
   RuleBasedStepSequence,
   validateCandidateToAppPackageContract,
+  validateControlledUserAppTemplatePackageRegistryWriterDraft,
   validateOfficialUserAppTemplatePackageDraft,
   validateUserAppPackageDraftPreview,
   validateUserAppTemplatePackageRegistryPreparation,
@@ -44,6 +47,7 @@ import { OfficialUserAppTemplatePackageDraftBuilderPanel } from './OfficialUserA
 import { UserAppTemplatePackageDraftPublishGatePanel } from './UserAppTemplatePackageDraftPublishGatePanel';
 import { UserAppTemplatePackageRegistryPreparationPanel } from './UserAppTemplatePackageRegistryPreparationPanel';
 import { UserAppTemplatePackageRegistryWriteGatePanel } from './UserAppTemplatePackageRegistryWriteGatePanel';
+import { ControlledUserAppTemplatePackageRegistryWriterDraftPanel } from './ControlledUserAppTemplatePackageRegistryWriterDraftPanel';
 
 export interface FaceMeshMakeupIntelligencePanelProps {
   regionQa: FaceMeshRegionQaReport | null;
@@ -259,6 +263,32 @@ export function FaceMeshMakeupIntelligencePanel({
             </p>
           </div>
         </div>
+        <div className="mt-3 grid gap-2 rounded-md border border-cyan-200 bg-cyan-50 p-3 text-sm text-cyan-900 md:grid-cols-4">
+          <div>
+            <p className="font-semibold">受控 Registry 写入器草稿</p>
+            <p className="mt-1 text-xs leading-5">
+              Writer Draft blocked：缺少 10J registry write gate ready。
+            </p>
+          </div>
+          <div>
+            <p className="font-semibold">Dry-run Write Plan</p>
+            <p className="mt-1 text-xs leading-5">
+              dry-run only；只生成 write plan / diff preview / rollback plan，不是实际写入。
+            </p>
+          </div>
+          <div>
+            <p className="font-semibold">Writer Validation</p>
+            <p className="mt-1 text-xs leading-5">
+              校验 dry-run、no-write、no-publish、no-shell-replacement 边界。
+            </p>
+          </div>
+          <div>
+            <p className="font-semibold">Writer Handoff</p>
+            <p className="mt-1 text-xs leading-5">
+              不会写入 registry，不会发布，也不会替换当前用户 App 包。
+            </p>
+          </div>
+        </div>
       </section>
     );
   }
@@ -379,6 +409,19 @@ export function FaceMeshMakeupIntelligencePanel({
   const userAppTemplatePackageRegistryWriteGateHandoff =
     createUserAppTemplatePackageRegistryWriteGateHandoff({
       gate: userAppTemplatePackageRegistryWriteGate,
+    });
+  const controlledRegistryWriterDraft =
+    createControlledUserAppTemplatePackageRegistryWriterDraft({
+      gate: userAppTemplatePackageRegistryWriteGate,
+    });
+  const controlledRegistryWriterValidation =
+    validateControlledUserAppTemplatePackageRegistryWriterDraft(
+      controlledRegistryWriterDraft,
+    );
+  const controlledRegistryWriterHandoff =
+    createControlledUserAppTemplatePackageRegistryWriterHandoff({
+      draft: controlledRegistryWriterDraft,
+      validation: controlledRegistryWriterValidation,
     });
 
   return (
@@ -518,6 +561,11 @@ export function FaceMeshMakeupIntelligencePanel({
       <UserAppTemplatePackageRegistryWriteGatePanel
         gate={userAppTemplatePackageRegistryWriteGate}
         handoff={userAppTemplatePackageRegistryWriteGateHandoff}
+      />
+      <ControlledUserAppTemplatePackageRegistryWriterDraftPanel
+        draft={controlledRegistryWriterDraft}
+        handoff={controlledRegistryWriterHandoff}
+        validation={controlledRegistryWriterValidation}
       />
     </section>
   );

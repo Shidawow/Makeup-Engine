@@ -150,6 +150,27 @@ Candidate-to-app preparation does not appear in Vision Analysis and does not
 generate a formal `UserAppTemplatePackage`, write a user app package registry,
 publish to the user app, call backend/API services, or train models.
 
+### Controlled UserAppTemplatePackage Registry Writer Draft
+
+Phase 10K adds a local dry-run writer draft after Phase 10J registry write
+gate. `src/template-engine/controlledUserAppTemplatePackageRegistryWriterDraft.ts`
+creates package id/version candidates, proposed registry entry preview,
+existing entry preview, write plan, diff preview, rollback plan, and
+trace-preserved draft status from a gate-ready source.
+
+`controlledUserAppTemplatePackageRegistryWriterValidation.ts` validates source
+gate readiness, dry-run-only, actual-write-blocked, publish-blocked,
+package-replacement-blocked, write plan, diff preview, rollback plan, trace,
+unsafe payload, no production marker, and JSON round-trip safety.
+`controlledUserAppTemplatePackageRegistryWriterHandoff.ts` summarizes next
+actions for a future explicit write authorization gate.
+
+`src/components/template-studio/ControlledUserAppTemplatePackageRegistryWriterDraftPanel.tsx`
+renders the Template Workbench writer draft, validation, and handoff summary.
+The controlled writer draft does not appear in Vision Analysis and does not
+execute registry writes, publish to the user app, replace the current User App
+Shell package, call backend/API services, or train models.
+
 ### Vision Analysis
 
 `src/vision` owns local face, cosmetic, pixel, region, quality, provider, and pipeline logic. It consumes `TemplateAnalysisSeed` records when they are ready for Vision Analysis.

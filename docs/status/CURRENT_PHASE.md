@@ -2,37 +2,39 @@
 
 ## Phase State
 
-- `lastCompletedPhase`: `10J`
-- `lastCompletedBusinessPhase`: `10J`
-- `currentPhase`: `10J`
-- `currentPhaseName`: `UserAppTemplatePackage Registry Write Gate`
-- `nextRecommendedPhase`: `10K`
-- `nextRecommendedPhaseName`: `Controlled UserAppTemplatePackage Registry Writer Draft`
+- `lastCompletedPhase`: `10K`
+- `lastCompletedBusinessPhase`: `10K`
+- `currentPhase`: `10K`
+- `currentPhaseName`: `Controlled UserAppTemplatePackage Registry Writer Draft`
+- `nextRecommendedPhase`: `10L`
+- `nextRecommendedPhaseName`: `Explicit Registry Write Authorization Gate`
 - `phaseOwner`: `Codex implementation, validation, commit, and push pass`
 
 ## Phase Completion Definition
 
-Phase 10J is complete when:
+Phase 10K is complete when:
 
-- Phase 10I registry preparation validation ready or ready-with-warnings sources
-  can enter a local registry write gate.
-- The gate checks source validation readiness, entry preview, package id/version
-  candidates, draft-only, publish-blocked, registry-write-blocked, trace,
-  unsafe payload, no actual registry write, no-publish, no-shell replacement,
-  no-production package, User App contract boundary, and JSON round-trip
-  boundaries.
-- Gate handoff can recommend a future controlled registry writer, focused
-  metadata/version/privacy/shell-boundary review, preview-only retention, or
-  blocking.
+- Phase 10J registry write gate ready or ready-with-warnings sources can enter
+  a local controlled writer draft.
+- The writer draft creates a dry-run write plan, diff preview, existing entry
+  preview, rollback plan, validation, and handoff without executing mutation.
+- The writer draft checks source gate readiness, dry-run-only, actual-write
+  blocked, publish-blocked, package-replacement-blocked, write plan, diff
+  preview, rollback plan, trace, unsafe payload, no production package, and JSON
+  round-trip boundaries.
+- Handoff can recommend Phase 10L explicit write authorization gate, focused
+  write plan/versioning/rollback/privacy/shell-boundary review, dry-run-only
+  retention, or blocking.
 - Vision Analysis tab remains free of registry write gate UI.
 - Template Workbench owns candidate package, candidate-to-app preparation, app
   package mapping preview, user app package draft preview, preview validation,
   handoff, official draft gate, gate handoff, official draft builder, draft
-  validation, draft handoff, draft publish gate, registry preparation, and
-  registry write gate.
+  validation, draft handoff, draft publish gate, registry preparation, registry
+  write gate, and controlled registry writer draft.
 - No formal `UserAppTemplatePackage` is generated automatically.
 - No user app package registry write occurs automatically.
-- Phase 10J does not add backend, camera capture, AR, OpenAI/external API calls,
+- Phase 10K does not execute registry writes, publish, replace the current User
+  App Shell package, add backend, camera capture, AR, OpenAI/external API calls,
   training, production app routing, runtime dependencies, or committed MediaPipe
   binaries.
 - Documentation and project-state handoff are updated.

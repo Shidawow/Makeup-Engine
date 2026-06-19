@@ -83,7 +83,8 @@
     "Phase 10E UserAppPackageDraftPreview, UserAppPackageDraftPreviewValidationResult, and UserAppPackageDraftPreviewHandoff are local admin preview metadata, not formal UserAppTemplatePackage exports, user app package registry writes, backend records, or training input.",
     "Phase 10H UserAppTemplatePackageDraftPublishGateResult and UserAppTemplatePackageDraftPublishGateHandoff are local admin gate metadata, not publication, not user app package registry writes, not current User App Shell package replacement, not backend records, and not training input.",
     "Phase 10I UserAppTemplatePackageRegistryPreparation, UserAppTemplatePackageRegistryPreparationValidationResult, and UserAppTemplatePackageRegistryPreparationHandoff are local admin preparation metadata, not actual user app package registry writes, not publication, not current User App Shell package replacement, not backend records, and not training input.",
-    "Phase 10J UserAppTemplatePackageRegistryWriteGateResult and UserAppTemplatePackageRegistryWriteGateHandoff are local admin gate metadata, not actual user app package registry writes, not publication, not current User App Shell package replacement, not backend records, and not training input."
+    "Phase 10J UserAppTemplatePackageRegistryWriteGateResult and UserAppTemplatePackageRegistryWriteGateHandoff are local admin gate metadata, not actual user app package registry writes, not publication, not current User App Shell package replacement, not backend records, and not training input.",
+    "Phase 10K ControlledRegistryWriterDraft, ControlledRegistryWriterValidationResult, and ControlledRegistryWriterHandoff are local admin dry-run writer metadata, not actual user app package registry writes, not publication, not current User App Shell package replacement, not backend records, and not training input."
   ],
   "materializedDatasetOutputs": [
     "tmp/datasets/realistic-synthetic-png-image-v0/package.json",
@@ -163,7 +164,11 @@
     "docs/phases/phase-10I.md",
     "docs/product/user-app-template-package-registry-write-gate.md",
     "docs/product/user-app-template-package-registry-write-gate-handoff.md",
-    "docs/phases/phase-10J.md"
+    "docs/phases/phase-10J.md",
+    "docs/product/controlled-user-app-template-package-registry-writer-draft.md",
+    "docs/product/controlled-user-app-template-package-registry-writer-validation.md",
+    "docs/product/controlled-user-app-template-package-registry-writer-handoff.md",
+    "docs/phases/phase-10K.md"
   ],
   "userAppConsumptionOutputs": [
     "UserAppTemplatePackage JSON",
@@ -408,11 +413,11 @@
     "Observation template documentation",
     "Outcome review documentation"
   ],
-  "phase": "10J",
-  "lastCompletedPhase": "10J",
-  "currentPhase": "10J",
-  "nextRecommendedPhase": "10K",
-  "updatedAt": "2026-06-19",
+  "phase": "10K",
+  "lastCompletedPhase": "10K",
+  "currentPhase": "10K",
+  "nextRecommendedPhase": "10L",
+  "updatedAt": "2026-06-20",
   "artifacts": [
     "docs/product/internal-trial-learning-summary.md",
     "docs/product/product-decision-gate.md",
@@ -462,7 +467,7 @@
     "docs/product/internal-trial-evidence-quality-gate.md",
     "docs/phases/phase-9F.md"
   ],
-  "nextRecommendedPhaseName": "Controlled UserAppTemplatePackage Registry Writer Draft",
+  "nextRecommendedPhaseName": "Explicit Registry Write Authorization Gate",
   "userAppAnonymousTrialDryRunOutputs": [
     "src/user-app/userAppAnonymousTrialDryRunPack.ts",
     "src/user-app/userAppAnonymousTrialDryRunChecklist.ts",
@@ -544,9 +549,9 @@
     "docs/product/user-app-template-package-draft-publish-gate-handoff.md",
     "docs/phases/phase-10H.md"
   ],
-  "lastUpdatedPhase": "10J",
-  "currentPhaseId": "10J",
-  "currentPhaseName": "UserAppTemplatePackage Registry Write Gate",
+  "lastUpdatedPhase": "10K",
+  "currentPhaseId": "10K",
+  "currentPhaseName": "Controlled UserAppTemplatePackage Registry Writer Draft",
   "lastValidation": {
     "mediapipeCheck": "passed",
     "typecheck": "passed",
@@ -557,13 +562,13 @@
     "projectContext": "passed",
     "contextPackJson": "passed",
     "browserVerification": "passed",
-    "phase10IScopedTests": "passed",
+    "phase10KScopedTests": "passed",
     "testFiles": 10,
     "tests": 36,
-    "phase10IScopedTestFiles": 10,
-    "phase10IScopedTestsCount": 36,
-    "summary": "Phase 10I validation passed: mediapipe:check, registry preparation scoped tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
-    "updatedAt": "2026-06-19"
+    "phase10KScopedTestFiles": 10,
+    "phase10KScopedTestsCount": 36,
+    "summary": "Phase 10K validation passed: mediapipe:check, controlled registry writer scoped tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
+    "updatedAt": "2026-06-20"
   },
   "validation": {
     "mediapipeCheck": "passed",
@@ -575,15 +580,15 @@
     "projectContext": "passed",
     "contextPackJson": "passed",
     "browserVerification": "passed",
-    "phase10IScopedTests": "passed",
+    "phase10KScopedTests": "passed",
     "testFiles": 10,
     "tests": 36,
-    "phase10IScopedTestFiles": 10,
-    "phase10IScopedTestsCount": 36,
-    "summary": "Phase 10I validation passed: mediapipe:check, registry preparation scoped tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
-    "updatedAt": "2026-06-19"
+    "phase10KScopedTestFiles": 10,
+    "phase10KScopedTestsCount": 36,
+    "summary": "Phase 10K validation passed: mediapipe:check, controlled registry writer scoped tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
+    "updatedAt": "2026-06-20"
   },
-  "summary": "Phase 10I validation passed: mediapipe:check, registry preparation scoped tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
+  "summary": "Phase 10K validation passed: mediapipe:check, controlled registry writer scoped tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
   "status": "passed",
   "validationStatus": "passed",
   "userAppTemplatePackageRegistryWriteGateOutputs": [
@@ -593,5 +598,15 @@
     "docs/product/user-app-template-package-registry-write-gate.md",
     "docs/product/user-app-template-package-registry-write-gate-handoff.md",
     "docs/phases/phase-10J.md"
+  ],
+  "controlledRegistryWriterDraftOutputs": [
+    "ControlledRegistryWriterDraft metadata",
+    "ControlledRegistryWriterValidationResult metadata",
+    "ControlledRegistryWriterHandoff metadata",
+    "Controlled registry writer dry-run write plan",
+    "Controlled registry writer diff preview",
+    "Controlled registry writer existing entry preview",
+    "Controlled registry writer rollback plan",
+    "ControlledUserAppTemplatePackageRegistryWriterDraftPanel UI preview"
   ]
 }

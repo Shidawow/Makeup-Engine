@@ -1,11 +1,11 @@
 {
   "schemaVersion": "active-task.v1",
-  "taskId": "phase-10j-user-app-template-package-registry-write-gate",
-  "title": "Phase 10J - UserAppTemplatePackage Registry Write Gate",
+  "taskId": "phase-10k-controlled-user-app-template-package-registry-writer-draft",
+  "title": "Phase 10K - Controlled UserAppTemplatePackage Registry Writer Draft",
   "status": "completed",
   "ownerRole": "Codex",
   "createdBy": "Codex",
-  "phase": "10J",
+  "phase": "10K",
   "recommendedProfile": "native-gpt-codex-xhigh-reasoning",
   "allowedDirectories": [
     "src/vision",
@@ -30,18 +30,18 @@
     "npm run project:context",
     "node scripts/project-status.mjs --json",
     "node scripts/context-pack.mjs --json",
-    "npm run test -- tests/user-app-template-package-registry-write-gate.test.ts tests/user-app-template-package-registry-write-gate-handoff.test.ts tests/user-app-template-package-registry-write-gate-panel.test.tsx tests/phase-10J-documentation-recovery.test.ts tests/user-app-template-package-registry-preparation.test.ts tests/user-app-template-package-registry-preparation-panel.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
+    "npm run test -- tests/controlled-user-app-template-package-registry-writer-draft.test.ts tests/controlled-user-app-template-package-registry-writer-validation.test.ts tests/controlled-user-app-template-package-registry-writer-handoff.test.ts tests/controlled-user-app-template-package-registry-writer-panel.test.tsx tests/phase-10K-documentation-recovery.test.ts tests/user-app-template-package-registry-write-gate.test.ts tests/user-app-template-package-registry-write-gate-panel.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
   ],
   "completionDefinition": [
-    "Phase 10J added UserAppTemplatePackage registry write gate, handoff, fixtures, UI, docs, and project-state updates.",
-    "Gate ready only means eligible for a future controlled UserAppTemplatePackage registry writer draft.",
-    "10J did not write registry, publish, replace the current User App Shell package, add backend, camera, AR, OpenAI/external APIs, training, runtime dependencies, or committed MediaPipe binaries."
+    "Phase 10K added controlled UserAppTemplatePackage registry writer draft, validation, handoff, fixtures, UI, docs, and project-state updates.",
+    "Writer ready means eligible for a future explicit registry write authorization gate only.",
+    "10K did not execute registry writes, publish, replace the current User App Shell package, add backend, camera, AR, OpenAI/external APIs, training, runtime dependencies, or committed MediaPipe binaries."
   ],
   "dependsOn": [
-    "10I UserAppTemplatePackage Registry Preparation"
+    "10J UserAppTemplatePackage Registry Write Gate"
   ],
-  "nextRecommendedTask": "Phase 10K - Controlled UserAppTemplatePackage Registry Writer Draft",
-  "updatedAt": "2026-06-19",
+  "nextRecommendedTask": "Phase 10L - Explicit Registry Write Authorization Gate",
+  "updatedAt": "2026-06-20",
   "validationStatus": "passed",
   "lastValidation": {
     "mediapipeCheck": "passed",
@@ -53,13 +53,13 @@
     "projectContext": "passed",
     "contextPackJson": "passed",
     "browserVerification": "passed",
-    "phase10JScopedTests": "passed",
-    "testFiles": 9,
-    "tests": 30,
-    "phase10JScopedTestFiles": 9,
-    "phase10JScopedTestsCount": 30,
-    "summary": "Phase 10J validation passed: mediapipe:check, registry write gate scoped tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
-    "updatedAt": "2026-06-19"
+    "phase10KScopedTests": "passed",
+    "testFiles": 10,
+    "tests": 36,
+    "phase10KScopedTestFiles": 10,
+    "phase10KScopedTestsCount": 36,
+    "summary": "Phase 10K validation passed: mediapipe:check, controlled registry writer scoped tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
+    "updatedAt": "2026-06-20"
   },
   "validation": {
     "mediapipeCheck": "passed",
@@ -71,15 +71,15 @@
     "projectContext": "passed",
     "contextPackJson": "passed",
     "browserVerification": "passed",
-    "phase10JScopedTests": "passed",
-    "testFiles": 9,
-    "tests": 30,
-    "phase10JScopedTestFiles": 9,
-    "phase10JScopedTestsCount": 30,
-    "summary": "Phase 10J validation passed: mediapipe:check, registry write gate scoped tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
-    "updatedAt": "2026-06-19"
+    "phase10KScopedTests": "passed",
+    "testFiles": 10,
+    "tests": 36,
+    "phase10KScopedTestFiles": 10,
+    "phase10KScopedTestsCount": 36,
+    "summary": "Phase 10K validation passed: mediapipe:check, controlled registry writer scoped tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
+    "updatedAt": "2026-06-20"
   },
-  "summary": "Added UserAppTemplatePackage registry write gate, handoff, Template Workbench panel, examples, docs, and project-state updates while preserving no-write/no-publish/no-shell-replacement boundaries.",
+  "summary": "Added controlled UserAppTemplatePackage registry writer draft, validation, handoff, Template Workbench panel, examples, docs, and project-state updates while preserving dry-run/no-write/no-publish/no-shell-replacement boundaries.",
   "completed": true,
-  "nextTask": "Phase 10K - Controlled UserAppTemplatePackage Registry Writer Draft"
+  "nextTask": "Phase 10L - Explicit Registry Write Authorization Gate"
 }

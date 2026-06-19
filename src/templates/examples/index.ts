@@ -76,3 +76,6 @@ export * from './user-app-template-package-registry-preparation-validation.examp
 export * from './user-app-template-package-registry-preparation-handoff.example';
 export * from './user-app-template-package-registry-write-gate.example';
 export * from './user-app-template-package-registry-write-gate-handoff.example';
+export * from './controlled-user-app-template-package-registry-writer-draft.example';
+export * from './controlled-user-app-template-package-registry-writer-validation.example';
+export * from './controlled-user-app-template-package-registry-writer-handoff.example';

@@ -12,10 +12,10 @@ It produces templates, template evidence, correction records, review state, loca
 
 ## Current Phase
 
-- Current business phase: `Phase 10J completed`
-- Last completed phase: `Phase 10J`
-- Last completed phase name: `Phase 10J - UserAppTemplatePackage Registry Write Gate`
-- Next recommended phase: `Phase 10K - Controlled UserAppTemplatePackage Registry Writer Draft`
+- Current business phase: `Phase 10K completed`
+- Last completed phase: `Phase 10K`
+- Last completed phase name: `Phase 10K - Controlled UserAppTemplatePackage Registry Writer Draft`
+- Next recommended phase: `Phase 10L - Explicit Registry Write Authorization Gate`
 
 Historical recovery marker retained for Phase 9C tests: `Phase 9C completed`.
 Historical recovery marker retained for Phase 9E tests: `Phase 9E completed`.
@@ -85,6 +85,7 @@ Real Photo
 -> UserAppTemplatePackage Draft Publish Gate
 -> UserAppTemplatePackage Registry Preparation
 -> UserAppTemplatePackage Registry Write Gate
+-> Controlled UserAppTemplatePackage Registry Writer Draft
 -> Phase 8 Roadmap / V1 Non-Goals
 -> User App Consumption Manifest
 -> Dataset Review
@@ -148,6 +149,13 @@ Important boundary: `SourceImagePackage` can enter Vision Analysis through opera
   Phase 10J local registry write gate and handoff logic. They check future
   controlled-writer eligibility only and do not write registries, publish,
   replace the current User App Shell package, or mark production readiness.
+- `src/template-engine/controlledUserAppTemplatePackageRegistryWriterDraft.ts`,
+  `src/template-engine/controlledUserAppTemplatePackageRegistryWriterValidation.ts`,
+  and `src/template-engine/controlledUserAppTemplatePackageRegistryWriterHandoff.ts`:
+  Phase 10K local dry-run controlled writer draft, validation, and handoff
+  logic. They create write plan, diff preview, existing entry preview, and
+  rollback plan only; they do not execute registry writes, publish, replace the
+  current User App Shell package, or mark production readiness.
 - `src/templates`: schemas, storage, review, corrections, evidence, dataset materialization, source image binding, production batch storage/export, template library storage, and publish package export.
 - `src/template-engine/production`: production queue, state machine, QA rules, rebinding recovery, analysis handoff, review lifecycle, smoke checklist.
 - `src/template-engine/library`: production task to library entry conversion, template versioning, and local library lifecycle.

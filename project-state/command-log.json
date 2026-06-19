@@ -461,14 +461,68 @@
       "status": "passed",
       "phase": "10J",
       "notes": "Vision Analysis does not show registry write gate; Template Workbench shows gate/handoff, blocked state, and no forbidden write/publish/replacement copy."
+    },
+    {
+      "command": "npm run mediapipe:check",
+      "status": "passed",
+      "phase": "10K",
+      "notes": "Phase 10K required validation command."
+    },
+    {
+      "command": "npm run typecheck",
+      "status": "passed",
+      "phase": "10K",
+      "notes": "Phase 10K required validation command."
+    },
+    {
+      "command": "npm run build",
+      "status": "passed",
+      "phase": "10K",
+      "notes": "Phase 10K required validation command."
+    },
+    {
+      "command": "npm run project:status",
+      "status": "passed",
+      "phase": "10K",
+      "notes": "Phase 10K required validation command."
+    },
+    {
+      "command": "npm run project:context",
+      "status": "passed",
+      "phase": "10K",
+      "notes": "Phase 10K required validation command."
+    },
+    {
+      "command": "node scripts/project-status.mjs --json",
+      "status": "passed",
+      "phase": "10K",
+      "notes": "Phase 10K required validation command."
+    },
+    {
+      "command": "node scripts/context-pack.mjs --json",
+      "status": "passed",
+      "phase": "10K",
+      "notes": "Phase 10K required validation command."
+    },
+    {
+      "command": "npm run test -- tests/controlled-user-app-template-package-registry-writer-draft.test.ts tests/controlled-user-app-template-package-registry-writer-validation.test.ts tests/controlled-user-app-template-package-registry-writer-handoff.test.ts tests/controlled-user-app-template-package-registry-writer-panel.test.tsx tests/phase-10K-documentation-recovery.test.ts tests/user-app-template-package-registry-write-gate.test.ts tests/user-app-template-package-registry-write-gate-panel.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
+      "status": "passed",
+      "phase": "10K",
+      "notes": "Phase 10K required scoped validation command."
+    },
+    {
+      "command": "Browser verification for Phase 10K Template Studio tabs",
+      "status": "passed",
+      "phase": "10K",
+      "notes": "Vision Analysis excludes controlled registry writer draft; Template Workbench shows writer draft/validation/handoff and no write/publish/shell replacement copy."
     }
   ],
-  "lastUpdatedPhase": "10J",
-  "phase": "10J",
-  "lastCompletedPhase": "10J",
-  "currentPhase": "10J",
-  "nextRecommendedPhase": "10K",
-  "updatedAt": "2026-06-19",
+  "lastUpdatedPhase": "10K",
+  "phase": "10K",
+  "lastCompletedPhase": "10K",
+  "currentPhase": "10K",
+  "nextRecommendedPhase": "10L",
+  "updatedAt": "2026-06-20",
   "lastValidation": {
     "mediapipeCheck": "passed",
     "typecheck": "passed",
@@ -479,13 +533,13 @@
     "projectContext": "passed",
     "contextPackJson": "passed",
     "browserVerification": "passed",
-    "phase10IScopedTests": "passed",
+    "phase10KScopedTests": "passed",
     "testFiles": 10,
     "tests": 36,
-    "phase10IScopedTestFiles": 10,
-    "phase10IScopedTestsCount": 36,
-    "summary": "Phase 10I validation passed: mediapipe:check, registry preparation scoped tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
-    "updatedAt": "2026-06-19"
+    "phase10KScopedTestFiles": 10,
+    "phase10KScopedTestsCount": 36,
+    "summary": "Phase 10K validation passed: mediapipe:check, controlled registry writer scoped tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
+    "updatedAt": "2026-06-20"
   },
   "validation": {
     "mediapipeCheck": "passed",
@@ -497,16 +551,16 @@
     "projectContext": "passed",
     "contextPackJson": "passed",
     "browserVerification": "passed",
-    "phase10IScopedTests": "passed",
+    "phase10KScopedTests": "passed",
     "testFiles": 10,
     "tests": 36,
-    "phase10IScopedTestFiles": 10,
-    "phase10IScopedTestsCount": 36,
-    "summary": "Phase 10I validation passed: mediapipe:check, registry preparation scoped tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
-    "updatedAt": "2026-06-19"
+    "phase10KScopedTestFiles": 10,
+    "phase10KScopedTestsCount": 36,
+    "summary": "Phase 10K validation passed: mediapipe:check, controlled registry writer scoped tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
+    "updatedAt": "2026-06-20"
   },
   "status": "passed",
-  "summary": "Phase 10I validation passed: mediapipe:check, registry preparation scoped tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
+  "summary": "Phase 10K validation passed: mediapipe:check, controlled registry writer scoped tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
   "entries": [
     {
       "command": "npm run mediapipe:check",
@@ -563,8 +617,8 @@
       "notes": "Phase 10I JSON context pack command passed."
     }
   ],
-  "currentPhaseId": "10J",
-  "nextRecommendedPhaseName": "Controlled UserAppTemplatePackage Registry Writer Draft",
-  "currentPhaseName": "UserAppTemplatePackage Registry Write Gate",
+  "currentPhaseId": "10K",
+  "nextRecommendedPhaseName": "Explicit Registry Write Authorization Gate",
+  "currentPhaseName": "Controlled UserAppTemplatePackage Registry Writer Draft",
   "validationStatus": "passed"
 }

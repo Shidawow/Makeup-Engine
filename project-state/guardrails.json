@@ -1,5 +1,5 @@
 {
-  "phase": "10J",
+  "phase": "10K",
   "guardrails": [
     {
       "id": "source-image-not-training-data",
@@ -680,6 +680,26 @@
     {
       "id": "phase_10j_no_production_package",
       "rule": "Phase 10J must not create or mark a production UserAppTemplatePackage."
+    },
+    {
+      "id": "phase_10k_dry_run_only",
+      "rule": "Phase 10K controlled registry writer draft must remain dry-run-only and cannot authorize or execute registry mutation."
+    },
+    {
+      "id": "phase_10k_no_actual_registry_write",
+      "rule": "Phase 10K must not write, persist, or mark a UserAppTemplatePackage registry entry as written."
+    },
+    {
+      "id": "phase_10k_no_publish",
+      "rule": "Phase 10K must not publish to the user app or mark production readiness."
+    },
+    {
+      "id": "phase_10k_no_shell_package_replacement",
+      "rule": "Phase 10K must not replace the current User App Shell package."
+    },
+    {
+      "id": "phase_10k_no_production_package",
+      "rule": "Phase 10K must not create or mark a production UserAppTemplatePackage."
     }
   ],
   "legacyFrozenModules": [

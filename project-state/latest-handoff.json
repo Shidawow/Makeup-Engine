@@ -1,7 +1,7 @@
 {
-  "fromPhase": "10J",
-  "toPhase": "10K",
-  "summary": "Phase 10J validation passed: mediapipe:check, registry write gate scoped tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
+  "fromPhase": "10K",
+  "toPhase": "10L",
+  "summary": "Phase 10K validation passed: mediapipe:check, controlled registry writer scoped tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
   "routeDecision": {
     "selectedRoute": "React Web / PWA MVP first",
     "futureAppOwnership": "separate user-facing app surface/repository after a future explicit phase gate",
@@ -165,9 +165,13 @@
     "project-state/guardrails.json",
     "docs/product/user-app-template-package-registry-write-gate.md",
     "docs/product/user-app-template-package-registry-write-gate-handoff.md",
-    "docs/phases/phase-10J.md"
+    "docs/phases/phase-10J.md",
+    "docs/product/controlled-user-app-template-package-registry-writer-draft.md",
+    "docs/product/controlled-user-app-template-package-registry-writer-validation.md",
+    "docs/product/controlled-user-app-template-package-registry-writer-handoff.md",
+    "docs/phases/phase-10K.md"
   ],
-  "nextAction": "Proceed to Phase 10K: Controlled UserAppTemplatePackage Registry Writer Draft.",
+  "nextAction": "Proceed to Phase 10L: Explicit Registry Write Authorization Gate.",
   "risks": [
     "Letting Phase 9F become real data collection instead of local anonymous preparation",
     "Collecting real names, contact information, photos, health data, sensitive identity data, analytics records, backend records, AI analysis records, upload data, or training data before a future explicit approval gate",
@@ -185,7 +189,8 @@
     "Treating gate readiness as production app package readiness or publication approval.",
     "Letting Phase 10H draft publish gate become publication, a registry write, production readiness, or User App Shell package replacement.",
     "Letting Phase 10I registry preparation become an actual registry write, publication, production package, or User App Shell package replacement.",
-    "Letting Phase 10J registry write gate become an actual registry write, publication, production package, or User App Shell package replacement."
+    "Letting Phase 10J registry write gate become an actual registry write, publication, production package, or User App Shell package replacement.",
+    "Letting Phase 10K controlled registry writer draft become an actual registry write, publication, production package, or User App Shell package replacement."
   ],
   "forbiddenActions": [
     "Do not treat Phase 9C internal trial iteration plan, backlog, or priority framework as production roadmap approval, public recruitment, production release, App Store/TestFlight, backend forms, analytics, camera readiness, AR readiness, AI analysis approval, OpenAI/external API approval, training readiness, online publication, or real user data collection approval.",
@@ -210,7 +215,8 @@
     "Do not treat Phase 10F official draft gate, gate validation, or gate handoff as formal UserAppTemplatePackage generation, user app package registry write, publication, production app readiness, backend work, camera/AR scope, OpenAI/external API scope, training approval, or automatic builder execution.",
     "Do not write Phase 10F official draft gate outputs into a user app package registry or production app registry.",
     "Do not treat Phase 10I registry preparation, validation, or handoff as actual user app package registry write execution, publication, production readiness, backend work, AI/API work, training approval, or current User App Shell package replacement.",
-    "Do not treat Phase 10J registry write gate readiness or handoff as actual user app package registry write execution, publication, production readiness, backend work, AI/API work, training approval, or current User App Shell package replacement."
+    "Do not treat Phase 10J registry write gate readiness or handoff as actual user app package registry write execution, publication, production readiness, backend work, AI/API work, training approval, or current User App Shell package replacement.",
+    "Do not treat Phase 10K controlled registry writer draft readiness, validation, or handoff as actual user app package registry write execution, publication, production readiness, backend work, AI/API work, training approval, or current User App Shell package replacement."
   ],
   "trialPackDecision": {
     "phase8CResult": [
@@ -287,13 +293,13 @@
     "projectContext": "passed",
     "contextPackJson": "passed",
     "browserVerification": "passed",
-    "phase10JScopedTests": "passed",
-    "testFiles": 9,
-    "tests": 30,
-    "phase10JScopedTestFiles": 9,
-    "phase10JScopedTestsCount": 30,
-    "summary": "Phase 10J validation passed: mediapipe:check, registry write gate scoped tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
-    "updatedAt": "2026-06-19"
+    "phase10KScopedTests": "passed",
+    "testFiles": 10,
+    "tests": 36,
+    "phase10KScopedTestFiles": 10,
+    "phase10KScopedTestsCount": 36,
+    "summary": "Phase 10K validation passed: mediapipe:check, controlled registry writer scoped tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
+    "updatedAt": "2026-06-20"
   },
   "internalTrialLearningDecision": {
     "phase9DResult": [
@@ -304,10 +310,10 @@
     "learningBoundary": "anonymous/mock/example summaries only; no real personal data, backend records, AI analysis records, training data, or project-state user records",
     "nextPhase": "Phase 9E - Internal Trial Evidence Pack"
   },
-  "lastCompletedPhase": "10J",
-  "nextRecommendedPhase": "10K",
-  "nextRecommendedPhaseName": "Controlled UserAppTemplatePackage Registry Writer Draft",
-  "updatedAt": "2026-06-19",
+  "lastCompletedPhase": "10K",
+  "nextRecommendedPhase": "10L",
+  "nextRecommendedPhaseName": "Explicit Registry Write Authorization Gate",
+  "updatedAt": "2026-06-20",
   "validation": {
     "mediapipeCheck": "passed",
     "typecheck": "passed",
@@ -318,13 +324,13 @@
     "projectContext": "passed",
     "contextPackJson": "passed",
     "browserVerification": "passed",
-    "phase10JScopedTests": "passed",
-    "testFiles": 9,
-    "tests": 30,
-    "phase10JScopedTestFiles": 9,
-    "phase10JScopedTestsCount": 30,
-    "summary": "Phase 10J validation passed: mediapipe:check, registry write gate scoped tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
-    "updatedAt": "2026-06-19"
+    "phase10KScopedTests": "passed",
+    "testFiles": 10,
+    "tests": 36,
+    "phase10KScopedTestFiles": 10,
+    "phase10KScopedTestsCount": 36,
+    "summary": "Phase 10K validation passed: mediapipe:check, controlled registry writer scoped tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
+    "updatedAt": "2026-06-20"
   },
   "internalTrialEvidenceDecision": {
     "phase9EResult": [
@@ -439,18 +445,22 @@
     "nextPhase": "Phase 10I - UserAppTemplatePackage Registry Preparation",
     "boundary": "Gate-only output; no publish, no registry write execution, no production package, no User App Shell package replacement."
   },
-  "currentPhase": "10J",
-  "currentPhaseId": "10J",
+  "currentPhase": "10K",
+  "currentPhaseId": "10K",
   "userAppTemplatePackageRegistryPreparationDecision": {
     "nextPhase": "Phase 10J - UserAppTemplatePackage Registry Write Gate",
     "boundary": "Preparation-only output; no actual registry write, no publish, no production package, no User App Shell package replacement."
   },
-  "phase": "10J",
-  "lastUpdatedPhase": "10J",
-  "currentPhaseName": "UserAppTemplatePackage Registry Write Gate",
-  "status": "passed",
+  "phase": "10K",
+  "lastUpdatedPhase": "10K",
+  "currentPhaseName": "Controlled UserAppTemplatePackage Registry Writer Draft",
+  "status": "completed",
   "userAppTemplatePackageRegistryWriteGateDecision": {
     "nextPhase": "Phase 10K - Controlled UserAppTemplatePackage Registry Writer Draft",
     "boundary": "Phase 10J is a write gate only; it does not write registry, publish, or replace the current User App Shell package."
+  },
+  "controlledRegistryWriterDraftDecision": {
+    "nextPhase": "Phase 10L - Explicit Registry Write Authorization Gate",
+    "boundary": "Phase 10K is dry-run writer draft only; it does not write registry, publish, authorize mutation, or replace the current User App Shell package."
   }
 }

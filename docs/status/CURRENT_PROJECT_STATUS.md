@@ -2,17 +2,18 @@
 
 ## Current Phase
 
-Phase 10J: UserAppTemplatePackage Registry Write Gate is complete.
+Phase 10K: Controlled UserAppTemplatePackage Registry Writer Draft is complete.
 
-Last completed business phase: Phase 10J.
+Last completed business phase: Phase 10K.
 
-Next recommended phase: Phase 10K, Controlled UserAppTemplatePackage Registry Writer Draft.
+Next recommended phase: Phase 10L, Explicit Registry Write Authorization Gate.
 
-Phase 10J adds a local administrator-only registry write gate over the Phase
-10I registry preparation validation result. Gate ready means eligible for a
-future controlled registry writer draft only. It is still not an actual
-registry write, publication, production package creation, User App Shell
-package replacement, backend service, or production app readiness marker.
+Phase 10K adds a local administrator-only controlled registry writer draft over
+the Phase 10J registry write gate result. Writer ready means eligible for a
+future explicit registry write authorization gate only. It is still a dry-run
+writer plan, not an actual registry write, publication, production package
+creation, User App Shell package replacement, backend service, or production app
+readiness marker.
 
 ## What The System Can Do
 
@@ -64,6 +65,11 @@ package replacement, backend service, or production app readiness marker.
   validation while preserving draft-only, publish-blocked,
   registry-write-blocked, no-shell-replacement, no-production-package, trace,
   and JSON round-trip boundaries.
+- Draft Phase 10K controlled registry writer plans with package id/version
+  candidates, proposed entry preview, existing entry preview, dry-run write
+  plan, diff preview, rollback plan, validation, and handoff while preserving
+  no actual registry write, no publish, no current User App Shell package
+  replacement, no production package, trace, and JSON round-trip boundaries.
 - Render compact Template Studio workflow, candidate package, candidate-to-app,
   user app package draft preview, official draft gate, and official draft
   builder, draft publish gate, registry preparation, and registry write gate
@@ -102,6 +108,10 @@ package replacement, backend service, or production app readiness marker.
 - It cannot treat Phase 10J registry write gate readiness or handoff as actual
   registry write execution, publication, production readiness, production
   package creation, or replacement for the current User App Shell package.
+- It cannot treat Phase 10K controlled registry writer draft readiness,
+  validation, or handoff as actual registry write execution, publication,
+  production readiness, production package creation, or replacement for the
+  current User App Shell package.
 - It cannot generate or mutate `UserAppTemplatePackage` from FaceMesh QA,
   candidates, generated steps, draft QA, human review, candidate handoff,
   candidate package handoff, app contract preparation, draft preview, validation,
@@ -111,7 +121,7 @@ package replacement, backend service, or production app readiness marker.
 - It cannot request camera permissions or call browser camera APIs.
 - It cannot add backend, database, accounts, analytics, AR, OpenAI API,
   external AI/CV APIs, service worker, native app scope, or new runtime
-  dependencies in Phase 10J.
+  dependencies in Phase 10K.
 - It cannot commit local MediaPipe `.task` or `.wasm` files from
   `public/mediapipe/**`.
 - It cannot modify legacy `src/engine`, `src/runtime`, or
@@ -126,7 +136,8 @@ package replacement, backend service, or production app readiness marker.
   candidate-to-app contract preparation, Phase 10E user app package draft
   preview validation/handoff, Phase 10F official draft gate/handoff, Phase 10G
   official draft builder, Phase 10H draft publish gate, Phase 10I registry
-  preparation, and Phase 10J registry write gate.
+  preparation, Phase 10J registry write gate, and Phase 10K controlled registry
+  writer draft.
 - `src/components/template-studio`: active operator UI with compact Vision
   Analysis to Template Workbench workflow surfaces.
 - `src/components/demo`: Vision Analysis demo with readiness summary and
@@ -141,7 +152,7 @@ package replacement, backend service, or production app readiness marker.
 
 ## Recent Validation
 
-Phase 10J validation must include:
+Phase 10K validation must include:
 
 ```bash
 npm run mediapipe:check
@@ -157,9 +168,9 @@ The latest completed validation is recorded in `project-state/test-status.json`.
 
 ## Next Phase Recommendation
 
-Proceed to Phase 10K: Controlled UserAppTemplatePackage Registry Writer Draft.
+Proceed to Phase 10L: Explicit Registry Write Authorization Gate.
 
-Phase 10K may draft a controlled registry writer around the Phase 10J gate
-output, still without automatic publication, backend work, online release,
-production readiness, or current User App Shell package replacement unless a
-future explicit gate approves it.
+Phase 10L may add an explicit authorization gate over the Phase 10K dry-run
+writer draft, still without silently executing a registry write, publishing,
+adding backend work, marking production readiness, or replacing the current User
+App Shell package.

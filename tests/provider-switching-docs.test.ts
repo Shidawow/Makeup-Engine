@@ -40,14 +40,15 @@ describe('provider switching docs', () => {
     expect(combined).toContain('src/intelligence/runtime');
   });
 
-  it('provides phase 10J to 10K switch templates with historical 10I, 10H, 10G, 10F, 10E, 10D, 10C, 10A, 9J, and older markers', async () => {
+  it('provides phase 10K to 10L switch templates with historical 10J, 10I, 10H, 10G, 10F, 10E, 10D, 10C, 10A, 9J, and older markers', async () => {
     const prompt = await readFile('docs/prompts/PROVIDER_SWITCH_PROMPT.md', 'utf8');
 
     expect(prompt).toContain('Switch To Native GPT / Codex Desktop');
     expect(prompt).toContain('Switch To PackyAPI + CLI');
     expect(prompt).toContain('Return From PackyAPI To ChatGPT');
-    expect(prompt).toContain('lastCompletedPhase: 10J');
-    expect(prompt).toContain('nextRecommendedPhase: 10K');
+    expect(prompt).toContain('lastCompletedPhase: 10K');
+    expect(prompt).toContain('nextRecommendedPhase: 10L');
+    expect(prompt).toContain('Explicit Registry Write Authorization Gate');
     expect(prompt).toContain('Controlled UserAppTemplatePackage Registry Writer Draft');
     expect(prompt).toContain('UserAppTemplatePackage Registry Write Gate');
     expect(prompt).toContain('UserAppTemplatePackage Registry Preparation');
@@ -60,6 +61,10 @@ describe('provider switching docs', () => {
     expect(prompt).toContain('Official UserAppTemplatePackage Draft Builder');
     expect(prompt).toContain('UserAppTemplatePackage Draft Publish Gate');
     expect(prompt).toContain('Phase 10J UserAppTemplatePackage Registry Write Gate');
+    expect(prompt).toContain('Phase 10K Controlled UserAppTemplatePackage Registry Writer Draft');
+    expect(prompt).toContain('Historical handoff marker retained for Phase 10J recovery tests');
+    expect(prompt).toContain('lastCompletedPhase: 10J');
+    expect(prompt).toContain('nextRecommendedPhase: 10K');
     expect(prompt).toContain('Historical handoff marker retained for Phase 10I recovery tests');
     expect(prompt).toContain('lastCompletedPhase: 10I');
     expect(prompt).toContain('nextRecommendedPhase: 10J');

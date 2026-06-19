@@ -41,6 +41,8 @@ describe('Template Studio tab boundary', () => {
     expect(html).not.toContain('Registry Preparation');
     expect(html).not.toContain('用户 App 模板包 Registry 写入闸门');
     expect(html).not.toContain('Registry Write Gate');
+    expect(html).not.toContain('受控 Registry 写入器草稿');
+    expect(html).not.toContain('controlled registry writer');
   });
 
   it('tells the template workbench to return to Vision Analysis when Region QA is blocked', () => {
@@ -104,11 +106,18 @@ describe('Template Studio tab boundary', () => {
     expect(html).toContain('registry_preparation_blocked');
     expect(html).toContain('Registry preparation requires a ready Phase 10H draft publish gate');
     expect(html).toContain('用户 App 模板包 Registry 写入闸门');
-    expect(html).toContain('Registry Write Gate blocked');
     expect(html).toContain('只是写入前闸门，不是实际写入');
     expect(html).toContain('registry_write_gate_blocked');
     expect(html).toContain(
       'Registry write gate requires a ready Phase 10I registry preparation validation result',
+    );
+    expect(html).toContain('受控 Registry 写入器草稿');
+    expect(html).toContain('dry-run only');
+    expect(html).toContain('不是实际写入');
+    expect(html).toContain('不会替换当前用户 App 包');
+    expect(html).toContain('writer_draft_blocked');
+    expect(html).toContain(
+      'Controlled writer draft requires a ready Phase 10J registry write gate',
     );
     expect(html).not.toContain('AI 已确认');
     expect(html).not.toContain('已生成正式用户模板包');
@@ -150,5 +159,8 @@ describe('Template Studio tab boundary', () => {
     expect(userPath).not.toContain('用户 App 模板包 Registry 写入闸门');
     expect(userPath).not.toContain('Registry Write Gate');
     expect(userPath).not.toContain('registry write gate');
+    expect(userPath).not.toContain('受控 Registry 写入器草稿');
+    expect(userPath).not.toContain('controlled registry writer');
+    expect(userPath).not.toContain('Writer Draft');
   });
 });
