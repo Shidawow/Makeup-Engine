@@ -1,5 +1,5 @@
 {
-  "phase": "10K",
+  "phase": "10L",
   "guardrails": [
     {
       "id": "source-image-not-training-data",
@@ -700,6 +700,30 @@
     {
       "id": "phase_10k_no_production_package",
       "rule": "Phase 10K must not create or mark a production UserAppTemplatePackage."
+    },
+    {
+      "id": "phase_10l_gate_only",
+      "rule": "Phase 10L explicit authorization gate is a local administrator gate only and is not actual write authorization."
+    },
+    {
+      "id": "phase_10l_no_actual_registry_write",
+      "rule": "Phase 10L must not execute, persist, or mark actual UserAppTemplatePackage registry writes."
+    },
+    {
+      "id": "phase_10l_no_publish",
+      "rule": "Phase 10L must not publish to the user app or mark templates live."
+    },
+    {
+      "id": "phase_10l_no_shell_package_replacement",
+      "rule": "Phase 10L must not replace the current User App Shell package."
+    },
+    {
+      "id": "phase_10l_no_production_package",
+      "rule": "Phase 10L must not mark a production package or production readiness."
+    },
+    {
+      "id": "phase_10l_future_owner_authorization_required",
+      "rule": "Phase 10L must keep future real write execution dependent on a separate owner authorization and later execution phase."
     }
   ],
   "legacyFrozenModules": [

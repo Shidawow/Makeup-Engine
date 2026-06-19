@@ -109,6 +109,11 @@
   execute registry writes, publish, create a production package, replace the
   current User App Shell package, call backend/API services, call OpenAI or
   external AI/CV APIs, train models, or treat writer readiness as authorization.
+- Phase 10L explicit registry write authorization gate is authorization-gate
+  metadata only. It must not authorize or execute registry writes, publish,
+  create a production package, replace the current User App Shell package, call
+  backend/API services, call OpenAI or external AI/CV APIs, train models, or
+  treat gate readiness as real write approval.
 
 ## Module Boundaries
 
@@ -260,6 +265,25 @@ references, local paths, object URLs, base64, MediaPipe runtime asset names,
 personal data, product shade claims, medical claims, unsupported final claims,
 actual registry write markers, production package markers, User App Shell
 package replacement markers, and unstable JSON.
+
+## Phase 10L Explicit Registry Write Authorization Gate Boundary
+
+Phase 10L explicit authorization gate, checklist, and handoff are local
+administrator aids only. Gate ready means eligible for future controlled write
+execution design; it is not actual write authorization, registry write
+execution, publication, production readiness, production package creation, or a
+User App Shell package replacement.
+
+Phase 10L may use only Phase 10K writer-validation-ready or
+writer-validation-ready-with-warnings sources. It must preserve dry-run-only,
+actual-write-blocked, publish-blocked, package-replacement-blocked, production
+write disabled, future owner authorization required, no-production-package,
+trace, privacy, User App contract boundary, and JSON round-trip stability. It
+must block raw image references, local paths, object URLs, base64, MediaPipe
+runtime asset names, personal data, product shade claims, medical claims,
+unsupported final claims, actual registry write markers, production package
+markers, User App Shell package replacement markers, missing reviewer
+acknowledgement, missing owner authorization requirement, and unstable JSON.
 
 Candidate-to-app preparation can preserve title, summary, style tags,
 difficulty, estimated time, suitable scenarios, tools, product placeholders,

@@ -79,3 +79,6 @@ export * from './user-app-template-package-registry-write-gate-handoff.example';
 export * from './controlled-user-app-template-package-registry-writer-draft.example';
 export * from './controlled-user-app-template-package-registry-writer-validation.example';
 export * from './controlled-user-app-template-package-registry-writer-handoff.example';
+export * from './explicit-registry-write-authorization-checklist.example';
+export * from './explicit-registry-write-authorization-gate.example';
+export * from './explicit-registry-write-authorization-handoff.example';

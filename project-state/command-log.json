@@ -515,13 +515,71 @@
       "status": "passed",
       "phase": "10K",
       "notes": "Vision Analysis excludes controlled registry writer draft; Template Workbench shows writer draft/validation/handoff and no write/publish/shell replacement copy."
+    },
+    {
+      "command": "npm run test -- tests/explicit-registry-write-authorization-checklist.test.ts tests/explicit-registry-write-authorization-gate.test.ts tests/explicit-registry-write-authorization-handoff.test.ts tests/explicit-registry-write-authorization-gate-panel.test.tsx tests/template-studio-tab-boundary.test.tsx",
+      "status": "passed",
+      "phase": "10L",
+      "notes": "Initial Phase 10L model, panel, and tab-boundary tests passed."
+    },
+    {
+      "command": "npm run mediapipe:check",
+      "status": "passed",
+      "phase": "10L"
+    },
+    {
+      "command": "npm run typecheck",
+      "status": "passed",
+      "phase": "10L"
+    },
+    {
+      "command": "npm run test -- tests/explicit-registry-write-authorization-gate.test.ts tests/explicit-registry-write-authorization-checklist.test.ts tests/explicit-registry-write-authorization-handoff.test.ts tests/explicit-registry-write-authorization-gate-panel.test.tsx tests/phase-10L-documentation-recovery.test.ts tests/controlled-user-app-template-package-registry-writer-draft.test.ts tests/controlled-user-app-template-package-registry-writer-panel.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
+      "status": "passed",
+      "phase": "10L",
+      "notes": "10 files / 35 tests passed."
+    },
+    {
+      "command": "npm run build",
+      "status": "passed",
+      "phase": "10L",
+      "notes": "Vite build passed with existing chunk-size warning."
+    },
+    {
+      "command": "Browser verification of Vision Analysis and Template Workbench explicit authorization gate boundaries",
+      "status": "passed",
+      "phase": "10L",
+      "notes": "Vision Analysis excludes 10L gate/checklist; Template Workbench shows 10L gate/checklist/handoff, dry-run only, future owner authorization, and no actual write/publish/replacement forbidden copy."
+    },
+    {
+      "command": "npm run project:status",
+      "status": "passed",
+      "phase": "10L",
+      "notes": "Phase 10L project status command passed."
+    },
+    {
+      "command": "npm run project:context",
+      "status": "passed",
+      "phase": "10L",
+      "notes": "Phase 10L project context command passed."
+    },
+    {
+      "command": "node scripts/project-status.mjs --json",
+      "status": "passed",
+      "phase": "10L",
+      "notes": "Phase 10L JSON project status command passed."
+    },
+    {
+      "command": "node scripts/context-pack.mjs --json",
+      "status": "passed",
+      "phase": "10L",
+      "notes": "Phase 10L JSON context pack command passed."
     }
   ],
-  "lastUpdatedPhase": "10K",
-  "phase": "10K",
-  "lastCompletedPhase": "10K",
-  "currentPhase": "10K",
-  "nextRecommendedPhase": "10L",
+  "lastUpdatedPhase": "10L",
+  "phase": "10L",
+  "lastCompletedPhase": "10L",
+  "currentPhase": "10L",
+  "nextRecommendedPhase": "10M",
   "updatedAt": "2026-06-20",
   "lastValidation": {
     "mediapipeCheck": "passed",
@@ -533,12 +591,12 @@
     "projectContext": "passed",
     "contextPackJson": "passed",
     "browserVerification": "passed",
-    "phase10KScopedTests": "passed",
+    "phase10LScopedTests": "passed",
     "testFiles": 10,
-    "tests": 36,
-    "phase10KScopedTestFiles": 10,
-    "phase10KScopedTestsCount": 36,
-    "summary": "Phase 10K validation passed: mediapipe:check, controlled registry writer scoped tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
+    "tests": 35,
+    "phase10LScopedTestFiles": 10,
+    "phase10LScopedTestsCount": 35,
+    "summary": "Phase 10L validation passed: mediapipe:check, explicit registry write authorization scoped tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
     "updatedAt": "2026-06-20"
   },
   "validation": {
@@ -551,16 +609,16 @@
     "projectContext": "passed",
     "contextPackJson": "passed",
     "browserVerification": "passed",
-    "phase10KScopedTests": "passed",
+    "phase10LScopedTests": "passed",
     "testFiles": 10,
-    "tests": 36,
-    "phase10KScopedTestFiles": 10,
-    "phase10KScopedTestsCount": 36,
-    "summary": "Phase 10K validation passed: mediapipe:check, controlled registry writer scoped tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
+    "tests": 35,
+    "phase10LScopedTestFiles": 10,
+    "phase10LScopedTestsCount": 35,
+    "summary": "Phase 10L validation passed: mediapipe:check, explicit registry write authorization scoped tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
     "updatedAt": "2026-06-20"
   },
   "status": "passed",
-  "summary": "Phase 10K validation passed: mediapipe:check, controlled registry writer scoped tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
+  "summary": "Phase 10L validation passed: mediapipe:check, explicit registry write authorization scoped tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
   "entries": [
     {
       "command": "npm run mediapipe:check",
@@ -615,10 +673,34 @@
       "phase": "10I",
       "status": "passed",
       "notes": "Phase 10I JSON context pack command passed."
+    },
+    {
+      "command": "npm run project:status",
+      "status": "passed",
+      "phase": "10L",
+      "notes": "Phase 10L project status command passed."
+    },
+    {
+      "command": "npm run project:context",
+      "status": "passed",
+      "phase": "10L",
+      "notes": "Phase 10L project context command passed."
+    },
+    {
+      "command": "node scripts/project-status.mjs --json",
+      "status": "passed",
+      "phase": "10L",
+      "notes": "Phase 10L JSON project status command passed."
+    },
+    {
+      "command": "node scripts/context-pack.mjs --json",
+      "status": "passed",
+      "phase": "10L",
+      "notes": "Phase 10L JSON context pack command passed."
     }
   ],
-  "currentPhaseId": "10K",
-  "nextRecommendedPhaseName": "Explicit Registry Write Authorization Gate",
-  "currentPhaseName": "Controlled UserAppTemplatePackage Registry Writer Draft",
+  "currentPhaseId": "10L",
+  "nextRecommendedPhaseName": "Controlled Registry Write Execution Design",
+  "currentPhaseName": "Explicit Registry Write Authorization Gate",
   "validationStatus": "passed"
 }

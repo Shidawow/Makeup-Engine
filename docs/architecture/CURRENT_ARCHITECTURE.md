@@ -171,6 +171,29 @@ The controlled writer draft does not appear in Vision Analysis and does not
 execute registry writes, publish to the user app, replace the current User App
 Shell package, call backend/API services, or train models.
 
+### Explicit Registry Write Authorization Gate
+
+Phase 10L adds a local explicit authorization gate after Phase 10K writer
+validation. `src/template-engine/explicitRegistryWriteAuthorizationGate.ts`
+checks source writer validation readiness, dry-run-only, actual-write-blocked,
+publish-blocked, package-replacement-blocked, write plan, diff preview,
+rollback plan, reviewer acknowledgement, future owner authorization, production
+write disabled, trace, unsafe payload, no actual registry write, no User App
+Shell package replacement, no production marker, and JSON round-trip safety.
+
+`explicitRegistryWriteAuthorizationChecklist.ts` records required owner
+confirmation items without triggering writes. `explicitRegistryWriteAuthorizationHandoff.ts`
+creates local next actions for future controlled write execution design,
+write-plan revision, versioning review, rollback review, privacy review, owner
+authorization review, dry-run-only retention, or blocking.
+
+`src/components/template-studio/ExplicitRegistryWriteAuthorizationGatePanel.tsx`
+renders the Template Workbench authorization gate, checklist, blocked reasons,
+and handoff summary. The gate does not appear in Vision Analysis and does not
+authorize or execute registry writes, publish to the user app, replace the
+current User App Shell package, call backend/API services, use camera/AR, or
+train models.
+
 ### Vision Analysis
 
 `src/vision` owns local face, cosmetic, pixel, region, quality, provider, and pipeline logic. It consumes `TemplateAnalysisSeed` records when they are ready for Vision Analysis.

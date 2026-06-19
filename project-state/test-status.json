@@ -1,5 +1,5 @@
 {
-  "phase": "10K",
+  "phase": "10L",
   "status": "passed",
   "lastValidation": {
     "mediapipeCheck": "passed",
@@ -11,12 +11,12 @@
     "projectContext": "passed",
     "contextPackJson": "passed",
     "browserVerification": "passed",
-    "phase10KScopedTests": "passed",
+    "phase10LScopedTests": "passed",
     "testFiles": 10,
-    "tests": 36,
-    "phase10KScopedTestFiles": 10,
-    "phase10KScopedTestsCount": 36,
-    "summary": "Phase 10K validation passed: mediapipe:check, controlled registry writer scoped tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
+    "tests": 35,
+    "phase10LScopedTestFiles": 10,
+    "phase10LScopedTestsCount": 35,
+    "summary": "Phase 10L validation passed: mediapipe:check, explicit registry write authorization scoped tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
     "updatedAt": "2026-06-20"
   },
   "lastKnownPreDoc0Validation": {
@@ -34,18 +34,18 @@
     "npm run project:context",
     "node scripts/project-status.mjs --json",
     "node scripts/context-pack.mjs --json",
-    "npm run test -- tests/controlled-user-app-template-package-registry-writer-draft.test.ts tests/controlled-user-app-template-package-registry-writer-validation.test.ts tests/controlled-user-app-template-package-registry-writer-handoff.test.ts tests/controlled-user-app-template-package-registry-writer-panel.test.tsx tests/phase-10K-documentation-recovery.test.ts tests/user-app-template-package-registry-write-gate.test.ts tests/user-app-template-package-registry-write-gate-panel.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
+    "npm run test -- tests/explicit-registry-write-authorization-gate.test.ts tests/explicit-registry-write-authorization-checklist.test.ts tests/explicit-registry-write-authorization-handoff.test.ts tests/explicit-registry-write-authorization-gate-panel.test.tsx tests/phase-10L-documentation-recovery.test.ts tests/controlled-user-app-template-package-registry-writer-draft.test.ts tests/controlled-user-app-template-package-registry-writer-panel.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
   ],
   "notes": [
     "Phase 10K scoped model, validation, handoff, panel, documentation, and project-state tests passed.",
     "Browser verification passed: Vision Analysis excludes controlled registry writer draft; Template Workbench shows 10K writer draft/validation/handoff, blocked state, and no write/publish/shell replacement copy.",
     "Final validation includes mediapipe:check, typecheck, build, project status/context, JSON status/context, and Phase 10K scoped tests."
   ],
-  "lastCompletedPhase": "10K",
-  "currentPhase": "10K",
-  "nextRecommendedPhase": "10L",
+  "lastCompletedPhase": "10L",
+  "currentPhase": "10L",
+  "nextRecommendedPhase": "10M",
   "updatedAt": "2026-06-20",
-  "summary": "Phase 10K validation passed: mediapipe:check, controlled registry writer scoped tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
+  "summary": "Phase 10L validation passed: mediapipe:check, explicit registry write authorization scoped tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
   "validation": {
     "mediapipeCheck": "passed",
     "typecheck": "passed",
@@ -56,15 +56,15 @@
     "projectContext": "passed",
     "contextPackJson": "passed",
     "browserVerification": "passed",
-    "phase10KScopedTests": "passed",
+    "phase10LScopedTests": "passed",
     "testFiles": 10,
-    "tests": 36,
-    "phase10KScopedTestFiles": 10,
-    "phase10KScopedTestsCount": 36,
-    "summary": "Phase 10K validation passed: mediapipe:check, controlled registry writer scoped tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
+    "tests": 35,
+    "phase10LScopedTestFiles": 10,
+    "phase10LScopedTestsCount": 35,
+    "summary": "Phase 10L validation passed: mediapipe:check, explicit registry write authorization scoped tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
     "updatedAt": "2026-06-20"
   },
-  "nextRecommendedPhaseName": "Explicit Registry Write Authorization Gate",
+  "nextRecommendedPhaseName": "Controlled Registry Write Execution Design",
   "results": {
     "mediapipeCheck": "passed",
     "typecheck": "passed",
@@ -75,12 +75,12 @@
     "projectContext": "passed",
     "contextPackJson": "passed",
     "browserVerification": "passed",
-    "phase10KScopedTests": "passed",
+    "phase10LScopedTests": "passed",
     "testFiles": 10,
-    "tests": 36,
-    "phase10KScopedTestFiles": 10,
-    "phase10KScopedTestsCount": 36,
-    "summary": "Phase 10K validation passed: mediapipe:check, controlled registry writer scoped tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
+    "tests": 35,
+    "phase10LScopedTestFiles": 10,
+    "phase10LScopedTestsCount": 35,
+    "summary": "Phase 10L validation passed: mediapipe:check, explicit registry write authorization scoped tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
     "updatedAt": "2026-06-20"
   },
   "requiredCommands": [
@@ -91,6 +91,9 @@
     "npm run project:context",
     "node scripts/project-status.mjs --json",
     "node scripts/context-pack.mjs --json",
-    "npm run test -- tests/controlled-user-app-template-package-registry-writer-draft.test.ts tests/controlled-user-app-template-package-registry-writer-validation.test.ts tests/controlled-user-app-template-package-registry-writer-handoff.test.ts tests/controlled-user-app-template-package-registry-writer-panel.test.tsx tests/phase-10K-documentation-recovery.test.ts tests/user-app-template-package-registry-write-gate.test.ts tests/user-app-template-package-registry-write-gate-panel.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
-  ]
+    "npm run test -- tests/explicit-registry-write-authorization-gate.test.ts tests/explicit-registry-write-authorization-checklist.test.ts tests/explicit-registry-write-authorization-handoff.test.ts tests/explicit-registry-write-authorization-gate-panel.test.tsx tests/phase-10L-documentation-recovery.test.ts tests/controlled-user-app-template-package-registry-writer-draft.test.ts tests/controlled-user-app-template-package-registry-writer-panel.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
+  ],
+  "validationStatus": "passed",
+  "lastUpdatedPhase": "10L",
+  "currentPhaseId": "10L"
 }

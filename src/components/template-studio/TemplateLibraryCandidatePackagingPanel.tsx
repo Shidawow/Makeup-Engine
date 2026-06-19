@@ -43,7 +43,7 @@ export function TemplateLibraryCandidatePackagePanel({
       <div className="flex items-start justify-between gap-2">
         <div>
           <h3 className="text-sm font-semibold">Candidate Package</h3>
-          <p className="mt-1 text-xs text-stone-500">模板库候选包 / 不是已发布模板</p>
+          <p className="mt-1 text-xs text-stone-500">模板库候选包 / 仍为候选模板</p>
         </div>
         <span className={`rounded-md border px-2 py-1 text-xs ${statusClass(candidatePackage.packageStatus)}`}>
           {candidatePackage.packageStatus}
@@ -127,7 +127,7 @@ export function TemplateLibraryCandidateHandoffPanel({
       <div className="mt-3 grid gap-1 text-xs text-stone-600">
         <p>Next action：{handoff.nextAction}</p>
         <p>Decision：{handoff.packagingDecision}</p>
-        <p>不是已发布模板。</p>
+        <p>仍为候选模板。</p>
       </div>
     </div>
   );
@@ -146,7 +146,7 @@ export function TemplateLibraryCandidatePackagingPanel({
             模板库候选包
           </h2>
           <p className="mt-1 text-xs leading-5 text-teal-900">
-            10C 只把人工审核通过的草稿整理为本地、可验证、可交接的 candidate package；不是已发布模板，不写正式 Template Library，不会自动生成 UserAppTemplatePackage。
+            10C 只把人工审核通过的草稿整理为本地、可验证、可交接的 candidate package；仍为候选模板，不写正式 Template Library，不会自动生成 UserAppTemplatePackage。
           </p>
         </div>
         <span className="rounded-md bg-white px-2.5 py-1 text-xs font-semibold text-teal-900">

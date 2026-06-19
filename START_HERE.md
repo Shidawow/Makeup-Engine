@@ -5,9 +5,9 @@ Makeup Engine is the makeup template production system for a future makeup coach
 ## Current Position
 
 - Project role: makeup template production system plus a local contract-driven user app shell prototype.
-- Last completed phase: `Phase 10K`.
-- Current completed business phase: `Phase 10K - Controlled UserAppTemplatePackage Registry Writer Draft`.
-- Next recommended phase: `Phase 10L - Explicit Registry Write Authorization Gate`.
+- Last completed phase: `Phase 10L`.
+- Current completed business phase: `Phase 10L - Explicit Registry Write Authorization Gate`.
+- Next recommended phase: `Phase 10M - Controlled Registry Write Execution Design`.
 - Recent recovery milestones retained in phase docs: `Phase 6K`, `Phase 6L`, `Phase 6L-1`, `Phase 7A`, `Phase 7B`, `Phase 7C`, `Phase 7D`, `Phase 7E`, `Phase 7F`, `Phase 7G`, `Phase 7H`, and `Phase 8A`.
 - Historical route-planning milestone: `Phase 8A - Product Route Decision / App MVP Planning`.
 
@@ -62,6 +62,7 @@ SourceImagePackage manifest
 -> UserAppTemplatePackage Registry Preparation
 -> UserAppTemplatePackage Registry Write Gate
 -> Controlled UserAppTemplatePackage Registry Writer Draft
+-> Explicit Registry Write Authorization Gate
 -> Phase 8 Roadmap / V1 Non-Goals
 -> Consumption Manifest
 -> Dataset Review
@@ -186,11 +187,15 @@ SourceImagePackage manifest
 112. `docs/product/controlled-user-app-template-package-registry-writer-validation.md`
 113. `docs/product/controlled-user-app-template-package-registry-writer-handoff.md`
 114. `docs/phases/phase-10K.md`
-115. `docs/phases/phase-7H.md`
-116. `project-state/project-state.snapshot.json`
-117. `project-state/provider-handoff.json`
-118. `project-state/latest-handoff.json`
-119. `project-state/active-task.json`
+115. `docs/product/explicit-registry-write-authorization-gate.md`
+116. `docs/product/explicit-registry-write-authorization-checklist.md`
+117. `docs/product/explicit-registry-write-authorization-handoff.md`
+118. `docs/phases/phase-10L.md`
+119. `docs/phases/phase-7H.md`
+120. `project-state/project-state.snapshot.json`
+121. `project-state/provider-handoff.json`
+122. `project-state/latest-handoff.json`
+123. `project-state/active-task.json`
 
 ## What The System Can Do Now
 
@@ -248,6 +253,9 @@ SourceImagePackage manifest
   validation, and handoff while still blocking actual registry writes,
   publication, production markers, and current User App Shell package
   replacement.
+- Run Phase 10L explicit registry write authorization gate checks, checklist,
+  and handoff over the Phase 10K writer validation while still staying dry-run
+  only and requiring separate future owner approval before any real write design.
 - Continue from Vision Analysis into mask editing, evidence capture, dataset review, materialized training datasets, and lightweight model artifact workflows.
 - Run real local MediaPipe FaceMesh after preparing ignored local assets with `npm run mediapipe:prepare`; see `docs/setup/local-mediapipe-assets.md`.
 
@@ -279,6 +287,9 @@ SourceImagePackage manifest
 - Do not treat Phase 10K controlled registry writer draft readiness as
   permission to execute a registry write, publish, create a production package,
   or replace the current User App Shell package.
+- Do not treat Phase 10L explicit authorization gate readiness as actual write
+  authorization, registry write execution, publication, production readiness, or
+  current User App Shell package replacement.
 - Do not treat Phase 8B PWA metadata, mobile shell polish, PWA readiness, or MVP polish readiness as production PWA release approval.
 - Do not treat Phase 8C trial pack, feedback preview, or trial readiness as production release, backend form, analytics, App Store/TestFlight, or real user data collection approval.
 - Do not treat Phase 8D content QA, trial template selection, or trial content readiness as production release, App Store/TestFlight, backend, AI generation, camera, AR, analytics, or training approval.

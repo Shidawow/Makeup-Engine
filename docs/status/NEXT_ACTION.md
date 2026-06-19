@@ -2,27 +2,27 @@
 
 ## What To Do Next
 
-Proceed to Phase 10L: Explicit Registry Write Authorization Gate.
+Proceed to Phase 10M: Controlled Registry Write Execution Design.
 
 ## Why
 
-Phase 10K adds a local controlled registry writer draft over the Phase 10J
-registry write gate result while preserving dry-run-only, no actual registry
-write, no publication, no production package, and no User App Shell package
-replacement boundaries. The next safe step is an explicit authorization gate
-that can review the dry-run writer plan without silently writing, publishing, or
-replacing anything.
+Phase 10L adds a local explicit registry write authorization gate over the Phase
+10K writer validation result while preserving dry-run-only, no actual registry
+write, no publication, no production package, future owner authorization, and no
+User App Shell package replacement boundaries. The next safe step is a
+controlled write execution design that can describe a future execution path
+without silently writing, publishing, or replacing anything.
 
-## Recommended 10L Scope
+## Recommended 10M Scope
 
-- Review Phase 10K writer draft validation and handoff through an explicit
-  authorization gate.
-- Keep authorization local, deterministic, reviewable, and explicitly blocked
-  from automatic publication, production replacement, or uncontrolled registry
-  mutation unless a future phase separately implements execution.
+- Design a future controlled registry write execution flow from the Phase 10L
+  authorization gate result without executing it.
+- Keep execution design local, deterministic, reviewable, explicitly owner-gated,
+  and blocked from automatic publication, production replacement, or
+  uncontrolled registry mutation.
 - Preserve QA trace, human review trace, privacy trace, candidate trace,
   contract trace, preview trace, official draft trace, publish gate trace, and
-  registry preparation / write gate / writer draft trace.
+  registry preparation / write gate / writer draft / authorization gate trace.
 - Continue to avoid automatic publication, backend work, online release,
   production readiness, or current User App Shell package replacement.
 
@@ -43,6 +43,9 @@ replacing anything.
 - Do not treat 10K controlled registry writer draft readiness as registry write
   authorization, User App Shell package replacement, production readiness, or
   publication.
+- Do not treat 10L explicit authorization gate readiness as actual registry
+  write authorization, User App Shell package replacement, production readiness,
+  or publication.
 - Do not execute a user app package registry write unless a later phase
   explicitly implements a controlled writer after separate authorization.
 - Do not add backend, database, account system, cloud sync, analytics, camera
@@ -82,17 +85,21 @@ Read these files first:
 22. `docs/product/controlled-user-app-template-package-registry-writer-draft.md`
 23. `docs/product/controlled-user-app-template-package-registry-writer-validation.md`
 24. `docs/product/controlled-user-app-template-package-registry-writer-handoff.md`
-25. `docs/phases/phase-10F.md`
-26. `docs/phases/phase-10G.md`
-27. `docs/phases/phase-10H.md`
-28. `docs/phases/phase-10I.md`
-29. `docs/phases/phase-10J.md`
-30. `docs/phases/phase-10K.md`
-31. `project-state/project-state.snapshot.json`
-32. `project-state/latest-handoff.json`
-33. `project-state/provider-handoff.json`
-34. `project-state/active-task.json`
-35. `project-state/guardrails.json`
+25. `docs/product/explicit-registry-write-authorization-gate.md`
+26. `docs/product/explicit-registry-write-authorization-checklist.md`
+27. `docs/product/explicit-registry-write-authorization-handoff.md`
+28. `docs/phases/phase-10F.md`
+29. `docs/phases/phase-10G.md`
+30. `docs/phases/phase-10H.md`
+31. `docs/phases/phase-10I.md`
+32. `docs/phases/phase-10J.md`
+33. `docs/phases/phase-10K.md`
+34. `docs/phases/phase-10L.md`
+35. `project-state/project-state.snapshot.json`
+36. `project-state/latest-handoff.json`
+37. `project-state/provider-handoff.json`
+38. `project-state/active-task.json`
+39. `project-state/guardrails.json`
 
 Then run:
 

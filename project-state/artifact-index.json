@@ -84,7 +84,8 @@
     "Phase 10H UserAppTemplatePackageDraftPublishGateResult and UserAppTemplatePackageDraftPublishGateHandoff are local admin gate metadata, not publication, not user app package registry writes, not current User App Shell package replacement, not backend records, and not training input.",
     "Phase 10I UserAppTemplatePackageRegistryPreparation, UserAppTemplatePackageRegistryPreparationValidationResult, and UserAppTemplatePackageRegistryPreparationHandoff are local admin preparation metadata, not actual user app package registry writes, not publication, not current User App Shell package replacement, not backend records, and not training input.",
     "Phase 10J UserAppTemplatePackageRegistryWriteGateResult and UserAppTemplatePackageRegistryWriteGateHandoff are local admin gate metadata, not actual user app package registry writes, not publication, not current User App Shell package replacement, not backend records, and not training input.",
-    "Phase 10K ControlledRegistryWriterDraft, ControlledRegistryWriterValidationResult, and ControlledRegistryWriterHandoff are local admin dry-run writer metadata, not actual user app package registry writes, not publication, not current User App Shell package replacement, not backend records, and not training input."
+    "Phase 10K ControlledRegistryWriterDraft, ControlledRegistryWriterValidationResult, and ControlledRegistryWriterHandoff are local admin dry-run writer metadata, not actual user app package registry writes, not publication, not current User App Shell package replacement, not backend records, and not training input.",
+    "Phase 10L ExplicitRegistryWriteAuthorizationGateResult, ExplicitRegistryWriteAuthorizationChecklist, and ExplicitRegistryWriteAuthorizationHandoff are local admin gate metadata, not actual user app package registry writes, not publication, not current User App Shell package replacement, not backend records, and not training input."
   ],
   "materializedDatasetOutputs": [
     "tmp/datasets/realistic-synthetic-png-image-v0/package.json",
@@ -168,7 +169,11 @@
     "docs/product/controlled-user-app-template-package-registry-writer-draft.md",
     "docs/product/controlled-user-app-template-package-registry-writer-validation.md",
     "docs/product/controlled-user-app-template-package-registry-writer-handoff.md",
-    "docs/phases/phase-10K.md"
+    "docs/phases/phase-10K.md",
+    "docs/product/explicit-registry-write-authorization-gate.md",
+    "docs/product/explicit-registry-write-authorization-checklist.md",
+    "docs/product/explicit-registry-write-authorization-handoff.md",
+    "docs/phases/phase-10L.md"
   ],
   "userAppConsumptionOutputs": [
     "UserAppTemplatePackage JSON",

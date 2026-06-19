@@ -25,7 +25,7 @@ describe('TemplateLibraryCandidatePackagingPanel', () => {
     expect(html).toContain('Candidate Package');
     expect(html).toContain('Candidate Validation');
     expect(html).toContain('Candidate Handoff');
-    expect(html).toContain('不是已发布模板');
+    expect(html).toContain('仍为候选模板');
     expect(html).toContain('不会自动生成 UserAppTemplatePackage');
     expect(html).toContain('ready_for_candidate_library_review');
     expect(html).not.toContain('发布成功');
