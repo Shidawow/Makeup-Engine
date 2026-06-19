@@ -1,5 +1,5 @@
 {
-  "phase": "10G",
+  "phase": "10H",
   "guardrails": [
     {
       "id": "source-image-not-training-data",
@@ -620,6 +620,26 @@
     {
       "id": "phase_10g_no_shell_package_replacement",
       "rule": "Do not replace current User App Shell package in Phase 10G."
+    },
+    {
+      "id": "phase_10h_gate_only",
+      "rule": "UserAppTemplatePackage draft publish gate ready means future registry preparation eligibility only."
+    },
+    {
+      "id": "phase_10h_no_registry_write",
+      "rule": "Do not write a user app package registry in Phase 10H."
+    },
+    {
+      "id": "phase_10h_no_publish",
+      "rule": "Do not publish official drafts in Phase 10H."
+    },
+    {
+      "id": "phase_10h_no_shell_package_replacement",
+      "rule": "Do not replace current User App Shell package in Phase 10H."
+    },
+    {
+      "id": "phase_10h_no_production_readiness",
+      "rule": "Do not mark draft publish gate output as production-ready in Phase 10H."
     }
   ],
   "legacyFrozenModules": [

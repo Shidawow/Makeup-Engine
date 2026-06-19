@@ -9,6 +9,8 @@ import {
   createOfficialUserAppPackageDraftGateHandoff,
   createUserAppPackageDraftPreview,
   createUserAppPackageDraftPreviewHandoff,
+  createUserAppTemplatePackageDraftPublishGate,
+  createUserAppTemplatePackageDraftPublishGateHandoff,
   createTemplateLibraryCandidateHandoff,
   createTemplateLibraryCandidatePackage,
   createTemplateDraftReviewWorkflow,
@@ -34,6 +36,7 @@ import { CandidateToAppPackageContractPanel } from './CandidateToAppPackageContr
 import { UserAppPackageDraftPreviewPanel } from './UserAppPackageDraftPreviewPanel';
 import { OfficialUserAppPackageDraftGatePanel } from './OfficialUserAppPackageDraftGatePanel';
 import { OfficialUserAppTemplatePackageDraftBuilderPanel } from './OfficialUserAppTemplatePackageDraftBuilderPanel';
+import { UserAppTemplatePackageDraftPublishGatePanel } from './UserAppTemplatePackageDraftPublishGatePanel';
 
 export interface FaceMeshMakeupIntelligencePanelProps {
   regionQa: FaceMeshRegionQaReport | null;
@@ -189,6 +192,26 @@ export function FaceMeshMakeupIntelligencePanel({
             </p>
           </div>
         </div>
+        <div className="mt-3 grid gap-2 rounded-md border border-fuchsia-200 bg-fuchsia-50 p-3 text-sm text-fuchsia-900 md:grid-cols-3">
+          <div>
+            <p className="font-semibold">用户 App 模板包草稿发布闸门</p>
+            <p className="mt-1 text-xs leading-5">
+              Publish Gate blocked：缺少 10G official draft validation ready。
+            </p>
+          </div>
+          <div>
+            <p className="font-semibold">Gate Checks</p>
+            <p className="mt-1 text-xs leading-5">
+              只判断是否可进入未来 registry 准备，不是发布。
+            </p>
+          </div>
+          <div>
+            <p className="font-semibold">Gate Handoff</p>
+            <p className="mt-1 text-xs leading-5">
+              不会写入 registry，也不会替换当前用户 App 包。
+            </p>
+          </div>
+        </div>
       </section>
     );
   }
@@ -277,6 +300,15 @@ export function FaceMeshMakeupIntelligencePanel({
     createOfficialUserAppTemplatePackageDraftHandoff({
       draft: officialUserAppTemplatePackageDraftBuilder.draft,
       validation: officialUserAppTemplatePackageDraftValidation,
+    });
+  const userAppTemplatePackageDraftPublishGate =
+    createUserAppTemplatePackageDraftPublishGate({
+      draft: officialUserAppTemplatePackageDraftBuilder.draft,
+      validation: officialUserAppTemplatePackageDraftValidation,
+    });
+  const userAppTemplatePackageDraftPublishGateHandoff =
+    createUserAppTemplatePackageDraftPublishGateHandoff({
+      gate: userAppTemplatePackageDraftPublishGate,
     });
 
   return (
@@ -403,6 +435,10 @@ export function FaceMeshMakeupIntelligencePanel({
         builderResult={officialUserAppTemplatePackageDraftBuilder}
         handoff={officialUserAppTemplatePackageDraftHandoff}
         validation={officialUserAppTemplatePackageDraftValidation}
+      />
+      <UserAppTemplatePackageDraftPublishGatePanel
+        gate={userAppTemplatePackageDraftPublishGate}
+        handoff={userAppTemplatePackageDraftPublishGateHandoff}
       />
     </section>
   );

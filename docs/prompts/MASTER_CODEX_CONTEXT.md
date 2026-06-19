@@ -12,10 +12,10 @@ It produces templates, template evidence, correction records, review state, loca
 
 ## Current Phase
 
-- Current business phase: `Phase 10G completed`
-- Last completed phase: `Phase 10G`
-- Last completed phase name: `Phase 10G - Official UserAppTemplatePackage Draft Builder`
-- Next recommended phase: `Phase 10H - UserAppTemplatePackage Draft Publish Gate`
+- Current business phase: `Phase 10H completed`
+- Last completed phase: `Phase 10H`
+- Last completed phase name: `Phase 10H - UserAppTemplatePackage Draft Publish Gate`
+- Next recommended phase: `Phase 10I - UserAppTemplatePackage Registry Preparation`
 
 Historical recovery marker retained for Phase 9C tests: `Phase 9C completed`.
 Historical recovery marker retained for Phase 9E tests: `Phase 9E completed`.
@@ -82,6 +82,7 @@ Real Photo
 -> User App Package Draft Preview
 -> Official User App Package Draft Gate
 -> Official UserAppTemplatePackage Draft Builder
+-> UserAppTemplatePackage Draft Publish Gate
 -> Phase 8 Roadmap / V1 Non-Goals
 -> User App Consumption Manifest
 -> Dataset Review
@@ -122,6 +123,18 @@ Important boundary: `SourceImagePackage` can enter Vision Analysis through opera
   local official draft gate and handoff logic. They decide future builder
   eligibility only and do not write registries, publish, or generate formal app
   packages.
+- `src/template-engine/officialUserAppTemplatePackageDraft.ts`,
+  `src/template-engine/officialUserAppTemplatePackageDraftBuilder.ts`,
+  `src/template-engine/officialUserAppTemplatePackageDraftValidation.ts`, and
+  `src/template-engine/officialUserAppTemplatePackageDraftHandoff.ts`: Phase
+  10G local official draft builder, validation, and handoff logic. They build
+  draft-only objects and do not publish, write registries, replace the current
+  User App Shell package, or mark production readiness.
+- `src/template-engine/userAppTemplatePackageDraftPublishGate.ts` and
+  `src/template-engine/userAppTemplatePackageDraftPublishGateHandoff.ts`: Phase
+  10H local draft publish gate and handoff logic. They decide future registry
+  preparation eligibility only and do not publish, write registries, replace the
+  current User App Shell package, or mark production readiness.
 - `src/templates`: schemas, storage, review, corrections, evidence, dataset materialization, source image binding, production batch storage/export, template library storage, and publish package export.
 - `src/template-engine/production`: production queue, state machine, QA rules, rebinding recovery, analysis handoff, review lifecycle, smoke checklist.
 - `src/template-engine/library`: production task to library entry conversion, template versioning, and local library lifecycle.

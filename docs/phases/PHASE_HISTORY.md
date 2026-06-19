@@ -1028,3 +1028,38 @@ Why Phase 10H follows:
 The official draft builder can now create a local draft-only package object.
 Phase 10H should evaluate that draft through a UserAppTemplatePackage Draft
 Publish Gate without automatically publishing or writing registry entries.
+
+## Phase 10H - UserAppTemplatePackage Draft Publish Gate
+
+Added local UserAppTemplatePackage Draft Publish Gate after Phase 10G official
+draft validation.
+
+What changed:
+
+- Added draft publish gate result model for source official draft validation,
+  draft-only flags, publish-blocked flags, user-facing copy, step sequence,
+  region guidance, tools, privacy notice, trace preservation, raw image
+  boundaries, personal data boundaries, medical/product/final claims, registry
+  write, automatic publish, User App Shell package replacement, production
+  package markers, contract boundary safety, and JSON round-trip stability.
+- Added publish gate handoff next actions for future registry preparation, copy
+  revision, step revision, region revision, privacy revision, draft-only
+  retention, and blocked registry preparation.
+- Added Template Workbench panel for 用户 App 模板包草稿发布闸门 / Publish Gate /
+  Gate Checks / Gate Handoff.
+- Kept Vision Analysis free of publish gate UI and kept ordinary User App Shell
+  paths free of administrator publish gate terminology.
+
+What still cannot happen:
+
+- Phase 10H gate ready is not publication, not a registry write, not production
+  readiness, not backend work, not camera/AR scope, not OpenAI/external API
+  scope, not training input, and not a replacement for the current User App
+  Shell package.
+
+Why Phase 10I follows:
+
+The draft publish gate can now decide whether a draft is eligible for future
+registry preparation. Phase 10I should prepare UserAppTemplatePackage registry
+preparation without crossing into publication, backend, or production app
+scope.

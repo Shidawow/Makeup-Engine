@@ -1,7 +1,7 @@
 {
-  "fromPhase": "10G",
-  "toPhase": "10H",
-  "summary": "Phase 10G validation completed for official UserAppTemplatePackage draft builder scope.",
+  "fromPhase": "10H",
+  "toPhase": "10I",
+  "summary": "Phase 10H validation passed: mediapipe:check, draft publish gate scoped tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
   "routeDecision": {
     "selectedRoute": "React Web / PWA MVP first",
     "futureAppOwnership": "separate user-facing app surface/repository after a future explicit phase gate",
@@ -151,9 +151,16 @@
     "docs/product/official-user-app-package-draft-gate.md",
     "docs/product/official-user-app-package-draft-gate-handoff.md",
     "docs/phases/phase-10F.md",
+    "docs/product/official-user-app-template-package-draft-builder.md",
+    "docs/product/official-user-app-template-package-draft-validation.md",
+    "docs/product/official-user-app-template-package-draft-handoff.md",
+    "docs/phases/phase-10G.md",
+    "docs/product/user-app-template-package-draft-publish-gate.md",
+    "docs/product/user-app-template-package-draft-publish-gate-handoff.md",
+    "docs/phases/phase-10H.md",
     "project-state/guardrails.json"
   ],
-  "nextAction": "Proceed to Phase 10H: UserAppTemplatePackage Draft Publish Gate.",
+  "nextAction": "Proceed to Phase 10I: UserAppTemplatePackage Registry Preparation.",
   "risks": [
     "Letting Phase 9F become real data collection instead of local anonymous preparation",
     "Collecting real names, contact information, photos, health data, sensitive identity data, analytics records, backend records, AI analysis records, upload data, or training data before a future explicit approval gate",
@@ -168,7 +175,8 @@
     "Letting Phase 10E draft preview become formal UserAppTemplatePackage generation or a registry write.",
     "Treating draft preview readiness as production app package readiness.",
     "Letting Phase 10F official draft gate become formal UserAppTemplatePackage generation or a registry write.",
-    "Treating gate readiness as production app package readiness or publication approval."
+    "Treating gate readiness as production app package readiness or publication approval.",
+    "Letting Phase 10H draft publish gate become publication, a registry write, production readiness, or User App Shell package replacement."
   ],
   "forbiddenActions": [
     "Do not treat Phase 9C internal trial iteration plan, backlog, or priority framework as production roadmap approval, public recruitment, production release, App Store/TestFlight, backend forms, analytics, camera readiness, AR readiness, AI analysis approval, OpenAI/external API approval, training readiness, online publication, or real user data collection approval.",
@@ -268,16 +276,13 @@
     "projectContext": "passed",
     "contextPackJson": "passed",
     "browserVerification": "passed",
-    "phase10EScopedTests": "passed",
+    "phase10HScopedTests": "passed",
     "testFiles": 9,
-    "tests": 28,
-    "phase10EScopedTestFiles": 10,
-    "phase10EScopedTestsCount": 38,
-    "summary": "Phase 10F validation passed: mediapipe:check, scoped Phase 10F tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
-    "updatedAt": "2026-06-18T00:00:00.000+08:00",
-    "phase10FScopedTests": "passed",
-    "phase10FScopedTestFiles": 9,
-    "phase10FScopedTestsCount": 28
+    "tests": 27,
+    "phase10HScopedTestFiles": 9,
+    "phase10HScopedTestsCount": 27,
+    "summary": "Phase 10H validation passed: mediapipe:check, draft publish gate scoped tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
+    "updatedAt": "2026-06-19"
   },
   "internalTrialLearningDecision": {
     "phase9DResult": [
@@ -288,10 +293,10 @@
     "learningBoundary": "anonymous/mock/example summaries only; no real personal data, backend records, AI analysis records, training data, or project-state user records",
     "nextPhase": "Phase 9E - Internal Trial Evidence Pack"
   },
-  "lastCompletedPhase": "9J",
-  "nextRecommendedPhase": "9K",
-  "nextRecommendedPhaseName": "Anonymous Internal Trial Evidence Round 2 Pack",
-  "updatedAt": "2026-06-16T00:00:00.000+08:00",
+  "lastCompletedPhase": "10H",
+  "nextRecommendedPhase": "10I",
+  "nextRecommendedPhaseName": "UserAppTemplatePackage Registry Preparation",
+  "updatedAt": "2026-06-19",
   "validation": {
     "mediapipeCheck": "passed",
     "typecheck": "passed",
@@ -302,16 +307,13 @@
     "projectContext": "passed",
     "contextPackJson": "passed",
     "browserVerification": "passed",
-    "phase10EScopedTests": "passed",
+    "phase10HScopedTests": "passed",
     "testFiles": 9,
-    "tests": 28,
-    "phase10EScopedTestFiles": 10,
-    "phase10EScopedTestsCount": 38,
-    "summary": "Phase 10F validation passed: mediapipe:check, scoped Phase 10F tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
-    "updatedAt": "2026-06-18T00:00:00.000+08:00",
-    "phase10FScopedTests": "passed",
-    "phase10FScopedTestFiles": 9,
-    "phase10FScopedTestsCount": 28
+    "tests": 27,
+    "phase10HScopedTestFiles": 9,
+    "phase10HScopedTestsCount": 27,
+    "summary": "Phase 10H validation passed: mediapipe:check, draft publish gate scoped tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
+    "updatedAt": "2026-06-19"
   },
   "internalTrialEvidenceDecision": {
     "phase9EResult": [
@@ -421,5 +423,11 @@
   "officialUserAppTemplatePackageDraftBuilderDecision": {
     "nextPhase": "Phase 10H - UserAppTemplatePackage Draft Publish Gate",
     "boundary": "Draft-only output; no publish, no registry write, no User App Shell package replacement."
-  }
+  },
+  "userAppTemplatePackageDraftPublishGateDecision": {
+    "nextPhase": "Phase 10I - UserAppTemplatePackage Registry Preparation",
+    "boundary": "Gate-only output; no publish, no registry write execution, no production package, no User App Shell package replacement."
+  },
+  "currentPhase": "10H",
+  "currentPhaseId": "10H"
 }

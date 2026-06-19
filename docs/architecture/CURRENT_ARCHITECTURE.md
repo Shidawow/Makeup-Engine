@@ -552,3 +552,24 @@ renders the Template Workbench builder, validation, blocked reasons, and
 handoff summary. The builder does not appear in Vision Analysis and does not
 publish, write a user app package registry, replace the current User App Shell
 package, call backend/API services, use camera/AR, or train models.
+
+### UserAppTemplatePackage Draft Publish Gate
+
+Phase 10H adds a local draft publish gate after Phase 10G official draft
+validation. `src/template-engine/userAppTemplatePackageDraftPublishGate.ts`
+checks source draft validation readiness, `draftOnly`, `publishBlocked`,
+user-facing copy, step sequence, region guidance, tools, privacy notice, trace
+preservation, raw image boundaries, personal data boundaries, medical/product
+claim boundaries, unsupported final claims, no registry write, no automatic
+publish, no User App Shell package replacement, no production package markers,
+contract boundary safety, and JSON round-trip stability.
+`userAppTemplatePackageDraftPublishGateHandoff.ts` creates local next actions
+for future registry preparation, focused revisions, draft-only retention, or
+blocking.
+
+`src/components/template-studio/UserAppTemplatePackageDraftPublishGatePanel.tsx`
+renders the Template Workbench publish gate, blocked reasons, trace, and
+handoff summary. The gate does not appear in Vision Analysis and does not
+publish, write a user app package registry, replace the current User App Shell
+package, call backend/API services, use camera/AR, or train models. Gate ready
+means eligible for future registry preparation only.

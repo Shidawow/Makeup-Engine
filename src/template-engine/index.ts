@@ -31,6 +31,8 @@ export * from './officialUserAppTemplatePackageDraft';
 export * from './officialUserAppTemplatePackageDraftBuilder';
 export * from './officialUserAppTemplatePackageDraftValidation';
 export * from './officialUserAppTemplatePackageDraftHandoff';
+export * from './userAppTemplatePackageDraftPublishGate';
+export * from './userAppTemplatePackageDraftPublishGateHandoff';
 export * from './template-builder';
 export * from './template-builder/template-builder';
 export * from './convergence';

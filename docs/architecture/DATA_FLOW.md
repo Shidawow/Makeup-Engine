@@ -20,6 +20,7 @@ Real Photo
 -> User App Package Draft Preview
 -> Official User App Package Draft Gate
 -> Official UserAppTemplatePackage Draft Builder
+-> UserAppTemplatePackage Draft Publish Gate
 -> Editable Masks
 -> Human Correction
 -> Template Evidence
@@ -86,6 +87,7 @@ Real Photo
 - `User App Package Draft Preview`: Phase 10E local preview, validation, and handoff branch. It renders future user-facing title, summary, difficulty, time, scenarios, tools, product placeholders, step guidance, region guidance, privacy notice, and trace from 10D contract preparation. It does not generate formal `UserAppTemplatePackage`, publish to the user app, or write a user app package registry.
 - `Official User App Package Draft Gate`: Phase 10F local gate and handoff branch. It checks whether a 10E draft preview is eligible for a future official draft builder while preserving QA, human review, candidate, contract, preview validation, privacy, no-publish, no-registry-write, and no-formal-package boundaries.
 - `Official UserAppTemplatePackage Draft Builder`: Phase 10G local draft builder, validation, and handoff branch. It builds a draft-only official package object from 10F-gated inputs while preserving QA, human review, candidate, contract, preview, and gate trace. It does not publish, write registry, replace the current User App Shell package, or mark the draft as production ready.
+- `UserAppTemplatePackage Draft Publish Gate`: Phase 10H local gate and handoff branch. It checks whether a 10G official draft is eligible for future registry preparation while preserving draft-only, publish-blocked, no-registry-write, no-shell-package-replacement, no-production-package, and trace boundaries. It does not publish, write registry, replace the current User App Shell package, or mark the draft as production ready.
 - `Editable Masks`: generated and human-editable mask artifacts.
 - `Human Correction`: correction records produced by human review and mask editing.
 - `Template Evidence`: structured evidence supporting extracted template decisions.

@@ -299,13 +299,67 @@
       "status": "passed",
       "phase": "10E",
       "notes": "Phase 10E JSON context pack command passed."
+    },
+    {
+      "command": "npm run mediapipe:check",
+      "status": "passed",
+      "phase": "10H",
+      "notes": "Phase 10H MediaPipe local asset check passed; public/mediapipe remains ignored and is not staged."
+    },
+    {
+      "command": "npm run test -- tests/user-app-template-package-draft-publish-gate.test.ts tests/user-app-template-package-draft-publish-gate-handoff.test.ts tests/user-app-template-package-draft-publish-gate-panel.test.tsx tests/phase-10H-documentation-recovery.test.ts tests/official-user-app-template-package-draft.test.ts tests/official-user-app-template-package-draft-builder-panel.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
+      "status": "passed",
+      "phase": "10H",
+      "notes": "Phase 10H scoped tests passed: 9 files / 27 tests."
+    },
+    {
+      "command": "npm run typecheck",
+      "status": "passed",
+      "phase": "10H",
+      "notes": "Phase 10H typecheck passed."
+    },
+    {
+      "command": "npm run build",
+      "status": "passed",
+      "phase": "10H",
+      "notes": "Phase 10H build passed with existing Vite chunk-size warning."
+    },
+    {
+      "command": "Browser verification for Phase 10H Template Studio tabs",
+      "status": "passed",
+      "phase": "10H",
+      "notes": "Vision Analysis did not show the draft publish gate; Template Workbench showed 10H gate, blocked state, future registry-preparation copy, handoff, and no forbidden publish/registry/shell replacement wording; MediaPipe ready showed no mock fallback."
+    },
+    {
+      "command": "npm run project:status",
+      "status": "passed",
+      "phase": "10H",
+      "notes": "Phase 10H project status command passed."
+    },
+    {
+      "command": "npm run project:context",
+      "status": "passed",
+      "phase": "10H",
+      "notes": "Phase 10H project context command passed."
+    },
+    {
+      "command": "node scripts/project-status.mjs --json",
+      "status": "passed",
+      "phase": "10H",
+      "notes": "Phase 10H JSON project status command passed."
+    },
+    {
+      "command": "node scripts/context-pack.mjs --json",
+      "status": "passed",
+      "phase": "10H",
+      "notes": "Phase 10H JSON context pack command passed."
     }
   ],
-  "lastUpdatedPhase": "10G",
-  "phase": "10G",
-  "lastCompletedPhase": "10G",
-  "currentPhase": "10G",
-  "nextRecommendedPhase": "10H",
+  "lastUpdatedPhase": "10H",
+  "phase": "10H",
+  "lastCompletedPhase": "10H",
+  "currentPhase": "10H",
+  "nextRecommendedPhase": "10I",
   "updatedAt": "2026-06-19",
   "lastValidation": {
     "mediapipeCheck": "passed",
@@ -317,12 +371,12 @@
     "projectContext": "passed",
     "contextPackJson": "passed",
     "browserVerification": "passed",
-    "phase10GScopedTests": "passed",
-    "testFiles": 11,
-    "tests": 35,
-    "phase10GScopedTestFiles": 11,
-    "phase10GScopedTestsCount": 35,
-    "summary": "Phase 10G validation passed: mediapipe:check, official draft builder scoped tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
+    "phase10HScopedTests": "passed",
+    "testFiles": 9,
+    "tests": 27,
+    "phase10HScopedTestFiles": 9,
+    "phase10HScopedTestsCount": 27,
+    "summary": "Phase 10H validation passed: mediapipe:check, draft publish gate scoped tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
     "updatedAt": "2026-06-19"
   },
   "validation": {
@@ -335,82 +389,70 @@
     "projectContext": "passed",
     "contextPackJson": "passed",
     "browserVerification": "passed",
-    "phase10GScopedTests": "passed",
-    "testFiles": 11,
-    "tests": 35,
-    "phase10GScopedTestFiles": 11,
-    "phase10GScopedTestsCount": 35,
-    "summary": "Phase 10G validation passed: mediapipe:check, official draft builder scoped tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
+    "phase10HScopedTests": "passed",
+    "testFiles": 9,
+    "tests": 27,
+    "phase10HScopedTestFiles": 9,
+    "phase10HScopedTestsCount": 27,
+    "summary": "Phase 10H validation passed: mediapipe:check, draft publish gate scoped tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
     "updatedAt": "2026-06-19"
   },
   "status": "passed",
-  "summary": "Phase 10G validation passed: mediapipe:check, official draft builder scoped tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
+  "summary": "Phase 10H validation passed: mediapipe:check, draft publish gate scoped tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
   "entries": [
     {
-      "command": "npm run test -- tests/official-user-app-package-draft-gate.test.ts tests/official-user-app-package-draft-gate-handoff.test.ts tests/official-user-app-package-draft-gate-panel.test.tsx tests/template-studio-tab-boundary.test.tsx",
-      "phase": "10F",
-      "status": "passed",
-      "notes": "Initial Phase 10F model, handoff, panel, and tab boundary tests passed."
-    },
-    {
-      "command": "npm run typecheck",
-      "phase": "10F",
-      "status": "passed",
-      "notes": "Initial Phase 10F typecheck passed."
-    },
-    {
       "command": "npm run mediapipe:check",
-      "phase": "10F",
+      "phase": "10H",
       "status": "passed",
-      "notes": "Phase 10F MediaPipe local asset check passed."
+      "notes": "Phase 10H MediaPipe local asset check passed; public/mediapipe remains ignored and is not staged."
     },
     {
-      "command": "npm run test -- tests/official-user-app-package-draft-gate.test.ts tests/official-user-app-package-draft-gate-handoff.test.ts tests/official-user-app-package-draft-gate-panel.test.tsx tests/phase-10F-documentation-recovery.test.ts tests/user-app-package-draft-preview.test.ts tests/user-app-package-draft-preview-panels.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
-      "phase": "10F",
+      "command": "npm run test -- tests/user-app-template-package-draft-publish-gate.test.ts tests/user-app-template-package-draft-publish-gate-handoff.test.ts tests/user-app-template-package-draft-publish-gate-panel.test.tsx tests/phase-10H-documentation-recovery.test.ts tests/official-user-app-template-package-draft.test.ts tests/official-user-app-template-package-draft-builder-panel.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
+      "phase": "10H",
       "status": "passed",
-      "notes": "Phase 10F scoped tests passed: 9 files / 28 tests."
+      "notes": "Phase 10H scoped tests passed: 9 files / 27 tests."
     },
     {
       "command": "npm run typecheck",
-      "phase": "10F",
+      "phase": "10H",
       "status": "passed",
-      "notes": "Phase 10F typecheck passed."
+      "notes": "Phase 10H typecheck passed."
     },
     {
       "command": "npm run build",
-      "phase": "10F",
+      "phase": "10H",
       "status": "passed",
-      "notes": "Phase 10F build passed with existing chunk-size warning."
+      "notes": "Phase 10H build passed with existing Vite chunk-size warning."
     },
     {
-      "command": "Browser verification for Phase 10F Template Studio tabs",
-      "phase": "10F",
+      "command": "Browser verification for Phase 10H Template Studio tabs",
+      "phase": "10H",
       "status": "passed",
-      "notes": "Vision Analysis did not show the official draft gate; Template Workbench empty state showed gate blocked for missing source preview validation; forbidden publish/registry/formal package text did not appear; MediaPipe ready showed no mock fallback."
+      "notes": "Vision Analysis did not show the draft publish gate; Template Workbench showed 10H gate, blocked state, future registry-preparation copy, handoff, and no forbidden publish/registry/shell replacement wording; MediaPipe ready showed no mock fallback."
     },
     {
       "command": "npm run project:status",
-      "phase": "10F",
+      "phase": "10H",
       "status": "passed",
-      "notes": "Phase 10F project status command passed."
+      "notes": "Phase 10H project status command passed."
     },
     {
       "command": "npm run project:context",
-      "phase": "10F",
+      "phase": "10H",
       "status": "passed",
-      "notes": "Phase 10F project context command passed."
+      "notes": "Phase 10H project context command passed."
     },
     {
       "command": "node scripts/project-status.mjs --json",
-      "phase": "10F",
+      "phase": "10H",
       "status": "passed",
-      "notes": "Phase 10F JSON project status command passed."
+      "notes": "Phase 10H JSON project status command passed."
     },
     {
       "command": "node scripts/context-pack.mjs --json",
-      "phase": "10F",
+      "phase": "10H",
       "status": "passed",
-      "notes": "Phase 10F JSON context pack command passed."
+      "notes": "Phase 10H JSON context pack command passed."
     }
   ]
 }

@@ -1,11 +1,11 @@
 {
   "schemaVersion": "active-task.v1",
-  "taskId": "phase-10g-official-user-app-template-package-draft-builder",
-  "title": "Phase 10G - Official UserAppTemplatePackage Draft Builder",
+  "taskId": "phase-10h-user-app-template-package-draft-publish-gate",
+  "title": "Phase 10H - UserAppTemplatePackage Draft Publish Gate",
   "status": "completed",
   "ownerRole": "Codex",
   "createdBy": "Codex",
-  "phase": "10G",
+  "phase": "10H",
   "recommendedProfile": "native-gpt-codex-high-reasoning",
   "allowedDirectories": [
     "src/vision",
@@ -30,17 +30,17 @@
     "npm run project:context",
     "node scripts/project-status.mjs --json",
     "node scripts/context-pack.mjs --json",
-    "npm run test -- tests/official-user-app-template-package-draft.test.ts tests/official-user-app-template-package-draft-builder.test.ts tests/official-user-app-template-package-draft-validation.test.ts tests/official-user-app-template-package-draft-handoff.test.ts tests/official-user-app-template-package-draft-builder-panel.test.tsx tests/phase-10G-documentation-recovery.test.ts tests/official-user-app-package-draft-gate.test.ts tests/official-user-app-package-draft-gate-panel.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
+    "npm run test -- tests/user-app-template-package-draft-publish-gate.test.ts tests/user-app-template-package-draft-publish-gate-handoff.test.ts tests/user-app-template-package-draft-publish-gate-panel.test.tsx tests/phase-10H-documentation-recovery.test.ts tests/official-user-app-template-package-draft.test.ts tests/official-user-app-template-package-draft-builder-panel.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
   ],
   "completionDefinition": [
-    "Phase 10G added Official UserAppTemplatePackage draft builder, validation, handoff, fixtures, UI, docs, and project-state updates.",
-    "Draft ready only means eligible for a future UserAppTemplatePackage Draft Publish Gate.",
-    "10G did not publish, write a user app package registry, replace the current User App Shell package, add backend, camera, AR, OpenAI/external APIs, training, runtime dependencies, or committed MediaPipe binaries."
+    "Phase 10H added UserAppTemplatePackage draft publish gate, handoff, fixtures, UI, docs, and project-state updates.",
+    "Gate ready only means eligible for future UserAppTemplatePackage registry preparation.",
+    "10H did not publish, write a user app package registry, replace the current User App Shell package, add backend, camera, AR, OpenAI/external APIs, training, runtime dependencies, or committed MediaPipe binaries."
   ],
   "dependsOn": [
-    "10F Official User App Package Draft Gate"
+    "10G Official UserAppTemplatePackage Draft Builder"
   ],
-  "nextRecommendedTask": "Phase 10H - UserAppTemplatePackage Draft Publish Gate",
+  "nextRecommendedTask": "Phase 10I - UserAppTemplatePackage Registry Preparation",
   "updatedAt": "2026-06-19",
   "validationStatus": "passed",
   "lastValidation": {
@@ -53,12 +53,12 @@
     "projectContext": "passed",
     "contextPackJson": "passed",
     "browserVerification": "passed",
-    "phase10GScopedTests": "passed",
-    "testFiles": 11,
-    "tests": 35,
-    "phase10GScopedTestFiles": 11,
-    "phase10GScopedTestsCount": 35,
-    "summary": "Phase 10G validation passed: mediapipe:check, official draft builder scoped tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
+    "phase10HScopedTests": "passed",
+    "testFiles": 9,
+    "tests": 27,
+    "phase10HScopedTestFiles": 9,
+    "phase10HScopedTestsCount": 27,
+    "summary": "Phase 10H validation passed: mediapipe:check, draft publish gate scoped tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
     "updatedAt": "2026-06-19"
   },
   "validation": {
@@ -71,15 +71,15 @@
     "projectContext": "passed",
     "contextPackJson": "passed",
     "browserVerification": "passed",
-    "phase10GScopedTests": "passed",
-    "testFiles": 11,
-    "tests": 35,
-    "phase10GScopedTestFiles": 11,
-    "phase10GScopedTestsCount": 35,
-    "summary": "Phase 10G validation passed: mediapipe:check, official draft builder scoped tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
+    "phase10HScopedTests": "passed",
+    "testFiles": 9,
+    "tests": 27,
+    "phase10HScopedTestFiles": 9,
+    "phase10HScopedTestsCount": 27,
+    "summary": "Phase 10H validation passed: mediapipe:check, draft publish gate scoped tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
     "updatedAt": "2026-06-19"
   },
-  "summary": "Added official UserAppTemplatePackage draft builder, validation, handoff, Template Workbench panel, examples, docs, and project-state updates while preserving no-publish/no-registry/no-shell-replacement boundaries.",
+  "summary": "Added UserAppTemplatePackage draft publish gate, handoff, Template Workbench panel, examples, docs, and project-state updates while preserving no-publish/no-registry/no-shell-replacement boundaries.",
   "completed": true,
-  "nextTask": "Phase 10H - UserAppTemplatePackage Draft Publish Gate"
+  "nextTask": "Phase 10I - UserAppTemplatePackage Registry Preparation"
 }

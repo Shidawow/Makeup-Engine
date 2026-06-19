@@ -1,5 +1,5 @@
 {
-  "phase": "10G",
+  "phase": "10H",
   "status": "passed",
   "lastValidation": {
     "mediapipeCheck": "passed",
@@ -11,12 +11,12 @@
     "projectContext": "passed",
     "contextPackJson": "passed",
     "browserVerification": "passed",
-    "phase10GScopedTests": "passed",
-    "testFiles": 11,
-    "tests": 35,
-    "phase10GScopedTestFiles": 11,
-    "phase10GScopedTestsCount": 35,
-    "summary": "Phase 10G validation passed: mediapipe:check, official draft builder scoped tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
+    "phase10HScopedTests": "passed",
+    "testFiles": 9,
+    "tests": 27,
+    "phase10HScopedTestFiles": 9,
+    "phase10HScopedTestsCount": 27,
+    "summary": "Phase 10H validation passed: mediapipe:check, draft publish gate scoped tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
     "updatedAt": "2026-06-19"
   },
   "lastKnownPreDoc0Validation": {
@@ -34,19 +34,18 @@
     "npm run project:context",
     "node scripts/project-status.mjs --json",
     "node scripts/context-pack.mjs --json",
-    "npm run test -- tests/user-app-package-draft-preview.test.ts tests/user-app-package-draft-preview-validation.test.ts tests/user-app-package-draft-preview-handoff.test.ts tests/user-app-package-draft-preview-panels.test.tsx tests/phase-10E-documentation-recovery.test.ts tests/candidate-to-app-package-contract.test.ts tests/candidate-to-app-package-panels.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
+    "npm run test -- tests/user-app-template-package-draft-publish-gate.test.ts tests/user-app-template-package-draft-publish-gate-handoff.test.ts tests/user-app-template-package-draft-publish-gate-panel.test.tsx tests/phase-10H-documentation-recovery.test.ts tests/official-user-app-template-package-draft.test.ts tests/official-user-app-template-package-draft-builder-panel.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
   ],
   "notes": [
-    "Phase 10A initial model/panel tests and typecheck passed before final validation.",
-    "Final validation must include mediapipe:check, scoped tests, typecheck, build, project status/context, and JSON commands.",
-    "Phase 10E initial model, panel, tab boundary tests, and typecheck passed before final validation.",
-    "Phase 10F initial model, panel, tab boundary tests, and typecheck passed before final validation."
+    "Phase 10H scoped model, handoff, panel, documentation, and project-state tests passed.",
+    "Browser verification passed: Vision Analysis excludes the draft publish gate; Template Workbench shows 10H gate/handoff, blocked state, and no publish/registry/shell replacement copy.",
+    "Final validation includes mediapipe:check, typecheck, build, project status/context, JSON status/context, and Phase 10H scoped tests."
   ],
-  "lastCompletedPhase": "10G",
-  "currentPhase": "10G",
-  "nextRecommendedPhase": "10H",
+  "lastCompletedPhase": "10H",
+  "currentPhase": "10H",
+  "nextRecommendedPhase": "10I",
   "updatedAt": "2026-06-19",
-  "summary": "Phase 10G validation passed: mediapipe:check, official draft builder scoped tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
+  "summary": "Phase 10H validation passed: mediapipe:check, draft publish gate scoped tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
   "validation": {
     "mediapipeCheck": "passed",
     "typecheck": "passed",
@@ -57,15 +56,15 @@
     "projectContext": "passed",
     "contextPackJson": "passed",
     "browserVerification": "passed",
-    "phase10GScopedTests": "passed",
-    "testFiles": 11,
-    "tests": 35,
-    "phase10GScopedTestFiles": 11,
-    "phase10GScopedTestsCount": 35,
-    "summary": "Phase 10G validation passed: mediapipe:check, official draft builder scoped tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
+    "phase10HScopedTests": "passed",
+    "testFiles": 9,
+    "tests": 27,
+    "phase10HScopedTestFiles": 9,
+    "phase10HScopedTestsCount": 27,
+    "summary": "Phase 10H validation passed: mediapipe:check, draft publish gate scoped tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
     "updatedAt": "2026-06-19"
   },
-  "nextRecommendedPhaseName": "UserAppTemplatePackage Draft Publish Gate",
+  "nextRecommendedPhaseName": "UserAppTemplatePackage Registry Preparation",
   "results": {
     "mediapipeCheck": "passed",
     "typecheck": "passed",
@@ -76,12 +75,12 @@
     "projectContext": "passed",
     "contextPackJson": "passed",
     "browserVerification": "passed",
-    "phase10GScopedTests": "passed",
-    "testFiles": 11,
-    "tests": 35,
-    "phase10GScopedTestFiles": 11,
-    "phase10GScopedTestsCount": 35,
-    "summary": "Phase 10G validation passed: mediapipe:check, official draft builder scoped tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
+    "phase10HScopedTests": "passed",
+    "testFiles": 9,
+    "tests": 27,
+    "phase10HScopedTestFiles": 9,
+    "phase10HScopedTestsCount": 27,
+    "summary": "Phase 10H validation passed: mediapipe:check, draft publish gate scoped tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
     "updatedAt": "2026-06-19"
   },
   "requiredCommands": [
@@ -92,6 +91,6 @@
     "npm run project:context",
     "node scripts/project-status.mjs --json",
     "node scripts/context-pack.mjs --json",
-    "npm run test -- tests/official-user-app-template-package-draft.test.ts tests/official-user-app-template-package-draft-builder.test.ts tests/official-user-app-template-package-draft-validation.test.ts tests/official-user-app-template-package-draft-handoff.test.ts tests/official-user-app-template-package-draft-builder-panel.test.tsx tests/phase-10G-documentation-recovery.test.ts tests/official-user-app-package-draft-gate.test.ts tests/official-user-app-package-draft-gate-panel.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
+    "npm run test -- tests/user-app-template-package-draft-publish-gate.test.ts tests/user-app-template-package-draft-publish-gate-handoff.test.ts tests/user-app-template-package-draft-publish-gate-panel.test.tsx tests/phase-10H-documentation-recovery.test.ts tests/official-user-app-template-package-draft.test.ts tests/official-user-app-template-package-draft-builder-panel.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
   ]
 }

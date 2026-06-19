@@ -321,3 +321,25 @@ revision, step guidance revision, region guidance revision, privacy notice
 revision, draft-only retention, or blocking. It cannot publish, cannot write a
 user app package registry, and cannot replace the current User App Shell
 package.
+
+## Phase 10H UserAppTemplatePackage Draft Publish Gate Boundary
+
+Phase 10H draft publish gate and handoff are local administrator aids only.
+Gate ready means eligible for future registry preparation; it is not
+publication, production readiness, a registry write, or a User App Shell package
+replacement.
+
+The gate checks source official draft validation, `draftOnly`, `publishBlocked`,
+title and summary, step sequence, region guidance, tools checklist, privacy
+notice, QA trace, human review trace, candidate trace, contract trace, preview
+trace, gate trace, raw image boundaries, personal data boundaries, medical
+claims, product shade claims, unsupported final claims, automatic publish
+markers, registry write markers, User App Shell package replacement, production
+package markers, User App contract boundary safety, and JSON round-trip
+stability.
+
+Draft publish gate handoff can recommend future registry preparation, user
+facing copy revision, step guidance revision, region guidance revision, privacy
+notice revision, draft-only retention, or blocking. It cannot publish, cannot
+write a user app package registry, and cannot replace the current User App
+Shell package.

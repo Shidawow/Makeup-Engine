@@ -2,17 +2,18 @@
 
 ## Current Phase
 
-Phase 10G: Official UserAppTemplatePackage Draft Builder is complete.
+Phase 10H: UserAppTemplatePackage Draft Publish Gate is complete.
 
-Last completed business phase: Phase 10G.
+Last completed business phase: Phase 10H.
 
-Next recommended phase: Phase 10H, UserAppTemplatePackage Draft Publish Gate.
+Next recommended phase: Phase 10I, UserAppTemplatePackage Registry Preparation.
 
-Phase 10G builds a local administrator-only official `UserAppTemplatePackage`
-draft from Phase 10F gate-ready inputs, validates the draft, and hands it off
-to a future publish gate. The draft is still not a published package, registry
-write, production package, User App Shell package replacement, backend service,
-or production app readiness marker.
+Phase 10H evaluates a local administrator-only official `UserAppTemplatePackage`
+draft from Phase 10G in a draft publish gate, validates future registry
+preparation eligibility, and hands it off to future registry preparation. The
+gate is still not publication, registry write execution, production package
+creation, User App Shell package replacement, backend service, or production
+app readiness marker.
 
 ## What The System Can Do
 
@@ -51,9 +52,15 @@ or production app readiness marker.
 - Generate gate handoff next actions for the future official draft builder, copy
   revision, step revision, region revision, privacy review, preview-only
   retention, or blocked official draft creation.
+- Build Phase 10G official `UserAppTemplatePackage` draft-only objects, validate
+  draft-only and publish-blocked flags, and hand them off to a draft publish
+  gate.
+- Evaluate Phase 10H draft publish gate readiness for future registry
+  preparation while preserving no-publish, no-registry-write, no-production
+  package, and no User App Shell package replacement boundaries.
 - Render compact Template Studio workflow, candidate package, candidate-to-app,
   user app package draft preview, official draft gate, and official draft
-  builder panels in the Template Workbench.
+  builder, and draft publish gate panels in the Template Workbench.
 - Keep Vision Analysis focused on FaceMesh, overlay/mask, region QA, and
   readiness; keep ordinary User App Shell paths separate from administrator-only
   vision, draft QA, human review, package preview, and registry terminology.
@@ -79,16 +86,19 @@ or production app readiness marker.
 - It cannot treat Phase 10G official `UserAppTemplatePackage` draft builder
   output as publication, registry write, production readiness, or a replacement
   for the current User App Shell package.
+- It cannot treat Phase 10H draft publish gate readiness as publication,
+  registry write execution, production readiness, or a replacement for the
+  current User App Shell package.
 - It cannot generate or mutate `UserAppTemplatePackage` from FaceMesh QA,
   candidates, generated steps, draft QA, human review, candidate handoff,
   candidate package handoff, app contract preparation, draft preview, validation,
-  gate, validation, or handoff.
+  gate, official draft, publish gate, validation, or handoff.
 - It cannot collect, upload, store, or train on real user photos through the
   User App Shell.
 - It cannot request camera permissions or call browser camera APIs.
 - It cannot add backend, database, accounts, analytics, AR, OpenAI API,
   external AI/CV APIs, service worker, native app scope, or new runtime
-  dependencies in Phase 10F.
+  dependencies in Phase 10H.
 - It cannot commit local MediaPipe `.task` or `.wasm` files from
   `public/mediapipe/**`.
 - It cannot modify legacy `src/engine`, `src/runtime`, or
@@ -101,7 +111,8 @@ or production app readiness marker.
 - `src/template-engine`: active local template production plus Phase 10B draft
   QA/human review, Phase 10C candidate package validation/handoff, Phase 10D
   candidate-to-app contract preparation, Phase 10E user app package draft
-  preview validation/handoff, and Phase 10F official draft gate/handoff.
+  preview validation/handoff, Phase 10F official draft gate/handoff, Phase 10G
+  official draft builder, and Phase 10H draft publish gate.
 - `src/components/template-studio`: active operator UI with compact Vision
   Analysis to Template Workbench workflow surfaces.
 - `src/components/demo`: Vision Analysis demo with readiness summary and
@@ -116,7 +127,7 @@ or production app readiness marker.
 
 ## Recent Validation
 
-Phase 10G validation must include:
+Phase 10H validation must include:
 
 ```bash
 npm run mediapipe:check
@@ -132,8 +143,8 @@ The latest completed validation is recorded in `project-state/test-status.json`.
 
 ## Next Phase Recommendation
 
-Proceed to Phase 10H: UserAppTemplatePackage Draft Publish Gate.
+Proceed to Phase 10I: UserAppTemplatePackage Registry Preparation.
 
-Phase 10H may evaluate whether the Phase 10G draft can enter a publish gate,
-still without automatic publication, registry writes, backend work, or online
-release.
+Phase 10I may prepare a future registry preparation layer from the Phase 10H
+gate, still without automatic publication, backend work, online release, or
+current User App Shell package replacement.

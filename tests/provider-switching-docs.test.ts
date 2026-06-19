@@ -40,15 +40,15 @@ describe('provider switching docs', () => {
     expect(combined).toContain('src/intelligence/runtime');
   });
 
-  it('provides phase 10G to 10H switch templates with historical 10F, 10E, 10D, 10C, 10A, 9J, and older markers', async () => {
+  it('provides phase 10H to 10I switch templates with historical 10G, 10F, 10E, 10D, 10C, 10A, 9J, and older markers', async () => {
     const prompt = await readFile('docs/prompts/PROVIDER_SWITCH_PROMPT.md', 'utf8');
 
     expect(prompt).toContain('Switch To Native GPT / Codex Desktop');
     expect(prompt).toContain('Switch To PackyAPI + CLI');
     expect(prompt).toContain('Return From PackyAPI To ChatGPT');
-    expect(prompt).toContain('lastCompletedPhase: 10G');
-    expect(prompt).toContain('nextRecommendedPhase: 10H');
-    expect(prompt).toContain('UserAppTemplatePackage Draft Publish Gate');
+    expect(prompt).toContain('lastCompletedPhase: 10H');
+    expect(prompt).toContain('nextRecommendedPhase: 10I');
+    expect(prompt).toContain('UserAppTemplatePackage Registry Preparation');
     expect(prompt).toContain('FaceMesh-driven Makeup Intelligence Baseline');
     expect(prompt).toContain('Template Draft Review Workflow');
     expect(prompt).toContain('Template Library Candidate Packaging');
@@ -56,6 +56,10 @@ describe('provider switching docs', () => {
     expect(prompt).toContain('User App Package Draft Preview');
     expect(prompt).toContain('Official User App Package Draft Gate');
     expect(prompt).toContain('Official UserAppTemplatePackage Draft Builder');
+    expect(prompt).toContain('UserAppTemplatePackage Draft Publish Gate');
+    expect(prompt).toContain('Historical handoff marker retained for Phase 10G recovery tests');
+    expect(prompt).toContain('lastCompletedPhase: 10G');
+    expect(prompt).toContain('nextRecommendedPhase: 10H');
     expect(prompt).toContain('Historical handoff marker retained for Phase 10F recovery tests');
     expect(prompt).toContain('lastCompletedPhase: 10F');
     expect(prompt).toContain('nextRecommendedPhase: 10G');
