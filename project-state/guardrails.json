@@ -1,5 +1,5 @@
 {
-  "phase": "10F",
+  "phase": "10G",
   "guardrails": [
     {
       "id": "source-image-not-training-data",
@@ -604,6 +604,22 @@
     {
       "id": "phase_10f_block_unsafe_payloads",
       "rule": "Phase 10F must block raw image references, local paths, object URLs, base64, MediaPipe runtime asset names, personal data, medical claims, product shade claims, final claims, and UserAppTemplatePackage mutation markers."
+    },
+    {
+      "id": "phase_10g_draft_only",
+      "rule": "Official UserAppTemplatePackage draft builder output remains draft-only."
+    },
+    {
+      "id": "phase_10g_no_registry_write",
+      "rule": "Do not write user app package registry in Phase 10G."
+    },
+    {
+      "id": "phase_10g_no_publish",
+      "rule": "Do not publish official drafts in Phase 10G."
+    },
+    {
+      "id": "phase_10g_no_shell_package_replacement",
+      "rule": "Do not replace current User App Shell package in Phase 10G."
     }
   ],
   "legacyFrozenModules": [
@@ -612,5 +628,5 @@
     "src/intelligence/runtime"
   ],
   "externalApiUsageAllowedInDoc1": false,
-  "updatedAt": "2026-06-16T00:00:00.000+08:00"
+  "updatedAt": "2026-06-19"
 }

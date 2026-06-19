@@ -301,12 +301,12 @@
       "notes": "Phase 10E JSON context pack command passed."
     }
   ],
-  "lastUpdatedPhase": "10D",
-  "phase": "10D",
-  "lastCompletedPhase": "10F",
-  "currentPhase": "10D",
-  "nextRecommendedPhase": "10G",
-  "updatedAt": "2026-06-16T00:00:00.000+08:00",
+  "lastUpdatedPhase": "10G",
+  "phase": "10G",
+  "lastCompletedPhase": "10G",
+  "currentPhase": "10G",
+  "nextRecommendedPhase": "10H",
+  "updatedAt": "2026-06-19",
   "lastValidation": {
     "mediapipeCheck": "passed",
     "typecheck": "passed",
@@ -317,13 +317,13 @@
     "projectContext": "passed",
     "contextPackJson": "passed",
     "browserVerification": "passed",
-    "phase10DScopedTests": "passed",
-    "testFiles": 10,
-    "tests": 39,
-    "phase10DScopedTestFiles": 10,
-    "phase10DScopedTestsCount": 39,
-    "summary": "Phase 10D validation passed: mediapipe:check, scoped Phase 10D tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
-    "updatedAt": "2026-06-16T00:00:00.000+08:00"
+    "phase10GScopedTests": "passed",
+    "testFiles": 11,
+    "tests": 35,
+    "phase10GScopedTestFiles": 11,
+    "phase10GScopedTestsCount": 35,
+    "summary": "Phase 10G validation passed: mediapipe:check, official draft builder scoped tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
+    "updatedAt": "2026-06-19"
   },
   "validation": {
     "mediapipeCheck": "passed",
@@ -335,16 +335,16 @@
     "projectContext": "passed",
     "contextPackJson": "passed",
     "browserVerification": "passed",
-    "phase10DScopedTests": "passed",
-    "testFiles": 10,
-    "tests": 39,
-    "phase10DScopedTestFiles": 10,
-    "phase10DScopedTestsCount": 39,
-    "summary": "Phase 10D validation passed: mediapipe:check, scoped Phase 10D tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
-    "updatedAt": "2026-06-16T00:00:00.000+08:00"
+    "phase10GScopedTests": "passed",
+    "testFiles": 11,
+    "tests": 35,
+    "phase10GScopedTestFiles": 11,
+    "phase10GScopedTestsCount": 35,
+    "summary": "Phase 10G validation passed: mediapipe:check, official draft builder scoped tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
+    "updatedAt": "2026-06-19"
   },
   "status": "passed",
-  "summary": "Phase 10D validation passed: mediapipe:check, scoped Phase 10D tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
+  "summary": "Phase 10G validation passed: mediapipe:check, official draft builder scoped tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
   "entries": [
     {
       "command": "npm run test -- tests/official-user-app-package-draft-gate.test.ts tests/official-user-app-package-draft-gate-handoff.test.ts tests/official-user-app-package-draft-gate-panel.test.tsx tests/template-studio-tab-boundary.test.tsx",

@@ -296,3 +296,28 @@ revision, step guidance revision, region guidance revision, privacy review,
 preview-only retention, or blocking. It cannot generate a formal
 `UserAppTemplatePackage`, cannot publish to the user app, and cannot write a
 user app package registry.
+
+## Phase 10G Official UserAppTemplatePackage Draft Builder Boundary
+
+Phase 10G official draft builder, validation, and handoff are local
+administrator aids only. Draft ready means eligible for a future draft publish
+gate; it is not publication, production readiness, a registry write, or a User
+App Shell package replacement.
+
+The builder can create a draft-only object with title, summary, style tags,
+difficulty, estimated time, scenarios, tools, product placeholders, step
+sequence, region guidance, privacy notice, QA trace, human review trace,
+candidate trace, contract trace, preview trace, and gate trace.
+
+The builder and validation must block missing source gate readiness, missing
+step sequence, missing privacy notice, raw image references, base64, object
+URLs, local paths, MediaPipe runtime assets, personal data, health data, contact
+data, biometric data, product shade claims, medical claims, unsupported final
+claims, automatic publish markers, registry write markers, production package
+markers, and `UserAppTemplatePackage` mutation markers.
+
+Draft handoff can recommend a future draft publish gate, user-facing copy
+revision, step guidance revision, region guidance revision, privacy notice
+revision, draft-only retention, or blocking. It cannot publish, cannot write a
+user app package registry, and cannot replace the current User App Shell
+package.

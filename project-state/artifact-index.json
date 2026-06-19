@@ -398,11 +398,11 @@
     "Observation template documentation",
     "Outcome review documentation"
   ],
-  "phase": "10F",
-  "lastCompletedPhase": "10B",
-  "currentPhase": "9J",
-  "nextRecommendedPhase": "10G",
-  "updatedAt": "2026-06-16T00:00:00.000+08:00",
+  "phase": "10G",
+  "lastCompletedPhase": "10G",
+  "currentPhase": "10G",
+  "nextRecommendedPhase": "10H",
+  "updatedAt": "2026-06-19",
   "artifacts": [
     "docs/product/internal-trial-learning-summary.md",
     "docs/product/product-decision-gate.md",
@@ -444,7 +444,7 @@
     "docs/product/internal-trial-evidence-quality-gate.md",
     "docs/phases/phase-9F.md"
   ],
-  "nextRecommendedPhaseName": "Anonymous Internal Trial Evidence Round 2 Pack",
+  "nextRecommendedPhaseName": "UserAppTemplatePackage Draft Publish Gate",
   "userAppAnonymousTrialDryRunOutputs": [
     "src/user-app/userAppAnonymousTrialDryRunPack.ts",
     "src/user-app/userAppAnonymousTrialDryRunChecklist.ts",
@@ -507,5 +507,15 @@
     "src/template-engine/officialUserAppPackageDraftGate.ts",
     "src/template-engine/officialUserAppPackageDraftGateHandoff.ts",
     "src/components/template-studio/OfficialUserAppPackageDraftGatePanel.tsx"
+  ],
+  "officialUserAppTemplatePackageDraftBuilderOutputs": [
+    "src/template-engine/officialUserAppTemplatePackageDraft.ts",
+    "src/template-engine/officialUserAppTemplatePackageDraftBuilder.ts",
+    "src/template-engine/officialUserAppTemplatePackageDraftValidation.ts",
+    "src/template-engine/officialUserAppTemplatePackageDraftHandoff.ts",
+    "src/components/template-studio/OfficialUserAppTemplatePackageDraftBuilderPanel.tsx",
+    "docs/product/official-user-app-template-package-draft-builder.md",
+    "docs/product/official-user-app-template-package-draft-validation.md",
+    "docs/product/official-user-app-template-package-draft-handoff.md"
   ]
 }

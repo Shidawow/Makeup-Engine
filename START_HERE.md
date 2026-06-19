@@ -5,9 +5,9 @@ Makeup Engine is the makeup template production system for a future makeup coach
 ## Current Position
 
 - Project role: makeup template production system plus a local contract-driven user app shell prototype.
-- Last completed phase: `Phase 10F`.
-- Current completed business phase: `Phase 10F - Official User App Package Draft Gate`.
-- Next recommended phase: `Phase 10G - Official UserAppTemplatePackage Draft Builder`.
+- Last completed phase: `Phase 10G`.
+- Current completed business phase: `Phase 10G - Official UserAppTemplatePackage Draft Builder`.
+- Next recommended phase: `Phase 10H - UserAppTemplatePackage Draft Publish Gate`.
 - Recent recovery milestones retained in phase docs: `Phase 6K`, `Phase 6L`, `Phase 6L-1`, `Phase 7A`, `Phase 7B`, `Phase 7C`, `Phase 7D`, `Phase 7E`, `Phase 7F`, `Phase 7G`, `Phase 7H`, and `Phase 8A`.
 - Historical route-planning milestone: `Phase 8A - Product Route Decision / App MVP Planning`.
 
@@ -57,6 +57,7 @@ SourceImagePackage manifest
 -> Candidate-to-App Package Contract Preparation
 -> User App Package Draft Preview
 -> Official User App Package Draft Gate
+-> Official UserAppTemplatePackage Draft Builder
 -> Phase 8 Roadmap / V1 Non-Goals
 -> Consumption Manifest
 -> Dataset Review

@@ -12,10 +12,10 @@ It produces templates, template evidence, correction records, review state, loca
 
 ## Current Phase
 
-- Current business phase: `Phase 10F completed`
-- Last completed phase: `Phase 10F`
-- Last completed phase name: `Phase 10F - Official User App Package Draft Gate`
-- Next recommended phase: `Phase 10G - Official UserAppTemplatePackage Draft Builder`
+- Current business phase: `Phase 10G completed`
+- Last completed phase: `Phase 10G`
+- Last completed phase name: `Phase 10G - Official UserAppTemplatePackage Draft Builder`
+- Next recommended phase: `Phase 10H - UserAppTemplatePackage Draft Publish Gate`
 
 Historical recovery marker retained for Phase 9C tests: `Phase 9C completed`.
 Historical recovery marker retained for Phase 9E tests: `Phase 9E completed`.
@@ -81,6 +81,7 @@ Real Photo
 -> Candidate-to-App Package Contract Preparation
 -> User App Package Draft Preview
 -> Official User App Package Draft Gate
+-> Official UserAppTemplatePackage Draft Builder
 -> Phase 8 Roadmap / V1 Non-Goals
 -> User App Consumption Manifest
 -> Dataset Review

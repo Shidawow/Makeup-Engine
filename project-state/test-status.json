@@ -1,5 +1,5 @@
 {
-  "phase": "10F",
+  "phase": "10G",
   "status": "passed",
   "lastValidation": {
     "mediapipeCheck": "passed",
@@ -11,16 +11,13 @@
     "projectContext": "passed",
     "contextPackJson": "passed",
     "browserVerification": "passed",
-    "phase10EScopedTests": "passed",
-    "testFiles": 9,
-    "tests": 28,
-    "phase10EScopedTestFiles": 10,
-    "phase10EScopedTestsCount": 38,
-    "summary": "Phase 10F validation passed: mediapipe:check, scoped Phase 10F tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
-    "updatedAt": "2026-06-18T00:00:00.000+08:00",
-    "phase10FScopedTests": "passed",
-    "phase10FScopedTestFiles": 9,
-    "phase10FScopedTestsCount": 28
+    "phase10GScopedTests": "passed",
+    "testFiles": 11,
+    "tests": 35,
+    "phase10GScopedTestFiles": 11,
+    "phase10GScopedTestsCount": 35,
+    "summary": "Phase 10G validation passed: mediapipe:check, official draft builder scoped tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
+    "updatedAt": "2026-06-19"
   },
   "lastKnownPreDoc0Validation": {
     "typecheck": "passed",
@@ -45,11 +42,11 @@
     "Phase 10E initial model, panel, tab boundary tests, and typecheck passed before final validation.",
     "Phase 10F initial model, panel, tab boundary tests, and typecheck passed before final validation."
   ],
-  "lastCompletedPhase": "10F",
-  "currentPhase": "10F",
-  "nextRecommendedPhase": "10G",
-  "updatedAt": "2026-06-18T00:00:00.000+08:00",
-  "summary": "Phase 10F validation passed: mediapipe:check, scoped Phase 10F tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
+  "lastCompletedPhase": "10G",
+  "currentPhase": "10G",
+  "nextRecommendedPhase": "10H",
+  "updatedAt": "2026-06-19",
+  "summary": "Phase 10G validation passed: mediapipe:check, official draft builder scoped tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
   "validation": {
     "mediapipeCheck": "passed",
     "typecheck": "passed",
@@ -60,23 +57,16 @@
     "projectContext": "passed",
     "contextPackJson": "passed",
     "browserVerification": "passed",
-    "phase10EScopedTests": "passed",
-    "testFiles": 9,
-    "tests": 28,
-    "phase10EScopedTestFiles": 10,
-    "phase10EScopedTestsCount": 38,
-    "summary": "Phase 10F validation passed: mediapipe:check, scoped Phase 10F tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
-    "updatedAt": "2026-06-18T00:00:00.000+08:00",
-    "phase10FScopedTests": "passed",
-    "phase10FScopedTestFiles": 9,
-    "phase10FScopedTestsCount": 28
+    "phase10GScopedTests": "passed",
+    "testFiles": 11,
+    "tests": 35,
+    "phase10GScopedTestFiles": 11,
+    "phase10GScopedTestsCount": 35,
+    "summary": "Phase 10G validation passed: mediapipe:check, official draft builder scoped tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
+    "updatedAt": "2026-06-19"
   },
-  "nextRecommendedPhaseName": "Official UserAppTemplatePackage Draft Builder",
+  "nextRecommendedPhaseName": "UserAppTemplatePackage Draft Publish Gate",
   "results": {
-    "phase10FScopedTests": "passed",
-    "phase10FScopedTestFiles": 9,
-    "phase10FScopedTestsCount": 28,
-    "summary": "Phase 10F validation passed: mediapipe:check, scoped Phase 10F tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
     "mediapipeCheck": "passed",
     "typecheck": "passed",
     "test": "passed",
@@ -86,9 +76,13 @@
     "projectContext": "passed",
     "contextPackJson": "passed",
     "browserVerification": "passed",
-    "testFiles": 9,
-    "tests": 28,
-    "updatedAt": "2026-06-18T00:00:00.000+08:00"
+    "phase10GScopedTests": "passed",
+    "testFiles": 11,
+    "tests": 35,
+    "phase10GScopedTestFiles": 11,
+    "phase10GScopedTestsCount": 35,
+    "summary": "Phase 10G validation passed: mediapipe:check, official draft builder scoped tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
+    "updatedAt": "2026-06-19"
   },
   "requiredCommands": [
     "npm run mediapipe:check",
@@ -98,6 +92,6 @@
     "npm run project:context",
     "node scripts/project-status.mjs --json",
     "node scripts/context-pack.mjs --json",
-    "npm run test -- tests/official-user-app-package-draft-gate.test.ts tests/official-user-app-package-draft-gate-handoff.test.ts tests/official-user-app-package-draft-gate-panel.test.tsx tests/phase-10F-documentation-recovery.test.ts tests/user-app-package-draft-preview.test.ts tests/user-app-package-draft-preview-panels.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
+    "npm run test -- tests/official-user-app-template-package-draft.test.ts tests/official-user-app-template-package-draft-builder.test.ts tests/official-user-app-template-package-draft-validation.test.ts tests/official-user-app-template-package-draft-handoff.test.ts tests/official-user-app-template-package-draft-builder-panel.test.tsx tests/phase-10G-documentation-recovery.test.ts tests/official-user-app-package-draft-gate.test.ts tests/official-user-app-package-draft-gate-panel.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
   ]
 }

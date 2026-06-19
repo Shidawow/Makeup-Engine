@@ -1,8 +1,10 @@
 import type { FaceMeshRegionQaReport } from '../../vision';
 import {
   buildTemplateStudioWorkflowState,
+  buildOfficialUserAppTemplatePackageDraft,
   createCandidateToAppPackageContractPreparation,
   createCandidateToAppPackageHandoff,
+  createOfficialUserAppTemplatePackageDraftHandoff,
   createOfficialUserAppPackageDraftGate,
   createOfficialUserAppPackageDraftGateHandoff,
   createUserAppPackageDraftPreview,
@@ -16,6 +18,7 @@ import {
   MakeupTemplateDraftReport,
   RuleBasedStepSequence,
   validateCandidateToAppPackageContract,
+  validateOfficialUserAppTemplatePackageDraft,
   validateUserAppPackageDraftPreview,
   validateTemplateLibraryCandidatePackage,
 } from '../../template-engine';
@@ -30,6 +33,7 @@ import { TemplateLibraryCandidatePackagingPanel } from './TemplateLibraryCandida
 import { CandidateToAppPackageContractPanel } from './CandidateToAppPackageContractPanel';
 import { UserAppPackageDraftPreviewPanel } from './UserAppPackageDraftPreviewPanel';
 import { OfficialUserAppPackageDraftGatePanel } from './OfficialUserAppPackageDraftGatePanel';
+import { OfficialUserAppTemplatePackageDraftBuilderPanel } from './OfficialUserAppTemplatePackageDraftBuilderPanel';
 
 export interface FaceMeshMakeupIntelligencePanelProps {
   regionQa: FaceMeshRegionQaReport | null;
@@ -165,6 +169,26 @@ export function FaceMeshMakeupIntelligencePanel({
             </p>
           </div>
         </div>
+        <div className="mt-3 grid gap-2 rounded-md border border-violet-200 bg-violet-50 p-3 text-sm text-violet-900 md:grid-cols-3">
+          <div>
+            <p className="font-semibold">正式用户 App 模板包草稿构建器</p>
+            <p className="mt-1 text-xs leading-5">
+              Draft Builder blocked：缺少 10F source gate ready。
+            </p>
+          </div>
+          <div>
+            <p className="font-semibold">Draft Validation</p>
+            <p className="mt-1 text-xs leading-5">
+              需要 10F gate ready 后才能构建并验证草稿。
+            </p>
+          </div>
+          <div>
+            <p className="font-semibold">Draft Handoff</p>
+            <p className="mt-1 text-xs leading-5">
+              草稿，不是正式包，不会写入 registry，不会发布。
+            </p>
+          </div>
+        </div>
       </section>
     );
   }
@@ -238,6 +262,21 @@ export function FaceMeshMakeupIntelligencePanel({
   const officialUserAppPackageDraftGateHandoff =
     createOfficialUserAppPackageDraftGateHandoff({
       gate: officialUserAppPackageDraftGate,
+    });
+  const officialUserAppTemplatePackageDraftBuilder =
+    buildOfficialUserAppTemplatePackageDraft({
+      preview: userAppPackageDraftPreview,
+      gate: officialUserAppPackageDraftGate,
+      gateHandoff: officialUserAppPackageDraftGateHandoff,
+    });
+  const officialUserAppTemplatePackageDraftValidation =
+    validateOfficialUserAppTemplatePackageDraft(
+      officialUserAppTemplatePackageDraftBuilder.draft,
+    );
+  const officialUserAppTemplatePackageDraftHandoff =
+    createOfficialUserAppTemplatePackageDraftHandoff({
+      draft: officialUserAppTemplatePackageDraftBuilder.draft,
+      validation: officialUserAppTemplatePackageDraftValidation,
     });
 
   return (
@@ -359,6 +398,11 @@ export function FaceMeshMakeupIntelligencePanel({
       <OfficialUserAppPackageDraftGatePanel
         gate={officialUserAppPackageDraftGate}
         handoff={officialUserAppPackageDraftGateHandoff}
+      />
+      <OfficialUserAppTemplatePackageDraftBuilderPanel
+        builderResult={officialUserAppTemplatePackageDraftBuilder}
+        handoff={officialUserAppTemplatePackageDraftHandoff}
+        validation={officialUserAppTemplatePackageDraftValidation}
       />
     </section>
   );

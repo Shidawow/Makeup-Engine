@@ -2,27 +2,26 @@
 
 ## What To Do Next
 
-Proceed to Phase 10G: Official UserAppTemplatePackage Draft Builder.
+Proceed to Phase 10H: UserAppTemplatePackage Draft Publish Gate.
 
 ## Why
 
-Phase 10F adds a local official draft gate over Phase 10E draft previews while
-preserving no-publish, no-registry-write, and no-formal-`UserAppTemplatePackage`
-boundaries. The next safe step is a builder phase that may prepare an official
-draft package only under the 10F gate and still without registry or publication
-scope.
+Phase 10G adds a local official `UserAppTemplatePackage` draft builder from
+10F-gated inputs while preserving no-publish, no-registry-write, and no User App
+Shell package replacement boundaries. The next safe step is a publish gate that
+can review the draft without automatically publishing it.
 
-## Recommended 10G Scope
+## Recommended 10H Scope
 
-- Prepare an official UserAppTemplatePackage draft builder from 10F-gated inputs
-  only.
-- Keep the builder local, deterministic, and blocked by gate failures.
+- Evaluate the Phase 10G official UserAppTemplatePackage draft in a publish gate
+  without automatic publication.
+- Keep the publish gate local, deterministic, and blocked by validation failures.
 - Preserve QA trace, human review trace, privacy trace, candidate trace,
   contract trace, preview validation trace, and gate trace.
 - Continue to avoid registry writes, production publication, backend work, or
   automatic release.
-- Add docs, fixtures, tests, and UI that distinguish official draft gate from
-  production package generation.
+- Add docs, fixtures, tests, and UI that distinguish a draft publish gate from
+  automatic release or registry writes.
 
 ## What Not To Do
 
@@ -31,8 +30,7 @@ scope.
 - Do not write candidate packages into the formal Template Library
   automatically.
 - Do not treat 10E draft preview as an official `UserAppTemplatePackage`.
-- Do not treat 10F official draft gate readiness as automatic package builder
-  execution, production readiness, registry write approval, or publication.
+- Do not treat 10G official draft builder output as production readiness, registry write approval, User App Shell package replacement, or publication.
 - Do not write a user app package registry.
 - Do not add backend, database, account system, cloud sync, analytics, camera
   capture, AR, OpenAI/external API calls, native app implementation, React
@@ -64,11 +62,15 @@ Read these files first:
 15. `docs/phases/phase-10D.md`
 16. `docs/phases/phase-10E.md`
 17. `docs/phases/phase-10F.md`
-18. `project-state/project-state.snapshot.json`
-19. `project-state/latest-handoff.json`
-20. `project-state/provider-handoff.json`
-21. `project-state/active-task.json`
-22. `project-state/guardrails.json`
+18. `docs/phases/phase-10G.md`
+19. `docs/product/official-user-app-template-package-draft-builder.md`
+20. `docs/product/official-user-app-template-package-draft-validation.md`
+21. `docs/product/official-user-app-template-package-draft-handoff.md`
+22. `project-state/project-state.snapshot.json`
+23. `project-state/latest-handoff.json`
+24. `project-state/provider-handoff.json`
+25. `project-state/active-task.json`
+26. `project-state/guardrails.json`
 
 Then run:
 

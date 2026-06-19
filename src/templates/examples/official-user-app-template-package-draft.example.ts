@@ -1,0 +1,46 @@
+import {
+  officialUserAppTemplatePackageDraftBuilderMedicalClaimExample,
+  officialUserAppTemplatePackageDraftBuilderMissingGateExample,
+  officialUserAppTemplatePackageDraftBuilderMissingPrivacyExample,
+  officialUserAppTemplatePackageDraftBuilderMissingStepExample,
+  officialUserAppTemplatePackageDraftBuilderMutationExample,
+  officialUserAppTemplatePackageDraftBuilderPersonalDataExample,
+  officialUserAppTemplatePackageDraftBuilderProductShadeExample,
+  officialUserAppTemplatePackageDraftBuilderRawImageExample,
+  officialUserAppTemplatePackageDraftBuilderReadyExample,
+  officialUserAppTemplatePackageDraftBuilderRegistryWriteExample,
+  officialUserAppTemplatePackageDraftBuilderWarningExample,
+} from './official-user-app-template-package-draft-builder.example';
+
+export const officialUserAppTemplatePackageDraftReadyExample =
+  officialUserAppTemplatePackageDraftBuilderReadyExample.draft;
+
+export const officialUserAppTemplatePackageDraftWarningExample =
+  officialUserAppTemplatePackageDraftBuilderWarningExample.draft;
+
+export const officialUserAppTemplatePackageDraftMissingGateExample =
+  officialUserAppTemplatePackageDraftBuilderMissingGateExample.draft;
+
+export const officialUserAppTemplatePackageDraftMissingStepExample =
+  officialUserAppTemplatePackageDraftBuilderMissingStepExample.draft;
+
+export const officialUserAppTemplatePackageDraftMissingPrivacyExample =
+  officialUserAppTemplatePackageDraftBuilderMissingPrivacyExample.draft;
+
+export const officialUserAppTemplatePackageDraftRawImageBlockedExample =
+  officialUserAppTemplatePackageDraftBuilderRawImageExample.draft;
+
+export const officialUserAppTemplatePackageDraftPersonalDataBlockedExample =
+  officialUserAppTemplatePackageDraftBuilderPersonalDataExample.draft;
+
+export const officialUserAppTemplatePackageDraftMedicalClaimBlockedExample =
+  officialUserAppTemplatePackageDraftBuilderMedicalClaimExample.draft;
+
+export const officialUserAppTemplatePackageDraftProductShadeBlockedExample =
+  officialUserAppTemplatePackageDraftBuilderProductShadeExample.draft;
+
+export const officialUserAppTemplatePackageDraftRegistryWriteBlockedExample =
+  officialUserAppTemplatePackageDraftBuilderRegistryWriteExample.draft;
+
+export const officialUserAppTemplatePackageDraftMutationBlockedExample =
+  officialUserAppTemplatePackageDraftBuilderMutationExample.draft;

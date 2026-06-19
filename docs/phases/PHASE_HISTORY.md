@@ -989,3 +989,42 @@ The official draft gate can now decide if a preview is eligible for a later
 builder. Phase 10G should prepare an Official UserAppTemplatePackage Draft
 Builder without crossing into registry write, publication, backend, or
 production app scope.
+
+## Phase 10G - Official UserAppTemplatePackage Draft Builder
+
+Added local Official UserAppTemplatePackage Draft Builder after Phase 10F gate
+handoff.
+
+What changed:
+
+- Added official draft model for user-facing fields, step sequence, region
+  guidance, privacy notice, QA trace, human review trace, candidate trace,
+  contract trace, preview trace, and gate trace.
+- Added draft builder that accepts only 10F gate-ready inputs and keeps
+  `draftOnly`, `publishBlocked`, no-registry-write, and no User App Shell
+  package replacement boundaries explicit.
+- Added draft validation for source gate readiness, draft-only flags, publish
+  block flags, user-facing copy, step sequence, region guidance, tools, privacy,
+  trace preservation, raw image boundaries, personal data boundaries,
+  medical/product/final claims, registry write, mutation, production markers,
+  and JSON round-trip stability.
+- Added draft handoff next actions for a future draft publish gate, copy
+  revision, step revision, region revision, privacy revision, draft-only
+  retention, and blocking.
+- Added Template Workbench panel for 正式用户 App 模板包草稿构建器 / Draft
+  Validation / Draft Handoff.
+- Kept Vision Analysis free of official draft builder UI and kept ordinary User
+  App Shell paths free of administrator draft builder terminology.
+
+What still cannot happen:
+
+- Phase 10G draft ready is not publication, not a registry write, not production
+  readiness, not backend work, not camera/AR scope, not OpenAI/external API
+  scope, not training input, and not a replacement for the current User App
+  Shell package.
+
+Why Phase 10H follows:
+
+The official draft builder can now create a local draft-only package object.
+Phase 10H should evaluate that draft through a UserAppTemplatePackage Draft
+Publish Gate without automatically publishing or writing registry entries.

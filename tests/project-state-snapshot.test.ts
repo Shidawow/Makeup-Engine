@@ -31,13 +31,13 @@ describe('project state snapshot', () => {
 
     expect(snapshot.projectName).toBe('Makeup Engine');
     expect(snapshot.projectRole).toContain('Makeup template production system');
-    expect(snapshot.lastCompletedPhase).toBe('10F');
-    expect(snapshot.lastCompletedBusinessPhase).toBe('10F');
-    expect(snapshot.currentPhaseId).toBe('10F');
+    expect(snapshot.lastCompletedPhase).toBe('10G');
+    expect(snapshot.lastCompletedBusinessPhase).toBe('10G');
+    expect(snapshot.currentPhaseId).toBe('10G');
     expect(snapshot.currentPhase).toBeTruthy();
-    expect(snapshot.nextRecommendedPhase).toBe('10G');
-    expect(snapshot.nextRecommendedPhaseName).toContain('Official UserAppTemplatePackage Draft Builder');
-    expect(snapshot.nextAction).toContain('Phase 10G');
+    expect(snapshot.nextRecommendedPhase).toBe('10H');
+    expect(snapshot.nextRecommendedPhaseName).toContain('Draft Publish Gate');
+    expect(snapshot.nextAction).toContain('Phase 10H');
     expect(snapshot.mainDataFlow).toEqual(
       expect.arrayContaining([
         'SourceImagePackage',
@@ -123,6 +123,11 @@ describe('project state snapshot', () => {
         'OfficialUserAppPackageDraftGateResult',
         'OfficialUserAppPackageDraftGateHandoff',
         'OfficialUserAppPackageDraftGatePanel',
+        'OfficialUserAppTemplatePackageDraft',
+        'OfficialUserAppTemplatePackageDraftBuilderResult',
+        'OfficialUserAppTemplatePackageDraftValidationResult',
+        'OfficialUserAppTemplatePackageDraftHandoff',
+        'OfficialUserAppTemplatePackageDraftBuilderPanel',
         'FaceMeshMakeupIntelligenceAdminPanel',
         'MaterializedTrainingDataset',
       ]),
@@ -153,6 +158,7 @@ describe('project state snapshot', () => {
     expect(snapshot.knownLimitations.join('\n')).toContain('Phase 10D candidate-to-app contract preparation');
     expect(snapshot.knownLimitations.join('\n')).toContain('Phase 10E User App Package Draft Preview');
     expect(snapshot.knownLimitations.join('\n')).toContain('Phase 10F Official User App Package Draft Gate');
+    expect(snapshot.knownLimitations.join('\n')).toContain('Phase 10G');
     expect(snapshot.knownLimitations.join('\n')).toContain('real names');
     expect(snapshot.knownLimitations.join('\n')).toContain('service worker');
     expect(snapshot.knownLimitations).toContain('raw RGBA is currently summary-only in Studio');

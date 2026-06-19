@@ -1,14 +1,14 @@
 {
   "projectName": "Makeup Engine",
-  "projectRole": "Makeup template production system with completed Official User App Package Draft Gate plus a local contract-driven user app shell prototype for a future separate user app MVP",
+  "projectRole": "Makeup template production system with completed Official UserAppTemplatePackage draft builder plus a local contract-driven user app shell prototype for a future separate user app MVP",
   "projectIsUserFacingApp": false,
-  "lastCompletedPhase": "10F",
-  "lastCompletedBusinessPhase": "10F",
-  "currentPhase": "Official User App Package Draft Gate",
-  "currentPhaseId": "10F",
-  "nextRecommendedPhase": "10G",
-  "nextRecommendedPhaseName": "Official UserAppTemplatePackage Draft Builder",
-  "nextAction": "Proceed to Phase 10G: Official UserAppTemplatePackage Draft Builder. Phase 10F is complete. Use official draft gate and handoff as local administrator gate inputs only; do not publish, write a user app package registry, generate production packages, add backend/database/camera/AR/OpenAI/external APIs, train from gate outputs, or commit MediaPipe binaries.",
+  "lastCompletedPhase": "10G",
+  "lastCompletedBusinessPhase": "10G",
+  "currentPhase": "Official UserAppTemplatePackage Draft Builder",
+  "currentPhaseId": "10G",
+  "nextRecommendedPhase": "10H",
+  "nextRecommendedPhaseName": "UserAppTemplatePackage Draft Publish Gate",
+  "nextAction": "Proceed to Phase 10H: UserAppTemplatePackage Draft Publish Gate. Phase 10G is complete. Use official draft builder output as local administrator draft input only; do not publish, write a user app package registry, replace the current User App Shell package, add backend/database/camera/AR/OpenAI/external APIs, train from drafts, or commit MediaPipe binaries.",
   "mainDataFlow": [
     "SourceImagePackage",
     "SourceImageEntry",
@@ -142,7 +142,12 @@
     "UserAppPackageDraftPreviewPanel",
     "OfficialUserAppPackageDraftGateResult",
     "OfficialUserAppPackageDraftGateHandoff",
-    "OfficialUserAppPackageDraftGatePanel"
+    "OfficialUserAppPackageDraftGatePanel",
+    "OfficialUserAppTemplatePackageDraft",
+    "OfficialUserAppTemplatePackageDraftBuilderResult",
+    "OfficialUserAppTemplatePackageDraftValidationResult",
+    "OfficialUserAppTemplatePackageDraftHandoff",
+    "OfficialUserAppTemplatePackageDraftBuilderPanel"
   ],
   "mainModules": [
     "src/vision",
@@ -186,16 +191,13 @@
     "projectContext": "passed",
     "contextPackJson": "passed",
     "browserVerification": "passed",
-    "phase10EScopedTests": "passed",
-    "testFiles": 9,
-    "tests": 28,
-    "phase10EScopedTestFiles": 10,
-    "phase10EScopedTestsCount": 38,
-    "summary": "Phase 10F validation passed: mediapipe:check, scoped Phase 10F tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
-    "updatedAt": "2026-06-18T00:00:00.000+08:00",
-    "phase10FScopedTests": "passed",
-    "phase10FScopedTestFiles": 9,
-    "phase10FScopedTestsCount": 28
+    "phase10GScopedTests": "passed",
+    "testFiles": 11,
+    "tests": 35,
+    "phase10GScopedTestFiles": 11,
+    "phase10GScopedTestsCount": 35,
+    "summary": "Phase 10G validation passed: mediapipe:check, official draft builder scoped tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
+    "updatedAt": "2026-06-19"
   },
   "knownLimitations": [
     "SourceImagePackage is not a training dataset",
@@ -269,7 +271,9 @@
     "Phase 10E User App Package Draft Preview is local administrator preview only; it is not formal UserAppTemplatePackage generation, official package readiness, registry write, publication, production app readiness, backend work, OpenAI/external API usage, camera/AR scope, or training input.",
     "Phase 10E draft preview blocks missing source contract readiness, missing step guidance, raw image references, local paths, object URLs, base64, MediaPipe runtime asset names, personal data, product shade claims, medical claims, unsupported final claims, automatic publish markers, registry write markers, and UserAppTemplatePackage mutation markers.",
     "Phase 10F Official User App Package Draft Gate is local administrator gate metadata only; it is not formal UserAppTemplatePackage generation, official package output, user app package registry write, publication, production app readiness, backend work, OpenAI/external API usage, camera/AR scope, or training input.",
-    "Phase 10F official draft gate blocks missing source preview validation, missing step guidance, missing region guidance, raw image references, local paths, object URLs, base64, MediaPipe runtime asset names, personal data, product shade claims, medical claims, unsupported final claims, automatic publish markers, registry write markers, and UserAppTemplatePackage mutation markers."
+    "Phase 10F official draft gate blocks missing source preview validation, missing step guidance, missing region guidance, raw image references, local paths, object URLs, base64, MediaPipe runtime asset names, personal data, product shade claims, medical claims, unsupported final claims, automatic publish markers, registry write markers, and UserAppTemplatePackage mutation markers.",
+    "Phase 10G official UserAppTemplatePackage draft builder is draft-only and not production package generation.",
+    "Phase 10G does not publish, write registry, or replace the current User App Shell package."
   ],
   "recoveryEntryFiles": [
     "START_HERE.md",
@@ -403,7 +407,11 @@
     "docs/phases/phase-10E.md",
     "docs/product/official-user-app-package-draft-gate.md",
     "docs/product/official-user-app-package-draft-gate-handoff.md",
-    "docs/phases/phase-10F.md"
+    "docs/phases/phase-10F.md",
+    "docs/product/official-user-app-template-package-draft-builder.md",
+    "docs/product/official-user-app-template-package-draft-validation.md",
+    "docs/product/official-user-app-template-package-draft-handoff.md",
+    "docs/phases/phase-10G.md"
   ],
   "forbiddenActions": [
     "Do not build the full production user-side app in the local admin workbench",
@@ -473,9 +481,11 @@
     "Do not generate or mutate formal UserAppTemplatePackage from Phase 10D candidate-to-app contract preparation.",
     "Do not treat Phase 10E draft preview, validation, or handoff as formal UserAppTemplatePackage generation, user app package registry write, publication, production app readiness, backend work, camera/AR scope, OpenAI/external API scope, or training approval.",
     "Do not treat Phase 10F official draft gate, gate validation, or gate handoff as formal UserAppTemplatePackage generation, user app package registry write, publication, production app readiness, backend work, camera/AR scope, OpenAI/external API scope, training approval, or automatic builder execution.",
-    "Do not write Phase 10F official draft gate outputs into a user app package registry or production app registry."
+    "Do not write Phase 10F official draft gate outputs into a user app package registry or production app registry.",
+    "Phase 10G must not publish official drafts or write a user app package registry.",
+    "Phase 10G must not replace the current User App Shell package or commit MediaPipe binaries."
   ],
-  "currentPhaseName": "Anonymous Internal Trial Follow-up Iteration",
+  "currentPhaseName": "Official UserAppTemplatePackage Draft Builder",
   "validation": {
     "mediapipeCheck": "passed",
     "typecheck": "passed",
@@ -486,18 +496,15 @@
     "projectContext": "passed",
     "contextPackJson": "passed",
     "browserVerification": "passed",
-    "phase10DScopedTests": "passed",
-    "testFiles": 9,
-    "tests": 28,
-    "phase10DScopedTestFiles": 10,
-    "phase10DScopedTestsCount": 39,
-    "summary": "Phase 10F validation passed: mediapipe:check, scoped Phase 10F tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
-    "updatedAt": "2026-06-18T00:00:00.000+08:00",
-    "phase10FScopedTests": "passed",
-    "phase10FScopedTestFiles": 9,
-    "phase10FScopedTestsCount": 28
+    "phase10GScopedTests": "passed",
+    "testFiles": 11,
+    "tests": 35,
+    "phase10GScopedTestFiles": 11,
+    "phase10GScopedTestsCount": 35,
+    "summary": "Phase 10G validation passed: mediapipe:check, official draft builder scoped tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
+    "updatedAt": "2026-06-19"
   },
-  "updatedAt": "2026-06-16T00:00:00.000+08:00",
+  "updatedAt": "2026-06-19",
   "anonymousTrialDryRunDecision": {
     "phase9GResult": [
       "anonymous internal trial dry run pack with required scenarios",
@@ -589,5 +596,11 @@
     "validationBoundary": "missing source preview validation, missing steps, raw image, personal data, medical/product/final claims, registry write, publish, or mutation blocks",
     "handoffBoundary": "can recommend Phase 10G official draft builder but does not publish or write registry",
     "nextPhase": "Phase 10G - Official UserAppTemplatePackage Draft Builder"
+  },
+  "officialUserAppTemplatePackageDraftBuilderDecision": {
+    "builderBoundary": "Builds a local official UserAppTemplatePackage draft only from 10F gate-ready inputs.",
+    "validationBoundary": "Validation ready means eligible for a future draft publish gate, not publication readiness.",
+    "handoffBoundary": "Handoff does not publish, write registry, or replace the current User App Shell package.",
+    "nextPhase": "Phase 10H - UserAppTemplatePackage Draft Publish Gate"
   }
 }

@@ -1,7 +1,7 @@
 {
-  "fromPhase": "10F",
-  "toPhase": "10G",
-  "summary": "Phase 10F validation passed: mediapipe:check, scoped Phase 10F tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
+  "fromPhase": "10G",
+  "toPhase": "10H",
+  "summary": "Phase 10G validation completed for official UserAppTemplatePackage draft builder scope.",
   "routeDecision": {
     "selectedRoute": "React Web / PWA MVP first",
     "futureAppOwnership": "separate user-facing app surface/repository after a future explicit phase gate",
@@ -153,7 +153,7 @@
     "docs/phases/phase-10F.md",
     "project-state/guardrails.json"
   ],
-  "nextAction": "Proceed to Phase 10G: Official UserAppTemplatePackage Draft Builder.",
+  "nextAction": "Proceed to Phase 10H: UserAppTemplatePackage Draft Publish Gate.",
   "risks": [
     "Letting Phase 9F become real data collection instead of local anonymous preparation",
     "Collecting real names, contact information, photos, health data, sensitive identity data, analytics records, backend records, AI analysis records, upload data, or training data before a future explicit approval gate",
@@ -417,5 +417,9 @@
     "validationBoundary": "missing source preview validation, missing steps, raw image, personal data, medical/product/final claims, registry write, publish, or mutation blocks",
     "handoffBoundary": "can recommend Phase 10G official draft builder but does not publish or write registry",
     "nextPhase": "Phase 10G - Official UserAppTemplatePackage Draft Builder"
+  },
+  "officialUserAppTemplatePackageDraftBuilderDecision": {
+    "nextPhase": "Phase 10H - UserAppTemplatePackage Draft Publish Gate",
+    "boundary": "Draft-only output; no publish, no registry write, no User App Shell package replacement."
   }
 }

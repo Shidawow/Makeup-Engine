@@ -532,3 +532,23 @@ summary. The gate does not appear in Vision Analysis and does not generate
 formal `UserAppTemplatePackage`, write a user app package registry, publish,
 call backend/API services, use camera/AR, or train models. Gate ready means
 eligible for a later builder only.
+
+### Official UserAppTemplatePackage Draft Builder
+
+Phase 10G adds a local draft builder after Phase 10F gate-ready handoff.
+`src/template-engine/officialUserAppTemplatePackageDraft.ts` defines the
+draft-only data shape. `officialUserAppTemplatePackageDraftBuilder.ts` builds a
+draft from a ready gate, source preview, and gate handoff while preserving QA,
+human review, candidate, contract, preview, and gate trace.
+`officialUserAppTemplatePackageDraftValidation.ts` checks draft-only,
+publish-blocked, no registry write, no User App Shell package replacement,
+privacy, raw image, personal data, medical/product/final claim, production
+marker, mutation marker, trace, and JSON round-trip boundaries.
+`officialUserAppTemplatePackageDraftHandoff.ts` creates local next actions for
+a later draft publish gate.
+
+`src/components/template-studio/OfficialUserAppTemplatePackageDraftBuilderPanel.tsx`
+renders the Template Workbench builder, validation, blocked reasons, and
+handoff summary. The builder does not appear in Vision Analysis and does not
+publish, write a user app package registry, replace the current User App Shell
+package, call backend/API services, use camera/AR, or train models.
