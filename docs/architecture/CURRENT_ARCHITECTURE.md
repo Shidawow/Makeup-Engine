@@ -194,6 +194,28 @@ authorize or execute registry writes, publish to the user app, replace the
 current User App Shell package, call backend/API services, use camera/AR, or
 train models.
 
+### Controlled Registry Write Execution Design
+
+Phase 10M adds a local execution design layer after Phase 10L explicit
+authorization gate. `src/template-engine/controlledRegistryWriteExecutionDesign.ts`
+creates design-only preflight checks, planned execution steps, audit plan,
+rollback execution design, write lock requirements, owner authorization trace,
+and trace-preserved design status.
+
+`controlledRegistryWriteExecutionValidation.ts` validates source authorization
+gate readiness, design-only mode, dry-run-only, actual-write-blocked,
+publish-blocked, package-replacement-blocked, audit plan, rollback design, write
+locks, owner authorization trace, unsafe payload boundaries, no actual registry
+write, no User App Shell package replacement, no production marker, and JSON
+round-trip stability. `controlledRegistryWriteExecutionHandoff.ts` summarizes
+next actions for a future Phase 10N real write implementation gate.
+
+`src/components/template-studio/ControlledRegistryWriteExecutionDesignPanel.tsx`
+renders the Template Workbench execution design, validation, and handoff
+summary. The design does not appear in Vision Analysis and does not execute
+registry writes, publish to the user app, replace the current User App Shell
+package, call backend/API services, use camera/AR, or train models.
+
 ### Vision Analysis
 
 `src/vision` owns local face, cosmetic, pixel, region, quality, provider, and pipeline logic. It consumes `TemplateAnalysisSeed` records when they are ready for Vision Analysis.

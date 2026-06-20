@@ -82,3 +82,6 @@ export * from './controlled-user-app-template-package-registry-writer-handoff.ex
 export * from './explicit-registry-write-authorization-checklist.example';
 export * from './explicit-registry-write-authorization-gate.example';
 export * from './explicit-registry-write-authorization-handoff.example';
+export * from './controlled-registry-write-execution-design.example';
+export * from './controlled-registry-write-execution-validation.example';
+export * from './controlled-registry-write-execution-handoff.example';

@@ -5,9 +5,9 @@ Makeup Engine is the makeup template production system for a future makeup coach
 ## Current Position
 
 - Project role: makeup template production system plus a local contract-driven user app shell prototype.
-- Last completed phase: `Phase 10L`.
-- Current completed business phase: `Phase 10L - Explicit Registry Write Authorization Gate`.
-- Next recommended phase: `Phase 10M - Controlled Registry Write Execution Design`.
+- Last completed phase: `Phase 10M`.
+- Current completed business phase: `Phase 10M - Controlled Registry Write Execution Design`.
+- Next recommended phase: `Phase 10N - Real Registry Write Implementation Gate`.
 - Recent recovery milestones retained in phase docs: `Phase 6K`, `Phase 6L`, `Phase 6L-1`, `Phase 7A`, `Phase 7B`, `Phase 7C`, `Phase 7D`, `Phase 7E`, `Phase 7F`, `Phase 7G`, `Phase 7H`, and `Phase 8A`.
 - Historical route-planning milestone: `Phase 8A - Product Route Decision / App MVP Planning`.
 
@@ -63,6 +63,7 @@ SourceImagePackage manifest
 -> UserAppTemplatePackage Registry Write Gate
 -> Controlled UserAppTemplatePackage Registry Writer Draft
 -> Explicit Registry Write Authorization Gate
+-> Controlled Registry Write Execution Design
 -> Phase 8 Roadmap / V1 Non-Goals
 -> Consumption Manifest
 -> Dataset Review
@@ -191,11 +192,15 @@ SourceImagePackage manifest
 116. `docs/product/explicit-registry-write-authorization-checklist.md`
 117. `docs/product/explicit-registry-write-authorization-handoff.md`
 118. `docs/phases/phase-10L.md`
-119. `docs/phases/phase-7H.md`
-120. `project-state/project-state.snapshot.json`
-121. `project-state/provider-handoff.json`
-122. `project-state/latest-handoff.json`
-123. `project-state/active-task.json`
+119. `docs/product/controlled-registry-write-execution-design.md`
+120. `docs/product/controlled-registry-write-execution-validation.md`
+121. `docs/product/controlled-registry-write-execution-handoff.md`
+122. `docs/phases/phase-10M.md`
+123. `docs/phases/phase-7H.md`
+124. `project-state/project-state.snapshot.json`
+125. `project-state/provider-handoff.json`
+126. `project-state/latest-handoff.json`
+127. `project-state/active-task.json`
 
 ## What The System Can Do Now
 

@@ -12,10 +12,10 @@ It produces templates, template evidence, correction records, review state, loca
 
 ## Current Phase
 
-- Current business phase: `Phase 10L completed`
-- Last completed phase: `Phase 10L`
-- Last completed phase name: `Phase 10L - Explicit Registry Write Authorization Gate`
-- Next recommended phase: `Phase 10M - Controlled Registry Write Execution Design`
+- Current business phase: `Phase 10M completed`
+- Last completed phase: `Phase 10M`
+- Last completed phase name: `Phase 10M - Controlled Registry Write Execution Design`
+- Next recommended phase: `Phase 10N - Real Registry Write Implementation Gate`
 
 Historical recovery marker retained for Phase 9C tests: `Phase 9C completed`.
 Historical recovery marker retained for Phase 9E tests: `Phase 9E completed`.
@@ -87,6 +87,7 @@ Real Photo
 -> UserAppTemplatePackage Registry Write Gate
 -> Controlled UserAppTemplatePackage Registry Writer Draft
 -> Explicit Registry Write Authorization Gate
+-> Controlled Registry Write Execution Design
 -> Phase 8 Roadmap / V1 Non-Goals
 -> User App Consumption Manifest
 -> Dataset Review
@@ -164,6 +165,14 @@ Important boundary: `SourceImagePackage` can enter Vision Analysis through opera
   decide future controlled write execution design eligibility only; they do not
   authorize or execute registry writes, publish, replace the current User App
   Shell package, or mark production readiness.
+- `src/template-engine/controlledRegistryWriteExecutionDesign.ts`,
+  `src/template-engine/controlledRegistryWriteExecutionValidation.ts`, and
+  `src/template-engine/controlledRegistryWriteExecutionHandoff.ts`: Phase 10M
+  local controlled registry write execution design, validation, and handoff
+  logic. They define preflight, planned execution steps, audit plan, rollback
+  execution design, and write lock requirements only; they do not execute
+  registry writes, publish, replace the current User App Shell package, or mark
+  production readiness.
 - `src/templates`: schemas, storage, review, corrections, evidence, dataset materialization, source image binding, production batch storage/export, template library storage, and publish package export.
 - `src/template-engine/production`: production queue, state machine, QA rules, rebinding recovery, analysis handoff, review lifecycle, smoke checklist.
 - `src/template-engine/library`: production task to library entry conversion, template versioning, and local library lifecycle.
@@ -435,17 +444,18 @@ Historical marker retained for Phase 10I recovery tests: Phase 10I completed.
 
 Next recommended phase: Phase 10K - Controlled UserAppTemplatePackage Registry Writer Draft.
 
-## Phase 10L Current Capability
+## Phase 10M Current Capability
 
-Phase 10L completed Explicit Registry Write Authorization Gate. It added a
-local authorization gate, checklist, handoff, examples, Template Workbench UI,
-documentation, and recovery state for deciding whether a Phase 10K writer
-validation result is eligible for future controlled write execution design. It
-is not actual write authorization, does not write a registry, does not publish,
-does not replace the current User App Shell package, does not mark production
-readiness, does not call backend/OpenAI/external APIs, does not use camera/AR,
-and does not train models.
+Phase 10M completed Controlled Registry Write Execution Design. It added a
+local execution design, safety validation, handoff, examples, Template Workbench
+UI, documentation, and recovery state for deciding whether a Phase 10L
+authorization gate result is eligible for a future real write implementation
+gate. It is not actual write authorization, does not write a registry, does not
+publish, does not replace the current User App Shell package, does not mark
+production readiness, does not call backend/OpenAI/external APIs, does not use
+camera/AR, and does not train models.
 
 Historical marker retained for Phase 10K recovery tests: Phase 10K completed.
+Historical marker retained for Phase 10L recovery tests: Phase 10L completed.
 
-Next recommended phase: Phase 10M - Controlled Registry Write Execution Design.
+Next recommended phase: Phase 10N - Real Registry Write Implementation Gate.

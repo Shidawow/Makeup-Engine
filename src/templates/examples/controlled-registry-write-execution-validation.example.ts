@@ -1,0 +1,87 @@
+import { validateControlledRegistryWriteExecutionDesign } from '../../template-engine';
+import {
+  controlledRegistryWriteExecutionDesignActualExecutionModeBlockedExample,
+  controlledRegistryWriteExecutionDesignActualRegistryWriteBlockedExample,
+  controlledRegistryWriteExecutionDesignMissingActualWriteBlockedExample,
+  controlledRegistryWriteExecutionDesignMissingAuditPlanExample,
+  controlledRegistryWriteExecutionDesignMissingAuthorizationGateExample,
+  controlledRegistryWriteExecutionDesignMissingDryRunOnlyExample,
+  controlledRegistryWriteExecutionDesignMissingPackageReplacementBlockedExample,
+  controlledRegistryWriteExecutionDesignMissingPublishBlockedExample,
+  controlledRegistryWriteExecutionDesignMissingRollbackDesignExample,
+  controlledRegistryWriteExecutionDesignMissingWriteLockExample,
+  controlledRegistryWriteExecutionDesignProductionMarkerBlockedExample,
+  controlledRegistryWriteExecutionDesignReadyExample,
+  controlledRegistryWriteExecutionDesignShellReplacementBlockedExample,
+  controlledRegistryWriteExecutionDesignWarningExample,
+} from './controlled-registry-write-execution-design.example';
+
+export const controlledRegistryWriteExecutionValidationReadyExample =
+  validateControlledRegistryWriteExecutionDesign(
+    controlledRegistryWriteExecutionDesignReadyExample,
+  );
+
+export const controlledRegistryWriteExecutionValidationWarningExample =
+  validateControlledRegistryWriteExecutionDesign(
+    controlledRegistryWriteExecutionDesignWarningExample,
+  );
+
+export const controlledRegistryWriteExecutionValidationMissingAuthorizationGateExample =
+  validateControlledRegistryWriteExecutionDesign(
+    controlledRegistryWriteExecutionDesignMissingAuthorizationGateExample,
+  );
+
+export const controlledRegistryWriteExecutionValidationMissingDryRunOnlyExample =
+  validateControlledRegistryWriteExecutionDesign(
+    controlledRegistryWriteExecutionDesignMissingDryRunOnlyExample,
+  );
+
+export const controlledRegistryWriteExecutionValidationMissingActualWriteBlockedExample =
+  validateControlledRegistryWriteExecutionDesign(
+    controlledRegistryWriteExecutionDesignMissingActualWriteBlockedExample,
+  );
+
+export const controlledRegistryWriteExecutionValidationMissingPublishBlockedExample =
+  validateControlledRegistryWriteExecutionDesign(
+    controlledRegistryWriteExecutionDesignMissingPublishBlockedExample,
+  );
+
+export const controlledRegistryWriteExecutionValidationMissingPackageReplacementBlockedExample =
+  validateControlledRegistryWriteExecutionDesign(
+    controlledRegistryWriteExecutionDesignMissingPackageReplacementBlockedExample,
+  );
+
+export const controlledRegistryWriteExecutionValidationMissingAuditPlanExample =
+  validateControlledRegistryWriteExecutionDesign(
+    controlledRegistryWriteExecutionDesignMissingAuditPlanExample,
+  );
+
+export const controlledRegistryWriteExecutionValidationMissingRollbackDesignExample =
+  validateControlledRegistryWriteExecutionDesign(
+    controlledRegistryWriteExecutionDesignMissingRollbackDesignExample,
+  );
+
+export const controlledRegistryWriteExecutionValidationMissingWriteLockExample =
+  validateControlledRegistryWriteExecutionDesign(
+    controlledRegistryWriteExecutionDesignMissingWriteLockExample,
+  );
+
+export const controlledRegistryWriteExecutionValidationActualRegistryWriteExample =
+  validateControlledRegistryWriteExecutionDesign(
+    controlledRegistryWriteExecutionDesignActualRegistryWriteBlockedExample,
+  );
+
+export const controlledRegistryWriteExecutionValidationProductionMarkerExample =
+  validateControlledRegistryWriteExecutionDesign(
+    controlledRegistryWriteExecutionDesignProductionMarkerBlockedExample,
+  );
+
+export const controlledRegistryWriteExecutionValidationShellReplacementExample =
+  validateControlledRegistryWriteExecutionDesign(
+    controlledRegistryWriteExecutionDesignShellReplacementBlockedExample,
+  );
+
+export const controlledRegistryWriteExecutionValidationActualExecutionModeExample =
+  validateControlledRegistryWriteExecutionDesign(
+    controlledRegistryWriteExecutionDesignActualExecutionModeBlockedExample,
+  );

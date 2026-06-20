@@ -173,7 +173,11 @@
     "docs/product/explicit-registry-write-authorization-gate.md",
     "docs/product/explicit-registry-write-authorization-checklist.md",
     "docs/product/explicit-registry-write-authorization-handoff.md",
-    "docs/phases/phase-10L.md"
+    "docs/phases/phase-10L.md",
+    "docs/product/controlled-registry-write-execution-design.md",
+    "docs/product/controlled-registry-write-execution-validation.md",
+    "docs/product/controlled-registry-write-execution-handoff.md",
+    "docs/phases/phase-10M.md"
   ],
   "userAppConsumptionOutputs": [
     "UserAppTemplatePackage JSON",
@@ -418,10 +422,10 @@
     "Observation template documentation",
     "Outcome review documentation"
   ],
-  "phase": "10K",
-  "lastCompletedPhase": "10K",
-  "currentPhase": "10K",
-  "nextRecommendedPhase": "10L",
+  "phase": "10M",
+  "lastCompletedPhase": "10M",
+  "currentPhase": "10M",
+  "nextRecommendedPhase": "10N",
   "updatedAt": "2026-06-20",
   "artifacts": [
     "docs/product/internal-trial-learning-summary.md",
@@ -458,7 +462,18 @@
     "docs/product/user-app-template-package-registry-preparation.md",
     "docs/product/user-app-template-package-registry-preparation-validation.md",
     "docs/product/user-app-template-package-registry-preparation-handoff.md",
-    "docs/phases/phase-10I.md"
+    "docs/phases/phase-10I.md",
+    "src/template-engine/controlledRegistryWriteExecutionDesign.ts",
+    "src/template-engine/controlledRegistryWriteExecutionValidation.ts",
+    "src/template-engine/controlledRegistryWriteExecutionHandoff.ts",
+    "src/components/template-studio/ControlledRegistryWriteExecutionDesignPanel.tsx",
+    "src/templates/examples/controlled-registry-write-execution-design.example.ts",
+    "src/templates/examples/controlled-registry-write-execution-validation.example.ts",
+    "src/templates/examples/controlled-registry-write-execution-handoff.example.ts",
+    "docs/product/controlled-registry-write-execution-design.md",
+    "docs/product/controlled-registry-write-execution-validation.md",
+    "docs/product/controlled-registry-write-execution-handoff.md",
+    "docs/phases/phase-10M.md"
   ],
   "userAppEvidenceCollectionPreparationOutputs": [
     "src/user-app/userAppEvidenceCollectionProtocol.ts",
@@ -472,7 +487,7 @@
     "docs/product/internal-trial-evidence-quality-gate.md",
     "docs/phases/phase-9F.md"
   ],
-  "nextRecommendedPhaseName": "Explicit Registry Write Authorization Gate",
+  "nextRecommendedPhaseName": "Real Registry Write Implementation Gate",
   "userAppAnonymousTrialDryRunOutputs": [
     "src/user-app/userAppAnonymousTrialDryRunPack.ts",
     "src/user-app/userAppAnonymousTrialDryRunChecklist.ts",
@@ -529,7 +544,8 @@
     "UserAppPackageDraftPreview handoff metadata"
   ],
   "boundaries": [
-    "Phase 10F OfficialUserAppPackageDraftGateResult and OfficialUserAppPackageDraftGateHandoff are local admin gate metadata, not formal UserAppTemplatePackage exports, user app package registry writes, backend records, or training input."
+    "Phase 10F OfficialUserAppPackageDraftGateResult and OfficialUserAppPackageDraftGateHandoff are local admin gate metadata, not formal UserAppTemplatePackage exports, user app package registry writes, backend records, or training input.",
+    "Phase 10M ControlledRegistryWriteExecutionDesign, ControlledRegistryWriteExecutionValidationResult, and ControlledRegistryWriteExecutionHandoff are local admin design/dry-run metadata, not actual registry writes, not publication, not current User App Shell package replacement, not backend records, and not training input."
   ],
   "sourceArtifacts": [
     "src/template-engine/officialUserAppPackageDraftGate.ts",
@@ -554,9 +570,9 @@
     "docs/product/user-app-template-package-draft-publish-gate-handoff.md",
     "docs/phases/phase-10H.md"
   ],
-  "lastUpdatedPhase": "10K",
-  "currentPhaseId": "10K",
-  "currentPhaseName": "Controlled UserAppTemplatePackage Registry Writer Draft",
+  "lastUpdatedPhase": "10M",
+  "currentPhaseId": "10M",
+  "currentPhaseName": "Controlled Registry Write Execution Design",
   "lastValidation": {
     "mediapipeCheck": "passed",
     "typecheck": "passed",
@@ -567,12 +583,12 @@
     "projectContext": "passed",
     "contextPackJson": "passed",
     "browserVerification": "passed",
-    "phase10KScopedTests": "passed",
+    "phase10MScopedTests": "passed",
     "testFiles": 10,
-    "tests": 36,
-    "phase10KScopedTestFiles": 10,
-    "phase10KScopedTestsCount": 36,
-    "summary": "Phase 10K validation passed: mediapipe:check, controlled registry writer scoped tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
+    "tests": 37,
+    "phase10MScopedTestFiles": 10,
+    "phase10MScopedTestsCount": 37,
+    "summary": "Phase 10M validation passed: mediapipe:check, controlled registry write execution scoped tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
     "updatedAt": "2026-06-20"
   },
   "validation": {
@@ -585,15 +601,15 @@
     "projectContext": "passed",
     "contextPackJson": "passed",
     "browserVerification": "passed",
-    "phase10KScopedTests": "passed",
+    "phase10MScopedTests": "passed",
     "testFiles": 10,
-    "tests": 36,
-    "phase10KScopedTestFiles": 10,
-    "phase10KScopedTestsCount": 36,
-    "summary": "Phase 10K validation passed: mediapipe:check, controlled registry writer scoped tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
+    "tests": 37,
+    "phase10MScopedTestFiles": 10,
+    "phase10MScopedTestsCount": 37,
+    "summary": "Phase 10M validation passed: mediapipe:check, controlled registry write execution scoped tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
     "updatedAt": "2026-06-20"
   },
-  "summary": "Phase 10K validation passed: mediapipe:check, controlled registry writer scoped tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
+  "summary": "Phase 10M validation passed: mediapipe:check, controlled registry write execution scoped tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
   "status": "passed",
   "validationStatus": "passed",
   "userAppTemplatePackageRegistryWriteGateOutputs": [
@@ -613,5 +629,18 @@
     "Controlled registry writer existing entry preview",
     "Controlled registry writer rollback plan",
     "ControlledUserAppTemplatePackageRegistryWriterDraftPanel UI preview"
+  ],
+  "controlledRegistryWriteExecutionDesignOutputs": [
+    "src/template-engine/controlledRegistryWriteExecutionDesign.ts",
+    "src/template-engine/controlledRegistryWriteExecutionValidation.ts",
+    "src/template-engine/controlledRegistryWriteExecutionHandoff.ts",
+    "src/components/template-studio/ControlledRegistryWriteExecutionDesignPanel.tsx",
+    "src/templates/examples/controlled-registry-write-execution-design.example.ts",
+    "src/templates/examples/controlled-registry-write-execution-validation.example.ts",
+    "src/templates/examples/controlled-registry-write-execution-handoff.example.ts",
+    "docs/product/controlled-registry-write-execution-design.md",
+    "docs/product/controlled-registry-write-execution-validation.md",
+    "docs/product/controlled-registry-write-execution-handoff.md",
+    "docs/phases/phase-10M.md"
   ]
 }

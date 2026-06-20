@@ -114,6 +114,11 @@
   create a production package, replace the current User App Shell package, call
   backend/API services, call OpenAI or external AI/CV APIs, train models, or
   treat gate readiness as real write approval.
+- Phase 10M controlled registry write execution design is design/dry-run-only
+  metadata only. It must not authorize or execute registry writes, publish,
+  create a production package, replace the current User App Shell package, call
+  backend/API services, call OpenAI or external AI/CV APIs, train models, or
+  treat design readiness as real write implementation approval.
 
 ## Module Boundaries
 
@@ -284,6 +289,27 @@ runtime asset names, personal data, product shade claims, medical claims,
 unsupported final claims, actual registry write markers, production package
 markers, User App Shell package replacement markers, missing reviewer
 acknowledgement, missing owner authorization requirement, and unstable JSON.
+
+## Phase 10M Controlled Registry Write Execution Design Boundary
+
+Phase 10M controlled execution design, validation, and handoff are local
+administrator aids only. Design ready means eligible for a future real write
+implementation gate; it is not actual write authorization, registry write
+execution, publication, production readiness, production package creation, or a
+User App Shell package replacement.
+
+Phase 10M may use only Phase 10L authorization-gate-ready or
+authorization-gate-ready-with-warnings sources. It must preserve
+design/dry-run-only, actual-write-blocked, publish-blocked,
+package-replacement-blocked, audit plan, rollback execution design, write lock
+requirements, future owner authorization required, no-production-package, trace,
+privacy, User App contract boundary, and JSON round-trip stability. It must
+block raw image references, local paths, object URLs, base64, MediaPipe runtime
+asset names, personal data, product shade claims, medical claims, unsupported
+final claims, actual registry write markers, production package markers, User
+App Shell package replacement markers, missing audit plan, missing rollback
+design, missing write lock requirements, missing owner authorization trace, and
+unstable JSON.
 
 Candidate-to-app preparation can preserve title, summary, style tags,
 difficulty, estimated time, suitable scenarios, tools, product placeholders,

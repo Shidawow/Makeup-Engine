@@ -1214,3 +1214,44 @@ The authorization gate can now decide whether a future controlled write
 execution design may be drafted. Phase 10M should design that execution path
 without executing registry writes, publishing, replacing the User App Shell
 package, or marking production readiness.
+
+## Phase 10M - Controlled Registry Write Execution Design
+
+Added a local controlled registry write execution design after Phase 10L
+explicit authorization gate.
+
+What changed:
+
+- Added execution design model for Phase 10L authorization-gate-ready sources,
+  design-only execution mode, dry-run-only, actual-write-blocked,
+  publish-blocked, package-replacement-blocked, preflight checks, planned
+  execution steps, audit plan, rollback execution design, write lock
+  requirements, owner authorization trace, unsafe payload blocking, no actual
+  registry write, no User App Shell package replacement, no production marker,
+  and JSON round-trip stability.
+- Added execution safety validation for source authorization readiness, safety
+  flags, design-only mode, audit plan, rollback design, write locks, owner
+  authorization trace, trace preservation, unsafe payload blocking, and JSON
+  round-trip stability.
+- Added execution handoff next actions for a future real write implementation
+  gate, execution plan revision, audit plan revision, rollback design revision,
+  write lock review, owner authorization review, design-only retention, or
+  blocking.
+- Added Template Workbench panel for 受控 Registry 写入执行设计 / Safety
+  Validation / Execution Handoff.
+- Kept Vision Analysis free of controlled execution design UI and kept ordinary
+  User App Shell paths free of administrator execution design terminology.
+
+What still cannot happen:
+
+- Phase 10M design ready is not actual write authorization, not registry write
+  execution, not publication, not production readiness, not backend work, not
+  camera/AR scope, not OpenAI/external API scope, not training input, and not a
+  replacement for the current User App Shell package.
+
+Why Phase 10N follows:
+
+The execution design can now describe preflight, audit, rollback, and write-lock
+requirements without mutation. Phase 10N should add a real registry write
+implementation gate while still preventing silent writes, publication, package
+replacement, backend work, or production readiness claims.

@@ -573,6 +573,66 @@
       "status": "passed",
       "phase": "10L",
       "notes": "Phase 10L JSON context pack command passed."
+    },
+    {
+      "command": "npm run mediapipe:check",
+      "status": "passed",
+      "phase": "10M",
+      "notes": "Phase 10M precheck passed before implementation."
+    },
+    {
+      "command": "npm run test -- tests/controlled-registry-write-execution-design.test.ts tests/controlled-registry-write-execution-validation.test.ts tests/controlled-registry-write-execution-handoff.test.ts tests/controlled-registry-write-execution-design-panel.test.tsx tests/template-studio-tab-boundary.test.tsx",
+      "status": "passed",
+      "phase": "10M",
+      "notes": "Initial Phase 10M model, panel, and tab boundary tests passed."
+    },
+    {
+      "command": "npm run typecheck",
+      "status": "passed",
+      "phase": "10M",
+      "notes": "Phase 10M final typecheck passed."
+    },
+    {
+      "command": "npm run build",
+      "status": "passed",
+      "phase": "10M",
+      "notes": "Phase 10M final build passed with existing Vite chunk-size warning."
+    },
+    {
+      "command": "Browser verification of Phase 10M Template Studio tab boundaries",
+      "status": "passed",
+      "phase": "10M",
+      "notes": "Vision Analysis excludes controlled registry write execution design; Template Workbench shows 10M design/validation/handoff and no write/publish/shell replacement copy."
+    },
+    {
+      "command": "npm run test -- tests/controlled-registry-write-execution-design.test.ts tests/controlled-registry-write-execution-validation.test.ts tests/controlled-registry-write-execution-handoff.test.ts tests/controlled-registry-write-execution-design-panel.test.tsx tests/phase-10M-documentation-recovery.test.ts tests/explicit-registry-write-authorization-gate.test.ts tests/explicit-registry-write-authorization-gate-panel.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
+      "status": "passed",
+      "phase": "10M",
+      "notes": "10 files / 37 tests passed."
+    },
+    {
+      "command": "npm run project:status",
+      "status": "passed",
+      "phase": "10M",
+      "notes": "Phase 10M final project status command passed."
+    },
+    {
+      "command": "npm run project:context",
+      "status": "passed",
+      "phase": "10M",
+      "notes": "Phase 10M final project context command passed."
+    },
+    {
+      "command": "node scripts/project-status.mjs --json",
+      "status": "passed",
+      "phase": "10M",
+      "notes": "Phase 10M JSON project status command passed."
+    },
+    {
+      "command": "node scripts/context-pack.mjs --json",
+      "status": "passed",
+      "phase": "10M",
+      "notes": "Phase 10M JSON context pack command passed."
     }
   ],
   "lastUpdatedPhase": "10L",

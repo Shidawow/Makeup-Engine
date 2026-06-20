@@ -25,6 +25,7 @@ Real Photo
 -> UserAppTemplatePackage Registry Write Gate
 -> Controlled UserAppTemplatePackage Registry Writer Draft
 -> Explicit Registry Write Authorization Gate
+-> Controlled Registry Write Execution Design
 -> Editable Masks
 -> Human Correction
 -> Template Evidence
@@ -110,6 +111,15 @@ Real Photo
   JSON round-trip boundaries. It does not authorize or execute a registry write,
   publish, replace the current User App Shell package, or mark production
   readiness.
+- `Controlled Registry Write Execution Design`: Phase 10M local execution design,
+  validation, and handoff branch. It converts a Phase 10L authorization gate
+  ready source into design-only preflight, planned execution steps, audit plan,
+  rollback execution design, write lock requirements, and trace-preserved
+  handoff while preserving design/dry-run-only, no-actual-write,
+  no-publication, no-shell-package-replacement, no-production-package, future
+  owner authorization, and JSON round-trip boundaries. It does not execute a
+  registry write, publish, replace the current User App Shell package, or mark
+  production readiness.
 - `Editable Masks`: generated and human-editable mask artifacts.
 - `Human Correction`: correction records produced by human review and mask editing.
 - `Template Evidence`: structured evidence supporting extracted template decisions.

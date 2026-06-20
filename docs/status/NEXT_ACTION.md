@@ -2,27 +2,29 @@
 
 ## What To Do Next
 
-Proceed to Phase 10M: Controlled Registry Write Execution Design.
+Proceed to Phase 10N: Real Registry Write Implementation Gate.
 
 ## Why
 
-Phase 10L adds a local explicit registry write authorization gate over the Phase
-10K writer validation result while preserving dry-run-only, no actual registry
-write, no publication, no production package, future owner authorization, and no
-User App Shell package replacement boundaries. The next safe step is a
-controlled write execution design that can describe a future execution path
+Phase 10M adds a local controlled registry write execution design over the Phase
+10L explicit authorization gate result while preserving design/dry-run-only, no
+actual registry write, no publication, no production package, future owner
+authorization, audit plan, rollback design, write lock requirements, and no User
+App Shell package replacement boundaries. The next safe step is a real write
+implementation gate that can review whether implementation may be designed
 without silently writing, publishing, or replacing anything.
 
-## Recommended 10M Scope
+## Recommended 10N Scope
 
-- Design a future controlled registry write execution flow from the Phase 10L
-  authorization gate result without executing it.
-- Keep execution design local, deterministic, reviewable, explicitly owner-gated,
-  and blocked from automatic publication, production replacement, or
-  uncontrolled registry mutation.
+- Gate any future real registry write implementation design from the Phase 10M
+  execution design result without executing it.
+- Keep implementation-gate work local, deterministic, reviewable, explicitly
+  owner-gated, and blocked from automatic publication, production replacement,
+  or uncontrolled registry mutation.
 - Preserve QA trace, human review trace, privacy trace, candidate trace,
   contract trace, preview trace, official draft trace, publish gate trace, and
-  registry preparation / write gate / writer draft / authorization gate trace.
+  registry preparation / write gate / writer draft / authorization gate /
+  execution design trace.
 - Continue to avoid automatic publication, backend work, online release,
   production readiness, or current User App Shell package replacement.
 
@@ -46,6 +48,9 @@ without silently writing, publishing, or replacing anything.
 - Do not treat 10L explicit authorization gate readiness as actual registry
   write authorization, User App Shell package replacement, production readiness,
   or publication.
+- Do not treat 10M controlled registry write execution design readiness as
+  actual registry write authorization, User App Shell package replacement,
+  production readiness, registry write execution, or publication.
 - Do not execute a user app package registry write unless a later phase
   explicitly implements a controlled writer after separate authorization.
 - Do not add backend, database, account system, cloud sync, analytics, camera
@@ -88,18 +93,22 @@ Read these files first:
 25. `docs/product/explicit-registry-write-authorization-gate.md`
 26. `docs/product/explicit-registry-write-authorization-checklist.md`
 27. `docs/product/explicit-registry-write-authorization-handoff.md`
-28. `docs/phases/phase-10F.md`
-29. `docs/phases/phase-10G.md`
-30. `docs/phases/phase-10H.md`
-31. `docs/phases/phase-10I.md`
-32. `docs/phases/phase-10J.md`
-33. `docs/phases/phase-10K.md`
-34. `docs/phases/phase-10L.md`
-35. `project-state/project-state.snapshot.json`
-36. `project-state/latest-handoff.json`
-37. `project-state/provider-handoff.json`
-38. `project-state/active-task.json`
-39. `project-state/guardrails.json`
+28. `docs/product/controlled-registry-write-execution-design.md`
+29. `docs/product/controlled-registry-write-execution-validation.md`
+30. `docs/product/controlled-registry-write-execution-handoff.md`
+31. `docs/phases/phase-10F.md`
+32. `docs/phases/phase-10G.md`
+33. `docs/phases/phase-10H.md`
+34. `docs/phases/phase-10I.md`
+35. `docs/phases/phase-10J.md`
+36. `docs/phases/phase-10K.md`
+37. `docs/phases/phase-10L.md`
+38. `docs/phases/phase-10M.md`
+39. `project-state/project-state.snapshot.json`
+40. `project-state/latest-handoff.json`
+41. `project-state/provider-handoff.json`
+42. `project-state/active-task.json`
+43. `project-state/guardrails.json`
 
 Then run:
 

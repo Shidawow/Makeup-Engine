@@ -1,6 +1,8 @@
 import type { FaceMeshRegionQaReport } from '../../vision';
 import {
   buildTemplateStudioWorkflowState,
+  createControlledRegistryWriteExecutionDesign,
+  createControlledRegistryWriteExecutionHandoff,
   createControlledUserAppTemplatePackageRegistryWriterDraft,
   createControlledUserAppTemplatePackageRegistryWriterHandoff,
   createExplicitRegistryWriteAuthorizationChecklist,
@@ -29,6 +31,7 @@ import {
   MakeupTemplateDraftReport,
   RuleBasedStepSequence,
   validateCandidateToAppPackageContract,
+  validateControlledRegistryWriteExecutionDesign,
   validateControlledUserAppTemplatePackageRegistryWriterDraft,
   validateOfficialUserAppTemplatePackageDraft,
   validateUserAppPackageDraftPreview,
@@ -52,6 +55,7 @@ import { UserAppTemplatePackageRegistryPreparationPanel } from './UserAppTemplat
 import { UserAppTemplatePackageRegistryWriteGatePanel } from './UserAppTemplatePackageRegistryWriteGatePanel';
 import { ControlledUserAppTemplatePackageRegistryWriterDraftPanel } from './ControlledUserAppTemplatePackageRegistryWriterDraftPanel';
 import { ExplicitRegistryWriteAuthorizationGatePanel } from './ExplicitRegistryWriteAuthorizationGatePanel';
+import { ControlledRegistryWriteExecutionDesignPanel } from './ControlledRegistryWriteExecutionDesignPanel';
 
 export interface FaceMeshMakeupIntelligencePanelProps {
   regionQa: FaceMeshRegionQaReport | null;
@@ -319,6 +323,32 @@ export function FaceMeshMakeupIntelligencePanel({
             </p>
           </div>
         </div>
+        <div className="mt-3 grid gap-2 rounded-md border border-cyan-200 bg-cyan-50 p-3 text-sm text-cyan-900 md:grid-cols-4">
+          <div>
+            <p className="font-semibold">受控 Registry 写入执行设计</p>
+            <p className="mt-1 text-xs leading-5">
+              Execution Design blocked：缺少 10L authorization gate ready。
+            </p>
+          </div>
+          <div>
+            <p className="font-semibold">Preflight / Steps</p>
+            <p className="mt-1 text-xs leading-5">
+              design / dry-run only；只设计 preflight 和 planned execution steps，不是实际写入。
+            </p>
+          </div>
+          <div>
+            <p className="font-semibold">Audit / Rollback</p>
+            <p className="mt-1 text-xs leading-5">
+              需要 audit plan、rollback design 和 write lock requirements。
+            </p>
+          </div>
+          <div>
+            <p className="font-semibold">Execution Handoff</p>
+            <p className="mt-1 text-xs leading-5">
+              不会写入 registry，不会发布，也不会替换当前用户 App 包。未来真实执行仍需老板单独授权。
+            </p>
+          </div>
+        </div>
       </section>
     );
   }
@@ -469,6 +499,20 @@ export function FaceMeshMakeupIntelligencePanel({
       gate: explicitRegistryWriteAuthorizationGate,
       checklist: explicitRegistryWriteAuthorizationChecklist,
     });
+  const controlledRegistryWriteExecutionDesign =
+    createControlledRegistryWriteExecutionDesign({
+      authorizationGate: explicitRegistryWriteAuthorizationGate,
+      authorizationHandoff: explicitRegistryWriteAuthorizationHandoff,
+    });
+  const controlledRegistryWriteExecutionValidation =
+    validateControlledRegistryWriteExecutionDesign(
+      controlledRegistryWriteExecutionDesign,
+    );
+  const controlledRegistryWriteExecutionHandoff =
+    createControlledRegistryWriteExecutionHandoff({
+      design: controlledRegistryWriteExecutionDesign,
+      validation: controlledRegistryWriteExecutionValidation,
+    });
 
   return (
     <section className="grid gap-4">
@@ -617,6 +661,11 @@ export function FaceMeshMakeupIntelligencePanel({
         checklist={explicitRegistryWriteAuthorizationChecklist}
         gate={explicitRegistryWriteAuthorizationGate}
         handoff={explicitRegistryWriteAuthorizationHandoff}
+      />
+      <ControlledRegistryWriteExecutionDesignPanel
+        design={controlledRegistryWriteExecutionDesign}
+        handoff={controlledRegistryWriteExecutionHandoff}
+        validation={controlledRegistryWriteExecutionValidation}
       />
     </section>
   );
