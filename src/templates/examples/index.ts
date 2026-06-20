@@ -91,3 +91,6 @@ export * from './real-registry-write-implementation-handoff.example';
 export * from './real-registry-write-implementation-draft.example';
 export * from './real-registry-write-implementation-draft-validation.example';
 export * from './real-registry-write-implementation-draft-handoff.example';
+export * from './final-real-write-review-gate.example';
+export * from './final-real-write-review-checklist.example';
+export * from './final-real-write-review-handoff.example';

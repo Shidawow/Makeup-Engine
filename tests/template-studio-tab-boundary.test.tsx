@@ -51,6 +51,8 @@ describe('Template Studio tab boundary', () => {
     expect(html).not.toContain('real write implementation gate');
     expect(html).not.toContain('真实 Registry 写入实现草稿');
     expect(html).not.toContain('real write implementation draft');
+    expect(html).not.toContain('最终真实写入复核闸门');
+    expect(html).not.toContain('final real write review gate');
   });
 
   it('tells the template workbench to return to Vision Analysis when Region QA is blocked', () => {
@@ -160,6 +162,17 @@ describe('Template Studio tab boundary', () => {
     expect(html).toContain(
       'Implementation draft requires a ready Phase 10N implementation gate',
     );
+    expect(html).toContain('最终真实写入复核闸门');
+    expect(html).toContain('老板授权范围：只授权进入复核闸门');
+    expect(html).toContain('不授权真实写入 registry');
+    expect(html).toContain('不授权发布');
+    expect(html).toContain('不授权替换当前用户 App 包');
+    expect(html).toContain('Final Review Checklist');
+    expect(html).toContain('Final Review Handoff');
+    expect(html).toContain('final_real_write_review_gate_blocked');
+    expect(html).toContain(
+      'Final real write review gate requires a ready Phase 10O implementation draft validation result',
+    );
     expect(html).not.toContain('AI 已确认');
     expect(html).not.toContain('已生成正式用户模板包');
     expect(html).not.toContain('已生成正式 UserAppTemplatePackage');
@@ -220,6 +233,10 @@ describe('Template Studio tab boundary', () => {
     expect(userPath).not.toContain('真实 Registry 写入实现草稿');
     expect(userPath).not.toContain('real write implementation draft');
     expect(userPath).not.toContain('Implementation Draft');
+    expect(userPath).not.toContain('最终真实写入复核闸门');
+    expect(userPath).not.toContain('final real write review gate');
+    expect(userPath).not.toContain('Final Review Checklist');
+    expect(userPath).not.toContain('Final Review Handoff');
     expect(userPath).not.toContain('production writer');
   });
 });

@@ -8,6 +8,9 @@ import {
   createExplicitRegistryWriteAuthorizationChecklist,
   createExplicitRegistryWriteAuthorizationGate,
   createExplicitRegistryWriteAuthorizationHandoff,
+  createFinalRealWriteReviewChecklist,
+  createFinalRealWriteReviewGate,
+  createFinalRealWriteReviewHandoff,
   createRealRegistryWriteImplementationChecklist,
   createRealRegistryWriteImplementationDraft,
   createRealRegistryWriteImplementationDraftHandoff,
@@ -64,6 +67,7 @@ import { ExplicitRegistryWriteAuthorizationGatePanel } from './ExplicitRegistryW
 import { ControlledRegistryWriteExecutionDesignPanel } from './ControlledRegistryWriteExecutionDesignPanel';
 import { RealRegistryWriteImplementationGatePanel } from './RealRegistryWriteImplementationGatePanel';
 import { RealRegistryWriteImplementationDraftPanel } from './RealRegistryWriteImplementationDraftPanel';
+import { FinalRealWriteReviewGatePanel } from './FinalRealWriteReviewGatePanel';
 
 export interface FaceMeshMakeupIntelligencePanelProps {
   regionQa: FaceMeshRegionQaReport | null;
@@ -416,6 +420,32 @@ export function FaceMeshMakeupIntelligencePanel({
             </p>
           </div>
         </div>
+        <div className="mt-3 grid gap-2 rounded-md border border-emerald-200 bg-emerald-50 p-3 text-sm text-emerald-900 md:grid-cols-4">
+          <div>
+            <p className="font-semibold">最终真实写入复核闸门</p>
+            <p className="mt-1 text-xs leading-5">
+              Final Review Gate blocked：缺少 10O implementation draft validation ready。
+            </p>
+          </div>
+          <div>
+            <p className="font-semibold">老板授权范围</p>
+            <p className="mt-1 text-xs leading-5">
+              只授权进入复核闸门；不授权真实写入 registry、不授权发布、不授权替换当前用户 App 包。
+            </p>
+          </div>
+          <div>
+            <p className="font-semibold">Final Review Checklist</p>
+            <p className="mt-1 text-xs leading-5">
+              复核 dry-run only、no actual write、no publish、no production writer。
+            </p>
+          </div>
+          <div>
+            <p className="font-semibold">Final Review Handoff</p>
+            <p className="mt-1 text-xs leading-5">
+              只可进入未来真实写入执行授权阶段；不是实际写入。
+            </p>
+          </div>
+        </div>
       </section>
     );
   }
@@ -609,6 +639,18 @@ export function FaceMeshMakeupIntelligencePanel({
       draft: realRegistryWriteImplementationDraft,
       validation: realRegistryWriteImplementationDraftValidation,
     });
+  const finalRealWriteReviewChecklist = createFinalRealWriteReviewChecklist({
+    draft: realRegistryWriteImplementationDraft,
+    validation: realRegistryWriteImplementationDraftValidation,
+  });
+  const finalRealWriteReviewGate = createFinalRealWriteReviewGate({
+    draft: realRegistryWriteImplementationDraft,
+    validation: realRegistryWriteImplementationDraftValidation,
+  });
+  const finalRealWriteReviewHandoff = createFinalRealWriteReviewHandoff({
+    gate: finalRealWriteReviewGate,
+    checklist: finalRealWriteReviewChecklist,
+  });
 
   return (
     <section className="grid gap-4">
@@ -772,6 +814,11 @@ export function FaceMeshMakeupIntelligencePanel({
         draft={realRegistryWriteImplementationDraft}
         validation={realRegistryWriteImplementationDraftValidation}
         handoff={realRegistryWriteImplementationDraftHandoff}
+      />
+      <FinalRealWriteReviewGatePanel
+        gate={finalRealWriteReviewGate}
+        checklist={finalRealWriteReviewChecklist}
+        handoff={finalRealWriteReviewHandoff}
       />
     </section>
   );

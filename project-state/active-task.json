@@ -1,11 +1,11 @@
 {
   "schemaVersion": "active-task.v1",
-  "taskId": "phase-10o-real-registry-write-implementation-draft",
-  "title": "Phase 10O - Real Registry Write Implementation Draft",
+  "taskId": "phase-10p-final-real-write-review-gate",
+  "title": "Phase 10P - Final Real Write Review Gate",
   "status": "completed",
   "ownerRole": "Codex",
   "createdBy": "Codex",
-  "phase": "10O",
+  "phase": "10P",
   "recommendedProfile": "native-gpt-codex-xhigh-reasoning",
   "allowedDirectories": [
     "src/vision",
@@ -30,18 +30,19 @@
     "npm run project:context",
     "node scripts/project-status.mjs --json",
     "node scripts/context-pack.mjs --json",
-    "npm run test -- tests/real-registry-write-implementation-draft.test.ts tests/real-registry-write-implementation-draft-validation.test.ts tests/real-registry-write-implementation-draft-handoff.test.ts tests/real-registry-write-implementation-draft-panel.test.tsx tests/phase-10O-documentation-recovery.test.ts tests/real-registry-write-implementation-gate.test.ts tests/real-registry-write-implementation-gate-panel.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
+    "npm run test -- tests/final-real-write-review-gate.test.ts tests/final-real-write-review-checklist.test.ts tests/final-real-write-review-handoff.test.ts tests/final-real-write-review-gate-panel.test.tsx tests/template-studio-tab-boundary.test.tsx tests/phase-10P-documentation-recovery.test.ts tests/real-registry-write-implementation-draft.test.ts tests/real-registry-write-implementation-draft-validation.test.ts tests/real-registry-write-implementation-draft-handoff.test.ts tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
   ],
   "completionDefinition": [
-    "Phase 10O adds real registry write implementation draft, validation, handoff, fixtures, UI, docs, and project-state updates.",
-    "Implementation draft ready means eligible for a future final real write review gate only; it is not actual registry write, production writer readiness, or execution.",
-    "10O does not write registry, publish, create a production package, replace the current User App Shell package, add backend, camera, AR, OpenAI/external APIs, training, runtime dependencies, or commit MediaPipe binaries."
+    "Final real write review gate, checklist, and handoff are implemented as local administrator review-gate-only metadata.",
+    "Owner authorization scope A is preserved and does not authorize actual registry write, publish, production writer creation, or User App Shell package replacement.",
+    "Template Workbench shows 10P final review gate while Vision Analysis and ordinary user paths do not expose final write review terms.",
+    "Documentation, provider prompts, project-state, and scoped tests are updated to 10P."
   ],
   "dependsOn": [
     "10N Real Registry Write Implementation Gate"
   ],
-  "nextRecommendedTask": "Phase 10P - Final Real Write Review Gate",
-  "updatedAt": "2026-06-20",
+  "nextRecommendedTask": "Phase 10Q - Real Write Execution Authorization",
+  "updatedAt": "2026-06-20T00:00:00.000Z",
   "validationStatus": "passed",
   "lastValidation": {
     "mediapipeCheck": "passed",
@@ -53,13 +54,12 @@
     "projectContext": "passed",
     "contextPackJson": "passed",
     "browserVerification": "passed",
-    "phase10OScopedTests": "passed",
-    "testFiles": 10,
-    "tests": 36,
-    "phase10OScopedTestFiles": 10,
-    "phase10OScopedTestsCount": 36,
-    "summary": "Phase 10O validation passed: mediapipe:check, real registry write implementation draft scoped tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
-    "updatedAt": "2026-06-20"
+    "phase10PScopedTests": "passed",
+    "testFiles": 12,
+    "tests": 48,
+    "phase10PScopedTestFiles": 12,
+    "phase10PScopedTestsCount": 48,
+    "summary": "Phase 10P validation passed: mediapipe:check, final real write review gate scoped tests, typecheck, build, browser verification, project status/context, and JSON status/context commands."
   },
   "validation": {
     "mediapipeCheck": "passed",
@@ -71,21 +71,20 @@
     "projectContext": "passed",
     "contextPackJson": "passed",
     "browserVerification": "passed",
-    "phase10OScopedTests": "passed",
-    "testFiles": 10,
-    "tests": 36,
-    "phase10OScopedTestFiles": 10,
-    "phase10OScopedTestsCount": 36,
-    "summary": "Phase 10O validation passed: mediapipe:check, real registry write implementation draft scoped tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
-    "updatedAt": "2026-06-20"
+    "phase10PScopedTests": "passed",
+    "testFiles": 12,
+    "tests": 48,
+    "phase10PScopedTestFiles": 12,
+    "phase10PScopedTestsCount": 48,
+    "summary": "Phase 10P validation passed: mediapipe:check, final real write review gate scoped tests, typecheck, build, browser verification, project status/context, and JSON status/context commands."
   },
-  "summary": "Phase 10O validation passed: mediapipe:check, real registry write implementation draft scoped tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
+  "summary": "Phase 10P validation passed: mediapipe:check, final real write review gate scoped tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
   "completed": true,
-  "nextTask": "Phase 10P - Final Real Write Review Gate",
-  "lastUpdatedPhase": "10O",
-  "currentPhaseId": "10O",
-  "lastCompletedPhase": "10O",
-  "nextRecommendedPhase": "10P",
-  "nextRecommendedPhaseName": "Final Real Write Review Gate",
+  "nextTask": "Phase 10Q - Real Write Execution Authorization",
+  "lastUpdatedPhase": "10P",
+  "currentPhaseId": "10P",
+  "lastCompletedPhase": "10P",
+  "nextRecommendedPhase": "10Q",
+  "nextRecommendedPhaseName": "Real Write Execution Authorization",
   "taskStatus": "completed"
 }

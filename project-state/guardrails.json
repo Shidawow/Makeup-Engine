@@ -1,5 +1,5 @@
 {
-  "phase": "10O",
+  "phase": "10P",
   "guardrails": [
     {
       "id": "source-image-not-training-data",
@@ -796,6 +796,34 @@
     {
       "id": "phase_10o_future_owner_authorization_required",
       "rule": "Any final real write review gate after Phase 10O still requires separate owner authorization."
+    },
+    {
+      "id": "phase_10p_review_gate_only",
+      "rule": "Phase 10P is a final real write review gate only and must not authorize or execute actual registry writes."
+    },
+    {
+      "id": "phase_10p_owner_scope_a_only",
+      "rule": "Phase 10P owner authorization scope A only allows entering the final review gate and does not authorize real registry write, publish, or User App Shell package replacement."
+    },
+    {
+      "id": "phase_10p_no_actual_registry_write",
+      "rule": "Phase 10P must not execute, persist, or mark actual UserAppTemplatePackage registry writes."
+    },
+    {
+      "id": "phase_10p_no_publish",
+      "rule": "Phase 10P must not publish to the user app or mark anything live."
+    },
+    {
+      "id": "phase_10p_no_shell_package_replacement",
+      "rule": "Phase 10P must not replace the current User App Shell package."
+    },
+    {
+      "id": "phase_10p_no_production_writer",
+      "rule": "Phase 10P must not create, execute, or claim production writer readiness."
+    },
+    {
+      "id": "phase_10p_future_owner_authorization_required",
+      "rule": "Any real write execution after Phase 10P still requires separate future owner authorization."
     }
   ],
   "legacyFrozenModules": [
@@ -804,5 +832,5 @@
     "src/intelligence/runtime"
   ],
   "externalApiUsageAllowedInDoc1": false,
-  "updatedAt": "2026-06-20"
+  "updatedAt": "2026-06-20T00:00:00.000Z"
 }

@@ -2,18 +2,19 @@
 
 ## Current Phase
 
-Phase 10O: Real Registry Write Implementation Draft is complete.
+Phase 10P: Final Real Write Review Gate is complete.
 
-Last completed business phase: Phase 10O.
+Last completed business phase: Phase 10P.
 
-Next recommended phase: Phase 10P, Final Real Write Review Gate.
+Next recommended phase: Phase 10Q, Real Write Execution Authorization.
 
-Phase 10O adds a local administrator-only real registry write implementation
-draft after the Phase 10N implementation gate. Draft ready means eligible for a
-future final real write review gate only. It is still not actual registry write,
-not production writer readiness, not registry write execution, not publication,
-not production package creation, not User App Shell package replacement, not
-backend service, and not a production app readiness marker.
+Phase 10P adds a local administrator-only final real write review gate after
+Phase 10O implementation draft validation. Final review ready means eligible for
+a future real write execution authorization phase only. It is still not actual
+registry write authorization, not production writer readiness, not registry
+write execution, not publication, not production package creation, not User App
+Shell package replacement, not backend service, and not a production app
+readiness marker.
 
 ## What The System Can Do
 
@@ -92,6 +93,11 @@ backend service, and not a production app readiness marker.
   publish, no User App Shell package replacement, no production package, owner
   authorization trace, implementation gate trace, and JSON round-trip
   boundaries.
+- Review Phase 10O implementation draft validation through Phase 10P final real
+  write review gate, checklist, and handoff while preserving owner
+  authorization as review-gate-only, no actual registry write, no production
+  writer, no publish, no User App Shell package replacement, no production
+  package, separate future owner authorization, and JSON round-trip boundaries.
 - Render compact Template Studio workflow, candidate package, candidate-to-app,
   user app package draft preview, official draft gate, and official draft
   builder, draft publish gate, registry preparation, and registry write gate
@@ -153,6 +159,10 @@ backend service, and not a production app readiness marker.
   validation, or handoff as actual registry write, production writer readiness,
   registry write execution, publication, production readiness, production
   package creation, or replacement for the current User App Shell package.
+- It cannot treat Phase 10P final real write review gate readiness, checklist,
+  or handoff as actual registry write authorization, registry write execution,
+  production writer readiness, publication, production readiness, production
+  package creation, or replacement for the current User App Shell package.
 - It cannot generate or mutate `UserAppTemplatePackage` from FaceMesh QA,
   candidates, generated steps, draft QA, human review, candidate handoff,
   candidate package handoff, app contract preparation, draft preview, validation,
@@ -162,7 +172,7 @@ backend service, and not a production app readiness marker.
 - It cannot request camera permissions or call browser camera APIs.
 - It cannot add backend, database, accounts, analytics, AR, OpenAI API,
   external AI/CV APIs, service worker, native app scope, or new runtime
-  dependencies in Phase 10O.
+  dependencies in Phase 10P.
 - It cannot commit local MediaPipe `.task` or `.wasm` files from
   `public/mediapipe/**`.
 - It cannot modify legacy `src/engine`, `src/runtime`, or
@@ -180,7 +190,8 @@ backend service, and not a production app readiness marker.
   preparation, Phase 10J registry write gate, Phase 10K controlled registry
   writer draft, Phase 10L explicit registry write authorization gate, and Phase
   10M controlled registry write execution design, Phase 10N real registry write
-  implementation gate, and Phase 10O real registry write implementation draft.
+  implementation gate, Phase 10O real registry write implementation draft, and
+  Phase 10P final real write review gate.
 - `src/components/template-studio`: active operator UI with compact Vision
   Analysis to Template Workbench workflow surfaces.
 - `src/components/demo`: Vision Analysis demo with readiness summary and
@@ -195,7 +206,7 @@ backend service, and not a production app readiness marker.
 
 ## Recent Validation
 
-Phase 10O validation must include:
+Phase 10P validation must include:
 
 ```bash
 npm run mediapipe:check
@@ -211,10 +222,10 @@ The latest completed validation is recorded in `project-state/test-status.json`.
 
 ## Next Phase Recommendation
 
-Proceed to Phase 10P: Final Real Write Review Gate.
+Proceed to Phase 10Q: Real Write Execution Authorization.
 
-Phase 10P may review the Phase 10O implementation draft through a final real
-write review gate, still without silently executing a registry write,
-publishing, adding backend work, marking production readiness, creating a
-production writer, or replacing the current User App Shell package unless a
-later explicit execution phase is approved.
+Phase 10Q may review whether a separate real write execution authorization phase
+should be opened after the Phase 10P final review gate, still without silently
+executing a registry write, publishing, adding backend work, marking production
+readiness, creating a production writer, or replacing the current User App Shell
+package unless a later explicit execution phase is approved.
