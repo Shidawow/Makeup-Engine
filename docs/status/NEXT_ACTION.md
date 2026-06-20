@@ -2,23 +2,23 @@
 
 ## What To Do Next
 
-Proceed to Phase 10N: Real Registry Write Implementation Gate.
+Proceed to Phase 10O: Real Registry Write Implementation Draft.
 
 ## Why
 
-Phase 10M adds a local controlled registry write execution design over the Phase
-10L explicit authorization gate result while preserving design/dry-run-only, no
-actual registry write, no publication, no production package, future owner
+Phase 10N adds a local real registry write implementation gate over the Phase
+10M controlled execution design result while preserving dry-run-only, no actual
+registry write, no publication, no production writer, future owner
 authorization, audit plan, rollback design, write lock requirements, and no User
 App Shell package replacement boundaries. The next safe step is a real write
-implementation gate that can review whether implementation may be designed
-without silently writing, publishing, or replacing anything.
+implementation draft that remains explicitly gated and still cannot silently
+write, publish, or replace anything.
 
-## Recommended 10N Scope
+## Recommended 10O Scope
 
-- Gate any future real registry write implementation design from the Phase 10M
-  execution design result without executing it.
-- Keep implementation-gate work local, deterministic, reviewable, explicitly
+- Draft a future real registry write implementation plan from the Phase 10N
+  implementation gate result without executing it.
+- Keep implementation-draft work local, deterministic, reviewable, explicitly
   owner-gated, and blocked from automatic publication, production replacement,
   or uncontrolled registry mutation.
 - Preserve QA trace, human review trace, privacy trace, candidate trace,
@@ -51,6 +51,9 @@ without silently writing, publishing, or replacing anything.
 - Do not treat 10M controlled registry write execution design readiness as
   actual registry write authorization, User App Shell package replacement,
   production readiness, registry write execution, or publication.
+- Do not treat 10N real registry write implementation gate readiness as actual
+  registry write implementation, registry write execution, User App Shell
+  package replacement, production readiness, or publication.
 - Do not execute a user app package registry write unless a later phase
   explicitly implements a controlled writer after separate authorization.
 - Do not add backend, database, account system, cloud sync, analytics, camera
@@ -96,19 +99,23 @@ Read these files first:
 28. `docs/product/controlled-registry-write-execution-design.md`
 29. `docs/product/controlled-registry-write-execution-validation.md`
 30. `docs/product/controlled-registry-write-execution-handoff.md`
-31. `docs/phases/phase-10F.md`
-32. `docs/phases/phase-10G.md`
-33. `docs/phases/phase-10H.md`
-34. `docs/phases/phase-10I.md`
-35. `docs/phases/phase-10J.md`
-36. `docs/phases/phase-10K.md`
-37. `docs/phases/phase-10L.md`
-38. `docs/phases/phase-10M.md`
-39. `project-state/project-state.snapshot.json`
-40. `project-state/latest-handoff.json`
-41. `project-state/provider-handoff.json`
-42. `project-state/active-task.json`
-43. `project-state/guardrails.json`
+31. `docs/product/real-registry-write-implementation-gate.md`
+32. `docs/product/real-registry-write-implementation-checklist.md`
+33. `docs/product/real-registry-write-implementation-handoff.md`
+34. `docs/phases/phase-10F.md`
+35. `docs/phases/phase-10G.md`
+36. `docs/phases/phase-10H.md`
+37. `docs/phases/phase-10I.md`
+38. `docs/phases/phase-10J.md`
+39. `docs/phases/phase-10K.md`
+40. `docs/phases/phase-10L.md`
+41. `docs/phases/phase-10M.md`
+42. `docs/phases/phase-10N.md`
+43. `project-state/project-state.snapshot.json`
+44. `project-state/latest-handoff.json`
+45. `project-state/provider-handoff.json`
+46. `project-state/active-task.json`
+47. `project-state/guardrails.json`
 
 Then run:
 

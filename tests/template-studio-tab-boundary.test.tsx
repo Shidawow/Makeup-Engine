@@ -47,6 +47,8 @@ describe('Template Studio tab boundary', () => {
     expect(html).not.toContain('explicit authorization gate');
     expect(html).not.toContain('受控 Registry 写入执行设计');
     expect(html).not.toContain('controlled execution design');
+    expect(html).not.toContain('真实 Registry 写入实现闸门');
+    expect(html).not.toContain('real write implementation gate');
   });
 
   it('tells the template workbench to return to Vision Analysis when Region QA is blocked', () => {
@@ -137,11 +139,20 @@ describe('Template Studio tab boundary', () => {
     expect(html).toContain(
       'Execution design requires a ready Phase 10L explicit authorization gate',
     );
+    expect(html).toContain('真实 Registry 写入实现闸门');
+    expect(html).toContain('不是 production writer');
+    expect(html).toContain('未来真实实现仍需老板单独授权');
+    expect(html).toContain('real_write_implementation_gate_blocked');
+    expect(html).toContain(
+      'Implementation gate requires a ready Phase 10M execution validation result',
+    );
     expect(html).not.toContain('AI 已确认');
     expect(html).not.toContain('已生成正式用户模板包');
     expect(html).not.toContain('已生成正式 UserAppTemplatePackage');
     expect(html).not.toContain('已授权真实写入');
     expect(html).not.toContain('已可执行真实写入');
+    expect(html).not.toContain('已可真实写入');
+    expect(html).not.toContain('已实现真实写入');
     expect(html).not.toContain('已写入用户 App registry');
     expect(html).not.toContain('已发布到用户 App');
     expect(html).not.toContain('已替换当前用户 App 包');
@@ -188,5 +199,8 @@ describe('Template Studio tab boundary', () => {
     expect(userPath).not.toContain('受控 Registry 写入执行设计');
     expect(userPath).not.toContain('controlled execution design');
     expect(userPath).not.toContain('Execution Design');
+    expect(userPath).not.toContain('真实 Registry 写入实现闸门');
+    expect(userPath).not.toContain('real write implementation gate');
+    expect(userPath).not.toContain('Implementation Gate');
   });
 });

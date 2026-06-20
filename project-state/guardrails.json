@@ -1,5 +1,5 @@
 {
-  "phase": "10M",
+  "phase": "10N",
   "guardrails": [
     {
       "id": "source-image-not-training-data",
@@ -748,6 +748,30 @@
     {
       "id": "phase_10m_future_owner_authorization_required",
       "rule": "Phase 10M must keep future real write execution dependent on a separate owner authorization and later implementation gate."
+    },
+    {
+      "id": "phase_10n_gate_only",
+      "rule": "Phase 10N is a real registry write implementation gate only and must not implement or execute a production writer."
+    },
+    {
+      "id": "phase_10n_no_actual_registry_write",
+      "rule": "Phase 10N must not execute, persist, or mark actual UserAppTemplatePackage registry writes."
+    },
+    {
+      "id": "phase_10n_no_publish",
+      "rule": "Phase 10N must not publish to the user app or mark anything live."
+    },
+    {
+      "id": "phase_10n_no_shell_package_replacement",
+      "rule": "Phase 10N must not replace the current User App Shell package."
+    },
+    {
+      "id": "phase_10n_no_production_writer",
+      "rule": "Phase 10N must not create or claim production writer readiness."
+    },
+    {
+      "id": "phase_10n_future_owner_authorization_required",
+      "rule": "Any future real write implementation draft after Phase 10N still requires separate owner authorization."
     }
   ],
   "legacyFrozenModules": [

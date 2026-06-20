@@ -40,14 +40,15 @@ describe('provider switching docs', () => {
     expect(combined).toContain('src/intelligence/runtime');
   });
 
-  it('provides phase 10M to 10N switch templates with historical 10L, 10K, 10J, 10I, 10H, 10G, 10F, 10E, 10D, 10C, 10A, 9J, and older markers', async () => {
+  it('provides phase 10N to 10O switch templates with historical 10M, 10L, 10K, 10J, 10I, 10H, 10G, 10F, 10E, 10D, 10C, 10A, 9J, and older markers', async () => {
     const prompt = await readFile('docs/prompts/PROVIDER_SWITCH_PROMPT.md', 'utf8');
 
     expect(prompt).toContain('Switch To Native GPT / Codex Desktop');
     expect(prompt).toContain('Switch To PackyAPI + CLI');
     expect(prompt).toContain('Return From PackyAPI To ChatGPT');
-    expect(prompt).toContain('lastCompletedPhase: 10M');
-    expect(prompt).toContain('nextRecommendedPhase: 10N');
+    expect(prompt).toContain('lastCompletedPhase: 10N');
+    expect(prompt).toContain('nextRecommendedPhase: 10O');
+    expect(prompt).toContain('Real Registry Write Implementation Draft');
     expect(prompt).toContain('Real Registry Write Implementation Gate');
     expect(prompt).toContain('Controlled Registry Write Execution Design');
     expect(prompt).toContain('Explicit Registry Write Authorization Gate');
@@ -66,6 +67,10 @@ describe('provider switching docs', () => {
     expect(prompt).toContain('Phase 10K Controlled UserAppTemplatePackage Registry Writer Draft');
     expect(prompt).toContain('Phase 10L Explicit Registry Write Authorization Gate');
     expect(prompt).toContain('Phase 10M Controlled Registry Write Execution Design');
+    expect(prompt).toContain('Phase 10N Real Registry Write Implementation Gate');
+    expect(prompt).toContain('Historical handoff marker retained for Phase 10M recovery tests');
+    expect(prompt).toContain('lastCompletedPhase: 10M');
+    expect(prompt).toContain('nextRecommendedPhase: 10N');
     expect(prompt).toContain('Historical handoff marker retained for Phase 10L recovery tests');
     expect(prompt).toContain('lastCompletedPhase: 10L');
     expect(prompt).toContain('nextRecommendedPhase: 10M');

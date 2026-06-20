@@ -5,9 +5,9 @@ Makeup Engine is the makeup template production system for a future makeup coach
 ## Current Position
 
 - Project role: makeup template production system plus a local contract-driven user app shell prototype.
-- Last completed phase: `Phase 10M`.
-- Current completed business phase: `Phase 10M - Controlled Registry Write Execution Design`.
-- Next recommended phase: `Phase 10N - Real Registry Write Implementation Gate`.
+- Last completed phase: `Phase 10N`.
+- Current completed business phase: `Phase 10N - Real Registry Write Implementation Gate`.
+- Next recommended phase: `Phase 10O - Real Registry Write Implementation Draft`.
 - Recent recovery milestones retained in phase docs: `Phase 6K`, `Phase 6L`, `Phase 6L-1`, `Phase 7A`, `Phase 7B`, `Phase 7C`, `Phase 7D`, `Phase 7E`, `Phase 7F`, `Phase 7G`, `Phase 7H`, and `Phase 8A`.
 - Historical route-planning milestone: `Phase 8A - Product Route Decision / App MVP Planning`.
 
@@ -64,6 +64,7 @@ SourceImagePackage manifest
 -> Controlled UserAppTemplatePackage Registry Writer Draft
 -> Explicit Registry Write Authorization Gate
 -> Controlled Registry Write Execution Design
+-> Real Registry Write Implementation Gate
 -> Phase 8 Roadmap / V1 Non-Goals
 -> Consumption Manifest
 -> Dataset Review
@@ -196,11 +197,15 @@ SourceImagePackage manifest
 120. `docs/product/controlled-registry-write-execution-validation.md`
 121. `docs/product/controlled-registry-write-execution-handoff.md`
 122. `docs/phases/phase-10M.md`
-123. `docs/phases/phase-7H.md`
-124. `project-state/project-state.snapshot.json`
-125. `project-state/provider-handoff.json`
-126. `project-state/latest-handoff.json`
-127. `project-state/active-task.json`
+123. `docs/product/real-registry-write-implementation-gate.md`
+124. `docs/product/real-registry-write-implementation-checklist.md`
+125. `docs/product/real-registry-write-implementation-handoff.md`
+126. `docs/phases/phase-10N.md`
+127. `docs/phases/phase-7H.md`
+128. `project-state/project-state.snapshot.json`
+129. `project-state/provider-handoff.json`
+130. `project-state/latest-handoff.json`
+131. `project-state/active-task.json`
 
 ## What The System Can Do Now
 
@@ -257,6 +262,11 @@ SourceImagePackage manifest
   plans with write plan, diff preview, existing entry preview, rollback plan,
   validation, and handoff while still blocking actual registry writes,
   publication, production markers, and current User App Shell package
+  replacement.
+- Gate Phase 10M controlled execution design through Phase 10N real registry
+  write implementation gate, checklist, and handoff while still remaining
+  dry-run only, not a real writer implementation, not a registry write, not
+  publication, not production readiness, and not a User App Shell package
   replacement.
 - Run Phase 10L explicit registry write authorization gate checks, checklist,
   and handoff over the Phase 10K writer validation while still staying dry-run

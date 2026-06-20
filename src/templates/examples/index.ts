@@ -85,3 +85,6 @@ export * from './explicit-registry-write-authorization-handoff.example';
 export * from './controlled-registry-write-execution-design.example';
 export * from './controlled-registry-write-execution-validation.example';
 export * from './controlled-registry-write-execution-handoff.example';
+export * from './real-registry-write-implementation-gate.example';
+export * from './real-registry-write-implementation-checklist.example';
+export * from './real-registry-write-implementation-handoff.example';

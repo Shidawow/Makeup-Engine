@@ -633,13 +633,67 @@
       "status": "passed",
       "phase": "10M",
       "notes": "Phase 10M JSON context pack command passed."
+    },
+    {
+      "command": "npm run mediapipe:check",
+      "status": "passed",
+      "phase": "10N"
+    },
+    {
+      "command": "npm run test -- tests/real-registry-write-implementation-gate.test.ts tests/real-registry-write-implementation-checklist.test.ts tests/real-registry-write-implementation-handoff.test.ts tests/real-registry-write-implementation-gate-panel.test.tsx tests/phase-10N-documentation-recovery.test.ts tests/controlled-registry-write-execution-design.test.ts tests/controlled-registry-write-execution-design-panel.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
+      "status": "passed",
+      "phase": "10N",
+      "notes": "10 files / 35 tests passed."
+    },
+    {
+      "command": "npm run test -- tests/template-studio-tab-boundary.test.tsx",
+      "status": "passed",
+      "phase": "10N",
+      "notes": "Supplemental Template Studio tab boundary test passed."
+    },
+    {
+      "command": "npm run typecheck",
+      "status": "passed",
+      "phase": "10N"
+    },
+    {
+      "command": "npm run build",
+      "status": "passed",
+      "phase": "10N",
+      "notes": "Vite build passed with existing chunk-size warning."
+    },
+    {
+      "command": "npm run project:status",
+      "status": "passed",
+      "phase": "10N"
+    },
+    {
+      "command": "npm run project:context",
+      "status": "passed",
+      "phase": "10N"
+    },
+    {
+      "command": "node scripts/project-status.mjs --json",
+      "status": "passed",
+      "phase": "10N"
+    },
+    {
+      "command": "node scripts/context-pack.mjs --json",
+      "status": "passed",
+      "phase": "10N"
+    },
+    {
+      "command": "Browser verification for Phase 10N Template Studio tabs",
+      "status": "passed",
+      "phase": "10N",
+      "notes": "Vision Analysis excludes 10N implementation gate; Template Workbench shows 10N gate/checklist/handoff, required no-write/no-production-writer/dry-run copy, no forbidden write/publish/production copy, and no mock fallback with local MediaPipe assets ready."
     }
   ],
   "lastUpdatedPhase": "10L",
   "phase": "10L",
-  "lastCompletedPhase": "10L",
+  "lastCompletedPhase": "10N",
   "currentPhase": "10L",
-  "nextRecommendedPhase": "10M",
+  "nextRecommendedPhase": "10O",
   "updatedAt": "2026-06-20",
   "lastValidation": {
     "mediapipeCheck": "passed",
@@ -759,8 +813,8 @@
       "notes": "Phase 10L JSON context pack command passed."
     }
   ],
-  "currentPhaseId": "10L",
-  "nextRecommendedPhaseName": "Controlled Registry Write Execution Design",
-  "currentPhaseName": "Explicit Registry Write Authorization Gate",
+  "currentPhaseId": "10N",
+  "nextRecommendedPhaseName": "Real Registry Write Implementation Draft",
+  "currentPhaseName": "Real Registry Write Implementation Gate",
   "validationStatus": "passed"
 }

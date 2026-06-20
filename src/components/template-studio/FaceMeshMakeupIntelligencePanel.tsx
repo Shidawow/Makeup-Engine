@@ -8,6 +8,9 @@ import {
   createExplicitRegistryWriteAuthorizationChecklist,
   createExplicitRegistryWriteAuthorizationGate,
   createExplicitRegistryWriteAuthorizationHandoff,
+  createRealRegistryWriteImplementationChecklist,
+  createRealRegistryWriteImplementationGate,
+  createRealRegistryWriteImplementationHandoff,
   buildOfficialUserAppTemplatePackageDraft,
   createCandidateToAppPackageContractPreparation,
   createCandidateToAppPackageHandoff,
@@ -56,6 +59,7 @@ import { UserAppTemplatePackageRegistryWriteGatePanel } from './UserAppTemplateP
 import { ControlledUserAppTemplatePackageRegistryWriterDraftPanel } from './ControlledUserAppTemplatePackageRegistryWriterDraftPanel';
 import { ExplicitRegistryWriteAuthorizationGatePanel } from './ExplicitRegistryWriteAuthorizationGatePanel';
 import { ControlledRegistryWriteExecutionDesignPanel } from './ControlledRegistryWriteExecutionDesignPanel';
+import { RealRegistryWriteImplementationGatePanel } from './RealRegistryWriteImplementationGatePanel';
 
 export interface FaceMeshMakeupIntelligencePanelProps {
   regionQa: FaceMeshRegionQaReport | null;
@@ -349,6 +353,33 @@ export function FaceMeshMakeupIntelligencePanel({
             </p>
           </div>
         </div>
+        <div className="mt-3 grid gap-2 rounded-md border border-violet-200 bg-violet-50 p-3 text-sm text-violet-900 md:grid-cols-4">
+          <div>
+            <p className="font-semibold">真实 Registry 写入实现闸门</p>
+            <p className="mt-1 text-xs leading-5">
+              Implementation Gate blocked：缺少 10M execution validation ready。
+            </p>
+          </div>
+          <div>
+            <p className="font-semibold">Implementation Checklist</p>
+            <p className="mt-1 text-xs leading-5">
+              只确认 gate 条件，不触发写入，不生成 production writer；不是
+              production writer。
+            </p>
+          </div>
+          <div>
+            <p className="font-semibold">Gate Boundary</p>
+            <p className="mt-1 text-xs leading-5">
+              仍然 dry-run only；不是实际写入，不会发布。
+            </p>
+          </div>
+          <div>
+            <p className="font-semibold">Implementation Handoff</p>
+            <p className="mt-1 text-xs leading-5">
+              不会替换当前用户 App 包；未来真实实现仍需老板单独授权。
+            </p>
+          </div>
+        </div>
       </section>
     );
   }
@@ -513,6 +544,21 @@ export function FaceMeshMakeupIntelligencePanel({
       design: controlledRegistryWriteExecutionDesign,
       validation: controlledRegistryWriteExecutionValidation,
     });
+  const realRegistryWriteImplementationGate =
+    createRealRegistryWriteImplementationGate({
+      design: controlledRegistryWriteExecutionDesign,
+      validation: controlledRegistryWriteExecutionValidation,
+      handoff: controlledRegistryWriteExecutionHandoff,
+    });
+  const realRegistryWriteImplementationChecklist =
+    createRealRegistryWriteImplementationChecklist({
+      gate: realRegistryWriteImplementationGate,
+    });
+  const realRegistryWriteImplementationHandoff =
+    createRealRegistryWriteImplementationHandoff({
+      gate: realRegistryWriteImplementationGate,
+      checklist: realRegistryWriteImplementationChecklist,
+    });
 
   return (
     <section className="grid gap-4">
@@ -666,6 +712,11 @@ export function FaceMeshMakeupIntelligencePanel({
         design={controlledRegistryWriteExecutionDesign}
         handoff={controlledRegistryWriteExecutionHandoff}
         validation={controlledRegistryWriteExecutionValidation}
+      />
+      <RealRegistryWriteImplementationGatePanel
+        gate={realRegistryWriteImplementationGate}
+        checklist={realRegistryWriteImplementationChecklist}
+        handoff={realRegistryWriteImplementationHandoff}
       />
     </section>
   );

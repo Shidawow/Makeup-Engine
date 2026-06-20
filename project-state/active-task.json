@@ -1,11 +1,11 @@
 {
   "schemaVersion": "active-task.v1",
-  "taskId": "phase-10m-controlled-registry-write-execution-design",
-  "title": "Phase 10M - Controlled Registry Write Execution Design",
+  "taskId": "phase-10n-real-registry-write-implementation-gate",
+  "title": "Phase 10N - Real Registry Write Implementation Gate",
   "status": "completed",
   "ownerRole": "Codex",
   "createdBy": "Codex",
-  "phase": "10M",
+  "phase": "10N",
   "recommendedProfile": "native-gpt-codex-high-reasoning",
   "allowedDirectories": [
     "src/vision",
@@ -30,17 +30,17 @@
     "npm run project:context",
     "node scripts/project-status.mjs --json",
     "node scripts/context-pack.mjs --json",
-    "npm run test -- tests/controlled-registry-write-execution-design.test.ts tests/controlled-registry-write-execution-validation.test.ts tests/controlled-registry-write-execution-handoff.test.ts tests/controlled-registry-write-execution-design-panel.test.tsx tests/phase-10M-documentation-recovery.test.ts tests/explicit-registry-write-authorization-gate.test.ts tests/explicit-registry-write-authorization-gate-panel.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
+    "npm run test -- tests/real-registry-write-implementation-gate.test.ts tests/real-registry-write-implementation-checklist.test.ts tests/real-registry-write-implementation-handoff.test.ts tests/real-registry-write-implementation-gate-panel.test.tsx tests/phase-10N-documentation-recovery.test.ts tests/controlled-registry-write-execution-design.test.ts tests/controlled-registry-write-execution-design-panel.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
   ],
   "completionDefinition": [
-    "Phase 10M adds controlled registry write execution design, validation, handoff, fixtures, UI, docs, and project-state updates.",
-    "Execution design ready means eligible for a future real registry write implementation gate only; it is not actual write authorization or execution.",
-    "10M does not write registry, publish, create a production package, replace the current User App Shell package, add backend, camera, AR, OpenAI/external APIs, training, runtime dependencies, or commit MediaPipe binaries."
+    "Phase 10N adds real registry write implementation gate, checklist, handoff, fixtures, UI, docs, and project-state updates.",
+    "Implementation gate ready means eligible for a future real registry write implementation draft only; it is not actual write authorization, production writer implementation, or execution.",
+    "10N does not write registry, publish, create a production package, replace the current User App Shell package, add backend, camera, AR, OpenAI/external APIs, training, runtime dependencies, or commit MediaPipe binaries."
   ],
   "dependsOn": [
-    "10L Explicit Registry Write Authorization Gate"
+    "10M Controlled Registry Write Execution Design"
   ],
-  "nextRecommendedTask": "Phase 10N - Real Registry Write Implementation Gate",
+  "nextRecommendedTask": "Phase 10O - Real Registry Write Implementation Draft",
   "updatedAt": "2026-06-20",
   "validationStatus": "passed",
   "lastValidation": {
@@ -53,12 +53,12 @@
     "projectContext": "passed",
     "contextPackJson": "passed",
     "browserVerification": "passed",
-    "phase10MScopedTests": "passed",
+    "phase10NScopedTests": "passed",
     "testFiles": 10,
-    "tests": 37,
-    "phase10MScopedTestFiles": 10,
-    "phase10MScopedTestsCount": 37,
-    "summary": "Phase 10M validation passed: mediapipe:check, controlled registry write execution scoped tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
+    "tests": 35,
+    "phase10NScopedTestFiles": 10,
+    "phase10NScopedTestsCount": 35,
+    "summary": "Phase 10N validation passed: mediapipe:check, real registry write implementation gate scoped tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
     "updatedAt": "2026-06-20"
   },
   "validation": {
@@ -71,21 +71,21 @@
     "projectContext": "passed",
     "contextPackJson": "passed",
     "browserVerification": "passed",
-    "phase10MScopedTests": "passed",
+    "phase10NScopedTests": "passed",
     "testFiles": 10,
-    "tests": 37,
-    "phase10MScopedTestFiles": 10,
-    "phase10MScopedTestsCount": 37,
-    "summary": "Phase 10M validation passed: mediapipe:check, controlled registry write execution scoped tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
+    "tests": 35,
+    "phase10NScopedTestFiles": 10,
+    "phase10NScopedTestsCount": 35,
+    "summary": "Phase 10N validation passed: mediapipe:check, real registry write implementation gate scoped tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
     "updatedAt": "2026-06-20"
   },
-  "summary": "Phase 10M validation passed: mediapipe:check, controlled registry write execution scoped tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
+  "summary": "Phase 10N validation passed: mediapipe:check, real registry write implementation gate scoped tests, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
   "completed": true,
-  "nextTask": "Phase 10N - Real Registry Write Implementation Gate",
-  "lastUpdatedPhase": "10M",
-  "currentPhaseId": "10M",
-  "lastCompletedPhase": "10M",
-  "nextRecommendedPhase": "10N",
-  "nextRecommendedPhaseName": "Real Registry Write Implementation Gate",
+  "nextTask": "Phase 10O - Real Registry Write Implementation Draft",
+  "lastUpdatedPhase": "10N",
+  "currentPhaseId": "10N",
+  "lastCompletedPhase": "10N",
+  "nextRecommendedPhase": "10O",
+  "nextRecommendedPhaseName": "Real Registry Write Implementation Draft",
   "taskStatus": "completed"
 }

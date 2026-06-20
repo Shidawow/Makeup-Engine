@@ -6,12 +6,13 @@ Default to compact context. Do not copy full historical chat transcripts. Do not
 
 ## Current State
 
-- `lastCompletedPhase: 10M`
-- `nextRecommendedPhase: 10N`
-- `nextRecommendedPhaseName: Real Registry Write Implementation Gate`
+- `lastCompletedPhase: 10N`
+- `nextRecommendedPhase: 10O`
+- `nextRecommendedPhaseName: Real Registry Write Implementation Draft`
 - Project role: Makeup template production system with a local contract-driven user app shell prototype, not a production user app.
-- Current capability: Phase 10M - Controlled Registry Write Execution Design adds local execution design, safety validation, handoff, and Template Workbench panel after Phase 10L authorization gate while preserving design/dry-run only, no actual registry write, no-publish, no production package, future owner approval, audit/rollback/write-lock design, and no User App Shell package replacement boundaries.
+- Current capability: Phase 10N - Real Registry Write Implementation Gate adds local implementation gate, checklist, handoff, and Template Workbench panel after Phase 10M execution design while preserving dry-run only, no actual registry write, no production writer implementation, no-publish, no production package, future owner approval, audit/rollback/write-lock review, and no User App Shell package replacement boundaries.
 
+Historical handoff marker retained for Phase 10M recovery tests: `lastCompletedPhase: 10M`, `nextRecommendedPhase: 10N`.
 Historical handoff marker retained for Phase 10L recovery tests: `lastCompletedPhase: 10L`, `nextRecommendedPhase: 10M`.
 Historical handoff marker retained for Phase 10K recovery tests: `lastCompletedPhase: 10K`, `nextRecommendedPhase: 10L`.
 Historical handoff marker retained for Phase 10J recovery tests: `lastCompletedPhase: 10J`, `nextRecommendedPhase: 10K`.
@@ -52,11 +53,11 @@ Historical handoff marker retained for Phase 9J recovery tests: `lastCompletedPh
 You are continuing Makeup Engine on native GPT / Codex Desktop.
 
 Current state:
-- lastCompletedPhase: 10M
-- nextRecommendedPhase: 10N
-- nextRecommendedPhaseName: Real Registry Write Implementation Gate
+- lastCompletedPhase: 10N
+- nextRecommendedPhase: 10O
+- nextRecommendedPhaseName: Real Registry Write Implementation Draft
 - project role: Makeup template production system with a local contract-driven user app shell prototype, not a production user app
-- current capability: React Web / PWA MVP first is selected; Phases 8B through 9J are complete; Phase 10A FaceMesh-driven Makeup Intelligence Baseline, Phase 10B Template Draft Review Workflow, Phase 10C Template Library Candidate Packaging, Phase 10D Candidate-to-App Package Contract Preparation, Phase 10E User App Package Draft Preview, Phase 10F Official User App Package Draft Gate, Phase 10G Official UserAppTemplatePackage Draft Builder, Phase 10H UserAppTemplatePackage Draft Publish Gate, Phase 10I UserAppTemplatePackage Registry Preparation, Phase 10J UserAppTemplatePackage Registry Write Gate, Phase 10K Controlled UserAppTemplatePackage Registry Writer Draft, Phase 10L Explicit Registry Write Authorization Gate, and Phase 10M Controlled Registry Write Execution Design are complete with local FaceMesh region QA, candidate attributes, rule-based draft steps, draft QA, human review, candidate package validation, candidate handoff, app contract mapping preview, app contract validation, app package handoff, user app package draft preview, preview validation, preview handoff, official draft gate, gate handoff, official draft builder, official draft validation, official draft handoff, draft publish gate, publish gate handoff, registry preparation, registry preparation validation, registry preparation handoff, registry write gate, registry write gate handoff, controlled writer dry-run draft, writer validation, writer handoff, explicit authorization gate, authorization checklist, authorization handoff, controlled execution design, execution safety validation, execution handoff, and clear Vision Analysis / Template Workbench boundaries; Makeup Engine remains the template production system and the future user-facing app should be planned separately
+- current capability: React Web / PWA MVP first is selected; Phases 8B through 9J are complete; Phase 10A FaceMesh-driven Makeup Intelligence Baseline, Phase 10B Template Draft Review Workflow, Phase 10C Template Library Candidate Packaging, Phase 10D Candidate-to-App Package Contract Preparation, Phase 10E User App Package Draft Preview, Phase 10F Official User App Package Draft Gate, Phase 10G Official UserAppTemplatePackage Draft Builder, Phase 10H UserAppTemplatePackage Draft Publish Gate, Phase 10I UserAppTemplatePackage Registry Preparation, Phase 10J UserAppTemplatePackage Registry Write Gate, Phase 10K Controlled UserAppTemplatePackage Registry Writer Draft, Phase 10L Explicit Registry Write Authorization Gate, Phase 10M Controlled Registry Write Execution Design, and Phase 10N Real Registry Write Implementation Gate are complete with local FaceMesh region QA, candidate attributes, rule-based draft steps, draft QA, human review, candidate package validation, candidate handoff, app contract mapping preview, app contract validation, app package handoff, user app package draft preview, preview validation, preview handoff, official draft gate, gate handoff, official draft builder, official draft validation, official draft handoff, draft publish gate, publish gate handoff, registry preparation, registry preparation validation, registry preparation handoff, registry write gate, registry write gate handoff, controlled writer dry-run draft, writer validation, writer handoff, explicit authorization gate, authorization checklist, authorization handoff, controlled execution design, execution safety validation, execution handoff, real implementation gate, implementation checklist, implementation handoff, and clear Vision Analysis / Template Workbench boundaries; Makeup Engine remains the template production system and the future user-facing app should be planned separately
 
 Compact context:
 - Use repository documents as source of truth; do not copy full historical chat.
@@ -154,6 +155,10 @@ Read these files first:
 85. docs/product/controlled-registry-write-execution-validation.md
 86. docs/product/controlled-registry-write-execution-handoff.md
 87. docs/phases/phase-10M.md
+88. docs/product/real-registry-write-implementation-gate.md
+89. docs/product/real-registry-write-implementation-checklist.md
+90. docs/product/real-registry-write-implementation-handoff.md
+91. docs/phases/phase-10N.md
 51. docs/user-app/user-app-browser-mobile-qa.md
 21. docs/user-app/user-app-e2e-readiness.md
 22. docs/user-app/user-app-mobile-interaction-qa.md
@@ -196,6 +201,7 @@ Forbidden:
 - Do not treat Phase 10K controlled registry writer draft readiness as actual registry write execution, publication, production readiness, production package creation, or current User App Shell package replacement.
 - Do not treat Phase 10L explicit authorization gate readiness as actual write authorization, registry write execution, publication, production readiness, production package creation, or current User App Shell package replacement.
 - Do not treat Phase 10M controlled registry write execution design readiness as actual write authorization, registry write execution, publication, production readiness, production package creation, or current User App Shell package replacement.
+- Do not treat Phase 10N real registry write implementation gate readiness as actual write authorization, real writer implementation, registry write execution, publication, production readiness, production package creation, or current User App Shell package replacement.
 - Do not add service worker, offline cache, push notification, background sync, install tracking, analytics, backend, camera, AR, external API, native app, training, online publication, or app store release work unless a future explicit phase gate expands scope.
 - Do not build or bootstrap the separate production user app repository unless a future explicit phase gate expands scope.
 - Do not add real camera capture, AR, backend, database, account systems, cloud sync, analytics, ecommerce, community, paid features, online publishing, training, native iOS, React Native, Flutter, app store release work, or new runtime dependencies.
@@ -391,3 +397,15 @@ owner approval required, audit plan present, rollback design present, write
 lock requirements present, no backend, no camera/AR, no OpenAI/external API, and
 no training. The next recommended phase is Phase 10N - Real Registry Write
 Implementation Gate.
+
+## Phase 10N Handoff Note
+
+Phase 10N completed local Real Registry Write Implementation Gate,
+Implementation Checklist, and Implementation Handoff in Template Workbench.
+Gate ready means eligible for a future real registry write implementation draft
+only: still dry-run only, no actual registry write, no production writer
+implementation, no publish, no production package marker, no current User App
+Shell package replacement, future owner approval required, audit plan reviewed,
+rollback design reviewed, write lock requirements reviewed, no backend, no
+camera/AR, no OpenAI/external API, and no training. The next recommended phase
+is Phase 10O - Real Registry Write Implementation Draft.
