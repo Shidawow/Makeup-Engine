@@ -12,10 +12,10 @@ It produces templates, template evidence, correction records, review state, loca
 
 ## Current Phase
 
-- Current business phase: `Phase 10P completed`
-- Last completed phase: `Phase 10P`
-- Last completed phase name: `Phase 10P - Final Real Write Review Gate`
-- Next recommended phase: `Phase 10Q - Real Write Execution Authorization`
+- Current business phase: `Phase 10Q completed`
+- Last completed phase: `Phase 10Q`
+- Last completed phase name: `Phase 10Q - Real Write Execution Authorization`
+- Next recommended phase: `Phase 10R - Real Write Execution Plan`
 
 Historical recovery marker retained for Phase 9C tests: `Phase 9C completed`.
 Historical recovery marker retained for Phase 9E tests: `Phase 9E completed`.
@@ -25,6 +25,7 @@ Historical recovery marker retained for Phase 9H tests: `Phase 9H completed`.
 Historical recovery marker retained for Phase 9I tests: `Phase 9I completed`.
 Historical recovery marker retained for Phase 9J tests: `Phase 9J completed`.
 Historical recovery marker retained for Phase 10O tests: `Phase 10O completed`.
+Historical recovery marker retained for Phase 10P tests: `Phase 10P completed`.
 Historical recovery milestone retained for older phase tests: `Phase 8A completed` / `Phase 8A - Product Route Decision / App MVP Planning`.
 Historical recovery milestone retained for Phase 8B tests: `Phase 8B completed` / `Phase 8B - PWA / Mobile Web MVP Polish`.
 Historical recovery milestone retained for Phase 8C tests: `Phase 8C completed` / `Phase 8C - User App MVP Trial Pack`.
@@ -92,6 +93,7 @@ Real Photo
 -> Real Registry Write Implementation Gate
 -> Real Registry Write Implementation Draft
 -> Final Real Write Review Gate
+-> Real Write Execution Authorization
 -> Phase 8 Roadmap / V1 Non-Goals
 -> User App Consumption Manifest
 -> Dataset Review
@@ -200,6 +202,14 @@ Important boundary: `SourceImagePackage` can enter Vision Analysis through opera
   publication, production writer creation, and current User App Shell package
   replacement remain blocked, and recommend a future Phase 10Q authorization
   phase only.
+- `src/template-engine/realWriteExecutionAuthorization.ts`,
+  `src/template-engine/realWriteExecutionAuthorizationChecklist.ts`, and
+  `src/template-engine/realWriteExecutionAuthorizationHandoff.ts`: Phase 10Q
+  local real write execution authorization, checklist, and handoff logic. They
+  preserve owner authorization scope A as Phase-10Q-only, check that real
+  writes, publication, production writer creation, and current User App Shell
+  package replacement remain blocked, and recommend a future Phase 10R
+  execution plan only.
 - `src/templates`: schemas, storage, review, corrections, evidence, dataset materialization, source image binding, production batch storage/export, template library storage, and publish package export.
 - `src/template-engine/production`: production queue, state machine, QA rules, rebinding recovery, analysis handoff, review lifecycle, smoke checklist.
 - `src/template-engine/library`: production task to library entry conversion, template versioning, and local library lifecycle.
@@ -511,15 +521,17 @@ Historical marker retained for Phase 10O recovery tests: Phase 10O completed.
 
 Historical marker retained for Phase 10N recovery tests: Phase 10N completed.
 
-## Phase 10P Current Capability
+## Phase 10Q Current Capability
 
-Phase 10P completed Final Real Write Review Gate. It added a local final review
-gate, checklist, handoff, examples, Template Workbench UI, documentation, and
-recovery state after Phase 10O implementation draft validation. Owner
-authorization scope is preserved as review-gate-only: it does not authorize
-actual registry writes, publication, production writer creation, production
-package creation, or current User App Shell package replacement. It does not
-write a registry, does not publish, does not call backend/OpenAI/external APIs,
-does not use camera/AR, and does not train models.
+Phase 10Q completed Real Write Execution Authorization. It added a local
+authorization model, checklist, handoff, examples, Template Workbench UI,
+documentation, and recovery state after Phase 10P final review gate readiness.
+Owner authorization scope is preserved as Phase-10Q-only: `授权范围：A。只授权进入 Phase 10Q — Real Write Execution Authorization，不授权真实写入 registry，不授权发布，不授权替换当前 User App Shell package，不授权创建 production writer。`
+It does not authorize actual registry writes, publication, production writer
+creation, production package creation, or current User App Shell package
+replacement. It does not write a registry, does not publish, does not call
+backend/OpenAI/external APIs, does not use camera/AR, and does not train models.
 
-Next recommended phase: Phase 10Q - Real Write Execution Authorization.
+Historical marker retained for Phase 10P recovery tests: Phase 10P completed.
+
+Next recommended phase: Phase 10R - Real Write Execution Plan.

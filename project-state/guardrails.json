@@ -1,5 +1,5 @@
 {
-  "phase": "10P",
+  "phase": "10Q",
   "guardrails": [
     {
       "id": "source-image-not-training-data",
@@ -824,6 +824,34 @@
     {
       "id": "phase_10p_future_owner_authorization_required",
       "rule": "Any real write execution after Phase 10P still requires separate future owner authorization."
+    },
+    {
+      "id": "phase_10q_authorization_model_only",
+      "rule": "Phase 10Q is a real write execution authorization model only and must not authorize or execute actual registry writes."
+    },
+    {
+      "id": "phase_10q_owner_scope_a_only",
+      "rule": "Phase 10Q owner authorization scope A only allows entering Real Write Execution Authorization: 授权范围：A。只授权进入 Phase 10Q — Real Write Execution Authorization，不授权真实写入 registry，不授权发布，不授权替换当前 User App Shell package，不授权创建 production writer。"
+    },
+    {
+      "id": "phase_10q_no_actual_registry_write",
+      "rule": "Phase 10Q must not execute, persist, or mark actual UserAppTemplatePackage registry writes."
+    },
+    {
+      "id": "phase_10q_no_publish",
+      "rule": "Phase 10Q must not publish to the user app or mark anything live."
+    },
+    {
+      "id": "phase_10q_no_shell_package_replacement",
+      "rule": "Phase 10Q must not replace the current User App Shell package."
+    },
+    {
+      "id": "phase_10q_no_production_writer",
+      "rule": "Phase 10Q must not create, execute, or claim production writer readiness."
+    },
+    {
+      "id": "phase_10q_future_owner_authorization_required",
+      "rule": "Any actual real write execution after Phase 10Q still requires separate future owner authorization."
     }
   ],
   "legacyFrozenModules": [

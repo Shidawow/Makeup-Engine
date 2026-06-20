@@ -5,9 +5,9 @@ Makeup Engine is the makeup template production system for a future makeup coach
 ## Current Position
 
 - Project role: makeup template production system plus a local contract-driven user app shell prototype.
-- Last completed phase: `Phase 10P`.
-- Current completed business phase: `Phase 10P - Final Real Write Review Gate`.
-- Next recommended phase: `Phase 10Q - Real Write Execution Authorization`.
+- Last completed phase: `Phase 10Q`.
+- Current completed business phase: `Phase 10Q - Real Write Execution Authorization`.
+- Next recommended phase: `Phase 10R - Real Write Execution Plan`.
 - Recent recovery milestones retained in phase docs: `Phase 6K`, `Phase 6L`, `Phase 6L-1`, `Phase 7A`, `Phase 7B`, `Phase 7C`, `Phase 7D`, `Phase 7E`, `Phase 7F`, `Phase 7G`, `Phase 7H`, and `Phase 8A`.
 - Historical route-planning milestone: `Phase 8A - Product Route Decision / App MVP Planning`.
 
@@ -67,6 +67,7 @@ SourceImagePackage manifest
 -> Real Registry Write Implementation Gate
 -> Real Registry Write Implementation Draft
 -> Final Real Write Review Gate
+-> Real Write Execution Authorization
 -> Phase 8 Roadmap / V1 Non-Goals
 -> Consumption Manifest
 -> Dataset Review
@@ -211,11 +212,15 @@ SourceImagePackage manifest
 132. `docs/product/final-real-write-review-checklist.md`
 133. `docs/product/final-real-write-review-handoff.md`
 134. `docs/phases/phase-10P.md`
-135. `docs/phases/phase-7H.md`
-136. `project-state/project-state.snapshot.json`
-137. `project-state/provider-handoff.json`
-138. `project-state/latest-handoff.json`
-139. `project-state/active-task.json`
+135. `docs/product/real-write-execution-authorization.md`
+136. `docs/product/real-write-execution-authorization-checklist.md`
+137. `docs/product/real-write-execution-authorization-handoff.md`
+138. `docs/phases/phase-10Q.md`
+139. `docs/phases/phase-7H.md`
+140. `project-state/project-state.snapshot.json`
+141. `project-state/provider-handoff.json`
+142. `project-state/latest-handoff.json`
+143. `project-state/active-task.json`
 
 ## What The System Can Do Now
 
@@ -288,6 +293,11 @@ SourceImagePackage manifest
   as review-gate-only and still blocking actual registry write, production
   writer creation, publication, production readiness, and current User App
   Shell package replacement.
+- Authorize Phase 10Q as a real write execution authorization model only,
+  preserving the owner text `授权范围：A。只授权进入 Phase 10Q — Real Write Execution Authorization，不授权真实写入 registry，不授权发布，不授权替换当前 User App Shell package，不授权创建 production writer。`
+  while still blocking actual registry write, production writer creation,
+  publication, production readiness, and current User App Shell package
+  replacement.
 - Run Phase 10L explicit registry write authorization gate checks, checklist,
   and handoff over the Phase 10K writer validation while still staying dry-run
   only and requiring separate future owner approval before any real write design.
@@ -332,6 +342,10 @@ SourceImagePackage manifest
   registry write authorization, registry write execution, production writer
   readiness, publication, production readiness, or current User App Shell
   package replacement.
+- Do not treat Phase 10Q real write execution authorization readiness,
+  checklist, or handoff as actual registry write authorization, registry write
+  execution, production writer creation, publication, production readiness, or
+  current User App Shell package replacement.
 - Do not treat Phase 8B PWA metadata, mobile shell polish, PWA readiness, or MVP polish readiness as production PWA release approval.
 - Do not treat Phase 8C trial pack, feedback preview, or trial readiness as production release, backend form, analytics, App Store/TestFlight, or real user data collection approval.
 - Do not treat Phase 8D content QA, trial template selection, or trial content readiness as production release, App Store/TestFlight, backend, AI generation, camera, AR, analytics, or training approval.

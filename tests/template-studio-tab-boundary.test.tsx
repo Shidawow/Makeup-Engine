@@ -53,6 +53,8 @@ describe('Template Studio tab boundary', () => {
     expect(html).not.toContain('real write implementation draft');
     expect(html).not.toContain('最终真实写入复核闸门');
     expect(html).not.toContain('final real write review gate');
+    expect(html).not.toContain('真实写入执行授权');
+    expect(html).not.toContain('real write execution authorization');
   });
 
   it('tells the template workbench to return to Vision Analysis when Region QA is blocked', () => {
@@ -173,6 +175,19 @@ describe('Template Studio tab boundary', () => {
     expect(html).toContain(
       'Final real write review gate requires a ready Phase 10O implementation draft validation result',
     );
+    expect(html).toContain('真实写入执行授权');
+    expect(html).toContain('老板授权范围：只授权进入 10Q 授权阶段');
+    expect(html).toContain('不授权真实写入 registry');
+    expect(html).toContain('不授权发布');
+    expect(html).toContain('不授权替换当前用户 App 包');
+    expect(html).toContain('不授权创建 production writer');
+    expect(html).toContain('不是实际写入');
+    expect(html).toContain('Authorization Checklist');
+    expect(html).toContain('Authorization Handoff');
+    expect(html).toContain('real_write_execution_authorization_blocked');
+    expect(html).toContain(
+      'Real write execution authorization requires a ready Phase 10P final review gate',
+    );
     expect(html).not.toContain('AI 已确认');
     expect(html).not.toContain('已生成正式用户模板包');
     expect(html).not.toContain('已生成正式 UserAppTemplatePackage');
@@ -237,6 +252,9 @@ describe('Template Studio tab boundary', () => {
     expect(userPath).not.toContain('final real write review gate');
     expect(userPath).not.toContain('Final Review Checklist');
     expect(userPath).not.toContain('Final Review Handoff');
+    expect(userPath).not.toContain('真实写入执行授权');
+    expect(userPath).not.toContain('real write execution authorization');
+    expect(userPath).not.toContain('Authorization Handoff');
     expect(userPath).not.toContain('production writer');
   });
 });

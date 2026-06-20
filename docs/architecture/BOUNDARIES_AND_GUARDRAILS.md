@@ -543,3 +543,32 @@ clarification, final-review-only retention, or blocking. It cannot authorize or
 execute a registry write, cannot create or execute a production writer, cannot
 publish, cannot mark a production package, and cannot replace the current User
 App Shell package.
+
+## Phase 10Q Real Write Execution Authorization Boundary
+
+Phase 10Q real write execution authorization, checklist, and handoff are local
+administrator aids only. Authorization ready means eligible for a future real
+write execution plan; it is not actual registry write authorization, not
+production writer readiness, not registry write execution, not publication, not
+production readiness, not production package creation, and not a User App Shell
+package replacement.
+
+The owner authorization evidence is Phase-10Q-only:
+
+`授权范围：A。只授权进入 Phase 10Q — Real Write Execution Authorization，不授权真实写入 registry，不授权发布，不授权替换当前 User App Shell package，不授权创建 production writer。`
+
+The authorization model checks Phase 10P final review gate readiness, owner
+authorization scope, dry-run-only, actual-write-blocked, publish-blocked,
+package-replacement-blocked, production-writer-blocked, production write
+disabled state, future separate approval, trace preservation, raw image
+boundaries, personal data boundaries, medical claims, product shade claims,
+unsupported final claims, actual registry write markers, production package
+markers, User App Shell package replacement markers, production writer creation
+markers, and JSON round-trip stability.
+
+Execution authorization handoff can recommend a future real write execution
+plan, authorization scope clarification, final review revision, actual-write
+owner authorization request, authorization-model-only retention, or blocking. It
+cannot authorize or execute a registry write, cannot create or execute a
+production writer, cannot publish, cannot mark a production package, and cannot
+replace the current User App Shell package.

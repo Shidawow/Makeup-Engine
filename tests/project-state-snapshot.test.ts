@@ -31,13 +31,13 @@ describe('project state snapshot', () => {
 
     expect(snapshot.projectName).toBe('Makeup Engine');
     expect(snapshot.projectRole).toContain('Makeup template production system');
-    expect(snapshot.lastCompletedPhase).toBe('10P');
-    expect(snapshot.lastCompletedBusinessPhase).toBe('10P');
-    expect(snapshot.currentPhaseId).toBe('10P');
+    expect(snapshot.lastCompletedPhase).toBe('10Q');
+    expect(snapshot.lastCompletedBusinessPhase).toBe('10Q');
+    expect(snapshot.currentPhaseId).toBe('10Q');
     expect(snapshot.currentPhase).toBeTruthy();
-    expect(snapshot.nextRecommendedPhase).toBe('10Q');
-    expect(snapshot.nextRecommendedPhaseName).toContain('Real Write Execution Authorization');
-    expect(snapshot.nextAction).toContain('Phase 10Q');
+    expect(snapshot.nextRecommendedPhase).toBe('10R');
+    expect(snapshot.nextRecommendedPhaseName).toContain('Real Write Execution Plan');
+    expect(snapshot.nextAction).toContain('Phase 10R');
     expect(snapshot.mainDataFlow).toEqual(
       expect.arrayContaining([
         'SourceImagePackage',
@@ -167,6 +167,10 @@ describe('project state snapshot', () => {
         'FinalRealWriteReviewGateResult',
         'FinalRealWriteReviewHandoff',
         'FinalRealWriteReviewGatePanel',
+        'RealWriteExecutionAuthorizationResult',
+        'RealWriteExecutionAuthorizationChecklist',
+        'RealWriteExecutionAuthorizationHandoff',
+        'RealWriteExecutionAuthorizationPanel',
         'FaceMeshMakeupIntelligenceAdminPanel',
         'MaterializedTrainingDataset',
       ]),
@@ -207,7 +211,8 @@ describe('project state snapshot', () => {
     expect(snapshot.knownLimitations.join('\n')).toContain('Phase 10N');
     expect(snapshot.knownLimitations.join('\n')).toContain('Phase 10O');
     expect(snapshot.knownLimitations.join('\n')).toContain('Phase 10P');
-    expect(snapshot.knownLimitations.join('\n')).toContain('review-gate-only');
+    expect(snapshot.knownLimitations.join('\n')).toContain('Phase 10Q');
+    expect(snapshot.knownLimitations.join('\n')).toContain('authorization model only');
     expect(snapshot.knownLimitations.join('\n')).toContain('real names');
     expect(snapshot.knownLimitations.join('\n')).toContain('service worker');
     expect(snapshot.knownLimitations).toContain('raw RGBA is currently summary-only in Studio');

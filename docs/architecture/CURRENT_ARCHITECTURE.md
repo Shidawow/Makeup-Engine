@@ -770,3 +770,30 @@ create a production writer, publish, replace the current User App Shell package,
 call backend/API services, use camera/AR, train models, or mark production
 readiness. Gate ready means eligible for a future real write execution
 authorization phase only.
+
+### Real Write Execution Authorization
+
+Phase 10Q adds a local real write execution authorization model after Phase 10P
+final review gate readiness. `src/template-engine/realWriteExecutionAuthorization.ts`
+checks source final review readiness, owner authorization scope, dry-run-only,
+actual-write-blocked, publish-blocked, package-replacement-blocked,
+production-writer-blocked, production write disabled state, future separate
+approval, trace preservation, unsafe marker boundaries, no actual registry
+write, no User App Shell package replacement, no production marker, no
+production writer creation marker, and JSON round-trip stability.
+
+`realWriteExecutionAuthorizationChecklist.ts` preserves the owner authorization
+text as Phase-10Q-only evidence and confirms that Phase 10Q does not trigger a
+registry write, create a production writer, modify a registry, publish, or
+replace the current User App Shell package. `realWriteExecutionAuthorizationHandoff.ts`
+creates local next actions for a future real write execution plan, focused
+revisions, owner authorization clarification, model-only retention, or blocking.
+
+`src/components/template-studio/RealWriteExecutionAuthorizationPanel.tsx`
+renders the Template Workbench authorization model, checklist, blocked reasons,
+owner authorization scope, boundary status, and handoff summary. The panel does
+not appear in Vision Analysis and does not authorize or execute registry writes,
+create a production writer, publish, replace the current User App Shell package,
+call backend/API services, use camera/AR, train models, or mark production
+readiness. Authorization ready means eligible for a future real write execution
+plan only.

@@ -1375,3 +1375,44 @@ Why Phase 10Q follows:
 The final review gate can now decide whether a future real write execution
 authorization phase may be considered. Phase 10Q should still require separate
 owner authorization before any real write execution can be designed or run.
+
+## Phase 10Q - Real Write Execution Authorization
+
+Added a local real write execution authorization model after Phase 10P final
+review gate readiness.
+
+What changed:
+
+- Added execution authorization model for Phase 10P final-review-gate-ready
+  sources, owner authorization scoped to Phase-10Q-only, required
+  dry-run/no-write/no-publish/no-shell-replacement/no-production-writer flags,
+  final review trace, implementation draft trace, production write disabled
+  state, future separate approval, unsafe payload blocking, no actual registry
+  write, no production marker, no User App Shell package replacement, no
+  production writer creation marker, and JSON round-trip stability.
+- Added execution authorization checklist preserving the owner authorization
+  text:
+  `授权范围：A。只授权进入 Phase 10Q — Real Write Execution Authorization，不授权真实写入 registry，不授权发布，不授权替换当前 User App Shell package，不授权创建 production writer。`
+- Added execution authorization handoff next actions for future real write
+  execution plan, authorization scope clarification, final review revision,
+  owner authorization for actual write, model-only retention, or blocking.
+- Added Template Workbench panel for 真实写入执行授权 / Authorization Checklist /
+  Authorization Handoff.
+- Kept Vision Analysis free of execution authorization UI and kept ordinary
+  User App Shell paths free of administrator execution authorization
+  terminology.
+
+What still cannot happen:
+
+- Phase 10Q authorization ready is not actual registry write authorization, not
+  registry write execution, not production writer creation or readiness, not
+  publication, not production readiness, not backend work, not camera/AR scope,
+  not OpenAI/external API scope, not training input, and not a replacement for
+  the current User App Shell package.
+
+Why Phase 10R follows:
+
+The execution authorization model can now decide whether a future real write
+execution plan may be considered. Phase 10R should still remain local,
+reviewable, owner-gated, and blocked from executing registry writes unless a
+later explicit actual-write phase is approved.

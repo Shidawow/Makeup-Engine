@@ -6,12 +6,13 @@ Default to compact context. Do not copy full historical chat transcripts. Do not
 
 ## Current State
 
-- `lastCompletedPhase: 10P`
-- `nextRecommendedPhase: 10Q`
-- `nextRecommendedPhaseName: Real Write Execution Authorization`
+- `lastCompletedPhase: 10Q`
+- `nextRecommendedPhase: 10R`
+- `nextRecommendedPhaseName: Real Write Execution Plan`
 - Project role: Makeup template production system with a local contract-driven user app shell prototype, not a production user app.
-- Current capability: Phase 10P - Final Real Write Review Gate adds local final review gate, checklist, handoff, and Template Workbench panel after Phase 10O implementation draft validation while preserving owner authorization scope A as review-gate-only, no actual registry write authorization, no registry write execution, no production writer, no publish, no production package, future separate owner approval, and no current User App Shell package replacement boundaries.
+- Current capability: Phase 10Q - Real Write Execution Authorization adds local authorization model, checklist, handoff, and Template Workbench panel after Phase 10P final review gate readiness while preserving owner authorization scope A as Phase-10Q-only, no actual registry write authorization, no registry write execution, no production writer creation, no publish, no production package, future separate owner approval, and no current User App Shell package replacement boundaries.
 
+Historical handoff marker retained for Phase 10P recovery tests: `lastCompletedPhase: 10P`, `nextRecommendedPhase: 10Q`.
 Historical handoff marker retained for Phase 10O recovery tests: `lastCompletedPhase: 10O`, `nextRecommendedPhase: 10P`.
 Historical handoff marker retained for Phase 10N recovery tests: `lastCompletedPhase: 10N`, `nextRecommendedPhase: 10O`.
 Historical handoff marker retained for Phase 10M recovery tests: `lastCompletedPhase: 10M`, `nextRecommendedPhase: 10N`.
@@ -55,11 +56,11 @@ Historical handoff marker retained for Phase 9J recovery tests: `lastCompletedPh
 You are continuing Makeup Engine on native GPT / Codex Desktop.
 
 Current state:
-- lastCompletedPhase: 10P
-- nextRecommendedPhase: 10Q
-- nextRecommendedPhaseName: Real Write Execution Authorization
+- lastCompletedPhase: 10Q
+- nextRecommendedPhase: 10R
+- nextRecommendedPhaseName: Real Write Execution Plan
 - project role: Makeup template production system with a local contract-driven user app shell prototype, not a production user app
-- current capability: React Web / PWA MVP first is selected; Phases 8B through 9J are complete; Phase 10A FaceMesh-driven Makeup Intelligence Baseline, Phase 10B Template Draft Review Workflow, Phase 10C Template Library Candidate Packaging, Phase 10D Candidate-to-App Package Contract Preparation, Phase 10E User App Package Draft Preview, Phase 10F Official User App Package Draft Gate, Phase 10G Official UserAppTemplatePackage Draft Builder, Phase 10H UserAppTemplatePackage Draft Publish Gate, Phase 10I UserAppTemplatePackage Registry Preparation, Phase 10J UserAppTemplatePackage Registry Write Gate, Phase 10K Controlled UserAppTemplatePackage Registry Writer Draft, Phase 10L Explicit Registry Write Authorization Gate, Phase 10M Controlled Registry Write Execution Design, Phase 10N Real Registry Write Implementation Gate, Phase 10O Real Registry Write Implementation Draft, and Phase 10P Final Real Write Review Gate are complete with local FaceMesh region QA, candidate attributes, rule-based draft steps, draft QA, human review, candidate package validation, candidate handoff, app contract mapping preview, app contract validation, app package handoff, user app package draft preview, preview validation, preview handoff, official draft gate, gate handoff, official draft builder, official draft validation, official draft handoff, draft publish gate, publish gate handoff, registry preparation, registry preparation validation, registry preparation handoff, registry write gate, registry write gate handoff, controlled writer dry-run draft, writer validation, writer handoff, explicit authorization gate, authorization checklist, authorization handoff, controlled execution design, execution safety validation, execution handoff, real implementation gate, implementation checklist, implementation handoff, real implementation draft, implementation draft validation, implementation draft handoff, final real write review gate, final review checklist, final review handoff, and clear Vision Analysis / Template Workbench boundaries; Makeup Engine remains the template production system and the future user-facing app should be planned separately
+- current capability: React Web / PWA MVP first is selected; Phases 8B through 9J are complete; Phase 10A FaceMesh-driven Makeup Intelligence Baseline, Phase 10B Template Draft Review Workflow, Phase 10C Template Library Candidate Packaging, Phase 10D Candidate-to-App Package Contract Preparation, Phase 10E User App Package Draft Preview, Phase 10F Official User App Package Draft Gate, Phase 10G Official UserAppTemplatePackage Draft Builder, Phase 10H UserAppTemplatePackage Draft Publish Gate, Phase 10I UserAppTemplatePackage Registry Preparation, Phase 10J UserAppTemplatePackage Registry Write Gate, Phase 10K Controlled UserAppTemplatePackage Registry Writer Draft, Phase 10L Explicit Registry Write Authorization Gate, Phase 10M Controlled Registry Write Execution Design, Phase 10N Real Registry Write Implementation Gate, Phase 10O Real Registry Write Implementation Draft, Phase 10P Final Real Write Review Gate, and Phase 10Q Real Write Execution Authorization are complete with local FaceMesh region QA, candidate attributes, rule-based draft steps, draft QA, human review, candidate package validation, candidate handoff, app contract mapping preview, app contract validation, app package handoff, user app package draft preview, preview validation, preview handoff, official draft gate, gate handoff, official draft builder, official draft validation, official draft handoff, draft publish gate, publish gate handoff, registry preparation, registry preparation validation, registry preparation handoff, registry write gate, registry write gate handoff, controlled writer dry-run draft, writer validation, writer handoff, explicit authorization gate, authorization checklist, authorization handoff, controlled execution design, execution safety validation, execution handoff, real implementation gate, implementation checklist, implementation handoff, real implementation draft, implementation draft validation, implementation draft handoff, final real write review gate, final review checklist, final review handoff, real write execution authorization, execution authorization checklist, execution authorization handoff, and clear Vision Analysis / Template Workbench boundaries; Makeup Engine remains the template production system and the future user-facing app should be planned separately
 
 Compact context:
 - Use repository documents as source of truth; do not copy full historical chat.
@@ -446,3 +447,16 @@ publish, no production package marker, no current User App Shell package
 replacement, future separate owner approval required, no backend, no camera/AR,
 no OpenAI/external API, and no training. The next recommended phase is Phase
 10Q - Real Write Execution Authorization.
+
+## Phase 10Q Handoff Note
+
+Phase 10Q completed local Real Write Execution Authorization, Execution
+Authorization Checklist, and Execution Authorization Handoff in Template
+Workbench. Authorization ready means eligible for a future real write execution
+plan only: owner authorization scope A is preserved as Phase-10Q-only, no
+actual registry write authorization, no registry write execution, no production
+writer creation, no publish, no production package marker, no current User App
+Shell package replacement, future separate owner approval required, no backend,
+no camera/AR, no OpenAI/external API, and no training. The owner authorization
+text is: `授权范围：A。只授权进入 Phase 10Q — Real Write Execution Authorization，不授权真实写入 registry，不授权发布，不授权替换当前 User App Shell package，不授权创建 production writer。`
+The next recommended phase is Phase 10R - Real Write Execution Plan.
