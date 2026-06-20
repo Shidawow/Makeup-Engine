@@ -88,3 +88,6 @@ export * from './controlled-registry-write-execution-handoff.example';
 export * from './real-registry-write-implementation-gate.example';
 export * from './real-registry-write-implementation-checklist.example';
 export * from './real-registry-write-implementation-handoff.example';
+export * from './real-registry-write-implementation-draft.example';
+export * from './real-registry-write-implementation-draft-validation.example';
+export * from './real-registry-write-implementation-draft-handoff.example';

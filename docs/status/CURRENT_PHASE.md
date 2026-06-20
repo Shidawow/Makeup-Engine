@@ -2,43 +2,43 @@
 
 ## Phase State
 
-- `lastCompletedPhase`: `10N`
-- `lastCompletedBusinessPhase`: `10N`
-- `currentPhase`: `10N`
-- `currentPhaseName`: `Real Registry Write Implementation Gate`
-- `nextRecommendedPhase`: `10O`
-- `nextRecommendedPhaseName`: `Real Registry Write Implementation Draft`
+- `lastCompletedPhase`: `10O`
+- `lastCompletedBusinessPhase`: `10O`
+- `currentPhase`: `10O`
+- `currentPhaseName`: `Real Registry Write Implementation Draft`
+- `nextRecommendedPhase`: `10P`
+- `nextRecommendedPhaseName`: `Final Real Write Review Gate`
 - `phaseOwner`: `Codex implementation, validation, commit, and push pass`
 
 ## Phase Completion Definition
 
-Phase 10N is complete when:
+Phase 10O is complete when:
 
-- Phase 10M execution validation ready or ready-with-warnings sources can enter
-  a real registry write implementation gate.
-- The implementation gate checks dry-run-only, actual-write-blocked,
-  publish-blocked, package-replacement-blocked, audit plan, rollback design,
-  write locks, owner authorization trace, production write disabled, separate
-  future approval, unsafe payload, no actual write, no production writer marker,
-  no shell replacement, and JSON round-trip boundaries.
-- The checklist confirms no actual write, no publish, no User App Shell package
-  replacement, audit review, rollback review, write-lock review, owner trace,
-  separate future approval, and production write disabled.
-- Handoff can recommend Phase 10O real implementation draft, execution plan
-  revision, audit plan revision, rollback design revision, write lock review,
-  owner authorization review, execution-design-only retention, or blocking.
-- Vision Analysis tab remains free of controlled execution design UI.
+- Phase 10N implementation gate ready or ready-with-warnings sources can enter
+  a real registry write implementation draft.
+- The implementation draft defines writer interface, transaction, write lock,
+  audit event, and rollback command drafts.
+- Draft validation checks source gate readiness, dry-run-only,
+  actual-write-blocked, publish-blocked, package-replacement-blocked,
+  production-writer-blocked, required draft sections, trace, unsafe payload, no
+  actual write, no production markers, no shell replacement, and JSON round-trip
+  boundaries.
+- Handoff can recommend Phase 10P final real write review gate, writer interface
+  revision, transaction revision, write lock revision, audit event revision,
+  rollback command revision, owner authorization review, draft-only retention,
+  or blocking.
+- Vision Analysis tab remains free of real implementation draft UI.
 - Template Workbench owns candidate package, candidate-to-app preparation, app
   package mapping preview, user app package draft preview, preview validation,
   handoff, official draft gate, gate handoff, official draft builder, draft
   validation, draft handoff, draft publish gate, registry preparation, registry
   write gate, controlled registry writer draft, explicit authorization gate,
-  controlled registry write execution design, and real registry write
-  implementation gate.
+  controlled registry write execution design, real registry write implementation
+  gate, and real registry write implementation draft.
 - No formal `UserAppTemplatePackage` is generated automatically.
 - No user app package registry write occurs automatically.
-- Phase 10N does not implement or execute registry writes, publish, replace the
-  current User App Shell package, add backend, camera capture, AR,
+- Phase 10O does not execute registry writes, create a production writer,
+  publish, replace the current User App Shell package, add backend, camera capture, AR,
   OpenAI/external API calls, training, production app routing, runtime
   dependencies, or committed MediaPipe binaries.
 - Documentation and project-state handoff are updated.

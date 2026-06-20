@@ -1,0 +1,99 @@
+import { validateRealRegistryWriteImplementationDraft } from '../../template-engine';
+import {
+  realRegistryWriteImplementationDraftActualRegistryWriteExample,
+  realRegistryWriteImplementationDraftMissingActualWriteBlockedExample,
+  realRegistryWriteImplementationDraftMissingAuditEventExample,
+  realRegistryWriteImplementationDraftMissingDryRunOnlyExample,
+  realRegistryWriteImplementationDraftMissingGateReadyExample,
+  realRegistryWriteImplementationDraftMissingPackageReplacementBlockedExample,
+  realRegistryWriteImplementationDraftMissingProductionWriterBlockedExample,
+  realRegistryWriteImplementationDraftMissingPublishBlockedExample,
+  realRegistryWriteImplementationDraftMissingRollbackCommandExample,
+  realRegistryWriteImplementationDraftMissingTransactionExample,
+  realRegistryWriteImplementationDraftMissingWriterInterfaceExample,
+  realRegistryWriteImplementationDraftMissingWriteLockExample,
+  realRegistryWriteImplementationDraftProductionMarkerExample,
+  realRegistryWriteImplementationDraftReadyExample,
+  realRegistryWriteImplementationDraftShellReplacementExample,
+  realRegistryWriteImplementationDraftWarningExample,
+} from './real-registry-write-implementation-draft.example';
+
+export const realRegistryWriteImplementationDraftValidationReadyExample =
+  validateRealRegistryWriteImplementationDraft(
+    realRegistryWriteImplementationDraftReadyExample,
+  );
+
+export const realRegistryWriteImplementationDraftValidationWarningExample =
+  validateRealRegistryWriteImplementationDraft(
+    realRegistryWriteImplementationDraftWarningExample,
+  );
+
+export const realRegistryWriteImplementationDraftValidationMissingGateReadyExample =
+  validateRealRegistryWriteImplementationDraft(
+    realRegistryWriteImplementationDraftMissingGateReadyExample,
+  );
+
+export const realRegistryWriteImplementationDraftValidationMissingDryRunOnlyExample =
+  validateRealRegistryWriteImplementationDraft(
+    realRegistryWriteImplementationDraftMissingDryRunOnlyExample,
+  );
+
+export const realRegistryWriteImplementationDraftValidationMissingActualWriteBlockedExample =
+  validateRealRegistryWriteImplementationDraft(
+    realRegistryWriteImplementationDraftMissingActualWriteBlockedExample,
+  );
+
+export const realRegistryWriteImplementationDraftValidationMissingPublishBlockedExample =
+  validateRealRegistryWriteImplementationDraft(
+    realRegistryWriteImplementationDraftMissingPublishBlockedExample,
+  );
+
+export const realRegistryWriteImplementationDraftValidationMissingPackageReplacementBlockedExample =
+  validateRealRegistryWriteImplementationDraft(
+    realRegistryWriteImplementationDraftMissingPackageReplacementBlockedExample,
+  );
+
+export const realRegistryWriteImplementationDraftValidationMissingProductionWriterBlockedExample =
+  validateRealRegistryWriteImplementationDraft(
+    realRegistryWriteImplementationDraftMissingProductionWriterBlockedExample,
+  );
+
+export const realRegistryWriteImplementationDraftValidationMissingWriterInterfaceExample =
+  validateRealRegistryWriteImplementationDraft(
+    realRegistryWriteImplementationDraftMissingWriterInterfaceExample,
+  );
+
+export const realRegistryWriteImplementationDraftValidationMissingTransactionExample =
+  validateRealRegistryWriteImplementationDraft(
+    realRegistryWriteImplementationDraftMissingTransactionExample,
+  );
+
+export const realRegistryWriteImplementationDraftValidationMissingWriteLockExample =
+  validateRealRegistryWriteImplementationDraft(
+    realRegistryWriteImplementationDraftMissingWriteLockExample,
+  );
+
+export const realRegistryWriteImplementationDraftValidationMissingAuditEventExample =
+  validateRealRegistryWriteImplementationDraft(
+    realRegistryWriteImplementationDraftMissingAuditEventExample,
+  );
+
+export const realRegistryWriteImplementationDraftValidationMissingRollbackCommandExample =
+  validateRealRegistryWriteImplementationDraft(
+    realRegistryWriteImplementationDraftMissingRollbackCommandExample,
+  );
+
+export const realRegistryWriteImplementationDraftValidationActualRegistryWriteExample =
+  validateRealRegistryWriteImplementationDraft(
+    realRegistryWriteImplementationDraftActualRegistryWriteExample,
+  );
+
+export const realRegistryWriteImplementationDraftValidationProductionMarkerExample =
+  validateRealRegistryWriteImplementationDraft(
+    realRegistryWriteImplementationDraftProductionMarkerExample,
+  );
+
+export const realRegistryWriteImplementationDraftValidationShellReplacementExample =
+  validateRealRegistryWriteImplementationDraft(
+    realRegistryWriteImplementationDraftShellReplacementExample,
+  );

@@ -9,6 +9,8 @@ import {
   createExplicitRegistryWriteAuthorizationGate,
   createExplicitRegistryWriteAuthorizationHandoff,
   createRealRegistryWriteImplementationChecklist,
+  createRealRegistryWriteImplementationDraft,
+  createRealRegistryWriteImplementationDraftHandoff,
   createRealRegistryWriteImplementationGate,
   createRealRegistryWriteImplementationHandoff,
   buildOfficialUserAppTemplatePackageDraft,
@@ -36,6 +38,7 @@ import {
   validateCandidateToAppPackageContract,
   validateControlledRegistryWriteExecutionDesign,
   validateControlledUserAppTemplatePackageRegistryWriterDraft,
+  validateRealRegistryWriteImplementationDraft,
   validateOfficialUserAppTemplatePackageDraft,
   validateUserAppPackageDraftPreview,
   validateUserAppTemplatePackageRegistryPreparation,
@@ -60,6 +63,7 @@ import { ControlledUserAppTemplatePackageRegistryWriterDraftPanel } from './Cont
 import { ExplicitRegistryWriteAuthorizationGatePanel } from './ExplicitRegistryWriteAuthorizationGatePanel';
 import { ControlledRegistryWriteExecutionDesignPanel } from './ControlledRegistryWriteExecutionDesignPanel';
 import { RealRegistryWriteImplementationGatePanel } from './RealRegistryWriteImplementationGatePanel';
+import { RealRegistryWriteImplementationDraftPanel } from './RealRegistryWriteImplementationDraftPanel';
 
 export interface FaceMeshMakeupIntelligencePanelProps {
   regionQa: FaceMeshRegionQaReport | null;
@@ -341,7 +345,7 @@ export function FaceMeshMakeupIntelligencePanel({
             </p>
           </div>
           <div>
-            <p className="font-semibold">Audit / Rollback</p>
+            <p className="font-semibold">Audit Event / Rollback Command</p>
             <p className="mt-1 text-xs leading-5">
               需要 audit plan、rollback design 和 write lock requirements。
             </p>
@@ -377,6 +381,38 @@ export function FaceMeshMakeupIntelligencePanel({
             <p className="font-semibold">Implementation Handoff</p>
             <p className="mt-1 text-xs leading-5">
               不会替换当前用户 App 包；未来真实实现仍需老板单独授权。
+            </p>
+          </div>
+        </div>
+        <div className="mt-3 grid gap-2 rounded-md border border-purple-200 bg-purple-50 p-3 text-sm text-purple-900 md:grid-cols-5">
+          <div>
+            <p className="font-semibold">真实 Registry 写入实现草稿</p>
+            <p className="mt-1 text-xs leading-5">
+              Implementation Draft blocked：缺少 10N implementation gate ready。
+            </p>
+          </div>
+          <div>
+            <p className="font-semibold">Writer Interface</p>
+            <p className="mt-1 text-xs leading-5">
+              只定义 dry-run interface draft；不是 actual writer。
+            </p>
+          </div>
+          <div>
+            <p className="font-semibold">Transaction / Write Lock</p>
+            <p className="mt-1 text-xs leading-5">
+              只定义 transaction draft 和 write lock draft，不写 registry。
+            </p>
+          </div>
+          <div>
+            <p className="font-semibold">Audit Event / Rollback Command</p>
+            <p className="mt-1 text-xs leading-5">
+              需要 audit event draft 和 rollback command draft。
+            </p>
+          </div>
+          <div>
+            <p className="font-semibold">Draft Handoff</p>
+            <p className="mt-1 text-xs leading-5">
+              仍然 dry-run only；不是 production writer，不会发布，不会替换当前用户 App 包。
             </p>
           </div>
         </div>
@@ -559,6 +595,20 @@ export function FaceMeshMakeupIntelligencePanel({
       gate: realRegistryWriteImplementationGate,
       checklist: realRegistryWriteImplementationChecklist,
     });
+  const realRegistryWriteImplementationDraft =
+    createRealRegistryWriteImplementationDraft({
+      gate: realRegistryWriteImplementationGate,
+      handoff: realRegistryWriteImplementationHandoff,
+    });
+  const realRegistryWriteImplementationDraftValidation =
+    validateRealRegistryWriteImplementationDraft(
+      realRegistryWriteImplementationDraft,
+    );
+  const realRegistryWriteImplementationDraftHandoff =
+    createRealRegistryWriteImplementationDraftHandoff({
+      draft: realRegistryWriteImplementationDraft,
+      validation: realRegistryWriteImplementationDraftValidation,
+    });
 
   return (
     <section className="grid gap-4">
@@ -717,6 +767,11 @@ export function FaceMeshMakeupIntelligencePanel({
         gate={realRegistryWriteImplementationGate}
         checklist={realRegistryWriteImplementationChecklist}
         handoff={realRegistryWriteImplementationHandoff}
+      />
+      <RealRegistryWriteImplementationDraftPanel
+        draft={realRegistryWriteImplementationDraft}
+        validation={realRegistryWriteImplementationDraftValidation}
+        handoff={realRegistryWriteImplementationDraftHandoff}
       />
     </section>
   );

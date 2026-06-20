@@ -31,13 +31,13 @@ describe('project state snapshot', () => {
 
     expect(snapshot.projectName).toBe('Makeup Engine');
     expect(snapshot.projectRole).toContain('Makeup template production system');
-    expect(snapshot.lastCompletedPhase).toBe('10N');
-    expect(snapshot.lastCompletedBusinessPhase).toBe('10N');
-    expect(snapshot.currentPhaseId).toBe('10N');
+    expect(snapshot.lastCompletedPhase).toBe('10O');
+    expect(snapshot.lastCompletedBusinessPhase).toBe('10O');
+    expect(snapshot.currentPhaseId).toBe('10O');
     expect(snapshot.currentPhase).toBeTruthy();
-    expect(snapshot.nextRecommendedPhase).toBe('10O');
-    expect(snapshot.nextRecommendedPhaseName).toContain('Real Registry Write Implementation Draft');
-    expect(snapshot.nextAction).toContain('Phase 10O');
+    expect(snapshot.nextRecommendedPhase).toBe('10P');
+    expect(snapshot.nextRecommendedPhaseName).toContain('Final Real Write Review Gate');
+    expect(snapshot.nextAction).toContain('Phase 10P');
     expect(snapshot.mainDataFlow).toEqual(
       expect.arrayContaining([
         'SourceImagePackage',
@@ -154,6 +154,15 @@ describe('project state snapshot', () => {
         'RealRegistryWriteImplementationChecklist',
         'RealRegistryWriteImplementationHandoff',
         'RealRegistryWriteImplementationGatePanel',
+        'RealRegistryWriteImplementationDraft',
+        'RealRegistryWriteWriterInterfaceDraft',
+        'RealRegistryWriteTransactionDraft',
+        'RealRegistryWriteLockDraft',
+        'RealRegistryWriteAuditEventDraft',
+        'RealRegistryWriteRollbackCommandDraft',
+        'RealRegistryWriteImplementationDraftValidationResult',
+        'RealRegistryWriteImplementationDraftHandoff',
+        'RealRegistryWriteImplementationDraftPanel',
         'FaceMeshMakeupIntelligenceAdminPanel',
         'MaterializedTrainingDataset',
       ]),
@@ -192,6 +201,7 @@ describe('project state snapshot', () => {
     expect(snapshot.knownLimitations.join('\n')).toContain('Phase 10L');
     expect(snapshot.knownLimitations.join('\n')).toContain('Phase 10M');
     expect(snapshot.knownLimitations.join('\n')).toContain('Phase 10N');
+    expect(snapshot.knownLimitations.join('\n')).toContain('Phase 10O');
     expect(snapshot.knownLimitations.join('\n')).toContain('real names');
     expect(snapshot.knownLimitations.join('\n')).toContain('service worker');
     expect(snapshot.knownLimitations).toContain('raw RGBA is currently summary-only in Studio');

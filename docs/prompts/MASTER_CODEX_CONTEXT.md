@@ -12,10 +12,10 @@ It produces templates, template evidence, correction records, review state, loca
 
 ## Current Phase
 
-- Current business phase: `Phase 10N completed`
-- Last completed phase: `Phase 10N`
-- Last completed phase name: `Phase 10N - Real Registry Write Implementation Gate`
-- Next recommended phase: `Phase 10O - Real Registry Write Implementation Draft`
+- Current business phase: `Phase 10O completed`
+- Last completed phase: `Phase 10O`
+- Last completed phase name: `Phase 10O - Real Registry Write Implementation Draft`
+- Next recommended phase: `Phase 10P - Final Real Write Review Gate`
 
 Historical recovery marker retained for Phase 9C tests: `Phase 9C completed`.
 Historical recovery marker retained for Phase 9E tests: `Phase 9E completed`.
@@ -89,6 +89,7 @@ Real Photo
 -> Explicit Registry Write Authorization Gate
 -> Controlled Registry Write Execution Design
 -> Real Registry Write Implementation Gate
+-> Real Registry Write Implementation Draft
 -> Phase 8 Roadmap / V1 Non-Goals
 -> User App Consumption Manifest
 -> Dataset Review
@@ -181,6 +182,14 @@ Important boundary: `SourceImagePackage` can enter Vision Analysis through opera
   They decide future implementation draft eligibility only; they do not
   implement or execute a registry writer, write registry data, publish, replace
   the current User App Shell package, or mark production readiness.
+- `src/template-engine/realRegistryWriteImplementationDraft.ts`,
+  `src/template-engine/realRegistryWriteImplementationDraftValidation.ts`, and
+  `src/template-engine/realRegistryWriteImplementationDraftHandoff.ts`: Phase
+  10O local real registry write implementation draft, validation, and handoff
+  logic. They describe future writer interface, transaction, write lock, audit
+  event, and rollback command drafts only; they do not execute a registry
+  writer, write registry data, create a production writer, publish, replace the
+  current User App Shell package, or mark production readiness.
 - `src/templates`: schemas, storage, review, corrections, evidence, dataset materialization, source image binding, production batch storage/export, template library storage, and publish package export.
 - `src/template-engine/production`: production queue, state machine, QA rules, rebinding recovery, analysis handoff, review lifecycle, smoke checklist.
 - `src/template-engine/library`: production task to library entry conversion, template versioning, and local library lifecycle.
@@ -468,16 +477,18 @@ Historical marker retained for Phase 10L recovery tests: Phase 10L completed.
 
 Historical marker retained for Phase 10M recovery tests: Phase 10M completed.
 
-## Phase 10N Current Capability
+## Phase 10O Current Capability
 
-Phase 10N completed Real Registry Write Implementation Gate. It added a local
-implementation gate, checklist, handoff, examples, Template Workbench UI,
-documentation, and recovery state for deciding whether a Phase 10M controlled
-execution design result is eligible for a future real write implementation
-draft. It is not actual write authorization, does not implement or execute a
-registry writer, does not write a registry, does not publish, does not replace
-the current User App Shell package, does not mark production readiness, does
-not call backend/OpenAI/external APIs, does not use camera/AR, and does not
-train models.
+Phase 10O completed Real Registry Write Implementation Draft. It added a local
+implementation draft, validation, handoff, examples, Template Workbench UI,
+documentation, and recovery state for describing a future writer interface,
+transaction, write lock, audit event, and rollback command after the Phase 10N
+implementation gate. It is not actual registry write, does not create or
+execute a production writer, does not write a registry, does not publish, does
+not replace the current User App Shell package, does not mark production
+readiness, does not call backend/OpenAI/external APIs, does not use camera/AR,
+and does not train models.
 
-Next recommended phase: Phase 10O - Real Registry Write Implementation Draft.
+Next recommended phase: Phase 10P - Final Real Write Review Gate.
+
+Historical marker retained for Phase 10N recovery tests: Phase 10N completed.

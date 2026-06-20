@@ -1,5 +1,5 @@
 {
-  "phase": "10N",
+  "phase": "10O",
   "guardrails": [
     {
       "id": "source-image-not-training-data",
@@ -772,6 +772,30 @@
     {
       "id": "phase_10n_future_owner_authorization_required",
       "rule": "Any future real write implementation draft after Phase 10N still requires separate owner authorization."
+    },
+    {
+      "id": "phase_10o_draft_only",
+      "rule": "Phase 10O is a real registry write implementation draft only and must not create or execute a production writer."
+    },
+    {
+      "id": "phase_10o_no_actual_registry_write",
+      "rule": "Phase 10O must not execute, persist, or mark actual UserAppTemplatePackage registry writes."
+    },
+    {
+      "id": "phase_10o_no_publish",
+      "rule": "Phase 10O must not publish to the user app or mark anything live."
+    },
+    {
+      "id": "phase_10o_no_shell_package_replacement",
+      "rule": "Phase 10O must not replace the current User App Shell package."
+    },
+    {
+      "id": "phase_10o_no_production_writer",
+      "rule": "Phase 10O must not create or claim production writer readiness."
+    },
+    {
+      "id": "phase_10o_future_owner_authorization_required",
+      "rule": "Any final real write review gate after Phase 10O still requires separate owner authorization."
     }
   ],
   "legacyFrozenModules": [

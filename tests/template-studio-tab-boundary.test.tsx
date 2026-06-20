@@ -49,6 +49,8 @@ describe('Template Studio tab boundary', () => {
     expect(html).not.toContain('controlled execution design');
     expect(html).not.toContain('真实 Registry 写入实现闸门');
     expect(html).not.toContain('real write implementation gate');
+    expect(html).not.toContain('真实 Registry 写入实现草稿');
+    expect(html).not.toContain('real write implementation draft');
   });
 
   it('tells the template workbench to return to Vision Analysis when Region QA is blocked', () => {
@@ -146,6 +148,18 @@ describe('Template Studio tab boundary', () => {
     expect(html).toContain(
       'Implementation gate requires a ready Phase 10M execution validation result',
     );
+    expect(html).toContain('真实 Registry 写入实现草稿');
+    expect(html).toContain('Writer Interface');
+    expect(html).toContain('Transaction');
+    expect(html).toContain('Write Lock');
+    expect(html).toContain('Audit Event');
+    expect(html).toContain('Rollback Command');
+    expect(html).toContain('不是 production writer');
+    expect(html).toContain('未来真实 writer 仍需老板单独授权');
+    expect(html).toContain('implementation_draft_blocked');
+    expect(html).toContain(
+      'Implementation draft requires a ready Phase 10N implementation gate',
+    );
     expect(html).not.toContain('AI 已确认');
     expect(html).not.toContain('已生成正式用户模板包');
     expect(html).not.toContain('已生成正式 UserAppTemplatePackage');
@@ -153,6 +167,7 @@ describe('Template Studio tab boundary', () => {
     expect(html).not.toContain('已可执行真实写入');
     expect(html).not.toContain('已可真实写入');
     expect(html).not.toContain('已实现真实写入');
+    expect(html).not.toContain('已创建 production writer');
     expect(html).not.toContain('已写入用户 App registry');
     expect(html).not.toContain('已发布到用户 App');
     expect(html).not.toContain('已替换当前用户 App 包');
@@ -202,5 +217,9 @@ describe('Template Studio tab boundary', () => {
     expect(userPath).not.toContain('真实 Registry 写入实现闸门');
     expect(userPath).not.toContain('real write implementation gate');
     expect(userPath).not.toContain('Implementation Gate');
+    expect(userPath).not.toContain('真实 Registry 写入实现草稿');
+    expect(userPath).not.toContain('real write implementation draft');
+    expect(userPath).not.toContain('Implementation Draft');
+    expect(userPath).not.toContain('production writer');
   });
 });

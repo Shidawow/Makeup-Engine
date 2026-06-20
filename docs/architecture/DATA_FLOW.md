@@ -26,6 +26,8 @@ Real Photo
 -> Controlled UserAppTemplatePackage Registry Writer Draft
 -> Explicit Registry Write Authorization Gate
 -> Controlled Registry Write Execution Design
+-> Real Registry Write Implementation Gate
+-> Real Registry Write Implementation Draft
 -> Editable Masks
 -> Human Correction
 -> Template Evidence
@@ -120,6 +122,22 @@ Real Photo
   owner authorization, and JSON round-trip boundaries. It does not execute a
   registry write, publish, replace the current User App Shell package, or mark
   production readiness.
+- `Real Registry Write Implementation Gate`: Phase 10N local implementation
+  gate, checklist, and handoff branch. It converts a Phase 10M execution
+  validation ready source into a future implementation-draft gate while
+  preserving dry-run-only, no-actual-write, no-publication,
+  no-shell-package-replacement, no-production-writer, future owner
+  authorization, audit, rollback, write lock, and JSON round-trip boundaries.
+  It does not implement or execute a registry writer, publish, replace the
+  current User App Shell package, or mark production readiness.
+- `Real Registry Write Implementation Draft`: Phase 10O local implementation
+  draft, validation, and handoff branch. It converts a Phase 10N gate-ready
+  source into writer interface, transaction, write lock, audit event, and
+  rollback command drafts while preserving draft/dry-run-only, no-actual-write,
+  no-publication, no-shell-package-replacement, no-production-writer, future
+  owner authorization, trace, and JSON round-trip boundaries. It does not write
+  a registry, create a production writer, publish, replace the current User App
+  Shell package, or mark production readiness.
 - `Editable Masks`: generated and human-editable mask artifacts.
 - `Human Correction`: correction records produced by human review and mask editing.
 - `Template Evidence`: structured evidence supporting extracted template decisions.
@@ -435,3 +453,18 @@ future implementation draft, but it cannot implement or execute a writer, write
 registry data, publish, create a production package, replace the current User
 App Shell package, call backend/OpenAI/external APIs, request camera/AR scope,
 or train models.
+
+## Phase 10O Real Registry Write Implementation Draft Flow
+
+`RealRegistryWriteImplementationGateResult`
+-> `RealRegistryWriteImplementationDraft`
+-> `RealRegistryWriteImplementationDraftValidationResult`
+-> `RealRegistryWriteImplementationDraftHandoff`
+-> next recommendation for Phase 10P final real write review gate.
+
+The flow is local, deterministic, administrator-only, and implementation
+draft-only. It can describe a future writer interface, transaction, write lock,
+audit event, and rollback command, but it cannot execute a writer, write
+registry data, publish, create a production package, create production writer
+readiness, replace the current User App Shell package, call backend/OpenAI/
+external APIs, request camera/AR scope, or train models.

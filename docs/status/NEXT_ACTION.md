@@ -2,31 +2,33 @@
 
 ## What To Do Next
 
-Proceed to Phase 10O: Real Registry Write Implementation Draft.
+Proceed to Phase 10P: Final Real Write Review Gate.
 
 ## Why
 
-Phase 10N adds a local real registry write implementation gate over the Phase
-10M controlled execution design result while preserving dry-run-only, no actual
-registry write, no publication, no production writer, future owner
-authorization, audit plan, rollback design, write lock requirements, and no User
-App Shell package replacement boundaries. The next safe step is a real write
-implementation draft that remains explicitly gated and still cannot silently
-write, publish, or replace anything.
+Phase 10O adds a local real registry write implementation draft over the Phase
+10N implementation gate result while preserving dry-run-only, no actual registry
+write, no publication, no production writer, future owner authorization, writer
+interface draft, transaction draft, write lock draft, audit event draft,
+rollback command draft, and no User App Shell package replacement boundaries.
+The next safe step is a final real write review gate that remains explicitly
+gated and still cannot silently write, publish, create a production writer, or
+replace anything.
 
-## Recommended 10O Scope
+## Recommended 10P Scope
 
-- Draft a future real registry write implementation plan from the Phase 10N
-  implementation gate result without executing it.
-- Keep implementation-draft work local, deterministic, reviewable, explicitly
+- Review the Phase 10O implementation draft through a final real write review
+  gate without executing it.
+- Keep final-review-gate work local, deterministic, reviewable, explicitly
   owner-gated, and blocked from automatic publication, production replacement,
-  or uncontrolled registry mutation.
+  production writer creation, or uncontrolled registry mutation.
 - Preserve QA trace, human review trace, privacy trace, candidate trace,
   contract trace, preview trace, official draft trace, publish gate trace, and
   registry preparation / write gate / writer draft / authorization gate /
-  execution design trace.
+  execution design / implementation gate / implementation draft trace.
 - Continue to avoid automatic publication, backend work, online release,
-  production readiness, or current User App Shell package replacement.
+  production readiness, production writer execution, or current User App Shell
+  package replacement.
 
 ## What Not To Do
 
@@ -54,6 +56,9 @@ write, publish, or replace anything.
 - Do not treat 10N real registry write implementation gate readiness as actual
   registry write implementation, registry write execution, User App Shell
   package replacement, production readiness, or publication.
+- Do not treat 10O real registry write implementation draft readiness as actual
+  registry write, production writer readiness, registry write execution, User
+  App Shell package replacement, production readiness, or publication.
 - Do not execute a user app package registry write unless a later phase
   explicitly implements a controlled writer after separate authorization.
 - Do not add backend, database, account system, cloud sync, analytics, camera
@@ -102,20 +107,24 @@ Read these files first:
 31. `docs/product/real-registry-write-implementation-gate.md`
 32. `docs/product/real-registry-write-implementation-checklist.md`
 33. `docs/product/real-registry-write-implementation-handoff.md`
-34. `docs/phases/phase-10F.md`
-35. `docs/phases/phase-10G.md`
-36. `docs/phases/phase-10H.md`
-37. `docs/phases/phase-10I.md`
-38. `docs/phases/phase-10J.md`
-39. `docs/phases/phase-10K.md`
-40. `docs/phases/phase-10L.md`
-41. `docs/phases/phase-10M.md`
-42. `docs/phases/phase-10N.md`
-43. `project-state/project-state.snapshot.json`
-44. `project-state/latest-handoff.json`
-45. `project-state/provider-handoff.json`
-46. `project-state/active-task.json`
-47. `project-state/guardrails.json`
+34. `docs/product/real-registry-write-implementation-draft.md`
+35. `docs/product/real-registry-write-implementation-draft-validation.md`
+36. `docs/product/real-registry-write-implementation-draft-handoff.md`
+37. `docs/phases/phase-10F.md`
+38. `docs/phases/phase-10G.md`
+39. `docs/phases/phase-10H.md`
+40. `docs/phases/phase-10I.md`
+41. `docs/phases/phase-10J.md`
+42. `docs/phases/phase-10K.md`
+43. `docs/phases/phase-10L.md`
+44. `docs/phases/phase-10M.md`
+45. `docs/phases/phase-10N.md`
+46. `docs/phases/phase-10O.md`
+47. `project-state/project-state.snapshot.json`
+48. `project-state/latest-handoff.json`
+49. `project-state/provider-handoff.json`
+50. `project-state/active-task.json`
+51. `project-state/guardrails.json`
 
 Then run:
 

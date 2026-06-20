@@ -714,3 +714,30 @@ execute a registry writer, write a registry, publish, replace the current User
 App Shell package, call backend/API services, use camera/AR, train models, or
 mark production readiness. Gate ready means eligible for a future implementation
 draft only.
+
+### Real Registry Write Implementation Draft
+
+Phase 10O adds a local implementation draft after Phase 10N implementation gate.
+`src/template-engine/realRegistryWriteImplementationDraft.ts` creates a
+writer interface draft, transaction draft, write lock draft, audit event draft,
+rollback command draft, warnings, blocked reasons, trace, and draft status while
+preserving dry-run-only, actual-write-blocked, publish-blocked,
+package-replacement-blocked, production-writer-blocked, no actual registry
+write, no User App Shell package replacement, no production marker, and JSON
+round-trip boundaries.
+
+`realRegistryWriteImplementationDraftValidation.ts` validates source gate
+readiness, required safety flags, required draft sections, trace preservation,
+unsafe marker boundaries, and JSON round-trip stability.
+`realRegistryWriteImplementationDraftHandoff.ts` creates local next actions for
+a future final real write review gate, focused draft revisions, owner
+authorization review, draft-only retention, or blocking.
+
+`src/components/template-studio/RealRegistryWriteImplementationDraftPanel.tsx`
+renders the Template Workbench implementation draft, validation, blocked
+reasons, writer interface, transaction, write lock, audit event, rollback
+command, and handoff summary. The panel does not appear in Vision Analysis and
+does not create a production writer, execute registry writes, publish, replace
+the current User App Shell package, call backend/API services, use camera/AR,
+train models, or mark production readiness. Draft ready means eligible for a
+future final real write review gate only.
