@@ -1,5 +1,5 @@
 {
-  "phase": "10Q",
+  "phase": "10R",
   "guardrails": [
     {
       "id": "source-image-not-training-data",
@@ -852,6 +852,34 @@
     {
       "id": "phase_10q_future_owner_authorization_required",
       "rule": "Any actual real write execution after Phase 10Q still requires separate future owner authorization."
+    },
+    {
+      "id": "phase_10r_execution_plan_only",
+      "rule": "Phase 10R is a real write execution plan only and must not authorize or execute actual registry writes."
+    },
+    {
+      "id": "phase_10r_no_actual_registry_write",
+      "rule": "Phase 10R must not execute, persist, or mark actual UserAppTemplatePackage registry writes."
+    },
+    {
+      "id": "phase_10r_no_publish",
+      "rule": "Phase 10R must not publish to the user app or mark anything live."
+    },
+    {
+      "id": "phase_10r_no_shell_package_replacement",
+      "rule": "Phase 10R must not replace the current User App Shell package."
+    },
+    {
+      "id": "phase_10r_no_production_writer",
+      "rule": "Phase 10R must not create, execute, or claim production writer readiness."
+    },
+    {
+      "id": "phase_10r_dry_run_only",
+      "rule": "Phase 10R must remain dry-run-only execution planning and hand off only to a future guarded simulator."
+    },
+    {
+      "id": "phase_10r_future_owner_authorization_required",
+      "rule": "Any actual real write execution after Phase 10R still requires separate future owner authorization and a later explicit phase."
     }
   ],
   "legacyFrozenModules": [

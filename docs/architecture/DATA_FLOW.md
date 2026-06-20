@@ -501,3 +501,19 @@ production package creation, and current User App Shell package replacement
 remain blocked. It cannot authorize or execute a registry write, publish,
 create production writer readiness, call backend/OpenAI/external APIs, request
 camera/AR scope, or train models.
+
+## Phase 10R Real Write Execution Plan Flow
+
+`RealWriteExecutionAuthorizationResult`
+-> `RealWriteExecutionPlan`
+-> `RealWriteExecutionPlanValidationResult`
+-> `RealWriteExecutionPlanHandoff`
+-> next recommendation for Phase 10S guarded real write execution simulator.
+
+The flow is local, deterministic, administrator-only, and execution-plan-only.
+It can describe execution sequence, preflight, write lock, audit, rollback,
+failure handling, and dry-run verification after Phase 10Q authorization
+readiness. It cannot authorize or execute a registry write, publish, create a
+production writer, create production writer readiness, replace the current User
+App Shell package, call backend/OpenAI/external APIs, request camera/AR scope,
+or train models.

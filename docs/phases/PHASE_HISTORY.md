@@ -1416,3 +1416,47 @@ The execution authorization model can now decide whether a future real write
 execution plan may be considered. Phase 10R should still remain local,
 reviewable, owner-gated, and blocked from executing registry writes unless a
 later explicit actual-write phase is approved.
+
+## Phase 10R - Real Write Execution Plan
+
+Added a local real write execution plan after Phase 10Q execution authorization
+readiness.
+
+What changed:
+
+- Added execution plan model for Phase 10Q authorization-ready sources,
+  including execution sequence, preflight plan, write lock plan, audit plan,
+  rollback plan, failure handling plan, dry-run verification plan,
+  dry-run-only, actual-write-blocked, publish-blocked,
+  package-replacement-blocked, production-writer-blocked, trace preservation,
+  unsafe payload blocking, no actual registry write, no production marker, no
+  User App Shell package replacement, no production writer creation marker, and
+  JSON round-trip stability.
+- Added execution plan validation for source authorization readiness, required
+  safety flags, required plan sections, trace preservation, unsafe payload
+  blocking, and JSON round-trip stability.
+- Added execution plan handoff next actions for a future guarded execution
+  simulator, execution sequence revision, preflight revision, write lock
+  revision, audit plan revision, rollback plan revision, failure handling
+  revision, owner authorization request for actual write, plan-only retention,
+  or blocking.
+- Added Template Workbench panel for 真实写入执行计划 / Execution Plan
+  Validation / Execution Plan Handoff.
+- Kept Vision Analysis free of execution plan UI and kept ordinary User App
+  Shell paths free of administrator execution plan terminology.
+
+What still cannot happen:
+
+- Phase 10R plan ready is not actual registry write authorization, not registry
+  write execution, not production writer creation or readiness, not publication,
+  not production readiness, not backend work, not camera/AR scope, not
+  OpenAI/external API scope, not training input, and not a replacement for the
+  current User App Shell package.
+
+Why Phase 10S follows:
+
+The execution plan can now describe the future execution sequence, preflight,
+locks, audit, rollback, failure handling, and dry-run verification without
+mutation. Phase 10S should add a guarded execution simulator while still
+preventing silent writes, publication, package replacement, backend work,
+production writer execution, or production readiness claims.

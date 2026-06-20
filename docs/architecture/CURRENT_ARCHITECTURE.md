@@ -797,3 +797,28 @@ create a production writer, publish, replace the current User App Shell package,
 call backend/API services, use camera/AR, train models, or mark production
 readiness. Authorization ready means eligible for a future real write execution
 plan only.
+
+### Real Write Execution Plan
+
+Phase 10R adds a local real write execution plan after Phase 10Q execution
+authorization readiness. `src/template-engine/realWriteExecutionPlan.ts`
+creates a plan with execution sequence, preflight, write lock, audit, rollback,
+failure handling, dry-run verification, warnings, blocked reasons, trace, and
+plan status while preserving dry-run-only, actual-write-blocked,
+publish-blocked, package-replacement-blocked, production-writer-blocked, no
+actual registry write, no User App Shell package replacement, no production
+marker, no production writer creation marker, and JSON round-trip boundaries.
+
+`realWriteExecutionPlanValidation.ts` validates source authorization readiness,
+required safety flags, required plan sections, trace preservation, unsafe marker
+boundaries, and JSON round-trip stability. `realWriteExecutionPlanHandoff.ts`
+creates local next actions for a future guarded execution simulator, focused
+plan revisions, owner authorization review, plan-only retention, or blocking.
+
+`src/components/template-studio/RealWriteExecutionPlanPanel.tsx` renders the
+Template Workbench execution plan, validation, blocked reasons, plan sections,
+and handoff summary. The panel does not appear in Vision Analysis and does not
+execute registry writes, create a production writer, publish, replace the
+current User App Shell package, call backend/API services, use camera/AR, train
+models, or mark production readiness. Plan ready means eligible for a future
+guarded execution simulator only.

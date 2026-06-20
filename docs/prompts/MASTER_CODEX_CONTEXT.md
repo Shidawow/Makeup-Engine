@@ -535,3 +535,19 @@ backend/OpenAI/external APIs, does not use camera/AR, and does not train models.
 Historical marker retained for Phase 10P recovery tests: Phase 10P completed.
 
 Next recommended phase: Phase 10R - Real Write Execution Plan.
+
+## Phase 10R Current Capability
+
+Phase 10R completed Real Write Execution Plan, Execution Plan Validation, and
+Execution Plan Handoff in Template Workbench. Plan ready means eligible for a
+future guarded execution simulator only: dry-run only, no actual registry write,
+no production writer creation or readiness, no publish, no production package
+marker, no current User App Shell package replacement, future separate owner
+approval required, execution sequence present, preflight present, write lock
+present, audit present, rollback present, failure handling present, dry-run
+verification present, no backend, no camera/AR, no OpenAI/external API, and no
+training.
+
+Historical marker retained for Phase 10Q recovery tests: Phase 10Q completed.
+
+Next recommended phase: Phase 10S - Guarded Real Write Execution Simulator.

@@ -774,13 +774,113 @@
     {
       "command": "node scripts/context-pack.mjs --json",
       "status": "pending"
+    },
+    {
+      "command": "npm run mediapipe:check",
+      "status": "pending",
+      "phase": "10R"
+    },
+    {
+      "command": "npm run typecheck",
+      "status": "pending",
+      "phase": "10R"
+    },
+    {
+      "command": "npm run build",
+      "status": "pending",
+      "phase": "10R"
+    },
+    {
+      "command": "npm run project:status",
+      "status": "pending",
+      "phase": "10R"
+    },
+    {
+      "command": "npm run project:context",
+      "status": "pending",
+      "phase": "10R"
+    },
+    {
+      "command": "node scripts/project-status.mjs --json",
+      "status": "pending",
+      "phase": "10R"
+    },
+    {
+      "command": "node scripts/context-pack.mjs --json",
+      "status": "pending",
+      "phase": "10R"
+    },
+    {
+      "command": "npm run test -- tests/real-write-execution-plan.test.ts tests/real-write-execution-plan-validation.test.ts tests/real-write-execution-plan-handoff.test.ts tests/real-write-execution-plan-panel.test.tsx tests/phase-10R-documentation-recovery.test.ts tests/real-write-execution-authorization.test.ts tests/real-write-execution-authorization-panel.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
+      "status": "pending",
+      "phase": "10R"
+    },
+    {
+      "command": "npm run mediapipe:check",
+      "phase": "10R",
+      "status": "passed",
+      "notes": "Phase 10R validation command passed."
+    },
+    {
+      "command": "npm run typecheck",
+      "phase": "10R",
+      "status": "passed",
+      "notes": "Phase 10R validation command passed."
+    },
+    {
+      "command": "npm run build",
+      "phase": "10R",
+      "status": "passed",
+      "notes": "Phase 10R validation command passed."
+    },
+    {
+      "command": "npm run project:status",
+      "phase": "10R",
+      "status": "passed",
+      "notes": "Phase 10R validation command passed."
+    },
+    {
+      "command": "npm run project:context",
+      "phase": "10R",
+      "status": "passed",
+      "notes": "Phase 10R validation command passed."
+    },
+    {
+      "command": "node scripts/project-status.mjs --json",
+      "phase": "10R",
+      "status": "passed",
+      "notes": "Phase 10R validation command passed."
+    },
+    {
+      "command": "node scripts/context-pack.mjs --json",
+      "phase": "10R",
+      "status": "passed",
+      "notes": "Phase 10R validation command passed."
+    },
+    {
+      "command": "npm run test -- tests/real-write-execution-plan.test.ts tests/real-write-execution-plan-validation.test.ts tests/real-write-execution-plan-handoff.test.ts tests/real-write-execution-plan-panel.test.tsx tests/phase-10R-documentation-recovery.test.ts tests/real-write-execution-authorization.test.ts tests/real-write-execution-authorization-panel.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
+      "phase": "10R",
+      "status": "passed",
+      "notes": "Phase 10R validation command passed."
+    },
+    {
+      "command": "npm run test -- tests/template-studio-tab-boundary.test.tsx",
+      "phase": "10R",
+      "status": "passed",
+      "notes": "Supplemental DOM render tab boundary test passed."
+    },
+    {
+      "command": "Browser verification via in-app browser and Chrome AppleScript fallback",
+      "phase": "10R",
+      "status": "attempted-blocked",
+      "notes": "attempted-blocked: in-app browser node_repl bridge returned missing sandboxPolicy; Chrome AppleScript fallback hung on automation permission. Supplemental Template Studio tab-boundary render test passed."
     }
   ],
-  "lastUpdatedPhase": "10Q",
-  "phase": "10Q",
-  "lastCompletedPhase": "10Q",
-  "currentPhase": "Real Write Execution Authorization",
-  "nextRecommendedPhase": "10R",
+  "lastUpdatedPhase": "10R",
+  "phase": "10R",
+  "lastCompletedPhase": "10R",
+  "currentPhase": "Real Write Execution Plan",
+  "nextRecommendedPhase": "10S",
   "updatedAt": "2026-06-20T00:00:00.000Z",
   "lastValidation": {
     "mediapipeCheck": "passed",
@@ -791,16 +891,16 @@
     "projectStatusJson": "passed",
     "projectContext": "passed",
     "contextPackJson": "passed",
-    "browserVerification": "passed",
-    "phase10QScopedTests": "passed",
-    "phase10QTabBoundaryTest": "passed",
+    "browserVerification": "attempted-blocked: in-app browser node_repl bridge returned missing sandboxPolicy; Chrome AppleScript fallback hung on automation permission. Supplemental Template Studio tab-boundary render test passed.",
+    "phase10RScopedTests": "passed",
+    "phase10RTabBoundaryTest": "passed",
     "testFiles": 10,
     "tests": 36,
-    "phase10QScopedTestFiles": 10,
-    "phase10QScopedTestsCount": 36,
-    "phase10QTabBoundaryTestFiles": 1,
-    "phase10QTabBoundaryTestsCount": 4,
-    "summary": "Phase 10Q validation passed: mediapipe:check, real write execution authorization scoped tests, Template Studio tab boundary supplemental test, typecheck, build, browser verification, project status/context, and JSON status/context commands."
+    "phase10RScopedTestFiles": 10,
+    "phase10RScopedTestsCount": 36,
+    "phase10RTabBoundaryTestFiles": 1,
+    "phase10RTabBoundaryTestsCount": 4,
+    "summary": "Phase 10R validation passed for mediapipe:check, scoped tests, Template Studio tab boundary supplemental test, typecheck, build, project status/context, and JSON status/context. Browser verification was attempted but blocked by local browser automation tooling; the DOM tab-boundary render test passed as fallback evidence."
   },
   "validation": {
     "mediapipeCheck": "passed",
@@ -811,19 +911,19 @@
     "projectStatusJson": "passed",
     "projectContext": "passed",
     "contextPackJson": "passed",
-    "browserVerification": "passed",
-    "phase10QScopedTests": "passed",
-    "phase10QTabBoundaryTest": "passed",
+    "browserVerification": "attempted-blocked: in-app browser node_repl bridge returned missing sandboxPolicy; Chrome AppleScript fallback hung on automation permission. Supplemental Template Studio tab-boundary render test passed.",
+    "phase10RScopedTests": "passed",
+    "phase10RTabBoundaryTest": "passed",
     "testFiles": 10,
     "tests": 36,
-    "phase10QScopedTestFiles": 10,
-    "phase10QScopedTestsCount": 36,
-    "phase10QTabBoundaryTestFiles": 1,
-    "phase10QTabBoundaryTestsCount": 4,
-    "summary": "Phase 10Q validation passed: mediapipe:check, real write execution authorization scoped tests, Template Studio tab boundary supplemental test, typecheck, build, browser verification, project status/context, and JSON status/context commands."
+    "phase10RScopedTestFiles": 10,
+    "phase10RScopedTestsCount": 36,
+    "phase10RTabBoundaryTestFiles": 1,
+    "phase10RTabBoundaryTestsCount": 4,
+    "summary": "Phase 10R validation passed for mediapipe:check, scoped tests, Template Studio tab boundary supplemental test, typecheck, build, project status/context, and JSON status/context. Browser verification was attempted but blocked by local browser automation tooling; the DOM tab-boundary render test passed as fallback evidence."
   },
-  "status": "passed",
-  "summary": "Phase 10Q validation passed: mediapipe:check, real write execution authorization scoped tests, Template Studio tab boundary supplemental test, typecheck, build, browser verification, project status/context, and JSON status/context commands.",
+  "status": "passed_with_browser_tool_limitation",
+  "summary": "Phase 10R validation passed for mediapipe:check, scoped tests, Template Studio tab boundary supplemental test, typecheck, build, project status/context, and JSON status/context. Browser verification was attempted but blocked by local browser automation tooling; the DOM tab-boundary render test passed as fallback evidence.",
   "entries": [
     {
       "command": "npm run mediapipe:check",
@@ -956,11 +1056,35 @@
       "status": "passed",
       "notes": "Vision Analysis excludes 10P final review gate; Template Workbench shows 10P final review gate/checklist/handoff and no forbidden write/publish/production/shell replacement copy.",
       "phase": "10P"
+    },
+    {
+      "command": "npm run test -- tests/real-write-execution-plan.test.ts tests/real-write-execution-plan-validation.test.ts tests/real-write-execution-plan-handoff.test.ts tests/real-write-execution-plan-panel.test.tsx tests/template-studio-tab-boundary.test.tsx",
+      "phase": "10R",
+      "status": "passed",
+      "notes": "Initial Phase 10R model, panel, and tab boundary tests passed."
+    },
+    {
+      "command": "npm run test -- tests/real-write-execution-plan.test.ts tests/real-write-execution-plan-validation.test.ts tests/real-write-execution-plan-handoff.test.ts tests/real-write-execution-plan-panel.test.tsx tests/phase-10R-documentation-recovery.test.ts tests/real-write-execution-authorization.test.ts tests/real-write-execution-authorization-panel.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
+      "phase": "10R",
+      "status": "passed",
+      "notes": "Phase 10R scoped acceptance tests passed: 10 files / 36 tests."
+    },
+    {
+      "command": "npm run test -- tests/template-studio-tab-boundary.test.tsx",
+      "phase": "10R",
+      "status": "passed",
+      "notes": "Supplemental Template Studio tab boundary test passed: 1 file / 4 tests."
+    },
+    {
+      "command": "Browser verification for Phase 10R Template Studio tabs",
+      "phase": "10R",
+      "status": "attempted-blocked",
+      "notes": "attempted-blocked: in-app browser node_repl bridge returned missing sandboxPolicy; Chrome AppleScript fallback hung on automation permission. Supplemental Template Studio tab-boundary render test passed."
     }
   ],
-  "currentPhaseId": "10Q",
-  "nextRecommendedPhaseName": "Real Write Execution Plan",
-  "currentPhaseName": "Real Write Execution Authorization",
-  "validationStatus": "passed",
-  "lastCompletedBusinessPhase": "10Q"
+  "currentPhaseId": "10R",
+  "nextRecommendedPhaseName": "Guarded Real Write Execution Simulator",
+  "currentPhaseName": "Real Write Execution Plan",
+  "validationStatus": "passed_with_browser_tool_limitation",
+  "lastCompletedBusinessPhase": "10R"
 }

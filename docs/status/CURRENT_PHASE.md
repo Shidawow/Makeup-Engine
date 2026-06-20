@@ -2,46 +2,44 @@
 
 ## Phase State
 
-- `lastCompletedPhase`: `10Q`
-- `lastCompletedBusinessPhase`: `10Q`
-- `currentPhase`: `10Q`
-- `currentPhaseName`: `Real Write Execution Authorization`
-- `nextRecommendedPhase`: `10R`
-- `nextRecommendedPhaseName`: `Real Write Execution Plan`
+- `lastCompletedPhase`: `10R`
+- `lastCompletedBusinessPhase`: `10R`
+- `currentPhase`: `10R`
+- `currentPhaseName`: `Real Write Execution Plan`
+- `nextRecommendedPhase`: `10S`
+- `nextRecommendedPhaseName`: `Guarded Real Write Execution Simulator`
 - `phaseOwner`: `Codex implementation, validation, commit, and push pass`
 
 ## Phase Completion Definition
 
-Phase 10Q is complete when:
+Phase 10R is complete when:
 
-- Phase 10P final review gate ready or ready-with-warnings sources can enter a
-  real write execution authorization model.
-- The owner authorization evidence is recorded exactly as Phase-10Q-only:
-  `授权范围：A。只授权进入 Phase 10Q — Real Write Execution Authorization，不授权真实写入 registry，不授权发布，不授权替换当前 User App Shell package，不授权创建 production writer。`
-- The authorization model blocks owner authorization scopes that imply actual
-  registry write, publication, current User App Shell package replacement, or
-  production writer creation.
-- The authorization model verifies dry-run-only, actual-write-blocked,
+- Phase 10Q execution authorization ready or ready-with-warnings sources can
+  enter a real write execution plan.
+- The execution plan includes execution sequence, preflight, write lock, audit,
+  rollback, failure handling, and dry-run verification plans.
+- The execution plan verifies dry-run-only, actual-write-blocked,
   publish-blocked, package-replacement-blocked, production-writer-blocked,
-  production write still disabled, future separate approval required, trace
-  preservation, unsafe payload, no production markers, no production writer
-  creation markers, and JSON round-trip boundaries.
-- The checklist preserves owner authorization evidence and cannot trigger
-  registry writes, production writer creation, registry mutation, publication,
-  or User App Shell package replacement.
-- Handoff can recommend Phase 10R future real write execution plan, required
-  revisions, owner clarification, model-only retention, or blocking.
-- Vision Analysis tab remains free of real write execution authorization UI.
+  trace preservation, no unsafe payload, no production markers, no actual
+  registry write markers, no current User App Shell package replacement markers,
+  no production writer creation markers, and JSON round-trip boundaries.
+- Validation can recommend a future guarded execution simulator, required plan
+  revisions, owner authorization review, plan-only retention, or blocking.
+- Handoff can recommend Phase 10S future guarded execution simulator, required
+  revisions, owner authorization review, plan-only retention, or blocking.
+- Vision Analysis tab remains free of real write execution authorization and
+  real write execution plan UI.
 - Template Workbench owns candidate package, candidate-to-app preparation, app
   package mapping preview, user app package draft preview, official draft gate,
   official draft builder, draft publish gate, registry preparation, registry
   write gate, controlled registry writer draft, explicit authorization gate,
   controlled registry write execution design, real registry write
-  implementation gate, real registry write implementation draft, and final real
-  write review gate, and real write execution authorization.
+  implementation gate, real registry write implementation draft, final real
+  write review gate, real write execution authorization, and real write
+  execution plan.
 - No formal `UserAppTemplatePackage` is generated automatically.
 - No user app package registry write occurs automatically.
-- Phase 10Q does not execute registry writes, create a production writer,
+- Phase 10R does not execute registry writes, create a production writer,
   publish, replace the current User App Shell package, add backend, camera
   capture, AR, OpenAI/external API calls, training, production app routing,
   runtime dependencies, or committed MediaPipe binaries.

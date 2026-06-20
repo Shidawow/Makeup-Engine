@@ -5,9 +5,9 @@ Makeup Engine is the makeup template production system for a future makeup coach
 ## Current Position
 
 - Project role: makeup template production system plus a local contract-driven user app shell prototype.
-- Last completed phase: `Phase 10Q`.
-- Current completed business phase: `Phase 10Q - Real Write Execution Authorization`.
-- Next recommended phase: `Phase 10R - Real Write Execution Plan`.
+- Last completed phase: `Phase 10R`.
+- Current completed business phase: `Phase 10R - Real Write Execution Plan`.
+- Next recommended phase: `Phase 10S - Guarded Real Write Execution Simulator`.
 - Recent recovery milestones retained in phase docs: `Phase 6K`, `Phase 6L`, `Phase 6L-1`, `Phase 7A`, `Phase 7B`, `Phase 7C`, `Phase 7D`, `Phase 7E`, `Phase 7F`, `Phase 7G`, `Phase 7H`, and `Phase 8A`.
 - Historical route-planning milestone: `Phase 8A - Product Route Decision / App MVP Planning`.
 
@@ -68,6 +68,7 @@ SourceImagePackage manifest
 -> Real Registry Write Implementation Draft
 -> Final Real Write Review Gate
 -> Real Write Execution Authorization
+-> Real Write Execution Plan
 -> Phase 8 Roadmap / V1 Non-Goals
 -> Consumption Manifest
 -> Dataset Review
@@ -216,8 +217,12 @@ SourceImagePackage manifest
 136. `docs/product/real-write-execution-authorization-checklist.md`
 137. `docs/product/real-write-execution-authorization-handoff.md`
 138. `docs/phases/phase-10Q.md`
-139. `docs/phases/phase-7H.md`
-140. `project-state/project-state.snapshot.json`
+139. `docs/product/real-write-execution-plan.md`
+140. `docs/product/real-write-execution-plan-validation.md`
+141. `docs/product/real-write-execution-plan-handoff.md`
+142. `docs/phases/phase-10R.md`
+143. `docs/phases/phase-7H.md`
+144. `project-state/project-state.snapshot.json`
 141. `project-state/provider-handoff.json`
 142. `project-state/latest-handoff.json`
 143. `project-state/active-task.json`

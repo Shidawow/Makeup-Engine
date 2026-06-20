@@ -187,7 +187,11 @@
     "docs/product/real-write-execution-authorization.md",
     "docs/product/real-write-execution-authorization-checklist.md",
     "docs/product/real-write-execution-authorization-handoff.md",
-    "docs/phases/phase-10Q.md"
+    "docs/phases/phase-10Q.md",
+    "docs/product/real-write-execution-plan.md",
+    "docs/product/real-write-execution-plan-validation.md",
+    "docs/product/real-write-execution-plan-handoff.md",
+    "docs/phases/phase-10R.md"
   ],
   "userAppConsumptionOutputs": [
     "UserAppTemplatePackage JSON",
@@ -432,10 +436,10 @@
     "Observation template documentation",
     "Outcome review documentation"
   ],
-  "phase": "10Q",
-  "lastCompletedPhase": "10Q",
-  "currentPhase": "Real Write Execution Authorization",
-  "nextRecommendedPhase": "10R",
+  "phase": "10R",
+  "lastCompletedPhase": "10R",
+  "currentPhase": "Real Write Execution Plan",
+  "nextRecommendedPhase": "10S",
   "updatedAt": "2026-06-20T00:00:00.000Z",
   "artifacts": [
     "docs/product/internal-trial-learning-summary.md",
@@ -505,7 +509,18 @@
     "docs/product/real-write-execution-authorization.md",
     "docs/product/real-write-execution-authorization-checklist.md",
     "docs/product/real-write-execution-authorization-handoff.md",
-    "docs/phases/phase-10Q.md"
+    "docs/phases/phase-10Q.md",
+    "RealWriteExecutionPlan",
+    "RealWriteExecutionStepPlan",
+    "RealWriteExecutionPreflightPlan",
+    "RealWriteExecutionLockPlan",
+    "RealWriteExecutionAuditPlan",
+    "RealWriteExecutionRollbackPlan",
+    "RealWriteExecutionFailureHandlingPlan",
+    "RealWriteExecutionDryRunVerificationPlan",
+    "RealWriteExecutionPlanValidationResult",
+    "RealWriteExecutionPlanHandoff",
+    "RealWriteExecutionPlanPanel"
   ],
   "userAppEvidenceCollectionPreparationOutputs": [
     "src/user-app/userAppEvidenceCollectionProtocol.ts",
@@ -519,7 +534,7 @@
     "docs/product/internal-trial-evidence-quality-gate.md",
     "docs/phases/phase-9F.md"
   ],
-  "nextRecommendedPhaseName": "Real Write Execution Plan",
+  "nextRecommendedPhaseName": "Guarded Real Write Execution Simulator",
   "userAppAnonymousTrialDryRunOutputs": [
     "src/user-app/userAppAnonymousTrialDryRunPack.ts",
     "src/user-app/userAppAnonymousTrialDryRunChecklist.ts",
@@ -604,9 +619,9 @@
     "docs/product/user-app-template-package-draft-publish-gate-handoff.md",
     "docs/phases/phase-10H.md"
   ],
-  "lastUpdatedPhase": "10Q",
-  "currentPhaseId": "10Q",
-  "currentPhaseName": "Real Write Execution Authorization",
+  "lastUpdatedPhase": "10R",
+  "currentPhaseId": "10R",
+  "currentPhaseName": "Real Write Execution Plan",
   "lastValidation": {
     "mediapipeCheck": "passed",
     "typecheck": "passed",
@@ -616,16 +631,16 @@
     "projectStatusJson": "passed",
     "projectContext": "passed",
     "contextPackJson": "passed",
-    "browserVerification": "passed",
-    "phase10QScopedTests": "passed",
-    "phase10QTabBoundaryTest": "passed",
+    "browserVerification": "attempted-blocked: in-app browser node_repl bridge returned missing sandboxPolicy; Chrome AppleScript fallback hung on automation permission. Supplemental Template Studio tab-boundary render test passed.",
+    "phase10RScopedTests": "passed",
+    "phase10RTabBoundaryTest": "passed",
     "testFiles": 10,
     "tests": 36,
-    "phase10QScopedTestFiles": 10,
-    "phase10QScopedTestsCount": 36,
-    "phase10QTabBoundaryTestFiles": 1,
-    "phase10QTabBoundaryTestsCount": 4,
-    "summary": "Phase 10Q validation passed: mediapipe:check, real write execution authorization scoped tests, Template Studio tab boundary supplemental test, typecheck, build, browser verification, project status/context, and JSON status/context commands."
+    "phase10RScopedTestFiles": 10,
+    "phase10RScopedTestsCount": 36,
+    "phase10RTabBoundaryTestFiles": 1,
+    "phase10RTabBoundaryTestsCount": 4,
+    "summary": "Phase 10R validation passed for mediapipe:check, scoped tests, Template Studio tab boundary supplemental test, typecheck, build, project status/context, and JSON status/context. Browser verification was attempted but blocked by local browser automation tooling; the DOM tab-boundary render test passed as fallback evidence."
   },
   "validation": {
     "mediapipeCheck": "passed",
@@ -636,20 +651,20 @@
     "projectStatusJson": "passed",
     "projectContext": "passed",
     "contextPackJson": "passed",
-    "browserVerification": "passed",
-    "phase10QScopedTests": "passed",
-    "phase10QTabBoundaryTest": "passed",
+    "browserVerification": "attempted-blocked: in-app browser node_repl bridge returned missing sandboxPolicy; Chrome AppleScript fallback hung on automation permission. Supplemental Template Studio tab-boundary render test passed.",
+    "phase10RScopedTests": "passed",
+    "phase10RTabBoundaryTest": "passed",
     "testFiles": 10,
     "tests": 36,
-    "phase10QScopedTestFiles": 10,
-    "phase10QScopedTestsCount": 36,
-    "phase10QTabBoundaryTestFiles": 1,
-    "phase10QTabBoundaryTestsCount": 4,
-    "summary": "Phase 10Q validation passed: mediapipe:check, real write execution authorization scoped tests, Template Studio tab boundary supplemental test, typecheck, build, browser verification, project status/context, and JSON status/context commands."
+    "phase10RScopedTestFiles": 10,
+    "phase10RScopedTestsCount": 36,
+    "phase10RTabBoundaryTestFiles": 1,
+    "phase10RTabBoundaryTestsCount": 4,
+    "summary": "Phase 10R validation passed for mediapipe:check, scoped tests, Template Studio tab boundary supplemental test, typecheck, build, project status/context, and JSON status/context. Browser verification was attempted but blocked by local browser automation tooling; the DOM tab-boundary render test passed as fallback evidence."
   },
-  "summary": "Phase 10Q adds real write execution authorization as a local administrator authorization model only. It preserves owner scope A as Phase-10Q-only and keeps actual registry writes, publication, current User App Shell package replacement, production package creation, production writer creation, backend/API work, camera/AR, and training blocked.",
-  "status": "passed",
-  "validationStatus": "passed",
+  "summary": "Artifact index updated through Phase 10R real write execution plan. 10R artifacts are local admin execution-plan-only metadata and UI; they do not write registries, publish, create production writers, or replace the current User App Shell package.",
+  "status": "passed_with_browser_tool_limitation",
+  "validationStatus": "passed_with_browser_tool_limitation",
   "userAppTemplatePackageRegistryWriteGateOutputs": [
     "src/template-engine/userAppTemplatePackageRegistryWriteGate.ts",
     "src/template-engine/userAppTemplatePackageRegistryWriteGateHandoff.ts",
@@ -683,7 +698,8 @@
   ],
   "notes": [
     "Phase 10O RealRegistryWriteImplementationDraft, RealRegistryWriteImplementationDraftValidationResult, and RealRegistryWriteImplementationDraftHandoff are local admin draft metadata, not production writer readiness, not actual user app package registry writes, not publication, not current User App Shell package replacement, not backend records, and not training input.",
-    "Phase 10P FinalRealWriteReviewChecklist, FinalRealWriteReviewGateResult, and FinalRealWriteReviewHandoff are local admin review-gate-only metadata, not actual registry write authorization, not registry write execution, not publication, not production writer readiness, not current User App Shell package replacement, not backend records, and not training input."
+    "Phase 10P FinalRealWriteReviewChecklist, FinalRealWriteReviewGateResult, and FinalRealWriteReviewHandoff are local admin review-gate-only metadata, not actual registry write authorization, not registry write execution, not publication, not production writer readiness, not current User App Shell package replacement, not backend records, and not training input.",
+    "Phase 10R RealWriteExecutionPlan, RealWriteExecutionPlanValidationResult, and RealWriteExecutionPlanHandoff are local admin execution-plan metadata, not actual user app package registry writes, not publication, not production writer readiness, not current User App Shell package replacement, not backend records, and not training input."
   ],
   "files": [
     "src/template-engine/realRegistryWriteImplementationDraft.ts",
@@ -721,5 +737,11 @@
     "RealWriteExecutionAuthorizationHandoff future Phase 10R handoff metadata",
     "RealWriteExecutionAuthorizationPanel Template Workbench administrator UI"
   ],
-  "lastCompletedBusinessPhase": "10Q"
+  "lastCompletedBusinessPhase": "10R",
+  "realWriteExecutionPlanOutputs": [
+    "RealWriteExecutionPlan local execution-plan-only metadata",
+    "RealWriteExecutionPlanValidationResult source/safety/plan validation metadata",
+    "RealWriteExecutionPlanHandoff future Phase 10S simulator handoff metadata",
+    "RealWriteExecutionPlanPanel Template Workbench administrator UI"
+  ]
 }

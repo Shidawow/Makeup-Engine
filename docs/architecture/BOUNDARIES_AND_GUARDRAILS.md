@@ -572,3 +572,29 @@ owner authorization request, authorization-model-only retention, or blocking. It
 cannot authorize or execute a registry write, cannot create or execute a
 production writer, cannot publish, cannot mark a production package, and cannot
 replace the current User App Shell package.
+
+## Phase 10R Real Write Execution Plan Boundary
+
+Phase 10R real write execution plan, validation, and handoff are local
+administrator aids only. Plan ready means eligible for a future guarded
+execution simulator; it is not actual registry write authorization, not registry
+write execution, not production writer readiness, not production writer
+creation, not publication, not production readiness, not production package
+creation, and not a User App Shell package replacement.
+
+The plan checks Phase 10Q execution authorization readiness, dry-run-only,
+actual-write-blocked, publish-blocked, package-replacement-blocked,
+production-writer-blocked, execution sequence, preflight plan, write lock plan,
+audit plan, rollback plan, failure handling plan, dry-run verification plan,
+trace preservation, raw image boundaries, personal data boundaries, medical
+claims, product shade claims, unsupported final claims, actual registry write
+markers, production package markers, User App Shell package replacement
+markers, production writer creation markers, and JSON round-trip stability.
+
+Execution plan handoff can recommend a future guarded execution simulator,
+execution sequence revision, preflight revision, write lock revision, audit plan
+revision, rollback plan revision, failure handling revision, actual-write owner
+authorization request, execution-plan-only retention, or blocking. It cannot
+authorize or execute a registry write, cannot create or execute a production
+writer, cannot publish, cannot mark a production package, and cannot replace
+the current User App Shell package.

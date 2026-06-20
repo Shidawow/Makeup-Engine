@@ -460,3 +460,26 @@ Shell package replacement, future separate owner approval required, no backend,
 no camera/AR, no OpenAI/external API, and no training. The owner authorization
 text is: `授权范围：A。只授权进入 Phase 10Q — Real Write Execution Authorization，不授权真实写入 registry，不授权发布，不授权替换当前 User App Shell package，不授权创建 production writer。`
 The next recommended phase is Phase 10R - Real Write Execution Plan.
+
+## Phase 10R Handoff Note
+
+Phase 10R completed local Real Write Execution Plan, Execution Plan Validation,
+and Execution Plan Handoff in Template Workbench. Plan ready means eligible for
+a future guarded execution simulator only: dry-run only, no actual registry
+write authorization, no registry write execution, no production writer
+creation, no publish, no production package marker, no current User App Shell
+package replacement, future separate owner approval required, execution
+sequence/preflight/write lock/audit/rollback/failure handling/dry-run
+verification present, no backend, no camera/AR, no OpenAI/external API, and no
+training. The next recommended phase is Phase 10S - Guarded Real Write
+Execution Simulator.
+
+Historical handoff marker retained for Phase 10Q recovery tests:
+lastCompletedPhase: 10Q
+nextRecommendedPhase: 10R
+Real Write Execution Plan
+
+Current handoff:
+lastCompletedPhase: 10R
+nextRecommendedPhase: 10S
+Guarded Real Write Execution Simulator

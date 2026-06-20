@@ -19,6 +19,8 @@ import {
   createRealWriteExecutionAuthorization,
   createRealWriteExecutionAuthorizationChecklist,
   createRealWriteExecutionAuthorizationHandoff,
+  createRealWriteExecutionPlan,
+  createRealWriteExecutionPlanHandoff,
   buildOfficialUserAppTemplatePackageDraft,
   createCandidateToAppPackageContractPreparation,
   createCandidateToAppPackageHandoff,
@@ -45,6 +47,7 @@ import {
   validateControlledRegistryWriteExecutionDesign,
   validateControlledUserAppTemplatePackageRegistryWriterDraft,
   validateRealRegistryWriteImplementationDraft,
+  validateRealWriteExecutionPlan,
   validateOfficialUserAppTemplatePackageDraft,
   validateUserAppPackageDraftPreview,
   validateUserAppTemplatePackageRegistryPreparation,
@@ -72,6 +75,7 @@ import { RealRegistryWriteImplementationGatePanel } from './RealRegistryWriteImp
 import { RealRegistryWriteImplementationDraftPanel } from './RealRegistryWriteImplementationDraftPanel';
 import { FinalRealWriteReviewGatePanel } from './FinalRealWriteReviewGatePanel';
 import { RealWriteExecutionAuthorizationPanel } from './RealWriteExecutionAuthorizationPanel';
+import { RealWriteExecutionPlanPanel } from './RealWriteExecutionPlanPanel';
 
 export interface FaceMeshMakeupIntelligencePanelProps {
   regionQa: FaceMeshRegionQaReport | null;
@@ -476,6 +480,32 @@ export function FaceMeshMakeupIntelligencePanel({
             </p>
           </div>
         </div>
+        <div className="mt-3 grid gap-2 rounded-md border border-sky-200 bg-sky-50 p-3 text-sm text-sky-900 md:grid-cols-4">
+          <div>
+            <p className="font-semibold">真实写入执行计划</p>
+            <p className="mt-1 text-xs leading-5">
+              Execution Plan blocked：缺少 10Q execution authorization ready。
+            </p>
+          </div>
+          <div>
+            <p className="font-semibold">Plan Boundary</p>
+            <p className="mt-1 text-xs leading-5">
+              执行计划，不是实际写入；不授权真实写入 registry、不授权发布、不授权替换当前用户 App 包。
+            </p>
+          </div>
+          <div>
+            <p className="font-semibold">Plan Contents</p>
+            <p className="mt-1 text-xs leading-5">
+              需要 execution sequence、preflight、write lock、audit、rollback、failure handling、dry-run verification。
+            </p>
+          </div>
+          <div>
+            <p className="font-semibold">Plan Handoff</p>
+            <p className="mt-1 text-xs leading-5">
+              只可进入未来受保护执行模拟器；不创建 production writer。
+            </p>
+          </div>
+        </div>
       </section>
     );
   }
@@ -694,6 +724,15 @@ export function FaceMeshMakeupIntelligencePanel({
       authorization: realWriteExecutionAuthorization,
       checklist: realWriteExecutionAuthorizationChecklist,
     });
+  const realWriteExecutionPlan = createRealWriteExecutionPlan({
+    authorization: realWriteExecutionAuthorization,
+  });
+  const realWriteExecutionPlanValidation =
+    validateRealWriteExecutionPlan(realWriteExecutionPlan);
+  const realWriteExecutionPlanHandoff = createRealWriteExecutionPlanHandoff({
+    plan: realWriteExecutionPlan,
+    validation: realWriteExecutionPlanValidation,
+  });
 
   return (
     <section className="grid gap-4">
@@ -867,6 +906,11 @@ export function FaceMeshMakeupIntelligencePanel({
         authorization={realWriteExecutionAuthorization}
         checklist={realWriteExecutionAuthorizationChecklist}
         handoff={realWriteExecutionAuthorizationHandoff}
+      />
+      <RealWriteExecutionPlanPanel
+        plan={realWriteExecutionPlan}
+        validation={realWriteExecutionPlanValidation}
+        handoff={realWriteExecutionPlanHandoff}
       />
     </section>
   );

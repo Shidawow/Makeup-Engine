@@ -2,33 +2,33 @@
 
 ## What To Do Next
 
-Proceed to Phase 10R: Real Write Execution Plan.
+Proceed to Phase 10S: Guarded Real Write Execution Simulator.
 
 ## Why
 
-Phase 10Q adds a local real write execution authorization model over the Phase
-10P final review gate result. It records owner authorization as Phase-10Q-only,
-verifies that actual registry write, publication, production writer creation,
-and current User App Shell package replacement all remain blocked, and hands off
-only to a future real write execution plan.
+Phase 10R adds a local real write execution plan over the Phase 10Q execution
+authorization model. It describes execution sequence, preflight checks, write
+lock, audit, rollback, failure handling, and dry-run verification while keeping
+actual registry write, publication, production writer creation, current User
+App Shell package replacement, and production package creation blocked.
 
-## Recommended 10R Scope
+## Recommended 10S Scope
 
-- Plan any future real write execution path after Phase 10Q authorization
-  readiness.
-- Keep execution planning explicit, local, reviewable, owner-gated, and blocked
+- Build a guarded simulator for the Phase 10R execution plan without performing
+  a real registry write.
+- Keep simulator behavior explicit, local, reviewable, owner-gated, and blocked
   from automatic registry mutation, publication, production writer execution, or
   current User App Shell package replacement.
 - Preserve QA trace, human review trace, privacy trace, candidate trace,
   contract trace, preview trace, official draft trace, publish gate trace,
   registry preparation / write gate / writer draft / authorization gate /
   execution design / implementation gate / implementation draft / final review
-  gate trace.
+  gate / execution authorization / execution plan trace.
 
 ## What Not To Do
 
-- Do not treat Phase 10Q real write execution authorization ready as actual
-  registry write authorization.
+- Do not treat Phase 10R real write execution plan ready as actual registry
+  write authorization or registry write execution.
 - Do not execute a registry write.
 - Do not create or execute a production writer.
 - Do not publish to the user app.
@@ -54,14 +54,14 @@ Read these files first:
 4. `docs/prompts/PROVIDER_SWITCH_PROMPT.md`
 5. `docs/status/CURRENT_PROJECT_STATUS.md`
 6. `docs/status/NEXT_ACTION.md`
-7. `docs/product/final-real-write-review-gate.md`
-8. `docs/product/final-real-write-review-checklist.md`
-9. `docs/product/final-real-write-review-handoff.md`
-10. `docs/product/real-write-execution-authorization.md`
-11. `docs/product/real-write-execution-authorization-checklist.md`
-12. `docs/product/real-write-execution-authorization-handoff.md`
-13. `docs/phases/phase-10P.md`
-14. `docs/phases/phase-10Q.md`
+7. `docs/product/real-write-execution-authorization.md`
+8. `docs/product/real-write-execution-authorization-checklist.md`
+9. `docs/product/real-write-execution-authorization-handoff.md`
+10. `docs/product/real-write-execution-plan.md`
+11. `docs/product/real-write-execution-plan-validation.md`
+12. `docs/product/real-write-execution-plan-handoff.md`
+13. `docs/phases/phase-10Q.md`
+14. `docs/phases/phase-10R.md`
 15. `project-state/project-state.snapshot.json`
 16. `project-state/latest-handoff.json`
 17. `project-state/provider-handoff.json`
