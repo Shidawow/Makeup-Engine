@@ -6,12 +6,13 @@ Default to compact context. Do not copy full historical chat transcripts. Do not
 
 ## Current State
 
-- `lastCompletedPhase: 10S`
-- `nextRecommendedPhase: 10T`
-- `nextRecommendedPhaseName: Guarded Simulator Review Gate`
+- `lastCompletedPhase: 10T`
+- `nextRecommendedPhase: 10U`
+- `nextRecommendedPhaseName: Real Write Approval Boundary`
 - Project role: Makeup template production system with a local contract-driven user app shell prototype, not a production user app.
-- Current capability: Phase 10S - Guarded Real Write Execution Simulator adds local simulator model, validation, handoff, and Template Workbench panel after Phase 10R execution plan readiness while preserving dry-run-only, no actual registry write, no registry mutation, no production writer creation, no publish, no production package, future separate owner approval, and no current User App Shell package replacement boundaries.
+- Current capability: Phase 10T - Guarded Simulator Review Gate adds local review gate, checklist, handoff, and Template Workbench panel after Phase 10S simulation validation readiness while preserving dry-run-only, no actual registry write, no registry mutation, no production writer creation, no publish, no production package, future separate owner approval, and no current User App Shell package replacement boundaries.
 
+Historical handoff marker retained for Phase 10S recovery tests: `lastCompletedPhase: 10S`, `nextRecommendedPhase: 10T`.
 Historical handoff marker retained for Phase 10R recovery tests: `lastCompletedPhase: 10R`, `nextRecommendedPhase: 10S`.
 Historical handoff marker retained for Phase 10P recovery tests: `lastCompletedPhase: 10P`, `nextRecommendedPhase: 10Q`.
 Historical handoff marker retained for Phase 10O recovery tests: `lastCompletedPhase: 10O`, `nextRecommendedPhase: 10P`.
@@ -57,11 +58,11 @@ Historical handoff marker retained for Phase 9J recovery tests: `lastCompletedPh
 You are continuing Makeup Engine on native GPT / Codex Desktop.
 
 Current state:
-- lastCompletedPhase: 10S
-- nextRecommendedPhase: 10T
-- nextRecommendedPhaseName: Guarded Simulator Review Gate
+- lastCompletedPhase: 10T
+- nextRecommendedPhase: 10U
+- nextRecommendedPhaseName: Real Write Approval Boundary
 - project role: Makeup template production system with a local contract-driven user app shell prototype, not a production user app
-- current capability: React Web / PWA MVP first is selected; Phases 8B through 9J are complete; Phase 10A FaceMesh-driven Makeup Intelligence Baseline, Phase 10B Template Draft Review Workflow, Phase 10C Template Library Candidate Packaging, Phase 10D Candidate-to-App Package Contract Preparation, Phase 10E User App Package Draft Preview, Phase 10F Official User App Package Draft Gate, Phase 10G Official UserAppTemplatePackage Draft Builder, Phase 10H UserAppTemplatePackage Draft Publish Gate, Phase 10I UserAppTemplatePackage Registry Preparation, Phase 10J UserAppTemplatePackage Registry Write Gate, Phase 10K Controlled UserAppTemplatePackage Registry Writer Draft, Phase 10L Explicit Registry Write Authorization Gate, Phase 10M Controlled Registry Write Execution Design, Phase 10N Real Registry Write Implementation Gate, Phase 10O Real Registry Write Implementation Draft, Phase 10P Final Real Write Review Gate, Phase 10Q Real Write Execution Authorization, Phase 10R Real Write Execution Plan, and Phase 10S Guarded Real Write Execution Simulator are complete with local FaceMesh region QA, candidate attributes, rule-based draft steps, draft QA, human review, candidate package validation, candidate handoff, app contract mapping preview, app contract validation, app package handoff, user app package draft preview, preview validation, preview handoff, official draft gate, gate handoff, official draft builder, official draft validation, official draft handoff, draft publish gate, publish gate handoff, registry preparation, registry preparation validation, registry preparation handoff, registry write gate, registry write gate handoff, controlled writer dry-run draft, writer validation, writer handoff, explicit authorization gate, authorization checklist, authorization handoff, controlled execution design, execution safety validation, execution handoff, real implementation gate, implementation checklist, implementation handoff, real implementation draft, implementation draft validation, implementation draft handoff, final real write review gate, final review checklist, final review handoff, real write execution authorization, execution authorization checklist, execution authorization handoff, real write execution plan, execution plan validation, execution plan handoff, guarded real write execution simulator, simulator validation, simulator handoff, and clear Vision Analysis / Template Workbench boundaries; Makeup Engine remains the template production system and the future user-facing app should be planned separately
+- current capability: React Web / PWA MVP first is selected; Phases 8B through 9J are complete; Phase 10A FaceMesh-driven Makeup Intelligence Baseline, Phase 10B Template Draft Review Workflow, Phase 10C Template Library Candidate Packaging, Phase 10D Candidate-to-App Package Contract Preparation, Phase 10E User App Package Draft Preview, Phase 10F Official User App Package Draft Gate, Phase 10G Official UserAppTemplatePackage Draft Builder, Phase 10H UserAppTemplatePackage Draft Publish Gate, Phase 10I UserAppTemplatePackage Registry Preparation, Phase 10J UserAppTemplatePackage Registry Write Gate, Phase 10K Controlled UserAppTemplatePackage Registry Writer Draft, Phase 10L Explicit Registry Write Authorization Gate, Phase 10M Controlled Registry Write Execution Design, Phase 10N Real Registry Write Implementation Gate, Phase 10O Real Registry Write Implementation Draft, Phase 10P Final Real Write Review Gate, Phase 10Q Real Write Execution Authorization, Phase 10R Real Write Execution Plan, Phase 10S Guarded Real Write Execution Simulator, and Phase 10T Guarded Simulator Review Gate are complete with local FaceMesh region QA, candidate attributes, rule-based draft steps, draft QA, human review, candidate package validation, candidate handoff, app contract mapping preview, app contract validation, app package handoff, user app package draft preview, preview validation, preview handoff, official draft gate, gate handoff, official draft builder, official draft validation, official draft handoff, draft publish gate, publish gate handoff, registry preparation, registry preparation validation, registry preparation handoff, registry write gate, registry write gate handoff, controlled writer dry-run draft, writer validation, writer handoff, explicit authorization gate, authorization checklist, authorization handoff, controlled execution design, execution safety validation, execution handoff, real implementation gate, implementation checklist, implementation handoff, real implementation draft, implementation draft validation, implementation draft handoff, final real write review gate, final review checklist, final review handoff, real write execution authorization, execution authorization checklist, execution authorization handoff, real write execution plan, execution plan validation, execution plan handoff, guarded real write execution simulator, simulator validation, simulator handoff, guarded simulator review gate, simulator review checklist, simulator review handoff, and clear Vision Analysis / Template Workbench boundaries; Makeup Engine remains the template production system and the future user-facing app should be planned separately
 
 Compact context:
 - Use repository documents as source of truth; do not copy full historical chat.
@@ -179,6 +180,10 @@ Read these files first:
 105. docs/product/guarded-real-write-execution-simulator-validation.md
 106. docs/product/guarded-real-write-execution-simulator-handoff.md
 107. docs/phases/phase-10S.md
+108. docs/product/guarded-simulator-review-gate.md
+109. docs/product/guarded-simulator-review-checklist.md
+110. docs/product/guarded-simulator-review-handoff.md
+111. docs/phases/phase-10T.md
 51. docs/user-app/user-app-browser-mobile-qa.md
 21. docs/user-app/user-app-e2e-readiness.md
 22. docs/user-app/user-app-mobile-interaction-qa.md
@@ -226,6 +231,7 @@ Forbidden:
 - Do not treat Phase 10P final real write review gate readiness, checklist, or handoff as actual registry write authorization, registry write execution, production writer readiness, publication, production package creation, or current User App Shell package replacement.
 - Do not treat Phase 10R real write execution plan readiness as actual registry write authorization, registry write execution, production writer readiness, publication, production package creation, or current User App Shell package replacement.
 - Do not treat Phase 10S guarded real write execution simulator readiness as actual registry write authorization, registry write execution, registry mutation, production writer readiness, publication, production package creation, or current User App Shell package replacement.
+- Do not treat Phase 10T guarded simulator review gate readiness as actual registry write authorization, registry write execution, registry mutation, production writer readiness, publication, production package creation, or current User App Shell package replacement.
 - Do not add service worker, offline cache, push notification, background sync, install tracking, analytics, backend, camera, AR, external API, native app, training, online publication, or app store release work unless a future explicit phase gate expands scope.
 - Do not build or bootstrap the separate production user app repository unless a future explicit phase gate expands scope.
 - Do not add real camera capture, AR, backend, database, account systems, cloud sync, analytics, ecommerce, community, paid features, online publishing, training, native iOS, React Native, Flutter, app store release work, or new runtime dependencies.

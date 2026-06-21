@@ -5,9 +5,9 @@ Makeup Engine is the makeup template production system for a future makeup coach
 ## Current Position
 
 - Project role: makeup template production system plus a local contract-driven user app shell prototype.
-- Last completed phase: `Phase 10S`.
-- Current completed business phase: `Phase 10S - Guarded Real Write Execution Simulator`.
-- Next recommended phase: `Phase 10T - Guarded Simulator Review Gate`.
+- Last completed phase: `Phase 10T`.
+- Current completed business phase: `Phase 10T - Guarded Simulator Review Gate`.
+- Next recommended phase: `Phase 10U - Real Write Approval Boundary`.
 - Recent recovery milestones retained in phase docs: `Phase 6K`, `Phase 6L`, `Phase 6L-1`, `Phase 7A`, `Phase 7B`, `Phase 7C`, `Phase 7D`, `Phase 7E`, `Phase 7F`, `Phase 7G`, `Phase 7H`, and `Phase 8A`.
 - Historical route-planning milestone: `Phase 8A - Product Route Decision / App MVP Planning`.
 
@@ -70,6 +70,7 @@ SourceImagePackage manifest
 -> Real Write Execution Authorization
 -> Real Write Execution Plan
 -> Guarded Real Write Execution Simulator
+-> Guarded Simulator Review Gate
 -> Phase 8 Roadmap / V1 Non-Goals
 -> Consumption Manifest
 -> Dataset Review
@@ -218,6 +219,16 @@ SourceImagePackage manifest
 136. `docs/product/real-write-execution-authorization-checklist.md`
 137. `docs/product/real-write-execution-authorization-handoff.md`
 138. `docs/phases/phase-10Q.md`
+139. `docs/product/real-write-execution-plan.md`
+140. `docs/product/real-write-execution-plan-validation.md`
+141. `docs/product/real-write-execution-plan-handoff.md`
+142. `docs/product/guarded-real-write-execution-simulator.md`
+143. `docs/product/guarded-real-write-execution-simulator-validation.md`
+144. `docs/product/guarded-real-write-execution-simulator-handoff.md`
+145. `docs/product/guarded-simulator-review-gate.md`
+146. `docs/product/guarded-simulator-review-checklist.md`
+147. `docs/product/guarded-simulator-review-handoff.md`
+148. `docs/phases/phase-10T.md`
 139. `docs/product/real-write-execution-plan.md`
 140. `docs/product/real-write-execution-plan-validation.md`
 141. `docs/product/real-write-execution-plan-handoff.md`

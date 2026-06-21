@@ -103,3 +103,6 @@ export * from './real-write-execution-plan-handoff.example';
 export * from './guarded-real-write-execution-simulator.example';
 export * from './guarded-real-write-execution-simulator-validation.example';
 export * from './guarded-real-write-execution-simulator-handoff.example';
+export * from './guarded-simulator-review-gate.example';
+export * from './guarded-simulator-review-checklist.example';
+export * from './guarded-simulator-review-handoff.example';

@@ -527,3 +527,19 @@ or train models.
 -> next recommendation for Phase 10T guarded simulator review gate.
 
 The flow is local, deterministic, administrator-only, and simulator-only. It can simulate preflight, write lock, write operation, audit events, rollback, and failure handling after Phase 10R execution plan validation readiness. It cannot authorize or execute a registry write, mutate registry state, publish, create a production writer, create production writer readiness, replace the current User App Shell package, call backend/OpenAI/external APIs, request camera/AR scope, or train models.
+
+## Phase 10T Guarded Simulator Review Gate Flow
+
+`GuardedRealWriteExecutionSimulatorValidationResult`
+-> `GuardedSimulatorReviewGateResult`
+-> `GuardedSimulatorReviewChecklist`
+-> `GuardedSimulatorReviewHandoff`
+-> next recommendation for Phase 10U real write approval boundary.
+
+The flow is local, deterministic, administrator-only, and review-gate-only. It
+can review simulator completeness, safety boundaries, audit evidence, rollback
+evidence, and failure handling after Phase 10S simulation validation readiness.
+It cannot authorize or execute a registry write, mutate registry state,
+publish, create a production writer, create production writer readiness,
+replace the current User App Shell package, call backend/OpenAI/external APIs,
+request camera/AR scope, or train models.

@@ -826,3 +826,18 @@ guarded execution simulator only.
 ### Guarded Real Write Execution Simulator
 
 Phase 10S adds local simulator-only artifacts after Phase 10R execution plan validation. `src/template-engine/guardedRealWriteExecutionSimulator.ts` creates simulated preflight, write lock, write operation, audit event, rollback, and failure handling outputs. `guardedRealWriteExecutionSimulatorValidation.ts` validates dry-run-only, actual-write-blocked, registry-mutation-blocked, publish-blocked, package-replacement-blocked, production-writer-blocked, trace preservation, unsafe payload blocking, and JSON round-trip stability. `guardedRealWriteExecutionSimulatorHandoff.ts` hands off only to a future simulator review gate. `src/components/template-studio/GuardedRealWriteExecutionSimulatorPanel.tsx` renders this in the Template Workbench. It does not write or mutate registry state, publish, replace the current User App Shell package, or create a production writer.
+
+### Guarded Simulator Review Gate
+
+Phase 10T adds local review-gate-only artifacts after Phase 10S simulation
+validation. `src/template-engine/guardedSimulatorReviewGate.ts` reviews source
+simulation validation readiness, dry-run-only, no actual write, no registry
+mutation, no publish, no User App Shell package replacement, no production
+writer creation, simulated preflight, write lock, operation, audit, rollback,
+failure handling, trace preservation, unsafe payload blocking, future separate
+approval, and JSON round-trip stability. `guardedSimulatorReviewChecklist.ts`
+records the administrator confirmations. `guardedSimulatorReviewHandoff.ts`
+hands off only to a future real write approval boundary. `src/components/template-studio/GuardedSimulatorReviewGatePanel.tsx`
+renders this in the Template Workbench. It does not write or mutate registry
+state, publish, replace the current User App Shell package, or create a
+production writer.

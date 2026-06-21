@@ -2,27 +2,38 @@
 
 ## Phase State
 
-- `lastCompletedPhase`: `10S`
-- `lastCompletedBusinessPhase`: `10S`
-- `currentPhase`: `10S`
-- `currentPhaseName`: `Guarded Real Write Execution Simulator`
-- `nextRecommendedPhase`: `10T`
-- `nextRecommendedPhaseName`: `Guarded Simulator Review Gate`
+- `lastCompletedPhase`: `10T`
+- `lastCompletedBusinessPhase`: `10T`
+- `currentPhase`: `10T`
+- `currentPhaseName`: `Guarded Simulator Review Gate`
+- `nextRecommendedPhase`: `10U`
+- `nextRecommendedPhaseName`: `Real Write Approval Boundary`
 - `phaseOwner`: `Codex implementation, validation, commit, and push pass`
 
 ## Phase Completion Definition
 
-Phase 10S is complete when:
+Phase 10T is complete when:
 
-- Phase 10R execution plan validation ready or ready-with-warnings sources can enter a guarded real write execution simulator.
-- The simulator includes simulated preflight, write lock, write operation, audit events, rollback, and failure handling.
-- The simulator verifies dry-run-only, actual-write-blocked, publish-blocked, package-replacement-blocked, production-writer-blocked, registry-mutation-blocked, trace preservation, no unsafe payload, no production markers, no actual registry write markers, no registry mutation markers, no current User App Shell package replacement markers, no production writer creation markers, and JSON round-trip boundaries.
-- Validation can recommend a future simulator review gate, required simulation revisions, owner authorization review, simulator-only retention, or blocking.
-- Handoff can recommend Phase 10T future guarded simulator review gate, required revisions, owner authorization review, simulator-only retention, or blocking.
-- Vision Analysis tab remains free of simulator UI.
-- Template Workbench owns candidate package through Phase 10S guarded simulator panels.
+- Phase 10S simulation validation ready or ready-with-warnings sources can enter
+  a guarded simulator review gate.
+- The review gate checks simulator completeness, dry-run-only status,
+  no-actual-write status, no-registry-mutation status, no-publish status, no
+  User App Shell package replacement, no production writer creation, trace
+  preservation, unsafe payload blocking, and JSON round-trip boundaries.
+- The checklist confirms simulated preflight, write lock, write operation,
+  audit events, rollback, failure handling, and future separate owner approval.
+- Handoff can recommend a future real write approval boundary, simulator
+  revisions, owner authorization review, simulator-review-only retention, or
+  blocking.
+- Vision Analysis tab remains free of simulator review gate UI.
+- Template Workbench owns candidate package through Phase 10T guarded simulator
+  review gate panels.
 - No formal `UserAppTemplatePackage` is generated automatically.
 - No user app package registry write or mutation occurs automatically.
-- Phase 10S does not execute registry writes, mutate registry state, create a production writer, publish, replace the current User App Shell package, add backend, camera capture, AR, OpenAI/external API calls, training, production app routing, runtime dependencies, or committed MediaPipe binaries.
+- Phase 10T does not execute registry writes, mutate registry state, create a
+  production writer, publish, replace the current User App Shell package, add
+  backend, camera capture, AR, OpenAI/external API calls, training, production
+  app routing, runtime dependencies, or committed MediaPipe binaries.
 - Documentation and project-state handoff are updated.
-- MediaPipe check, scoped tests, typecheck, build, project status, context pack, direct JSON status, browser verification, and direct JSON context pass.
+- MediaPipe check, scoped tests, typecheck, build, project status, context
+  pack, direct JSON status, browser verification, and direct JSON context pass.

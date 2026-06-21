@@ -1480,3 +1480,44 @@ What still cannot happen:
 Why Phase 10T follows:
 
 The simulator can now rehearse future guarded execution steps without mutation. Phase 10T should review simulator evidence and still prevent silent writes, registry mutation, publication, package replacement, backend work, production writer execution, or production readiness claims.
+
+## Phase 10T - Guarded Simulator Review Gate
+
+Added a local guarded simulator review gate after Phase 10S simulation
+validation readiness.
+
+What changed:
+
+- Added simulator review gate model for Phase 10S simulation-validation-ready
+  sources, including source validation readiness, dry-run-only, no actual write,
+  no registry mutation, no publish, no User App Shell package replacement, no
+  production writer creation, simulated preflight review, write lock review,
+  operation review, audit review, rollback review, failure handling review,
+  future separate owner approval, trace preservation, unsafe payload blocking,
+  and JSON round-trip stability.
+- Added simulator review checklist for no-write/no-mutation/no-publish/no-shell
+  replacement/no-production-writer confirmations and simulation evidence
+  review.
+- Added simulator review handoff next actions for a future real write approval
+  boundary, simulator revisions, owner authorization request for actual write,
+  simulator-review-only retention, or blocking.
+- Added Template Workbench panel for 受保护模拟器复核闸门 / Review Checklist /
+  Review Handoff.
+- Kept Vision Analysis free of simulator review gate UI and kept ordinary User
+  App Shell paths free of administrator simulator review terminology.
+
+What still cannot happen:
+
+- Phase 10T review gate ready is not actual registry write authorization, not
+  registry write execution, not registry mutation, not production writer
+  creation or readiness, not publication, not production readiness, not backend
+  work, not camera/AR scope, not OpenAI/external API scope, not training input,
+  and not a replacement for the current User App Shell package.
+
+Why Phase 10U follows:
+
+The simulator review gate can now decide whether the simulation evidence may be
+considered by a future approval boundary. Phase 10U should define that approval
+boundary while still preventing silent writes, registry mutation, publication,
+package replacement, backend work, production writer execution, or production
+readiness claims.

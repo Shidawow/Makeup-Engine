@@ -12,10 +12,10 @@ It produces templates, template evidence, correction records, review state, loca
 
 ## Current Phase
 
-- Current business phase: `Phase 10S completed`
-- Last completed phase: `Phase 10S`
-- Last completed phase name: `Phase 10S - Guarded Real Write Execution Simulator`
-- Next recommended phase: `Phase 10T - Guarded Simulator Review Gate`
+- Current business phase: `Phase 10T completed`
+- Last completed phase: `Phase 10T`
+- Last completed phase name: `Phase 10T - Guarded Simulator Review Gate`
+- Next recommended phase: `Phase 10U - Real Write Approval Boundary`
 
 Historical recovery marker retained for Phase 9C tests: `Phase 9C completed`.
 Historical recovery marker retained for Phase 9E tests: `Phase 9E completed`.
@@ -27,6 +27,7 @@ Historical recovery marker retained for Phase 9J tests: `Phase 9J completed`.
 Historical recovery marker retained for Phase 10O tests: `Phase 10O completed`.
 Historical recovery marker retained for Phase 10R tests: `Phase 10R completed`.
 Historical recovery marker retained for Phase 10P tests: `Phase 10P completed`.
+Historical recovery marker retained for Phase 10S tests: `Phase 10S completed`.
 Historical recovery milestone retained for older phase tests: `Phase 8A completed` / `Phase 8A - Product Route Decision / App MVP Planning`.
 Historical recovery milestone retained for Phase 8B tests: `Phase 8B completed` / `Phase 8B - PWA / Mobile Web MVP Polish`.
 Historical recovery milestone retained for Phase 8C tests: `Phase 8C completed` / `Phase 8C - User App MVP Trial Pack`.
@@ -97,6 +98,7 @@ Real Photo
 -> Real Write Execution Authorization
 -> Real Write Execution Plan
 -> Guarded Real Write Execution Simulator
+-> Guarded Simulator Review Gate
 -> Phase 8 Roadmap / V1 Non-Goals
 -> User App Consumption Manifest
 -> Dataset Review
@@ -225,6 +227,13 @@ Important boundary: `SourceImagePackage` can enter Vision Analysis through opera
   local guarded real write execution simulator, validation, and handoff logic.
   They simulate preflight, write lock, operation, audit, rollback, and failure
   handling only; they do not write or mutate registry state.
+- `src/template-engine/guardedSimulatorReviewGate.ts`,
+  `src/template-engine/guardedSimulatorReviewChecklist.ts`, and
+  `src/template-engine/guardedSimulatorReviewHandoff.ts`: Phase 10T local
+  guarded simulator review gate, checklist, and handoff logic. They review
+  simulator evidence only and do not authorize writes, mutate registry state,
+  publish, replace the current User App Shell package, or create a production
+  writer.
 - `src/templates`: schemas, storage, review, corrections, evidence, dataset materialization, source image binding, production batch storage/export, template library storage, and publish package export.
 - `src/template-engine/production`: production queue, state machine, QA rules, rebinding recovery, analysis handoff, review lifecycle, smoke checklist.
 - `src/template-engine/library`: production task to library entry conversion, template versioning, and local library lifecycle.
@@ -566,3 +575,35 @@ training.
 Historical marker retained for Phase 10Q recovery tests: Phase 10Q completed.
 
 Next recommended phase: Phase 10S - Guarded Real Write Execution Simulator.
+
+## Phase 10S Current Capability
+
+Phase 10S completed Guarded Real Write Execution Simulator, Simulation
+Validation, and Simulation Handoff in Template Workbench. Simulator ready means
+eligible for a future guarded simulator review gate only: dry-run only, no
+actual registry write, no registry mutation, no production writer creation or
+readiness, no publish, no production package marker, no current User App Shell
+package replacement, future separate owner approval required, simulated
+preflight present, simulated write lock present, simulated operation present,
+simulated audit present, simulated rollback present, simulated failure handling
+present, no backend, no camera/AR, no OpenAI/external API, and no training.
+
+Historical marker retained for Phase 10R recovery tests: Phase 10R completed.
+
+Next recommended phase: Phase 10T - Guarded Simulator Review Gate.
+
+## Phase 10T Current Capability
+
+Phase 10T completed Guarded Simulator Review Gate, Review Checklist, and Review
+Handoff in Template Workbench. Review gate ready means eligible for a future
+real write approval boundary only: dry-run only, no actual registry write, no
+registry mutation, no production writer creation or readiness, no publish, no
+production package marker, no current User App Shell package replacement,
+future separate owner approval required, simulated preflight reviewed,
+simulated write lock reviewed, simulated operation reviewed, simulated audit
+reviewed, simulated rollback reviewed, simulated failure handling reviewed, no
+backend, no camera/AR, no OpenAI/external API, and no training.
+
+Historical marker retained for Phase 10S recovery tests: Phase 10S completed.
+
+Next recommended phase: Phase 10U - Real Write Approval Boundary.

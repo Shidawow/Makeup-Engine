@@ -59,6 +59,8 @@ describe('Template Studio tab boundary', () => {
     expect(html).not.toContain('real write execution plan');
     expect(html).not.toContain('受保护真实写入执行模拟器');
     expect(html).not.toContain('guarded real write execution simulator');
+    expect(html).not.toContain('受保护模拟器复核闸门');
+    expect(html).not.toContain('guarded simulator review gate');
   });
 
   it('tells the template workbench to return to Vision Analysis when Region QA is blocked', () => {
@@ -219,6 +221,19 @@ describe('Template Studio tab boundary', () => {
     expect(html).toContain(
       'Guarded real write execution simulator requires a ready Phase 10R execution plan validation',
     );
+    expect(html).toContain('受保护模拟器复核闸门');
+    expect(html).toContain('复核闸门，不是实际写入');
+    expect(html).toContain('不授权真实写入 registry');
+    expect(html).toContain('simulated preflight review');
+    expect(html).toContain('simulated write lock review');
+    expect(html).toContain('simulated write operation review');
+    expect(html).toContain('simulated audit events review');
+    expect(html).toContain('simulated rollback review');
+    expect(html).toContain('simulated failure handling review');
+    expect(html).toContain('simulator_review_gate_blocked');
+    expect(html).toContain(
+      'Guarded simulator review gate requires Phase 10S simulation validation ready',
+    );
     expect(html).not.toContain('AI 已确认');
     expect(html).not.toContain('已生成正式用户模板包');
     expect(html).not.toContain('已生成正式 UserAppTemplatePackage');
@@ -292,6 +307,9 @@ describe('Template Studio tab boundary', () => {
     expect(userPath).not.toContain('受保护真实写入执行模拟器');
     expect(userPath).not.toContain('guarded real write execution simulator');
     expect(userPath).not.toContain('guarded execution simulator');
+    expect(userPath).not.toContain('受保护模拟器复核闸门');
+    expect(userPath).not.toContain('guarded simulator review gate');
+    expect(userPath).not.toContain('simulator review gate');
     expect(userPath).not.toContain('production writer');
   });
 });
