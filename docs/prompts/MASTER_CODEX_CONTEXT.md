@@ -12,10 +12,10 @@ It produces templates, template evidence, correction records, review state, loca
 
 ## Current Phase
 
-- Current business phase: `Phase 10T completed`
-- Last completed phase: `Phase 10T`
-- Last completed phase name: `Phase 10T - Guarded Simulator Review Gate`
-- Next recommended phase: `Phase 10U - Real Write Approval Boundary`
+- Current business phase: `Phase 10U completed`
+- Last completed phase: `Phase 10U`
+- Last completed phase name: `Phase 10U - Real Write Approval Boundary`
+- Next recommended phase: `Phase 10V - Actual Write Authorization Request`
 
 Historical recovery marker retained for Phase 9C tests: `Phase 9C completed`.
 Historical recovery marker retained for Phase 9E tests: `Phase 9E completed`.
@@ -99,6 +99,7 @@ Real Photo
 -> Real Write Execution Plan
 -> Guarded Real Write Execution Simulator
 -> Guarded Simulator Review Gate
+-> Real Write Approval Boundary
 -> Phase 8 Roadmap / V1 Non-Goals
 -> User App Consumption Manifest
 -> Dataset Review
@@ -607,3 +608,9 @@ backend, no camera/AR, no OpenAI/external API, and no training.
 Historical marker retained for Phase 10S recovery tests: Phase 10S completed.
 
 Next recommended phase: Phase 10U - Real Write Approval Boundary.
+
+## Phase 10U Current Handoff
+
+Phase 10U completed local Real Write Approval Boundary, Approval Checklist, and Approval Handoff in Template Workbench. Boundary ready means eligible for a future actual write authorization request only: approval-boundary-only, no actual registry write, no registry mutation, no publish, no production package marker, no current User App Shell package replacement, no production writer, future separate owner approval required, audit requirements present, rollback approval requirements present, no backend, no camera/AR, no OpenAI/external API, and no training. Next recommended phase: Phase 10V - Actual Write Authorization Request.
+
+Historical handoff marker retained for Phase 10T recovery tests: Phase 10T completed / lastCompletedPhase: 10T / nextRecommendedPhase: 10U / Real Write Approval Boundary / Guarded Simulator Review Gate.

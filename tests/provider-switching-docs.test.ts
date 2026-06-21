@@ -40,15 +40,18 @@ describe('provider switching docs', () => {
     expect(combined).toContain('src/intelligence/runtime');
   });
 
-  it('provides phase 10T to 10U switch templates with historical 10S, 10R, 10Q, 10P, 10O, 10N, 10M, 10L, 10K, 10J, 10I, 10H, 10G, 10F, 10E, 10D, 10C, 10A, 9J, and older markers', async () => {
+  it('provides phase 10U to 10V switch templates with historical 10T, 10S, 10R, 10Q, 10P, 10O, 10N, 10M, 10L, 10K, 10J, 10I, 10H, 10G, 10F, 10E, 10D, 10C, 10A, 9J, and older markers', async () => {
     const prompt = await readFile('docs/prompts/PROVIDER_SWITCH_PROMPT.md', 'utf8');
 
     expect(prompt).toContain('Switch To Native GPT / Codex Desktop');
     expect(prompt).toContain('Switch To PackyAPI + CLI');
     expect(prompt).toContain('Return From PackyAPI To ChatGPT');
-    expect(prompt).toContain('lastCompletedPhase: 10T');
-    expect(prompt).toContain('nextRecommendedPhase: 10U');
+    expect(prompt).toContain('lastCompletedPhase: 10U');
+    expect(prompt).toContain('nextRecommendedPhase: 10V');
+    expect(prompt).toContain('Actual Write Authorization Request');
     expect(prompt).toContain('Real Write Approval Boundary');
+    expect(prompt).toContain('approval checklist');
+    expect(prompt).toContain('approval handoff');
     expect(prompt).toContain('Guarded Simulator Review Gate');
     expect(prompt).toContain('Guarded Real Write Execution Simulator');
     expect(prompt).toContain('Real Write Execution Plan');
@@ -77,6 +80,9 @@ describe('provider switching docs', () => {
     expect(prompt).toContain('Phase 10O Real Registry Write Implementation Draft');
     expect(prompt).toContain('Phase 10P Final Real Write Review Gate');
     expect(prompt).toContain('Phase 10T Guarded Simulator Review Gate');
+    expect(prompt).toContain('Historical handoff marker retained for Phase 10T recovery tests');
+    expect(prompt).toContain('lastCompletedPhase: 10T');
+    expect(prompt).toContain('nextRecommendedPhase: 10U');
     expect(prompt).toContain('guarded simulator review gate');
     expect(prompt).toContain('simulator review checklist');
     expect(prompt).toContain('simulator review handoff');

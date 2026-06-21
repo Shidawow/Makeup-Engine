@@ -61,6 +61,8 @@ describe('Template Studio tab boundary', () => {
     expect(html).not.toContain('guarded real write execution simulator');
     expect(html).not.toContain('受保护模拟器复核闸门');
     expect(html).not.toContain('guarded simulator review gate');
+    expect(html).not.toContain('真实写入批准边界');
+    expect(html).not.toContain('real write approval boundary');
   });
 
   it('tells the template workbench to return to Vision Analysis when Region QA is blocked', () => {
@@ -234,6 +236,21 @@ describe('Template Studio tab boundary', () => {
     expect(html).toContain(
       'Guarded simulator review gate requires Phase 10S simulation validation ready',
     );
+    expect(html).toContain('真实写入批准边界');
+    expect(html).toContain('批准边界，不是实际写入');
+    expect(html).toContain('不授权真实写入 registry');
+    expect(html).toContain('不 mutation registry');
+    expect(html).toContain('不发布');
+    expect(html).toContain('不替换当前用户 App 包');
+    expect(html).toContain('不创建 production writer');
+    expect(html).toContain('未来真实写入仍需老板单独明确授权');
+    expect(html).toContain('Approval Checklist');
+    expect(html).toContain('audit requirements');
+    expect(html).toContain('rollback approval requirements');
+    expect(html).toContain('real_write_approval_boundary_blocked');
+    expect(html).toContain(
+      'Real write approval boundary requires Phase 10T simulator review gate ready',
+    );
     expect(html).not.toContain('AI 已确认');
     expect(html).not.toContain('已生成正式用户模板包');
     expect(html).not.toContain('已生成正式 UserAppTemplatePackage');
@@ -310,6 +327,9 @@ describe('Template Studio tab boundary', () => {
     expect(userPath).not.toContain('受保护模拟器复核闸门');
     expect(userPath).not.toContain('guarded simulator review gate');
     expect(userPath).not.toContain('simulator review gate');
+    expect(userPath).not.toContain('真实写入批准边界');
+    expect(userPath).not.toContain('real write approval boundary');
+    expect(userPath).not.toContain('Approval Checklist');
     expect(userPath).not.toContain('production writer');
   });
 });

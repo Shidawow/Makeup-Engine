@@ -1521,3 +1521,45 @@ considered by a future approval boundary. Phase 10U should define that approval
 boundary while still preventing silent writes, registry mutation, publication,
 package replacement, backend work, production writer execution, or production
 readiness claims.
+
+## Phase 10U - Real Write Approval Boundary
+
+Added a local real write approval boundary after Phase 10T guarded simulator
+review gate readiness.
+
+What changed:
+
+- Added approval boundary model for Phase 10T simulator-review-gate-ready
+  sources, including approval scope, owner-not-authorized checks, dry-run-only,
+  actual-write-blocked, registry-mutation-blocked, publish-blocked,
+  package-replacement-blocked, production-writer-blocked, trace preservation,
+  audit requirements, rollback approval requirements, unsafe payload blocking,
+  no actual registry write, no registry mutation, no production marker, no
+  current User App Shell package replacement, no production writer creation
+  marker, and JSON round-trip stability.
+- Added approval checklist for boundary-only, owner-not-authorized,
+  simulator-review-gate-ready, audit, rollback approval, future separate owner
+  approval, and production-write-disabled confirmations.
+- Added approval handoff next actions for a future actual write authorization
+  request, scope clarification, audit revision, rollback approval revision,
+  owner authorization request, approval-boundary-only retention, or blocking.
+- Added Template Workbench panel for 真实写入批准边界 / Approval Checklist /
+  Approval Handoff.
+- Kept Vision Analysis free of approval boundary UI and kept ordinary User App
+  Shell paths free of administrator real write approval terminology.
+
+What still cannot happen:
+
+- Phase 10U approval boundary ready is not actual registry write
+  authorization, not registry write execution, not registry mutation, not
+  production writer creation or readiness, not publication, not production
+  readiness, not backend work, not camera/AR scope, not OpenAI/external API
+  scope, not training input, and not a replacement for the current User App
+  Shell package.
+
+Why Phase 10V follows:
+
+The approval boundary can now state whether a future authorization request may
+be prepared. Phase 10V should request explicit owner authorization while still
+preventing silent writes, registry mutation, publication, package replacement,
+backend work, production writer execution, or production readiness claims.

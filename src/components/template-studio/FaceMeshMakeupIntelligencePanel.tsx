@@ -16,6 +16,9 @@ import {
   createGuardedSimulatorReviewChecklist,
   createGuardedSimulatorReviewGate,
   createGuardedSimulatorReviewHandoff,
+  createRealWriteApprovalBoundary,
+  createRealWriteApprovalChecklist,
+  createRealWriteApprovalHandoff,
   createRealRegistryWriteImplementationChecklist,
   createRealRegistryWriteImplementationDraft,
   createRealRegistryWriteImplementationDraftHandoff,
@@ -84,6 +87,7 @@ import { RealWriteExecutionAuthorizationPanel } from './RealWriteExecutionAuthor
 import { RealWriteExecutionPlanPanel } from './RealWriteExecutionPlanPanel';
 import { GuardedRealWriteExecutionSimulatorPanel } from './GuardedRealWriteExecutionSimulatorPanel';
 import { GuardedSimulatorReviewGatePanel } from './GuardedSimulatorReviewGatePanel';
+import { RealWriteApprovalBoundaryPanel } from './RealWriteApprovalBoundaryPanel';
 
 export interface FaceMeshMakeupIntelligencePanelProps {
   regionQa: FaceMeshRegionQaReport | null;
@@ -572,6 +576,38 @@ export function FaceMeshMakeupIntelligencePanel({
             </p>
           </div>
         </div>
+        <div className="mt-3 grid gap-2 rounded-md border border-blue-200 bg-blue-50 p-3 text-sm text-blue-900 md:grid-cols-5">
+          <div>
+            <p className="font-semibold">真实写入批准边界</p>
+            <p className="mt-1 text-xs leading-5">
+              Approval Boundary blocked：缺少 10T simulator review gate ready。
+            </p>
+          </div>
+          <div>
+            <p className="font-semibold">Approval Boundary</p>
+            <p className="mt-1 text-xs leading-5">
+              批准边界，不是实际写入；不授权真实写入 registry。
+            </p>
+          </div>
+          <div>
+            <p className="font-semibold">No Registry Mutation</p>
+            <p className="mt-1 text-xs leading-5">
+              不 mutation registry，不发布，不替换当前用户 App 包。
+            </p>
+          </div>
+          <div>
+            <p className="font-semibold">Approval Checklist</p>
+            <p className="mt-1 text-xs leading-5">
+              确认 boundary only / owner not authorized actual write / audit requirements / rollback approval requirements。
+            </p>
+          </div>
+          <div>
+            <p className="font-semibold">Approval Handoff</p>
+            <p className="mt-1 text-xs leading-5">
+              只可进入未来真实写入授权请求；不创建 production writer。未来真实写入仍需老板单独明确授权。
+            </p>
+          </div>
+        </div>
       </section>
     );
   }
@@ -825,6 +861,16 @@ export function FaceMeshMakeupIntelligencePanel({
     gate: guardedSimulatorReviewGate,
     checklist: guardedSimulatorReviewChecklist,
   });
+  const realWriteApprovalBoundary = createRealWriteApprovalBoundary({
+    gate: guardedSimulatorReviewGate,
+  });
+  const realWriteApprovalChecklist = createRealWriteApprovalChecklist({
+    boundary: realWriteApprovalBoundary,
+  });
+  const realWriteApprovalHandoff = createRealWriteApprovalHandoff({
+    boundary: realWriteApprovalBoundary,
+    checklist: realWriteApprovalChecklist,
+  });
 
   return (
     <section className="grid gap-4">
@@ -1013,6 +1059,11 @@ export function FaceMeshMakeupIntelligencePanel({
         gate={guardedSimulatorReviewGate}
         checklist={guardedSimulatorReviewChecklist}
         handoff={guardedSimulatorReviewHandoff}
+      />
+      <RealWriteApprovalBoundaryPanel
+        boundary={realWriteApprovalBoundary}
+        checklist={realWriteApprovalChecklist}
+        handoff={realWriteApprovalHandoff}
       />
     </section>
   );

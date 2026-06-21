@@ -1,1084 +1,20 @@
 {
   "commands": [
-    {
-      "command": "npm run typecheck",
-      "status": "passed",
-      "phase": "10T",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "npm run test",
-      "status": "passed"
-    },
-    {
-      "command": "npm run build",
-      "status": "passed",
-      "phase": "10T",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "npm run project:status",
-      "status": "passed",
-      "phase": "10T",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "npm run project:context",
-      "status": "passed",
-      "phase": "10T",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "node scripts/project-status.mjs --json",
-      "status": "passed",
-      "phase": "10T",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "node scripts/context-pack.mjs --json",
-      "status": "passed",
-      "phase": "10T",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "npm run test -- tests/user-app-anonymous-trial-launch-pack.test.ts tests/user-app-anonymous-trial-launch-readiness.test.ts tests/user-app-anonymous-trial-post-launch-handoff.test.ts tests/user-app-anonymous-trial-launch-pack-panel.test.tsx tests/user-app-anonymous-trial-launch-readiness-panel.test.tsx tests/user-app-anonymous-trial-post-launch-handoff-panel.test.tsx tests/user-app-shell-anonymous-trial-launch-flow.test.tsx tests/phase-9H-documentation-recovery.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
-      "status": "passed"
-    },
-    {
-      "command": "npm run test -- tests/user-app-anonymous-trial-dry-run-pack.test.ts tests/user-app-anonymous-trial-dry-run-checklist.test.ts tests/user-app-anonymous-trial-dry-run-review.test.ts tests/user-app-anonymous-trial-dry-run-pack-panel.test.tsx tests/user-app-anonymous-trial-dry-run-checklist-panel.test.tsx tests/user-app-anonymous-trial-dry-run-review-panel.test.tsx tests/user-app-shell-anonymous-trial-dry-run-flow.test.tsx",
-      "status": "passed",
-      "notes": "Initial Phase 9G model, panel, and shell wiring tests passed."
-    },
-    {
-      "command": "npm run test -- tests/user-app-anonymous-trial-dry-run-pack.test.ts tests/user-app-anonymous-trial-dry-run-checklist.test.ts tests/user-app-anonymous-trial-dry-run-review.test.ts tests/user-app-anonymous-trial-dry-run-pack-panel.test.tsx tests/user-app-anonymous-trial-dry-run-checklist-panel.test.tsx tests/user-app-anonymous-trial-dry-run-review-panel.test.tsx tests/user-app-shell-anonymous-trial-dry-run-flow.test.tsx tests/phase-9G-documentation-recovery.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
-      "status": "passed",
-      "notes": "Required Phase 9G scoped acceptance tests pending final docs/project-state update."
-    },
-    {
-      "command": "npm run test -- tests/user-app-anonymous-trial-launch-pack.test.ts tests/user-app-anonymous-trial-launch-readiness.test.ts tests/user-app-anonymous-trial-post-launch-handoff.test.ts tests/user-app-anonymous-trial-launch-pack-panel.test.tsx tests/user-app-anonymous-trial-launch-readiness-panel.test.tsx tests/user-app-anonymous-trial-post-launch-handoff-panel.test.tsx tests/user-app-shell-anonymous-trial-launch-flow.test.tsx",
-      "status": "passed",
-      "notes": "Initial Phase 9H model, panel, and shell wiring tests passed."
-    },
-    {
-      "command": "npm run test -- tests/user-app-anonymous-trial-evidence-review.test.ts tests/user-app-anonymous-trial-evidence-gap-review.test.ts tests/user-app-anonymous-trial-decision-input.test.ts tests/user-app-anonymous-trial-evidence-review-panel.test.tsx tests/user-app-anonymous-trial-evidence-gap-review-panel.test.tsx tests/user-app-anonymous-trial-decision-input-panel.test.tsx tests/user-app-shell-anonymous-trial-evidence-review-flow.test.tsx tests/phase-9I-documentation-recovery.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
-      "status": "passed",
-      "phase": "9I",
-      "notes": "Phase 9I scoped acceptance tests pending final run."
-    },
-    {
-      "command": "npm run test -- tests/user-app-anonymous-trial-follow-up-iteration.test.ts tests/user-app-anonymous-trial-gap-action-plan.test.ts tests/user-app-anonymous-trial-follow-up-readiness.test.ts tests/user-app-anonymous-trial-follow-up-iteration-panel.test.tsx tests/user-app-anonymous-trial-gap-action-plan-panel.test.tsx tests/user-app-anonymous-trial-follow-up-readiness-panel.test.tsx tests/user-app-shell-anonymous-trial-follow-up-flow.test.tsx tests/phase-9J-documentation-recovery.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
-      "status": "passed",
-      "notes": "Required Phase 9J scoped acceptance tests passed."
-    },
-    {
-      "command": "npm run mediapipe:check",
-      "status": "passed",
-      "phase": "10T",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "npm run test -- tests/facemesh-region-qa.test.ts tests/makeup-attribute-candidates.test.ts tests/rule-based-step-generator.test.ts tests/template-draft-generator.test.ts tests/facemesh-makeup-intelligence-panels.test.tsx tests/phase-10A-documentation-recovery.test.ts tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
-      "status": "passed"
-    },
-    {
-      "command": "npm run test -- tests/template-draft-qa.test.ts tests/template-draft-human-review.test.ts tests/template-draft-review-workflow.test.ts tests/template-studio-workflow-ia.test.ts tests/template-draft-review-workflow-panel.test.tsx tests/template-studio-tab-boundary.test.tsx tests/facemesh-makeup-intelligence-panels.test.tsx tests/template-draft-generator.test.ts",
-      "status": "passed-after-iteration",
-      "phase": "10B",
-      "notes": "Initial Phase 10B model and IA tests were iterated until passing except final scoped command pending."
-    },
-    {
-      "command": "npm run mediapipe:check",
-      "status": "passed",
-      "phase": "10T",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "npm run typecheck",
-      "status": "passed",
-      "phase": "10T",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "npm run build",
-      "status": "passed",
-      "phase": "10T",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "npm run test -- tests/template-draft-qa.test.ts tests/template-draft-human-review.test.ts tests/template-draft-review-workflow.test.ts tests/template-draft-review-workflow-panel.test.tsx tests/template-studio-workflow-ia.test.ts tests/template-studio-tab-boundary.test.tsx tests/phase-10B-documentation-recovery.test.ts tests/template-draft-generator.test.ts tests/facemesh-makeup-intelligence-panels.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
-      "status": "passed",
-      "phase": "10B",
-      "notes": "12 files / 40 tests passed."
-    },
-    {
-      "command": "npm run project:status",
-      "status": "passed",
-      "phase": "10T",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "npm run project:context",
-      "status": "passed",
-      "phase": "10T",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "node scripts/project-status.mjs --json",
-      "status": "passed",
-      "phase": "10T",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "node scripts/context-pack.mjs --json",
-      "status": "passed",
-      "phase": "10T",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "Browser verification of Vision Analysis and Template Workbench tab boundaries",
-      "status": "passed",
-      "phase": "10B"
-    },
-    {
-      "command": "npm run test -- tests/template-library-candidate-package.test.ts tests/template-library-candidate-validation.test.ts tests/template-library-candidate-handoff.test.ts tests/template-library-candidate-panels.test.tsx tests/template-studio-tab-boundary.test.tsx",
-      "status": "passed",
-      "phase": "10C"
-    },
-    {
-      "command": "npm run mediapipe:check",
-      "status": "passed",
-      "phase": "10T",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "npm run typecheck",
-      "status": "passed",
-      "phase": "10T",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "npm run build",
-      "status": "passed",
-      "phase": "10T",
-      "notes": "Vite build passed with existing chunk-size warning.",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "npm run test -- tests/template-library-candidate-package.test.ts tests/template-library-candidate-validation.test.ts tests/template-library-candidate-handoff.test.ts tests/template-library-candidate-panels.test.tsx tests/phase-10C-documentation-recovery.test.ts tests/template-draft-review-workflow.test.ts tests/template-draft-review-workflow-panel.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
-      "status": "passed",
-      "phase": "10C",
-      "notes": "10 files / 37 tests passed."
-    },
-    {
-      "command": "Browser verification of Vision Analysis and Template Workbench candidate packaging boundaries",
-      "status": "passed",
-      "phase": "10C"
-    },
-    {
-      "command": "npm run project:status",
-      "status": "passed",
-      "phase": "10T",
-      "notes": "Phase 10C final project status command passed.",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "npm run project:context",
-      "status": "passed",
-      "phase": "10T",
-      "notes": "Phase 10C final project context command passed.",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "node scripts/project-status.mjs --json",
-      "status": "passed",
-      "phase": "10T",
-      "notes": "Phase 10C JSON project status command passed.",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "node scripts/context-pack.mjs --json",
-      "status": "passed",
-      "phase": "10T",
-      "notes": "Phase 10C JSON context pack command passed.",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "npm run test -- tests/candidate-to-app-package-contract.test.ts tests/candidate-to-app-package-validation.test.ts tests/candidate-to-app-package-handoff.test.ts tests/candidate-to-app-package-panels.test.tsx tests/template-studio-tab-boundary.test.tsx",
-      "status": "passed",
-      "phase": "10D",
-      "notes": "Initial Phase 10D model, panel, and tab boundary tests passed."
-    },
-    {
-      "command": "npm run mediapipe:check",
-      "status": "passed",
-      "phase": "10T",
-      "notes": "Phase 10D MediaPipe local asset check passed.",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "npm run typecheck",
-      "status": "passed",
-      "phase": "10T",
-      "notes": "Phase 10D typecheck passed.",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "npm run build",
-      "status": "passed",
-      "phase": "10T",
-      "notes": "Phase 10D build passed with existing chunk-size warning.",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "npm run test -- tests/candidate-to-app-package-contract.test.ts tests/candidate-to-app-package-validation.test.ts tests/candidate-to-app-package-handoff.test.ts tests/candidate-to-app-package-panels.test.tsx tests/phase-10D-documentation-recovery.test.ts tests/template-library-candidate-package.test.ts tests/template-library-candidate-panels.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
-      "status": "passed",
-      "phase": "10D",
-      "notes": "10 files / 39 tests passed."
-    },
-    {
-      "command": "Browser verification for Phase 10D Template Studio tabs",
-      "status": "passed",
-      "phase": "10D",
-      "notes": "Vision Analysis does not show candidate-to-app contract; Template Workbench shows preparation, validation, handoff, blocked state, and no forbidden publish/package copy."
-    },
-    {
-      "command": "npm run project:status",
-      "status": "passed",
-      "phase": "10T",
-      "notes": "Phase 10D final project status command passed.",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "npm run project:context",
-      "status": "passed",
-      "phase": "10T",
-      "notes": "Phase 10D final project context command passed.",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "node scripts/project-status.mjs --json",
-      "status": "passed",
-      "phase": "10T",
-      "notes": "Phase 10D JSON project status command passed.",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "node scripts/context-pack.mjs --json",
-      "status": "passed",
-      "phase": "10T",
-      "notes": "Phase 10D JSON context pack command passed.",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "npm run test -- tests/user-app-package-draft-preview.test.ts tests/user-app-package-draft-preview-validation.test.ts tests/user-app-package-draft-preview-handoff.test.ts tests/user-app-package-draft-preview-panels.test.tsx tests/template-studio-tab-boundary.test.tsx",
-      "status": "passed",
-      "phase": "10E",
-      "notes": "Initial Phase 10E model, panel, and tab boundary tests passed."
-    },
-    {
-      "command": "npm run typecheck",
-      "status": "passed",
-      "phase": "10T",
-      "notes": "Initial Phase 10E typecheck passed.",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "npm run mediapipe:check",
-      "status": "passed",
-      "phase": "10T",
-      "notes": "Phase 10E MediaPipe local asset check passed.",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "npm run typecheck",
-      "status": "passed",
-      "phase": "10T",
-      "notes": "Phase 10E typecheck passed.",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "npm run build",
-      "status": "passed",
-      "phase": "10T",
-      "notes": "Phase 10E build passed with existing chunk-size warning.",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "npm run test -- tests/user-app-package-draft-preview.test.ts tests/user-app-package-draft-preview-validation.test.ts tests/user-app-package-draft-preview-handoff.test.ts tests/user-app-package-draft-preview-panels.test.tsx tests/phase-10E-documentation-recovery.test.ts tests/candidate-to-app-package-contract.test.ts tests/candidate-to-app-package-panels.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
-      "status": "passed",
-      "phase": "10E",
-      "notes": "10 files / 38 tests passed."
-    },
-    {
-      "command": "Browser verification for Phase 10E Template Studio tabs",
-      "status": "passed",
-      "phase": "10E",
-      "notes": "Vision Analysis does not show user app package draft preview; Template Workbench shows draft preview, validation, handoff, blocked state, and no forbidden publish/package/registry copy; MediaPipe ready shows no mock fallback."
-    },
-    {
-      "command": "npm run project:status",
-      "status": "passed",
-      "phase": "10T",
-      "notes": "Phase 10E project status command passed.",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "npm run project:context",
-      "status": "passed",
-      "phase": "10T",
-      "notes": "Phase 10E project context command passed.",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "node scripts/project-status.mjs --json",
-      "status": "passed",
-      "phase": "10T",
-      "notes": "Phase 10E JSON project status command passed.",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "node scripts/context-pack.mjs --json",
-      "status": "passed",
-      "phase": "10T",
-      "notes": "Phase 10E JSON context pack command passed.",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "npm run mediapipe:check",
-      "status": "passed",
-      "phase": "10T",
-      "notes": "Phase 10H MediaPipe local asset check passed; public/mediapipe remains ignored and is not staged.",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "npm run test -- tests/user-app-template-package-draft-publish-gate.test.ts tests/user-app-template-package-draft-publish-gate-handoff.test.ts tests/user-app-template-package-draft-publish-gate-panel.test.tsx tests/phase-10H-documentation-recovery.test.ts tests/official-user-app-template-package-draft.test.ts tests/official-user-app-template-package-draft-builder-panel.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
-      "status": "passed",
-      "phase": "10H",
-      "notes": "Phase 10H scoped tests passed: 9 files / 27 tests."
-    },
-    {
-      "command": "npm run typecheck",
-      "status": "passed",
-      "phase": "10T",
-      "notes": "Phase 10H typecheck passed.",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "npm run build",
-      "status": "passed",
-      "phase": "10T",
-      "notes": "Phase 10H build passed with existing Vite chunk-size warning.",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "Browser verification for Phase 10H Template Studio tabs",
-      "status": "passed",
-      "phase": "10H",
-      "notes": "Vision Analysis did not show the draft publish gate; Template Workbench showed 10H gate, blocked state, future registry-preparation copy, handoff, and no forbidden publish/registry/shell replacement wording; MediaPipe ready showed no mock fallback."
-    },
-    {
-      "command": "npm run project:status",
-      "status": "passed",
-      "phase": "10T",
-      "notes": "Phase 10H project status command passed.",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "npm run project:context",
-      "status": "passed",
-      "phase": "10T",
-      "notes": "Phase 10H project context command passed.",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "node scripts/project-status.mjs --json",
-      "status": "passed",
-      "phase": "10T",
-      "notes": "Phase 10H JSON project status command passed.",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "node scripts/context-pack.mjs --json",
-      "status": "passed",
-      "phase": "10T",
-      "notes": "Phase 10H JSON context pack command passed.",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "npm run mediapipe:check",
-      "status": "passed",
-      "phase": "10T",
-      "notes": "Phase 10I acceptance command.",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "npm run typecheck",
-      "status": "passed",
-      "phase": "10T",
-      "notes": "Phase 10I acceptance command.",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "npm run build",
-      "status": "passed",
-      "phase": "10T",
-      "notes": "Phase 10I acceptance command.",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "npm run project:status",
-      "status": "passed",
-      "phase": "10T",
-      "notes": "Phase 10I acceptance command.",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "npm run project:context",
-      "status": "passed",
-      "phase": "10T",
-      "notes": "Phase 10I acceptance command.",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "node scripts/project-status.mjs --json",
-      "status": "passed",
-      "phase": "10T",
-      "notes": "Phase 10I acceptance command.",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "node scripts/context-pack.mjs --json",
-      "status": "passed",
-      "phase": "10T",
-      "notes": "Phase 10I acceptance command.",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "npm run test -- tests/user-app-template-package-registry-preparation.test.ts tests/user-app-template-package-registry-preparation-validation.test.ts tests/user-app-template-package-registry-preparation-handoff.test.ts tests/user-app-template-package-registry-preparation-panel.test.tsx tests/phase-10I-documentation-recovery.test.ts tests/user-app-template-package-draft-publish-gate.test.ts tests/user-app-template-package-draft-publish-gate-panel.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
-      "status": "passed",
-      "phase": "10I",
-      "notes": "Phase 10I acceptance command."
-    },
-    {
-      "command": "Browser verification of Phase 10I Template Studio tabs",
-      "status": "passed",
-      "phase": "10I",
-      "notes": "Vision Analysis does not show registry preparation; Template Workbench shows registry preparation, validation, handoff, blocked state, and no forbidden write/publish/shell replacement copy."
-    },
-    {
-      "command": "npm run mediapipe:check",
-      "status": "passed",
-      "phase": "10T",
-      "notes": "Phase 10J required validation command.",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "npm run typecheck",
-      "status": "passed",
-      "phase": "10T",
-      "notes": "Phase 10J required validation command.",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "npm run build",
-      "status": "passed",
-      "phase": "10T",
-      "notes": "Phase 10J required validation command.",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "npm run project:status",
-      "status": "passed",
-      "phase": "10T",
-      "notes": "Phase 10J required validation command.",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "npm run project:context",
-      "status": "passed",
-      "phase": "10T",
-      "notes": "Phase 10J required validation command.",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "node scripts/project-status.mjs --json",
-      "status": "passed",
-      "phase": "10T",
-      "notes": "Phase 10J required validation command.",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "node scripts/context-pack.mjs --json",
-      "status": "passed",
-      "phase": "10T",
-      "notes": "Phase 10J required validation command.",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "npm run test -- tests/user-app-template-package-registry-write-gate.test.ts tests/user-app-template-package-registry-write-gate-handoff.test.ts tests/user-app-template-package-registry-write-gate-panel.test.tsx tests/phase-10J-documentation-recovery.test.ts tests/user-app-template-package-registry-preparation.test.ts tests/user-app-template-package-registry-preparation-panel.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
-      "status": "passed",
-      "phase": "10J",
-      "notes": "Phase 10J required validation command."
-    },
-    {
-      "command": "Browser verification for Phase 10J Template Studio tabs",
-      "status": "passed",
-      "phase": "10J",
-      "notes": "Vision Analysis does not show registry write gate; Template Workbench shows gate/handoff, blocked state, and no forbidden write/publish/replacement copy."
-    },
-    {
-      "command": "npm run mediapipe:check",
-      "status": "passed",
-      "phase": "10T",
-      "notes": "Phase 10K required validation command.",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "npm run typecheck",
-      "status": "passed",
-      "phase": "10T",
-      "notes": "Phase 10K required validation command.",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "npm run build",
-      "status": "passed",
-      "phase": "10T",
-      "notes": "Phase 10K required validation command.",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "npm run project:status",
-      "status": "passed",
-      "phase": "10T",
-      "notes": "Phase 10K required validation command.",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "npm run project:context",
-      "status": "passed",
-      "phase": "10T",
-      "notes": "Phase 10K required validation command.",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "node scripts/project-status.mjs --json",
-      "status": "passed",
-      "phase": "10T",
-      "notes": "Phase 10K required validation command.",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "node scripts/context-pack.mjs --json",
-      "status": "passed",
-      "phase": "10T",
-      "notes": "Phase 10K required validation command.",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "npm run test -- tests/controlled-user-app-template-package-registry-writer-draft.test.ts tests/controlled-user-app-template-package-registry-writer-validation.test.ts tests/controlled-user-app-template-package-registry-writer-handoff.test.ts tests/controlled-user-app-template-package-registry-writer-panel.test.tsx tests/phase-10K-documentation-recovery.test.ts tests/user-app-template-package-registry-write-gate.test.ts tests/user-app-template-package-registry-write-gate-panel.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
-      "status": "passed",
-      "phase": "10K",
-      "notes": "Phase 10K required scoped validation command."
-    },
-    {
-      "command": "Browser verification for Phase 10K Template Studio tabs",
-      "status": "passed",
-      "phase": "10K",
-      "notes": "Vision Analysis excludes controlled registry writer draft; Template Workbench shows writer draft/validation/handoff and no write/publish/shell replacement copy."
-    },
-    {
-      "command": "npm run test -- tests/explicit-registry-write-authorization-checklist.test.ts tests/explicit-registry-write-authorization-gate.test.ts tests/explicit-registry-write-authorization-handoff.test.ts tests/explicit-registry-write-authorization-gate-panel.test.tsx tests/template-studio-tab-boundary.test.tsx",
-      "status": "passed",
-      "phase": "10L",
-      "notes": "Initial Phase 10L model, panel, and tab-boundary tests passed."
-    },
-    {
-      "command": "npm run mediapipe:check",
-      "status": "passed",
-      "phase": "10T",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "npm run typecheck",
-      "status": "passed",
-      "phase": "10T",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "npm run test -- tests/explicit-registry-write-authorization-gate.test.ts tests/explicit-registry-write-authorization-checklist.test.ts tests/explicit-registry-write-authorization-handoff.test.ts tests/explicit-registry-write-authorization-gate-panel.test.tsx tests/phase-10L-documentation-recovery.test.ts tests/controlled-user-app-template-package-registry-writer-draft.test.ts tests/controlled-user-app-template-package-registry-writer-panel.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
-      "status": "passed",
-      "phase": "10L",
-      "notes": "10 files / 35 tests passed."
-    },
-    {
-      "command": "npm run build",
-      "status": "passed",
-      "phase": "10T",
-      "notes": "Vite build passed with existing chunk-size warning.",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "Browser verification of Vision Analysis and Template Workbench explicit authorization gate boundaries",
-      "status": "passed",
-      "phase": "10L",
-      "notes": "Vision Analysis excludes 10L gate/checklist; Template Workbench shows 10L gate/checklist/handoff, dry-run only, future owner authorization, and no actual write/publish/replacement forbidden copy."
-    },
-    {
-      "command": "npm run project:status",
-      "status": "passed",
-      "phase": "10T",
-      "notes": "Phase 10L project status command passed.",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "npm run project:context",
-      "status": "passed",
-      "phase": "10T",
-      "notes": "Phase 10L project context command passed.",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "node scripts/project-status.mjs --json",
-      "status": "passed",
-      "phase": "10T",
-      "notes": "Phase 10L JSON project status command passed.",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "node scripts/context-pack.mjs --json",
-      "status": "passed",
-      "phase": "10T",
-      "notes": "Phase 10L JSON context pack command passed.",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "npm run mediapipe:check",
-      "status": "passed",
-      "phase": "10T",
-      "notes": "Phase 10M precheck passed before implementation.",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "npm run test -- tests/controlled-registry-write-execution-design.test.ts tests/controlled-registry-write-execution-validation.test.ts tests/controlled-registry-write-execution-handoff.test.ts tests/controlled-registry-write-execution-design-panel.test.tsx tests/template-studio-tab-boundary.test.tsx",
-      "status": "passed",
-      "phase": "10M",
-      "notes": "Initial Phase 10M model, panel, and tab boundary tests passed."
-    },
-    {
-      "command": "npm run typecheck",
-      "status": "passed",
-      "phase": "10T",
-      "notes": "Phase 10M final typecheck passed.",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "npm run build",
-      "status": "passed",
-      "phase": "10T",
-      "notes": "Phase 10M final build passed with existing Vite chunk-size warning.",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "Browser verification of Phase 10M Template Studio tab boundaries",
-      "status": "passed",
-      "phase": "10M",
-      "notes": "Vision Analysis excludes controlled registry write execution design; Template Workbench shows 10M design/validation/handoff and no write/publish/shell replacement copy."
-    },
-    {
-      "command": "npm run test -- tests/controlled-registry-write-execution-design.test.ts tests/controlled-registry-write-execution-validation.test.ts tests/controlled-registry-write-execution-handoff.test.ts tests/controlled-registry-write-execution-design-panel.test.tsx tests/phase-10M-documentation-recovery.test.ts tests/explicit-registry-write-authorization-gate.test.ts tests/explicit-registry-write-authorization-gate-panel.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
-      "status": "passed",
-      "phase": "10M",
-      "notes": "10 files / 37 tests passed."
-    },
-    {
-      "command": "npm run project:status",
-      "status": "passed",
-      "phase": "10T",
-      "notes": "Phase 10M final project status command passed.",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "npm run project:context",
-      "status": "passed",
-      "phase": "10T",
-      "notes": "Phase 10M final project context command passed.",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "node scripts/project-status.mjs --json",
-      "status": "passed",
-      "phase": "10T",
-      "notes": "Phase 10M JSON project status command passed.",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "node scripts/context-pack.mjs --json",
-      "status": "passed",
-      "phase": "10T",
-      "notes": "Phase 10M JSON context pack command passed.",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "npm run mediapipe:check",
-      "status": "passed",
-      "phase": "10T",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "npm run test -- tests/real-registry-write-implementation-gate.test.ts tests/real-registry-write-implementation-checklist.test.ts tests/real-registry-write-implementation-handoff.test.ts tests/real-registry-write-implementation-gate-panel.test.tsx tests/phase-10N-documentation-recovery.test.ts tests/controlled-registry-write-execution-design.test.ts tests/controlled-registry-write-execution-design-panel.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
-      "status": "passed",
-      "phase": "10N",
-      "notes": "10 files / 35 tests passed."
-    },
-    {
-      "command": "npm run test -- tests/template-studio-tab-boundary.test.tsx",
-      "status": "passed",
-      "phase": "10T",
-      "notes": "Supplemental Template Studio tab boundary test passed: 1 file / 4 tests.",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "npm run typecheck",
-      "status": "passed",
-      "phase": "10T",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "npm run build",
-      "status": "passed",
-      "phase": "10T",
-      "notes": "Vite build passed with existing chunk-size warning.",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "npm run project:status",
-      "status": "passed",
-      "phase": "10T",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "npm run project:context",
-      "status": "passed",
-      "phase": "10T",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "node scripts/project-status.mjs --json",
-      "status": "passed",
-      "phase": "10T",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "node scripts/context-pack.mjs --json",
-      "status": "passed",
-      "phase": "10T",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "Browser verification for Phase 10N Template Studio tabs",
-      "status": "passed",
-      "phase": "10N",
-      "notes": "Vision Analysis excludes 10N implementation gate; Template Workbench shows 10N gate/checklist/handoff, required no-write/no-production-writer/dry-run copy, no forbidden write/publish/production copy, and no mock fallback with local MediaPipe assets ready."
-    },
-    {
-      "command": "npm run mediapipe:check",
-      "status": "passed",
-      "notes": "MediaPipe local assets present and ignored.",
-      "phase": "10T",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "npm run test -- tests/real-registry-write-implementation-draft.test.ts tests/real-registry-write-implementation-draft-validation.test.ts tests/real-registry-write-implementation-draft-handoff.test.ts tests/real-registry-write-implementation-draft-panel.test.tsx tests/phase-10O-documentation-recovery.test.ts tests/real-registry-write-implementation-gate.test.ts tests/real-registry-write-implementation-gate-panel.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
-      "status": "passed",
-      "notes": "Phase 10O scoped tests passed.",
-      "phase": "10O"
-    },
-    {
-      "command": "npm run typecheck",
-      "status": "passed",
-      "notes": "TypeScript project references passed.",
-      "phase": "10T",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "npm run build",
-      "status": "passed",
-      "notes": "Vite build passed with existing chunk-size warning only.",
-      "phase": "10T",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "npm run project:status",
-      "status": "passed",
-      "notes": "Project status reports 10O complete and 10P next.",
-      "phase": "10T",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "npm run project:context",
-      "status": "passed",
-      "notes": "Context pack reports 10O complete and 10P next.",
-      "phase": "10T",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "node scripts/project-status.mjs --json",
-      "status": "passed",
-      "notes": "JSON project status reports 10O/10P.",
-      "phase": "10T",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "node scripts/context-pack.mjs --json",
-      "status": "passed",
-      "notes": "JSON context pack reports 10O/10P.",
-      "phase": "10T",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "Browser verification for Phase 10O Template Studio tabs",
-      "status": "passed",
-      "notes": "Vision Analysis excludes 10O implementation draft; Template Workbench shows 10O draft/validation/handoff, required no-write/no-production-writer/dry-run copy, no forbidden write/publish/production copy, and no mock fallback with local MediaPipe assets ready.",
-      "phase": "10O"
-    },
-    {
-      "command": "npm run test -- tests/real-write-execution-authorization.test.ts tests/real-write-execution-authorization-checklist.test.ts tests/real-write-execution-authorization-handoff.test.ts tests/real-write-execution-authorization-panel.test.tsx tests/phase-10Q-documentation-recovery.test.ts tests/final-real-write-review-gate.test.ts tests/final-real-write-review-gate-panel.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
-      "status": "passed",
-      "notes": "Phase 10Q scoped acceptance tests passed: 10 files / 36 tests."
-    },
-    {
-      "command": "npm run mediapipe:check",
-      "status": "passed",
-      "phase": "10T",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "npm run typecheck",
-      "status": "passed",
-      "phase": "10T",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "npm run build",
-      "status": "passed",
-      "phase": "10T",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "npm run project:status",
-      "status": "passed",
-      "phase": "10T",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "npm run project:context",
-      "status": "passed",
-      "phase": "10T",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "node scripts/project-status.mjs --json",
-      "status": "passed",
-      "phase": "10T",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "node scripts/context-pack.mjs --json",
-      "status": "passed",
-      "phase": "10T",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "npm run mediapipe:check",
-      "status": "passed",
-      "phase": "10T",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "npm run typecheck",
-      "status": "passed",
-      "phase": "10T",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "npm run build",
-      "status": "passed",
-      "phase": "10T",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "npm run project:status",
-      "status": "passed",
-      "phase": "10T",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "npm run project:context",
-      "status": "passed",
-      "phase": "10T",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "node scripts/project-status.mjs --json",
-      "status": "passed",
-      "phase": "10T",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "node scripts/context-pack.mjs --json",
-      "status": "passed",
-      "phase": "10T",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "npm run test -- tests/real-write-execution-plan.test.ts tests/real-write-execution-plan-validation.test.ts tests/real-write-execution-plan-handoff.test.ts tests/real-write-execution-plan-panel.test.tsx tests/phase-10R-documentation-recovery.test.ts tests/real-write-execution-authorization.test.ts tests/real-write-execution-authorization-panel.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
-      "status": "pending",
-      "phase": "10R"
-    },
-    {
-      "command": "npm run mediapipe:check",
-      "phase": "10T",
-      "status": "passed",
-      "notes": "Phase 10R validation command passed.",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "npm run typecheck",
-      "phase": "10T",
-      "status": "passed",
-      "notes": "Phase 10R validation command passed.",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "npm run build",
-      "phase": "10T",
-      "status": "passed",
-      "notes": "Phase 10R validation command passed.",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "npm run project:status",
-      "phase": "10T",
-      "status": "passed",
-      "notes": "Phase 10R validation command passed.",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "npm run project:context",
-      "phase": "10T",
-      "status": "passed",
-      "notes": "Phase 10R validation command passed.",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "node scripts/project-status.mjs --json",
-      "phase": "10T",
-      "status": "passed",
-      "notes": "Phase 10R validation command passed.",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "node scripts/context-pack.mjs --json",
-      "phase": "10T",
-      "status": "passed",
-      "notes": "Phase 10R validation command passed.",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "npm run test -- tests/real-write-execution-plan.test.ts tests/real-write-execution-plan-validation.test.ts tests/real-write-execution-plan-handoff.test.ts tests/real-write-execution-plan-panel.test.tsx tests/phase-10R-documentation-recovery.test.ts tests/real-write-execution-authorization.test.ts tests/real-write-execution-authorization-panel.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
-      "phase": "10R",
-      "status": "passed",
-      "notes": "Phase 10R validation command passed."
-    },
-    {
-      "command": "npm run test -- tests/template-studio-tab-boundary.test.tsx",
-      "phase": "10T",
-      "status": "passed",
-      "notes": "Supplemental DOM render tab boundary test passed.",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "Browser verification via in-app browser and Chrome AppleScript fallback",
-      "phase": "10R",
-      "status": "attempted-blocked",
-      "notes": "attempted-blocked: in-app browser node_repl bridge returned missing sandboxPolicy; Chrome AppleScript fallback hung on automation permission. Supplemental Template Studio tab-boundary render test passed."
-    },
-    {
-      "command": "npm run test -- tests/guarded-real-write-execution-simulator.test.ts tests/guarded-real-write-execution-simulator-validation.test.ts tests/guarded-real-write-execution-simulator-handoff.test.ts tests/guarded-real-write-execution-simulator-panel.test.tsx tests/phase-10S-documentation-recovery.test.ts tests/real-write-execution-plan.test.ts tests/real-write-execution-plan-panel.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
-      "status": "passed",
-      "phase": "10S",
-      "notes": "10 files / 36 tests passed."
-    },
-    {
-      "command": "npm run test -- tests/template-studio-tab-boundary.test.tsx",
-      "status": "passed",
-      "phase": "10T",
-      "notes": "4 tests passed; Vision Analysis excludes 10S and Template Workbench includes the simulator.",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "npm run mediapipe:check",
-      "status": "passed",
-      "phase": "10T",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "npm run typecheck",
-      "status": "passed",
-      "phase": "10T",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "npm run build",
-      "status": "passed",
-      "phase": "10T",
-      "notes": "Vite build passed with existing chunk-size warning.",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "npm run project:status",
-      "status": "passed",
-      "phase": "10T",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "npm run project:context",
-      "status": "passed",
-      "phase": "10T",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "node scripts/project-status.mjs --json",
-      "status": "passed",
-      "phase": "10T",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "node scripts/context-pack.mjs --json",
-      "status": "passed",
-      "phase": "10T",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    },
-    {
-      "command": "Browser verification for Phase 10S Template Studio tabs",
-      "status": "passed",
-      "phase": "10S",
-      "notes": "In-app browser verified Vision Analysis excludes the 10S simulator; Template Workbench shows the guarded simulator blocked state, dry-run only/no registry mutation copy, and no forbidden write/publish/production wording."
-    },
-    {
-      "command": "npm run test -- tests/guarded-simulator-review-gate.test.ts tests/guarded-simulator-review-checklist.test.ts tests/guarded-simulator-review-handoff.test.ts tests/guarded-simulator-review-gate-panel.test.tsx tests/phase-10T-documentation-recovery.test.ts tests/guarded-real-write-execution-simulator.test.ts tests/guarded-real-write-execution-simulator-panel.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
-      "status": "passed",
-      "phase": "10T",
-      "notes": "Required Phase 10T scoped acceptance tests pending final run.",
-      "ranAt": "2026-06-21T00:00:00.000Z"
-    }
+    "npm run mediapipe:check",
+    "npm run typecheck",
+    "npm run build",
+    "npm run project:status",
+    "npm run project:context",
+    "node scripts/project-status.mjs --json",
+    "node scripts/context-pack.mjs --json",
+    "npm run test -- tests/real-write-approval-boundary.test.ts tests/real-write-approval-checklist.test.ts tests/real-write-approval-handoff.test.ts tests/real-write-approval-boundary-panel.test.tsx tests/phase-10U-documentation-recovery.test.ts tests/guarded-simulator-review-gate.test.ts tests/guarded-simulator-review-gate-panel.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
+    "npm run test -- tests/template-studio-tab-boundary.test.tsx"
   ],
-  "lastUpdatedPhase": "10T",
-  "phase": "10T",
-  "lastCompletedPhase": "10T",
-  "currentPhase": "Guarded Simulator Review Gate",
-  "nextRecommendedPhase": "10U",
+  "lastUpdatedPhase": "10U",
+  "phase": "10U",
+  "lastCompletedPhase": "10U",
+  "currentPhase": "Real Write Approval Boundary",
+  "nextRecommendedPhase": "10V",
   "updatedAt": "2026-06-21T00:00:00.000Z",
   "lastValidation": {
     "mediapipeCheck": "passed",
@@ -1089,14 +25,14 @@
     "projectStatusJson": "passed",
     "projectContext": "passed",
     "contextPackJson": "passed",
-    "browserVerification": "passed: in-app browser verified Vision Analysis excludes the Phase 10T guarded simulator review gate; Template Workbench shows guarded simulator review gate/checklist/handoff, blocked missing-source state, dry-run only/no registry mutation/no production writer copy, and no forbidden write/publish/production wording; public/mediapipe ready did not show mock fallback.",
-    "phase10TScopedTests": "passed",
-    "phase10TTabBoundaryTest": "passed",
-    "testFiles": 10,
-    "tests": 31,
-    "phase10TScopedTestFiles": 10,
-    "phase10TScopedTestsCount": 31,
-    "summary": "Phase 10T validation passed: mediapipe:check, typecheck, build, project status/context, JSON status/context, scoped 10T tests, and in-app browser tab-boundary verification all passed."
+    "browserVerification": "passed: in-app browser verified Vision Analysis excludes the Phase 10U real write approval boundary; Template Workbench shows real write approval boundary/checklist/handoff, blocked missing-source state, approval-boundary-only/no registry mutation/no production writer copy, no forbidden write/publish/production wording, and public/mediapipe ready did not show mock fallback. Ordinary user path admin-term separation is covered by SSR tab-boundary test because the dev app has no separate browser route for UserAppShell.",
+    "phase10UScopedTests": "passed",
+    "phase10UTabBoundaryTest": "passed",
+    "testFiles": 11,
+    "tests": 37,
+    "phase10UScopedTestFiles": 10,
+    "phase10UScopedTestsCount": 33,
+    "summary": "Phase 10U validation passed: mediapipe:check, typecheck, build, project status/context, JSON status/context, scoped 10U tests, tab boundary test, and in-app browser tab-boundary verification all passed."
   },
   "validation": {
     "mediapipeCheck": "passed",
@@ -1107,196 +43,117 @@
     "projectStatusJson": "passed",
     "projectContext": "passed",
     "contextPackJson": "passed",
-    "browserVerification": "passed: in-app browser verified Vision Analysis excludes the Phase 10T guarded simulator review gate; Template Workbench shows guarded simulator review gate/checklist/handoff, blocked missing-source state, dry-run only/no registry mutation/no production writer copy, and no forbidden write/publish/production wording; public/mediapipe ready did not show mock fallback.",
-    "phase10TScopedTests": "passed",
-    "phase10TTabBoundaryTest": "passed",
-    "testFiles": 10,
-    "tests": 31,
-    "phase10TScopedTestFiles": 10,
-    "phase10TScopedTestsCount": 31,
-    "summary": "Phase 10T validation passed: mediapipe:check, typecheck, build, project status/context, JSON status/context, scoped 10T tests, and in-app browser tab-boundary verification all passed."
+    "browserVerification": "passed: in-app browser verified Vision Analysis excludes the Phase 10U real write approval boundary; Template Workbench shows real write approval boundary/checklist/handoff, blocked missing-source state, approval-boundary-only/no registry mutation/no production writer copy, no forbidden write/publish/production wording, and public/mediapipe ready did not show mock fallback. Ordinary user path admin-term separation is covered by SSR tab-boundary test because the dev app has no separate browser route for UserAppShell.",
+    "phase10UScopedTests": "passed",
+    "phase10UTabBoundaryTest": "passed",
+    "testFiles": 11,
+    "tests": 37,
+    "phase10UScopedTestFiles": 10,
+    "phase10UScopedTestsCount": 33,
+    "summary": "Phase 10U validation passed: mediapipe:check, typecheck, build, project status/context, JSON status/context, scoped 10U tests, tab boundary test, and in-app browser tab-boundary verification all passed."
   },
-  "status": "passed_with_browser_tool_limitation",
-  "summary": "Phase 10R validation passed for mediapipe:check, scoped tests, Template Studio tab boundary supplemental test, typecheck, build, project status/context, and JSON status/context. Browser verification was attempted but blocked by local browser automation tooling; the DOM tab-boundary render test passed as fallback evidence.",
+  "status": "passed",
+  "summary": "Phase 10U adds a real write approval boundary, checklist, and handoff for simulator review evidence only. It blocks actual registry writes, registry mutation, publish, package replacement, and production writer creation.",
   "entries": [
     {
+      "phase": "10U",
       "command": "npm run mediapipe:check",
-      "phase": "10I",
-      "status": "passed",
-      "notes": "Phase 10I MediaPipe local asset check passed; public/mediapipe remains ignored and is not staged."
+      "status": "passed"
     },
     {
-      "command": "npm run test -- tests/user-app-template-package-registry-preparation.test.ts tests/user-app-template-package-registry-preparation-validation.test.ts tests/user-app-template-package-registry-preparation-handoff.test.ts tests/user-app-template-package-registry-preparation-panel.test.tsx tests/phase-10I-documentation-recovery.test.ts tests/user-app-template-package-draft-publish-gate.test.ts tests/user-app-template-package-draft-publish-gate-panel.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
-      "phase": "10I",
-      "status": "passed",
-      "notes": "Phase 10I scoped tests passed: 10 files / 36 tests."
-    },
-    {
+      "phase": "10U",
       "command": "npm run typecheck",
-      "phase": "10I",
-      "status": "passed",
-      "notes": "Phase 10I typecheck passed."
+      "status": "passed"
     },
     {
+      "phase": "10U",
       "command": "npm run build",
-      "phase": "10I",
-      "status": "passed",
-      "notes": "Phase 10I build passed with existing Vite chunk-size warning if present."
+      "status": "passed"
     },
     {
-      "command": "Browser verification for Phase 10I Template Studio tabs",
-      "phase": "10I",
-      "status": "passed",
-      "notes": "Vision Analysis did not show registry preparation; Template Workbench showed 10I preparation, blocked state, future registry-write-gate copy, handoff, and no forbidden write/publish/shell replacement wording; MediaPipe ready showed no mock fallback."
-    },
-    {
+      "phase": "10U",
       "command": "npm run project:status",
-      "phase": "10I",
-      "status": "passed",
-      "notes": "Phase 10I project status command passed."
+      "status": "passed"
     },
     {
+      "phase": "10U",
       "command": "npm run project:context",
-      "phase": "10I",
-      "status": "passed",
-      "notes": "Phase 10I project context command passed."
+      "status": "passed"
     },
     {
+      "phase": "10U",
       "command": "node scripts/project-status.mjs --json",
-      "phase": "10I",
-      "status": "passed",
-      "notes": "Phase 10I JSON project status command passed."
+      "status": "passed"
     },
     {
+      "phase": "10U",
       "command": "node scripts/context-pack.mjs --json",
-      "phase": "10I",
-      "status": "passed",
-      "notes": "Phase 10I JSON context pack command passed."
+      "status": "passed"
     },
     {
-      "command": "npm run project:status",
-      "status": "passed",
-      "phase": "10L",
-      "notes": "Phase 10L project status command passed."
+      "phase": "10U",
+      "command": "npm run test -- tests/real-write-approval-boundary.test.ts tests/real-write-approval-checklist.test.ts tests/real-write-approval-handoff.test.ts tests/real-write-approval-boundary-panel.test.tsx tests/phase-10U-documentation-recovery.test.ts tests/guarded-simulator-review-gate.test.ts tests/guarded-simulator-review-gate-panel.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
+      "status": "passed"
     },
     {
-      "command": "npm run project:context",
-      "status": "passed",
-      "phase": "10L",
-      "notes": "Phase 10L project context command passed."
-    },
-    {
-      "command": "node scripts/project-status.mjs --json",
-      "status": "passed",
-      "phase": "10L",
-      "notes": "Phase 10L JSON project status command passed."
-    },
-    {
-      "command": "node scripts/context-pack.mjs --json",
-      "status": "passed",
-      "phase": "10L",
-      "notes": "Phase 10L JSON context pack command passed."
-    },
-    {
-      "command": "npm run mediapipe:check",
-      "status": "passed",
-      "notes": "Local MediaPipe assets check passed; assets remain ignored.",
-      "phase": "10P"
-    },
-    {
-      "command": "npm run test -- tests/final-real-write-review-gate.test.ts tests/final-real-write-review-checklist.test.ts tests/final-real-write-review-handoff.test.ts tests/final-real-write-review-gate-panel.test.tsx tests/template-studio-tab-boundary.test.tsx tests/phase-10P-documentation-recovery.test.ts tests/real-registry-write-implementation-draft.test.ts tests/real-registry-write-implementation-draft-validation.test.ts tests/real-registry-write-implementation-draft-handoff.test.ts tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
-      "status": "passed",
-      "notes": "Phase 10P scoped tests passed.",
-      "phase": "10P"
-    },
-    {
-      "command": "npm run typecheck",
-      "status": "passed",
-      "notes": "TypeScript typecheck passed for Phase 10P.",
-      "phase": "10P"
-    },
-    {
-      "command": "npm run build",
-      "status": "passed",
-      "notes": "Production build passed for Phase 10P.",
-      "phase": "10P"
-    },
-    {
-      "command": "npm run project:status",
-      "status": "passed",
-      "notes": "Project status reports 10P complete and 10Q next.",
-      "phase": "10P"
-    },
-    {
-      "command": "npm run project:context",
-      "status": "passed",
-      "notes": "Context pack reports 10P complete and 10Q next.",
-      "phase": "10P"
-    },
-    {
-      "command": "node scripts/project-status.mjs --json",
-      "status": "passed",
-      "notes": "JSON project status reports 10P/10Q.",
-      "phase": "10P"
-    },
-    {
-      "command": "node scripts/context-pack.mjs --json",
-      "status": "passed",
-      "notes": "JSON context pack reports 10P/10Q.",
-      "phase": "10P"
-    },
-    {
-      "command": "Browser verification for Phase 10P Template Studio tabs",
-      "status": "passed",
-      "notes": "Vision Analysis excludes 10P final review gate; Template Workbench shows 10P final review gate/checklist/handoff and no forbidden write/publish/production/shell replacement copy.",
-      "phase": "10P"
-    },
-    {
-      "command": "npm run test -- tests/real-write-execution-plan.test.ts tests/real-write-execution-plan-validation.test.ts tests/real-write-execution-plan-handoff.test.ts tests/real-write-execution-plan-panel.test.tsx tests/template-studio-tab-boundary.test.tsx",
-      "phase": "10R",
-      "status": "passed",
-      "notes": "Initial Phase 10R model, panel, and tab boundary tests passed."
-    },
-    {
-      "command": "npm run test -- tests/real-write-execution-plan.test.ts tests/real-write-execution-plan-validation.test.ts tests/real-write-execution-plan-handoff.test.ts tests/real-write-execution-plan-panel.test.tsx tests/phase-10R-documentation-recovery.test.ts tests/real-write-execution-authorization.test.ts tests/real-write-execution-authorization-panel.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
-      "phase": "10R",
-      "status": "passed",
-      "notes": "Phase 10R scoped acceptance tests passed: 10 files / 36 tests."
-    },
-    {
+      "phase": "10U",
       "command": "npm run test -- tests/template-studio-tab-boundary.test.tsx",
-      "phase": "10R",
-      "status": "passed",
-      "notes": "Supplemental Template Studio tab boundary test passed: 1 file / 4 tests."
-    },
-    {
-      "command": "Browser verification for Phase 10R Template Studio tabs",
-      "phase": "10R",
-      "status": "attempted-blocked",
-      "notes": "attempted-blocked: in-app browser node_repl bridge returned missing sandboxPolicy; Chrome AppleScript fallback hung on automation permission. Supplemental Template Studio tab-boundary render test passed."
+      "status": "passed"
     }
   ],
-  "currentPhaseId": "10T",
-  "nextRecommendedPhaseName": "Real Write Approval Boundary",
-  "currentPhaseName": "Guarded Simulator Review Gate",
+  "currentPhaseId": "10U",
+  "nextRecommendedPhaseName": "Actual Write Authorization Request",
+  "currentPhaseName": "Real Write Approval Boundary",
   "validationStatus": "passed",
-  "lastCompletedBusinessPhase": "10T",
+  "lastCompletedBusinessPhase": "10U",
   "results": {
-    "mediapipeCheck": "pending final validation",
-    "typecheck": "pending final validation",
-    "test": "pending final validation",
-    "build": "pending final validation",
-    "projectStatus": "pending final validation",
-    "projectStatusJson": "pending final validation",
-    "projectContext": "pending final validation",
-    "contextPackJson": "pending final validation",
-    "browserVerification": "pending final validation",
-    "phase10TScopedTests": "pending final validation",
-    "phase10TTabBoundaryTest": "passed in initial implementation sweep",
-    "testFiles": 10,
-    "tests": "pending final validation",
-    "phase10TScopedTestFiles": 10,
-    "phase10TScopedTestsCount": "pending final validation",
-    "summary": "Phase 10T documentation/project-state sync prepared; final validation commands will update runtime evidence in completion report."
+    "mediapipeCheck": "passed",
+    "typecheck": "passed",
+    "test": "passed",
+    "build": "passed",
+    "projectStatus": "passed",
+    "projectStatusJson": "passed",
+    "projectContext": "passed",
+    "contextPackJson": "passed",
+    "browserVerification": "passed: in-app browser verified Vision Analysis excludes the Phase 10U real write approval boundary; Template Workbench shows real write approval boundary/checklist/handoff, blocked missing-source state, approval-boundary-only/no registry mutation/no production writer copy, no forbidden write/publish/production wording, and public/mediapipe ready did not show mock fallback. Ordinary user path admin-term separation is covered by SSR tab-boundary test because the dev app has no separate browser route for UserAppShell.",
+    "phase10UScopedTests": "passed",
+    "phase10UTabBoundaryTest": "passed",
+    "testFiles": 11,
+    "tests": 37,
+    "phase10UScopedTestFiles": 10,
+    "phase10UScopedTestsCount": 33,
+    "summary": "Phase 10U validation passed: mediapipe:check, typecheck, build, project status/context, JSON status/context, scoped 10U tests, tab boundary test, and in-app browser tab-boundary verification all passed."
+  },
+  "nextAction": "Proceed to Phase 10V - Actual Write Authorization Request.",
+  "lastUpdated": "2026-06-21T00:00:00.000Z",
+  "taskStatus": "completed",
+  "requiredValidationCommands": [
+    "npm run mediapipe:check",
+    "npm run typecheck",
+    "npm run build",
+    "npm run project:status",
+    "npm run project:context",
+    "node scripts/project-status.mjs --json",
+    "node scripts/context-pack.mjs --json",
+    "npm run test -- tests/real-write-approval-boundary.test.ts tests/real-write-approval-checklist.test.ts tests/real-write-approval-handoff.test.ts tests/real-write-approval-boundary-panel.test.tsx tests/phase-10U-documentation-recovery.test.ts tests/guarded-simulator-review-gate.test.ts tests/guarded-simulator-review-gate-panel.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
+    "npm run test -- tests/template-studio-tab-boundary.test.tsx"
+  ],
+  "requiredCommands": [
+    "npm run mediapipe:check",
+    "npm run typecheck",
+    "npm run build",
+    "npm run project:status",
+    "npm run project:context",
+    "node scripts/project-status.mjs --json",
+    "node scripts/context-pack.mjs --json",
+    "npm run test -- tests/real-write-approval-boundary.test.ts tests/real-write-approval-checklist.test.ts tests/real-write-approval-handoff.test.ts tests/real-write-approval-boundary-panel.test.tsx tests/phase-10U-documentation-recovery.test.ts tests/guarded-simulator-review-gate.test.ts tests/guarded-simulator-review-gate-panel.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
+    "npm run test -- tests/template-studio-tab-boundary.test.tsx"
+  ],
+  "realWriteApprovalBoundaryDecision": {
+    "nextPhase": "Phase 10V - Actual Write Authorization Request",
+    "boundary": "approval-boundary-only; no actual write, no registry mutation, no publish, no shell package replacement, no production writer",
+    "checklistBoundary": "checklist confirms owner has not authorized actual write, registry mutation, publish, shell replacement, or production writer creation and does not trigger writes",
+    "handoffBoundary": "handoff can request a future authorization phase but cannot execute registry writes or mutate registry state",
+    "approvalBoundary": "future actual write requires separate explicit owner authorization"
   }
 }

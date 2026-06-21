@@ -106,3 +106,6 @@ export * from './guarded-real-write-execution-simulator-handoff.example';
 export * from './guarded-simulator-review-gate.example';
 export * from './guarded-simulator-review-checklist.example';
 export * from './guarded-simulator-review-handoff.example';
+export * from './real-write-approval-boundary.example';
+export * from './real-write-approval-checklist.example';
+export * from './real-write-approval-handoff.example';

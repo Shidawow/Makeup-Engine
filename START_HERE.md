@@ -5,9 +5,9 @@ Makeup Engine is the makeup template production system for a future makeup coach
 ## Current Position
 
 - Project role: makeup template production system plus a local contract-driven user app shell prototype.
-- Last completed phase: `Phase 10T`.
-- Current completed business phase: `Phase 10T - Guarded Simulator Review Gate`.
-- Next recommended phase: `Phase 10U - Real Write Approval Boundary`.
+- Last completed phase: `Phase 10U`.
+- Current completed business phase: `Phase 10U - Real Write Approval Boundary`.
+- Next recommended phase: `Phase 10V - Actual Write Authorization Request`.
 - Recent recovery milestones retained in phase docs: `Phase 6K`, `Phase 6L`, `Phase 6L-1`, `Phase 7A`, `Phase 7B`, `Phase 7C`, `Phase 7D`, `Phase 7E`, `Phase 7F`, `Phase 7G`, `Phase 7H`, and `Phase 8A`.
 - Historical route-planning milestone: `Phase 8A - Product Route Decision / App MVP Planning`.
 
@@ -71,6 +71,7 @@ SourceImagePackage manifest
 -> Real Write Execution Plan
 -> Guarded Real Write Execution Simulator
 -> Guarded Simulator Review Gate
+-> Real Write Approval Boundary
 -> Phase 8 Roadmap / V1 Non-Goals
 -> Consumption Manifest
 -> Dataset Review
@@ -479,3 +480,12 @@ npm run test -- tests/user-app-anonymous-trial-dry-run-pack.test.ts tests/user-a
 - `docs/phases/phase-10S.md`
 
 Phase 10S is simulator-only and cannot write, mutate, publish, replace the shell package, or create a production writer. Next recommended phase: `Phase 10T - Guarded Simulator Review Gate`.
+
+## Phase 10U Addendum
+
+- `docs/product/real-write-approval-boundary.md`
+- `docs/product/real-write-approval-checklist.md`
+- `docs/product/real-write-approval-handoff.md`
+- `docs/phases/phase-10U.md`
+
+Phase 10U is approval-boundary-only. It cannot write registry data, mutate registry state, publish, replace the current User App Shell package, or create a production writer. Next recommended phase: `Phase 10V - Actual Write Authorization Request`.

@@ -31,13 +31,13 @@ describe('project state snapshot', () => {
 
     expect(snapshot.projectName).toBe('Makeup Engine');
     expect(snapshot.projectRole).toContain('Makeup template production system');
-    expect(snapshot.lastCompletedPhase).toBe('10T');
-    expect(snapshot.lastCompletedBusinessPhase).toBe('10T');
-    expect(snapshot.currentPhaseId).toBe('10T');
+    expect(snapshot.lastCompletedPhase).toBe('10U');
+    expect(snapshot.lastCompletedBusinessPhase).toBe('10U');
+    expect(snapshot.currentPhaseId).toBe('10U');
     expect(snapshot.currentPhase).toBeTruthy();
-    expect(snapshot.nextRecommendedPhase).toBe('10U');
-    expect(snapshot.nextRecommendedPhaseName).toContain('Real Write Approval Boundary');
-    expect(snapshot.nextAction).toContain('Phase 10U');
+    expect(snapshot.nextRecommendedPhase).toBe('10V');
+    expect(snapshot.nextRecommendedPhaseName).toContain('Actual Write Authorization Request');
+    expect(snapshot.nextAction).toContain('Phase 10V');
     expect(snapshot.mainDataFlow).toEqual(
       expect.arrayContaining([
         'SourceImagePackage',
@@ -204,6 +204,16 @@ describe('project state snapshot', () => {
         'GuardedSimulatorReviewHandoff',
         'GuardedSimulatorReviewHandoffItem',
         'GuardedSimulatorReviewGatePanel',
+        'RealWriteApprovalBoundaryResult',
+        'RealWriteApprovalBoundaryCheck',
+        'RealWriteApprovalBoundaryIssue',
+        'RealWriteApprovalBoundaryTrace',
+        'RealWriteApprovalChecklist',
+        'RealWriteApprovalChecklistItem',
+        'RealWriteApprovalRequirement',
+        'RealWriteApprovalHandoff',
+        'RealWriteApprovalHandoffItem',
+        'RealWriteApprovalBoundaryPanel',
         'FaceMeshMakeupIntelligenceAdminPanel',
         'MaterializedTrainingDataset',
       ]),
@@ -252,6 +262,8 @@ describe('project state snapshot', () => {
     expect(snapshot.knownLimitations.join('\n')).toContain('simulator-only');
     expect(snapshot.knownLimitations.join('\n')).toContain('Phase 10T');
     expect(snapshot.knownLimitations.join('\n')).toContain('review-gate-only');
+    expect(snapshot.knownLimitations.join('\n')).toContain('Phase 10U');
+    expect(snapshot.knownLimitations.join('\n')).toContain('approval-boundary-only');
     expect(snapshot.knownLimitations.join('\n')).toContain('registry mutation');
     expect(snapshot.knownLimitations.join('\n')).toContain('real names');
     expect(snapshot.knownLimitations.join('\n')).toContain('service worker');

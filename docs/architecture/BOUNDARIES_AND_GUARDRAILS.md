@@ -634,3 +634,7 @@ retention, or blocking. It cannot authorize or execute a registry write, cannot
 mutate registry state, cannot create or execute a production writer, cannot
 publish, cannot mark a production package, and cannot replace the current User
 App Shell package.
+
+## Phase 10U Real Write Approval Boundary
+
+Phase 10U adds a local administrator-only Real Write Approval Boundary after Phase 10T guarded simulator review gate readiness. It records approval scope, checklist, audit requirements, rollback approval requirements, blocked reasons, and handoff for a future Phase 10V authorization request only. It does not authorize actual registry write, registry mutation, publication, current User App Shell package replacement, production package creation, backend work, OpenAI/external API usage, camera/AR scope, training, or production writer creation.

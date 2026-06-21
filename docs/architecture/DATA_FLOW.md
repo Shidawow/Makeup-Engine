@@ -543,3 +543,20 @@ It cannot authorize or execute a registry write, mutate registry state,
 publish, create a production writer, create production writer readiness,
 replace the current User App Shell package, call backend/OpenAI/external APIs,
 request camera/AR scope, or train models.
+
+## Phase 10U Real Write Approval Boundary Flow
+
+`GuardedSimulatorReviewGateResult`
+-> `RealWriteApprovalBoundaryResult`
+-> `RealWriteApprovalChecklist`
+-> `RealWriteApprovalHandoff`
+-> next recommendation for Phase 10V actual write authorization request.
+
+The flow is local, deterministic, administrator-only, and
+approval-boundary-only. It can record owner scope, audit requirements, rollback
+approval requirements, no-write/no-mutation markers, blocked reasons, and
+handoff evidence after Phase 10T simulator review gate readiness. It cannot
+authorize or execute a registry write, mutate registry state, publish, create
+a production writer, create production writer readiness, replace the current
+User App Shell package, call backend/OpenAI/external APIs, request camera/AR
+scope, or train models.

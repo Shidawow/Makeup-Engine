@@ -2,13 +2,13 @@
 
 ## Current Phase
 
-Phase 10T: Guarded Simulator Review Gate is complete.
+Phase 10U: Real Write Approval Boundary is complete.
 
-Last completed business phase: Phase 10T.
+Last completed business phase: Phase 10U.
 
-Next recommended phase: Phase 10U, Real Write Approval Boundary.
+Next recommended phase: Phase 10V, Actual Write Authorization Request.
 
-Phase 10T adds a local administrator-only guarded simulator review gate after Phase 10S simulation validation readiness. Review gate ready means eligible for a future real write approval boundary only. It is still not actual registry write authorization, not registry write execution, not registry mutation, not production writer creation or readiness, not publication, not production package creation, not User App Shell package replacement, not backend service, and not a production app readiness marker.
+Phase 10U adds a local administrator-only real write approval boundary after Phase 10T simulator review gate readiness. Approval boundary ready means eligible for a future actual write authorization request only. It is still not actual registry write authorization, not registry write execution, not registry mutation, not production writer creation or readiness, not publication, not production package creation, not User App Shell package replacement, not backend service, and not a production app readiness marker.
 
 ## What The System Can Do
 
@@ -114,6 +114,11 @@ Phase 10T adds a local administrator-only guarded simulator review gate after Ph
   registry mutation, publication, current User App Shell package replacement,
   production writer creation, production package creation, backend/API work,
   and training blocked.
+- Define Phase 10U real write approval boundary, checklist, and handoff from
+  Phase 10T simulator review gate readiness while confirming boundary-only
+  scope, owner-not-authorized actual write / registry mutation / publish /
+  shell replacement / production writer creation, audit requirements, rollback
+  approval requirements, and future separate owner authorization.
 - Render compact Template Studio workflow, candidate package, candidate-to-app,
   user app package draft preview, official draft gate, and official draft
   builder, draft publish gate, registry preparation, and registry write gate
@@ -121,7 +126,7 @@ Phase 10T adds a local administrator-only guarded simulator review gate after Ph
   execution design and real implementation gate panels in the Template
   Workbench, including real write execution authorization, real write execution
   plan, guarded real write execution simulator, and guarded simulator review
-  gate panels.
+  gate, and real write approval boundary panels.
 - Keep Vision Analysis focused on FaceMesh, overlay/mask, region QA, and
   readiness; keep ordinary User App Shell paths separate from administrator-only
   vision, draft QA, human review, package preview, and registry terminology.
@@ -201,6 +206,11 @@ Phase 10T adds a local administrator-only guarded simulator review gate after Ph
   registry mutation, production writer readiness, production writer creation,
   publication, production readiness, production package creation, or replacement
   for the current User App Shell package.
+- It cannot treat Phase 10U real write approval boundary readiness, checklist,
+  or handoff as actual registry write authorization, registry write execution,
+  registry mutation, production writer readiness, production writer creation,
+  publication, production readiness, production package creation, or replacement
+  for the current User App Shell package.
 - It cannot generate or mutate `UserAppTemplatePackage` from FaceMesh QA,
   candidates, generated steps, draft QA, human review, candidate handoff,
   candidate package handoff, app contract preparation, draft preview, validation,
@@ -210,7 +220,7 @@ Phase 10T adds a local administrator-only guarded simulator review gate after Ph
 - It cannot request camera permissions or call browser camera APIs.
 - It cannot add backend, database, accounts, analytics, AR, OpenAI API,
   external AI/CV APIs, service worker, native app scope, or new runtime
-  dependencies in Phase 10S.
+  dependencies in Phase 10U.
 - It cannot commit local MediaPipe `.task` or `.wasm` files from
   `public/mediapipe/**`.
 - It cannot modify legacy `src/engine`, `src/runtime`, or
@@ -231,7 +241,7 @@ Phase 10T adds a local administrator-only guarded simulator review gate after Ph
   implementation gate, Phase 10O real registry write implementation draft,
   Phase 10P final real write review gate, Phase 10Q real write execution
   authorization, Phase 10R real write execution plan, Phase 10S guarded real
-  write execution simulator, and Phase 10T guarded simulator review gate.
+  write execution simulator, and Phase 10T guarded simulator review gate and Phase 10U real write approval boundary.
 - `src/components/template-studio`: active operator UI with compact Vision
   Analysis to Template Workbench workflow surfaces.
 - `src/components/demo`: Vision Analysis demo with readiness summary and
@@ -246,7 +256,7 @@ Phase 10T adds a local administrator-only guarded simulator review gate after Ph
 
 ## Recent Validation
 
-Phase 10T validation must include:
+Phase 10U validation must include:
 
 ```bash
 npm run mediapipe:check
@@ -262,10 +272,6 @@ The latest completed validation is recorded in `project-state/test-status.json`.
 
 ## Next Phase Recommendation
 
-Proceed to Phase 10U: Real Write Approval Boundary.
+Proceed to Phase 10V: Actual Write Authorization Request.
 
-Phase 10U should define the future real write approval boundary after Phase 10T
-review gate readiness, still without silently executing a registry write,
-mutating registry state, publishing, adding backend work, marking production
-readiness, creating a production writer, or replacing the current User App Shell
-package unless a later explicit execution phase is approved.
+Phase 10V should request explicit owner authorization for any future actual write path while still preventing silent writes, registry mutation, publication, package replacement, backend work, production writer execution, or production readiness claims.
