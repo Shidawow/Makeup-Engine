@@ -12,10 +12,10 @@ It produces templates, template evidence, correction records, review state, loca
 
 ## Current Phase
 
-- Current business phase: `Phase 10Q completed`
-- Last completed phase: `Phase 10Q`
-- Last completed phase name: `Phase 10Q - Real Write Execution Authorization`
-- Next recommended phase: `Phase 10R - Real Write Execution Plan`
+- Current business phase: `Phase 10S completed`
+- Last completed phase: `Phase 10S`
+- Last completed phase name: `Phase 10S - Guarded Real Write Execution Simulator`
+- Next recommended phase: `Phase 10T - Guarded Simulator Review Gate`
 
 Historical recovery marker retained for Phase 9C tests: `Phase 9C completed`.
 Historical recovery marker retained for Phase 9E tests: `Phase 9E completed`.
@@ -25,6 +25,7 @@ Historical recovery marker retained for Phase 9H tests: `Phase 9H completed`.
 Historical recovery marker retained for Phase 9I tests: `Phase 9I completed`.
 Historical recovery marker retained for Phase 9J tests: `Phase 9J completed`.
 Historical recovery marker retained for Phase 10O tests: `Phase 10O completed`.
+Historical recovery marker retained for Phase 10R tests: `Phase 10R completed`.
 Historical recovery marker retained for Phase 10P tests: `Phase 10P completed`.
 Historical recovery milestone retained for older phase tests: `Phase 8A completed` / `Phase 8A - Product Route Decision / App MVP Planning`.
 Historical recovery milestone retained for Phase 8B tests: `Phase 8B completed` / `Phase 8B - PWA / Mobile Web MVP Polish`.
@@ -94,6 +95,8 @@ Real Photo
 -> Real Registry Write Implementation Draft
 -> Final Real Write Review Gate
 -> Real Write Execution Authorization
+-> Real Write Execution Plan
+-> Guarded Real Write Execution Simulator
 -> Phase 8 Roadmap / V1 Non-Goals
 -> User App Consumption Manifest
 -> Dataset Review
@@ -210,6 +213,18 @@ Important boundary: `SourceImagePackage` can enter Vision Analysis through opera
   writes, publication, production writer creation, and current User App Shell
   package replacement remain blocked, and recommend a future Phase 10R
   execution plan only.
+- `src/template-engine/realWriteExecutionPlan.ts`,
+  `src/template-engine/realWriteExecutionPlanValidation.ts`, and
+  `src/template-engine/realWriteExecutionPlanHandoff.ts`: Phase 10R local real
+  write execution plan, validation, and handoff logic. They describe future
+  execution sequence, preflight, locks, audit, rollback, failure handling, and
+  dry-run verification only.
+- `src/template-engine/guardedRealWriteExecutionSimulator.ts`,
+  `src/template-engine/guardedRealWriteExecutionSimulatorValidation.ts`, and
+  `src/template-engine/guardedRealWriteExecutionSimulatorHandoff.ts`: Phase 10S
+  local guarded real write execution simulator, validation, and handoff logic.
+  They simulate preflight, write lock, operation, audit, rollback, and failure
+  handling only; they do not write or mutate registry state.
 - `src/templates`: schemas, storage, review, corrections, evidence, dataset materialization, source image binding, production batch storage/export, template library storage, and publish package export.
 - `src/template-engine/production`: production queue, state machine, QA rules, rebinding recovery, analysis handoff, review lifecycle, smoke checklist.
 - `src/template-engine/library`: production task to library entry conversion, template versioning, and local library lifecycle.

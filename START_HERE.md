@@ -5,9 +5,9 @@ Makeup Engine is the makeup template production system for a future makeup coach
 ## Current Position
 
 - Project role: makeup template production system plus a local contract-driven user app shell prototype.
-- Last completed phase: `Phase 10R`.
-- Current completed business phase: `Phase 10R - Real Write Execution Plan`.
-- Next recommended phase: `Phase 10S - Guarded Real Write Execution Simulator`.
+- Last completed phase: `Phase 10S`.
+- Current completed business phase: `Phase 10S - Guarded Real Write Execution Simulator`.
+- Next recommended phase: `Phase 10T - Guarded Simulator Review Gate`.
 - Recent recovery milestones retained in phase docs: `Phase 6K`, `Phase 6L`, `Phase 6L-1`, `Phase 7A`, `Phase 7B`, `Phase 7C`, `Phase 7D`, `Phase 7E`, `Phase 7F`, `Phase 7G`, `Phase 7H`, and `Phase 8A`.
 - Historical route-planning milestone: `Phase 8A - Product Route Decision / App MVP Planning`.
 
@@ -69,6 +69,7 @@ SourceImagePackage manifest
 -> Final Real Write Review Gate
 -> Real Write Execution Authorization
 -> Real Write Execution Plan
+-> Guarded Real Write Execution Simulator
 -> Phase 8 Roadmap / V1 Non-Goals
 -> Consumption Manifest
 -> Dataset Review
@@ -458,3 +459,12 @@ For Phase 9G scoped anonymous dry run checks run:
 ```bash
 npm run test -- tests/user-app-anonymous-trial-dry-run-pack.test.ts tests/user-app-anonymous-trial-dry-run-checklist.test.ts tests/user-app-anonymous-trial-dry-run-review.test.ts tests/user-app-anonymous-trial-dry-run-pack-panel.test.tsx tests/user-app-anonymous-trial-dry-run-checklist-panel.test.tsx tests/user-app-anonymous-trial-dry-run-review-panel.test.tsx tests/user-app-shell-anonymous-trial-dry-run-flow.test.tsx tests/phase-9G-documentation-recovery.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts
 ```
+
+## Phase 10S Addendum
+
+- `docs/product/guarded-real-write-execution-simulator.md`
+- `docs/product/guarded-real-write-execution-simulator-validation.md`
+- `docs/product/guarded-real-write-execution-simulator-handoff.md`
+- `docs/phases/phase-10S.md`
+
+Phase 10S is simulator-only and cannot write, mutate, publish, replace the shell package, or create a production writer. Next recommended phase: `Phase 10T - Guarded Simulator Review Gate`.

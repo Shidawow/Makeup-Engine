@@ -31,13 +31,13 @@ describe('project state snapshot', () => {
 
     expect(snapshot.projectName).toBe('Makeup Engine');
     expect(snapshot.projectRole).toContain('Makeup template production system');
-    expect(snapshot.lastCompletedPhase).toBe('10R');
-    expect(snapshot.lastCompletedBusinessPhase).toBe('10R');
-    expect(snapshot.currentPhaseId).toBe('10R');
+    expect(snapshot.lastCompletedPhase).toBe('10S');
+    expect(snapshot.lastCompletedBusinessPhase).toBe('10S');
+    expect(snapshot.currentPhaseId).toBe('10S');
     expect(snapshot.currentPhase).toBeTruthy();
-    expect(snapshot.nextRecommendedPhase).toBe('10S');
-    expect(snapshot.nextRecommendedPhaseName).toContain('Guarded Real Write Execution Simulator');
-    expect(snapshot.nextAction).toContain('Phase 10S');
+    expect(snapshot.nextRecommendedPhase).toBe('10T');
+    expect(snapshot.nextRecommendedPhaseName).toContain('Guarded Simulator Review Gate');
+    expect(snapshot.nextAction).toContain('Phase 10T');
     expect(snapshot.mainDataFlow).toEqual(
       expect.arrayContaining([
         'SourceImagePackage',
@@ -182,6 +182,18 @@ describe('project state snapshot', () => {
         'RealWriteExecutionPlanValidationResult',
         'RealWriteExecutionPlanHandoff',
         'RealWriteExecutionPlanPanel',
+        'GuardedRealWriteExecutionSimulator',
+        'GuardedRealWriteExecutionSimulationSource',
+        'GuardedRealWriteSimulationRun',
+        'GuardedRealWriteSimulationStep',
+        'GuardedRealWriteSimulationPreflightResult',
+        'GuardedRealWriteSimulationLockResult',
+        'GuardedRealWriteSimulationAuditEvent',
+        'GuardedRealWriteSimulationRollbackResult',
+        'GuardedRealWriteSimulationFailureHandlingResult',
+        'GuardedRealWriteExecutionSimulatorValidationResult',
+        'GuardedRealWriteExecutionSimulatorHandoff',
+        'GuardedRealWriteExecutionSimulatorPanel',
         'FaceMeshMakeupIntelligenceAdminPanel',
         'MaterializedTrainingDataset',
       ]),
@@ -226,6 +238,9 @@ describe('project state snapshot', () => {
     expect(snapshot.knownLimitations.join('\n')).toContain('authorization model only');
     expect(snapshot.knownLimitations.join('\n')).toContain('Phase 10R');
     expect(snapshot.knownLimitations.join('\n')).toContain('execution-plan-only');
+    expect(snapshot.knownLimitations.join('\n')).toContain('Phase 10S');
+    expect(snapshot.knownLimitations.join('\n')).toContain('simulator-only');
+    expect(snapshot.knownLimitations.join('\n')).toContain('registry mutation');
     expect(snapshot.knownLimitations.join('\n')).toContain('real names');
     expect(snapshot.knownLimitations.join('\n')).toContain('service worker');
     expect(snapshot.knownLimitations).toContain('raw RGBA is currently summary-only in Studio');

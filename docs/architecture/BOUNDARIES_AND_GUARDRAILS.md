@@ -598,3 +598,11 @@ authorization request, execution-plan-only retention, or blocking. It cannot
 authorize or execute a registry write, cannot create or execute a production
 writer, cannot publish, cannot mark a production package, and cannot replace
 the current User App Shell package.
+
+## Phase 10S Guarded Real Write Execution Simulator Boundary
+
+Phase 10S guarded real write execution simulator, validation, and handoff are local administrator aids only. Simulation ready means eligible for a future guarded simulator review gate; it is not actual registry write authorization, not registry write execution, not registry mutation, not production writer readiness, not production writer creation, not publication, not production readiness, not production package creation, and not a User App Shell package replacement.
+
+The simulator checks Phase 10R execution plan validation readiness, simulation mode, dry-run-only, actual-write-blocked, publish-blocked, package-replacement-blocked, production-writer-blocked, registry-mutation-blocked, simulated preflight, simulated write lock, simulated operation, simulated audit events, simulated rollback, simulated failure handling, trace preservation, raw image boundaries, personal data boundaries, medical claims, product shade claims, unsupported final claims, actual registry write markers, registry mutation markers, production package markers, User App Shell package replacement markers, production writer creation markers, and JSON round-trip stability.
+
+Simulator handoff can recommend a future guarded simulator review gate, simulation section revisions, actual-write owner authorization request, simulator-only retention, or blocking. It cannot authorize or execute a registry write, cannot mutate registry state, cannot create or execute a production writer, cannot publish, cannot mark a production package, and cannot replace the current User App Shell package.

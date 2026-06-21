@@ -11,6 +11,8 @@ import {
   createFinalRealWriteReviewChecklist,
   createFinalRealWriteReviewGate,
   createFinalRealWriteReviewHandoff,
+  createGuardedRealWriteExecutionSimulator,
+  createGuardedRealWriteExecutionSimulatorHandoff,
   createRealRegistryWriteImplementationChecklist,
   createRealRegistryWriteImplementationDraft,
   createRealRegistryWriteImplementationDraftHandoff,
@@ -46,6 +48,7 @@ import {
   validateCandidateToAppPackageContract,
   validateControlledRegistryWriteExecutionDesign,
   validateControlledUserAppTemplatePackageRegistryWriterDraft,
+  validateGuardedRealWriteExecutionSimulator,
   validateRealRegistryWriteImplementationDraft,
   validateRealWriteExecutionPlan,
   validateOfficialUserAppTemplatePackageDraft,
@@ -76,6 +79,7 @@ import { RealRegistryWriteImplementationDraftPanel } from './RealRegistryWriteIm
 import { FinalRealWriteReviewGatePanel } from './FinalRealWriteReviewGatePanel';
 import { RealWriteExecutionAuthorizationPanel } from './RealWriteExecutionAuthorizationPanel';
 import { RealWriteExecutionPlanPanel } from './RealWriteExecutionPlanPanel';
+import { GuardedRealWriteExecutionSimulatorPanel } from './GuardedRealWriteExecutionSimulatorPanel';
 
 export interface FaceMeshMakeupIntelligencePanelProps {
   regionQa: FaceMeshRegionQaReport | null;
@@ -506,6 +510,32 @@ export function FaceMeshMakeupIntelligencePanel({
             </p>
           </div>
         </div>
+        <div className="mt-3 grid gap-2 rounded-md border border-emerald-200 bg-emerald-50 p-3 text-sm text-emerald-900 md:grid-cols-4">
+          <div>
+            <p className="font-semibold">受保护真实写入执行模拟器</p>
+            <p className="mt-1 text-xs leading-5">
+              Simulator blocked：缺少 10R execution plan validation ready。
+            </p>
+          </div>
+          <div>
+            <p className="font-semibold">Simulator Boundary</p>
+            <p className="mt-1 text-xs leading-5">
+              模拟器，不是实际写入；仍然 dry-run only。
+            </p>
+          </div>
+          <div>
+            <p className="font-semibold">No Registry Mutation</p>
+            <p className="mt-1 text-xs leading-5">
+              不 mutation registry，不授权发布，不替换当前用户 App 包。
+            </p>
+          </div>
+          <div>
+            <p className="font-semibold">Simulator Handoff</p>
+            <p className="mt-1 text-xs leading-5">
+              只可进入未来模拟器复核闸门；不创建 production writer。
+            </p>
+          </div>
+        </div>
       </section>
     );
   }
@@ -733,6 +763,20 @@ export function FaceMeshMakeupIntelligencePanel({
     plan: realWriteExecutionPlan,
     validation: realWriteExecutionPlanValidation,
   });
+  const guardedRealWriteExecutionSimulator =
+    createGuardedRealWriteExecutionSimulator({
+      plan: realWriteExecutionPlan,
+      validation: realWriteExecutionPlanValidation,
+    });
+  const guardedRealWriteExecutionSimulatorValidation =
+    validateGuardedRealWriteExecutionSimulator(
+      guardedRealWriteExecutionSimulator,
+    );
+  const guardedRealWriteExecutionSimulatorHandoff =
+    createGuardedRealWriteExecutionSimulatorHandoff({
+      simulator: guardedRealWriteExecutionSimulator,
+      validation: guardedRealWriteExecutionSimulatorValidation,
+    });
 
   return (
     <section className="grid gap-4">
@@ -911,6 +955,11 @@ export function FaceMeshMakeupIntelligencePanel({
         plan={realWriteExecutionPlan}
         validation={realWriteExecutionPlanValidation}
         handoff={realWriteExecutionPlanHandoff}
+      />
+      <GuardedRealWriteExecutionSimulatorPanel
+        simulator={guardedRealWriteExecutionSimulator}
+        validation={guardedRealWriteExecutionSimulatorValidation}
+        handoff={guardedRealWriteExecutionSimulatorHandoff}
       />
     </section>
   );

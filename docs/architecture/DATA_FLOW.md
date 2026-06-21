@@ -517,3 +517,13 @@ readiness. It cannot authorize or execute a registry write, publish, create a
 production writer, create production writer readiness, replace the current User
 App Shell package, call backend/OpenAI/external APIs, request camera/AR scope,
 or train models.
+
+## Phase 10S Guarded Real Write Execution Simulator Flow
+
+`RealWriteExecutionPlanValidationResult`
+-> `GuardedRealWriteExecutionSimulator`
+-> `GuardedRealWriteExecutionSimulatorValidationResult`
+-> `GuardedRealWriteExecutionSimulatorHandoff`
+-> next recommendation for Phase 10T guarded simulator review gate.
+
+The flow is local, deterministic, administrator-only, and simulator-only. It can simulate preflight, write lock, write operation, audit events, rollback, and failure handling after Phase 10R execution plan validation readiness. It cannot authorize or execute a registry write, mutate registry state, publish, create a production writer, create production writer readiness, replace the current User App Shell package, call backend/OpenAI/external APIs, request camera/AR scope, or train models.

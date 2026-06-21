@@ -100,3 +100,6 @@ export * from './real-write-execution-authorization-handoff.example';
 export * from './real-write-execution-plan.example';
 export * from './real-write-execution-plan-validation.example';
 export * from './real-write-execution-plan-handoff.example';
+export * from './guarded-real-write-execution-simulator.example';
+export * from './guarded-real-write-execution-simulator-validation.example';
+export * from './guarded-real-write-execution-simulator-handoff.example';

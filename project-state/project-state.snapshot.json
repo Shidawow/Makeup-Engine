@@ -2,13 +2,13 @@
   "projectName": "Makeup Engine",
   "projectRole": "Makeup template production system with completed real write execution authorization plus a local contract-driven user app shell prototype for a future separate user app MVP",
   "projectIsUserFacingApp": false,
-  "lastCompletedPhase": "10R",
-  "lastCompletedBusinessPhase": "10R",
-  "currentPhase": "Real Write Execution Plan",
-  "currentPhaseId": "10R",
-  "nextRecommendedPhase": "10S",
-  "nextRecommendedPhaseName": "Guarded Real Write Execution Simulator",
-  "nextAction": "Proceed to Phase 10S - Guarded Real Write Execution Simulator.",
+  "lastCompletedPhase": "10S",
+  "lastCompletedBusinessPhase": "10S",
+  "currentPhase": "Guarded Real Write Execution Simulator",
+  "currentPhaseId": "10S",
+  "nextRecommendedPhase": "10T",
+  "nextRecommendedPhaseName": "Guarded Simulator Review Gate",
+  "nextAction": "Proceed to Phase 10T - Guarded Simulator Review Gate.",
   "mainDataFlow": [
     "SourceImagePackage",
     "SourceImageEntry",
@@ -201,7 +201,19 @@
     "RealWriteExecutionDryRunVerificationPlan",
     "RealWriteExecutionPlanValidationResult",
     "RealWriteExecutionPlanHandoff",
-    "RealWriteExecutionPlanPanel"
+    "RealWriteExecutionPlanPanel",
+    "GuardedRealWriteExecutionSimulatorPanel",
+    "GuardedRealWriteExecutionSimulatorHandoff",
+    "GuardedRealWriteExecutionSimulatorValidationResult",
+    "GuardedRealWriteSimulationFailureHandlingResult",
+    "GuardedRealWriteSimulationRollbackResult",
+    "GuardedRealWriteSimulationAuditEvent",
+    "GuardedRealWriteSimulationLockResult",
+    "GuardedRealWriteSimulationPreflightResult",
+    "GuardedRealWriteSimulationStep",
+    "GuardedRealWriteSimulationRun",
+    "GuardedRealWriteExecutionSimulationSource",
+    "GuardedRealWriteExecutionSimulator"
   ],
   "mainModules": [
     "src/vision",
@@ -244,16 +256,16 @@
     "projectStatusJson": "passed",
     "projectContext": "passed",
     "contextPackJson": "passed",
-    "browserVerification": "attempted-blocked: in-app browser node_repl bridge returned missing sandboxPolicy; Chrome AppleScript fallback hung on automation permission. Supplemental Template Studio tab-boundary render test passed.",
-    "phase10RScopedTests": "passed",
-    "phase10RTabBoundaryTest": "passed",
+    "browserVerification": "passed: in-app browser verified Vision Analysis excludes 10S simulator; Template Workbench shows the guarded simulator, blocked missing-plan state, dry-run only/no registry mutation copy, and no forbidden write/publish/production wording.",
+    "phase10SScopedTests": "passed",
+    "phase10STabBoundaryTest": "passed",
     "testFiles": 10,
     "tests": 36,
-    "phase10RScopedTestFiles": 10,
-    "phase10RScopedTestsCount": 36,
-    "phase10RTabBoundaryTestFiles": 1,
-    "phase10RTabBoundaryTestsCount": 4,
-    "summary": "Phase 10R validation passed for mediapipe:check, scoped tests, Template Studio tab boundary supplemental test, typecheck, build, project status/context, and JSON status/context. Browser verification was attempted but blocked by local browser automation tooling; the DOM tab-boundary render test passed as fallback evidence."
+    "phase10SScopedTestFiles": 10,
+    "phase10SScopedTestsCount": 36,
+    "phase10STabBoundaryTestFiles": 1,
+    "phase10STabBoundaryTestsCount": 4,
+    "summary": "Phase 10S validation passed for mediapipe:check, scoped tests, Template Studio tab boundary supplemental test, typecheck, build, project status/context, JSON status/context, and in-app browser verification."
   },
   "knownLimitations": [
     "SourceImagePackage is not a training dataset",
@@ -346,7 +358,10 @@
     "Phase 10Q Real Write Execution Authorization is a local administrator authorization model only; authorization ready means eligible for a future real write execution plan, not actual registry write authorization, not registry write execution, not publication, not production writer creation or readiness, not production package output, not current User App Shell package replacement, not backend/OpenAI/external API/camera/AR scope, and not training input.",
     "Phase 10Q owner authorization evidence is authorization-model-only: 授权范围：A。只授权进入 Phase 10Q — Real Write Execution Authorization，不授权真实写入 registry，不授权发布，不授权替换当前 User App Shell package，不授权创建 production writer。",
     "Phase 10R Real Write Execution Plan is local execution-plan-only metadata; plan ready means eligible for a future guarded execution simulator only, not actual registry write authorization, not registry write execution, not publication, not production writer creation or readiness, not production package output, and not current User App Shell package replacement.",
-    "Phase 10R must preserve dry-run-only, actual-write-blocked, publish-blocked, package-replacement-blocked, production-writer-blocked, execution sequence, preflight, write lock, audit, rollback, failure handling, dry-run verification, trace preservation, and JSON round-trip boundaries."
+    "Phase 10R must preserve dry-run-only, actual-write-blocked, publish-blocked, package-replacement-blocked, production-writer-blocked, execution sequence, preflight, write lock, audit, rollback, failure handling, dry-run verification, trace preservation, and JSON round-trip boundaries.",
+    "Phase 10S guarded real write execution simulator is simulator-only and cannot write, mutate, publish, replace the current User App Shell package, create a production writer, create production package output, call backend/API services, or train models.",
+    "Phase 10S simulator readiness is not actual registry write readiness and still requires future explicit owner authorization before any real write phase.",
+    "Phase 10S guarded real write execution simulator is simulator-only and cannot execute registry writes, perform registry mutation, publish, replace the current User App Shell package, create a production writer, create production package output, call backend/API services, or train models."
   ],
   "recoveryEntryFiles": [
     "START_HERE.md",
@@ -604,9 +619,12 @@
     "Do not treat Phase 10R execution plan readiness as actual registry write authorization or registry write execution.",
     "Do not execute a registry write in Phase 10R.",
     "Do not create, execute, or mark a production writer in Phase 10R.",
-    "Do not publish to the user app or replace the current User App Shell package in Phase 10R."
+    "Do not publish to the user app or replace the current User App Shell package in Phase 10R.",
+    "Do not treat Phase 10S guarded real write execution simulator readiness, validation, or handoff as actual registry write authorization, registry write execution, registry mutation, production writer readiness, production writer creation, publication, production readiness, production package creation, or replacement for the current User App Shell package.",
+    "Do not execute a registry write, mutate registry state, publish, replace the current User App Shell package, create a production writer, create backend/database/API scope, request camera/AR scope, or train models in Phase 10S.",
+    "Do not commit public/mediapipe .task/.wasm/model files, DOC-ILLUSTRATED generated docs, dist, tmp, node_modules, coverage, or .vite artifacts."
   ],
-  "currentPhaseName": "Real Write Execution Plan",
+  "currentPhaseName": "Guarded Real Write Execution Simulator",
   "validation": {
     "mediapipeCheck": "passed",
     "typecheck": "passed",
@@ -616,18 +634,18 @@
     "projectStatusJson": "passed",
     "projectContext": "passed",
     "contextPackJson": "passed",
-    "browserVerification": "attempted-blocked: in-app browser node_repl bridge returned missing sandboxPolicy; Chrome AppleScript fallback hung on automation permission. Supplemental Template Studio tab-boundary render test passed.",
-    "phase10RScopedTests": "passed",
-    "phase10RTabBoundaryTest": "passed",
+    "browserVerification": "passed: in-app browser verified Vision Analysis excludes 10S simulator; Template Workbench shows the guarded simulator, blocked missing-plan state, dry-run only/no registry mutation copy, and no forbidden write/publish/production wording.",
+    "phase10SScopedTests": "passed",
+    "phase10STabBoundaryTest": "passed",
     "testFiles": 10,
     "tests": 36,
-    "phase10RScopedTestFiles": 10,
-    "phase10RScopedTestsCount": 36,
-    "phase10RTabBoundaryTestFiles": 1,
-    "phase10RTabBoundaryTestsCount": 4,
-    "summary": "Phase 10R validation passed for mediapipe:check, scoped tests, Template Studio tab boundary supplemental test, typecheck, build, project status/context, and JSON status/context. Browser verification was attempted but blocked by local browser automation tooling; the DOM tab-boundary render test passed as fallback evidence."
+    "phase10SScopedTestFiles": 10,
+    "phase10SScopedTestsCount": 36,
+    "phase10STabBoundaryTestFiles": 1,
+    "phase10STabBoundaryTestsCount": 4,
+    "summary": "Phase 10S validation passed for mediapipe:check, scoped tests, Template Studio tab boundary supplemental test, typecheck, build, project status/context, JSON status/context, and in-app browser verification."
   },
-  "updatedAt": "2026-06-20T00:00:00.000Z",
+  "updatedAt": "2026-06-21T00:00:00.000Z",
   "anonymousTrialDryRunDecision": {
     "phase9GResult": [
       "anonymous internal trial dry run pack with required scenarios",
@@ -690,7 +708,7 @@
     "publishBoundary": "Approval means template library candidate only; no automatic publish and no automatic UserAppTemplatePackage generation.",
     "nextPhase": "Phase 10C - Template Library Candidate Packaging"
   },
-  "summary": "Phase 10R adds a local real write execution plan, validation, and handoff after Phase 10Q execution authorization readiness. It remains execution-plan-only and keeps actual registry write, publication, production writer creation, production package creation, backend/API work, camera/AR, training, and current User App Shell package replacement blocked.",
+  "summary": "Phase 10S adds a guarded real write execution simulator for dry-run rehearsal only. It simulates preflight, write lock, write operation, audit events, rollback, and failure handling while blocking actual registry writes, registry mutation, publish, package replacement, and production writer creation.",
   "templateLibraryCandidatePackagingDecision": {
     "packageBoundary": "Candidate package is local, reviewable, and not a published template.",
     "validationBoundary": "Validation blocks missing approval, QA blocked state, privacy risk, raw image references, final/medical/shade claims, and UserAppTemplatePackage mutation markers.",
@@ -759,7 +777,7 @@
     "handoffBoundary": "Handoff does not publish, write registry, or replace the current User App Shell package.",
     "nextPhase": "Phase 10I - UserAppTemplatePackage Registry Preparation"
   },
-  "validationStatus": "passed_with_browser_tool_limitation",
+  "validationStatus": "passed",
   "userAppTemplatePackageRegistryPreparationDecision": {
     "preparationBoundary": "Preparation ready means eligible for a future registry write gate only, not actual registry write execution.",
     "validationBoundary": "Missing source gate readiness, draftOnly, publishBlocked, registryWriteBlocked, unsafe payloads, actual registry write, production marker, shell replacement, or unstable JSON blocks.",
@@ -771,8 +789,8 @@
     "handoffBoundary": "Handoff does not write registry, publish, replace the current User App Shell package, or mark production readiness.",
     "nextPhase": "Phase 10K - Controlled UserAppTemplatePackage Registry Writer Draft"
   },
-  "phase": "10R",
-  "lastUpdatedPhase": "10R",
+  "phase": "10S",
+  "lastUpdatedPhase": "10S",
   "controlledRegistryWriterDraftDecision": {
     "draftBoundary": "Phase 10K creates dry-run write plan, diff preview, existing entry preview, and rollback plan only; it does not write registry.",
     "validationBoundary": "Phase 10K validation checks dry-run/no-write/no-publish/no-shell-replacement/no-production boundaries and does not write registry.",
@@ -785,7 +803,7 @@
     "handoffBoundary": "Phase 10L handoff does not execute registry write, publish, replace the current User App Shell package, or mark production readiness.",
     "nextPhase": "Phase 10M - Controlled Registry Write Execution Design"
   },
-  "status": "passed_with_browser_tool_limitation",
+  "status": "passed",
   "controlledRegistryWriteExecutionDesignDecision": {
     "designBoundary": "Phase 10M creates controlled registry write execution design, preflight, planned steps, audit plan, rollback design, and write-lock requirements only; it is design/dry-run only and does not write registry.",
     "validationBoundary": "Phase 10M validation enforces dryRunOnly, actualWriteBlocked, publishBlocked, packageReplacementBlocked, audit, rollback, write-lock, owner authorization trace, unsafe payload, no production marker, and JSON round-trip boundaries.",
@@ -824,5 +842,66 @@
     "planBoundary": "Execution sequence, preflight, write lock, audit, rollback, failure handling, and dry-run verification are plan metadata only and do not execute writes.",
     "validationBoundary": "Validation ready means the plan is coherent enough for a future simulator, not actual registry write readiness.",
     "handoffBoundary": "Phase 10R handoff can recommend Phase 10S simulator only; it cannot execute registry writes, publish, create production writer readiness, create production packages, or replace the current User App Shell package."
-  }
+  },
+  "guardedRealWriteExecutionSimulatorDecision": {
+    "nextPhase": "Phase 10T - Guarded Simulator Review Gate",
+    "boundary": "simulator-only; no actual write, no registry mutation, no publish, no shell package replacement, no production writer",
+    "simulationBoundary": "simulated preflight/write lock/write operation/audit/rollback/failure handling only; do not execute writes",
+    "validationBoundary": "validation ready is not actual registry write readiness",
+    "handoffBoundary": "handoff cannot execute registry writes or mutate registry state"
+  },
+  "results": {
+    "mediapipeCheck": "passed",
+    "typecheck": "passed",
+    "test": "passed",
+    "build": "passed",
+    "projectStatus": "passed",
+    "projectStatusJson": "passed",
+    "projectContext": "passed",
+    "contextPackJson": "passed",
+    "browserVerification": "passed: in-app browser verified Vision Analysis excludes 10S simulator; Template Workbench shows the guarded simulator, blocked missing-plan state, dry-run only/no registry mutation copy, and no forbidden write/publish/production wording.",
+    "phase10SScopedTests": "passed",
+    "phase10STabBoundaryTest": "passed",
+    "testFiles": 10,
+    "tests": 36,
+    "phase10SScopedTestFiles": 10,
+    "phase10SScopedTestsCount": 36,
+    "phase10STabBoundaryTestFiles": 1,
+    "phase10STabBoundaryTestsCount": 4,
+    "summary": "Phase 10S validation passed for mediapipe:check, scoped tests, Template Studio tab boundary supplemental test, typecheck, build, project status/context, JSON status/context, and in-app browser verification."
+  },
+  "requiredValidationCommands": [
+    "npm run mediapipe:check",
+    "npm run typecheck",
+    "npm run build",
+    "npm run project:status",
+    "npm run project:context",
+    "node scripts/project-status.mjs --json",
+    "node scripts/context-pack.mjs --json",
+    "npm run test -- tests/guarded-real-write-execution-simulator.test.ts tests/guarded-real-write-execution-simulator-validation.test.ts tests/guarded-real-write-execution-simulator-handoff.test.ts tests/guarded-real-write-execution-simulator-panel.test.tsx tests/phase-10S-documentation-recovery.test.ts tests/real-write-execution-plan.test.ts tests/real-write-execution-plan-panel.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
+    "npm run test -- tests/template-studio-tab-boundary.test.tsx"
+  ],
+  "requiredCommands": [
+    "npm run mediapipe:check",
+    "npm run typecheck",
+    "npm run build",
+    "npm run project:status",
+    "npm run project:context",
+    "node scripts/project-status.mjs --json",
+    "node scripts/context-pack.mjs --json",
+    "npm run test -- tests/guarded-real-write-execution-simulator.test.ts tests/guarded-real-write-execution-simulator-validation.test.ts tests/guarded-real-write-execution-simulator-handoff.test.ts tests/guarded-real-write-execution-simulator-panel.test.tsx tests/phase-10S-documentation-recovery.test.ts tests/real-write-execution-plan.test.ts tests/real-write-execution-plan-panel.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
+    "npm run test -- tests/template-studio-tab-boundary.test.tsx"
+  ],
+  "commands": [
+    "npm run mediapipe:check",
+    "npm run typecheck",
+    "npm run build",
+    "npm run project:status",
+    "npm run project:context",
+    "node scripts/project-status.mjs --json",
+    "node scripts/context-pack.mjs --json",
+    "npm run test -- tests/guarded-real-write-execution-simulator.test.ts tests/guarded-real-write-execution-simulator-validation.test.ts tests/guarded-real-write-execution-simulator-handoff.test.ts tests/guarded-real-write-execution-simulator-panel.test.tsx tests/phase-10S-documentation-recovery.test.ts tests/real-write-execution-plan.test.ts tests/real-write-execution-plan-panel.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
+    "npm run test -- tests/template-studio-tab-boundary.test.tsx"
+  ],
+  "lastUpdated": "2026-06-21T00:00:00.000Z"
 }

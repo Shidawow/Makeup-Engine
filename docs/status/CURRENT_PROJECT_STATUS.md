@@ -2,19 +2,13 @@
 
 ## Current Phase
 
-Phase 10R: Real Write Execution Plan is complete.
+Phase 10S: Guarded Real Write Execution Simulator is complete.
 
-Last completed business phase: Phase 10R.
+Last completed business phase: Phase 10S.
 
-Next recommended phase: Phase 10S, Guarded Real Write Execution Simulator.
+Next recommended phase: Phase 10T, Guarded Simulator Review Gate.
 
-Phase 10R adds a local administrator-only real write execution plan after Phase
-10Q execution authorization readiness. Execution plan ready means eligible for a
-future guarded execution simulator only. It is still not actual registry write
-authorization, not registry write execution, not production writer creation or
-readiness, not publication, not production package creation, not User App Shell
-package replacement, not backend service, and not a production app readiness
-marker.
+Phase 10S adds a local administrator-only guarded real write execution simulator after Phase 10R execution plan validation readiness. Simulation ready means eligible for a future guarded simulator review gate only. It is still not actual registry write authorization, not registry write execution, not registry mutation, not production writer creation or readiness, not publication, not production package creation, not User App Shell package replacement, not backend service, and not a production app readiness marker.
 
 ## What The System Can Do
 
@@ -109,13 +103,18 @@ marker.
   registry write, publication, current User App Shell package replacement,
   production writer creation, production package creation, backend/API work,
   and training blocked.
+- Simulate Phase 10S guarded real write execution with simulated preflight,
+  write lock, write operation, audit events, rollback, failure handling,
+  validation, and handoff while keeping actual registry write, registry
+  mutation, publication, current User App Shell package replacement, production
+  writer creation, production package creation, backend/API work, and training
+  blocked.
 - Render compact Template Studio workflow, candidate package, candidate-to-app,
   user app package draft preview, official draft gate, and official draft
   builder, draft publish gate, registry preparation, and registry write gate
   panels plus controlled writer, explicit authorization gate, and controlled
   execution design and real implementation gate panels in the Template
-  Workbench, including real write execution authorization and real write
-  execution plan panels.
+  Workbench, including real write execution authorization, real write execution plan, and guarded real write execution simulator panels.
 - Keep Vision Analysis focused on FaceMesh, overlay/mask, region QA, and
   readiness; keep ordinary User App Shell paths separate from administrator-only
   vision, draft QA, human review, package preview, and registry terminology.
@@ -185,6 +184,11 @@ marker.
   production writer readiness, production writer creation, publication,
   production readiness, production package creation, or replacement for the
   current User App Shell package.
+- It cannot treat Phase 10S guarded real write execution simulator readiness,
+  validation, or handoff as actual registry write authorization, registry
+  write execution, registry mutation, production writer readiness, production
+  writer creation, publication, production readiness, production package
+  creation, or replacement for the current User App Shell package.
 - It cannot generate or mutate `UserAppTemplatePackage` from FaceMesh QA,
   candidates, generated steps, draft QA, human review, candidate handoff,
   candidate package handoff, app contract preparation, draft preview, validation,
@@ -194,7 +198,7 @@ marker.
 - It cannot request camera permissions or call browser camera APIs.
 - It cannot add backend, database, accounts, analytics, AR, OpenAI API,
   external AI/CV APIs, service worker, native app scope, or new runtime
-  dependencies in Phase 10P.
+  dependencies in Phase 10S.
 - It cannot commit local MediaPipe `.task` or `.wasm` files from
   `public/mediapipe/**`.
 - It cannot modify legacy `src/engine`, `src/runtime`, or
@@ -214,7 +218,7 @@ marker.
   10M controlled registry write execution design, Phase 10N real registry write
   implementation gate, Phase 10O real registry write implementation draft,
   Phase 10P final real write review gate, Phase 10Q real write execution
-  authorization, and Phase 10R real write execution plan.
+  authorization, and Phase 10R real write execution plan, and Phase 10S guarded real write execution simulator.
 - `src/components/template-studio`: active operator UI with compact Vision
   Analysis to Template Workbench workflow surfaces.
 - `src/components/demo`: Vision Analysis demo with readiness summary and
@@ -229,7 +233,7 @@ marker.
 
 ## Recent Validation
 
-Phase 10R validation must include:
+Phase 10S validation must include:
 
 ```bash
 npm run mediapipe:check
@@ -245,10 +249,10 @@ The latest completed validation is recorded in `project-state/test-status.json`.
 
 ## Next Phase Recommendation
 
-Proceed to Phase 10S: Guarded Real Write Execution Simulator.
+Proceed to Phase 10T: Guarded Simulator Review Gate.
 
-Phase 10S may simulate a guarded real write execution path after Phase 10R plan
-readiness, still without silently executing a registry write, publishing,
-adding backend work, marking production readiness, creating a production writer,
-or replacing the current User App Shell package unless a later explicit
-execution phase is approved.
+Phase 10T should review the guarded simulator outputs after Phase 10S simulator
+readiness, still without silently executing a registry write, mutating registry
+state, publishing, adding backend work, marking production readiness, creating
+a production writer, or replacing the current User App Shell package unless a
+later explicit execution phase is approved.

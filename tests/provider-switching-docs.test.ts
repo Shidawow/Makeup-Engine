@@ -40,14 +40,15 @@ describe('provider switching docs', () => {
     expect(combined).toContain('src/intelligence/runtime');
   });
 
-  it('provides phase 10R to 10S switch templates with historical 10Q, 10P, 10O, 10N, 10M, 10L, 10K, 10J, 10I, 10H, 10G, 10F, 10E, 10D, 10C, 10A, 9J, and older markers', async () => {
+  it('provides phase 10S to 10T switch templates with historical 10R, 10Q, 10P, 10O, 10N, 10M, 10L, 10K, 10J, 10I, 10H, 10G, 10F, 10E, 10D, 10C, 10A, 9J, and older markers', async () => {
     const prompt = await readFile('docs/prompts/PROVIDER_SWITCH_PROMPT.md', 'utf8');
 
     expect(prompt).toContain('Switch To Native GPT / Codex Desktop');
     expect(prompt).toContain('Switch To PackyAPI + CLI');
     expect(prompt).toContain('Return From PackyAPI To ChatGPT');
-    expect(prompt).toContain('lastCompletedPhase: 10R');
-    expect(prompt).toContain('nextRecommendedPhase: 10S');
+    expect(prompt).toContain('lastCompletedPhase: 10S');
+    expect(prompt).toContain('nextRecommendedPhase: 10T');
+    expect(prompt).toContain('Guarded Simulator Review Gate');
     expect(prompt).toContain('Guarded Real Write Execution Simulator');
     expect(prompt).toContain('Real Write Execution Plan');
     expect(prompt).toContain('Real Write Execution Authorization');
@@ -74,6 +75,13 @@ describe('provider switching docs', () => {
     expect(prompt).toContain('Phase 10N Real Registry Write Implementation Gate');
     expect(prompt).toContain('Phase 10O Real Registry Write Implementation Draft');
     expect(prompt).toContain('Phase 10P Final Real Write Review Gate');
+    expect(prompt).toContain('Phase 10S Guarded Real Write Execution Simulator');
+    expect(prompt).toContain('guarded real write execution simulator');
+    expect(prompt).toContain('simulator validation');
+    expect(prompt).toContain('simulator handoff');
+    expect(prompt).toContain('Historical handoff marker retained for Phase 10R recovery tests');
+    expect(prompt).toContain('lastCompletedPhase: 10R');
+    expect(prompt).toContain('nextRecommendedPhase: 10S');
     expect(prompt).toContain('Phase 10R Handoff Note');
     expect(prompt).toContain('Historical handoff marker retained for Phase 10Q recovery tests');
     expect(prompt).toContain('lastCompletedPhase: 10Q');

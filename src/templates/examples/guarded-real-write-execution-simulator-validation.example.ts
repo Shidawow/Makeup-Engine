@@ -1,0 +1,135 @@
+import { validateGuardedRealWriteExecutionSimulator } from '../../template-engine';
+import {
+  guardedRealWriteExecutionSimulatorActualRegistryWriteExample,
+  guardedRealWriteExecutionSimulatorMedicalClaimExample,
+  guardedRealWriteExecutionSimulatorMissingActualWriteBlockedExample,
+  guardedRealWriteExecutionSimulatorMissingAuditEventsExample,
+  guardedRealWriteExecutionSimulatorMissingDryRunOnlyExample,
+  guardedRealWriteExecutionSimulatorMissingExecutionPlanReadyExample,
+  guardedRealWriteExecutionSimulatorMissingFailureHandlingExample,
+  guardedRealWriteExecutionSimulatorMissingPackageReplacementBlockedExample,
+  guardedRealWriteExecutionSimulatorMissingPreflightExample,
+  guardedRealWriteExecutionSimulatorMissingProductionWriterBlockedExample,
+  guardedRealWriteExecutionSimulatorMissingPublishBlockedExample,
+  guardedRealWriteExecutionSimulatorMissingRegistryMutationBlockedExample,
+  guardedRealWriteExecutionSimulatorMissingRollbackExample,
+  guardedRealWriteExecutionSimulatorMissingWriteLockExample,
+  guardedRealWriteExecutionSimulatorMissingWriteOperationExample,
+  guardedRealWriteExecutionSimulatorPersonalDataExample,
+  guardedRealWriteExecutionSimulatorProductionMarkerExample,
+  guardedRealWriteExecutionSimulatorProductionWriterCreationExample,
+  guardedRealWriteExecutionSimulatorReadyExample,
+  guardedRealWriteExecutionSimulatorRegistryMutationExample,
+  guardedRealWriteExecutionSimulatorShellReplacementExample,
+  guardedRealWriteExecutionSimulatorWarningExample,
+} from './guarded-real-write-execution-simulator.example';
+
+export const guardedRealWriteExecutionSimulatorValidationReadyExample =
+  validateGuardedRealWriteExecutionSimulator(
+    guardedRealWriteExecutionSimulatorReadyExample,
+  );
+
+export const guardedRealWriteExecutionSimulatorValidationWarningExample =
+  validateGuardedRealWriteExecutionSimulator(
+    guardedRealWriteExecutionSimulatorWarningExample,
+  );
+
+export const guardedRealWriteExecutionSimulatorValidationMissingExecutionPlanReadyExample =
+  validateGuardedRealWriteExecutionSimulator(
+    guardedRealWriteExecutionSimulatorMissingExecutionPlanReadyExample,
+  );
+
+export const guardedRealWriteExecutionSimulatorValidationMissingDryRunOnlyExample =
+  validateGuardedRealWriteExecutionSimulator(
+    guardedRealWriteExecutionSimulatorMissingDryRunOnlyExample,
+  );
+
+export const guardedRealWriteExecutionSimulatorValidationMissingActualWriteBlockedExample =
+  validateGuardedRealWriteExecutionSimulator(
+    guardedRealWriteExecutionSimulatorMissingActualWriteBlockedExample,
+  );
+
+export const guardedRealWriteExecutionSimulatorValidationMissingPublishBlockedExample =
+  validateGuardedRealWriteExecutionSimulator(
+    guardedRealWriteExecutionSimulatorMissingPublishBlockedExample,
+  );
+
+export const guardedRealWriteExecutionSimulatorValidationMissingPackageReplacementBlockedExample =
+  validateGuardedRealWriteExecutionSimulator(
+    guardedRealWriteExecutionSimulatorMissingPackageReplacementBlockedExample,
+  );
+
+export const guardedRealWriteExecutionSimulatorValidationMissingProductionWriterBlockedExample =
+  validateGuardedRealWriteExecutionSimulator(
+    guardedRealWriteExecutionSimulatorMissingProductionWriterBlockedExample,
+  );
+
+export const guardedRealWriteExecutionSimulatorValidationMissingRegistryMutationBlockedExample =
+  validateGuardedRealWriteExecutionSimulator(
+    guardedRealWriteExecutionSimulatorMissingRegistryMutationBlockedExample,
+  );
+
+export const guardedRealWriteExecutionSimulatorValidationMissingPreflightExample =
+  validateGuardedRealWriteExecutionSimulator(
+    guardedRealWriteExecutionSimulatorMissingPreflightExample,
+  );
+
+export const guardedRealWriteExecutionSimulatorValidationMissingWriteLockExample =
+  validateGuardedRealWriteExecutionSimulator(
+    guardedRealWriteExecutionSimulatorMissingWriteLockExample,
+  );
+
+export const guardedRealWriteExecutionSimulatorValidationMissingWriteOperationExample =
+  validateGuardedRealWriteExecutionSimulator(
+    guardedRealWriteExecutionSimulatorMissingWriteOperationExample,
+  );
+
+export const guardedRealWriteExecutionSimulatorValidationMissingAuditEventsExample =
+  validateGuardedRealWriteExecutionSimulator(
+    guardedRealWriteExecutionSimulatorMissingAuditEventsExample,
+  );
+
+export const guardedRealWriteExecutionSimulatorValidationMissingRollbackExample =
+  validateGuardedRealWriteExecutionSimulator(
+    guardedRealWriteExecutionSimulatorMissingRollbackExample,
+  );
+
+export const guardedRealWriteExecutionSimulatorValidationMissingFailureHandlingExample =
+  validateGuardedRealWriteExecutionSimulator(
+    guardedRealWriteExecutionSimulatorMissingFailureHandlingExample,
+  );
+
+export const guardedRealWriteExecutionSimulatorValidationActualRegistryWriteExample =
+  validateGuardedRealWriteExecutionSimulator(
+    guardedRealWriteExecutionSimulatorActualRegistryWriteExample,
+  );
+
+export const guardedRealWriteExecutionSimulatorValidationRegistryMutationExample =
+  validateGuardedRealWriteExecutionSimulator(
+    guardedRealWriteExecutionSimulatorRegistryMutationExample,
+  );
+
+export const guardedRealWriteExecutionSimulatorValidationProductionMarkerExample =
+  validateGuardedRealWriteExecutionSimulator(
+    guardedRealWriteExecutionSimulatorProductionMarkerExample,
+  );
+
+export const guardedRealWriteExecutionSimulatorValidationShellReplacementExample =
+  validateGuardedRealWriteExecutionSimulator(
+    guardedRealWriteExecutionSimulatorShellReplacementExample,
+  );
+
+export const guardedRealWriteExecutionSimulatorValidationProductionWriterCreationExample =
+  validateGuardedRealWriteExecutionSimulator(
+    guardedRealWriteExecutionSimulatorProductionWriterCreationExample,
+  );
+
+export const guardedRealWriteExecutionSimulatorValidationPersonalDataExample =
+  validateGuardedRealWriteExecutionSimulator(
+    guardedRealWriteExecutionSimulatorPersonalDataExample,
+  );
+
+export const guardedRealWriteExecutionSimulatorValidationMedicalClaimExample =
+  validateGuardedRealWriteExecutionSimulator(
+    guardedRealWriteExecutionSimulatorMedicalClaimExample,
+  );
