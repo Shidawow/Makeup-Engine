@@ -38,7 +38,7 @@ describe('user app step guidance flow', () => {
     expect(html).toContain('今日妆容练习');
     expect(html).toContain('管理员检查');
     expect(html).toContain('暂时不能指导');
-    expect(html).toContain('妆容模板');
+    expect(html).toContain('模板选择');
     expect(html.length).toBeGreaterThan(0);
   });
 });

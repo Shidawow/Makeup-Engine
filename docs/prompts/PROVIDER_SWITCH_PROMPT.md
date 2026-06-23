@@ -6,12 +6,13 @@ Default to compact context. Do not copy full historical chat transcripts. Do not
 
 ## Current State
 
-- `lastCompletedPhase: 10U`
-- `nextRecommendedPhase: 10V`
-- `nextRecommendedPhaseName: Actual Write Authorization Request`
+- `lastCompletedPhase: 11A`
+- `nextRecommendedPhase: 11B`
+- `nextRecommendedPhaseName: User App Guided Step Experience Polish`
 - Project role: Makeup template production system with a local contract-driven user app shell prototype, not a production user app.
-- Current capability: Phase 10U - Real Write Approval Boundary adds local approval boundary, checklist, handoff, and Template Workbench panel after Phase 10T simulator review gate readiness while preserving approval-boundary-only, no actual registry write, no registry mutation, no production writer creation, no publish, no production package, future separate owner approval, audit requirements, rollback approval requirements, and no current User App Shell package replacement boundaries.
+- Current capability: Phase 11A - User App MVP Experience Reset pauses the registry chain after Phase 10U and returns active work to the ordinary-user User App MVP path: home, template selection, template detail, preparation, step-by-step guidance, progress, and completion. Administrator trial, Template Studio, and registry safety tooling remains explicitly separated from the default user path.
 
+Historical handoff marker retained for Phase 10U recovery tests: `lastCompletedPhase: 10U`, `nextRecommendedPhase: 10V`.
 Historical handoff marker retained for Phase 10T recovery tests: `lastCompletedPhase: 10T`, `nextRecommendedPhase: 10U`.
 Historical handoff marker retained for Phase 10S recovery tests: `lastCompletedPhase: 10S`, `nextRecommendedPhase: 10T`.
 Historical handoff marker retained for Phase 10R recovery tests: `lastCompletedPhase: 10R`, `nextRecommendedPhase: 10S`.
@@ -29,6 +30,10 @@ Historical handoff marker retained for Phase 10F recovery tests: `lastCompletedP
 Historical handoff marker retained for Phase 10E recovery tests: `lastCompletedPhase: 10E`, `nextRecommendedPhase: 10F`.
 Historical handoff marker retained for Phase 10D recovery tests: `lastCompletedPhase: 10D`, `nextRecommendedPhase: 10E`.
 Historical handoff marker retained for Phase 10C recovery tests: `lastCompletedPhase: 10C`, `nextRecommendedPhase: 10D`.
+
+Historical Phase 10K phase name marker: Controlled UserAppTemplatePackage Registry Writer Draft.
+
+Historical phase name markers retained for recovery tests: FaceMesh-driven Makeup Intelligence Baseline; Template Draft Review Workflow; Template Library Candidate Packaging; Candidate-to-App Package Contract Preparation; Official UserAppTemplatePackage Draft Builder; UserAppTemplatePackage Draft Publish Gate; Phase 10I UserAppTemplatePackage Registry Preparation; Phase 10J UserAppTemplatePackage Registry Write Gate; Phase 10K Controlled UserAppTemplatePackage Registry Writer Draft; Phase 10L Explicit Registry Write Authorization Gate; Phase 10M Controlled Registry Write Execution Design; Phase 10N Real Registry Write Implementation Gate; Phase 10O Real Registry Write Implementation Draft; Phase 10P Final Real Write Review Gate; Phase 10S Guarded Real Write Execution Simulator; simulator validation; simulator handoff.
 
 Historical handoff marker retained for recovery tests: `lastCompletedPhase: 8A`, `nextRecommendedPhase: 8B`.
 Historical handoff marker retained for Phase 8B recovery tests: `lastCompletedPhase: 8B`, `nextRecommendedPhase: 8C`.
@@ -59,11 +64,11 @@ Historical handoff marker retained for Phase 9J recovery tests: `lastCompletedPh
 You are continuing Makeup Engine on native GPT / Codex Desktop.
 
 Current state:
-- lastCompletedPhase: 10U
-- nextRecommendedPhase: 10V
-- nextRecommendedPhaseName: Actual Write Authorization Request
+- lastCompletedPhase: 11A
+- nextRecommendedPhase: 11B
+- nextRecommendedPhaseName: User App Guided Step Experience Polish
 - project role: Makeup template production system with a local contract-driven user app shell prototype, not a production user app
-- current capability: React Web / PWA MVP first is selected; Phases 8B through 9J are complete; Phase 10A FaceMesh-driven Makeup Intelligence Baseline, Phase 10B Template Draft Review Workflow, Phase 10C Template Library Candidate Packaging, Phase 10D Candidate-to-App Package Contract Preparation, Phase 10E User App Package Draft Preview, Phase 10F Official User App Package Draft Gate, Phase 10G Official UserAppTemplatePackage Draft Builder, Phase 10H UserAppTemplatePackage Draft Publish Gate, Phase 10I UserAppTemplatePackage Registry Preparation, Phase 10J UserAppTemplatePackage Registry Write Gate, Phase 10K Controlled UserAppTemplatePackage Registry Writer Draft, Phase 10L Explicit Registry Write Authorization Gate, Phase 10M Controlled Registry Write Execution Design, Phase 10N Real Registry Write Implementation Gate, Phase 10O Real Registry Write Implementation Draft, Phase 10P Final Real Write Review Gate, Phase 10Q Real Write Execution Authorization, Phase 10R Real Write Execution Plan, Phase 10S Guarded Real Write Execution Simulator, Phase 10T Guarded Simulator Review Gate, and Phase 10U Real Write Approval Boundary are complete with local FaceMesh region QA, candidate attributes, rule-based draft steps, draft QA, human review, candidate package validation, candidate handoff, app contract mapping preview, app contract validation, app package handoff, user app package draft preview, preview validation, preview handoff, official draft gate, gate handoff, official draft builder, official draft validation, official draft handoff, draft publish gate, publish gate handoff, registry preparation, registry preparation validation, registry preparation handoff, registry write gate, registry write gate handoff, controlled writer dry-run draft, writer validation, writer handoff, explicit authorization gate, authorization checklist, authorization handoff, controlled execution design, execution safety validation, execution handoff, real implementation gate, implementation checklist, implementation handoff, real implementation draft, implementation draft validation, implementation draft handoff, final real write review gate, final review checklist, final review handoff, real write execution authorization, execution authorization checklist, execution authorization handoff, real write execution plan, execution plan validation, execution plan handoff, guarded real write execution simulator, simulator validation, simulator handoff, guarded simulator review gate, simulator review checklist, simulator review handoff, real write approval boundary, approval checklist, approval handoff, and clear Vision Analysis / Template Workbench boundaries; Makeup Engine remains the template production system and the future user-facing app should be planned separately
+- current capability: React Web / PWA MVP first is selected; Phases 8B through 9J and 10A through 10U are complete; Phase 11A pauses the registry chain after Phase 10U and resets the active user path to Home, Template Selection, Template Detail, Preparation, Step-by-step Guidance, and Completion. The previous registry safety chain remains preserved for administrator review but Phase 10V is intentionally not the active next phase.
 
 Compact context:
 - Use repository documents as source of truth; do not copy full historical chat.
@@ -514,7 +519,7 @@ guarded simulator review gate
 simulator review checklist
 simulator review handoff
 
-Current handoff:
+Historical handoff marker retained for Phase 10U recovery tests:
 lastCompletedPhase: 10U
 nextRecommendedPhase: 10V
 Actual Write Authorization Request
@@ -522,3 +527,19 @@ Real Write Approval Boundary
 real write approval boundary
 approval checklist
 approval handoff
+
+## Phase 11A Handoff Note
+
+Phase 11A completed User App MVP Experience Reset. The registry chain is
+paused after Phase 10U and Phase 10V is intentionally not the active next
+phase. The default User App Shell path now focuses on ordinary users: home,
+template selection, template detail, preparation, step-by-step guidance,
+progress, and completion. Administrator trial, Template Studio, and registry
+safety terminology remain separated from the default user path.
+
+Current handoff:
+lastCompletedPhase: 11A
+nextRecommendedPhase: 11B
+User App Guided Step Experience Polish
+User App MVP Experience Reset
+registry chain paused after Phase 10U

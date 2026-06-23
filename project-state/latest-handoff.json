@@ -1,7 +1,7 @@
 {
-  "fromPhase": "10U",
-  "toPhase": "10V",
-  "summary": "Phase 10U adds a real write approval boundary, checklist, and handoff for simulator review evidence only. It blocks actual registry writes, registry mutation, publish, package replacement, and production writer creation.",
+  "fromPhase": "11A",
+  "toPhase": "11B",
+  "summary": "Phase 11A paused the registry chain and reset the ordinary-user User App MVP experience.",
   "routeDecision": {
     "selectedRoute": "React Web / PWA MVP first",
     "futureAppOwnership": "separate user-facing app surface/repository after a future explicit phase gate",
@@ -33,54 +33,21 @@
     "docs/prompts/PROVIDER_SWITCH_PROMPT.md",
     "docs/status/CURRENT_PROJECT_STATUS.md",
     "docs/status/NEXT_ACTION.md",
-    "docs/product/guarded-simulator-review-gate.md",
-    "docs/product/guarded-simulator-review-checklist.md",
-    "docs/product/guarded-simulator-review-handoff.md",
+    "docs/product/user-app-mvp-experience.md",
+    "docs/phases/phase-11A.md",
+    "docs/phases/phase-10U.md",
     "docs/product/real-write-approval-boundary.md",
-    "docs/product/real-write-approval-checklist.md",
-    "docs/product/real-write-approval-handoff.md",
-    "docs/phases/phase-10U.md",
-    "docs/phases/phase-10T.md",
-    "docs/phases/phase-10U.md",
     "project-state/project-state.snapshot.json",
     "project-state/latest-handoff.json",
     "project-state/provider-handoff.json",
     "project-state/active-task.json",
     "project-state/guardrails.json"
   ],
-  "nextAction": "Proceed to Phase 10V - Actual Write Authorization Request.",
+  "nextAction": "Proceed to Phase 11B - User App Guided Step Experience Polish.",
   "risks": [
-    "Letting Phase 9F become real data collection instead of local anonymous preparation",
-    "Collecting real names, contact information, photos, health data, sensitive identity data, analytics records, backend records, AI analysis records, upload data, or training data before a future explicit approval gate",
-    "Skipping anonymous internal dry run and overclaiming MVP validation readiness",
-    "Weakening UserAppTemplatePackage as the stable handoff contract",
-    "Letting Phase 9G dry run become a real trial launch or real data collection system",
-    "Skipping Phase 9H launch-pack preparation and overclaiming MVP validation readiness",
-    "Letting Phase 9H launch preparation become public recruitment, production launch, backend evidence collection, AI analysis, training, or MVP validation planning before anonymous evidence review.",
-    "Letting Phase 9I evidence review become production analytics, backend evidence collection, AI analysis, training, or automatic MVP validation approval.",
-    "Using mock/example evidence as if it were real anonymous internal trial validation evidence.",
-    "Letting Phase 9J follow-up planning become production roadmap approval or automatic MVP validation approval.",
-    "Letting Phase 10E draft preview become formal UserAppTemplatePackage generation or a registry write.",
-    "Treating draft preview readiness as production app package readiness.",
-    "Letting Phase 10F official draft gate become formal UserAppTemplatePackage generation or a registry write.",
-    "Treating gate readiness as production app package readiness or publication approval.",
-    "Letting Phase 10H draft publish gate become publication, a registry write, production readiness, or User App Shell package replacement.",
-    "Letting Phase 10I registry preparation become an actual registry write, publication, production package, or User App Shell package replacement.",
-    "Letting Phase 10J registry write gate become an actual registry write, publication, production package, or User App Shell package replacement.",
-    "Letting Phase 10K controlled registry writer draft become an actual registry write, publication, production package, or User App Shell package replacement.",
-    "Letting Phase 10L explicit authorization gate become actual registry write authorization, publication, production package creation, or current User App Shell package replacement.",
-    "Letting Phase 10M controlled registry write execution design become actual write authorization, actual registry write execution, publication, production package creation, or current User App Shell package replacement.",
-    "Letting Phase 10N implementation gate become actual write authorization, real writer implementation, registry write execution, publication, production readiness, or current User App Shell package replacement.",
-    "Letting Phase 10O implementation draft become actual registry write execution, production writer readiness, publication, production readiness, or current User App Shell package replacement.",
-    "Treating Phase 10P final review gate as actual registry write authorization, registry write execution, publication, production writer readiness, or current User App Shell package replacement.",
-    "Misreading Phase 10Q authorization readiness as actual registry write authorization.",
-    "Misreading owner authorization scope A as permission to publish, replace the User App Shell package, or create a production writer.",
-    "Misreading Phase 10R execution plan readiness as actual registry write authorization or registry write execution.",
-    "Letting Phase 10R create production writer readiness, publish, create a production package, or replace the current User App Shell package.",
-    "Skipping Phase 10S guarded simulator and silently mutating registry data.",
-    "Do not treat Phase 10S guarded real write execution simulator readiness, validation, or handoff as actual registry write authorization, registry write execution, registry mutation, production writer readiness, production writer creation, publication, production readiness, production package creation, or replacement for the current User App Shell package.",
-    "Do not execute a registry write, mutate registry state, publish, replace the current User App Shell package, create a production writer, create backend/database/API scope, request camera/AR scope, or train models in Phase 10S.",
-    "Do not commit public/mediapipe .task/.wasm/model files, DOC-ILLUSTRATED generated docs, dist, tmp, node_modules, coverage, or .vite artifacts."
+    "Do not resume actual registry write authorization without explicit owner direction.",
+    "Keep administrator/backend terms out of ordinary user paths.",
+    "Do not add camera, AR, backend, login, payment, external APIs, or training scope."
   ],
   "forbiddenActions": [
     "Do not treat Phase 9C internal trial iteration plan, backlog, or priority framework as production roadmap approval, public recruitment, production release, App Store/TestFlight, backend forms, analytics, camera readiness, AR readiness, AI analysis approval, OpenAI/external API approval, training readiness, online publication, or real user data collection approval.",
@@ -123,7 +90,8 @@
     "Do not execute a registry write, mutate registry state, publish, replace the current User App Shell package, create a production writer, create backend/database/API scope, request camera/AR scope, or train models in Phase 10S.",
     "Do not commit public/mediapipe .task/.wasm/model files, DOC-ILLUSTRATED generated docs, dist, tmp, node_modules, coverage, or .vite artifacts.",
     "Do not treat Phase 10U real write approval boundary readiness, checklist, or handoff as actual registry write authorization, registry write execution, registry mutation, publication, production readiness, production package creation, production writer readiness, production writer creation, or current User App Shell package replacement.",
-    "Do not execute a registry write, mutate registry state, publish, replace the current User App Shell package, create a production writer, create backend/database/API scope, request camera/AR scope, call OpenAI/external APIs, or train models in Phase 10U."
+    "Do not execute a registry write, mutate registry state, publish, replace the current User App Shell package, create a production writer, create backend/database/API scope, request camera/AR scope, call OpenAI/external APIs, or train models in Phase 10U.",
+    "Phase 11A must not resume Phase 10V, execute real registry write, mutate registry state, publish, create a production writer, replace the current User App Shell package, add backend/database/login/payment/camera/AR/OpenAI/external API scope, train models, upload real photos, or expose registry/simulator/gate terminology in the ordinary-user path."
   ],
   "trialPackDecision": {
     "phase8CResult": [
@@ -199,14 +167,11 @@
     "projectStatusJson": "passed",
     "projectContext": "passed",
     "contextPackJson": "passed",
-    "browserVerification": "passed: in-app browser verified Vision Analysis excludes the Phase 10U real write approval boundary; Template Workbench shows real write approval boundary/checklist/handoff, blocked missing-source state, approval-boundary-only/no registry mutation/no production writer copy, no forbidden write/publish/production wording, and public/mediapipe ready did not show mock fallback. Ordinary user path admin-term separation is covered by SSR tab-boundary test because the dev app has no separate browser route for UserAppShell.",
-    "phase10UScopedTests": "passed",
-    "phase10UTabBoundaryTest": "passed",
-    "testFiles": 11,
-    "tests": 37,
-    "phase10UScopedTestFiles": 10,
-    "phase10UScopedTestsCount": 33,
-    "summary": "Phase 10U validation passed: mediapipe:check, typecheck, build, project status/context, JSON status/context, scoped 10U tests, tab boundary test, and in-app browser tab-boundary verification all passed."
+    "browserVerification": "passed",
+    "phase11AScopedTests": "passed",
+    "testFiles": 8,
+    "tests": 22,
+    "summary": "Phase 11A validation passed: MediaPipe check, typecheck, build, project status/context, JSON status/context, scoped tests, and browser verification passed."
   },
   "internalTrialLearningDecision": {
     "phase9DResult": [
@@ -217,10 +182,10 @@
     "learningBoundary": "anonymous/mock/example summaries only; no real personal data, backend records, AI analysis records, training data, or project-state user records",
     "nextPhase": "Phase 9E - Internal Trial Evidence Pack"
   },
-  "lastCompletedPhase": "10U",
-  "nextRecommendedPhase": "10V",
-  "nextRecommendedPhaseName": "Actual Write Authorization Request",
-  "updatedAt": "2026-06-21T00:00:00.000Z",
+  "lastCompletedPhase": "11A",
+  "nextRecommendedPhase": "11B",
+  "nextRecommendedPhaseName": "User App Guided Step Experience Polish",
+  "updatedAt": "2026-06-23T00:00:00.000Z",
   "validation": {
     "mediapipeCheck": "passed",
     "typecheck": "passed",
@@ -230,14 +195,11 @@
     "projectStatusJson": "passed",
     "projectContext": "passed",
     "contextPackJson": "passed",
-    "browserVerification": "passed: in-app browser verified Vision Analysis excludes the Phase 10U real write approval boundary; Template Workbench shows real write approval boundary/checklist/handoff, blocked missing-source state, approval-boundary-only/no registry mutation/no production writer copy, no forbidden write/publish/production wording, and public/mediapipe ready did not show mock fallback. Ordinary user path admin-term separation is covered by SSR tab-boundary test because the dev app has no separate browser route for UserAppShell.",
-    "phase10UScopedTests": "passed",
-    "phase10UTabBoundaryTest": "passed",
-    "testFiles": 11,
-    "tests": 37,
-    "phase10UScopedTestFiles": 10,
-    "phase10UScopedTestsCount": 33,
-    "summary": "Phase 10U validation passed: mediapipe:check, typecheck, build, project status/context, JSON status/context, scoped 10U tests, tab boundary test, and in-app browser tab-boundary verification all passed."
+    "browserVerification": "passed",
+    "phase11AScopedTests": "passed",
+    "testFiles": 8,
+    "tests": 22,
+    "summary": "Phase 11A validation passed: MediaPipe check, typecheck, build, project status/context, JSON status/context, scoped tests, and browser verification passed."
   },
   "internalTrialEvidenceDecision": {
     "phase9EResult": [
@@ -352,15 +314,15 @@
     "nextPhase": "Phase 10I - UserAppTemplatePackage Registry Preparation",
     "boundary": "Gate-only output; no publish, no registry write execution, no production package, no User App Shell package replacement."
   },
-  "currentPhase": "Real Write Approval Boundary",
-  "currentPhaseId": "10U",
+  "currentPhase": "User App MVP Experience Reset",
+  "currentPhaseId": "11A",
   "userAppTemplatePackageRegistryPreparationDecision": {
     "nextPhase": "Phase 10J - UserAppTemplatePackage Registry Write Gate",
     "boundary": "Preparation-only output; no actual registry write, no publish, no production package, no User App Shell package replacement."
   },
-  "phase": "10U",
-  "lastUpdatedPhase": "10U",
-  "currentPhaseName": "Real Write Approval Boundary",
+  "phase": "11A",
+  "lastUpdatedPhase": "11A",
+  "currentPhaseName": "User App MVP Experience Reset",
   "status": "completed",
   "userAppTemplatePackageRegistryWriteGateDecision": {
     "nextPhase": "Phase 10K - Controlled UserAppTemplatePackage Registry Writer Draft",
@@ -394,7 +356,7 @@
     "boundary": "Phase 10P final real write review gate checks Phase 10O implementation draft validation while keeping dry-run-only, no actual write, no publish, no production writer, and no shell package replacement boundaries intact.",
     "ownerAuthorizationBoundary": "授权范围：A。只授权进入 Phase 10P 最终真实写入复核闸门，不授权真实写入 registry，不授权发布，不授权替换当前 User App Shell package。 This is review-gate-only and does not authorize actual registry write execution, publication, production writer creation, production package creation, or current User App Shell package replacement."
   },
-  "lastCompletedBusinessPhase": "10U",
+  "lastCompletedBusinessPhase": "11A",
   "realWriteExecutionAuthorizationDecision": {
     "nextPhase": "Phase 10R - Real Write Execution Plan",
     "boundary": "Phase 10Q authorization ready means eligible for a future real write execution plan only; it remains dry-run only, no actual write, no publish, no production writer, no production package, no registry mutation, and no shell package replacement.",
@@ -423,14 +385,11 @@
     "projectStatusJson": "passed",
     "projectContext": "passed",
     "contextPackJson": "passed",
-    "browserVerification": "passed: in-app browser verified Vision Analysis excludes the Phase 10U real write approval boundary; Template Workbench shows real write approval boundary/checklist/handoff, blocked missing-source state, approval-boundary-only/no registry mutation/no production writer copy, no forbidden write/publish/production wording, and public/mediapipe ready did not show mock fallback. Ordinary user path admin-term separation is covered by SSR tab-boundary test because the dev app has no separate browser route for UserAppShell.",
-    "phase10UScopedTests": "passed",
-    "phase10UTabBoundaryTest": "passed",
-    "testFiles": 11,
-    "tests": 37,
-    "phase10UScopedTestFiles": 10,
-    "phase10UScopedTestsCount": 33,
-    "summary": "Phase 10U validation passed: mediapipe:check, typecheck, build, project status/context, JSON status/context, scoped 10U tests, tab boundary test, and in-app browser tab-boundary verification all passed."
+    "browserVerification": "passed",
+    "phase11AScopedTests": "passed",
+    "testFiles": 8,
+    "tests": 22,
+    "summary": "Phase 11A validation passed: MediaPipe check, typecheck, build, project status/context, JSON status/context, scoped tests, and browser verification passed."
   },
   "requiredValidationCommands": [
     "npm run mediapipe:check",
@@ -440,8 +399,7 @@
     "npm run project:context",
     "node scripts/project-status.mjs --json",
     "node scripts/context-pack.mjs --json",
-    "npm run test -- tests/real-write-approval-boundary.test.ts tests/real-write-approval-checklist.test.ts tests/real-write-approval-handoff.test.ts tests/real-write-approval-boundary-panel.test.tsx tests/phase-10U-documentation-recovery.test.ts tests/guarded-simulator-review-gate.test.ts tests/guarded-simulator-review-gate-panel.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
-    "npm run test -- tests/template-studio-tab-boundary.test.tsx"
+    "npm run test -- tests/app-shell-user-app-preview.test.tsx tests/user-app-mvp-experience.test.tsx tests/user-app-admin-boundary.test.tsx tests/phase-11A-documentation-recovery.test.ts tests/template-studio-tab-boundary.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
   ],
   "requiredCommands": [
     "npm run mediapipe:check",
@@ -451,8 +409,7 @@
     "npm run project:context",
     "node scripts/project-status.mjs --json",
     "node scripts/context-pack.mjs --json",
-    "npm run test -- tests/real-write-approval-boundary.test.ts tests/real-write-approval-checklist.test.ts tests/real-write-approval-handoff.test.ts tests/real-write-approval-boundary-panel.test.tsx tests/phase-10U-documentation-recovery.test.ts tests/guarded-simulator-review-gate.test.ts tests/guarded-simulator-review-gate-panel.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
-    "npm run test -- tests/template-studio-tab-boundary.test.tsx"
+    "npm run test -- tests/app-shell-user-app-preview.test.tsx tests/user-app-mvp-experience.test.tsx tests/user-app-admin-boundary.test.tsx tests/phase-11A-documentation-recovery.test.ts tests/template-studio-tab-boundary.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
   ],
   "commands": [
     "npm run mediapipe:check",
@@ -462,10 +419,9 @@
     "npm run project:context",
     "node scripts/project-status.mjs --json",
     "node scripts/context-pack.mjs --json",
-    "npm run test -- tests/real-write-approval-boundary.test.ts tests/real-write-approval-checklist.test.ts tests/real-write-approval-handoff.test.ts tests/real-write-approval-boundary-panel.test.tsx tests/phase-10U-documentation-recovery.test.ts tests/guarded-simulator-review-gate.test.ts tests/guarded-simulator-review-gate-panel.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
-    "npm run test -- tests/template-studio-tab-boundary.test.tsx"
+    "npm run test -- tests/app-shell-user-app-preview.test.tsx tests/user-app-mvp-experience.test.tsx tests/user-app-admin-boundary.test.tsx tests/phase-11A-documentation-recovery.test.ts tests/template-studio-tab-boundary.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
   ],
-  "lastUpdated": "2026-06-21T00:00:00.000Z",
+  "lastUpdated": "2026-06-23T00:00:00.000Z",
   "guardedSimulatorReviewGateDecision": {
     "nextPhase": "Phase 10U - Real Write Approval Boundary",
     "boundary": "review-gate-only; no actual write, no registry mutation, no publish, no shell package replacement, no production writer",
@@ -480,15 +436,10 @@
     "docs/prompts/PROVIDER_SWITCH_PROMPT.md",
     "docs/status/CURRENT_PROJECT_STATUS.md",
     "docs/status/NEXT_ACTION.md",
-    "docs/product/guarded-simulator-review-gate.md",
-    "docs/product/guarded-simulator-review-checklist.md",
-    "docs/product/guarded-simulator-review-handoff.md",
+    "docs/product/user-app-mvp-experience.md",
+    "docs/phases/phase-11A.md",
+    "docs/phases/phase-10U.md",
     "docs/product/real-write-approval-boundary.md",
-    "docs/product/real-write-approval-checklist.md",
-    "docs/product/real-write-approval-handoff.md",
-    "docs/phases/phase-10U.md",
-    "docs/phases/phase-10T.md",
-    "docs/phases/phase-10U.md",
     "project-state/project-state.snapshot.json",
     "project-state/latest-handoff.json",
     "project-state/provider-handoff.json",
@@ -501,5 +452,20 @@
     "checklistBoundary": "checklist confirms owner has not authorized actual write, registry mutation, publish, shell replacement, or production writer creation and does not trigger writes",
     "handoffBoundary": "handoff can request a future authorization phase but cannot execute registry writes or mutate registry state",
     "approvalBoundary": "future actual write requires separate explicit owner authorization"
+  },
+  "userAppMvpExperienceReset": {
+    "registryChainStatus": "registry chain paused after Phase 10U",
+    "realWriteAuthorizationPath": "Phase 10V intentionally paused; not the active next phase",
+    "userPath": [
+      "home",
+      "template_selection",
+      "template_detail",
+      "preparation",
+      "step_by_step_guidance",
+      "completion"
+    ],
+    "adminBoundary": "administrator trial, Template Studio, and registry safety tooling are explicitly separated from the ordinary user path",
+    "nextPhase": "Phase 11B - User App Guided Step Experience Polish",
+    "browserEntry": "AppShell defaults to 用户 App 预览 for local ordinary-user browser QA; Vision Analysis and Template Studio remain operator/admin tabs."
   }
 }

@@ -560,3 +560,21 @@ authorize or execute a registry write, mutate registry state, publish, create
 a production writer, create production writer readiness, replace the current
 User App Shell package, call backend/OpenAI/external APIs, request camera/AR
 scope, or train models.
+
+## Phase 11A User App MVP Experience Reset Flow
+
+`UserAppTemplatePackage`
+-> `UserAppMvpExperience`
+-> `UserAppTemplateSelection`
+-> `UserAppTemplateDetail`
+-> `UserAppStepGuide`
+-> `UserAppCompletion`
+-> next recommendation for Phase 11B guided step experience polish.
+
+The flow is local, deterministic, ordinary-user-facing, and demo/MVP-only. It
+uses existing local package fixtures and shell state to show a clean user path:
+home, template selection, detail, preparation, step-by-step guidance, progress,
+and completion. It does not resume Phase 10V, execute a registry write, mutate
+registry state, publish, create a production writer, replace the current User
+App Shell package, add backend/OpenAI/external APIs, request camera/AR scope, or
+train models.

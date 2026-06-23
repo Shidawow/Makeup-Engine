@@ -1,5 +1,5 @@
 {
-  "phase": "10U",
+  "phase": "11A",
   "guardrails": [
     {
       "id": "source-image-not-training-data",
@@ -976,6 +976,38 @@
     {
       "id": "phase_10u_future_owner_authorization_required",
       "rule": "Any actual write after Phase 10U still requires separate explicit owner authorization."
+    },
+    {
+      "id": "phase_11a_registry_chain_paused",
+      "rule": "Phase 11A pauses the registry chain after Phase 10U and must not continue Phase 10V actual write authorization."
+    },
+    {
+      "id": "phase_11a_no_real_registry_write",
+      "rule": "Do not execute real registry writes in Phase 11A."
+    },
+    {
+      "id": "phase_11a_no_registry_mutation",
+      "rule": "Do not mutate registry state in Phase 11A."
+    },
+    {
+      "id": "phase_11a_no_publish",
+      "rule": "Do not publish to the user app in Phase 11A."
+    },
+    {
+      "id": "phase_11a_no_production_writer",
+      "rule": "Do not create a production writer in Phase 11A."
+    },
+    {
+      "id": "phase_11a_no_shell_replacement",
+      "rule": "Do not replace the current User App Shell package in Phase 11A."
+    },
+    {
+      "id": "phase_11a_user_path_hides_admin_terms",
+      "rule": "Ordinary user path must hide registry, simulator, gate, approval boundary, production writer, Pipeline Trace, and FaceMesh debug JSON terms by default."
+    },
+    {
+      "id": "phase_11a_no_backend_camera_ar_ai_training",
+      "rule": "Do not add backend, database, login, payment, camera, AR, OpenAI/external API, or training scope in Phase 11A."
     }
   ],
   "legacyFrozenModules": [
@@ -984,11 +1016,11 @@
     "src/intelligence/runtime"
   ],
   "externalApiUsageAllowedInDoc1": false,
-  "updatedAt": "2026-06-21T00:00:00.000Z",
-  "lastCompletedPhase": "10U",
-  "currentPhaseId": "10U",
-  "currentPhase": "Real Write Approval Boundary",
-  "nextRecommendedPhase": "10V",
+  "updatedAt": "2026-06-23T00:00:00.000Z",
+  "lastCompletedPhase": "11A",
+  "currentPhaseId": "11A",
+  "currentPhase": "User App MVP Experience Reset",
+  "nextRecommendedPhase": "11B",
   "validationStatus": "passed",
   "lastValidation": {
     "mediapipeCheck": "passed",
@@ -999,14 +1031,11 @@
     "projectStatusJson": "passed",
     "projectContext": "passed",
     "contextPackJson": "passed",
-    "browserVerification": "passed: in-app browser verified Vision Analysis excludes the Phase 10U real write approval boundary; Template Workbench shows real write approval boundary/checklist/handoff, blocked missing-source state, approval-boundary-only/no registry mutation/no production writer copy, no forbidden write/publish/production wording, and public/mediapipe ready did not show mock fallback. Ordinary user path admin-term separation is covered by SSR tab-boundary test because the dev app has no separate browser route for UserAppShell.",
-    "phase10UScopedTests": "passed",
-    "phase10UTabBoundaryTest": "passed",
-    "testFiles": 11,
-    "tests": 37,
-    "phase10UScopedTestFiles": 10,
-    "phase10UScopedTestsCount": 33,
-    "summary": "Phase 10U validation passed: mediapipe:check, typecheck, build, project status/context, JSON status/context, scoped 10U tests, tab boundary test, and in-app browser tab-boundary verification all passed."
+    "browserVerification": "passed",
+    "phase11AScopedTests": "passed",
+    "testFiles": 8,
+    "tests": 22,
+    "summary": "Phase 11A validation passed: MediaPipe check, typecheck, build, project status/context, JSON status/context, scoped tests, and browser verification passed."
   },
   "validation": {
     "mediapipeCheck": "passed",
@@ -1017,19 +1046,16 @@
     "projectStatusJson": "passed",
     "projectContext": "passed",
     "contextPackJson": "passed",
-    "browserVerification": "passed: in-app browser verified Vision Analysis excludes the Phase 10U real write approval boundary; Template Workbench shows real write approval boundary/checklist/handoff, blocked missing-source state, approval-boundary-only/no registry mutation/no production writer copy, no forbidden write/publish/production wording, and public/mediapipe ready did not show mock fallback. Ordinary user path admin-term separation is covered by SSR tab-boundary test because the dev app has no separate browser route for UserAppShell.",
-    "phase10UScopedTests": "passed",
-    "phase10UTabBoundaryTest": "passed",
-    "testFiles": 11,
-    "tests": 37,
-    "phase10UScopedTestFiles": 10,
-    "phase10UScopedTestsCount": 33,
-    "summary": "Phase 10U validation passed: mediapipe:check, typecheck, build, project status/context, JSON status/context, scoped 10U tests, tab boundary test, and in-app browser tab-boundary verification all passed."
+    "browserVerification": "passed",
+    "phase11AScopedTests": "passed",
+    "testFiles": 8,
+    "tests": 22,
+    "summary": "Phase 11A validation passed: MediaPipe check, typecheck, build, project status/context, JSON status/context, scoped tests, and browser verification passed."
   },
-  "summary": "Phase 10U adds a real write approval boundary, checklist, and handoff for simulator review evidence only. It blocks actual registry writes, registry mutation, publish, package replacement, and production writer creation.",
-  "lastCompletedBusinessPhase": "10U",
-  "currentPhaseName": "Real Write Approval Boundary",
-  "nextRecommendedPhaseName": "Actual Write Authorization Request",
+  "summary": "Phase 11A resets active product focus to the ordinary-user User App MVP experience and pauses the registry chain after Phase 10U.",
+  "lastCompletedBusinessPhase": "11A",
+  "currentPhaseName": "User App MVP Experience Reset",
+  "nextRecommendedPhaseName": "User App Guided Step Experience Polish",
   "results": {
     "mediapipeCheck": "passed",
     "typecheck": "passed",
@@ -1039,14 +1065,11 @@
     "projectStatusJson": "passed",
     "projectContext": "passed",
     "contextPackJson": "passed",
-    "browserVerification": "passed: in-app browser verified Vision Analysis excludes the Phase 10U real write approval boundary; Template Workbench shows real write approval boundary/checklist/handoff, blocked missing-source state, approval-boundary-only/no registry mutation/no production writer copy, no forbidden write/publish/production wording, and public/mediapipe ready did not show mock fallback. Ordinary user path admin-term separation is covered by SSR tab-boundary test because the dev app has no separate browser route for UserAppShell.",
-    "phase10UScopedTests": "passed",
-    "phase10UTabBoundaryTest": "passed",
-    "testFiles": 11,
-    "tests": 37,
-    "phase10UScopedTestFiles": 10,
-    "phase10UScopedTestsCount": 33,
-    "summary": "Phase 10U validation passed: mediapipe:check, typecheck, build, project status/context, JSON status/context, scoped 10U tests, tab boundary test, and in-app browser tab-boundary verification all passed."
+    "browserVerification": "passed",
+    "phase11AScopedTests": "passed",
+    "testFiles": 8,
+    "tests": 22,
+    "summary": "Phase 11A validation passed: MediaPipe check, typecheck, build, project status/context, JSON status/context, scoped tests, and browser verification passed."
   },
   "requiredValidationCommands": [
     "npm run mediapipe:check",
@@ -1056,8 +1079,7 @@
     "npm run project:context",
     "node scripts/project-status.mjs --json",
     "node scripts/context-pack.mjs --json",
-    "npm run test -- tests/real-write-approval-boundary.test.ts tests/real-write-approval-checklist.test.ts tests/real-write-approval-handoff.test.ts tests/real-write-approval-boundary-panel.test.tsx tests/phase-10U-documentation-recovery.test.ts tests/guarded-simulator-review-gate.test.ts tests/guarded-simulator-review-gate-panel.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
-    "npm run test -- tests/template-studio-tab-boundary.test.tsx"
+    "npm run test -- tests/app-shell-user-app-preview.test.tsx tests/user-app-mvp-experience.test.tsx tests/user-app-admin-boundary.test.tsx tests/phase-11A-documentation-recovery.test.ts tests/template-studio-tab-boundary.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
   ],
   "requiredCommands": [
     "npm run mediapipe:check",
@@ -1067,8 +1089,7 @@
     "npm run project:context",
     "node scripts/project-status.mjs --json",
     "node scripts/context-pack.mjs --json",
-    "npm run test -- tests/real-write-approval-boundary.test.ts tests/real-write-approval-checklist.test.ts tests/real-write-approval-handoff.test.ts tests/real-write-approval-boundary-panel.test.tsx tests/phase-10U-documentation-recovery.test.ts tests/guarded-simulator-review-gate.test.ts tests/guarded-simulator-review-gate-panel.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
-    "npm run test -- tests/template-studio-tab-boundary.test.tsx"
+    "npm run test -- tests/app-shell-user-app-preview.test.tsx tests/user-app-mvp-experience.test.tsx tests/user-app-admin-boundary.test.tsx tests/phase-11A-documentation-recovery.test.ts tests/template-studio-tab-boundary.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
   ],
   "commands": [
     "npm run mediapipe:check",
@@ -1078,13 +1099,12 @@
     "npm run project:context",
     "node scripts/project-status.mjs --json",
     "node scripts/context-pack.mjs --json",
-    "npm run test -- tests/real-write-approval-boundary.test.ts tests/real-write-approval-checklist.test.ts tests/real-write-approval-handoff.test.ts tests/real-write-approval-boundary-panel.test.tsx tests/phase-10U-documentation-recovery.test.ts tests/guarded-simulator-review-gate.test.ts tests/guarded-simulator-review-gate-panel.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
-    "npm run test -- tests/template-studio-tab-boundary.test.tsx"
+    "npm run test -- tests/app-shell-user-app-preview.test.tsx tests/user-app-mvp-experience.test.tsx tests/user-app-admin-boundary.test.tsx tests/phase-11A-documentation-recovery.test.ts tests/template-studio-tab-boundary.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
   ],
-  "lastUpdated": "2026-06-21T00:00:00.000Z",
+  "lastUpdated": "2026-06-23T00:00:00.000Z",
   "status": "completed",
-  "lastUpdatedPhase": "10U",
-  "nextAction": "Proceed to Phase 10V - Actual Write Authorization Request.",
+  "lastUpdatedPhase": "11A",
+  "nextAction": "Proceed to Phase 11B - User App Guided Step Experience Polish.",
   "taskStatus": "completed",
   "realWriteApprovalBoundaryDecision": {
     "nextPhase": "Phase 10V - Actual Write Authorization Request",
@@ -1092,5 +1112,20 @@
     "checklistBoundary": "checklist confirms owner has not authorized actual write, registry mutation, publish, shell replacement, or production writer creation and does not trigger writes",
     "handoffBoundary": "handoff can request a future authorization phase but cannot execute registry writes or mutate registry state",
     "approvalBoundary": "future actual write requires separate explicit owner authorization"
+  },
+  "userAppMvpExperienceReset": {
+    "registryChainStatus": "registry chain paused after Phase 10U",
+    "realWriteAuthorizationPath": "Phase 10V intentionally paused; not the active next phase",
+    "userPath": [
+      "home",
+      "template_selection",
+      "template_detail",
+      "preparation",
+      "step_by_step_guidance",
+      "completion"
+    ],
+    "adminBoundary": "administrator trial, Template Studio, and registry safety tooling are explicitly separated from the ordinary user path",
+    "nextPhase": "Phase 11B - User App Guided Step Experience Polish",
+    "browserEntry": "AppShell defaults to 用户 App 预览 for local ordinary-user browser QA; Vision Analysis and Template Studio remain operator/admin tabs."
   }
 }

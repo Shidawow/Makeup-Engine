@@ -20,7 +20,7 @@ export function UserAppProgressPanel({
     <section className="rounded-lg border border-stone-200 bg-white p-4 shadow-soft">
       <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
         <div>
-          <p className="text-xs font-semibold uppercase text-teal-700">Local progress</p>
+          <p className="text-xs font-semibold text-teal-700">本地进度</p>
           <h3 className="text-base font-semibold text-stone-950">本地跟练进度</h3>
         </div>
         <button

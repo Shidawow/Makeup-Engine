@@ -14,7 +14,8 @@ describe('UserAppShell discovery flow wiring', () => {
     expect(html).toContain('\u53d1\u73b0\u5986\u5bb9');
     expect(html).toContain('\u6211\u7684\u504f\u597d');
     expect(html).toContain('照片占位');
-    expect(html).toContain('用户路径');
+    expect(html).toContain('打开管理员检查');
+    expect(html).toContain('管理员区域只用于项目验收和后台链路复核');
     expect(html).not.toContain('type="file"');
     expect(html).not.toContain('blob:');
     expect(html).not.toContain('data:image/');

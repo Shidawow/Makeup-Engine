@@ -7,10 +7,10 @@ import { userAppMvpShellExamplePackage } from '../src/templates/examples';
 describe('User App mobile layout QA shell wiring', () => {
   it('renders Phase 7H entries without squeezing unsafe runtime data into the shell', () => {
     const html = renderToStaticMarkup(
-      <UserAppShell packageData={userAppMvpShellExamplePackage} />,
+      <UserAppShell packageData={userAppMvpShellExamplePackage} showAdminTools />,
     );
 
-    expect(html).toContain('Phase 8B PWA / Mobile Web MVP Polish');
+    expect(html).toContain('User App MVP');
     expect(html).toContain('今日妆容练习');
     expect(html).toContain('PWA 检查');
     expect(html).toContain('MVP 打磨');

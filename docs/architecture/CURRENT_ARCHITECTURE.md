@@ -845,3 +845,17 @@ production writer.
 ## Phase 10U Real Write Approval Boundary
 
 Phase 10U adds a local administrator-only Real Write Approval Boundary after Phase 10T guarded simulator review gate readiness. It records approval scope, checklist, audit requirements, rollback approval requirements, blocked reasons, and handoff for a future Phase 10V authorization request only. It does not authorize actual registry write, registry mutation, publication, current User App Shell package replacement, production package creation, backend work, OpenAI/external API usage, camera/AR scope, training, or production writer creation.
+
+## Phase 11A User App MVP Experience Reset
+
+Phase 11A pauses the registry write chain after Phase 10U and returns the active
+product focus to the ordinary-user User App MVP shell. The shell now defaults
+to a clean local flow: Home, Template Selection, Template Detail, Preparation,
+Step-by-step Guidance, and Completion. Administrator tooling remains available
+only when explicitly enabled, and Template Studio still owns the 10A-10U
+backend/template-production chain.
+
+The reset does not execute registry writes, mutate registry state, publish,
+create a production writer, replace the current User App Shell package, add
+backend/database/login/payment/camera/AR/OpenAI/external API scope, or train
+models.

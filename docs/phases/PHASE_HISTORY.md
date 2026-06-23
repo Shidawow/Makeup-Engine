@@ -1563,3 +1563,32 @@ The approval boundary can now state whether a future authorization request may
 be prepared. Phase 10V should request explicit owner authorization while still
 preventing silent writes, registry mutation, publication, package replacement,
 backend work, production writer execution, or production readiness claims.
+
+## Phase 11A - User App MVP Experience Reset
+
+Paused the post-10U registry write chain and reset the active product focus to
+the ordinary-user User App MVP experience.
+
+What changed:
+
+- Added ordinary-user MVP components for template selection, template detail,
+  step-by-step guidance, and completion.
+- Updated User App Shell so the default path is Home -> Template Selection ->
+  Template Detail -> Preparation -> Step-by-step Guidance -> Completion.
+- Hid administrator trial, QA, Template Studio, and registry safety terminology
+  from the default ordinary-user shell.
+- Preserved Template Studio and Phase 10A-10U backend safety chain without
+  deleting or wiring it into the user path.
+
+What still cannot happen:
+
+- Phase 11A does not continue Phase 10V, execute registry writes, mutate
+  registry state, publish, create a production writer, replace the current User
+  App Shell package, add backend/database/login/payment/camera/AR/OpenAI or
+  external API scope, or train models.
+
+Why Phase 11B follows:
+
+The ordinary-user MVP path is now coherent enough for guided-step polish.
+Phase 11B should improve step transitions, mobile touch ergonomics, progress
+feedback, and demo readiness without resuming registry write work.

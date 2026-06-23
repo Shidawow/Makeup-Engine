@@ -638,3 +638,16 @@ App Shell package.
 ## Phase 10U Real Write Approval Boundary
 
 Phase 10U adds a local administrator-only Real Write Approval Boundary after Phase 10T guarded simulator review gate readiness. It records approval scope, checklist, audit requirements, rollback approval requirements, blocked reasons, and handoff for a future Phase 10V authorization request only. It does not authorize actual registry write, registry mutation, publication, current User App Shell package replacement, production package creation, backend work, OpenAI/external API usage, camera/AR scope, training, or production writer creation.
+
+## Phase 11A User App MVP Experience Reset
+
+Phase 11A pauses the registry chain after Phase 10U and returns active work to
+the ordinary-user User App MVP experience. The ordinary-user path must hide
+registry, write gate, publish gate, simulator, approval boundary, production
+writer, Pipeline Trace, FaceMesh debug JSON, candidate package, and draft
+validation terminology by default.
+
+Phase 11A must not resume Phase 10V, execute real registry writes, mutate
+registry state, publish, create a production writer, replace the current User
+App Shell package, add backend/database/login/payment/camera/AR/OpenAI/external
+API scope, or train models.

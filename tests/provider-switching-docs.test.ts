@@ -40,12 +40,19 @@ describe('provider switching docs', () => {
     expect(combined).toContain('src/intelligence/runtime');
   });
 
-  it('provides phase 10U to 10V switch templates with historical 10T, 10S, 10R, 10Q, 10P, 10O, 10N, 10M, 10L, 10K, 10J, 10I, 10H, 10G, 10F, 10E, 10D, 10C, 10A, 9J, and older markers', async () => {
+  it('provides phase 11A to 11B switch templates with historical 10U and older markers', async () => {
     const prompt = await readFile('docs/prompts/PROVIDER_SWITCH_PROMPT.md', 'utf8');
 
     expect(prompt).toContain('Switch To Native GPT / Codex Desktop');
     expect(prompt).toContain('Switch To PackyAPI + CLI');
     expect(prompt).toContain('Return From PackyAPI To ChatGPT');
+    expect(prompt).toContain('lastCompletedPhase: 11A');
+    expect(prompt).toContain('nextRecommendedPhase: 11B');
+    expect(prompt).toContain('User App Guided Step Experience Polish');
+    expect(prompt).toContain('User App MVP Experience Reset');
+    expect(prompt).toContain('registry chain paused after Phase 10U');
+    expect(prompt).toContain('Phase 10V is intentionally not the active next phase');
+    expect(prompt).toContain('Historical handoff marker retained for Phase 10U recovery tests');
     expect(prompt).toContain('lastCompletedPhase: 10U');
     expect(prompt).toContain('nextRecommendedPhase: 10V');
     expect(prompt).toContain('Actual Write Authorization Request');

@@ -19,12 +19,12 @@ const mojibakePattern = /灏辩华|绉诲姩|鐢ㄦ埛|妯℃澘|闅愮|姝ラ|�
 describe('Phase 7H User App mobile/browser smoke rendering', () => {
   it('renders core shell entries and critical path controls in readable Chinese', () => {
     const html = renderToStaticMarkup(
-      <UserAppShell packageData={userAppMvpShellExamplePackage} />,
+      <UserAppShell packageData={userAppMvpShellExamplePackage} showAdminTools />,
     );
 
     expect(html).toContain('今日妆容练习');
     expect(html).toContain('PWA 检查');
-    expect(html).toContain('模板指导');
+    expect(html).toContain('模板选择');
     expect(html).toContain('发现妆容');
     expect(html).toContain('我的准备');
     expect(html).toContain('我的偏好');
@@ -32,11 +32,10 @@ describe('Phase 7H User App mobile/browser smoke rendering', () => {
     expect(html).toContain('App 就绪度');
     expect(html).toContain('移动端 QA');
     expect(html).toContain('交互检查');
-    expect(html).toContain('开始分步指导');
-    expect(html).toContain('上一步');
-    expect(html).toContain('下一步');
-    expect(html).toContain('标记完成');
-    expect(html).toContain('跳过');
+    expect(html).toContain('分步跟练');
+    expect(html).toContain('开始跟练');
+    expect(html).toContain('查看隐私说明');
+    expect(html).toContain('准备工具');
     expect(html).not.toMatch(mojibakePattern);
     expect(html).not.toContain('blob:');
     expect(html).not.toContain('data:image/');

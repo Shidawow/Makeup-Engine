@@ -88,6 +88,7 @@ import { UserAppAnonymousTrialEvidenceReviewPanel } from './UserAppAnonymousTria
 import { UserAppAnonymousTrialFollowUpIterationPanel } from './UserAppAnonymousTrialFollowUpIterationPanel';
 import { UserAppAnonymousTrialFollowUpReadinessPanel } from './UserAppAnonymousTrialFollowUpReadinessPanel';
 import { UserAppAnonymousTrialGapActionPlanPanel } from './UserAppAnonymousTrialGapActionPlanPanel';
+import { UserAppCompletion } from './UserAppCompletion';
 import { UserAppCompatibilityBanner } from './UserAppCompatibilityBanner';
 import { UserAppEvidenceCollectionChecklistPanel } from './UserAppEvidenceCollectionChecklistPanel';
 import { UserAppEvidenceCollectionProtocolPanel } from './UserAppEvidenceCollectionProtocolPanel';
@@ -108,6 +109,9 @@ import { UserAppProductDecisionGatePanel } from './UserAppProductDecisionGatePan
 import { UserAppReadinessPanel } from './UserAppReadinessPanel';
 import { UserAppSessionPanel } from './UserAppSessionPanel';
 import { UserAppSessionRecoveryNotice } from './UserAppSessionRecoveryNotice';
+import { UserAppStepGuide } from './UserAppStepGuide';
+import { UserAppTemplateDetail } from './UserAppTemplateDetail';
+import { UserAppTemplateSelection } from './UserAppTemplateSelection';
 import { UserAppTrialFeedbackPanel } from './UserAppTrialFeedbackPanel';
 import { UserAppTrialEvidenceSummaryPanel } from './UserAppTrialEvidenceSummaryPanel';
 import { UserAppTrialGoNoGoPanel } from './UserAppTrialGoNoGoPanel';
@@ -123,22 +127,19 @@ import { UserAppTrialReadinessPanel } from './UserAppTrialReadinessPanel';
 import { UserAppTrialResultReviewPanel } from './UserAppTrialResultReviewPanel';
 import { UserAppTemplateContentQaPanel } from './UserAppTemplateContentQaPanel';
 import { UserAppTrialTemplateReadinessPanel } from './UserAppTrialTemplateReadinessPanel';
-import { UserMakeupStepGuide } from './UserMakeupStepGuide';
 import { UserOnboardingFlow } from './UserOnboardingFlow';
 import { UserPersonalizationPanel } from './UserPersonalizationPanel';
 import { UserPhotoIntakePlaceholder } from './UserPhotoIntakePlaceholder';
 import { UserPrivacyNotice } from './UserPrivacyNotice';
 import { UserPreferenceSetupPanel } from './UserPreferenceSetupPanel';
 import { UserPreferenceSummary } from './UserPreferenceSummary';
-import { UserRegionInstructionView } from './UserRegionInstructionView';
-import { UserTemplateDetail } from './UserTemplateDetail';
 import { UserTemplateDiscoveryPanel } from './UserTemplateDiscoveryPanel';
-import { UserTemplateList } from './UserTemplateList';
 import { UserToolProductPanel } from './UserToolProductPanel';
 
 export interface UserAppShellProps {
   packageData?: UserAppTemplatePackage | null;
   showExampleWhenEmpty?: boolean;
+  showAdminTools?: boolean;
 }
 
 const userSectionTabs: Array<{ tabId: UserAppShellSection; label: string }> = [
@@ -200,9 +201,11 @@ const adminSectionTabs: Array<{ tabId: UserAppShellSection; label: string }> = [
 export function UserAppShell({
   packageData,
   showExampleWhenEmpty = true,
+  showAdminTools = false,
 }: UserAppShellProps) {
   const [state, setState] = useState<UserAppShellState>(() => createInitialUserAppState());
   const [boundaryTab, setBoundaryTab] = useState<UserAppShellSection>('guidance');
+  const [adminVisible, setAdminVisible] = useState(showAdminTools);
   const [onboarding, setOnboarding] = useState(() => createInitialUserOnboardingState());
   const [localPreferences, setLocalPreferences] = useState(() =>
     createDefaultUserLocalPreferences(),
@@ -738,43 +741,118 @@ export function UserAppShell({
     );
   };
 
+  const goHome = () => {
+    setState((current) => ({
+      ...current,
+      navigation: {
+        ...current.navigation,
+        currentScreen: 'home',
+        history:
+          current.navigation.currentScreen === 'home'
+            ? current.navigation.history
+            : [...current.navigation.history, current.navigation.currentScreen],
+      },
+    }));
+  };
+
+  const goToTemplateSelection = () => {
+    setState((current) => ({
+      ...current,
+      navigation: navigateToTemplateList(current.navigation),
+    }));
+  };
+
+  const goToPreparation = () => {
+    setState((current) => ({
+      ...current,
+      navigation: navigateToTools(current.navigation, selectedTemplateId),
+    }));
+  };
+
+  const restartCurrentTemplate = () => {
+    if (!selectedTemplateId || !effectivePackage) {
+      goToTemplateSelection();
+      return;
+    }
+
+    setState((current) =>
+      startUserAppStepGuide(
+        resetUserAppTemplateProgress(current, selectedTemplateId),
+        effectivePackage,
+        selectedTemplateId,
+      ),
+    );
+  };
+
+  const progressCompleted =
+    (selectedProgress?.orderedStepIds.length ?? 0) > 0 &&
+    (selectedProgress?.completedStepIds.length ?? 0) >=
+      (selectedProgress?.orderedStepIds.length ?? 0);
+  const completedSteps = selectedProgress?.completedStepIds.length ?? 0;
+  const totalSelectedSteps = currentTemplate?.steps.length ?? 0;
+
+  const workflowSteps = [
+    { id: 'home', label: '首页' },
+    { id: 'template-list', label: '选择妆容' },
+    { id: 'template-detail', label: '查看详情' },
+    { id: 'tools', label: '准备工具' },
+    { id: 'step-guide', label: progressCompleted ? '完成' : '分步跟练' },
+  ] as const;
+
   return (
     <section className="rounded-lg border border-stone-300 bg-stone-100 p-3 sm:p-4">
       <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
         <div>
-          <p className="text-xs font-semibold uppercase text-teal-700">
-            Phase 8B PWA / Mobile Web MVP Polish
-          </p>
+          <p className="text-xs font-semibold text-teal-700">User App MVP</p>
           <h1 className="text-xl font-semibold text-stone-950">今日妆容练习</h1>
           <p className="mt-1 max-w-2xl text-sm leading-6 text-stone-600">
-            这是本地移动 Web MVP 壳，用来预览妆容发现和分步跟练。它不是正式生产 App，
-            不登录、不上传、不接后端、不启用相机或 AR，也不会用于训练。
+            选择妆容，查看准备工具，再按步骤完成一次本地跟练。当前不登录、不上传、不接后端、
+            不启用相机或 AR，也不会用于训练。
           </p>
         </div>
         <div className="w-fit rounded-md bg-white px-3 py-2 text-xs text-stone-600">
-          {effectivePackage ? effectivePackage.packageName : '未加载妆容包'}
+          {effectivePackage ? '本地示例妆容已加载' : '未加载妆容包'}
         </div>
+      </div>
+
+      <div className="mt-4 flex flex-wrap gap-2">
+        {workflowSteps.map((step) => (
+          <button
+            className={`min-h-10 rounded-md border px-3 py-2 text-xs font-medium ${
+              state.navigation.currentScreen === step.id
+                ? 'border-teal-700 bg-teal-50 text-teal-900'
+                : 'border-stone-300 bg-white text-stone-700'
+            }`}
+            key={step.id}
+            onClick={() => {
+              if (step.id === 'home') {
+                goHome();
+              } else if (step.id === 'template-list') {
+                goToTemplateSelection();
+              } else if (step.id === 'template-detail' && selectedTemplateId) {
+                setState((current) => selectUserAppTemplate(current, selectedTemplateId));
+              } else if (step.id === 'tools') {
+                goToPreparation();
+              } else if (step.id === 'step-guide') {
+                startGuidance();
+              }
+            }}
+            type="button"
+          >
+            {step.label}
+          </button>
+        ))}
       </div>
 
       <div className="mt-4 grid gap-4 xl:grid-cols-[minmax(280px,360px)_1fr]">
         <div className="grid content-start gap-4">
           <UserAppCompatibilityBanner compatibility={viewModel.compatibility} />
           <UserAppMobileHome
-            onBrowseTemplates={() =>
-              setState((current) => ({
-                ...current,
-                navigation: navigateToTemplateList(current.navigation),
-              }))
-            }
+            onBrowseTemplates={goToTemplateSelection}
             onOpenPrivacy={() => setBoundaryTab('privacy')}
             onStartGuidance={startGuidance}
             selectedTemplate={currentTemplate}
             summary={viewModel.packageSummary}
-            templates={viewModel.templates}
-          />
-          <UserTemplateList
-            onSelectTemplate={selectTemplate}
-            selectedTemplateId={selectedTemplateId}
             templates={viewModel.templates}
           />
         </div>
@@ -795,88 +873,107 @@ export function UserAppShell({
             </button>
             <button
               className="min-h-11 rounded-md border border-stone-300 bg-white px-3 py-2 text-xs font-medium text-stone-700"
-              onClick={() =>
-                setState((current) => ({
-                  ...current,
-                  navigation: navigateToTools(current.navigation, selectedTemplateId),
-                }))
-              }
+              onClick={goToPreparation}
               type="button"
             >
-              工具
+              准备工具
             </button>
             <button
               className="min-h-11 rounded-md border border-stone-300 bg-white px-3 py-2 text-xs font-medium text-stone-700"
-              onClick={() =>
-                setState((current) => ({
-                  ...current,
-                  navigation: navigateToCompatibility(current.navigation),
-                }))
-              }
+              onClick={goToTemplateSelection}
               type="button"
             >
-              兼容性
+              换一套妆容
             </button>
-            <span className="rounded-md bg-white px-3 py-2 text-xs text-stone-500">
-              当前页面：{state.navigation.currentScreen}
-            </span>
           </div>
 
-          <UserTemplateDetail
-            canEnterStepGuide={viewModel.compatibility.canEnterStepGuide}
-            onShowTools={() =>
-              setState((current) => ({
-                ...current,
-                navigation: navigateToTools(current.navigation, selectedTemplateId),
-              }))
-            }
-            onStartGuidance={startGuidance}
-            template={currentTemplate}
-          />
+          {state.navigation.currentScreen === 'home' ? (
+            <UserAppTemplateSelection
+              onSelectTemplate={selectTemplate}
+              selectedTemplateId={selectedTemplateId}
+              templates={viewModel.templates}
+            />
+          ) : null}
 
-          {currentTemplate ? (
+          {state.navigation.currentScreen === 'template-list' ? (
+            <UserAppTemplateSelection
+              onSelectTemplate={selectTemplate}
+              selectedTemplateId={selectedTemplateId}
+              templates={viewModel.templates}
+            />
+          ) : null}
+
+          {state.navigation.currentScreen === 'template-detail' ? (
+            <UserAppTemplateDetail
+              canEnterStepGuide={viewModel.compatibility.canEnterStepGuide}
+              onShowPreparation={goToPreparation}
+              onStartGuidance={startGuidance}
+              template={currentTemplate}
+            />
+          ) : null}
+
+          {state.navigation.currentScreen === 'tools' && currentTemplate ? (
             <>
-              <UserAppProgressPanel
-                onReset={() =>
-                  selectedTemplateId &&
-                  setState((current) =>
-                    resetUserAppTemplateProgress(current, selectedTemplateId),
-                  )
-                }
-                progress={selectedProgress}
-                totalSteps={currentTemplate.steps.length}
-              />
-              <UserMakeupStepGuide
+              <UserAppTemplateDetail
                 canEnterStepGuide={viewModel.compatibility.canEnterStepGuide}
-                onCompleteStep={(stepId) =>
-                  selectedTemplateId &&
-                  setState((current) =>
-                    completeCurrentUserAppStep(current, selectedTemplateId, stepId),
-                  )
-                }
-                onNextStep={updateSelectedStep}
-                onPreviousStep={updateSelectedStep}
-                onSkipStep={(stepId) =>
-                  selectedTemplateId &&
-                  setState((current) =>
-                    skipCurrentUserAppStep(current, selectedTemplateId, stepId),
-                  )
-                }
+                onShowPreparation={goToPreparation}
+                onStartGuidance={startGuidance}
                 template={currentTemplate}
               />
-              <UserRegionInstructionView regions={currentTemplate.regionInstructions} />
               <UserToolProductPanel toolsAndProducts={currentTemplate.toolsAndProducts} />
             </>
-          ) : (
+          ) : null}
+
+          {state.navigation.currentScreen === 'compatibility' ? (
+            <UserAppCompatibilityBanner compatibility={viewModel.compatibility} />
+          ) : null}
+
+          {state.navigation.currentScreen === 'step-guide' && currentTemplate ? (
+            progressCompleted ? (
+              <UserAppCompletion
+                completedSteps={completedSteps}
+                onChooseAnother={goToTemplateSelection}
+                onRestart={restartCurrentTemplate}
+                totalSteps={totalSelectedSteps}
+              />
+            ) : (
+              <>
+                <UserAppProgressPanel
+                  onReset={() =>
+                    selectedTemplateId &&
+                    setState((current) =>
+                      resetUserAppTemplateProgress(current, selectedTemplateId),
+                    )
+                  }
+                  progress={selectedProgress}
+                  totalSteps={currentTemplate.steps.length}
+                />
+                <UserAppStepGuide
+                  canEnterStepGuide={viewModel.compatibility.canEnterStepGuide}
+                  onCompleteStep={(stepId) =>
+                    selectedTemplateId &&
+                    setState((current) =>
+                      completeCurrentUserAppStep(current, selectedTemplateId, stepId),
+                    )
+                  }
+                  onNextStep={updateSelectedStep}
+                  onPreviousStep={updateSelectedStep}
+                  template={currentTemplate}
+                />
+              </>
+            )
+          ) : null}
+
+          {!currentTemplate && state.navigation.currentScreen !== 'home' ? (
             <div className="rounded-lg border border-dashed border-stone-300 bg-white p-4 text-sm text-stone-600">
-              没有可用模板详情。请先加载有效妆容包。
+              没有可用妆容详情。请先加载有效妆容包。
             </div>
-          )}
+          ) : null}
 
           <section className="rounded-lg border border-stone-200 bg-white p-4 shadow-soft">
             <div className="grid gap-3">
               <div>
-                <p className="text-xs font-semibold text-stone-500">用户路径</p>
+                <p className="text-xs font-semibold text-stone-500">我的本地设置</p>
                 <div className="mt-2 flex flex-wrap gap-2">
                   {userSectionTabs.map(({ tabId, label }) => (
                     <button
@@ -896,27 +993,35 @@ export function UserAppShell({
               </div>
 
               <div className="rounded-md border border-stone-200 bg-stone-50 p-3">
-                <p className="text-xs font-semibold text-stone-500">管理员检查</p>
-                <p className="mt-1 text-xs leading-5 text-stone-500">
-                  这里保留 MVP 试用管理、模板内容 QA、发布就绪度、内部试用运营、PWA、
-                  readiness 和 contract 检查信息；普通用户不应把它们理解为正式功能。
-                </p>
-                <div className="mt-2 flex flex-wrap gap-2">
-                  {adminSectionTabs.map(({ tabId, label }) => (
                 <button
-                  key={tabId}
-                  className={`min-h-11 rounded-md border px-3 py-2 text-sm ${
-                    boundaryTab === tabId
-                      ? 'border-teal-700 bg-teal-50 text-teal-900'
-                      : 'border-stone-300 bg-white text-stone-700'
-                  }`}
-                  onClick={() => setBoundaryTab(tabId)}
+                  className="min-h-11 rounded-md border border-stone-300 bg-white px-3 py-2 text-sm font-semibold text-stone-800"
+                  onClick={() => setAdminVisible((visible) => !visible)}
                   type="button"
                 >
-                  {label}
+                  {adminVisible ? '隐藏管理员检查' : '打开管理员检查'}
                 </button>
-              ))}
-                </div>
+                <p className="mt-2 text-xs leading-5 text-stone-500">
+                  管理员区域只用于项目验收和后台链路复核，默认不出现在普通用户体验里。
+                </p>
+
+                {adminVisible ? (
+                  <div className="mt-3 flex flex-wrap gap-2">
+                    {adminSectionTabs.map(({ tabId, label }) => (
+                      <button
+                        key={tabId}
+                        className={`min-h-11 rounded-md border px-3 py-2 text-sm ${
+                          boundaryTab === tabId
+                            ? 'border-teal-700 bg-teal-50 text-teal-900'
+                            : 'border-stone-300 bg-white text-stone-700'
+                        }`}
+                        onClick={() => setBoundaryTab(tabId)}
+                        type="button"
+                      >
+                        {label}
+                      </button>
+                    ))}
+                  </div>
+                ) : null}
               </div>
             </div>
 
@@ -983,13 +1088,15 @@ export function UserAppShell({
                 </>
               ) : null}
 
-              {boundaryTab === 'pwa' ? (
-                <UserAppPwaInstallPanel report={pwaReadinessReport} />
-              ) : null}
+              {adminVisible ? (
+                <>
+                  {boundaryTab === 'pwa' ? (
+                    <UserAppPwaInstallPanel report={pwaReadinessReport} />
+                  ) : null}
 
-              {boundaryTab === 'trialPack' ? (
-                <UserAppTrialPackPanel pack={trialPack} />
-              ) : null}
+                  {boundaryTab === 'trialPack' ? (
+                    <UserAppTrialPackPanel pack={trialPack} />
+                  ) : null}
 
               {boundaryTab === 'trialFeedback' ? (
                 <UserAppTrialFeedbackPanel
@@ -1185,11 +1292,13 @@ export function UserAppShell({
                 <UserAppMobileQaPanel result={mobileQaResult} />
               ) : null}
 
-              {boundaryTab === 'interaction' ? (
-                <UserAppInteractionChecklist
-                  mobileChecks={mobileQaResult.checks}
-                  readinessReport={readinessReport}
-                />
+                  {boundaryTab === 'interaction' ? (
+                    <UserAppInteractionChecklist
+                      mobileChecks={mobileQaResult.checks}
+                      readinessReport={readinessReport}
+                    />
+                  ) : null}
+                </>
               ) : null}
 
               {boundaryTab === 'privacy' ? <UserPrivacyNotice /> : null}

@@ -31,13 +31,13 @@ describe('project state snapshot', () => {
 
     expect(snapshot.projectName).toBe('Makeup Engine');
     expect(snapshot.projectRole).toContain('Makeup template production system');
-    expect(snapshot.lastCompletedPhase).toBe('10U');
-    expect(snapshot.lastCompletedBusinessPhase).toBe('10U');
-    expect(snapshot.currentPhaseId).toBe('10U');
+    expect(snapshot.lastCompletedPhase).toBe('11A');
+    expect(snapshot.lastCompletedBusinessPhase).toBe('11A');
+    expect(snapshot.currentPhaseId).toBe('11A');
     expect(snapshot.currentPhase).toBeTruthy();
-    expect(snapshot.nextRecommendedPhase).toBe('10V');
-    expect(snapshot.nextRecommendedPhaseName).toContain('Actual Write Authorization Request');
-    expect(snapshot.nextAction).toContain('Phase 10V');
+    expect(snapshot.nextRecommendedPhase).toBe('11B');
+    expect(snapshot.nextRecommendedPhaseName).toContain('User App Guided Step Experience Polish');
+    expect(snapshot.nextAction).toContain('Phase 11B');
     expect(snapshot.mainDataFlow).toEqual(
       expect.arrayContaining([
         'SourceImagePackage',
@@ -54,6 +54,13 @@ describe('project state snapshot', () => {
         'UserAppPrototypeConsumer',
         'UserAppPrototypeConsumerQa',
         'UserAppShell',
+        'UserAppMvpExperience',
+        'UserAppTemplateSelection',
+        'UserAppTemplateDetail',
+        'UserAppStepGuide',
+        'UserAppCompletion',
+        'UserAppAdminBoundary',
+        'AppShellUserAppPreview',
         'UserPhotoIntakePlaceholder',
         'UserPersonalizationPlaceholder',
         'UserPhotoPrivacyBoundary',
@@ -265,6 +272,9 @@ describe('project state snapshot', () => {
     expect(snapshot.knownLimitations.join('\n')).toContain('Phase 10U');
     expect(snapshot.knownLimitations.join('\n')).toContain('approval-boundary-only');
     expect(snapshot.knownLimitations.join('\n')).toContain('registry mutation');
+    expect(snapshot.knownLimitations.join('\n')).toContain('Phase 11A');
+    expect(snapshot.knownLimitations.join('\n')).toContain('User App MVP Experience Reset');
+    expect(snapshot.knownLimitations.join('\n')).toContain('Phase 10V is intentionally paused');
     expect(snapshot.knownLimitations.join('\n')).toContain('real names');
     expect(snapshot.knownLimitations.join('\n')).toContain('service worker');
     expect(snapshot.knownLimitations).toContain('raw RGBA is currently summary-only in Studio');

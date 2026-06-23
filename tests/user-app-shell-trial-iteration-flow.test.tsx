@@ -7,7 +7,7 @@ import { userAppMvpShellExamplePackage } from '../src/templates/examples';
 describe('UserAppShell internal trial iteration flow', () => {
   it('adds 9C admin entries without exposing iteration admin terms in the ordinary user path', () => {
     const html = renderToStaticMarkup(
-      <UserAppShell packageData={userAppMvpShellExamplePackage} />,
+      <UserAppShell packageData={userAppMvpShellExamplePackage} showAdminTools />,
     );
     const userPathStart = html.indexOf('用户路径');
     const adminStart = html.indexOf('管理员检查');

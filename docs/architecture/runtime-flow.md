@@ -9,10 +9,12 @@ index.html
 → src/main.tsx
 → src/App.tsx
 → src/components/AppShell.tsx
-→ src/components/template-studio/TemplateStudio.tsx
+→ 用户 App 预览 / 视觉分析 / 模板工作台 tabs
 ```
 
-This is the real user-facing entrypoint today. The prior demo flow still exists in code, but it is no longer the primary product entry.
+Phase 11A makes the ordinary-user User App MVP preview the default browser
+entry. The Vision Analysis and Template Studio flows still exist as
+administrator/operator tabs, but they are no longer the default first screen.
 
 ## Orchestration Entrypoints
 
@@ -32,8 +34,9 @@ Current runtime bootstrap is:
 index.html
 → Vite mounts #root
 → ReactDOM creates App
-→ AppShell renders TemplateStudio
-→ TemplateStudio loads exampleMakeupTemplates
+→ AppShell renders UserAppShell preview by default
+→ user can switch to Vision Analysis or TemplateStudio operator tabs
+→ TemplateStudio loads exampleMakeupTemplates when selected
 → user uploads photo or selects sample
 → local state mutates
 → template JSON is rendered/exported
@@ -73,6 +76,7 @@ The new domain flow is the correct business direction for the repository.
 There is no longer a single authoritative runtime. The product now has:
 
 - a browser UI runtime for the Studio,
+- a local ordinary-user User App MVP preview runtime,
 - a legacy demo/runtime stack,
 - a new template production pipeline.
 

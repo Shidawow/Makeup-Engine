@@ -5,9 +5,10 @@ Makeup Engine is the makeup template production system for a future makeup coach
 ## Current Position
 
 - Project role: makeup template production system plus a local contract-driven user app shell prototype.
-- Last completed phase: `Phase 10U`.
-- Current completed business phase: `Phase 10U - Real Write Approval Boundary`.
-- Next recommended phase: `Phase 10V - Actual Write Authorization Request`.
+- Last completed phase: `Phase 11A`.
+- Current completed business phase: `Phase 11A - User App MVP Experience Reset`.
+- Next recommended phase: `Phase 11B - User App Guided Step Experience Polish`.
+- Strategic focus: registry chain paused after Phase 10U; active work returns to ordinary-user User App MVP experience.
 - Recent recovery milestones retained in phase docs: `Phase 6K`, `Phase 6L`, `Phase 6L-1`, `Phase 7A`, `Phase 7B`, `Phase 7C`, `Phase 7D`, `Phase 7E`, `Phase 7F`, `Phase 7G`, `Phase 7H`, and `Phase 8A`.
 - Historical route-planning milestone: `Phase 8A - Product Route Decision / App MVP Planning`.
 
@@ -72,6 +73,7 @@ SourceImagePackage manifest
 -> Guarded Real Write Execution Simulator
 -> Guarded Simulator Review Gate
 -> Real Write Approval Boundary
+-> User App MVP Experience Reset
 -> Phase 8 Roadmap / V1 Non-Goals
 -> Consumption Manifest
 -> Dataset Review
@@ -489,3 +491,13 @@ Phase 10S is simulator-only and cannot write, mutate, publish, replace the shell
 - `docs/phases/phase-10U.md`
 
 Phase 10U is approval-boundary-only. It cannot write registry data, mutate registry state, publish, replace the current User App Shell package, or create a production writer. Next recommended phase: `Phase 10V - Actual Write Authorization Request`.
+
+## Phase 11A Addendum
+
+- `docs/product/user-app-mvp-experience.md`
+- `docs/phases/phase-11A.md`
+
+Phase 11A pauses the registry chain after Phase 10U and resets the active focus
+to the ordinary-user User App MVP experience. The default shell path is Home,
+Template Selection, Template Detail, Preparation, Step-by-step Guidance, and
+Completion. Next recommended phase: `Phase 11B - User App Guided Step Experience Polish`.

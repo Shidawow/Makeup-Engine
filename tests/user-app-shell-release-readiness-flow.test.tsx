@@ -7,7 +7,7 @@ import { userAppMvpShellExamplePackage } from '../src/templates/examples';
 describe('UserAppShell release readiness flow', () => {
   it('adds 8E admin release gate entries without exposing them in ordinary user tabs', () => {
     const html = renderToStaticMarkup(
-      <UserAppShell packageData={userAppMvpShellExamplePackage} />,
+      <UserAppShell packageData={userAppMvpShellExamplePackage} showAdminTools />,
     );
     const userPathStart = html.indexOf('用户路径');
     const adminStart = html.indexOf('管理员检查');

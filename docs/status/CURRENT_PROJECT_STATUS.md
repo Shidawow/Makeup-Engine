@@ -2,13 +2,21 @@
 
 ## Current Phase
 
-Phase 10U: Real Write Approval Boundary is complete.
+Phase 11A: User App MVP Experience Reset is complete.
 
-Last completed business phase: Phase 10U.
+Last completed business phase: Phase 11A.
 
-Next recommended phase: Phase 10V, Actual Write Authorization Request.
+Next recommended phase: Phase 11B, User App Guided Step Experience Polish.
 
-Phase 10U adds a local administrator-only real write approval boundary after Phase 10T simulator review gate readiness. Approval boundary ready means eligible for a future actual write authorization request only. It is still not actual registry write authorization, not registry write execution, not registry mutation, not production writer creation or readiness, not publication, not production package creation, not User App Shell package replacement, not backend service, and not a production app readiness marker.
+Phase 11A intentionally pauses the post-10U registry write chain and shifts the
+active product focus back to a clean ordinary-user User App MVP experience.
+The User App Shell now presents Home, Template Selection, Template Detail,
+Preparation, Step-by-step Guidance, and Completion as the default path.
+Administrator trial, Template Studio, and registry safety tooling remain
+available only when explicitly enabled.
+
+Registry chain status: paused after Phase 10U. Phase 10V actual write
+authorization is not the active next phase.
 
 ## What The System Can Do
 
@@ -119,6 +127,10 @@ Phase 10U adds a local administrator-only real write approval boundary after Pha
   scope, owner-not-authorized actual write / registry mutation / publish /
   shell replacement / production writer creation, audit requirements, rollback
   approval requirements, and future separate owner authorization.
+- Render a default ordinary-user User App MVP path with home, local template
+  selection, template detail, preparation, step-by-step guidance, progress, and
+  completion state without exposing registry, simulator, publish, approval
+  boundary, production writer, pipeline trace, or FaceMesh debug terminology.
 - Render compact Template Studio workflow, candidate package, candidate-to-app,
   user app package draft preview, official draft gate, and official draft
   builder, draft publish gate, registry preparation, and registry write gate

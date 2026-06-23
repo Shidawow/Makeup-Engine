@@ -15,7 +15,8 @@ describe('UserAppShell onboarding and preferences flow', () => {
     expect(html).toContain('\u6211\u7684\u504f\u597d');
     expect(html).toContain('照片占位');
     expect(html).toContain('\u9690\u79c1\u8bf4\u660e');
-    expect(html).toContain('用户路径');
+    expect(html).toContain('打开管理员检查');
+    expect(html).toContain('管理员区域只用于项目验收和后台链路复核');
     expect(html).not.toContain('type="file"');
     expect(html).not.toContain('blob:');
     expect(html).not.toContain('data:image/');

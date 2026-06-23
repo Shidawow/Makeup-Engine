@@ -1,4 +1,5 @@
 export * from './UserAppCompatibilityBanner';
+export * from './UserAppCompletion';
 export * from './UserAppHome';
 export * from './UserAppInteractionChecklist';
 export * from './UserPhotoIntakePlaceholder';
@@ -12,6 +13,9 @@ export * from './UserAppReadinessPanel';
 export * from './UserAppShell';
 export * from './UserAppSessionPanel';
 export * from './UserAppSessionRecoveryNotice';
+export * from './UserAppStepGuide';
+export * from './UserAppTemplateDetail';
+export * from './UserAppTemplateSelection';
 export * from './UserAppTrialFeedbackPanel';
 export * from './UserAppTrialPackPanel';
 export * from './UserAppTrialReadinessPanel';
