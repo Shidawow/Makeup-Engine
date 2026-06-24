@@ -1592,3 +1592,34 @@ Why Phase 11B follows:
 The ordinary-user MVP path is now coherent enough for guided-step polish.
 Phase 11B should improve step transitions, mobile touch ergonomics, progress
 feedback, and demo readiness without resuming registry write work.
+
+## Phase 11B - User App Guided Step Experience Polish
+
+Polished the ordinary-user preparation, guided step, mobile action, and
+completion experience.
+
+What changed:
+
+- Added a dedicated preparation screen for title, difficulty, estimated time,
+  step count, tool checklist, product suggestions, privacy reminder, and start
+  action.
+- Improved the step guide with current step number, progress bar, step status
+  rail, Chinese region label, tools/products, specific instructions, cautions,
+  correction tips, previous/next actions, “完成本步骤”, and final “完成本次妆容”.
+- Improved the completion page with template name, completed count, step review,
+  restart, and return-to-selection actions.
+- Added guided-step, mobile guidance layout, documentation, and project-state
+  tests.
+
+What still cannot happen:
+
+- Phase 11B does not resume Phase 10V, execute registry writes, mutate registry
+  state, publish, create a production writer, replace the current User App Shell
+  package, add backend/database/login/payment/camera/AR/OpenAI or external API
+  scope, or train models.
+
+Why Phase 11C follows:
+
+The guided flow is now smoother enough to improve visual guidance and template
+content. Phase 11C should polish region/tool visual guidance and the makeup
+instruction content while keeping the registry chain paused.

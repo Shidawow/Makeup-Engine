@@ -7,6 +7,7 @@ export * from './UserAppProgressPanel';
 export * from './UserAppMobileQaPanel';
 export * from './UserAppMobileHome';
 export * from './UserAppMvpPolishChecklist';
+export * from './UserAppPreparation';
 export * from './UserAppPwaInstallPanel';
 export * from './UserAppReadinessGate';
 export * from './UserAppReadinessPanel';

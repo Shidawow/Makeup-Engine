@@ -859,3 +859,24 @@ The reset does not execute registry writes, mutate registry state, publish,
 create a production writer, replace the current User App Shell package, add
 backend/database/login/payment/camera/AR/OpenAI/external API scope, or train
 models.
+
+## Phase 11B User App Guided Step Experience Polish
+
+Phase 11B keeps the same ordinary-user shell path and polishes the preparation,
+step-by-step guidance, mobile action layout, and completion state.
+
+`src/components/user-app/UserAppPreparation.tsx` owns the start checkpoint:
+title, difficulty, estimated time, step count, tool checklist, optional product
+suggestions, privacy reminder, and start action.
+
+`src/components/user-app/UserAppStepGuide.tsx` renders the current step number,
+progress bar, step status rail, region label, target effect, tools/products,
+instructions, cautions, correction tips, and previous/next/complete actions.
+
+`src/components/user-app/UserAppCompletion.tsx` summarizes template name,
+completed count, step review, restart, and return-to-selection actions.
+
+Phase 11B remains a local MVP shell polish layer. It does not resume Phase 10V,
+write or mutate registries, publish, create production writers, replace the
+current User App Shell package, add backend/API/camera/AR scope, or train
+models.

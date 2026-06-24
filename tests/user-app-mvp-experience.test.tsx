@@ -3,6 +3,7 @@ import { renderToStaticMarkup } from 'react-dom/server';
 import { describe, expect, it } from 'vitest';
 import {
   UserAppCompletion,
+  UserAppPreparation,
   UserAppShell,
   UserAppStepGuide,
   UserAppTemplateDetail,
@@ -74,6 +75,24 @@ describe('User App MVP experience reset', () => {
     expect(html).toContain('开始分步骤跟练');
   });
 
+  it('renders preparation with checklist, duration, step count, and start action', () => {
+    const html = renderToStaticMarkup(
+      <UserAppPreparation
+        canEnterStepGuide
+        onStartGuidance={() => undefined}
+        template={viewModel.selectedTemplate}
+      />,
+    );
+
+    expect(html).toContain('开始前准备');
+    expect(html).toContain('工具 checklist');
+    expect(html).toContain('预计耗时');
+    expect(html).toContain('本次步骤');
+    expect(html).toContain('开始跟练');
+    expect(html).toContain('不保存照片');
+    expect(html).toContain('不会把跟练状态用于训练');
+  });
+
   it('renders step guide progress and previous/next actions', () => {
     const html = renderToStaticMarkup(
       <UserAppStepGuide
@@ -87,12 +106,12 @@ describe('User App MVP experience reset', () => {
 
     expect(html).toContain('分步骤跟练');
     expect(html).toContain('跟练进度');
-    expect(html).toContain('区域和目的');
-    expect(html).toContain('操作提示');
+    expect(html).toContain('区域和目标');
+    expect(html).toContain('具体操作');
     expect(html).toContain('注意事项');
     expect(html).toContain('上一步');
     expect(html).toContain('下一步');
-    expect(html).toContain('标记完成');
+    expect(html).toContain('完成本步骤');
   });
 
   it('renders completion state with restart and template selection exits', () => {
@@ -101,12 +120,15 @@ describe('User App MVP experience reset', () => {
         completedSteps={6}
         onChooseAnother={() => undefined}
         onRestart={() => undefined}
+        steps={viewModel.selectedTemplate?.steps}
+        templateTitle={viewModel.selectedTemplate?.title}
         totalSteps={6}
       />,
     );
 
     expect(html).toContain('已完成本次妆容练习');
     expect(html).toContain('6 / 6 个步骤');
+    expect(html).toContain('步骤回顾');
     expect(html).toContain('重新开始这套妆容');
     expect(html).toContain('返回模板选择');
     expect(html).toContain('不上传照片');

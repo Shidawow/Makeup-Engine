@@ -12,9 +12,10 @@ index.html
 → 用户 App 预览 / 视觉分析 / 模板工作台 tabs
 ```
 
-Phase 11A makes the ordinary-user User App MVP preview the default browser
-entry. The Vision Analysis and Template Studio flows still exist as
-administrator/operator tabs, but they are no longer the default first screen.
+Phase 11B keeps the ordinary-user User App MVP preview as the default browser
+entry and polishes the preparation, guided step, mobile action, and completion
+flow. The Vision Analysis and Template Studio flows still exist as
+administrator/operator tabs, but they are not the default first screen.
 
 ## Orchestration Entrypoints
 
@@ -35,6 +36,7 @@ index.html
 → Vite mounts #root
 → ReactDOM creates App
 → AppShell renders UserAppShell preview by default
+→ ordinary user follows Home / Template Selection / Detail / Preparation / Step Guide / Completion
 → user can switch to Vision Analysis or TemplateStudio operator tabs
 → TemplateStudio loads exampleMakeupTemplates when selected
 → user uploads photo or selects sample

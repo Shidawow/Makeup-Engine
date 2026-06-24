@@ -2,18 +2,18 @@
 
 ## Current Phase
 
-Phase 11A: User App MVP Experience Reset is complete.
+Phase 11B: User App Guided Step Experience Polish is complete.
 
-Last completed business phase: Phase 11A.
+Last completed business phase: Phase 11B.
 
-Next recommended phase: Phase 11B, User App Guided Step Experience Polish.
+Next recommended phase: Phase 11C, User App Visual Guidance & Template Content Polish.
 
-Phase 11A intentionally pauses the post-10U registry write chain and shifts the
-active product focus back to a clean ordinary-user User App MVP experience.
-The User App Shell now presents Home, Template Selection, Template Detail,
-Preparation, Step-by-step Guidance, and Completion as the default path.
-Administrator trial, Template Studio, and registry safety tooling remain
-available only when explicitly enabled.
+Phase 11B keeps the post-10U registry write chain paused and polishes the
+ordinary-user guided step experience. The User App Shell now presents a clearer
+Preparation screen, more readable step-by-step guidance, larger touch actions,
+step completion feedback, and a more useful Completion summary. Administrator
+trial, Template Studio, and registry safety tooling remain available only when
+explicitly enabled.
 
 Registry chain status: paused after Phase 10U. Phase 10V actual write
 authorization is not the active next phase.
@@ -131,6 +131,10 @@ authorization is not the active next phase.
   selection, template detail, preparation, step-by-step guidance, progress, and
   completion state without exposing registry, simulator, publish, approval
   boundary, production writer, pipeline trace, or FaceMesh debug terminology.
+- Render a polished guided step experience with a preparation checklist,
+  current step number, progress bar, region label, tool/product guidance,
+  cautions, correction tips, larger mobile touch actions, and completion
+  review while staying local-only.
 - Render compact Template Studio workflow, candidate package, candidate-to-app,
   user app package draft preview, official draft gate, and official draft
   builder, draft publish gate, registry preparation, and registry write gate

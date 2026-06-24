@@ -102,6 +102,7 @@ import { UserAppMobileHome } from './UserAppMobileHome';
 import { UserAppMobileQaPanel } from './UserAppMobileQaPanel';
 import { UserAppMvpPolishChecklist } from './UserAppMvpPolishChecklist';
 import { UserAppMvpReleaseReadinessPanel } from './UserAppMvpReleaseReadinessPanel';
+import { UserAppPreparation } from './UserAppPreparation';
 import { UserAppProgressPanel } from './UserAppProgressPanel';
 import { UserAppPwaInstallPanel } from './UserAppPwaInstallPanel';
 import { UserAppNextPhaseRecommendationPanel } from './UserAppNextPhaseRecommendationPanel';
@@ -134,7 +135,6 @@ import { UserPrivacyNotice } from './UserPrivacyNotice';
 import { UserPreferenceSetupPanel } from './UserPreferenceSetupPanel';
 import { UserPreferenceSummary } from './UserPreferenceSummary';
 import { UserTemplateDiscoveryPanel } from './UserTemplateDiscoveryPanel';
-import { UserToolProductPanel } from './UserToolProductPanel';
 
 export interface UserAppShellProps {
   packageData?: UserAppTemplatePackage | null;
@@ -913,15 +913,11 @@ export function UserAppShell({
           ) : null}
 
           {state.navigation.currentScreen === 'tools' && currentTemplate ? (
-            <>
-              <UserAppTemplateDetail
-                canEnterStepGuide={viewModel.compatibility.canEnterStepGuide}
-                onShowPreparation={goToPreparation}
-                onStartGuidance={startGuidance}
-                template={currentTemplate}
-              />
-              <UserToolProductPanel toolsAndProducts={currentTemplate.toolsAndProducts} />
-            </>
+            <UserAppPreparation
+              canEnterStepGuide={viewModel.compatibility.canEnterStepGuide}
+              onStartGuidance={startGuidance}
+              template={currentTemplate}
+            />
           ) : null}
 
           {state.navigation.currentScreen === 'compatibility' ? (
@@ -934,6 +930,8 @@ export function UserAppShell({
                 completedSteps={completedSteps}
                 onChooseAnother={goToTemplateSelection}
                 onRestart={restartCurrentTemplate}
+                steps={currentTemplate.steps}
+                templateTitle={currentTemplate.title}
                 totalSteps={totalSelectedSteps}
               />
             ) : (

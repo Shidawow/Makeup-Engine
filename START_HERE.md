@@ -5,9 +5,9 @@ Makeup Engine is the makeup template production system for a future makeup coach
 ## Current Position
 
 - Project role: makeup template production system plus a local contract-driven user app shell prototype.
-- Last completed phase: `Phase 11A`.
-- Current completed business phase: `Phase 11A - User App MVP Experience Reset`.
-- Next recommended phase: `Phase 11B - User App Guided Step Experience Polish`.
+- Last completed phase: `Phase 11B`.
+- Current completed business phase: `Phase 11B - User App Guided Step Experience Polish`.
+- Next recommended phase: `Phase 11C - User App Visual Guidance & Template Content Polish`.
 - Strategic focus: registry chain paused after Phase 10U; active work returns to ordinary-user User App MVP experience.
 - Recent recovery milestones retained in phase docs: `Phase 6K`, `Phase 6L`, `Phase 6L-1`, `Phase 7A`, `Phase 7B`, `Phase 7C`, `Phase 7D`, `Phase 7E`, `Phase 7F`, `Phase 7G`, `Phase 7H`, and `Phase 8A`.
 - Historical route-planning milestone: `Phase 8A - Product Route Decision / App MVP Planning`.
@@ -74,6 +74,7 @@ SourceImagePackage manifest
 -> Guarded Simulator Review Gate
 -> Real Write Approval Boundary
 -> User App MVP Experience Reset
+-> User App Guided Step Experience Polish
 -> Phase 8 Roadmap / V1 Non-Goals
 -> Consumption Manifest
 -> Dataset Review
@@ -501,3 +502,15 @@ Phase 11A pauses the registry chain after Phase 10U and resets the active focus
 to the ordinary-user User App MVP experience. The default shell path is Home,
 Template Selection, Template Detail, Preparation, Step-by-step Guidance, and
 Completion. Next recommended phase: `Phase 11B - User App Guided Step Experience Polish`.
+
+## Phase 11B Addendum
+
+- `docs/product/user-app-guided-step-experience.md`
+- `docs/phases/phase-11B.md`
+
+Phase 11B polishes the ordinary-user preparation, step-by-step guidance,
+mobile touch actions, and completion summary. The registry chain remains paused
+after Phase 10U, Phase 10V is still not the active next phase, and the shell
+still does not write registries, publish, create production writers, replace
+the current User App Shell package, add backend/camera/AR/API scope, or train
+models. Next recommended phase: `Phase 11C - User App Visual Guidance & Template Content Polish`.

@@ -1,7 +1,7 @@
 {
-  "fromPhase": "11A",
-  "toPhase": "11B",
-  "summary": "Phase 11A paused the registry chain and reset the ordinary-user User App MVP experience.",
+  "fromPhase": "11B",
+  "toPhase": "11C",
+  "summary": "Phase 11B polished the ordinary-user guided step experience while keeping the registry chain paused.",
   "routeDecision": {
     "selectedRoute": "React Web / PWA MVP first",
     "futureAppOwnership": "separate user-facing app surface/repository after a future explicit phase gate",
@@ -41,9 +41,11 @@
     "project-state/latest-handoff.json",
     "project-state/provider-handoff.json",
     "project-state/active-task.json",
-    "project-state/guardrails.json"
+    "project-state/guardrails.json",
+    "docs/product/user-app-guided-step-experience.md",
+    "docs/phases/phase-11B.md"
   ],
-  "nextAction": "Proceed to Phase 11B - User App Guided Step Experience Polish.",
+  "nextAction": "Proceed to Phase 11C - User App Visual Guidance & Template Content Polish.",
   "risks": [
     "Do not resume actual registry write authorization without explicit owner direction.",
     "Keep administrator/backend terms out of ordinary user paths.",
@@ -91,7 +93,8 @@
     "Do not commit public/mediapipe .task/.wasm/model files, DOC-ILLUSTRATED generated docs, dist, tmp, node_modules, coverage, or .vite artifacts.",
     "Do not treat Phase 10U real write approval boundary readiness, checklist, or handoff as actual registry write authorization, registry write execution, registry mutation, publication, production readiness, production package creation, production writer readiness, production writer creation, or current User App Shell package replacement.",
     "Do not execute a registry write, mutate registry state, publish, replace the current User App Shell package, create a production writer, create backend/database/API scope, request camera/AR scope, call OpenAI/external APIs, or train models in Phase 10U.",
-    "Phase 11A must not resume Phase 10V, execute real registry write, mutate registry state, publish, create a production writer, replace the current User App Shell package, add backend/database/login/payment/camera/AR/OpenAI/external API scope, train models, upload real photos, or expose registry/simulator/gate terminology in the ordinary-user path."
+    "Phase 11A must not resume Phase 10V, execute real registry write, mutate registry state, publish, create a production writer, replace the current User App Shell package, add backend/database/login/payment/camera/AR/OpenAI/external API scope, train models, upload real photos, or expose registry/simulator/gate terminology in the ordinary-user path.",
+    "Phase 11B must not resume Phase 10V, execute real registry write, mutate registry state, publish, create a production writer, replace the current User App Shell package, add backend/database/login/payment/camera/AR/OpenAI/external API scope, train models, upload real photos, or expose registry/simulator/gate terminology in the ordinary-user path."
   ],
   "trialPackDecision": {
     "phase8CResult": [
@@ -169,9 +172,10 @@
     "contextPackJson": "passed",
     "browserVerification": "passed",
     "phase11AScopedTests": "passed",
-    "testFiles": 8,
-    "tests": 22,
-    "summary": "Phase 11A validation passed: MediaPipe check, typecheck, build, project status/context, JSON status/context, scoped tests, and browser verification passed."
+    "testFiles": 9,
+    "tests": 29,
+    "summary": "Phase 11B validation passed: MediaPipe check, scoped tests (9 files / 29 tests), typecheck, build, project status/context, JSON status/context, and browser verification passed.",
+    "phase11BScopedTests": "passed"
   },
   "internalTrialLearningDecision": {
     "phase9DResult": [
@@ -182,10 +186,10 @@
     "learningBoundary": "anonymous/mock/example summaries only; no real personal data, backend records, AI analysis records, training data, or project-state user records",
     "nextPhase": "Phase 9E - Internal Trial Evidence Pack"
   },
-  "lastCompletedPhase": "11A",
-  "nextRecommendedPhase": "11B",
-  "nextRecommendedPhaseName": "User App Guided Step Experience Polish",
-  "updatedAt": "2026-06-23T00:00:00.000Z",
+  "lastCompletedPhase": "11B",
+  "nextRecommendedPhase": "11C",
+  "nextRecommendedPhaseName": "User App Visual Guidance & Template Content Polish",
+  "updatedAt": "2026-06-24T00:00:00.000+08:00",
   "validation": {
     "mediapipeCheck": "passed",
     "typecheck": "passed",
@@ -197,9 +201,10 @@
     "contextPackJson": "passed",
     "browserVerification": "passed",
     "phase11AScopedTests": "passed",
-    "testFiles": 8,
-    "tests": 22,
-    "summary": "Phase 11A validation passed: MediaPipe check, typecheck, build, project status/context, JSON status/context, scoped tests, and browser verification passed."
+    "testFiles": 9,
+    "tests": 29,
+    "summary": "Phase 11B validation passed: MediaPipe check, scoped tests (9 files / 29 tests), typecheck, build, project status/context, JSON status/context, and browser verification passed.",
+    "phase11BScopedTests": "passed"
   },
   "internalTrialEvidenceDecision": {
     "phase9EResult": [
@@ -314,15 +319,15 @@
     "nextPhase": "Phase 10I - UserAppTemplatePackage Registry Preparation",
     "boundary": "Gate-only output; no publish, no registry write execution, no production package, no User App Shell package replacement."
   },
-  "currentPhase": "User App MVP Experience Reset",
-  "currentPhaseId": "11A",
+  "currentPhase": "User App Guided Step Experience Polish",
+  "currentPhaseId": "11B",
   "userAppTemplatePackageRegistryPreparationDecision": {
     "nextPhase": "Phase 10J - UserAppTemplatePackage Registry Write Gate",
     "boundary": "Preparation-only output; no actual registry write, no publish, no production package, no User App Shell package replacement."
   },
-  "phase": "11A",
-  "lastUpdatedPhase": "11A",
-  "currentPhaseName": "User App MVP Experience Reset",
+  "phase": "11B",
+  "lastUpdatedPhase": "11B",
+  "currentPhaseName": "User App Guided Step Experience Polish",
   "status": "completed",
   "userAppTemplatePackageRegistryWriteGateDecision": {
     "nextPhase": "Phase 10K - Controlled UserAppTemplatePackage Registry Writer Draft",
@@ -356,7 +361,7 @@
     "boundary": "Phase 10P final real write review gate checks Phase 10O implementation draft validation while keeping dry-run-only, no actual write, no publish, no production writer, and no shell package replacement boundaries intact.",
     "ownerAuthorizationBoundary": "授权范围：A。只授权进入 Phase 10P 最终真实写入复核闸门，不授权真实写入 registry，不授权发布，不授权替换当前 User App Shell package。 This is review-gate-only and does not authorize actual registry write execution, publication, production writer creation, production package creation, or current User App Shell package replacement."
   },
-  "lastCompletedBusinessPhase": "11A",
+  "lastCompletedBusinessPhase": "11B",
   "realWriteExecutionAuthorizationDecision": {
     "nextPhase": "Phase 10R - Real Write Execution Plan",
     "boundary": "Phase 10Q authorization ready means eligible for a future real write execution plan only; it remains dry-run only, no actual write, no publish, no production writer, no production package, no registry mutation, and no shell package replacement.",
@@ -387,9 +392,10 @@
     "contextPackJson": "passed",
     "browserVerification": "passed",
     "phase11AScopedTests": "passed",
-    "testFiles": 8,
-    "tests": 22,
-    "summary": "Phase 11A validation passed: MediaPipe check, typecheck, build, project status/context, JSON status/context, scoped tests, and browser verification passed."
+    "testFiles": 9,
+    "tests": 29,
+    "summary": "Phase 11B validation passed: MediaPipe check, scoped tests (9 files / 29 tests), typecheck, build, project status/context, JSON status/context, and browser verification passed.",
+    "phase11BScopedTests": "passed"
   },
   "requiredValidationCommands": [
     "npm run mediapipe:check",
@@ -399,7 +405,7 @@
     "npm run project:context",
     "node scripts/project-status.mjs --json",
     "node scripts/context-pack.mjs --json",
-    "npm run test -- tests/app-shell-user-app-preview.test.tsx tests/user-app-mvp-experience.test.tsx tests/user-app-admin-boundary.test.tsx tests/phase-11A-documentation-recovery.test.ts tests/template-studio-tab-boundary.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
+    "npm run test -- tests/user-app-mvp-experience.test.tsx tests/user-app-admin-boundary.test.tsx tests/user-app-guided-step-experience.test.tsx tests/user-app-mobile-guidance-layout.test.tsx tests/phase-11B-documentation-recovery.test.ts tests/template-studio-tab-boundary.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
   ],
   "requiredCommands": [
     "npm run mediapipe:check",
@@ -409,7 +415,7 @@
     "npm run project:context",
     "node scripts/project-status.mjs --json",
     "node scripts/context-pack.mjs --json",
-    "npm run test -- tests/app-shell-user-app-preview.test.tsx tests/user-app-mvp-experience.test.tsx tests/user-app-admin-boundary.test.tsx tests/phase-11A-documentation-recovery.test.ts tests/template-studio-tab-boundary.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
+    "npm run test -- tests/user-app-mvp-experience.test.tsx tests/user-app-admin-boundary.test.tsx tests/user-app-guided-step-experience.test.tsx tests/user-app-mobile-guidance-layout.test.tsx tests/phase-11B-documentation-recovery.test.ts tests/template-studio-tab-boundary.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
   ],
   "commands": [
     "npm run mediapipe:check",
@@ -419,9 +425,9 @@
     "npm run project:context",
     "node scripts/project-status.mjs --json",
     "node scripts/context-pack.mjs --json",
-    "npm run test -- tests/app-shell-user-app-preview.test.tsx tests/user-app-mvp-experience.test.tsx tests/user-app-admin-boundary.test.tsx tests/phase-11A-documentation-recovery.test.ts tests/template-studio-tab-boundary.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
+    "npm run test -- tests/user-app-mvp-experience.test.tsx tests/user-app-admin-boundary.test.tsx tests/user-app-guided-step-experience.test.tsx tests/user-app-mobile-guidance-layout.test.tsx tests/phase-11B-documentation-recovery.test.ts tests/template-studio-tab-boundary.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
   ],
-  "lastUpdated": "2026-06-23T00:00:00.000Z",
+  "lastUpdated": "2026-06-24T00:00:00.000+08:00",
   "guardedSimulatorReviewGateDecision": {
     "nextPhase": "Phase 10U - Real Write Approval Boundary",
     "boundary": "review-gate-only; no actual write, no registry mutation, no publish, no shell package replacement, no production writer",
@@ -467,5 +473,75 @@
     "adminBoundary": "administrator trial, Template Studio, and registry safety tooling are explicitly separated from the ordinary user path",
     "nextPhase": "Phase 11B - User App Guided Step Experience Polish",
     "browserEntry": "AppShell defaults to 用户 App 预览 for local ordinary-user browser QA; Vision Analysis and Template Studio remain operator/admin tabs."
-  }
+  },
+  "validationCommands": [
+    "npm run mediapipe:check",
+    "npm run typecheck",
+    "npm run build",
+    "npm run project:status",
+    "npm run project:context",
+    "node scripts/project-status.mjs --json",
+    "node scripts/context-pack.mjs --json",
+    "npm run test -- tests/user-app-mvp-experience.test.tsx tests/user-app-admin-boundary.test.tsx tests/user-app-guided-step-experience.test.tsx tests/user-app-mobile-guidance-layout.test.tsx tests/phase-11B-documentation-recovery.test.ts tests/template-studio-tab-boundary.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
+  ],
+  "userAppGuidedStepExperiencePolish": {
+    "registryChainStatus": "registry chain paused after Phase 10U",
+    "realWriteAuthorizationPath": "Phase 10V intentionally paused; not the active next phase",
+    "userPath": [
+      "home",
+      "template_selection",
+      "template_detail",
+      "preparation",
+      "step_by_step_guidance",
+      "completion"
+    ],
+    "preparationPolish": [
+      "title",
+      "difficulty",
+      "estimated_time",
+      "step_count",
+      "tool_checklist",
+      "privacy_reminder",
+      "start_guidance_action"
+    ],
+    "stepGuidePolish": [
+      "current_step_number",
+      "progress_bar",
+      "step_status_rail",
+      "region_label",
+      "tools_and_products",
+      "instruction",
+      "cautions",
+      "correction_tips",
+      "mobile_touch_actions"
+    ],
+    "completionPolish": [
+      "template_name",
+      "completed_step_count",
+      "step_review",
+      "restart_action",
+      "return_to_selection_action"
+    ],
+    "adminBoundary": "administrator trial, Template Studio, and registry safety tooling remain explicitly separated from the ordinary user path",
+    "nextPhase": "Phase 11C - User App Visual Guidance & Template Content Polish"
+  },
+  "nextRequiredReadFiles": [
+    "AGENTS.md",
+    "START_HERE.md",
+    "docs/prompts/MASTER_CODEX_CONTEXT.md",
+    "docs/prompts/PROVIDER_SWITCH_PROMPT.md",
+    "docs/status/CURRENT_PROJECT_STATUS.md",
+    "docs/status/NEXT_ACTION.md",
+    "docs/product/user-app-mvp-experience.md",
+    "docs/phases/phase-11A.md",
+    "docs/phases/phase-10U.md",
+    "docs/product/real-write-approval-boundary.md",
+    "project-state/project-state.snapshot.json",
+    "project-state/latest-handoff.json",
+    "project-state/provider-handoff.json",
+    "project-state/active-task.json",
+    "project-state/guardrails.json",
+    "docs/product/user-app-guided-step-experience.md",
+    "docs/phases/phase-11B.md"
+  ]
 }

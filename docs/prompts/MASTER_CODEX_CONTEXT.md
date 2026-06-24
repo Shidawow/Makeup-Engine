@@ -12,10 +12,10 @@ It produces templates, template evidence, correction records, review state, loca
 
 ## Current Phase
 
-- Current business phase: `Phase 11A completed`
-- Last completed phase: `Phase 11A`
-- Last completed phase name: `Phase 11A - User App MVP Experience Reset`
-- Next recommended phase: `Phase 11B - User App Guided Step Experience Polish`
+- Current business phase: `Phase 11B completed`
+- Last completed phase: `Phase 11B`
+- Last completed phase name: `Phase 11B - User App Guided Step Experience Polish`
+- Next recommended phase: `Phase 11C - User App Visual Guidance & Template Content Polish`
 - Strategic focus: registry chain paused after Phase 10U; active work returns to ordinary-user User App MVP experience.
 
 Historical recovery marker retained for Phase 10U tests: `Phase 10U completed`.
@@ -103,6 +103,7 @@ Real Photo
 -> Guarded Simulator Review Gate
 -> Real Write Approval Boundary
 -> User App MVP Experience Reset
+-> User App Guided Step Experience Polish
 -> Phase 8 Roadmap / V1 Non-Goals
 -> User App Consumption Manifest
 -> Dataset Review
@@ -623,5 +624,15 @@ Detail, Preparation, Step-by-step Guidance, and Completion. Administrator trial,
 Template Studio, and registry safety terminology remain out of the default user
 path. Next recommended phase: Phase 11B - User App Guided Step Experience
 Polish.
+
+Phase 11B completed User App Guided Step Experience Polish. The preparation
+screen now shows title, difficulty, estimated time, step count, tool checklist,
+privacy reminder, and start action. Step guidance now shows current step number,
+progress, step status, region, tools/products, instructions, cautions,
+correction tips, and mobile-friendly actions. Completion now includes template
+name, completed count, step review, restart, and return-to-selection actions.
+The registry chain remains paused after Phase 10U and Phase 10V is still not
+the active next phase. Next recommended phase: Phase 11C - User App Visual
+Guidance & Template Content Polish.
 
 Historical handoff marker retained for Phase 10T recovery tests: Phase 10T completed / lastCompletedPhase: 10T / nextRecommendedPhase: 10U / Real Write Approval Boundary / Guarded Simulator Review Gate.

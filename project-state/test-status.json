@@ -1,6 +1,6 @@
 {
-  "phase": "11A",
-  "status": "passed",
+  "phase": "11B",
+  "status": "completed",
   "lastValidation": {
     "mediapipeCheck": "passed",
     "typecheck": "passed",
@@ -12,9 +12,10 @@
     "contextPackJson": "passed",
     "browserVerification": "passed",
     "phase11AScopedTests": "passed",
-    "testFiles": 8,
-    "tests": 22,
-    "summary": "Phase 11A validation passed: MediaPipe check, typecheck, build, project status/context, JSON status/context, scoped tests, and browser verification passed."
+    "testFiles": 9,
+    "tests": 29,
+    "summary": "Phase 11B validation passed: MediaPipe check, scoped tests (9 files / 29 tests), typecheck, build, project status/context, JSON status/context, and browser verification passed.",
+    "phase11BScopedTests": "passed"
   },
   "lastKnownPreDoc0Validation": {
     "typecheck": "passed",
@@ -31,17 +32,17 @@
     "npm run project:context",
     "node scripts/project-status.mjs --json",
     "node scripts/context-pack.mjs --json",
-    "npm run test -- tests/app-shell-user-app-preview.test.tsx tests/user-app-mvp-experience.test.tsx tests/user-app-admin-boundary.test.tsx tests/phase-11A-documentation-recovery.test.ts tests/template-studio-tab-boundary.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
+    "npm run test -- tests/user-app-mvp-experience.test.tsx tests/user-app-admin-boundary.test.tsx tests/user-app-guided-step-experience.test.tsx tests/user-app-mobile-guidance-layout.test.tsx tests/phase-11B-documentation-recovery.test.ts tests/template-studio-tab-boundary.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
   ],
   "notes": [
     "Phase 10U scoped validation pending final run.",
     "Do not treat approval boundary readiness as actual registry write authorization."
   ],
-  "lastCompletedPhase": "11A",
-  "currentPhase": "User App MVP Experience Reset",
-  "nextRecommendedPhase": "11B",
-  "updatedAt": "2026-06-23T00:00:00.000Z",
-  "summary": "Phase 11A resets active product focus to the ordinary-user User App MVP experience and pauses the registry chain after Phase 10U.",
+  "lastCompletedPhase": "11B",
+  "currentPhase": "User App Guided Step Experience Polish",
+  "nextRecommendedPhase": "11C",
+  "updatedAt": "2026-06-24T00:00:00.000+08:00",
+  "summary": "Phase 11B polishes the ordinary-user guided step experience while keeping the registry chain paused after Phase 10U.",
   "validation": {
     "mediapipeCheck": "passed",
     "typecheck": "passed",
@@ -53,11 +54,12 @@
     "contextPackJson": "passed",
     "browserVerification": "passed",
     "phase11AScopedTests": "passed",
-    "testFiles": 8,
-    "tests": 22,
-    "summary": "Phase 11A validation passed: MediaPipe check, typecheck, build, project status/context, JSON status/context, scoped tests, and browser verification passed."
+    "testFiles": 9,
+    "tests": 29,
+    "summary": "Phase 11B validation passed: MediaPipe check, scoped tests (9 files / 29 tests), typecheck, build, project status/context, JSON status/context, and browser verification passed.",
+    "phase11BScopedTests": "passed"
   },
-  "nextRecommendedPhaseName": "User App Guided Step Experience Polish",
+  "nextRecommendedPhaseName": "User App Visual Guidance & Template Content Polish",
   "results": {
     "mediapipeCheck": "passed",
     "typecheck": "passed",
@@ -69,9 +71,10 @@
     "contextPackJson": "passed",
     "browserVerification": "passed",
     "phase11AScopedTests": "passed",
-    "testFiles": 8,
-    "tests": 22,
-    "summary": "Phase 11A validation passed: MediaPipe check, typecheck, build, project status/context, JSON status/context, scoped tests, and browser verification passed."
+    "testFiles": 9,
+    "tests": 29,
+    "summary": "Phase 11B validation passed: MediaPipe check, scoped tests (9 files / 29 tests), typecheck, build, project status/context, JSON status/context, and browser verification passed.",
+    "phase11BScopedTests": "passed"
   },
   "requiredCommands": [
     "npm run mediapipe:check",
@@ -81,11 +84,11 @@
     "npm run project:context",
     "node scripts/project-status.mjs --json",
     "node scripts/context-pack.mjs --json",
-    "npm run test -- tests/app-shell-user-app-preview.test.tsx tests/user-app-mvp-experience.test.tsx tests/user-app-admin-boundary.test.tsx tests/phase-11A-documentation-recovery.test.ts tests/template-studio-tab-boundary.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
+    "npm run test -- tests/user-app-mvp-experience.test.tsx tests/user-app-admin-boundary.test.tsx tests/user-app-guided-step-experience.test.tsx tests/user-app-mobile-guidance-layout.test.tsx tests/phase-11B-documentation-recovery.test.ts tests/template-studio-tab-boundary.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
   ],
   "validationStatus": "passed",
-  "lastUpdatedPhase": "11A",
-  "currentPhaseId": "11A",
+  "lastUpdatedPhase": "11B",
+  "currentPhaseId": "11B",
   "commands": [
     "npm run mediapipe:check",
     "npm run typecheck",
@@ -94,12 +97,12 @@
     "npm run project:context",
     "node scripts/project-status.mjs --json",
     "node scripts/context-pack.mjs --json",
-    "npm run test -- tests/app-shell-user-app-preview.test.tsx tests/user-app-mvp-experience.test.tsx tests/user-app-admin-boundary.test.tsx tests/phase-11A-documentation-recovery.test.ts tests/template-studio-tab-boundary.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
+    "npm run test -- tests/user-app-mvp-experience.test.tsx tests/user-app-admin-boundary.test.tsx tests/user-app-guided-step-experience.test.tsx tests/user-app-mobile-guidance-layout.test.tsx tests/phase-11B-documentation-recovery.test.ts tests/template-studio-tab-boundary.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
   ],
-  "currentPhaseName": "User App MVP Experience Reset",
-  "lastCompletedBusinessPhase": "11A",
-  "lastUpdated": "2026-06-23T00:00:00.000Z",
-  "nextAction": "Proceed to Phase 11B - User App Guided Step Experience Polish.",
+  "currentPhaseName": "User App Guided Step Experience Polish",
+  "lastCompletedBusinessPhase": "11B",
+  "lastUpdated": "2026-06-24T00:00:00.000+08:00",
+  "nextAction": "Proceed to Phase 11C - User App Visual Guidance & Template Content Polish.",
   "taskStatus": "completed",
   "realWriteApprovalBoundaryDecision": {
     "nextPhase": "Phase 10V - Actual Write Authorization Request",
@@ -122,5 +125,56 @@
     "adminBoundary": "administrator trial, Template Studio, and registry safety tooling are explicitly separated from the ordinary user path",
     "nextPhase": "Phase 11B - User App Guided Step Experience Polish",
     "browserEntry": "AppShell defaults to 用户 App 预览 for local ordinary-user browser QA; Vision Analysis and Template Studio remain operator/admin tabs."
+  },
+  "validationCommands": [
+    "npm run mediapipe:check",
+    "npm run typecheck",
+    "npm run build",
+    "npm run project:status",
+    "npm run project:context",
+    "node scripts/project-status.mjs --json",
+    "node scripts/context-pack.mjs --json",
+    "npm run test -- tests/user-app-mvp-experience.test.tsx tests/user-app-admin-boundary.test.tsx tests/user-app-guided-step-experience.test.tsx tests/user-app-mobile-guidance-layout.test.tsx tests/phase-11B-documentation-recovery.test.ts tests/template-studio-tab-boundary.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
+  ],
+  "userAppGuidedStepExperiencePolish": {
+    "registryChainStatus": "registry chain paused after Phase 10U",
+    "realWriteAuthorizationPath": "Phase 10V intentionally paused; not the active next phase",
+    "userPath": [
+      "home",
+      "template_selection",
+      "template_detail",
+      "preparation",
+      "step_by_step_guidance",
+      "completion"
+    ],
+    "preparationPolish": [
+      "title",
+      "difficulty",
+      "estimated_time",
+      "step_count",
+      "tool_checklist",
+      "privacy_reminder",
+      "start_guidance_action"
+    ],
+    "stepGuidePolish": [
+      "current_step_number",
+      "progress_bar",
+      "step_status_rail",
+      "region_label",
+      "tools_and_products",
+      "instruction",
+      "cautions",
+      "correction_tips",
+      "mobile_touch_actions"
+    ],
+    "completionPolish": [
+      "template_name",
+      "completed_step_count",
+      "step_review",
+      "restart_action",
+      "return_to_selection_action"
+    ],
+    "adminBoundary": "administrator trial, Template Studio, and registry safety tooling remain explicitly separated from the ordinary user path",
+    "nextPhase": "Phase 11C - User App Visual Guidance & Template Content Polish"
   }
 }

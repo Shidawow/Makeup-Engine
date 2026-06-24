@@ -578,3 +578,21 @@ and completion. It does not resume Phase 10V, execute a registry write, mutate
 registry state, publish, create a production writer, replace the current User
 App Shell package, add backend/OpenAI/external APIs, request camera/AR scope, or
 train models.
+
+## Phase 11B User App Guided Step Experience Polish Flow
+
+`UserAppTemplatePackage`
+-> `UserAppMvpExperience`
+-> `UserAppTemplateSelection`
+-> `UserAppTemplateDetail`
+-> `UserAppPreparation`
+-> `UserAppStepGuide`
+-> `UserAppCompletion`
+-> next recommendation for Phase 11C visual guidance and template content polish.
+
+The flow is local, deterministic, ordinary-user-facing, and demo/MVP-only. It
+improves the preparation checklist, current-step progress, region/tool
+guidance, mobile touch actions, completion summary, and step review. It does
+not resume Phase 10V, execute a registry write, mutate registry state, publish,
+create a production writer, replace the current User App Shell package, call
+backend/OpenAI/external APIs, request camera/AR scope, or train models.
