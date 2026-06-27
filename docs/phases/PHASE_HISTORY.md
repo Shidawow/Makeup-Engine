@@ -1623,3 +1623,24 @@ Why Phase 11C follows:
 The guided flow is now smoother enough to improve visual guidance and template
 content. Phase 11C should polish region/tool visual guidance and the makeup
 instruction content while keeping the registry chain paused.
+
+## Phase 11B-Fix - Vision Readiness Confidence Label Correction
+
+Corrected Vision Analysis readiness labeling so operators no longer see a
+placeholder runtime `confidence` as model certainty.
+
+What changed:
+
+- Added `readinessScore` to FaceMesh Region QA as a rule-based usability score.
+- Replaced visible `Confidence` / `置信度` readiness labels with
+  `Readiness Score（检测可用性评分）` / `检测可用性评分`.
+- Added UI and documentation copy explaining that the score is based on
+  landmark count, region coverage, normalized coordinates, and face boundary
+  checks, not MediaPipe raw model confidence.
+
+What still cannot happen:
+
+- Phase 11B-Fix does not resume Phase 10V, execute registry writes, mutate
+  registry state, publish, create a production writer, replace the current User
+  App Shell package, add backend/database/login/payment/camera/AR/OpenAI or
+  external API scope, or train models.

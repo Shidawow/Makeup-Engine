@@ -596,3 +596,21 @@ guidance, mobile touch actions, completion summary, and step review. It does
 not resume Phase 10V, execute a registry write, mutate registry state, publish,
 create a production writer, replace the current User App Shell package, call
 backend/OpenAI/external APIs, request camera/AR scope, or train models.
+
+## Phase 11B-Fix Vision Readiness Score Correction Flow
+
+`MediaPipe FaceMesh landmarks`
+-> `FaceMeshRegionQaReport`
+-> `readinessScore`
+-> Vision Analysis readiness summary and Template Workbench visual-analysis summary.
+
+`readinessScore` is a local rule-based usability score. It is derived from
+landmark count, normalized coordinate validity, average makeup-region coverage,
+and face crop margin. Blocked reports are capped at low readiness, warning
+reports stay in a warning range, and ready reports display high readiness.
+
+The score is not MediaPipe model raw confidence. The current browser
+FaceLandmarker path does not expose a reliable single per-image face confidence
+for this project. Runtime `confidence` remains legacy/internal compatibility
+metadata for existing draft heuristics and must not be shown to operators as
+model certainty.

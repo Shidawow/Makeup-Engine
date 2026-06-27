@@ -90,6 +90,26 @@ Ordinary users must not see:
 Administrator QA and the Phase 10A-10U registry safety chain remain preserved
 behind explicit operator/admin entry points.
 
+## Phase 11B-Fix Vision Readiness Label
+
+The Vision Analysis readiness summary and Template Workbench visual-analysis
+summary no longer display FaceMesh `confidence` as a user-facing score.
+
+They display `Readiness Score（检测可用性评分）` instead. This is a rule-based
+usability score derived from:
+
+- landmark count
+- makeup-region coverage
+- normalized coordinate validity
+- face crop margin
+- blocking and warning issue count
+
+This score is not MediaPipe model raw confidence. The current browser
+FaceLandmarker usage in this project does not provide a reliable single
+per-image face confidence. Legacy/internal `confidence` fields may remain in
+runtime data for compatibility, but they must not be presented as model
+certainty in the readiness UI.
+
 ## Current Non-Goals
 
 Phase 11B is not a production app release. It does not add backend, database,

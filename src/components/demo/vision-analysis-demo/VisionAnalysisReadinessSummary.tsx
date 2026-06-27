@@ -44,9 +44,13 @@ export function VisionAnalysisReadinessSummary({
 
       <div className="mt-3 grid gap-2 text-xs text-stone-700 sm:grid-cols-3">
         <p>Landmarks：{regionQa.landmarkCount}</p>
-        <p>Confidence：{formatPercent(regionQa.confidence)}</p>
+        <p>Readiness Score（检测可用性评分）：{formatPercent(regionQa.readinessScore)}</p>
         <p>Region QA：{regionQa.status}</p>
       </div>
+      <p className="mt-2 text-xs leading-5 text-stone-500">
+        该分数为规则型可用性评分，基于关键点数量、区域覆盖、坐标合法性和人脸边界判断，不是
+        MediaPipe 模型原始置信度。
+      </p>
 
       {runtimeNotice ? (
         <p className="mt-3 whitespace-pre-line rounded-md border border-amber-200 bg-amber-50 p-2 text-xs text-amber-900">

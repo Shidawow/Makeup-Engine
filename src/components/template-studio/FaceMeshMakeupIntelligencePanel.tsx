@@ -894,8 +894,11 @@ export function FaceMeshMakeupIntelligencePanel({
             <p>状态：{statusLabel[regionQa.status]}</p>
             <p>Provider：{regionQa.provider}</p>
             <p>Landmarks：{regionQa.landmarkCount}</p>
-            <p>置信度：{formatPercent(regionQa.confidence)}</p>
+            <p>检测可用性评分：{formatPercent(regionQa.readinessScore)}</p>
           </div>
+          <p className="mt-2 text-xs leading-5 text-stone-500">
+            规则评分，不是 MediaPipe 模型原始置信度；依据关键点数量、区域覆盖、坐标合法性和人脸边界判断。
+          </p>
           <p className="mt-2 rounded-md bg-white p-2 text-xs text-stone-500">
             {regionQa.status === 'region_qa_blocked'
               ? '视觉分析质量不足，需回到视觉分析 Tab 修正图片/区域后再生成草稿。'

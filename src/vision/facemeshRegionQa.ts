@@ -51,6 +51,8 @@ export interface FaceMeshRegionQaReport {
   status: FaceMeshRegionQaStatus;
   provider: 'mediapipe' | 'mock' | 'unknown';
   landmarkCount: number;
+  readinessScore: number;
+  /** Legacy/internal runtime metadata. Do not display this as MediaPipe model certainty. */
   confidence: number;
   boundingBox?: NormalizedBoundingBox;
   regionCoverage: FaceMeshRegionQaRegionCoverage[];
@@ -67,8 +69,7 @@ export interface FaceMeshRegionQaInput {
 }
 
 const REQUIRED_LANDMARK_COUNT = 468;
-const WARNING_CONFIDENCE = 0.7;
-const BLOCKING_CONFIDENCE = 0.45;
+const WARNING_READINESS_SCORE = 0.7;
 
 const regionLandmarkIndices: Record<FaceMeshRegionQaRegion, number[]> = {
   face_outline: [10, 152, 234, 454],
@@ -118,6 +119,53 @@ const isCroppingRisk = (box: NormalizedBoundingBox | undefined): boolean =>
         box.y + box.height > 0.98),
   );
 
+const clamp01 = (value: number): number => Math.min(1, Math.max(0, value));
+
+const roundScore = (value: number): number => Number(value.toFixed(2));
+
+const calculateAverageRegionCoverage = (
+  regionCoverage: readonly FaceMeshRegionQaRegionCoverage[],
+): number =>
+  regionCoverage.length > 0
+    ? regionCoverage.reduce((sum, region) => sum + region.coverage, 0) / regionCoverage.length
+    : 0;
+
+const calculateReadinessScore = ({
+  landmarkCount,
+  normalizedCount,
+  regionCoverage,
+  cropped,
+  blockingIssueCount,
+  warningIssueCount,
+}: {
+  landmarkCount: number;
+  normalizedCount: number;
+  regionCoverage: readonly FaceMeshRegionQaRegionCoverage[];
+  cropped: boolean;
+  blockingIssueCount: number;
+  warningIssueCount: number;
+}): number => {
+  const landmarkScore = clamp01(landmarkCount / REQUIRED_LANDMARK_COUNT);
+  const normalizedScore = landmarkCount > 0 ? normalizedCount / landmarkCount : 0;
+  const regionCoverageScore = calculateAverageRegionCoverage(regionCoverage);
+  const cropMarginScore = cropped ? 0.75 : 1;
+  const baseScore =
+    landmarkScore * 0.35 +
+    normalizedScore * 0.25 +
+    regionCoverageScore * 0.3 +
+    cropMarginScore * 0.1;
+
+  if (blockingIssueCount > 0) {
+    return roundScore(Math.min(baseScore, 0.45));
+  }
+
+  if (warningIssueCount > 0) {
+    return roundScore(Math.min(0.85, Math.max(0.7, baseScore)));
+  }
+
+  return roundScore(Math.min(1, Math.max(0.9, baseScore)));
+};
+
 export const evaluateFaceMeshRegionQa = ({
   faceMesh,
   providerId,
@@ -127,6 +175,7 @@ export const evaluateFaceMeshRegionQa = ({
   const confidence = faceMesh?.confidence ?? 0;
   const landmarkIndices = indexSet(landmarks);
   const normalizedCount = landmarks.filter(isPointNormalized).length;
+  const cropped = isCroppingRisk(faceMesh?.boundingBox);
 
   const regionCoverage = Object.entries(regionLandmarkIndices).map(
     ([region, requiredLandmarkIndices]) => {
@@ -154,13 +203,6 @@ export const evaluateFaceMeshRegionQa = ({
       details: `${landmarkCount} landmarks detected; expected at least ${REQUIRED_LANDMARK_COUNT}.`,
     },
     {
-      id: 'landmark_confidence',
-      label: 'FaceMesh confidence',
-      passed: confidence >= WARNING_CONFIDENCE,
-      severity: confidence < BLOCKING_CONFIDENCE ? 'blocking' : 'warning',
-      details: `FaceMesh confidence is ${confidence.toFixed(2)}.`,
-    },
-    {
       id: 'normalized_coordinates',
       label: 'Normalized landmark coordinates',
       passed: landmarkCount > 0 && normalizedCount === landmarkCount,
@@ -177,9 +219,9 @@ export const evaluateFaceMeshRegionQa = ({
     {
       id: 'face_not_cropped',
       label: 'Face crop margin',
-      passed: !isCroppingRisk(faceMesh?.boundingBox),
+      passed: !cropped,
       severity: 'warning',
-      details: isCroppingRisk(faceMesh?.boundingBox)
+      details: cropped
         ? 'Face bounding box touches the image edge.'
         : 'Face bounding box has enough image margin.',
     },
@@ -205,11 +247,20 @@ export const evaluateFaceMeshRegionQa = ({
     : issues.length > 0
       ? 'region_qa_ready_with_warnings'
       : 'region_qa_ready';
+  const readinessScore = calculateReadinessScore({
+    landmarkCount,
+    normalizedCount,
+    regionCoverage,
+    cropped,
+    blockingIssueCount: issues.filter((issue) => issue.severity === 'blocking').length,
+    warningIssueCount: issues.filter((issue) => issue.severity === 'warning').length,
+  });
 
   return {
     status,
     provider: providerFromId(providerId),
     landmarkCount,
+    readinessScore,
     confidence,
     boundingBox: faceMesh?.boundingBox,
     regionCoverage,
@@ -223,6 +274,6 @@ export const evaluateFaceMeshRegionQa = ({
         : 'FaceMesh coverage is sufficient for rule-based candidate drafting.',
     ],
     canGenerateAttributeCandidates: !hasBlockingIssue,
-    canGenerateTemplateDraft: !hasBlockingIssue && confidence >= WARNING_CONFIDENCE,
+    canGenerateTemplateDraft: !hasBlockingIssue && readinessScore >= WARNING_READINESS_SCORE,
   };
 };
