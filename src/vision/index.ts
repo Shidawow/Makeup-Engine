@@ -16,3 +16,4 @@ export * from './makeup-parameters';
 export * from './image-quality';
 export * from './semantic-providers';
 export * from './pipeline';
+export * from './makeupSemanticExtraction';

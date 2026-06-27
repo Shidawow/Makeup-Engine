@@ -45,6 +45,9 @@ describe('PhotoToTemplateRealityCheckPanel', () => {
     expect(html).toContain('FaceMesh 派生');
     expect(html).toContain('Region QA 派生');
     expect(html).toContain('像素规则推导');
+    expect(html).toContain('区域像素推导');
+    expect(html).toContain('颜色规则推导');
+    expect(html).toContain('亮度规则推导');
     expect(html).toContain('语义规则推导');
     expect(html).toContain('模板规则推导');
     expect(html).toContain('Demo fixture');

@@ -31,14 +31,16 @@ describe('project state snapshot', () => {
 
     expect(snapshot.projectName).toBe('Makeup Engine');
     expect(snapshot.projectRole).toContain('Makeup template production system');
-    expect(snapshot.lastCompletedPhase).toBe('12A');
-    expect(snapshot.lastCompletedBusinessPhase).toBe('12A');
-    expect(snapshot.currentPhaseId).toBe('12A');
+    expect(snapshot.lastCompletedPhase).toBe('12B');
+    expect(snapshot.lastCompletedBusinessPhase).toBe('12B');
+    expect(snapshot.currentPhaseId).toBe('12B');
     expect(snapshot.currentPhase).toBeTruthy();
-    expect(snapshot.currentPhase).toContain('Photo-to-Template Draft Reality Check');
-    expect(snapshot.nextRecommendedPhase).toBe('12B');
-    expect(snapshot.nextRecommendedPhaseName).toContain('Makeup Semantic Extraction Baseline');
-    expect(snapshot.nextAction).toContain('Phase 12B');
+    expect(snapshot.currentPhase).toContain('Makeup Semantic Extraction Baseline');
+    expect(snapshot.nextRecommendedPhase).toBe('12C');
+    expect(snapshot.nextRecommendedPhaseName).toContain(
+      'Photo-to-Template Draft Integration & Human Review Editing',
+    );
+    expect(snapshot.nextAction).toContain('Phase 12C');
     expect(snapshot.mainDataFlow).toEqual(
       expect.arrayContaining([
         'SourceImagePackage',
@@ -84,6 +86,11 @@ describe('project state snapshot', () => {
         'PhotoToTemplateRealityCheckPanel',
         'PhotoToTemplateFieldSourceMatrix',
         'MakeupSemanticExtractionBaselineRecommendation',
+        'MakeupSemanticExtractionReport',
+        'MakeupSemanticCandidate',
+        'MakeupSemanticExtractionPanel',
+        'MakeupSemanticFieldEvidence',
+        'PhotoToTemplateDraftIntegrationHumanReviewEditing',
         'UserPhotoIntakePlaceholder',
         'UserPersonalizationPlaceholder',
         'UserPhotoPrivacyBoundary',
@@ -302,6 +309,9 @@ describe('project state snapshot', () => {
     expect(snapshot.knownLimitations.join('\n')).toContain('Phase 11C');
     expect(snapshot.knownLimitations.join('\n')).toContain('User App Visual Guidance & Template Content Polish');
     expect(snapshot.knownLimitations.join('\n')).toContain('Phase 12A');
+    expect(snapshot.knownLimitations.join('\n')).toContain('Phase 12B');
+    expect(snapshot.knownLimitations.join('\n')).toContain('candidate-only');
+    expect(snapshot.knownLimitations.join('\n')).toContain('not final recognition');
     expect(snapshot.knownLimitations.join('\n')).toContain('semi-automatic template draft generation');
     expect(snapshot.knownLimitations.join('\n')).toContain('fully automatic high-quality makeup extraction');
     expect(snapshot.knownLimitations.join('\n')).toContain('Phase 10V is intentionally paused');

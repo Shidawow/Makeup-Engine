@@ -2,37 +2,36 @@
 
 ## What To Do Next
 
-Proceed to Phase 12B: Makeup Semantic Extraction Baseline.
+Proceed to Phase 12C: Photo-to-Template Draft Integration & Human Review Editing.
 
 ## Why
 
-Phase 12A establishes the true current photo-to-template boundary:
+Phase 12B establishes a candidate-only makeup semantic baseline:
 
 ```text
 local photo analysis
 -> FaceMesh / region QA
 -> local pixel and semantic rules
--> makeup attribute candidates
--> rule-based steps
--> template draft
--> human review
+-> MakeupSemanticExtractionReport
+-> candidate-only semantic fields
+-> human review required
 ```
 
-The system can support semi-automatic template draft generation with human
-review, but it cannot claim fully automatic high-quality makeup extraction from
-arbitrary photos.
+The system can now explain lip, blush, eye, brow, highlight, contour, and
+overall style candidate evidence. It still cannot claim final recognition,
+AI-confirmed extraction, product shade matching, medical or skin diagnosis, or
+fully automatic high-quality makeup extraction from arbitrary photos.
 
-## Recommended 12B Scope
+## Recommended 12C Scope
 
-- Improve makeup semantic extraction baseline for lip color/finish, blush
-  placement, eye intensity, eyeshadow tone, eyeliner shape, brow shape, contour,
-  and highlight.
-- Keep extraction local, deterministic, inspectable, and review-gated.
-- Preserve source labels that distinguish real image signals, FaceMesh geometry,
-  region QA, pixel rules, semantic rules, fixture copy, placeholders, and
-  human-required fields.
+- Integrate 12B semantic candidates into the photo-to-template draft chain.
+- Add human review editing affordances for accepting, revising, or keeping
+  unknown semantic candidates.
+- Preserve field evidence source labels in the draft and review flow.
+- Keep all candidate-to-template movement local, deterministic, inspectable,
+  and review-gated.
 - Keep ordinary User App MVP boundaries separate from Template Studio operator
-  reality checks.
+  semantic extraction and draft editing.
 
 ## What Not To Do
 
@@ -64,14 +63,16 @@ Read these files first:
 7. `docs/status/NEXT_ACTION.md`
 8. `docs/product/photo-to-template-draft-reality-check.md`
 9. `docs/product/photo-to-template-field-source-matrix.md`
-10. `docs/product/vision-readiness-score.md`
-11. `docs/phases/phase-12A.md`
-12. `docs/phases/phase-11D.md`
-13. `project-state/project-state.snapshot.json`
-14. `project-state/latest-handoff.json`
-15. `project-state/provider-handoff.json`
-16. `project-state/active-task.json`
-17. `project-state/guardrails.json`
+10. `docs/product/makeup-semantic-extraction-baseline.md`
+11. `docs/product/makeup-semantic-field-evidence.md`
+12. `docs/product/vision-readiness-score.md`
+13. `docs/phases/phase-12A.md`
+14. `docs/phases/phase-12B.md`
+15. `project-state/project-state.snapshot.json`
+16. `project-state/latest-handoff.json`
+17. `project-state/provider-handoff.json`
+18. `project-state/active-task.json`
+19. `project-state/guardrails.json`
 
 Then run:
 

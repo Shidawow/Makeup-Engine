@@ -172,6 +172,10 @@ export const validatePhotoToTemplateRealityCheck = (
       'rule_derived_fields_identified',
       'Rule-derived fields identified',
       sources.has('pixel_rule_derived') ||
+        sources.has('region_pixel_derived') ||
+        sources.has('color_rule_derived') ||
+        sources.has('brightness_rule_derived') ||
+        sources.has('saturation_rule_derived') ||
         sources.has('semantic_rule_derived') ||
         sources.has('template_rule_derived') ||
         sources.has('region_qa_derived'),

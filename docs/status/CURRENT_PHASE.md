@@ -2,31 +2,29 @@
 
 ## Phase State
 
-- `lastCompletedPhase`: `12A`
-- `lastCompletedBusinessPhase`: `12A`
-- `currentPhase`: `12A`
-- `currentPhaseName`: `Photo-to-Template Draft Reality Check`
-- `nextRecommendedPhase`: `12B`
-- `nextRecommendedPhaseName`: `Makeup Semantic Extraction Baseline`
+- `lastCompletedPhase`: `12B`
+- `lastCompletedBusinessPhase`: `12B`
+- `currentPhase`: `12B`
+- `currentPhaseName`: `Makeup Semantic Extraction Baseline`
+- `nextRecommendedPhase`: `12C`
+- `nextRecommendedPhaseName`: `Photo-to-Template Draft Integration & Human Review Editing`
 - `phaseOwner`: `Codex implementation, validation, commit, and push pass`
 
 ## Phase Completion Definition
 
-Phase 12A is complete when:
+Phase 12B is complete when:
 
-- The current photo-to-template draft chain is audited from Vision Analysis
-  through FaceMesh region QA, attribute candidates, rule-based steps, template
-  draft, QA, human review, and app-facing preview boundaries.
-- Field-level evidence distinguishes real photo / FaceMesh / region QA signals
-  from pixel rules, semantic rules, template rules, demo fixtures,
-  placeholders, human-required fields, and unsupported fields.
-- Readiness Score is documented as rule-based detection usability scoring, not
-  model raw confidence.
-- Lip, eyeshadow, blush, brow, contour, highlight, template copy, tips,
-  mistakes, correction guidance, and User App preview are not overclaimed as
-  reliable real photo semantic extraction.
-- The conclusion remains semi-automatic template draft generation with human
-  review, not fully automatic high-quality makeup extraction.
+- A local deterministic `MakeupSemanticExtractionReport` exists for candidate
+  lip, blush, eye, brow, highlight, contour, and overall style semantic fields.
+- The semantic source labels distinguish region pixel, FaceMesh region, color,
+  brightness, saturation, semantic rule, insufficient evidence, and human
+  review sources.
+- All semantic outputs are candidate-only, not final recognition, not
+  AI-confirmed, not product shade claims, and not medical or skin diagnosis.
+- The Template Workbench renders the Makeup Semantic Extraction Baseline panel
+  without exposing operator-only terminology in the ordinary User App Shell.
+- Phase 12A reality-check source labels remain accurate and include the new
+  Phase 12B source types.
 - Registry chain remains paused after Phase 10U, and Phase 10V is not the
   active next phase.
 - No real registry write, registry mutation, publication, production writer,

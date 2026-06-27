@@ -1,35 +1,51 @@
 {
-  "phase": "12A",
+  "phase": "12B",
   "status": "passed",
   "lastValidation": {
+    "phase": "12B",
     "mediapipeCheck": "passed",
     "typecheck": "passed",
     "test": "passed",
+    "scopedTests": "passed (15 files / 48 tests)",
     "build": "passed",
     "projectStatus": "passed",
     "projectStatusJson": "passed",
     "projectContext": "passed",
     "contextPackJson": "passed",
     "browserVerification": "passed",
-    "testFiles": 12,
-    "tests": 42,
-    "summary": "Phase 12A validation passed: MediaPipe check, scoped tests (12 files / 42 tests), typecheck, build, project status/context, JSON status/context, and browser verification passed.",
-    "phase12AScopedTests": "passed"
+    "browserValidation": "passed",
+    "testFiles": 15,
+    "tests": 48,
+    "phase12BScopedTests": "passed",
+    "browserValidationNotes": [
+      "User App ordinary path does not expose Makeup Semantic Extraction Baseline or source labels.",
+      "Template Studio workbench shows Makeup Semantic Extraction Baseline with candidate-only and human-review copy.",
+      "Vision Analysis tab does not show the 12B semantic extraction panel."
+    ],
+    "summary": "Phase 12B validation passed: npm run mediapipe:check, scoped tests (15 files / 48 tests), npm run typecheck, npm run build, npm run project:status, npm run project:context, JSON status/context commands, and browser validation."
   },
   "lastKnownPreDoc0Validation": {
+    "phase": "12B",
+    "mediapipeCheck": "passed",
     "typecheck": "passed",
     "test": "passed",
+    "scopedTests": "passed (15 files / 48 tests)",
     "build": "passed",
-    "testFiles": 12,
-    "tests": 42,
-    "mediapipeCheck": "passed",
     "projectStatus": "passed",
     "projectStatusJson": "passed",
     "projectContext": "passed",
     "contextPackJson": "passed",
     "browserVerification": "passed",
-    "phase12AScopedTests": "passed",
-    "summary": "Phase 12A validation passed: MediaPipe check, scoped tests (12 files / 42 tests), typecheck, build, project status/context, JSON status/context, and browser verification passed."
+    "browserValidation": "passed",
+    "testFiles": 15,
+    "tests": 48,
+    "phase12BScopedTests": "passed",
+    "browserValidationNotes": [
+      "User App ordinary path does not expose Makeup Semantic Extraction Baseline or source labels.",
+      "Template Studio workbench shows Makeup Semantic Extraction Baseline with candidate-only and human-review copy.",
+      "Vision Analysis tab does not show the 12B semantic extraction panel."
+    ],
+    "summary": "Phase 12B validation passed: npm run mediapipe:check, scoped tests (15 files / 48 tests), npm run typecheck, npm run build, npm run project:status, npm run project:context, JSON status/context commands, and browser validation."
   },
   "requiredValidationCommands": [
     "npm run mediapipe:check",
@@ -39,33 +55,45 @@
     "npm run project:context",
     "node scripts/project-status.mjs --json",
     "node scripts/context-pack.mjs --json",
-    "npm run test -- tests/photo-to-template-reality-check.test.ts tests/photo-to-template-reality-validation.test.ts tests/photo-to-template-reality-handoff.test.ts tests/photo-to-template-reality-check-panel.test.tsx tests/phase-12A-documentation-recovery.test.ts tests/user-app-demo-readiness.test.tsx tests/user-app-demo-forbidden-terms.test.tsx tests/template-studio-tab-boundary.test.tsx tests/vision-readiness-score-label.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
+    "npm run test -- tests/makeup-semantic-extraction.test.ts tests/makeup-semantic-lip-baseline.test.ts tests/makeup-semantic-blush-baseline.test.ts tests/makeup-semantic-eye-baseline.test.ts tests/makeup-semantic-extraction-panel.test.tsx tests/phase-12B-documentation-recovery.test.ts tests/photo-to-template-reality-check.test.ts tests/photo-to-template-reality-validation.test.ts tests/photo-to-template-reality-check-panel.test.tsx tests/user-app-demo-forbidden-terms.test.tsx tests/template-studio-tab-boundary.test.tsx tests/vision-readiness-score-label.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
   ],
   "notes": [
     "Phase 10U scoped validation pending final run.",
-    "Do not treat approval boundary readiness as actual registry write authorization."
+    "Do not treat approval boundary readiness as actual registry write authorization.",
+    "Phase 12B completed Makeup Semantic Extraction Baseline.",
+    "Semantic outputs are candidate-only and require human review.",
+    "Next recommended phase is Phase 12C - Photo-to-Template Draft Integration & Human Review Editing.",
+    "Registry chain paused after Phase 10U; Phase 10V is intentionally not the active next phase."
   ],
-  "lastCompletedPhase": "12A",
-  "currentPhase": "Photo-to-Template Draft Reality Check",
-  "nextRecommendedPhase": "12B",
+  "lastCompletedPhase": "12B",
+  "currentPhase": "Phase 12B - Makeup Semantic Extraction Baseline",
+  "nextRecommendedPhase": "12C",
   "updatedAt": "2026-06-27T00:00:00.000+08:00",
-  "summary": "Phase 12A validation passed: MediaPipe check, scoped tests (12 files / 42 tests), typecheck, build, project status/context, JSON status/context, and browser verification passed.",
+  "summary": "Phase 12B validation passed: npm run mediapipe:check, scoped tests (15 files / 48 tests), npm run typecheck, npm run build, npm run project:status, npm run project:context, JSON status/context commands, and browser validation.",
   "validation": {
+    "phase": "12B",
     "mediapipeCheck": "passed",
     "typecheck": "passed",
     "test": "passed",
+    "scopedTests": "passed (15 files / 48 tests)",
     "build": "passed",
     "projectStatus": "passed",
     "projectStatusJson": "passed",
     "projectContext": "passed",
     "contextPackJson": "passed",
     "browserVerification": "passed",
-    "testFiles": 12,
-    "tests": 42,
-    "summary": "Phase 12A validation passed: MediaPipe check, scoped tests (12 files / 42 tests), typecheck, build, project status/context, JSON status/context, and browser verification passed.",
-    "phase12AScopedTests": "passed"
+    "browserValidation": "passed",
+    "testFiles": 15,
+    "tests": 48,
+    "phase12BScopedTests": "passed",
+    "browserValidationNotes": [
+      "User App ordinary path does not expose Makeup Semantic Extraction Baseline or source labels.",
+      "Template Studio workbench shows Makeup Semantic Extraction Baseline with candidate-only and human-review copy.",
+      "Vision Analysis tab does not show the 12B semantic extraction panel."
+    ],
+    "summary": "Phase 12B validation passed: npm run mediapipe:check, scoped tests (15 files / 48 tests), npm run typecheck, npm run build, npm run project:status, npm run project:context, JSON status/context commands, and browser validation."
   },
-  "nextRecommendedPhaseName": "Makeup Semantic Extraction Baseline",
+  "nextRecommendedPhaseName": "Photo-to-Template Draft Integration & Human Review Editing",
   "results": {
     "mediapipeCheck": "passed",
     "typecheck": "passed",
@@ -92,22 +120,35 @@
     "npm run test -- tests/photo-to-template-reality-check.test.ts tests/photo-to-template-reality-validation.test.ts tests/photo-to-template-reality-handoff.test.ts tests/photo-to-template-reality-check-panel.test.tsx tests/phase-12A-documentation-recovery.test.ts tests/user-app-demo-readiness.test.tsx tests/user-app-demo-forbidden-terms.test.tsx tests/template-studio-tab-boundary.test.tsx tests/vision-readiness-score-label.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
   ],
   "validationStatus": "passed",
-  "lastUpdatedPhase": "12A",
-  "currentPhaseId": "12A",
-  "commands": [
-    "npm run mediapipe:check",
-    "npm run typecheck",
-    "npm run build",
-    "npm run project:status",
-    "npm run project:context",
-    "node scripts/project-status.mjs --json",
-    "node scripts/context-pack.mjs --json",
-    "npm run test -- tests/photo-to-template-reality-check.test.ts tests/photo-to-template-reality-validation.test.ts tests/photo-to-template-reality-handoff.test.ts tests/photo-to-template-reality-check-panel.test.tsx tests/phase-12A-documentation-recovery.test.ts tests/user-app-demo-readiness.test.tsx tests/user-app-demo-forbidden-terms.test.tsx tests/template-studio-tab-boundary.test.tsx tests/vision-readiness-score-label.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
-  ],
-  "currentPhaseName": "Photo-to-Template Draft Reality Check",
-  "lastCompletedBusinessPhase": "12A",
+  "lastUpdatedPhase": "12B",
+  "currentPhaseId": "12B",
+  "commands": {
+    "phase": "12B",
+    "mediapipeCheck": "passed",
+    "typecheck": "passed",
+    "test": "passed",
+    "scopedTests": "passed (15 files / 48 tests)",
+    "build": "passed",
+    "projectStatus": "passed",
+    "projectStatusJson": "passed",
+    "projectContext": "passed",
+    "contextPackJson": "passed",
+    "browserVerification": "passed",
+    "browserValidation": "passed",
+    "testFiles": 15,
+    "tests": 48,
+    "phase12BScopedTests": "passed",
+    "browserValidationNotes": [
+      "User App ordinary path does not expose Makeup Semantic Extraction Baseline or source labels.",
+      "Template Studio workbench shows Makeup Semantic Extraction Baseline with candidate-only and human-review copy.",
+      "Vision Analysis tab does not show the 12B semantic extraction panel."
+    ],
+    "summary": "Phase 12B validation passed: npm run mediapipe:check, scoped tests (15 files / 48 tests), npm run typecheck, npm run build, npm run project:status, npm run project:context, JSON status/context commands, and browser validation."
+  },
+  "currentPhaseName": "Makeup Semantic Extraction Baseline",
+  "lastCompletedBusinessPhase": "12B",
   "lastUpdated": "2026-06-27T00:00:00.000+08:00",
-  "nextAction": "Proceed to Phase 12B - Makeup Semantic Extraction Baseline.",
+  "nextAction": "Proceed to Phase 12C - Photo-to-Template Draft Integration & Human Review Editing.",
   "taskStatus": "completed",
   "realWriteApprovalBoundaryDecision": {
     "nextPhase": "Phase 10V - Actual Write Authorization Request",
@@ -139,7 +180,7 @@
     "npm run project:context",
     "node scripts/project-status.mjs --json",
     "node scripts/context-pack.mjs --json",
-    "npm run test -- tests/photo-to-template-reality-check.test.ts tests/photo-to-template-reality-validation.test.ts tests/photo-to-template-reality-handoff.test.ts tests/photo-to-template-reality-check-panel.test.tsx tests/phase-12A-documentation-recovery.test.ts tests/user-app-demo-readiness.test.tsx tests/user-app-demo-forbidden-terms.test.tsx tests/template-studio-tab-boundary.test.tsx tests/vision-readiness-score-label.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
+    "npm run test -- tests/makeup-semantic-extraction.test.ts tests/makeup-semantic-lip-baseline.test.ts tests/makeup-semantic-blush-baseline.test.ts tests/makeup-semantic-eye-baseline.test.ts tests/makeup-semantic-extraction-panel.test.tsx tests/phase-12B-documentation-recovery.test.ts tests/photo-to-template-reality-check.test.ts tests/photo-to-template-reality-validation.test.ts tests/photo-to-template-reality-check-panel.test.tsx tests/user-app-demo-forbidden-terms.test.tsx tests/template-studio-tab-boundary.test.tsx tests/vision-readiness-score-label.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
   ],
   "userAppGuidedStepExperiencePolish": {
     "registryChainStatus": "registry chain paused after Phase 10U",
@@ -182,9 +223,9 @@
     "adminBoundary": "administrator trial, Template Studio, and registry safety tooling remain explicitly separated from the ordinary user path",
     "nextPhase": "Phase 11D - User App Demo Readiness & Operator QA"
   },
-  "currentTask": "Phase 12A - Photo-to-Template Draft Reality Check",
+  "currentTask": "Phase 12B - Makeup Semantic Extraction Baseline",
   "phase11CScopedTests": "passed",
-  "scopedTestCommand": "npm run test -- tests/photo-to-template-reality-check.test.ts tests/photo-to-template-reality-validation.test.ts tests/photo-to-template-reality-handoff.test.ts tests/photo-to-template-reality-check-panel.test.tsx tests/phase-12A-documentation-recovery.test.ts tests/user-app-demo-readiness.test.tsx tests/user-app-demo-forbidden-terms.test.tsx tests/template-studio-tab-boundary.test.tsx tests/vision-readiness-score-label.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
+  "scopedTestCommand": "npm run test -- tests/makeup-semantic-extraction.test.ts tests/makeup-semantic-lip-baseline.test.ts tests/makeup-semantic-blush-baseline.test.ts tests/makeup-semantic-eye-baseline.test.ts tests/makeup-semantic-extraction-panel.test.tsx tests/phase-12B-documentation-recovery.test.ts tests/photo-to-template-reality-check.test.ts tests/photo-to-template-reality-validation.test.ts tests/photo-to-template-reality-check-panel.test.tsx tests/user-app-demo-forbidden-terms.test.tsx tests/template-studio-tab-boundary.test.tsx tests/vision-readiness-score-label.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
   "testFiles": 12,
   "tests": 42,
   "mediapipeCheck": "passed",
@@ -242,5 +283,169 @@
     ],
     "nextPhase": "Phase 12B - Makeup Semantic Extraction Baseline"
   },
-  "phase12AScopedTests": "passed"
+  "phase12AScopedTests": "passed",
+  "taskId": "phase-12b-makeup-semantic-extraction-baseline",
+  "title": "Phase 12B - Makeup Semantic Extraction Baseline",
+  "nextRecommendedTask": "Phase 12C - Photo-to-Template Draft Integration & Human Review Editing",
+  "nextTask": "Phase 12C - Photo-to-Template Draft Integration & Human Review Editing",
+  "filesToReadFirst": [
+    "AGENTS.md",
+    "START_HERE.md",
+    "docs/prompts/MASTER_CODEX_CONTEXT.md",
+    "docs/prompts/PROVIDER_SWITCH_PROMPT.md",
+    "docs/status/CURRENT_PROJECT_STATUS.md",
+    "docs/status/CURRENT_PHASE.md",
+    "docs/status/NEXT_ACTION.md",
+    "docs/product/photo-to-template-draft-reality-check.md",
+    "docs/product/photo-to-template-field-source-matrix.md",
+    "docs/product/makeup-semantic-extraction-baseline.md",
+    "docs/product/makeup-semantic-field-evidence.md",
+    "docs/product/vision-readiness-score.md",
+    "docs/phases/phase-12A.md",
+    "docs/phases/phase-12B.md",
+    "project-state/project-state.snapshot.json",
+    "project-state/latest-handoff.json",
+    "project-state/provider-handoff.json",
+    "project-state/active-task.json",
+    "project-state/guardrails.json"
+  ],
+  "nextRequiredReadFiles": [
+    "AGENTS.md",
+    "START_HERE.md",
+    "docs/prompts/MASTER_CODEX_CONTEXT.md",
+    "docs/prompts/PROVIDER_SWITCH_PROMPT.md",
+    "docs/status/CURRENT_PROJECT_STATUS.md",
+    "docs/status/CURRENT_PHASE.md",
+    "docs/status/NEXT_ACTION.md",
+    "docs/product/photo-to-template-draft-reality-check.md",
+    "docs/product/photo-to-template-field-source-matrix.md",
+    "docs/product/makeup-semantic-extraction-baseline.md",
+    "docs/product/makeup-semantic-field-evidence.md",
+    "docs/product/vision-readiness-score.md",
+    "docs/phases/phase-12A.md",
+    "docs/phases/phase-12B.md",
+    "project-state/project-state.snapshot.json",
+    "project-state/latest-handoff.json",
+    "project-state/provider-handoff.json",
+    "project-state/active-task.json",
+    "project-state/guardrails.json"
+  ],
+  "requiredReadFiles": [
+    "AGENTS.md",
+    "START_HERE.md",
+    "docs/prompts/MASTER_CODEX_CONTEXT.md",
+    "docs/prompts/PROVIDER_SWITCH_PROMPT.md",
+    "docs/status/CURRENT_PROJECT_STATUS.md",
+    "docs/status/CURRENT_PHASE.md",
+    "docs/status/NEXT_ACTION.md",
+    "docs/product/photo-to-template-draft-reality-check.md",
+    "docs/product/photo-to-template-field-source-matrix.md",
+    "docs/product/makeup-semantic-extraction-baseline.md",
+    "docs/product/makeup-semantic-field-evidence.md",
+    "docs/product/vision-readiness-score.md",
+    "docs/phases/phase-12A.md",
+    "docs/phases/phase-12B.md",
+    "project-state/project-state.snapshot.json",
+    "project-state/latest-handoff.json",
+    "project-state/provider-handoff.json",
+    "project-state/active-task.json",
+    "project-state/guardrails.json"
+  ],
+  "mainDataFlow": [
+    "MakeupSemanticExtractionReport",
+    "MakeupSemanticCandidate",
+    "MakeupSemanticExtractionPanel",
+    "MakeupSemanticFieldEvidence",
+    "PhotoToTemplateDraftIntegrationHumanReviewEditing"
+  ],
+  "mainModules": [
+    "src/vision/makeupSemanticExtraction.ts",
+    "src/components/template-studio/MakeupSemanticExtractionPanel.tsx",
+    "src/template-engine/makeupAttributeCandidates.ts"
+  ],
+  "knownLimitations": [
+    "Phase 12B Makeup Semantic Extraction Baseline is candidate-only; it is not final recognition, not AI-confirmed extraction, not product shade matching, not medical or skin diagnosis, and not fully automatic high-quality makeup extraction.",
+    "Phase 12B semantic candidates require human review and cannot mutate UserAppTemplatePackage, write registry state, publish, create a production writer, replace the current User App Shell package, upload real photos, store real user data, enter training datasets, or resume Phase 10V."
+  ],
+  "handoffNotes": [
+    "Phase 12B completed Makeup Semantic Extraction Baseline.",
+    "Semantic outputs are candidate-only and require human review.",
+    "Next recommended phase is Phase 12C - Photo-to-Template Draft Integration & Human Review Editing.",
+    "Registry chain paused after Phase 10U; Phase 10V is intentionally not the active next phase."
+  ],
+  "risks": [
+    "Do not treat semantic candidates as final recognition or AI-confirmed extraction.",
+    "Do not claim product shade matching, medical or skin diagnosis, or fully automatic high-quality makeup extraction.",
+    "Do not resume Phase 10V or execute registry writes."
+  ],
+  "phase12BScopedTests": "pending final run",
+  "latestValidation": {
+    "phase": "12B",
+    "mediapipeCheck": "passed",
+    "typecheck": "passed",
+    "test": "passed",
+    "scopedTests": "passed (15 files / 48 tests)",
+    "build": "passed",
+    "projectStatus": "passed",
+    "projectStatusJson": "passed",
+    "projectContext": "passed",
+    "contextPackJson": "passed",
+    "browserVerification": "passed",
+    "browserValidation": "passed",
+    "testFiles": 15,
+    "tests": 48,
+    "phase12BScopedTests": "passed",
+    "browserValidationNotes": [
+      "User App ordinary path does not expose Makeup Semantic Extraction Baseline or source labels.",
+      "Template Studio workbench shows Makeup Semantic Extraction Baseline with candidate-only and human-review copy.",
+      "Vision Analysis tab does not show the 12B semantic extraction panel."
+    ],
+    "summary": "Phase 12B validation passed: npm run mediapipe:check, scoped tests (15 files / 48 tests), npm run typecheck, npm run build, npm run project:status, npm run project:context, JSON status/context commands, and browser validation."
+  },
+  "lastKnownValidation": {
+    "phase": "12B",
+    "mediapipeCheck": "passed",
+    "typecheck": "passed",
+    "test": "passed",
+    "scopedTests": "passed (15 files / 48 tests)",
+    "build": "passed",
+    "projectStatus": "passed",
+    "projectStatusJson": "passed",
+    "projectContext": "passed",
+    "contextPackJson": "passed",
+    "browserVerification": "passed",
+    "browserValidation": "passed",
+    "testFiles": 15,
+    "tests": 48,
+    "phase12BScopedTests": "passed",
+    "browserValidationNotes": [
+      "User App ordinary path does not expose Makeup Semantic Extraction Baseline or source labels.",
+      "Template Studio workbench shows Makeup Semantic Extraction Baseline with candidate-only and human-review copy.",
+      "Vision Analysis tab does not show the 12B semantic extraction panel."
+    ],
+    "summary": "Phase 12B validation passed: npm run mediapipe:check, scoped tests (15 files / 48 tests), npm run typecheck, npm run build, npm run project:status, npm run project:context, JSON status/context commands, and browser validation."
+  },
+  "phase12BValidation": {
+    "phase": "12B",
+    "mediapipeCheck": "passed",
+    "typecheck": "passed",
+    "test": "passed",
+    "scopedTests": "passed (15 files / 48 tests)",
+    "build": "passed",
+    "projectStatus": "passed",
+    "projectStatusJson": "passed",
+    "projectContext": "passed",
+    "contextPackJson": "passed",
+    "browserVerification": "passed",
+    "browserValidation": "passed",
+    "testFiles": 15,
+    "tests": 48,
+    "phase12BScopedTests": "passed",
+    "browserValidationNotes": [
+      "User App ordinary path does not expose Makeup Semantic Extraction Baseline or source labels.",
+      "Template Studio workbench shows Makeup Semantic Extraction Baseline with candidate-only and human-review copy.",
+      "Vision Analysis tab does not show the 12B semantic extraction panel."
+    ],
+    "summary": "Phase 12B validation passed: npm run mediapipe:check, scoped tests (15 files / 48 tests), npm run typecheck, npm run build, npm run project:status, npm run project:context, JSON status/context commands, and browser validation."
+  }
 }

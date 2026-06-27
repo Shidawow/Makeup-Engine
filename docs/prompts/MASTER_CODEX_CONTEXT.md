@@ -12,11 +12,11 @@ It produces templates, template evidence, correction records, review state, loca
 
 ## Current Phase
 
-- Current business phase: `Phase 12A completed`
-- Last completed phase: `Phase 12A`
-- Last completed phase name: `Phase 12A - Photo-to-Template Draft Reality Check`
-- Next recommended phase: `Phase 12B - Makeup Semantic Extraction Baseline`
-- Strategic focus: registry chain paused after Phase 10U; active work returns to ordinary-user User App MVP experience.
+- Current business phase: `Phase 12B completed`
+- Last completed phase: `Phase 12B`
+- Last completed phase name: `Phase 12B - Makeup Semantic Extraction Baseline`
+- Next recommended phase: `Phase 12C - Photo-to-Template Draft Integration & Human Review Editing`
+- Strategic focus: registry chain paused after Phase 10U; active work is photo-to-template semantic evidence and human-reviewed draft integration.
 
 Historical recovery marker retained for Phase 10U tests: `Phase 10U completed`.
 Historical recovery marker retained for Phase 9C tests: `Phase 9C completed`.
@@ -108,6 +108,7 @@ Real Photo
 -> User App Visual Guidance & Template Content Polish
 -> User App Demo Readiness & Operator QA
 -> Photo-to-Template Draft Reality Check
+-> Makeup Semantic Extraction Baseline
 -> Phase 8 Roadmap / V1 Non-Goals
 -> User App Consumption Manifest
 -> Dataset Review
@@ -130,6 +131,10 @@ Important boundary: `SourceImagePackage` can enter Vision Analysis through opera
   `src/template-engine/photoToTemplateRealityHandoff.ts`: Phase 12A
   operator-only reality audit for photo-to-template draft source labels,
   overclaim blocking, and handoff to Phase 12B semantic extraction baseline.
+- `src/vision/makeupSemanticExtraction.ts`: Phase 12B local deterministic
+  makeup semantic extraction baseline. It creates candidate-only
+  `MakeupSemanticExtractionReport` and `MakeupSemanticCandidate` outputs with
+  explicit source labels and human-review-required boundaries.
 - `src/template-engine/templateLibraryCandidatePackage.ts`,
   `src/template-engine/templateLibraryCandidateValidation.ts`, and
   `src/template-engine/templateLibraryCandidateHandoff.ts`: Phase 10C local

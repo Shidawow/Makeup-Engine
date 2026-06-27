@@ -2,16 +2,18 @@
 
 ## Current Phase
 
-Phase 12A: Photo-to-Template Draft Reality Check is complete.
+Phase 12B: Makeup Semantic Extraction Baseline is complete.
 
-Last completed business phase: Phase 12A.
+Last completed business phase: Phase 12B.
 
-Next recommended phase: Phase 12B, Makeup Semantic Extraction Baseline.
+Next recommended phase: Phase 12C, Photo-to-Template Draft Integration & Human Review Editing.
 
-Phase 12A keeps the post-10U registry write chain paused and audits the current
-photo-to-template draft capability. The system is now documented and
-test-covered as semi-automatic template draft generation with human review, not
-fully automatic high-quality makeup extraction from arbitrary photos.
+Phase 12B keeps the post-10U registry write chain paused and adds a local
+deterministic makeup semantic extraction baseline. The system can now produce
+candidate-only semantic fields for lip, blush, eye, brow, highlight, contour,
+and overall style evidence, but every output still requires human review and is
+not final recognition, not AI-confirmed, not a product shade claim, and not a
+medical or skin diagnosis.
 
 Registry chain status: paused after Phase 10U. Phase 10V actual write
 authorization is not the active next phase.
@@ -151,6 +153,20 @@ authorization is not the active next phase.
   candidates are not overclaimed as final semantics, and that fully automatic
   extraction, production readiness, registry write, publish, production writer,
   and shell replacement claims are blocked.
+- Render an operator-only Phase 12B Makeup Semantic Extraction Baseline panel
+  in Template Workbench. The panel shows `MakeupSemanticExtractionReport`,
+  `MakeupSemanticCandidate` values, source types, confidence bands, evidence,
+  limitations, and candidate-only boundaries.
+- Derive conservative candidate fields for lip color, lip finish, blush
+  placement, blush intensity, eye makeup intensity, eyeshadow tone, brow
+  definition, highlight signal, contour signal, and overall style from local
+  FaceMesh region QA, pixel analysis, weighted color samples, skin-baseline
+  contrast, edge/brightness signals, cosmetic region parameters, and
+  deterministic semantic rules.
+- Keep Phase 12B field evidence labeled as `region_pixel_derived`,
+  `facemesh_region_derived`, `color_rule_derived`, `brightness_rule_derived`,
+  `saturation_rule_derived`, `semantic_rule_derived`,
+  `insufficient_evidence`, or `human_review_required`.
 - Render compact Template Studio workflow, candidate package, candidate-to-app,
   user app package draft preview, official draft gate, and official draft
   builder, draft publish gate, registry preparation, and registry write gate
@@ -173,6 +189,10 @@ authorization is not the active next phase.
   photos.
 - It cannot treat demo fixture copy, placeholders, or rule-derived candidate
   fields as real photo-derived makeup semantics.
+- It cannot treat Phase 12B semantic candidates as final makeup recognition, AI
+  confirmed analysis, product shade matching, medical or skin diagnosis,
+  fully automatic extraction, registry readiness, publish readiness, production
+  readiness, or User App Shell package replacement.
 - It cannot publish drafts automatically.
 - It cannot treat candidate packages as published templates.
 - It cannot write candidate packages into the formal Template Library

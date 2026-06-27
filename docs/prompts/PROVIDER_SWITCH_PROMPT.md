@@ -6,11 +6,11 @@ Default to compact context. Do not copy full historical chat transcripts. Do not
 
 ## Current State
 
-- `lastCompletedPhase: 12A`
-- `nextRecommendedPhase: 12B`
-- `nextRecommendedPhaseName: Makeup Semantic Extraction Baseline`
+- `lastCompletedPhase: 12B`
+- `nextRecommendedPhase: 12C`
+- `nextRecommendedPhaseName: Photo-to-Template Draft Integration & Human Review Editing`
 - Project role: Makeup template production system with a local contract-driven user app shell prototype, not a production user app.
-- Current capability: Phase 12A - Photo-to-Template Draft Reality Check keeps the registry chain paused after Phase 10U and audits the current photo-to-template draft chain. The system can support semi-automatic template draft generation with human review, but cannot claim fully automatic high-quality makeup extraction. Field source labels distinguish real photo / FaceMesh / region QA, rule-derived, demo fixture, placeholder, human-required, and unsupported fields.
+- Current capability: Phase 12B - Makeup Semantic Extraction Baseline keeps the registry chain paused after Phase 10U and adds local deterministic semantic candidates for lip, blush, eye, brow, highlight, contour, and overall style. The system remains semi-automatic template draft generation with human review and can explain candidate evidence, but cannot claim final recognition, AI-confirmed extraction, product shade matching, medical or skin diagnosis, or fully automatic high-quality makeup extraction.
 
 Historical handoff marker retained for Phase 10U recovery tests: `lastCompletedPhase: 10U`, `nextRecommendedPhase: 10V`.
 Historical handoff marker retained for Phase 10T recovery tests: `lastCompletedPhase: 10T`, `nextRecommendedPhase: 10U`.
@@ -64,11 +64,11 @@ Historical handoff marker retained for Phase 9J recovery tests: `lastCompletedPh
 You are continuing Makeup Engine on native GPT / Codex Desktop.
 
 Current state:
-- lastCompletedPhase: 12A
-- nextRecommendedPhase: 12B
-- nextRecommendedPhaseName: Makeup Semantic Extraction Baseline
+- lastCompletedPhase: 12B
+- nextRecommendedPhase: 12C
+- nextRecommendedPhaseName: Photo-to-Template Draft Integration & Human Review Editing
 - project role: Makeup template production system with a local contract-driven user app shell prototype, not a production user app
-- current capability: React Web / PWA MVP first is selected; Phases 8B through 9J and 10A through 10U are complete; Phase 11A pauses the registry chain after Phase 10U and resets the active user path to Home, Template Selection, Template Detail, Preparation, Step-by-step Guidance, and Completion. Phase 11B polishes preparation, step guidance, mobile actions, and completion summary. Phase 11C polishes Chinese template content, visual guidance, region guidance, intensity reminders, technique breakdowns, and completion-region summaries. Phase 11D packages the shell for local demo and operator QA. Phase 12A audits photo-to-template reality with field source labels and confirms current capability is semi-automatic draft generation with human review, not fully automatic high-quality makeup extraction. The previous registry safety chain remains preserved for administrator review but Phase 10V is intentionally not the active next phase.
+- current capability: React Web / PWA MVP first is selected; Phases 8B through 9J and 10A through 10U are complete; Phase 11A pauses the registry chain after Phase 10U and resets the active user path to Home, Template Selection, Template Detail, Preparation, Step-by-step Guidance, and Completion. Phase 11B polishes preparation, step guidance, mobile actions, and completion summary. Phase 11C polishes Chinese template content, visual guidance, region guidance, intensity reminders, technique breakdowns, and completion-region summaries. Phase 11D packages the shell for local demo and operator QA. Phase 12A audits photo-to-template reality with field source labels. Phase 12B adds candidate-only Makeup Semantic Extraction Baseline with explicit source labels and human-review boundaries. The current capability remains semi-automatic draft generation with human review, not fully automatic high-quality makeup extraction. The previous registry safety chain remains preserved for administrator review but Phase 10V is intentionally not the active next phase.
 
 Compact context:
 - Use repository documents as source of truth; do not copy full historical chat.

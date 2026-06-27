@@ -68,10 +68,20 @@ describe('photo-to-template reality check', () => {
       expect(field(fieldName).sourceTypes).not.toContain('real_from_photo');
     });
     expect(field('lipColor').sourceTypes).toEqual(
-      expect.arrayContaining(['pixel_rule_derived', 'human_required']),
+      expect.arrayContaining([
+        'pixel_rule_derived',
+        'region_pixel_derived',
+        'color_rule_derived',
+        'human_required',
+      ]),
     );
     expect(field('lipFinish').sourceTypes).toEqual(
-      expect.arrayContaining(['semantic_rule_derived', 'pixel_rule_derived', 'human_required']),
+      expect.arrayContaining([
+        'semantic_rule_derived',
+        'pixel_rule_derived',
+        'brightness_rule_derived',
+        'human_required',
+      ]),
     );
     expect(field('userAppPreview').sourceTypes).toEqual(
       expect.arrayContaining(['demo_fixture', 'template_rule_derived', 'human_required']),
@@ -86,6 +96,9 @@ describe('photo-to-template reality check', () => {
     expect(photoToTemplateRealityReadyExample.humanReviewRequired).toBe(true);
     expect(photoToTemplateRealityReadyExample.supportsFullyAutomaticExtraction).toBe(false);
     expect(field('eyeshadowTone').sourceTypes).toContain('unsupported');
+    expect(photoToTemplateRealityReadyExample.sourceSummary.color_rule_derived).toBeGreaterThan(0);
+    expect(photoToTemplateRealityReadyExample.sourceSummary.brightness_rule_derived).toBeGreaterThan(0);
+    expect(photoToTemplateRealityReadyExample.sourceSummary.region_pixel_derived).toBeGreaterThan(0);
   });
 
   it('supports only semi-automatic draft generation with human review', () => {

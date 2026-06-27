@@ -16,6 +16,10 @@ const sourceLabel: Record<PhotoToTemplateRealitySourceType, string> = {
   facemesh_derived: 'FaceMesh 派生',
   region_qa_derived: 'Region QA 派生',
   pixel_rule_derived: '像素规则推导',
+  region_pixel_derived: '区域像素推导',
+  color_rule_derived: '颜色规则推导',
+  brightness_rule_derived: '亮度规则推导',
+  saturation_rule_derived: '饱和度规则推导',
   semantic_rule_derived: '语义规则推导',
   template_rule_derived: '模板规则推导',
   demo_fixture: 'Demo fixture',
@@ -155,6 +159,10 @@ export function PhotoToTemplateRealityCheckPanel({
         <FieldGroup report={report} source="facemesh_derived" />
         <FieldGroup report={report} source="region_qa_derived" />
         <FieldGroup report={report} source="pixel_rule_derived" />
+        <FieldGroup report={report} source="region_pixel_derived" />
+        <FieldGroup report={report} source="color_rule_derived" />
+        <FieldGroup report={report} source="brightness_rule_derived" />
+        <FieldGroup report={report} source="saturation_rule_derived" />
         <FieldGroup report={report} source="semantic_rule_derived" />
         <FieldGroup report={report} source="template_rule_derived" />
         <FieldGroup report={report} source="demo_fixture" />

@@ -958,3 +958,38 @@ Phase 12A remains an audit and boundary-confirmation layer. It does not resume
 Phase 10V, write or mutate registries, publish, create production writers,
 replace the current User App Shell package, add backend/API/camera/AR scope,
 upload real photos, store real user data, or train models.
+
+## Phase 12B Makeup Semantic Extraction Baseline
+
+Phase 12B adds a local deterministic semantic extraction layer for candidate
+makeup fields.
+
+`src/vision/makeupSemanticExtraction.ts` creates
+`MakeupSemanticExtractionReport` and `MakeupSemanticCandidate` objects for lip
+color, lip finish, blush placement, blush intensity, eye makeup intensity,
+eyeshadow tone, brow definition, highlight signal, contour signal, and overall
+style.
+
+The report uses existing local evidence only: FaceMesh region QA, local pixel
+analysis, weighted color samples, skin-baseline contrast, edge/brightness
+signals, cosmetic region parameters, and deterministic semantic rules. Source
+labels include `region_pixel_derived`, `facemesh_region_derived`,
+`color_rule_derived`, `brightness_rule_derived`, `saturation_rule_derived`,
+`semantic_rule_derived`, `insufficient_evidence`, and
+`human_review_required`.
+
+`src/template-engine/makeupAttributeCandidates.ts` can read the semantic report
+as a candidate source, but generated attribute candidates remain draft-only and
+human-review required.
+
+`src/components/template-studio/MakeupSemanticExtractionPanel.tsx` renders the
+baseline in Template Workbench only. It is not part of Vision Analysis and is
+not part of the ordinary User App MVP path.
+
+Phase 12B remains candidate-only. It does not claim final recognition,
+AI-confirmed extraction, product shade matching, medical or skin diagnosis,
+fully automatic extraction, registry readiness, publish readiness, production
+readiness, or User App Shell package replacement. It does not resume Phase 10V,
+write or mutate registries, publish, create production writers, add
+backend/API/camera/AR scope, upload real photos, store real user data, or train
+models.

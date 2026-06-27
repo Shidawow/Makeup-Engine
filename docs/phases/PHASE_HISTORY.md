@@ -1744,3 +1744,42 @@ Why Phase 12B follows:
 The system needs a stronger local makeup semantic extraction baseline before it
 can improve lip, blush, eye, brow, contour, highlight, and style understanding
 beyond rule-derived candidates and human-reviewed drafts.
+
+## Phase 12B - Makeup Semantic Extraction Baseline
+
+Added a local deterministic makeup semantic extraction baseline while keeping
+the registry write chain paused after Phase 10U.
+
+What changed:
+
+- Added `MakeupSemanticExtractionReport` and `MakeupSemanticCandidate` for lip
+  color, lip finish, blush placement, blush intensity, eye makeup intensity,
+  eyeshadow tone, brow definition, highlight signal, contour signal, and
+  overall style.
+- Added source labels for `region_pixel_derived`,
+  `facemesh_region_derived`, `color_rule_derived`,
+  `brightness_rule_derived`, `saturation_rule_derived`,
+  `semantic_rule_derived`, `insufficient_evidence`, and
+  `human_review_required`.
+- Updated makeup attribute candidates and the Photo-to-Template Reality Check
+  source matrix to preserve the new evidence labels.
+- Added an operator-only Template Workbench panel for semantic candidates,
+  evidence, confidence bands, limitations, and human-review boundaries.
+- Added examples, tests, and product docs for the baseline and field evidence.
+
+What still cannot happen:
+
+- Phase 12B semantic candidates are candidate-only and require human review.
+- Phase 12B does not claim final recognition, AI-confirmed extraction, product
+  shade matching, medical or skin diagnosis, or fully automatic high-quality
+  makeup extraction.
+- Phase 12B does not resume Phase 10V, execute registry writes, mutate registry
+  state, publish, create a production writer, replace the current User App
+  Shell package, add backend/database/login/payment/camera/AR/OpenAI or
+  external API scope, upload real photos, store real user data, or train models.
+
+Why Phase 12C follows:
+
+The semantic baseline is now explicit enough to integrate candidate evidence
+into photo-to-template draft editing. Phase 12C should focus on draft
+integration and human review editing, not automatic publication.

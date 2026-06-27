@@ -719,3 +719,33 @@ external API scope, upload real photos, store real user data, or train models.
 Phase 12A ordinary-user paths must not expose Photo-to-Template Reality Check,
 field source matrix, Template Studio, registry/write/publish/simulator/
 production writer, or automatic extraction operator terminology by default.
+
+## Phase 12B Makeup Semantic Extraction Baseline
+
+Phase 12B is an operator-only semantic candidate baseline. It may create
+`MakeupSemanticExtractionReport` and `MakeupSemanticCandidate` values from
+local FaceMesh region QA, local pixel analysis, weighted color samples,
+skin-baseline contrast, edge/brightness signals, cosmetic region parameters,
+and deterministic rules.
+
+Phase 12B source labels must remain explicit:
+`region_pixel_derived`, `facemesh_region_derived`, `color_rule_derived`,
+`brightness_rule_derived`, `saturation_rule_derived`,
+`semantic_rule_derived`, `insufficient_evidence`, and
+`human_review_required`.
+
+Phase 12B must keep every semantic output candidate-only and human-review
+required. It must not claim final recognition, AI-confirmed extraction, product
+shade matching, medical or skin diagnosis, fully automatic high-quality makeup
+extraction, registry readiness, publish readiness, production readiness, or
+User App Shell package replacement.
+
+Phase 12B must not resume Phase 10V, execute real registry writes, mutate
+registry state, publish, create a production writer, replace the current User
+App Shell package, add backend/database/login/payment/camera/AR/OpenAI or
+external API scope, upload real photos, store real user data, or train models.
+
+Phase 12B ordinary-user paths must not expose Makeup Semantic Extraction
+Baseline, semantic candidate source labels, Template Studio, registry/write/
+publish/simulator/production writer, or automatic extraction operator
+terminology by default.

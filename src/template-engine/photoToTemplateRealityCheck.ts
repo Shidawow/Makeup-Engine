@@ -8,6 +8,10 @@ export type PhotoToTemplateRealitySourceType =
   | 'facemesh_derived'
   | 'region_qa_derived'
   | 'pixel_rule_derived'
+  | 'region_pixel_derived'
+  | 'color_rule_derived'
+  | 'brightness_rule_derived'
+  | 'saturation_rule_derived'
   | 'semantic_rule_derived'
   | 'template_rule_derived'
   | 'demo_fixture'
@@ -134,6 +138,10 @@ const sourceSummarySeed: Record<PhotoToTemplateRealitySourceType, number> = {
   facemesh_derived: 0,
   region_qa_derived: 0,
   pixel_rule_derived: 0,
+  region_pixel_derived: 0,
+  color_rule_derived: 0,
+  brightness_rule_derived: 0,
+  saturation_rule_derived: 0,
   semantic_rule_derived: 0,
   template_rule_derived: 0,
   demo_fixture: 0,
@@ -281,19 +289,20 @@ export const createPhotoToTemplateRealityCheckReport = ({
     field(
       'lipColor',
       'Lip color family',
-      ['pixel_rule_derived', 'human_required'],
+      ['pixel_rule_derived', 'region_pixel_derived', 'color_rule_derived', 'human_required'],
       [
         'Lip color family is classified from local pixel hue/saturation rules when pixel analysis is present.',
-        'It is a candidate, not confirmed semantic makeup recognition.',
+        'Phase 12B adds color-rule semantic candidates, but they remain candidate-only.',
       ],
       candidateValue(attributeCandidates, 'lip_color_family') ?? 'candidate unavailable',
     ),
     field(
       'lipFinish',
       'Lip finish',
-      ['semantic_rule_derived', 'pixel_rule_derived', 'human_required'],
+      ['semantic_rule_derived', 'pixel_rule_derived', 'brightness_rule_derived', 'human_required'],
       [
         'Lip finish comes from local semantic rules over pixel analysis or conservative defaults.',
+        'Brightness/edge finish signals are lighting-sensitive and cannot be treated as final.',
         'It must be reviewed before becoming template guidance.',
       ],
       candidateValue(attributeCandidates, 'lip_finish') ?? 'candidate unavailable',
@@ -301,7 +310,7 @@ export const createPhotoToTemplateRealityCheckReport = ({
     field(
       'blushPlacement',
       'Blush placement',
-      ['pixel_rule_derived', 'region_qa_derived', 'human_required'],
+      ['pixel_rule_derived', 'region_pixel_derived', 'region_qa_derived', 'human_required'],
       [
         'Blush placement uses local pixel center/opacity rules plus FaceMesh region coverage.',
         'Placement is not a final visual semantic extraction result.',
@@ -311,7 +320,7 @@ export const createPhotoToTemplateRealityCheckReport = ({
     field(
       'eyeMakeupIntensity',
       'Eye makeup intensity',
-      ['pixel_rule_derived', 'human_required'],
+      ['pixel_rule_derived', 'brightness_rule_derived', 'human_required'],
       [
         'Eye intensity is inferred from local eyeshadow darkness and eyeliner direction rules.',
       ],
@@ -320,9 +329,10 @@ export const createPhotoToTemplateRealityCheckReport = ({
     field(
       'eyeshadowTone',
       'Eyeshadow tone',
-      ['pixel_rule_derived', 'human_required', 'unsupported'],
+      ['pixel_rule_derived', 'color_rule_derived', 'human_required', 'unsupported'],
       [
-        'Current system has eyeshadow depth candidates, but does not reliably extract exact eyeshadow tone.',
+        'Phase 12B can produce conservative eyeshadow tone candidates when weighted samples exist.',
+        'Exact eyeshadow tone remains unsupported for automatic extraction.',
       ],
       candidateValue(attributeCandidates, 'eyeshadow_depth') ?? 'exact tone unsupported',
     ),
@@ -343,7 +353,7 @@ export const createPhotoToTemplateRealityCheckReport = ({
     field(
       'contourPresence',
       'Contour presence',
-      ['facemesh_derived', 'template_rule_derived', 'human_required'],
+      ['facemesh_derived', 'brightness_rule_derived', 'template_rule_derived', 'human_required'],
       [
         'Contour guidance remains conservative because face structure and photo angle are reviewer-sensitive.',
       ],
@@ -360,7 +370,8 @@ export const createPhotoToTemplateRealityCheckReport = ({
       'Overall makeup style',
       ['semantic_rule_derived', 'template_rule_derived', 'human_required'],
       [
-        'Overall style is assembled from local semantic rules and template drafting defaults.',
+        'Overall style is assembled from local semantic candidates and template drafting defaults.',
+        'It is not final recognition and must be reviewed.',
       ],
       templateDraft?.draft?.style.family ?? 'natural draft default',
     ),

@@ -1,4 +1,8 @@
-import type { FaceMeshRegionQaReport, MakeupAnalysisPipelineResult } from '../../vision';
+import {
+  createMakeupSemanticExtractionReport,
+  type FaceMeshRegionQaReport,
+  type MakeupAnalysisPipelineResult,
+} from '../../vision';
 import {
   buildTemplateStudioWorkflowState,
   createControlledRegistryWriteExecutionDesign,
@@ -92,6 +96,7 @@ import { GuardedRealWriteExecutionSimulatorPanel } from './GuardedRealWriteExecu
 import { GuardedSimulatorReviewGatePanel } from './GuardedSimulatorReviewGatePanel';
 import { RealWriteApprovalBoundaryPanel } from './RealWriteApprovalBoundaryPanel';
 import { PhotoToTemplateRealityCheckPanel } from './PhotoToTemplateRealityCheckPanel';
+import { MakeupSemanticExtractionPanel } from './MakeupSemanticExtractionPanel';
 
 export interface FaceMeshMakeupIntelligencePanelProps {
   analysis?: MakeupAnalysisPipelineResult | null;
@@ -133,6 +138,10 @@ export function FaceMeshMakeupIntelligencePanel({
   reviewWorkflow,
   studioWorkflow,
 }: FaceMeshMakeupIntelligencePanelProps) {
+  const makeupSemanticExtractionReport = createMakeupSemanticExtractionReport({
+    analysis,
+    regionQa,
+  });
   const photoToTemplateRealityReport = createPhotoToTemplateRealityCheckReport({
     analysis,
     regionQa,
@@ -630,6 +639,9 @@ export function FaceMeshMakeupIntelligencePanel({
           </div>
         </div>
         <div className="mt-3">
+          <MakeupSemanticExtractionPanel report={makeupSemanticExtractionReport} />
+        </div>
+        <div className="mt-3">
           <PhotoToTemplateRealityCheckPanel
             handoff={photoToTemplateRealityHandoff}
             report={photoToTemplateRealityReport}
@@ -997,6 +1009,8 @@ export function FaceMeshMakeupIntelligencePanel({
         </div>
       </details>
       </section>
+
+      <MakeupSemanticExtractionPanel report={makeupSemanticExtractionReport} />
 
       <PhotoToTemplateRealityCheckPanel
         handoff={photoToTemplateRealityHandoff}

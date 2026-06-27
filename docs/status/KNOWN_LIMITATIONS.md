@@ -193,3 +193,15 @@
   state, publish, create a production writer, replace the current User App
   Shell package, add backend/camera/AR/API scope, upload real photos, store
   real user data, or train models.
+- Phase 12B Makeup Semantic Extraction Baseline is candidate-only. It can
+  produce local deterministic semantic candidates for lip color, lip finish,
+  blush placement, blush intensity, eye makeup intensity, eyeshadow tone, brow
+  definition, highlight signal, contour signal, and overall style, but it is
+  not final recognition, not AI-confirmed extraction, not product shade
+  matching, not medical or skin diagnosis, and not fully automatic high-quality
+  makeup extraction.
+- Phase 12B semantic candidates require human review and cannot mutate
+  `UserAppTemplatePackage`, write registry state, publish, create a production
+  writer, replace the current User App Shell package, add backend/camera/AR/API
+  scope, upload real photos, store real user data, enter training datasets, or
+  resume Phase 10V.

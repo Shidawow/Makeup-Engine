@@ -14,6 +14,7 @@ Real Photo
 -> Production QA Report
 -> Vision Analysis
 -> FaceMesh Region QA / Attribute Candidates / Rule-based Template Draft
+-> Photo-to-Template Reality Check / Makeup Semantic Extraction Baseline
 -> Template Draft Review Workflow
 -> Template Library Candidate Package
 -> Candidate-to-App Package Contract Preparation
@@ -79,6 +80,14 @@ Real Photo
   Phase 10A local draft branch for FaceMesh region readiness, candidate makeup
   attributes, rule-based draft steps, and draft-only template generation. It
   requires human review and does not publish or mutate `UserAppTemplatePackage`.
+- `Photo-to-Template Reality Check / Makeup Semantic Extraction Baseline`:
+  Phase 12A and Phase 12B operator-only layers for field source auditing and
+  candidate semantic extraction. `MakeupSemanticExtractionReport`,
+  `MakeupSemanticCandidate`, `MakeupSemanticFieldEvidence`, and
+  `MakeupSemanticExtractionPanel` remain local, deterministic, candidate-only,
+  and human-review required. They do not claim final recognition, write
+  registry state, publish, replace the current User App Shell package, or train
+  models.
 - `Template Draft Review Workflow`: Phase 10B local administrator QA and human
   review branch for draft-only templates. Approval means template library
   candidate only.
