@@ -2,17 +2,16 @@
 
 ## Current Phase
 
-Phase 11D: User App Demo Readiness & Operator QA is complete.
+Phase 12A: Photo-to-Template Draft Reality Check is complete.
 
-Last completed business phase: Phase 11D.
+Last completed business phase: Phase 12A.
 
-Next recommended phase: Phase 12A, Photo-to-Template Draft Reality Check.
+Next recommended phase: Phase 12B, Makeup Semantic Extraction Baseline.
 
-Phase 11D keeps the post-10U registry write chain paused and packages the
-ordinary-user User App MVP shell for operator-led demo and QA. The demo path,
-operator checklist, mobile checks, forbidden-terms checks, known limitations,
-Vision Analysis notes, Template Studio notes, and Git hygiene checks are now
-documented and test-covered.
+Phase 12A keeps the post-10U registry write chain paused and audits the current
+photo-to-template draft capability. The system is now documented and
+test-covered as semi-automatic template draft generation with human review, not
+fully automatic high-quality makeup extraction from arbitrary photos.
 
 Registry chain status: paused after Phase 10U. Phase 10V actual write
 authorization is not the active next phase.
@@ -142,6 +141,16 @@ authorization is not the active next phase.
   operator-led demo path, user path QA, forbidden terms QA, mobile demo QA,
   known limitations, Vision Analysis notes, Template Studio notes, registry
   paused status, and Git hygiene checks.
+- Render an operator-only Phase 12A Photo-to-Template Reality Check panel in
+  Template Workbench. The panel shows a field source matrix for real photo,
+  FaceMesh-derived, region-QA-derived, pixel-rule-derived,
+  semantic-rule-derived, template-rule-derived, demo fixture, placeholder,
+  human-required, and unsupported fields.
+- Validate that Readiness Score is rule-based detection usability scoring, that
+  demo fixtures are not mislabeled as real photo extraction, that lip/eye/blush
+  candidates are not overclaimed as final semantics, and that fully automatic
+  extraction, production readiness, registry write, publish, production writer,
+  and shell replacement claims are blocked.
 - Render compact Template Studio workflow, candidate package, candidate-to-app,
   user app package draft preview, official draft gate, and official draft
   builder, draft publish gate, registry preparation, and registry write gate
@@ -160,6 +169,10 @@ authorization is not the active next phase.
 - It cannot treat FaceMesh candidates, generated steps, template drafts,
   candidate packages, contract preparations, or draft previews as final makeup
   recognition.
+- It cannot claim fully automatic high-quality makeup extraction from arbitrary
+  photos.
+- It cannot treat demo fixture copy, placeholders, or rule-derived candidate
+  fields as real photo-derived makeup semantics.
 - It cannot publish drafts automatically.
 - It cannot treat candidate packages as published templates.
 - It cannot write candidate packages into the formal Template Library

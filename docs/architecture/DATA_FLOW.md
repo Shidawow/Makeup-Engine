@@ -648,3 +648,22 @@ The flow documents and verifies how to demo the current local MVP shell. It
 does not add production data flow, does not write or mutate registry state,
 does not publish, does not replace the current User App Shell package, does not
 create a production writer, and does not train models.
+
+## Phase 12A Photo-to-Template Draft Reality Check Flow
+
+`VisionAnalysis`
+-> `FaceMeshRegionQaReport`
+-> `MakeupAttributeCandidateReport`
+-> `RuleBasedStepSequence`
+-> `MakeupTemplateDraftReport`
+-> `PhotoToTemplateRealityCheckReport`
+-> `PhotoToTemplateRealityValidationResult`
+-> `PhotoToTemplateRealityHandoff`
+-> next recommendation for Phase 12B Makeup Semantic Extraction Baseline.
+
+The reality flow is operator-only. It classifies what is real photo /
+FaceMesh-derived, region-QA-derived, rule-derived, demo fixture, placeholder,
+human-required, or unsupported. It does not create production app data flow,
+does not write or mutate registry state, does not publish, does not replace
+the current User App Shell package, does not create a production writer, and
+does not train models.

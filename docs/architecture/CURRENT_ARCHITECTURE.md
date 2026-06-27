@@ -929,3 +929,32 @@ Phase 11D remains local demo/QA packaging. It does not resume Phase 10V, write
 or mutate registries, publish, create production writers, replace the current
 User App Shell package, add backend/API/camera/AR scope, upload real photos, or
 train models.
+
+## Phase 12A Photo-to-Template Draft Reality Check
+
+Phase 12A adds an operator-only reality audit layer for the current
+photo-to-template draft chain.
+
+`src/template-engine/photoToTemplateRealityCheck.ts` creates field-level source
+evidence for real photo, FaceMesh-derived, region-QA-derived,
+pixel-rule-derived, semantic-rule-derived, template-rule-derived, demo fixture,
+placeholder, human-required, and unsupported fields.
+
+`src/template-engine/photoToTemplateRealityValidation.ts` blocks overclaims:
+fixture-as-real labels, makeup semantic fields mislabeled as real photo
+extraction, fully automatic extraction claims, model confidence mislabels,
+registry write claims, publish claims, production writer claims, shell
+replacement claims, and unstable JSON.
+
+`src/template-engine/photoToTemplateRealityHandoff.ts` hands the audit to
+Phase 12B - Makeup Semantic Extraction Baseline without claiming current
+automatic extraction capability.
+
+`src/components/template-studio/PhotoToTemplateRealityCheckPanel.tsx` renders
+the field source matrix in Template Workbench only. It is not part of the
+ordinary User App MVP path.
+
+Phase 12A remains an audit and boundary-confirmation layer. It does not resume
+Phase 10V, write or mutate registries, publish, create production writers,
+replace the current User App Shell package, add backend/API/camera/AR scope,
+upload real photos, store real user data, or train models.

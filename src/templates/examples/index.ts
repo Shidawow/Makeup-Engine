@@ -109,3 +109,4 @@ export * from './guarded-simulator-review-handoff.example';
 export * from './real-write-approval-boundary.example';
 export * from './real-write-approval-checklist.example';
 export * from './real-write-approval-handoff.example';
+export * from './photo-to-template-reality-check.example';

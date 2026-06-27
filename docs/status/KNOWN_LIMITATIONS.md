@@ -178,3 +178,18 @@
   operator review; it is not fully automatic high-quality makeup extraction.
 - Phase 11D keeps Readiness Score as a rule-based detection usability score,
   not MediaPipe model raw confidence.
+- Phase 12A Photo-to-Template Draft Reality Check confirms the current system
+  supports semi-automatic template draft generation with human review only. It
+  does not support or claim fully automatic high-quality makeup extraction from
+  arbitrary photos.
+- Phase 12A field evidence must keep real photo / FaceMesh / region QA signals
+  separate from pixel rules, semantic rules, template rules, demo fixtures,
+  placeholders, human-required fields, and unsupported fields.
+- Phase 12A must not treat lip color, lip finish, blush placement, eyeshadow
+  tone, brow shape, contour, highlight, template copy, beginner tips, common
+  mistakes, correction tips, or User App preview as final real photo semantic
+  extraction without human review.
+- Phase 12A does not resume Phase 10V, execute registry writes, mutate registry
+  state, publish, create a production writer, replace the current User App
+  Shell package, add backend/camera/AR/API scope, upload real photos, store
+  real user data, or train models.

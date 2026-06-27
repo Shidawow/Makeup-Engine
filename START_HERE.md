@@ -5,9 +5,9 @@ Makeup Engine is the makeup template production system for a future makeup coach
 ## Current Position
 
 - Project role: makeup template production system plus a local contract-driven user app shell prototype.
-- Last completed phase: `Phase 11D`.
-- Current completed business phase: `Phase 11D - User App Demo Readiness & Operator QA`.
-- Next recommended phase: `Phase 12A - Photo-to-Template Draft Reality Check`.
+- Last completed phase: `Phase 12A`.
+- Current completed business phase: `Phase 12A - Photo-to-Template Draft Reality Check`.
+- Next recommended phase: `Phase 12B - Makeup Semantic Extraction Baseline`.
 - Strategic focus: registry chain paused after Phase 10U; active work returns to ordinary-user User App MVP experience.
 - Recent recovery milestones retained in phase docs: `Phase 6K`, `Phase 6L`, `Phase 6L-1`, `Phase 7A`, `Phase 7B`, `Phase 7C`, `Phase 7D`, `Phase 7E`, `Phase 7F`, `Phase 7G`, `Phase 7H`, and `Phase 8A`.
 - Historical route-planning milestone: `Phase 8A - Product Route Decision / App MVP Planning`.
@@ -77,6 +77,7 @@ SourceImagePackage manifest
 -> User App Guided Step Experience Polish
 -> User App Visual Guidance & Template Content Polish
 -> User App Demo Readiness & Operator QA
+-> Photo-to-Template Draft Reality Check
 -> Phase 8 Roadmap / V1 Non-Goals
 -> Consumption Manifest
 -> Dataset Review
@@ -544,3 +545,18 @@ Phase 10V is still not the active next phase, and the shell still does not
 write registries, publish, create production writers, replace the current User
 App Shell package, add backend/camera/AR/API scope, or train models. Next
 recommended phase: `Phase 12A - Photo-to-Template Draft Reality Check`.
+
+## Phase 12A Addendum
+
+- `docs/product/photo-to-template-draft-reality-check.md`
+- `docs/product/photo-to-template-field-source-matrix.md`
+- `docs/phases/phase-12A.md`
+
+Phase 12A audits the real photo-to-template draft capability. It classifies
+fields as real_from_photo, facemesh_derived, region_qa_derived,
+pixel_rule_derived, semantic_rule_derived, template_rule_derived,
+demo_fixture, placeholder, human_required, or unsupported. The current system
+supports semi-automatic template draft generation with human review, but it
+cannot claim fully automatic high-quality makeup extraction from arbitrary
+photos. Registry chain remains paused after Phase 10U; Phase 10V is still not
+the active next phase. Next recommended phase: `Phase 12B - Makeup Semantic Extraction Baseline`.

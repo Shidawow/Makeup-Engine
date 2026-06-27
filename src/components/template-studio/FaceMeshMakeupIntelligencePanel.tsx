@@ -1,4 +1,4 @@
-import type { FaceMeshRegionQaReport } from '../../vision';
+import type { FaceMeshRegionQaReport, MakeupAnalysisPipelineResult } from '../../vision';
 import {
   buildTemplateStudioWorkflowState,
   createControlledRegistryWriteExecutionDesign,
@@ -19,6 +19,8 @@ import {
   createRealWriteApprovalBoundary,
   createRealWriteApprovalChecklist,
   createRealWriteApprovalHandoff,
+  createPhotoToTemplateRealityCheckReport,
+  createPhotoToTemplateRealityHandoff,
   createRealRegistryWriteImplementationChecklist,
   createRealRegistryWriteImplementationDraft,
   createRealRegistryWriteImplementationDraftHandoff,
@@ -58,6 +60,7 @@ import {
   validateRealRegistryWriteImplementationDraft,
   validateRealWriteExecutionPlan,
   validateOfficialUserAppTemplatePackageDraft,
+  validatePhotoToTemplateRealityCheck,
   validateUserAppPackageDraftPreview,
   validateUserAppTemplatePackageRegistryPreparation,
   validateTemplateLibraryCandidatePackage,
@@ -88,8 +91,10 @@ import { RealWriteExecutionPlanPanel } from './RealWriteExecutionPlanPanel';
 import { GuardedRealWriteExecutionSimulatorPanel } from './GuardedRealWriteExecutionSimulatorPanel';
 import { GuardedSimulatorReviewGatePanel } from './GuardedSimulatorReviewGatePanel';
 import { RealWriteApprovalBoundaryPanel } from './RealWriteApprovalBoundaryPanel';
+import { PhotoToTemplateRealityCheckPanel } from './PhotoToTemplateRealityCheckPanel';
 
 export interface FaceMeshMakeupIntelligencePanelProps {
+  analysis?: MakeupAnalysisPipelineResult | null;
   regionQa: FaceMeshRegionQaReport | null;
   attributeCandidates: MakeupAttributeCandidateReport | null;
   stepSequence: RuleBasedStepSequence | null;
@@ -118,6 +123,7 @@ const statusLabel: Record<string, string> = {
 const formatPercent = (value: number): string => `${Math.round(value * 100)}%`;
 
 export function FaceMeshMakeupIntelligencePanel({
+  analysis = null,
   regionQa,
   attributeCandidates,
   stepSequence,
@@ -127,6 +133,21 @@ export function FaceMeshMakeupIntelligencePanel({
   reviewWorkflow,
   studioWorkflow,
 }: FaceMeshMakeupIntelligencePanelProps) {
+  const photoToTemplateRealityReport = createPhotoToTemplateRealityCheckReport({
+    analysis,
+    regionQa,
+    attributeCandidates,
+    stepSequence,
+    templateDraft,
+  });
+  const photoToTemplateRealityValidation = validatePhotoToTemplateRealityCheck(
+    photoToTemplateRealityReport,
+  );
+  const photoToTemplateRealityHandoff = createPhotoToTemplateRealityHandoff({
+    report: photoToTemplateRealityReport,
+    validation: photoToTemplateRealityValidation,
+  });
+
   if (!regionQa || !attributeCandidates || !stepSequence || !templateDraft) {
     return (
       <section className="rounded-lg border border-stone-200 bg-white p-4 shadow-soft">
@@ -608,6 +629,13 @@ export function FaceMeshMakeupIntelligencePanel({
             </p>
           </div>
         </div>
+        <div className="mt-3">
+          <PhotoToTemplateRealityCheckPanel
+            handoff={photoToTemplateRealityHandoff}
+            report={photoToTemplateRealityReport}
+            validation={photoToTemplateRealityValidation}
+          />
+        </div>
       </section>
     );
   }
@@ -969,6 +997,12 @@ export function FaceMeshMakeupIntelligencePanel({
         </div>
       </details>
       </section>
+
+      <PhotoToTemplateRealityCheckPanel
+        handoff={photoToTemplateRealityHandoff}
+        report={photoToTemplateRealityReport}
+        validation={photoToTemplateRealityValidation}
+      />
 
       <TemplateDraftReviewWorkflowPanel
         draftQa={resolvedDraftQa}

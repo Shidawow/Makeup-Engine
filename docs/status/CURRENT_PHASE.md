@@ -2,26 +2,37 @@
 
 ## Phase State
 
-- `lastCompletedPhase`: `11D`
-- `lastCompletedBusinessPhase`: `11D`
-- `currentPhase`: `11D`
-- `currentPhaseName`: `User App Demo Readiness & Operator QA`
-- `nextRecommendedPhase`: `12A`
-- `nextRecommendedPhaseName`: `Photo-to-Template Draft Reality Check`
+- `lastCompletedPhase`: `12A`
+- `lastCompletedBusinessPhase`: `12A`
+- `currentPhase`: `12A`
+- `currentPhaseName`: `Photo-to-Template Draft Reality Check`
+- `nextRecommendedPhase`: `12B`
+- `nextRecommendedPhaseName`: `Makeup Semantic Extraction Baseline`
 - `phaseOwner`: `Codex implementation, validation, commit, and push pass`
 
 ## Phase Completion Definition
 
-Phase 11D is complete when:
+Phase 12A is complete when:
 
-- The ordinary-user User App MVP shell can be demonstrated from default app entry.
-- Template selection, template detail, preparation, step guide, completion, restart, and return-to-selection paths are documented and tested.
-- Operator QA checklist covers user path, admin boundary, Vision Analysis, mobile layout, forbidden terms, privacy boundary, registry paused state, MediaPipe assets, Git hygiene, and build/test validation.
-- Ordinary user path hides registry, write gate, publish gate, simulator, approval boundary, production writer, Pipeline Trace, debug JSON, Template Studio, published/write/production-ready wording, `Confidence 95%`, and raw model confidence wording.
-- Mobile-width demo keeps buttons and cards readable and touch-sized.
-- Vision Analysis continues to describe Readiness Score as detection usability scoring, not model raw confidence.
-- Template Studio and the 10A-10U administrator chain remain available only as operator/admin surfaces.
-- Registry chain remains paused after Phase 10U, and Phase 10V is not the active next phase.
-- No real registry write, registry mutation, publication, production writer creation, current User App Shell package replacement, backend, database, login, payment, camera, AR, OpenAI/external API, training, real photo upload, real user data storage, or MediaPipe binary commit occurs.
+- The current photo-to-template draft chain is audited from Vision Analysis
+  through FaceMesh region QA, attribute candidates, rule-based steps, template
+  draft, QA, human review, and app-facing preview boundaries.
+- Field-level evidence distinguishes real photo / FaceMesh / region QA signals
+  from pixel rules, semantic rules, template rules, demo fixtures,
+  placeholders, human-required fields, and unsupported fields.
+- Readiness Score is documented as rule-based detection usability scoring, not
+  model raw confidence.
+- Lip, eyeshadow, blush, brow, contour, highlight, template copy, tips,
+  mistakes, correction guidance, and User App preview are not overclaimed as
+  reliable real photo semantic extraction.
+- The conclusion remains semi-automatic template draft generation with human
+  review, not fully automatic high-quality makeup extraction.
+- Registry chain remains paused after Phase 10U, and Phase 10V is not the
+  active next phase.
+- No real registry write, registry mutation, publication, production writer,
+  current User App Shell package replacement, backend, database, login,
+  payment, camera, AR, OpenAI/external API, training, real photo upload, real
+  user data storage, or MediaPipe binary commit occurs.
 - Documentation and project-state handoff are updated.
-- MediaPipe check, scoped tests, typecheck, build, project status, context pack, direct JSON status, browser verification, and direct JSON context pass.
+- MediaPipe check, scoped tests, typecheck, build, project status, context
+  pack, direct JSON status, browser verification, and direct JSON context pass.

@@ -31,14 +31,14 @@ describe('project state snapshot', () => {
 
     expect(snapshot.projectName).toBe('Makeup Engine');
     expect(snapshot.projectRole).toContain('Makeup template production system');
-    expect(snapshot.lastCompletedPhase).toBe('11D');
-    expect(snapshot.lastCompletedBusinessPhase).toBe('11D');
-    expect(snapshot.currentPhaseId).toBe('11D');
+    expect(snapshot.lastCompletedPhase).toBe('12A');
+    expect(snapshot.lastCompletedBusinessPhase).toBe('12A');
+    expect(snapshot.currentPhaseId).toBe('12A');
     expect(snapshot.currentPhase).toBeTruthy();
-    expect(snapshot.currentPhase).toContain('User App Demo Readiness & Operator QA');
-    expect(snapshot.nextRecommendedPhase).toBe('12A');
-    expect(snapshot.nextRecommendedPhaseName).toContain('Photo-to-Template Draft Reality Check');
-    expect(snapshot.nextAction).toContain('Phase 12A');
+    expect(snapshot.currentPhase).toContain('Photo-to-Template Draft Reality Check');
+    expect(snapshot.nextRecommendedPhase).toBe('12B');
+    expect(snapshot.nextRecommendedPhaseName).toContain('Makeup Semantic Extraction Baseline');
+    expect(snapshot.nextAction).toContain('Phase 12B');
     expect(snapshot.mainDataFlow).toEqual(
       expect.arrayContaining([
         'SourceImagePackage',
@@ -77,6 +77,13 @@ describe('project state snapshot', () => {
         'UserAppForbiddenTermsQa',
         'UserAppMobileDemoQa',
         'UserAppDemoKnownLimitations',
+        'PhotoToTemplateRealityCheckReport',
+        'PhotoToTemplateRealityFieldEvidence',
+        'PhotoToTemplateRealityValidationResult',
+        'PhotoToTemplateRealityHandoff',
+        'PhotoToTemplateRealityCheckPanel',
+        'PhotoToTemplateFieldSourceMatrix',
+        'MakeupSemanticExtractionBaselineRecommendation',
         'UserPhotoIntakePlaceholder',
         'UserPersonalizationPlaceholder',
         'UserPhotoPrivacyBoundary',
@@ -294,6 +301,9 @@ describe('project state snapshot', () => {
     expect(snapshot.knownLimitations.join('\n')).toContain('User App Guided Step Experience Polish');
     expect(snapshot.knownLimitations.join('\n')).toContain('Phase 11C');
     expect(snapshot.knownLimitations.join('\n')).toContain('User App Visual Guidance & Template Content Polish');
+    expect(snapshot.knownLimitations.join('\n')).toContain('Phase 12A');
+    expect(snapshot.knownLimitations.join('\n')).toContain('semi-automatic template draft generation');
+    expect(snapshot.knownLimitations.join('\n')).toContain('fully automatic high-quality makeup extraction');
     expect(snapshot.knownLimitations.join('\n')).toContain('Phase 10V is intentionally paused');
     expect(snapshot.knownLimitations.join('\n')).toContain('real names');
     expect(snapshot.knownLimitations.join('\n')).toContain('service worker');

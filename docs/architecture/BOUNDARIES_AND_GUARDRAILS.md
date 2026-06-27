@@ -696,3 +696,26 @@ Phase 11D ordinary-user paths must keep registry, write gate, publish gate,
 simulator, approval boundary, production writer, Pipeline Trace, debug JSON,
 Template Studio, published/write/production-ready wording, `Confidence 95%`,
 and raw model confidence wording hidden by default.
+
+## Phase 12A Photo-to-Template Draft Reality Check
+
+Phase 12A is an operator-only reality audit. It may classify fields as
+real_from_photo, facemesh_derived, region_qa_derived, pixel_rule_derived,
+semantic_rule_derived, template_rule_derived, demo_fixture, placeholder,
+human_required, or unsupported.
+
+Phase 12A must not claim fully automatic high-quality makeup extraction from
+arbitrary photos. It must keep Readiness Score labeled as rule-based detection
+usability scoring, not model raw confidence.
+
+Phase 12A must not mark demo fixtures, placeholders, template copy, app preview
+copy, or unsupported makeup semantics as real_from_photo.
+
+Phase 12A must not resume Phase 10V, execute real registry writes, mutate
+registry state, publish, create a production writer, replace the current User
+App Shell package, add backend/database/login/payment/camera/AR/OpenAI or
+external API scope, upload real photos, store real user data, or train models.
+
+Phase 12A ordinary-user paths must not expose Photo-to-Template Reality Check,
+field source matrix, Template Studio, registry/write/publish/simulator/
+production writer, or automatic extraction operator terminology by default.

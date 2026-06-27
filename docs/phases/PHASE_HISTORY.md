@@ -1709,3 +1709,38 @@ Why Phase 12A follows:
 The demo path is ready enough to inspect the upstream photo-to-template reality.
 Phase 12A should evaluate real draft quality and manual intervention points
 instead of assuming fully automatic high-quality makeup extraction.
+
+## Phase 12A - Photo-to-Template Draft Reality Check
+
+Audited the current photo-to-template draft capability while keeping the
+registry write chain paused after Phase 10U.
+
+What changed:
+
+- Added a Photo-to-Template Reality Check model with field-level source labels:
+  real_from_photo, facemesh_derived, region_qa_derived, pixel_rule_derived,
+  semantic_rule_derived, template_rule_derived, demo_fixture, placeholder,
+  human_required, and unsupported.
+- Added validation that blocks fixture-as-real labeling, makeup semantic fields
+  mislabeled as real photo extraction, fully automatic extraction claims,
+  model confidence mislabels, registry write claims, publish claims, production
+  writer claims, shell replacement claims, and unstable JSON.
+- Added a handoff that points to Phase 12B - Makeup Semantic Extraction
+  Baseline without claiming current automatic extraction capability.
+- Added an operator-only Template Workbench panel with a field source matrix.
+- Added product docs for the reality check and field source matrix.
+
+What still cannot happen:
+
+- Phase 12A does not resume Phase 10V, execute registry writes, mutate registry
+  state, publish, create a production writer, replace the current User App Shell
+  package, add backend/database/login/payment/camera/AR/OpenAI or external API
+  scope, upload real photos, store real user data, or train models.
+- Phase 12A does not claim fully automatic high-quality makeup extraction from
+  arbitrary photos.
+
+Why Phase 12B follows:
+
+The system needs a stronger local makeup semantic extraction baseline before it
+can improve lip, blush, eye, brow, contour, highlight, and style understanding
+beyond rule-derived candidates and human-reviewed drafts.

@@ -40,15 +40,22 @@ describe('provider switching docs', () => {
     expect(combined).toContain('src/intelligence/runtime');
   });
 
-  it('provides phase 11D to 12A switch templates with historical 11C, 11B, 11A, 10U, and older markers', async () => {
+  it('provides phase 12A to 12B switch templates with historical 11D, 11C, 11B, 11A, 10U, and older markers', async () => {
     const prompt = await readFile('docs/prompts/PROVIDER_SWITCH_PROMPT.md', 'utf8');
 
     expect(prompt).toContain('Switch To Native GPT / Codex Desktop');
     expect(prompt).toContain('Switch To PackyAPI + CLI');
     expect(prompt).toContain('Return From PackyAPI To ChatGPT');
+    expect(prompt).toContain('lastCompletedPhase: 12A');
+    expect(prompt).toContain('nextRecommendedPhase: 12B');
+    expect(prompt).toContain('Makeup Semantic Extraction Baseline');
+    expect(prompt).toContain('Photo-to-Template Draft Reality Check');
+    expect(prompt).toContain('Phase 12A completed');
+    expect(prompt).toContain('semi-automatic template draft generation');
+    expect(prompt).toContain('fully automatic high-quality makeup extraction');
+    expect(prompt).toContain('field source matrix');
     expect(prompt).toContain('lastCompletedPhase: 11D');
     expect(prompt).toContain('nextRecommendedPhase: 12A');
-    expect(prompt).toContain('Photo-to-Template Draft Reality Check');
     expect(prompt).toContain('User App Demo Readiness & Operator QA');
     expect(prompt).toContain('Phase 11D completed');
     expect(prompt).toContain('demo readiness docs');

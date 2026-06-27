@@ -12,10 +12,10 @@ It produces templates, template evidence, correction records, review state, loca
 
 ## Current Phase
 
-- Current business phase: `Phase 11D completed`
-- Last completed phase: `Phase 11D`
-- Last completed phase name: `Phase 11D - User App Demo Readiness & Operator QA`
-- Next recommended phase: `Phase 12A - Photo-to-Template Draft Reality Check`
+- Current business phase: `Phase 12A completed`
+- Last completed phase: `Phase 12A`
+- Last completed phase name: `Phase 12A - Photo-to-Template Draft Reality Check`
+- Next recommended phase: `Phase 12B - Makeup Semantic Extraction Baseline`
 - Strategic focus: registry chain paused after Phase 10U; active work returns to ordinary-user User App MVP experience.
 
 Historical recovery marker retained for Phase 10U tests: `Phase 10U completed`.
@@ -36,6 +36,7 @@ Historical recovery milestone retained for Phase 8C tests: `Phase 8C completed` 
 Historical recovery milestone retained for Phase 8D tests: `Phase 8D completed` / `Phase 8D - Template Content QA for Real User Trial`.
 Historical recovery milestone retained for Phase 8E tests: `Phase 8E completed` / `Phase 8E - MVP Release Readiness Gate`.
 Historical recovery milestone retained for Phase 9B tests: `Phase 9B completed` / `Phase 9B - Internal Trial Result Review Framework`.
+Historical recovery marker retained for Phase 11D tests: `Phase 11D completed`.
 
 ## Current Main Data Flow
 
@@ -106,6 +107,7 @@ Real Photo
 -> User App Guided Step Experience Polish
 -> User App Visual Guidance & Template Content Polish
 -> User App Demo Readiness & Operator QA
+-> Photo-to-Template Draft Reality Check
 -> Phase 8 Roadmap / V1 Non-Goals
 -> User App Consumption Manifest
 -> Dataset Review
@@ -123,6 +125,11 @@ Important boundary: `SourceImagePackage` can enter Vision Analysis through opera
   template-production drafting.
 - `src/template-engine/makeupAttributeCandidates.ts`, `src/template-engine/ruleBasedStepGenerator.ts`, and `src/template-engine/templateDraftGenerator.ts`:
   Phase 10A candidate, rule-based step, and draft-only template generation.
+- `src/template-engine/photoToTemplateRealityCheck.ts`,
+  `src/template-engine/photoToTemplateRealityValidation.ts`, and
+  `src/template-engine/photoToTemplateRealityHandoff.ts`: Phase 12A
+  operator-only reality audit for photo-to-template draft source labels,
+  overclaim blocking, and handoff to Phase 12B semantic extraction baseline.
 - `src/template-engine/templateLibraryCandidatePackage.ts`,
   `src/template-engine/templateLibraryCandidateValidation.ts`, and
   `src/template-engine/templateLibraryCandidateHandoff.ts`: Phase 10C local
@@ -598,6 +605,20 @@ present, no backend, no camera/AR, no OpenAI/external API, and no training.
 Historical marker retained for Phase 10R recovery tests: Phase 10R completed.
 
 Next recommended phase: Phase 10T - Guarded Simulator Review Gate.
+
+## Phase 12A Current Capability
+
+Phase 12A completed Photo-to-Template Draft Reality Check. The current chain
+can support semi-automatic template draft generation with human review, but it
+cannot claim fully automatic high-quality makeup extraction from arbitrary
+photos. Field source labels now distinguish real_from_photo,
+facemesh_derived, region_qa_derived, pixel_rule_derived,
+semantic_rule_derived, template_rule_derived, demo_fixture, placeholder,
+human_required, and unsupported. The Template Workbench has an operator-only
+field source matrix. The registry chain remains paused after Phase 10U and
+Phase 10V is still not the active next phase.
+
+Next recommended phase: Phase 12B - Makeup Semantic Extraction Baseline.
 
 ## Phase 10T Current Capability
 

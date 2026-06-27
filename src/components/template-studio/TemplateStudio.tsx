@@ -1869,6 +1869,7 @@ export function TemplateStudio() {
             <UserAppShell packageData={activeUserAppTemplatePackage} />
 
             <FaceMeshMakeupIntelligencePanel
+              analysis={analysis}
               attributeCandidates={makeupAttributeCandidates}
               draftQa={templateDraftQa}
               humanReview={templateDraftHumanReview}
