@@ -31,14 +31,14 @@ describe('project state snapshot', () => {
 
     expect(snapshot.projectName).toBe('Makeup Engine');
     expect(snapshot.projectRole).toContain('Makeup template production system');
-    expect(snapshot.lastCompletedPhase).toBe('11C');
-    expect(snapshot.lastCompletedBusinessPhase).toBe('11C');
-    expect(snapshot.currentPhaseId).toBe('11C');
+    expect(snapshot.lastCompletedPhase).toBe('11D');
+    expect(snapshot.lastCompletedBusinessPhase).toBe('11D');
+    expect(snapshot.currentPhaseId).toBe('11D');
     expect(snapshot.currentPhase).toBeTruthy();
-    expect(snapshot.currentPhase).toContain('User App Visual Guidance & Template Content Polish');
-    expect(snapshot.nextRecommendedPhase).toBe('11D');
-    expect(snapshot.nextRecommendedPhaseName).toContain('User App Demo Readiness');
-    expect(snapshot.nextAction).toContain('Phase 11D');
+    expect(snapshot.currentPhase).toContain('User App Demo Readiness & Operator QA');
+    expect(snapshot.nextRecommendedPhase).toBe('12A');
+    expect(snapshot.nextRecommendedPhaseName).toContain('Photo-to-Template Draft Reality Check');
+    expect(snapshot.nextAction).toContain('Phase 12A');
     expect(snapshot.mainDataFlow).toEqual(
       expect.arrayContaining([
         'SourceImagePackage',
@@ -72,6 +72,11 @@ describe('project state snapshot', () => {
         'UserAppIntensityReminder',
         'UserAppTechniqueBreakdown',
         'UserAppCompletionRegionSummary',
+        'UserAppDemoReadiness',
+        'UserAppOperatorQaChecklist',
+        'UserAppForbiddenTermsQa',
+        'UserAppMobileDemoQa',
+        'UserAppDemoKnownLimitations',
         'UserPhotoIntakePlaceholder',
         'UserPersonalizationPlaceholder',
         'UserPhotoPrivacyBoundary',

@@ -39,6 +39,7 @@ export type UserAppShellSection =
   | 'preferences'
   | 'privacy'
   | 'session'
+  | 'demoReadiness'
   | 'readiness'
   | 'pwa'
   | 'mvpPolish'

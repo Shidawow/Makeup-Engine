@@ -907,3 +907,25 @@ next-practice guidance.
 Phase 11C remains local MVP shell polish. It does not resume Phase 10V, write or
 mutate registries, publish, create production writers, replace the current User
 App Shell package, add backend/API/camera/AR scope, or train models.
+
+## Phase 11D User App Demo Readiness & Operator QA
+
+Phase 11D adds a demo-readiness and operator-QA layer around the existing
+ordinary-user User App MVP shell.
+
+`docs/product/user-app-demo-readiness.md` documents the local demo entry,
+recommended walkthrough, pre-demo checks, user path checks, mobile checks,
+Vision Analysis notes, Template Studio notes, limitations, and demo risks.
+
+`docs/product/operator-qa-checklist.md` defines operator checks for user path,
+admin boundaries, Vision Analysis, mobile layout, forbidden terms, privacy
+copy, registry paused status, MediaPipe assets, Git hygiene, and validation.
+
+`src/components/user-app/UserAppDemoReadinessPanel.tsx` renders an
+administrator-only readiness summary inside the explicit User App admin checks.
+It is not part of the ordinary user path.
+
+Phase 11D remains local demo/QA packaging. It does not resume Phase 10V, write
+or mutate registries, publish, create production writers, replace the current
+User App Shell package, add backend/API/camera/AR scope, upload real photos, or
+train models.

@@ -1678,3 +1678,34 @@ Why Phase 11D follows:
 The ordinary-user demo is now more concrete and content-rich. Phase 11D should
 focus on User App Demo Readiness & Operator QA before broader demos or trial
 handoff.
+
+## Phase 11D - User App Demo Readiness & Operator QA
+
+Packaged the ordinary-user User App MVP shell for operator-led demo and QA while
+keeping the registry write chain paused after Phase 10U.
+
+What changed:
+
+- Added a User App demo readiness document that explains the local demo entry,
+  recommended demo path, pre-demo checks, user path checks, mobile checks,
+  Vision Analysis notes, Template Studio notes, limitations, and demo risks.
+- Added an operator QA checklist covering user path, admin boundary, Vision
+  Analysis, mobile layout, forbidden terms, privacy boundary, registry pause,
+  MediaPipe assets, Git hygiene, and build/test validation.
+- Added an administrator-only Demo Readiness panel in the User App shell.
+- Added user path demo readiness tests and forbidden terms tests.
+- Updated known limitations, architecture/status docs, prompts, and
+  project-state to Phase 11D.
+
+What still cannot happen:
+
+- Phase 11D does not resume Phase 10V, execute registry writes, mutate registry
+  state, publish, create a production writer, replace the current User App Shell
+  package, add backend/database/login/payment/camera/AR/OpenAI or external API
+  scope, upload real photos, store real user data, or train models.
+
+Why Phase 12A follows:
+
+The demo path is ready enough to inspect the upstream photo-to-template reality.
+Phase 12A should evaluate real draft quality and manual intervention points
+instead of assuming fully automatic high-quality makeup extraction.

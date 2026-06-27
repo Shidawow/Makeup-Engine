@@ -680,3 +680,19 @@ Phase 11C ordinary-user paths must keep registry, write gate, publish gate,
 simulator, approval boundary, production writer, Pipeline Trace, debug JSON,
 Template Studio admin-only terms, and production readiness wording hidden by
 default.
+
+## Phase 11D User App Demo Readiness & Operator QA
+
+Phase 11D is local demo and operator-QA packaging only. It may document demo
+steps, operator checks, known limitations, forbidden terms, mobile checks,
+Vision Analysis notes, Template Studio notes, and Git hygiene checks.
+
+Phase 11D must not resume Phase 10V, execute real registry writes, mutate
+registry state, publish, create a production writer, replace the current User
+App Shell package, add backend/database/login/payment/camera/AR/OpenAI or
+external API scope, upload real photos, store real user data, or train models.
+
+Phase 11D ordinary-user paths must keep registry, write gate, publish gate,
+simulator, approval boundary, production writer, Pipeline Trace, debug JSON,
+Template Studio, published/write/production-ready wording, `Confidence 95%`,
+and raw model confidence wording hidden by default.

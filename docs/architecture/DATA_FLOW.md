@@ -633,3 +633,18 @@ technique breakdown, final check, and completed-region summary. It does not
 resume Phase 10V, execute a registry write, mutate registry state, publish,
 create a production writer, replace the current User App Shell package, call
 backend/OpenAI/external APIs, request camera/AR scope, or train models.
+
+## Phase 11D User App Demo Readiness & Operator QA Flow
+
+`UserAppTemplatePackage`
+-> `UserAppMvpExperience`
+-> `UserAppDemoReadiness`
+-> `OperatorQaChecklist`
+-> `ForbiddenTermsQa`
+-> `MobileDemoQa`
+-> next recommendation for Phase 12A photo-to-template draft reality check.
+
+The flow documents and verifies how to demo the current local MVP shell. It
+does not add production data flow, does not write or mutate registry state,
+does not publish, does not replace the current User App Shell package, does not
+create a production writer, and does not train models.

@@ -12,10 +12,10 @@ It produces templates, template evidence, correction records, review state, loca
 
 ## Current Phase
 
-- Current business phase: `Phase 11C completed`
-- Last completed phase: `Phase 11C`
-- Last completed phase name: `Phase 11C - User App Visual Guidance & Template Content Polish`
-- Next recommended phase: `Phase 11D - User App Demo Readiness & Operator QA`
+- Current business phase: `Phase 11D completed`
+- Last completed phase: `Phase 11D`
+- Last completed phase name: `Phase 11D - User App Demo Readiness & Operator QA`
+- Next recommended phase: `Phase 12A - Photo-to-Template Draft Reality Check`
 - Strategic focus: registry chain paused after Phase 10U; active work returns to ordinary-user User App MVP experience.
 
 Historical recovery marker retained for Phase 10U tests: `Phase 10U completed`.
@@ -105,6 +105,7 @@ Real Photo
 -> User App MVP Experience Reset
 -> User App Guided Step Experience Polish
 -> User App Visual Guidance & Template Content Polish
+-> User App Demo Readiness & Operator QA
 -> Phase 8 Roadmap / V1 Non-Goals
 -> User App Consumption Manifest
 -> Dataset Review
@@ -643,5 +644,12 @@ region badges, intensity reminders, technique breakdowns, final checks, and
 completed-region summaries. The registry chain remains paused after Phase 10U
 and Phase 10V is still not the active next phase. Next recommended phase:
 Phase 11D - User App Demo Readiness & Operator QA.
+
+Phase 11D completed User App Demo Readiness & Operator QA. The local MVP shell
+now has demo readiness docs, operator QA checklist, user path QA, mobile demo
+checks, forbidden terms QA, known limitations, and an administrator-only Demo
+Readiness panel. The registry chain remains paused after Phase 10U and Phase
+10V is still not the active next phase. Next recommended phase: Phase 12A -
+Photo-to-Template Draft Reality Check.
 
 Historical handoff marker retained for Phase 10T recovery tests: Phase 10T completed / lastCompletedPhase: 10T / nextRecommendedPhase: 10U / Real Write Approval Boundary / Guarded Simulator Review Gate.

@@ -7,13 +7,13 @@
     "npm run project:context",
     "node scripts/project-status.mjs --json",
     "node scripts/context-pack.mjs --json",
-    "npm run test -- tests/user-app-mvp-experience.test.tsx tests/user-app-admin-boundary.test.tsx tests/user-app-guided-step-experience.test.tsx tests/user-app-mobile-guidance-layout.test.tsx tests/user-app-visual-guidance-content.test.tsx tests/user-app-template-content-quality.test.ts tests/phase-11C-documentation-recovery.test.ts tests/template-studio-tab-boundary.test.tsx tests/vision-readiness-score-label.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
+    "npm run test -- tests/user-app-mvp-experience.test.tsx tests/user-app-admin-boundary.test.tsx tests/user-app-guided-step-experience.test.tsx tests/user-app-mobile-guidance-layout.test.tsx tests/user-app-visual-guidance-content.test.tsx tests/user-app-template-content-quality.test.tsx tests/user-app-demo-readiness.test.tsx tests/user-app-demo-forbidden-terms.test.tsx tests/phase-11D-documentation-recovery.test.ts tests/template-studio-tab-boundary.test.tsx tests/vision-readiness-score-label.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
   ],
-  "lastUpdatedPhase": "11C",
-  "phase": "11C",
-  "lastCompletedPhase": "11C",
-  "currentPhase": "User App Visual Guidance & Template Content Polish",
-  "nextRecommendedPhase": "11D",
+  "lastUpdatedPhase": "11D",
+  "phase": "11D",
+  "lastCompletedPhase": "11D",
+  "currentPhase": "User App Demo Readiness & Operator QA",
+  "nextRecommendedPhase": "12A",
   "updatedAt": "2026-06-27T00:00:00.000+08:00",
   "lastValidation": {
     "mediapipeCheck": "passed",
@@ -25,12 +25,10 @@
     "projectContext": "passed",
     "contextPackJson": "passed",
     "browserVerification": "passed",
-    "phase11AScopedTests": "passed",
-    "phase11BScopedTests": "passed",
-    "phase11CScopedTests": "passed",
-    "testFiles": 12,
-    "tests": 41,
-    "summary": "Phase 11C validation passed: MediaPipe check, scoped tests (12 files / 41 tests), typecheck, build, project status/context, JSON status/context, and browser verification passed."
+    "phase11DScopedTests": "passed",
+    "testFiles": 14,
+    "tests": 47,
+    "summary": "Phase 11D validation passed: MediaPipe check, scoped tests (14 files / 47 tests), typecheck, build, project status/context, JSON status/context, and browser verification passed."
   },
   "validation": {
     "mediapipeCheck": "passed",
@@ -42,67 +40,60 @@
     "projectContext": "passed",
     "contextPackJson": "passed",
     "browserVerification": "passed",
-    "phase11AScopedTests": "passed",
-    "phase11BScopedTests": "passed",
-    "phase11CScopedTests": "passed",
-    "testFiles": 12,
-    "tests": 41,
-    "summary": "Phase 11C validation passed: MediaPipe check, scoped tests (12 files / 41 tests), typecheck, build, project status/context, JSON status/context, and browser verification passed."
+    "phase11DScopedTests": "passed",
+    "testFiles": 14,
+    "tests": 47,
+    "summary": "Phase 11D validation passed: MediaPipe check, scoped tests (14 files / 47 tests), typecheck, build, project status/context, JSON status/context, and browser verification passed."
   },
   "status": "completed",
-  "summary": "Phase 11C polished ordinary-user visual guidance and template content while keeping the registry chain paused after Phase 10U.",
+  "summary": "Phase 11D packages the ordinary-user User App MVP shell for demo readiness and operator QA while keeping the registry chain paused after Phase 10U.",
   "entries": [
     {
-      "phase": "11C",
+      "phase": "11D",
       "command": "npm run mediapipe:check",
       "status": "passed"
     },
     {
-      "phase": "11C",
-      "command": "npm run test -- tests/user-app-mvp-experience.test.tsx tests/user-app-admin-boundary.test.tsx tests/user-app-guided-step-experience.test.tsx tests/user-app-mobile-guidance-layout.test.tsx tests/user-app-visual-guidance-content.test.tsx tests/user-app-template-content-quality.test.ts tests/phase-11C-documentation-recovery.test.ts tests/template-studio-tab-boundary.test.tsx tests/vision-readiness-score-label.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
-      "status": "passed"
-    },
-    {
-      "phase": "11C",
+      "phase": "11D",
       "command": "npm run typecheck",
       "status": "passed"
     },
     {
-      "phase": "11C",
+      "phase": "11D",
       "command": "npm run build",
       "status": "passed"
     },
     {
-      "phase": "11C",
+      "phase": "11D",
       "command": "npm run project:status",
       "status": "passed"
     },
     {
-      "phase": "11C",
+      "phase": "11D",
       "command": "npm run project:context",
       "status": "passed"
     },
     {
-      "phase": "11C",
+      "phase": "11D",
       "command": "node scripts/project-status.mjs --json",
       "status": "passed"
     },
     {
-      "phase": "11C",
+      "phase": "11D",
       "command": "node scripts/context-pack.mjs --json",
       "status": "passed"
     },
     {
-      "phase": "11C",
-      "command": "browser verification",
+      "phase": "11D",
+      "command": "npm run test -- tests/user-app-mvp-experience.test.tsx tests/user-app-admin-boundary.test.tsx tests/user-app-guided-step-experience.test.tsx tests/user-app-mobile-guidance-layout.test.tsx tests/user-app-visual-guidance-content.test.tsx tests/user-app-template-content-quality.test.tsx tests/user-app-demo-readiness.test.tsx tests/user-app-demo-forbidden-terms.test.tsx tests/phase-11D-documentation-recovery.test.ts tests/template-studio-tab-boundary.test.tsx tests/vision-readiness-score-label.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
       "status": "passed"
     }
   ],
-  "currentPhaseId": "11C",
-  "nextRecommendedPhaseName": "User App Demo Readiness & Operator QA",
-  "currentPhaseName": "User App Visual Guidance & Template Content Polish",
+  "currentPhaseId": "11D",
+  "nextRecommendedPhaseName": "Photo-to-Template Draft Reality Check",
+  "currentPhaseName": "User App Demo Readiness & Operator QA",
   "validationStatus": "passed",
-  "lastCompletedBusinessPhase": "11C",
+  "lastCompletedBusinessPhase": "11D",
   "results": {
     "mediapipeCheck": "passed",
     "typecheck": "passed",
@@ -113,15 +104,13 @@
     "projectContext": "passed",
     "contextPackJson": "passed",
     "browserVerification": "passed",
-    "phase11AScopedTests": "passed",
-    "phase11BScopedTests": "passed",
-    "phase11CScopedTests": "passed",
-    "testFiles": 12,
-    "tests": 41,
-    "summary": "Phase 11C validation passed: MediaPipe check, scoped tests (12 files / 41 tests), typecheck, build, project status/context, JSON status/context, and browser verification passed."
+    "phase11DScopedTests": "passed",
+    "testFiles": 14,
+    "tests": 47,
+    "summary": "Phase 11D validation passed: MediaPipe check, scoped tests (14 files / 47 tests), typecheck, build, project status/context, JSON status/context, and browser verification passed."
   },
-  "nextAction": "Proceed to Phase 11D - User App Demo Readiness & Operator QA.",
-  "lastUpdated": "2026-06-24T00:00:00.000+08:00",
+  "nextAction": "Proceed to Phase 12A - Photo-to-Template Draft Reality Check.",
+  "lastUpdated": "2026-06-27T00:00:00.000+08:00",
   "taskStatus": "completed",
   "requiredValidationCommands": [
     "npm run mediapipe:check",
@@ -131,7 +120,7 @@
     "npm run project:context",
     "node scripts/project-status.mjs --json",
     "node scripts/context-pack.mjs --json",
-    "npm run test -- tests/user-app-mvp-experience.test.tsx tests/user-app-admin-boundary.test.tsx tests/user-app-guided-step-experience.test.tsx tests/user-app-mobile-guidance-layout.test.tsx tests/user-app-visual-guidance-content.test.tsx tests/user-app-template-content-quality.test.ts tests/phase-11C-documentation-recovery.test.ts tests/template-studio-tab-boundary.test.tsx tests/vision-readiness-score-label.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
+    "npm run test -- tests/user-app-mvp-experience.test.tsx tests/user-app-admin-boundary.test.tsx tests/user-app-guided-step-experience.test.tsx tests/user-app-mobile-guidance-layout.test.tsx tests/user-app-visual-guidance-content.test.tsx tests/user-app-template-content-quality.test.tsx tests/user-app-demo-readiness.test.tsx tests/user-app-demo-forbidden-terms.test.tsx tests/phase-11D-documentation-recovery.test.ts tests/template-studio-tab-boundary.test.tsx tests/vision-readiness-score-label.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
   ],
   "requiredCommands": [
     "npm run mediapipe:check",
@@ -141,7 +130,7 @@
     "npm run project:context",
     "node scripts/project-status.mjs --json",
     "node scripts/context-pack.mjs --json",
-    "npm run test -- tests/user-app-mvp-experience.test.tsx tests/user-app-admin-boundary.test.tsx tests/user-app-guided-step-experience.test.tsx tests/user-app-mobile-guidance-layout.test.tsx tests/user-app-visual-guidance-content.test.tsx tests/user-app-template-content-quality.test.ts tests/phase-11C-documentation-recovery.test.ts tests/template-studio-tab-boundary.test.tsx tests/vision-readiness-score-label.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
+    "npm run test -- tests/user-app-mvp-experience.test.tsx tests/user-app-admin-boundary.test.tsx tests/user-app-guided-step-experience.test.tsx tests/user-app-mobile-guidance-layout.test.tsx tests/user-app-visual-guidance-content.test.tsx tests/user-app-template-content-quality.test.tsx tests/user-app-demo-readiness.test.tsx tests/user-app-demo-forbidden-terms.test.tsx tests/phase-11D-documentation-recovery.test.ts tests/template-studio-tab-boundary.test.tsx tests/vision-readiness-score-label.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
   ],
   "realWriteApprovalBoundaryDecision": {
     "nextPhase": "Phase 10V - Actual Write Authorization Request",
@@ -173,7 +162,7 @@
     "npm run project:context",
     "node scripts/project-status.mjs --json",
     "node scripts/context-pack.mjs --json",
-    "npm run test -- tests/user-app-mvp-experience.test.tsx tests/user-app-admin-boundary.test.tsx tests/user-app-guided-step-experience.test.tsx tests/user-app-mobile-guidance-layout.test.tsx tests/user-app-visual-guidance-content.test.tsx tests/user-app-template-content-quality.test.ts tests/phase-11C-documentation-recovery.test.ts tests/template-studio-tab-boundary.test.tsx tests/vision-readiness-score-label.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
+    "npm run test -- tests/user-app-mvp-experience.test.tsx tests/user-app-admin-boundary.test.tsx tests/user-app-guided-step-experience.test.tsx tests/user-app-mobile-guidance-layout.test.tsx tests/user-app-visual-guidance-content.test.tsx tests/user-app-template-content-quality.test.tsx tests/user-app-demo-readiness.test.tsx tests/user-app-demo-forbidden-terms.test.tsx tests/phase-11D-documentation-recovery.test.ts tests/template-studio-tab-boundary.test.tsx tests/vision-readiness-score-label.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
   ],
   "userAppGuidedStepExperiencePolish": {
     "registryChainStatus": "registry chain paused after Phase 10U",
@@ -214,9 +203,43 @@
       "return_to_selection_action"
     ],
     "adminBoundary": "administrator trial, Template Studio, and registry safety tooling remain explicitly separated from the ordinary user path",
-    "nextPhase": "Phase 11C - User App Visual Guidance & Template Content Polish"
+    "nextPhase": "Phase 11D - User App Demo Readiness & Operator QA"
   },
   "phase11CCommands": [
+    {
+      "command": "npm run mediapipe:check",
+      "status": "completed"
+    },
+    {
+      "command": "npm run typecheck",
+      "status": "completed"
+    },
+    {
+      "command": "npm run build",
+      "status": "completed"
+    },
+    {
+      "command": "npm run project:status",
+      "status": "completed"
+    },
+    {
+      "command": "npm run project:context",
+      "status": "completed"
+    },
+    {
+      "command": "node scripts/project-status.mjs --json",
+      "status": "completed"
+    },
+    {
+      "command": "node scripts/context-pack.mjs --json",
+      "status": "completed"
+    },
+    {
+      "command": "npm run test -- tests/user-app-mvp-experience.test.tsx tests/user-app-admin-boundary.test.tsx tests/user-app-guided-step-experience.test.tsx tests/user-app-mobile-guidance-layout.test.tsx tests/user-app-visual-guidance-content.test.tsx tests/user-app-template-content-quality.test.tsx tests/phase-11D-documentation-recovery.test.ts tests/template-studio-tab-boundary.test.tsx tests/vision-readiness-score-label.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
+      "status": "completed"
+    }
+  ],
+  "phase11DCommands": [
     {
       "command": "npm run mediapipe:check",
       "status": "passed"
@@ -246,8 +269,34 @@
       "status": "passed"
     },
     {
-      "command": "npm run test -- tests/user-app-mvp-experience.test.tsx tests/user-app-admin-boundary.test.tsx tests/user-app-guided-step-experience.test.tsx tests/user-app-mobile-guidance-layout.test.tsx tests/user-app-visual-guidance-content.test.tsx tests/user-app-template-content-quality.test.ts tests/phase-11C-documentation-recovery.test.ts tests/template-studio-tab-boundary.test.tsx tests/vision-readiness-score-label.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
+      "command": "npm run test -- tests/user-app-mvp-experience.test.tsx tests/user-app-admin-boundary.test.tsx tests/user-app-guided-step-experience.test.tsx tests/user-app-mobile-guidance-layout.test.tsx tests/user-app-visual-guidance-content.test.tsx tests/user-app-template-content-quality.test.tsx tests/user-app-demo-readiness.test.tsx tests/user-app-demo-forbidden-terms.test.tsx tests/phase-11D-documentation-recovery.test.ts tests/template-studio-tab-boundary.test.tsx tests/vision-readiness-score-label.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
       "status": "passed"
     }
-  ]
+  ],
+  "userAppDemoReadinessOperatorQa": {
+    "registryChainStatus": "registry chain paused after Phase 10U",
+    "realWriteAuthorizationPath": "Phase 10V intentionally paused; not the active next phase",
+    "demoPath": [
+      "open_local_page",
+      "user_app_mvp_home",
+      "template_selection",
+      "template_detail",
+      "preparation",
+      "step_by_step_guidance",
+      "completion",
+      "restart_or_return_to_selection"
+    ],
+    "qaScope": [
+      "user_path_qa",
+      "operator_qa_checklist",
+      "forbidden_terms_qa",
+      "mobile_demo_qa",
+      "vision_analysis_qa",
+      "template_studio_boundary_qa",
+      "known_limitations",
+      "git_hygiene"
+    ],
+    "nextPhase": "Phase 12A - Photo-to-Template Draft Reality Check"
+  },
+  "currentTask": "Phase 11D - User App Demo Readiness & Operator QA"
 }

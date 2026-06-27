@@ -2,19 +2,17 @@
 
 ## Current Phase
 
-Phase 11C: User App Visual Guidance & Template Content Polish is complete.
+Phase 11D: User App Demo Readiness & Operator QA is complete.
 
-Last completed business phase: Phase 11C.
+Last completed business phase: Phase 11D.
 
-Next recommended phase: Phase 11D, User App Demo Readiness & Operator QA.
+Next recommended phase: Phase 12A, Photo-to-Template Draft Reality Check.
 
-Phase 11C keeps the post-10U registry write chain paused and polishes the
-ordinary-user visual guidance and local template content. The User App Shell now
-uses Chinese user-facing template content, step preview, region guidance,
-practice-first preparation copy, region badges, intensity reminders, technique
-breakdowns, final checks, and completion-region summaries. Administrator trial,
-Template Studio, and registry safety tooling remain available only when
-explicitly enabled.
+Phase 11D keeps the post-10U registry write chain paused and packages the
+ordinary-user User App MVP shell for operator-led demo and QA. The demo path,
+operator checklist, mobile checks, forbidden-terms checks, known limitations,
+Vision Analysis notes, Template Studio notes, and Git hygiene checks are now
+documented and test-covered.
 
 Registry chain status: paused after Phase 10U. Phase 10V actual write
 authorization is not the active next phase.
@@ -140,6 +138,10 @@ authorization is not the active next phase.
   content, step preview, region guidance, practice-first preparation copy,
   region badges, intensity reminders, technique breakdowns, final checks, and
   completed-region summaries.
+- Render an administrator-only Phase 11D Demo Readiness panel and document the
+  operator-led demo path, user path QA, forbidden terms QA, mobile demo QA,
+  known limitations, Vision Analysis notes, Template Studio notes, registry
+  paused status, and Git hygiene checks.
 - Render compact Template Studio workflow, candidate package, candidate-to-app,
   user app package draft preview, official draft gate, and official draft
   builder, draft publish gate, registry preparation, and registry write gate

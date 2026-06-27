@@ -163,3 +163,18 @@
   simulator, approval boundary, production writer, Pipeline Trace, debug JSON,
   Template Studio administrator terminology, and production readiness wording
   hidden by default.
+- Phase 11D User App Demo Readiness & Operator QA is local demo/QA packaging
+  only. It is not a production app, not public release, not Phase 10V actual
+  write authorization, not real registry write execution, not registry
+  mutation, not publication, not production writer creation, and not current
+  User App Shell package replacement.
+- Phase 11D confirms the current limitations remain: local MVP shell, no
+  backend, no account, no database, no camera, no AR, no OpenAI or external AI
+  API, no model training, no real photo upload, no real registry write, no
+  publish, no production writer, and no production User App Shell package
+  replacement.
+- Phase 11D demo templates and product suggestions remain local fixture/demo
+  content. Photo-to-template remains a semi-automatic draft chain with required
+  operator review; it is not fully automatic high-quality makeup extraction.
+- Phase 11D keeps Readiness Score as a rule-based detection usability score,
+  not MediaPipe model raw confidence.

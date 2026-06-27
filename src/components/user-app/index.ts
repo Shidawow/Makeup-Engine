@@ -1,5 +1,6 @@
 export * from './UserAppCompatibilityBanner';
 export * from './UserAppCompletion';
+export * from './UserAppDemoReadinessPanel';
 export * from './UserAppHome';
 export * from './UserAppInteractionChecklist';
 export * from './UserPhotoIntakePlaceholder';

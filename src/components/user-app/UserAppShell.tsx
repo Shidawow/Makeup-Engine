@@ -90,6 +90,7 @@ import { UserAppAnonymousTrialFollowUpReadinessPanel } from './UserAppAnonymousT
 import { UserAppAnonymousTrialGapActionPlanPanel } from './UserAppAnonymousTrialGapActionPlanPanel';
 import { UserAppCompletion } from './UserAppCompletion';
 import { UserAppCompatibilityBanner } from './UserAppCompatibilityBanner';
+import { UserAppDemoReadinessPanel } from './UserAppDemoReadinessPanel';
 import { UserAppEvidenceCollectionChecklistPanel } from './UserAppEvidenceCollectionChecklistPanel';
 import { UserAppEvidenceCollectionProtocolPanel } from './UserAppEvidenceCollectionProtocolPanel';
 import { UserAppEvidenceCollectionQualityGatePanel } from './UserAppEvidenceCollectionQualityGatePanel';
@@ -153,6 +154,7 @@ const userSectionTabs: Array<{ tabId: UserAppShellSection; label: string }> = [
 ];
 
 const adminSectionTabs: Array<{ tabId: UserAppShellSection; label: string }> = [
+  { tabId: 'demoReadiness', label: 'Demo Readiness' },
   { tabId: 'trialPack', label: 'MVP 试用包' },
   { tabId: 'trialFeedback', label: '反馈表预览' },
   { tabId: 'trialReadiness', label: '试用就绪度' },
@@ -1088,6 +1090,8 @@ export function UserAppShell({
 
               {adminVisible ? (
                 <>
+                  {boundaryTab === 'demoReadiness' ? <UserAppDemoReadinessPanel /> : null}
+
                   {boundaryTab === 'pwa' ? (
                     <UserAppPwaInstallPanel report={pwaReadinessReport} />
                   ) : null}
