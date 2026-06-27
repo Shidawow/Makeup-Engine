@@ -1,4 +1,13 @@
-import { ArrowLeft, ArrowRight, CheckCircle2, Clock, MapPin, Sparkles } from 'lucide-react';
+import {
+  ArrowLeft,
+  ArrowRight,
+  Brush,
+  CheckCircle2,
+  Clock,
+  Eye,
+  MapPin,
+  Sparkles,
+} from 'lucide-react';
 import type { UserAppTemplateDetailViewModel } from '../../user-app';
 
 export interface UserAppStepGuideProps {
@@ -8,6 +17,27 @@ export interface UserAppStepGuideProps {
   onNextStep: (stepId: string) => void;
   onCompleteStep: (stepId: string) => void;
 }
+
+const regionVisualLabel: Record<string, string> = {
+  'skin-prep': '妆前',
+  base: '底妆',
+  brows: '眉毛',
+  eyeshadow: '眼部',
+  eyeliner: '眼线',
+  lashes: '睫毛',
+  blush: '脸颊',
+  contour: '修容',
+  highlight: '高光',
+  lips: '唇部',
+  setting: '定妆',
+  unknown: '区域待确认',
+};
+
+const intensityCopy: Record<string, string> = {
+  low: '轻薄：先少量上色，保持自然。',
+  medium: '适中：先薄涂，再按需要叠加。',
+  high: '明显：每次少量叠加，注意边缘。',
+};
 
 export function UserAppStepGuide({
   template,
@@ -37,6 +67,12 @@ export function UserAppStepGuide({
         : '按自己的节奏';
   const primaryTools = step?.guidance.toolChecklist.map((item) => item.label).join('、');
   const primaryProducts = step?.guidance.productChecklist.map((item) => item.label).join('、');
+  const currentRegionLabel = step
+    ? (regionVisualLabel[step.region] ?? step.guidance.stepCategory)
+    : '区域待确认';
+  const currentIntensityCopy = step
+    ? (intensityCopy[step.intensity] ?? `强度：${step.intensity}`)
+    : '按自己的节奏';
 
   return (
     <section className="rounded-lg border border-stone-200 bg-white p-4 shadow-soft">
@@ -112,10 +148,16 @@ export function UserAppStepGuide({
                 </p>
                 <h3 className="mt-1 text-xl font-semibold text-stone-950">{step.title}</h3>
               </div>
-              <span className="inline-flex w-fit items-center gap-1 rounded bg-white px-3 py-1 text-xs font-medium text-teal-900">
-                <Clock aria-hidden="true" size={14} />
-                建议 {estimatedLabel}
-              </span>
+              <div className="flex flex-wrap gap-2">
+                <span className="inline-flex w-fit items-center gap-1 rounded bg-white px-3 py-1 text-xs font-medium text-teal-900">
+                  <MapPin aria-hidden="true" size={14} />
+                  {currentRegionLabel}
+                </span>
+                <span className="inline-flex w-fit items-center gap-1 rounded bg-white px-3 py-1 text-xs font-medium text-teal-900">
+                  <Clock aria-hidden="true" size={14} />
+                  建议 {estimatedLabel}
+                </span>
+              </div>
             </div>
             <p className="mt-3 text-base leading-7 text-stone-950">
               {step.guidance.userFriendlyInstructionText}
@@ -139,6 +181,10 @@ export function UserAppStepGuide({
                 <div>
                   <dt className="font-medium text-stone-950">目标效果</dt>
                   <dd>{step.targetEffect || '完成当前区域效果'}</dd>
+                </div>
+                <div>
+                  <dt className="font-medium text-stone-950">强度提醒</dt>
+                  <dd>{currentIntensityCopy}</dd>
                 </div>
               </dl>
             </div>
@@ -172,6 +218,24 @@ export function UserAppStepGuide({
             <p className="mt-2 rounded-md bg-stone-50 p-3 text-sm leading-6 text-stone-700">
               区域说明：{step.guidance.regionGuidanceSummary}
             </p>
+            <div className="mt-3 grid gap-2 text-sm leading-6 text-stone-700 sm:grid-cols-2">
+              <div className="rounded-md bg-teal-50 p-3">
+                <p className="inline-flex items-center gap-2 font-semibold text-teal-950">
+                  <Brush aria-hidden="true" size={15} />
+                  手法拆解
+                </p>
+                <p className="mt-1">{step.technique || '按模板建议上妆'}</p>
+              </div>
+              <div className="rounded-md bg-teal-50 p-3">
+                <p className="inline-flex items-center gap-2 font-semibold text-teal-950">
+                  <Eye aria-hidden="true" size={15} />
+                  完成前检查
+                </p>
+                <p className="mt-1">
+                  看边缘是否柔和、两侧高度是否接近，再决定是否进入下一步。
+                </p>
+              </div>
+            </div>
           </div>
 
           <div className="grid gap-3 md:grid-cols-2">

@@ -19,7 +19,7 @@ export function AppShell() {
         <div className="mx-auto flex max-w-[1680px] flex-wrap gap-2">
           {navItems.map((item) => (
             <button
-              className={`rounded-md px-3 py-2 text-sm font-medium ${
+              className={`min-h-11 rounded-md px-3 py-2 text-sm font-medium ${
                 screen === item.screen
                   ? 'bg-stone-950 text-white'
                   : 'bg-stone-100 text-stone-700 hover:bg-stone-200'

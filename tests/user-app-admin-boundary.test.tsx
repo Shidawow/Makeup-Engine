@@ -18,11 +18,13 @@ const forbiddenUserPathTerms = [
   '已写入 registry',
   '已写入用户 App registry',
   'production ready',
-  '真实 Registry 写入',
-  '真实写入批准边界',
-  '受保护真实写入执行模拟器',
-  '用户 App 模板包 Registry 写入闸门',
-];
+      '真实 Registry 写入',
+      '真实写入批准边界',
+      '受保护真实写入执行模拟器',
+      '用户 App 模板包 Registry 写入闸门',
+      '证据置信度',
+      'Confidence 95%',
+    ];
 
 describe('User App MVP admin boundary', () => {
   it('does not expose registry or backend review terms in the ordinary user shell', () => {

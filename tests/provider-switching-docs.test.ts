@@ -40,18 +40,22 @@ describe('provider switching docs', () => {
     expect(combined).toContain('src/intelligence/runtime');
   });
 
-  it('provides phase 11B to 11C switch templates with historical 11A, 10U, and older markers', async () => {
+  it('provides phase 11C to 11D switch templates with historical 11B, 11A, 10U, and older markers', async () => {
     const prompt = await readFile('docs/prompts/PROVIDER_SWITCH_PROMPT.md', 'utf8');
 
     expect(prompt).toContain('Switch To Native GPT / Codex Desktop');
     expect(prompt).toContain('Switch To PackyAPI + CLI');
     expect(prompt).toContain('Return From PackyAPI To ChatGPT');
-    expect(prompt).toContain('lastCompletedPhase: 11B');
-    expect(prompt).toContain('nextRecommendedPhase: 11C');
+    expect(prompt).toContain('lastCompletedPhase: 11C');
+    expect(prompt).toContain('nextRecommendedPhase: 11D');
+    expect(prompt).toContain('User App Demo Readiness & Operator QA');
     expect(prompt).toContain('User App Visual Guidance & Template Content Polish');
     expect(prompt).toContain('User App Guided Step Experience Polish');
     expect(prompt).toContain('User App MVP Experience Reset');
+    expect(prompt).toContain('Phase 11C completed');
     expect(prompt).toContain('Phase 11B completed');
+    expect(prompt).toContain('lastCompletedPhase: 11B');
+    expect(prompt).toContain('nextRecommendedPhase: 11C');
     expect(prompt).toContain('Phase 11A completed');
     expect(prompt).toContain('lastCompletedPhase: 11A');
     expect(prompt).toContain('nextRecommendedPhase: 11B');

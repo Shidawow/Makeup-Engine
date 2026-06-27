@@ -2,17 +2,18 @@
 
 ## Current Phase
 
-Phase 11B: User App Guided Step Experience Polish is complete.
+Phase 11C: User App Visual Guidance & Template Content Polish is complete.
 
-Last completed business phase: Phase 11B.
+Last completed business phase: Phase 11C.
 
-Next recommended phase: Phase 11C, User App Visual Guidance & Template Content Polish.
+Next recommended phase: Phase 11D, User App Demo Readiness & Operator QA.
 
-Phase 11B keeps the post-10U registry write chain paused and polishes the
-ordinary-user guided step experience. The User App Shell now presents a clearer
-Preparation screen, more readable step-by-step guidance, larger touch actions,
-step completion feedback, and a more useful Completion summary. Administrator
-trial, Template Studio, and registry safety tooling remain available only when
+Phase 11C keeps the post-10U registry write chain paused and polishes the
+ordinary-user visual guidance and local template content. The User App Shell now
+uses Chinese user-facing template content, step preview, region guidance,
+practice-first preparation copy, region badges, intensity reminders, technique
+breakdowns, final checks, and completion-region summaries. Administrator trial,
+Template Studio, and registry safety tooling remain available only when
 explicitly enabled.
 
 Registry chain status: paused after Phase 10U. Phase 10V actual write
@@ -135,6 +136,10 @@ authorization is not the active next phase.
   current step number, progress bar, region label, tool/product guidance,
   cautions, correction tips, larger mobile touch actions, and completion
   review while staying local-only.
+- Render a Phase 11C visual guidance polish with Chinese user-facing template
+  content, step preview, region guidance, practice-first preparation copy,
+  region badges, intensity reminders, technique breakdowns, final checks, and
+  completed-region summaries.
 - Render compact Template Studio workflow, candidate package, candidate-to-app,
   user app package draft preview, official draft gate, and official draft
   builder, draft publish gate, registry preparation, and registry write gate

@@ -36,6 +36,7 @@ export function UserAppPreparation({
   const optionalTools = template.toolsAndProducts.optionalTools;
   const productSuggestions = template.toolsAndProducts.productSuggestions;
   const stepCount = template.steps.length;
+  const firstStep = template.steps[0];
 
   return (
     <section className="rounded-lg border border-teal-200 bg-white p-4 shadow-soft">
@@ -101,10 +102,20 @@ export function UserAppPreparation({
         </div>
 
         <div className="grid gap-3">
+          <div className="rounded-lg border border-teal-100 bg-teal-50 p-3">
+            <h3 className="text-sm font-semibold text-teal-950">今天练什么</h3>
+            <p className="mt-2 text-sm leading-6 text-teal-950">
+              先完成
+              {firstStep ? `「${firstStep.title}」` : '第一步'}
+              ，再按顺序看区域、工具和修正提示。每一步都可以返回重看。
+            </p>
+          </div>
+
           <div className="rounded-lg border border-stone-200 p-3">
             <h3 className="text-sm font-semibold text-stone-950">开始前注意</h3>
             <ul className="mt-2 grid gap-2 text-sm leading-6 text-stone-700">
               <li>先少量取用产品，颜色可以逐步叠加。</li>
+              <li>先看“区域说明”，再动手上妆，避免涂到过大范围。</li>
               <li>如果某一步不顺手，可以返回上一步重新看提示。</li>
               <li>本流程不上传照片，不训练模型，也不会生成医学判断。</li>
             </ul>

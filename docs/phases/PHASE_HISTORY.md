@@ -1644,3 +1644,37 @@ What still cannot happen:
   registry state, publish, create a production writer, replace the current User
   App Shell package, add backend/database/login/payment/camera/AR/OpenAI or
   external API scope, or train models.
+
+## Phase 11C - User App Visual Guidance & Template Content Polish
+
+Polished the ordinary-user User App MVP visual guidance and template content
+while keeping the registry write chain paused after Phase 10U.
+
+What changed:
+
+- Reworked the local MVP example package into Chinese user-facing makeup content
+  with clearer template titles, summaries, scenarios, tools, product
+  placeholders, steps, mistakes, correction tips, safety notes, and region
+  guidance.
+- Added step preview and region guidance to the template detail page.
+- Added preparation copy that tells users what they will practice first and why
+  they should read region guidance before applying product.
+- Added region badge, intensity reminder, technique breakdown, and final check
+  to the step guide.
+- Added completed-region summary and next-practice guidance to the completion
+  page.
+- Added visual guidance, template content quality, documentation recovery, and
+  project-state tests for Phase 11C.
+
+What still cannot happen:
+
+- Phase 11C does not resume Phase 10V, execute registry writes, mutate registry
+  state, publish, create a production writer, replace the current User App Shell
+  package, add backend/database/login/payment/camera/AR/OpenAI or external API
+  scope, or train models.
+
+Why Phase 11D follows:
+
+The ordinary-user demo is now more concrete and content-rich. Phase 11D should
+focus on User App Demo Readiness & Operator QA before broader demos or trial
+handoff.

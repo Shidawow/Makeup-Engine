@@ -295,7 +295,7 @@ export const createUserFriendlyWarningMessage = (message: string): string => {
     return '某个步骤引用了未登记的产品，跟练时可能不知道该用哪类产品。';
   }
   if (normalized.includes('evidence confidence')) {
-    return '这一步的证据置信度需要复核，建议先由运营确认颜色或强度。';
+    return '这一步的证据可用性需要复核，建议先由运营确认颜色或强度。';
   }
   if (normalized.includes('small screens')) {
     return '小屏幕上需要检查颜色强度和提示是否足够清楚。';

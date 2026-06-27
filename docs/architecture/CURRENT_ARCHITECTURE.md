@@ -880,3 +880,30 @@ Phase 11B remains a local MVP shell polish layer. It does not resume Phase 10V,
 write or mutate registries, publish, create production writers, replace the
 current User App Shell package, add backend/API/camera/AR scope, or train
 models.
+
+## Phase 11C User App Visual Guidance & Template Content Polish
+
+Phase 11C keeps the same ordinary-user shell path and polishes content quality
+and visual guidance.
+
+`src/templates/examples/user-app-template-package.example.ts` owns the primary
+local user-facing template content: Chinese titles, summaries, scenarios, tools,
+product placeholders, step instructions, common mistakes, correction tips,
+safety notes, and region guidance.
+
+`src/components/user-app/UserAppTemplateDetail.tsx` shows step preview and
+region guidance before practice.
+
+`src/components/user-app/UserAppPreparation.tsx` explains what the user will
+practice first and reminds them to read region guidance before applying
+product.
+
+`src/components/user-app/UserAppStepGuide.tsx` renders a region badge,
+intensity reminder, technique breakdown, and final check for each step.
+
+`src/components/user-app/UserAppCompletion.tsx` summarizes completed regions and
+next-practice guidance.
+
+Phase 11C remains local MVP shell polish. It does not resume Phase 10V, write or
+mutate registries, publish, create production writers, replace the current User
+App Shell package, add backend/API/camera/AR scope, or train models.

@@ -153,3 +153,13 @@
 - Phase 11B ordinary-user paths must keep registry, write gate, publish gate, simulator, approval boundary, production writer, Pipeline Trace, debug JSON, and Template Studio administrator terminology hidden by default.
 - Phase 11B-Fix changes Vision Analysis FaceMesh readiness labeling only. `readinessScore` is a rule-based usability score based on landmark count, region coverage, normalized coordinates, and face crop margin; it is not MediaPipe model raw confidence.
 - The current browser MediaPipe FaceLandmarker integration does not expose a reliable single per-image face confidence in this project. Runtime `confidence` values remain legacy/internal compatibility metadata and must not be displayed as model certainty.
+- Phase 11C User App Visual Guidance & Template Content Polish improves local
+  ordinary-user template copy and guidance UI only. It is not Phase 10V actual
+  write authorization, not real registry write execution, not registry
+  mutation, not publication, not production writer creation, not current User
+  App Shell package replacement, not backend work, not OpenAI/external API
+  usage, not camera/AR scope, and not training input.
+- Phase 11C ordinary-user paths must keep registry, write gate, publish gate,
+  simulator, approval boundary, production writer, Pipeline Trace, debug JSON,
+  Template Studio administrator terminology, and production readiness wording
+  hidden by default.

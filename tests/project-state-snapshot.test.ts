@@ -31,14 +31,14 @@ describe('project state snapshot', () => {
 
     expect(snapshot.projectName).toBe('Makeup Engine');
     expect(snapshot.projectRole).toContain('Makeup template production system');
-    expect(snapshot.lastCompletedPhase).toBe('11B');
-    expect(snapshot.lastCompletedBusinessPhase).toBe('11B');
-    expect(snapshot.currentPhaseId).toBe('11B');
+    expect(snapshot.lastCompletedPhase).toBe('11C');
+    expect(snapshot.lastCompletedBusinessPhase).toBe('11C');
+    expect(snapshot.currentPhaseId).toBe('11C');
     expect(snapshot.currentPhase).toBeTruthy();
-    expect(snapshot.currentPhase).toContain('User App Guided Step Experience Polish');
-    expect(snapshot.nextRecommendedPhase).toBe('11C');
-    expect(snapshot.nextRecommendedPhaseName).toContain('User App Visual Guidance');
-    expect(snapshot.nextAction).toContain('Phase 11C');
+    expect(snapshot.currentPhase).toContain('User App Visual Guidance & Template Content Polish');
+    expect(snapshot.nextRecommendedPhase).toBe('11D');
+    expect(snapshot.nextRecommendedPhaseName).toContain('User App Demo Readiness');
+    expect(snapshot.nextAction).toContain('Phase 11D');
     expect(snapshot.mainDataFlow).toEqual(
       expect.arrayContaining([
         'SourceImagePackage',
@@ -65,6 +65,13 @@ describe('project state snapshot', () => {
         'AppShellUserAppPreview',
         'UserAppGuidedStepExperiencePolish',
         'UserAppMobileGuidanceLayout',
+        'UserAppVisualGuidanceContentPolish',
+        'UserAppTemplateContentQuality',
+        'UserAppStepPreview',
+        'UserAppRegionGuidancePreview',
+        'UserAppIntensityReminder',
+        'UserAppTechniqueBreakdown',
+        'UserAppCompletionRegionSummary',
         'UserPhotoIntakePlaceholder',
         'UserPersonalizationPlaceholder',
         'UserPhotoPrivacyBoundary',
@@ -280,6 +287,8 @@ describe('project state snapshot', () => {
     expect(snapshot.knownLimitations.join('\n')).toContain('User App MVP Experience Reset');
     expect(snapshot.knownLimitations.join('\n')).toContain('Phase 11B');
     expect(snapshot.knownLimitations.join('\n')).toContain('User App Guided Step Experience Polish');
+    expect(snapshot.knownLimitations.join('\n')).toContain('Phase 11C');
+    expect(snapshot.knownLimitations.join('\n')).toContain('User App Visual Guidance & Template Content Polish');
     expect(snapshot.knownLimitations.join('\n')).toContain('Phase 10V is intentionally paused');
     expect(snapshot.knownLimitations.join('\n')).toContain('real names');
     expect(snapshot.knownLimitations.join('\n')).toContain('service worker');

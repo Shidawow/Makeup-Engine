@@ -87,7 +87,8 @@
     "Phase 10K ControlledRegistryWriterDraft, ControlledRegistryWriterValidationResult, and ControlledRegistryWriterHandoff are local admin dry-run writer metadata, not actual user app package registry writes, not publication, not current User App Shell package replacement, not backend records, and not training input.",
     "Phase 10L ExplicitRegistryWriteAuthorizationGateResult, ExplicitRegistryWriteAuthorizationChecklist, and ExplicitRegistryWriteAuthorizationHandoff are local admin gate metadata, not actual user app package registry writes, not publication, not current User App Shell package replacement, not backend records, and not training input.",
     "Phase 10M ControlledRegistryWriteExecutionDesign, ControlledRegistryWriteExecutionValidationResult, and ControlledRegistryWriteExecutionHandoff are local admin design metadata, not actual user app package registry writes, not publication, not current User App Shell package replacement, not backend records, and not training input.",
-    "Phase 10N RealRegistryWriteImplementationGateResult, RealRegistryWriteImplementationChecklist, and RealRegistryWriteImplementationHandoff are local admin gate metadata, not real writer implementation, not actual user app package registry writes, not publication, not current User App Shell package replacement, not backend records, and not training input."
+    "Phase 10N RealRegistryWriteImplementationGateResult, RealRegistryWriteImplementationChecklist, and RealRegistryWriteImplementationHandoff are local admin gate metadata, not real writer implementation, not actual user app package registry writes, not publication, not current User App Shell package replacement, not backend records, and not training input.",
+    "Phase 11C visual guidance and template content polish is local ordinary-user shell metadata, not registry write, publication, current User App Shell package replacement, backend records, or training input."
   ],
   "materializedDatasetOutputs": [
     "tmp/datasets/realistic-synthetic-png-image-v0/package.json",
@@ -199,7 +200,9 @@
     "docs/product/real-write-approval-boundary.md",
     "docs/product/real-write-approval-checklist.md",
     "docs/product/real-write-approval-handoff.md",
-    "docs/phases/phase-10U.md"
+    "docs/phases/phase-10U.md",
+    "docs/product/user-app-visual-guidance-and-template-content.md",
+    "docs/phases/phase-11C.md"
   ],
   "userAppConsumptionOutputs": [
     "UserAppTemplatePackage JSON",
@@ -224,7 +227,10 @@
     "UserAppPrototypeEmptyState diagnostics",
     "UserAppPrototypeReadinessCheck metadata",
     "UserAppPrototypeRoundTripReport metadata",
-    "Template Studio prototype consumer smoke preview"
+    "Template Studio prototype consumer smoke preview",
+    "Phase 11C Chinese template content preview",
+    "Phase 11C visual guidance UI sections",
+    "Phase 11C completed-region summary"
   ],
   "userAppShellOutputs": [
     "UserAppShell package summary view model",
@@ -445,10 +451,10 @@
     "Outcome review documentation"
   ],
   "phase": "11B",
-  "lastCompletedPhase": "11B",
+  "lastCompletedPhase": "11C",
   "currentPhase": "User App Guided Step Experience Polish",
-  "nextRecommendedPhase": "11C",
-  "updatedAt": "2026-06-24T00:00:00.000+08:00",
+  "nextRecommendedPhase": "11D",
+  "updatedAt": "2026-06-27T00:00:00.000+08:00",
   "artifacts": [
     "docs/product/internal-trial-learning-summary.md",
     "docs/product/product-decision-gate.md",
@@ -550,7 +556,7 @@
     "docs/product/internal-trial-evidence-quality-gate.md",
     "docs/phases/phase-9F.md"
   ],
-  "nextRecommendedPhaseName": "User App Visual Guidance & Template Content Polish",
+  "nextRecommendedPhaseName": "User App Demo Readiness & Operator QA",
   "userAppAnonymousTrialDryRunOutputs": [
     "src/user-app/userAppAnonymousTrialDryRunPack.ts",
     "src/user-app/userAppAnonymousTrialDryRunChecklist.ts",
@@ -635,8 +641,8 @@
     "docs/product/user-app-template-package-draft-publish-gate-handoff.md",
     "docs/phases/phase-10H.md"
   ],
-  "lastUpdatedPhase": "11B",
-  "currentPhaseId": "11B",
+  "lastUpdatedPhase": "11C",
+  "currentPhaseId": "11C",
   "currentPhaseName": "User App Guided Step Experience Polish",
   "lastValidation": {
     "mediapipeCheck": "passed",
@@ -649,10 +655,11 @@
     "contextPackJson": "passed",
     "browserVerification": "passed",
     "phase11AScopedTests": "passed",
-    "testFiles": 9,
-    "tests": 29,
-    "summary": "Phase 11B validation passed: MediaPipe check, scoped tests (9 files / 29 tests), typecheck, build, project status/context, JSON status/context, and browser verification passed.",
-    "phase11BScopedTests": "passed"
+    "phase11BScopedTests": "passed",
+    "phase11CScopedTests": "passed",
+    "testFiles": 12,
+    "tests": 41,
+    "summary": "Phase 11C validation passed: MediaPipe check, scoped tests (12 files / 41 tests), typecheck, build, project status/context, JSON status/context, and browser verification passed."
   },
   "validation": {
     "mediapipeCheck": "passed",
@@ -665,10 +672,11 @@
     "contextPackJson": "passed",
     "browserVerification": "passed",
     "phase11AScopedTests": "passed",
-    "testFiles": 9,
-    "tests": 29,
-    "summary": "Phase 11B validation passed: MediaPipe check, scoped tests (9 files / 29 tests), typecheck, build, project status/context, JSON status/context, and browser verification passed.",
-    "phase11BScopedTests": "passed"
+    "phase11BScopedTests": "passed",
+    "phase11CScopedTests": "passed",
+    "testFiles": 12,
+    "tests": 41,
+    "summary": "Phase 11C validation passed: MediaPipe check, scoped tests (12 files / 41 tests), typecheck, build, project status/context, JSON status/context, and browser verification passed."
   },
   "summary": "Phase 11B polishes the ordinary-user guided step experience while keeping the registry chain paused after Phase 10U.",
   "status": "completed",
@@ -793,10 +801,11 @@
     "contextPackJson": "passed",
     "browserVerification": "passed",
     "phase11AScopedTests": "passed",
-    "testFiles": 9,
-    "tests": 29,
-    "summary": "Phase 11B validation passed: MediaPipe check, scoped tests (9 files / 29 tests), typecheck, build, project status/context, JSON status/context, and browser verification passed.",
-    "phase11BScopedTests": "passed"
+    "phase11BScopedTests": "passed",
+    "phase11CScopedTests": "passed",
+    "testFiles": 12,
+    "tests": 41,
+    "summary": "Phase 11C validation passed: MediaPipe check, scoped tests (12 files / 41 tests), typecheck, build, project status/context, JSON status/context, and browser verification passed."
   },
   "requiredValidationCommands": [
     "npm run mediapipe:check",
@@ -806,7 +815,7 @@
     "npm run project:context",
     "node scripts/project-status.mjs --json",
     "node scripts/context-pack.mjs --json",
-    "npm run test -- tests/user-app-mvp-experience.test.tsx tests/user-app-admin-boundary.test.tsx tests/user-app-guided-step-experience.test.tsx tests/user-app-mobile-guidance-layout.test.tsx tests/phase-11B-documentation-recovery.test.ts tests/template-studio-tab-boundary.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
+    "npm run test -- tests/user-app-mvp-experience.test.tsx tests/user-app-admin-boundary.test.tsx tests/user-app-guided-step-experience.test.tsx tests/user-app-mobile-guidance-layout.test.tsx tests/user-app-visual-guidance-content.test.tsx tests/user-app-template-content-quality.test.ts tests/phase-11C-documentation-recovery.test.ts tests/template-studio-tab-boundary.test.tsx tests/vision-readiness-score-label.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
   ],
   "requiredCommands": [
     "npm run mediapipe:check",
@@ -816,7 +825,7 @@
     "npm run project:context",
     "node scripts/project-status.mjs --json",
     "node scripts/context-pack.mjs --json",
-    "npm run test -- tests/user-app-mvp-experience.test.tsx tests/user-app-admin-boundary.test.tsx tests/user-app-guided-step-experience.test.tsx tests/user-app-mobile-guidance-layout.test.tsx tests/phase-11B-documentation-recovery.test.ts tests/template-studio-tab-boundary.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
+    "npm run test -- tests/user-app-mvp-experience.test.tsx tests/user-app-admin-boundary.test.tsx tests/user-app-guided-step-experience.test.tsx tests/user-app-mobile-guidance-layout.test.tsx tests/user-app-visual-guidance-content.test.tsx tests/user-app-template-content-quality.test.ts tests/phase-11C-documentation-recovery.test.ts tests/template-studio-tab-boundary.test.tsx tests/vision-readiness-score-label.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
   ],
   "commands": [
     "npm run mediapipe:check",
@@ -884,7 +893,7 @@
     "npm run project:context",
     "node scripts/project-status.mjs --json",
     "node scripts/context-pack.mjs --json",
-    "npm run test -- tests/user-app-mvp-experience.test.tsx tests/user-app-admin-boundary.test.tsx tests/user-app-guided-step-experience.test.tsx tests/user-app-mobile-guidance-layout.test.tsx tests/phase-11B-documentation-recovery.test.ts tests/template-studio-tab-boundary.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
+    "npm run test -- tests/user-app-mvp-experience.test.tsx tests/user-app-admin-boundary.test.tsx tests/user-app-guided-step-experience.test.tsx tests/user-app-mobile-guidance-layout.test.tsx tests/user-app-visual-guidance-content.test.tsx tests/user-app-template-content-quality.test.ts tests/phase-11C-documentation-recovery.test.ts tests/template-studio-tab-boundary.test.tsx tests/vision-readiness-score-label.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
   ],
   "userAppGuidedStepExperiencePolish": {
     "registryChainStatus": "registry chain paused after Phase 10U",

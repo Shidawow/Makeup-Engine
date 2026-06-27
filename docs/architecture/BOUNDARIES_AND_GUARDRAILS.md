@@ -665,3 +665,18 @@ Phase 11B ordinary-user paths must keep registry, write gate, publish gate,
 simulator, approval boundary, production writer, Pipeline Trace, debug JSON,
 Template Studio admin-only terms, and production readiness wording hidden by
 default.
+
+## Phase 11C User App Visual Guidance & Template Content Polish
+
+Phase 11C is ordinary-user User App MVP shell polish only. It may improve local
+Chinese template content, step preview, region guidance, preparation copy,
+region badges, intensity reminders, technique breakdowns, final checks, and
+completion summaries, but it must not resume Phase 10V, execute real registry
+writes, mutate registry state, publish, create a production writer, replace the
+current User App Shell package, add backend/database/login/payment/camera/AR/
+OpenAI/external API scope, or train models.
+
+Phase 11C ordinary-user paths must keep registry, write gate, publish gate,
+simulator, approval boundary, production writer, Pipeline Trace, debug JSON,
+Template Studio admin-only terms, and production readiness wording hidden by
+default.

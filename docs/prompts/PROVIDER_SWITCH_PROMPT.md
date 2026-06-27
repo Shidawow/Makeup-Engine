@@ -6,11 +6,11 @@ Default to compact context. Do not copy full historical chat transcripts. Do not
 
 ## Current State
 
-- `lastCompletedPhase: 11B`
-- `nextRecommendedPhase: 11C`
-- `nextRecommendedPhaseName: User App Visual Guidance & Template Content Polish`
+- `lastCompletedPhase: 11C`
+- `nextRecommendedPhase: 11D`
+- `nextRecommendedPhaseName: User App Demo Readiness & Operator QA`
 - Project role: Makeup template production system with a local contract-driven user app shell prototype, not a production user app.
-- Current capability: Phase 11B - User App Guided Step Experience Polish keeps the registry chain paused after Phase 10U and improves the ordinary-user User App MVP path with a clearer preparation checklist, guided step progress, region/tool/instruction/tip display, mobile-friendly actions, and completion summary. Administrator trial, Template Studio, and registry safety tooling remains explicitly separated from the default user path.
+- Current capability: Phase 11C - User App Visual Guidance & Template Content Polish keeps the registry chain paused after Phase 10U and improves the ordinary-user User App MVP path with Chinese template content, step preview, region guidance, practice-first preparation copy, region badge, intensity reminder, technique breakdown, final check, and completed-region summary. Administrator trial, Template Studio, and registry safety tooling remains explicitly separated from the default user path.
 
 Historical handoff marker retained for Phase 10U recovery tests: `lastCompletedPhase: 10U`, `nextRecommendedPhase: 10V`.
 Historical handoff marker retained for Phase 10T recovery tests: `lastCompletedPhase: 10T`, `nextRecommendedPhase: 10U`.
@@ -64,11 +64,11 @@ Historical handoff marker retained for Phase 9J recovery tests: `lastCompletedPh
 You are continuing Makeup Engine on native GPT / Codex Desktop.
 
 Current state:
-- lastCompletedPhase: 11B
-- nextRecommendedPhase: 11C
-- nextRecommendedPhaseName: User App Visual Guidance & Template Content Polish
+- lastCompletedPhase: 11C
+- nextRecommendedPhase: 11D
+- nextRecommendedPhaseName: User App Demo Readiness & Operator QA
 - project role: Makeup template production system with a local contract-driven user app shell prototype, not a production user app
-- current capability: React Web / PWA MVP first is selected; Phases 8B through 9J and 10A through 10U are complete; Phase 11A pauses the registry chain after Phase 10U and resets the active user path to Home, Template Selection, Template Detail, Preparation, Step-by-step Guidance, and Completion. Phase 11B polishes preparation, step guidance, mobile actions, and completion summary. The previous registry safety chain remains preserved for administrator review but Phase 10V is intentionally not the active next phase.
+- current capability: React Web / PWA MVP first is selected; Phases 8B through 9J and 10A through 10U are complete; Phase 11A pauses the registry chain after Phase 10U and resets the active user path to Home, Template Selection, Template Detail, Preparation, Step-by-step Guidance, and Completion. Phase 11B polishes preparation, step guidance, mobile actions, and completion summary. Phase 11C polishes Chinese template content, visual guidance, region guidance, intensity reminders, technique breakdowns, and completion-region summaries. The previous registry safety chain remains preserved for administrator review but Phase 10V is intentionally not the active next phase.
 
 Compact context:
 - Use repository documents as source of truth; do not copy full historical chat.
@@ -559,4 +559,22 @@ lastCompletedPhase: 11B
 nextRecommendedPhase: 11C
 User App Visual Guidance & Template Content Polish
 User App Guided Step Experience Polish
+registry chain paused after Phase 10U
+
+## Phase 11C Handoff Note
+
+Phase 11C completed User App Visual Guidance & Template Content Polish. The
+ordinary-user User App MVP path now has Chinese user-facing template content,
+step preview, region guidance, practice-first preparation copy, region badges,
+intensity reminders, technique breakdowns, final checks, and completed-region
+summaries. The registry chain remains paused after Phase 10U, Phase 10V is
+intentionally not the active next phase, and no real registry write, registry
+mutation, publish, production writer, shell package replacement, backend,
+camera/AR, API, or training scope was added.
+
+Current handoff:
+lastCompletedPhase: 11C
+nextRecommendedPhase: 11D
+User App Demo Readiness & Operator QA
+User App Visual Guidance & Template Content Polish
 registry chain paused after Phase 10U

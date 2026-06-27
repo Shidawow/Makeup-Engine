@@ -12,10 +12,10 @@ It produces templates, template evidence, correction records, review state, loca
 
 ## Current Phase
 
-- Current business phase: `Phase 11B completed`
-- Last completed phase: `Phase 11B`
-- Last completed phase name: `Phase 11B - User App Guided Step Experience Polish`
-- Next recommended phase: `Phase 11C - User App Visual Guidance & Template Content Polish`
+- Current business phase: `Phase 11C completed`
+- Last completed phase: `Phase 11C`
+- Last completed phase name: `Phase 11C - User App Visual Guidance & Template Content Polish`
+- Next recommended phase: `Phase 11D - User App Demo Readiness & Operator QA`
 - Strategic focus: registry chain paused after Phase 10U; active work returns to ordinary-user User App MVP experience.
 
 Historical recovery marker retained for Phase 10U tests: `Phase 10U completed`.
@@ -104,6 +104,7 @@ Real Photo
 -> Real Write Approval Boundary
 -> User App MVP Experience Reset
 -> User App Guided Step Experience Polish
+-> User App Visual Guidance & Template Content Polish
 -> Phase 8 Roadmap / V1 Non-Goals
 -> User App Consumption Manifest
 -> Dataset Review
@@ -634,5 +635,13 @@ name, completed count, step review, restart, and return-to-selection actions.
 The registry chain remains paused after Phase 10U and Phase 10V is still not
 the active next phase. Next recommended phase: Phase 11C - User App Visual
 Guidance & Template Content Polish.
+
+Phase 11C completed User App Visual Guidance & Template Content Polish. The
+local MVP example package now uses Chinese user-facing template content, and
+the shell shows step preview, region guidance, practice-first preparation copy,
+region badges, intensity reminders, technique breakdowns, final checks, and
+completed-region summaries. The registry chain remains paused after Phase 10U
+and Phase 10V is still not the active next phase. Next recommended phase:
+Phase 11D - User App Demo Readiness & Operator QA.
 
 Historical handoff marker retained for Phase 10T recovery tests: Phase 10T completed / lastCompletedPhase: 10T / nextRecommendedPhase: 10U / Real Write Approval Boundary / Guarded Simulator Review Gate.

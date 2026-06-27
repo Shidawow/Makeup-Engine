@@ -5,9 +5,9 @@ Makeup Engine is the makeup template production system for a future makeup coach
 ## Current Position
 
 - Project role: makeup template production system plus a local contract-driven user app shell prototype.
-- Last completed phase: `Phase 11B`.
-- Current completed business phase: `Phase 11B - User App Guided Step Experience Polish`.
-- Next recommended phase: `Phase 11C - User App Visual Guidance & Template Content Polish`.
+- Last completed phase: `Phase 11C`.
+- Current completed business phase: `Phase 11C - User App Visual Guidance & Template Content Polish`.
+- Next recommended phase: `Phase 11D - User App Demo Readiness & Operator QA`.
 - Strategic focus: registry chain paused after Phase 10U; active work returns to ordinary-user User App MVP experience.
 - Recent recovery milestones retained in phase docs: `Phase 6K`, `Phase 6L`, `Phase 6L-1`, `Phase 7A`, `Phase 7B`, `Phase 7C`, `Phase 7D`, `Phase 7E`, `Phase 7F`, `Phase 7G`, `Phase 7H`, and `Phase 8A`.
 - Historical route-planning milestone: `Phase 8A - Product Route Decision / App MVP Planning`.
@@ -75,6 +75,7 @@ SourceImagePackage manifest
 -> Real Write Approval Boundary
 -> User App MVP Experience Reset
 -> User App Guided Step Experience Polish
+-> User App Visual Guidance & Template Content Polish
 -> Phase 8 Roadmap / V1 Non-Goals
 -> Consumption Manifest
 -> Dataset Review
@@ -514,3 +515,16 @@ after Phase 10U, Phase 10V is still not the active next phase, and the shell
 still does not write registries, publish, create production writers, replace
 the current User App Shell package, add backend/camera/AR/API scope, or train
 models. Next recommended phase: `Phase 11C - User App Visual Guidance & Template Content Polish`.
+
+## Phase 11C Addendum
+
+- `docs/product/user-app-visual-guidance-and-template-content.md`
+- `docs/phases/phase-11C.md`
+
+Phase 11C polishes the ordinary-user visual guidance and local template content
+with Chinese user-facing copy, step previews, region guidance, intensity
+reminders, technique breakdowns, and completion-region summaries. The registry
+chain remains paused after Phase 10U, Phase 10V is still not the active next
+phase, and the shell still does not write registries, publish, create production
+writers, replace the current User App Shell package, add backend/camera/AR/API
+scope, or train models. Next recommended phase: `Phase 11D - User App Demo Readiness & Operator QA`.

@@ -1,4 +1,4 @@
-import { ArrowRight, Brush, Clock, ListChecks } from 'lucide-react';
+import { ArrowRight, Brush, Clock, Eye, ListChecks, MapPin, ShieldCheck } from 'lucide-react';
 import type { UserAppTemplateDetailViewModel } from '../../user-app';
 
 export interface UserAppTemplateDetailProps {
@@ -36,6 +36,8 @@ export function UserAppTemplateDetail({
 
   const requiredTools = template.toolsAndProducts.requiredTools.slice(0, 4);
   const products = template.toolsAndProducts.productSuggestions.slice(0, 4);
+  const previewSteps = template.steps.slice(0, 4);
+  const primaryRegions = template.regionInstructions.slice(0, 4);
 
   return (
     <section className="rounded-lg border border-stone-200 bg-white p-4 shadow-soft">
@@ -111,6 +113,54 @@ export function UserAppTemplateDetail({
           <p>
             产品：
             {products.map((product) => product.displayName).join('、') || '暂未列出'}
+          </p>
+        </div>
+      </div>
+
+      <div className="mt-4 grid gap-3 lg:grid-cols-[1.05fr_0.95fr]">
+        <div className="rounded-lg border border-stone-200 p-3">
+          <div className="flex items-center gap-2">
+            <Eye aria-hidden="true" className="text-teal-700" size={16} />
+            <p className="text-sm font-semibold text-stone-950">步骤预览</p>
+          </div>
+          <ol className="mt-3 grid gap-2 text-sm text-stone-700">
+            {previewSteps.map((step) => (
+              <li className="rounded-md bg-stone-50 p-3" key={step.stepId}>
+                <span className="font-medium text-stone-950">
+                  {step.order}. {step.title}
+                </span>
+                <span className="mt-1 block text-xs leading-5 text-stone-600">
+                  {step.guidance.stepCategory} / {step.targetEffect || '完成当前区域效果'}
+                </span>
+              </li>
+            ))}
+          </ol>
+        </div>
+
+        <div className="rounded-lg border border-stone-200 p-3">
+          <div className="flex items-center gap-2">
+            <MapPin aria-hidden="true" className="text-teal-700" size={16} />
+            <p className="text-sm font-semibold text-stone-950">上妆区域说明</p>
+          </div>
+          <ul className="mt-3 grid gap-2 text-sm text-stone-700">
+            {primaryRegions.map((region) => (
+              <li className="rounded-md bg-stone-50 p-3" key={region.regionId}>
+                <span className="font-medium text-stone-950">{region.displayName}</span>
+                <span className="mt-1 block text-xs leading-5 text-stone-600">
+                  {region.userGuidanceText}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+
+      <div className="mt-4 rounded-lg border border-teal-100 bg-teal-50 p-3">
+        <div className="flex items-start gap-2 text-sm leading-6 text-teal-950">
+          <ShieldCheck aria-hidden="true" className="mt-0.5 shrink-0 text-teal-700" size={16} />
+          <p>
+            预览边界：这里只展示本地妆容指导内容，不上传照片，不生成正式发布内容，
+            也不会替换任何线上模板。
           </p>
         </div>
       </div>

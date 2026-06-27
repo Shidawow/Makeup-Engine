@@ -614,3 +614,22 @@ FaceLandmarker path does not expose a reliable single per-image face confidence
 for this project. Runtime `confidence` remains legacy/internal compatibility
 metadata for existing draft heuristics and must not be shown to operators as
 model certainty.
+
+## Phase 11C User App Visual Guidance & Template Content Polish Flow
+
+`UserAppTemplatePackage`
+-> `UserAppMvpExperience`
+-> `UserAppTemplateSelection`
+-> `UserAppTemplateDetail`
+-> `UserAppPreparation`
+-> `UserAppStepGuide`
+-> `UserAppCompletion`
+-> next recommendation for Phase 11D demo readiness and operator QA.
+
+The flow is local, deterministic, ordinary-user-facing, and demo/MVP-only. It
+uses Chinese user-facing local template content and adds step preview, region
+guidance, practice-first preparation copy, region badge, intensity reminder,
+technique breakdown, final check, and completed-region summary. It does not
+resume Phase 10V, execute a registry write, mutate registry state, publish,
+create a production writer, replace the current User App Shell package, call
+backend/OpenAI/external APIs, request camera/AR scope, or train models.

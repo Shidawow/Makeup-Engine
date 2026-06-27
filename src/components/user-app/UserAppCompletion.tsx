@@ -18,6 +18,10 @@ export function UserAppCompletion({
   onRestart,
   onChooseAnother,
 }: UserAppCompletionProps) {
+  const completedRegionLabels = Array.from(
+    new Set(steps.map((step) => step.guidance.stepCategory).filter(Boolean)),
+  );
+
   return (
     <section className="rounded-lg border border-teal-200 bg-teal-50 p-4 shadow-soft">
       <div className="flex items-start gap-3">
@@ -32,6 +36,25 @@ export function UserAppCompletion({
             {totalSteps} 个步骤。当前结果只保留在本地进度中，不上传照片，
             不生成分享内容，也不会用于训练。
           </p>
+        </div>
+      </div>
+
+      <div className="mt-4 grid gap-2 sm:grid-cols-3">
+        <div className="rounded-lg bg-white p-3 text-sm">
+          <span className="block text-xs text-stone-500">完成步骤</span>
+          <span className="font-semibold text-stone-950">
+            {completedSteps} / {totalSteps}
+          </span>
+        </div>
+        <div className="rounded-lg bg-white p-3 text-sm">
+          <span className="block text-xs text-stone-500">练习区域</span>
+          <span className="font-semibold text-stone-950">
+            {completedRegionLabels.slice(0, 3).join('、') || '按步骤完成'}
+          </span>
+        </div>
+        <div className="rounded-lg bg-white p-3 text-sm">
+          <span className="block text-xs text-stone-500">下一次建议</span>
+          <span className="font-semibold text-stone-950">从第一步慢速复盘</span>
         </div>
       </div>
 

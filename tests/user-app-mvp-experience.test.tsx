@@ -50,8 +50,8 @@ describe('User App MVP experience reset', () => {
       />,
     );
 
-    expect(html).toContain('Soft Rose Daily Look');
-    expect(html).toContain('Warm Bronze Evening Look');
+    expect(html).toContain('柔玫瑰日常妆');
+    expect(html).toContain('暖棕约会妆');
     expect(html).toContain('新手友好');
     expect(html).toContain('分钟');
     expect(html).toContain('步');
