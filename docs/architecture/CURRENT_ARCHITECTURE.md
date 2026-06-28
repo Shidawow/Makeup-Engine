@@ -1057,3 +1057,19 @@ Phase 12D does not resume Phase 10V, execute registry writes, mutate registry
 state, publish, create production writers, replace the current User App Shell
 package, mutate `UserAppTemplatePackage`, add backend/API/camera/AR scope,
 upload real photos, store real user data, or train models.
+## Phase 12E Acceptance Trial Layer
+
+Phase 12E adds a local operator-only acceptance trial layer on top of the
+photo-to-template workflow. The main additions are
+`PhotoToTemplateAcceptanceTrialReport`,
+`PhotoToTemplateAcceptanceTrialPanel`, and deterministic acceptance trial
+fixtures.
+
+The layer reads the existing User App MVP demo route, Vision Analysis route,
+Template Studio Operator Workflow report, and Draft Preview QA report. It does
+not write registry state, does not publish, does not generate or mutate a
+formal `UserAppTemplatePackage`, does not replace the current User App Shell
+package, and does not create a production writer.
+
+The next recommended architecture step is Phase 13A - MVP Trial Content Pack &
+Founder Demo Review.

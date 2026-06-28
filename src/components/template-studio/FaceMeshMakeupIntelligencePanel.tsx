@@ -28,6 +28,7 @@ import {
   createPhotoToTemplateDraftPreviewQaReport,
   createPhotoToTemplateHumanReviewEditingSession,
   createPhotoToTemplateOperatorWorkflowReport,
+  createPhotoToTemplateAcceptanceTrialReport,
   createPhotoToTemplateRealityHandoff,
   createRealRegistryWriteImplementationChecklist,
   createRealRegistryWriteImplementationDraft,
@@ -105,6 +106,7 @@ import { PhotoToTemplateDraftIntegrationPanel } from './PhotoToTemplateDraftInte
 import { PhotoToTemplateDraftPreviewQaPanel } from './PhotoToTemplateDraftPreviewQaPanel';
 import { PhotoToTemplateHumanReviewEditingPanel } from './PhotoToTemplateHumanReviewEditingPanel';
 import { PhotoToTemplateOperatorWorkflowPanel } from './PhotoToTemplateOperatorWorkflowPanel';
+import { PhotoToTemplateAcceptanceTrialPanel } from './PhotoToTemplateAcceptanceTrialPanel';
 
 export interface FaceMeshMakeupIntelligencePanelProps {
   analysis?: MakeupAnalysisPipelineResult | null;
@@ -193,6 +195,15 @@ export function FaceMeshMakeupIntelligencePanel({
         humanReviewEditing: photoToTemplateHumanReviewEditing,
         draftQa: draftQa ?? null,
         draftPreviewQa: emptyPhotoToTemplateDraftPreviewQa,
+      });
+    const emptyPhotoToTemplateAcceptanceTrial =
+      createPhotoToTemplateAcceptanceTrialReport({
+        operatorWorkflow: emptyPhotoToTemplateOperatorWorkflow,
+        draftPreviewQa: emptyPhotoToTemplateDraftPreviewQa,
+        userAppPathComplete: true,
+        visionAnalysisReady: Boolean(regionQa),
+        readinessScoreCorrectlyLabeled: true,
+        buildAndTestsPassed: false,
       });
 
     return (
@@ -691,6 +702,9 @@ export function FaceMeshMakeupIntelligencePanel({
           <PhotoToTemplateDraftPreviewQaPanel report={emptyPhotoToTemplateDraftPreviewQa} />
         </div>
         <div className="mt-3">
+          <PhotoToTemplateAcceptanceTrialPanel report={emptyPhotoToTemplateAcceptanceTrial} />
+        </div>
+        <div className="mt-3">
           <PhotoToTemplateRealityCheckPanel
             handoff={photoToTemplateRealityHandoff}
             report={photoToTemplateRealityReport}
@@ -977,6 +991,15 @@ export function FaceMeshMakeupIntelligencePanel({
       draftQa: resolvedDraftQa,
       draftPreviewQa: photoToTemplateDraftPreviewQa,
     });
+  const photoToTemplateAcceptanceTrial =
+    createPhotoToTemplateAcceptanceTrialReport({
+      operatorWorkflow: photoToTemplateOperatorWorkflow,
+      draftPreviewQa: photoToTemplateDraftPreviewQa,
+      userAppPathComplete: true,
+      visionAnalysisReady: regionQa.status !== 'region_qa_blocked',
+      readinessScoreCorrectlyLabeled: true,
+      buildAndTestsPassed: false,
+    });
 
   return (
     <section className="grid gap-4">
@@ -1085,6 +1108,8 @@ export function FaceMeshMakeupIntelligencePanel({
       <PhotoToTemplateOperatorWorkflowPanel report={photoToTemplateOperatorWorkflow} />
 
       <PhotoToTemplateDraftPreviewQaPanel report={photoToTemplateDraftPreviewQa} />
+
+      <PhotoToTemplateAcceptanceTrialPanel report={photoToTemplateAcceptanceTrial} />
 
       <PhotoToTemplateRealityCheckPanel
         handoff={photoToTemplateRealityHandoff}

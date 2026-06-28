@@ -60,7 +60,7 @@ describe('Phase 12C documentation recovery', () => {
     expect(combined).toContain('fully automatic high-quality');
   });
 
-  it('keeps 12C history while project-state advances to 12D without resuming registry writes', async () => {
+  it('keeps 12C history while project-state advances to 12E without resuming registry writes', async () => {
     const stateFiles = await Promise.all([
       read('project-state/project-state.snapshot.json'),
       read('project-state/latest-handoff.json'),
@@ -73,9 +73,9 @@ describe('Phase 12C documentation recovery', () => {
     ]);
     const combined = stateFiles.join('\n');
 
-    expect(combined).toContain('"lastCompletedPhase": "12D"');
-    expect(combined).toContain('"currentPhaseId": "12D"');
-    expect(combined).toContain('"nextRecommendedPhase": "12E"');
+    expect(combined).toContain('"lastCompletedPhase": "12E"');
+    expect(combined).toContain('"currentPhaseId": "12E"');
+    expect(combined).toContain('"nextRecommendedPhase": "13A"');
     expect(combined).toContain('Photo-to-Template Draft Integration & Human Review Editing');
     expect(combined).toContain('PhotoToTemplateDraftIntegrationReport');
     expect(combined).toContain('PhotoToTemplateHumanReviewEditingSession');
@@ -83,6 +83,7 @@ describe('Phase 12C documentation recovery', () => {
     expect(combined).toContain('PhotoToTemplateHumanReviewEditingPanel');
     expect(combined).toContain('PhotoToTemplateOperatorWorkflowReport');
     expect(combined).toContain('PhotoToTemplateDraftPreviewQaReport');
+    expect(combined).toContain('PhotoToTemplateAcceptanceTrialReport');
     expect(combined).toContain('candidate-only');
     expect(combined).toContain('registry chain paused after Phase 10U');
     expect(combined).not.toContain('Phase 10V actual write authorization is active');

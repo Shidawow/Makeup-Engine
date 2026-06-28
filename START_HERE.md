@@ -5,10 +5,10 @@ Makeup Engine is the makeup template production system for a future makeup coach
 ## Current Position
 
 - Project role: makeup template production system plus a local contract-driven user app shell prototype.
-- Last completed phase: `Phase 12D`.
-- Current completed business phase: `Phase 12D - Photo-to-Template Operator Workflow & Draft Preview QA`.
-- Next recommended phase: `Phase 12E - Photo-to-Template End-to-End Demo Script & Acceptance Trial`.
-- Strategic focus: registry chain paused after Phase 10U; active work is operator-led photo-to-template workflow, draft preview QA, and demo acceptance preparation.
+- Last completed phase: `Phase 12E`.
+- Current completed business phase: `Phase 12E - Photo-to-Template End-to-End Demo Script & Acceptance Trial`.
+- Next recommended phase: `Phase 13A - MVP Trial Content Pack & Founder Demo Review`.
+- Strategic focus: registry chain paused after Phase 10U; active work is operator-led photo-to-template demo scripting, acceptance trial readiness, and founder demo review preparation.
 - Recent recovery milestones retained in phase docs: `Phase 6K`, `Phase 6L`, `Phase 6L-1`, `Phase 7A`, `Phase 7B`, `Phase 7C`, `Phase 7D`, `Phase 7E`, `Phase 7F`, `Phase 7G`, `Phase 7H`, and `Phase 8A`.
 - Historical route-planning milestone: `Phase 8A - Product Route Decision / App MVP Planning`.
 
@@ -621,3 +621,22 @@ wording, production writer wording, and User App Shell replacement claims from
 the ordinary user path. Registry chain remains paused after Phase 10U; Phase
 10V is still not the active next phase. Next recommended phase:
 `Phase 12E - Photo-to-Template End-to-End Demo Script & Acceptance Trial`.
+
+## Phase 12E Addendum
+
+- `docs/product/photo-to-template-e2e-demo-script.md`
+- `docs/product/photo-to-template-acceptance-trial.md`
+- `docs/phases/phase-12E.md`
+
+Phase 12E packages the photo-to-template chain into an end-to-end demo script
+and acceptance trial. It defines Demo Route A for the ordinary User App MVP,
+Demo Route B for Vision Analysis, and Demo Route C for Template Studio
+Operator Workflow. It adds `PhotoToTemplateAcceptanceTrialReport` and
+`PhotoToTemplateAcceptanceTrialPanel` to check user path completion, vision
+readiness, correct Readiness Score wording, operator workflow completeness,
+Draft Preview QA, hidden internal terms, forbidden claims, MediaPipe ignore
+state, and build/test evidence. Acceptance Trial is not production readiness,
+not registry write readiness, not publish, and not fully automatic makeup
+extraction. Registry chain remains paused after Phase 10U; Phase 10V is still
+not the active next phase. Next recommended phase:
+`Phase 13A - MVP Trial Content Pack & Founder Demo Review`.

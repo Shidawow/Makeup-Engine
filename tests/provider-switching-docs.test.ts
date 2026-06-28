@@ -40,15 +40,20 @@ describe('provider switching docs', () => {
     expect(combined).toContain('src/intelligence/runtime');
   });
 
-  it('provides phase 12D to 12E switch templates with historical 12C, 12B, 12A, 11D, 11C, 11B, 11A, 10U, and older markers', async () => {
+  it('provides phase 12E to 13A switch templates with historical 12D, 12C, 12B, 12A, 11D, 11C, 11B, 11A, 10U, and older markers', async () => {
     const prompt = await readFile('docs/prompts/PROVIDER_SWITCH_PROMPT.md', 'utf8');
 
     expect(prompt).toContain('Switch To Native GPT / Codex Desktop');
     expect(prompt).toContain('Switch To PackyAPI + CLI');
     expect(prompt).toContain('Return From PackyAPI To ChatGPT');
+    expect(prompt).toContain('lastCompletedPhase: 12E');
+    expect(prompt).toContain('nextRecommendedPhase: 13A');
+    expect(prompt).toContain('MVP Trial Content Pack & Founder Demo Review');
+    expect(prompt).toContain('Photo-to-Template End-to-End Demo Script & Acceptance Trial');
+    expect(prompt).toContain('PhotoToTemplateAcceptanceTrialReport');
+    expect(prompt).toContain('acceptance trial is not production readiness');
     expect(prompt).toContain('lastCompletedPhase: 12D');
     expect(prompt).toContain('nextRecommendedPhase: 12E');
-    expect(prompt).toContain('Photo-to-Template End-to-End Demo Script & Acceptance Trial');
     expect(prompt).toContain('Photo-to-Template Operator Workflow & Draft Preview QA');
     expect(prompt).toContain('sourceType / confidenceBand / evidence / limitations remain hidden from the ordinary user path');
     expect(prompt).toContain('lastCompletedPhase: 12C');

@@ -22,6 +22,9 @@ without exposing administrator-only registry, simulation, or production wording.
 | QA-REG-01 | Registry paused | Phase 10U remains the pause point and Phase 10V is not resumed | Stop and remove any actual write, mutation, publish, shell replacement, or production writer change |
 | QA-GIT-01 | Git hygiene | No `public/mediapipe` binaries, `.pages`, docx, dist, tmp, node_modules, or local manual files are staged | Unstage unrelated or local files before commit |
 | QA-BUILD-01 | Validation | MediaPipe check, scoped tests, typecheck, build, project status/context, and JSON status/context pass | Fix only 11D-related issues unless a prior-phase known exception is documented |
+| QA-12E-01 | End-to-end demo routes | User App MVP, Vision Analysis, and Template Studio Operator Workflow can all be explained as separate demo routes | Follow `docs/product/photo-to-template-e2e-demo-script.md` and fix the blocked route |
+| QA-12E-02 | Acceptance Trial panel | Template Studio operator area shows Acceptance Trial checklist, route status, forbidden claim checks, privacy checks, and next action | Re-check `PhotoToTemplateAcceptanceTrialPanel` and source report wiring |
+| QA-12E-03 | Forbidden claims | Demo script and panel block fully automatic extraction, AI confirmed, medical, exact shade, registry write, publish, and production writer claims | Rewrite copy and keep the demo draft-preview-only |
 
 ## Operator Notes
 
@@ -29,3 +32,6 @@ without exposing administrator-only registry, simulation, or production wording.
 - It is not a backend QA system.
 - It does not collect real user records.
 - It does not authorize registry writes, publication, or production readiness.
+- Phase 12E acceptance trial is also not production readiness; it is an
+  operator-readable founder/demo review gate for the local semi-automatic draft
+  chain.

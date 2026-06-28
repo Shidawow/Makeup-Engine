@@ -736,3 +736,26 @@ Draft Preview QA does not publish, does not write or mutate registry state,
 does not generate or mutate `UserAppTemplatePackage`, does not replace the
 current User App Shell package, does not create a production writer, and does
 not train models.
+
+## Phase 12E Photo-to-Template End-to-End Demo Script & Acceptance Trial Flow
+
+`UserAppMvpDemoRoute`
+-> `VisionAnalysisDemoRoute`
+-> `TemplateStudioOperatorWorkflowDemoRoute`
+-> `PhotoToTemplateOperatorWorkflowReport`
+-> `PhotoToTemplateDraftPreviewQaReport`
+-> `PhotoToTemplateAcceptanceTrialReport`
+-> `PhotoToTemplateAcceptanceTrialPanel`
+-> next recommendation for Phase 13A MVP Trial Content Pack & Founder Demo
+Review.
+
+The 12E flow is operator-only, local, deterministic, and demo-readiness-only.
+It checks demo route completion, correct Readiness Score labeling, semantic
+candidates as not-final, human review editing, Draft Preview QA, hidden
+ordinary-user internal terms, forbidden claim boundaries, MediaPipe ignore
+state, and build/test evidence.
+
+Acceptance Trial does not publish, does not write or mutate registry state,
+does not generate or mutate `UserAppTemplatePackage`, does not replace the
+current User App Shell package, does not create a production writer, does not
+add backend/API/camera/AR scope, and does not train models.

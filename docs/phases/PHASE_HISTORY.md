@@ -2,6 +2,37 @@
 
 This history is a recovery summary based on current project reports, current source layout, tests, and documentation. Earlier phase details are summarized when exact original phase reports are not available.
 
+## Phase 12E
+
+Added Photo-to-Template End-to-End Demo Script and Acceptance Trial on top of
+Phase 12D.
+
+What changed:
+
+- Added `docs/product/photo-to-template-e2e-demo-script.md`.
+- Added `docs/product/photo-to-template-acceptance-trial.md`.
+- Added `PhotoToTemplateAcceptanceTrialReport`, acceptance checks, issues,
+  recommendations, decision, demo route status, and JSON round-trip stability.
+- Added `PhotoToTemplateAcceptanceTrialPanel` to Template Studio operator area.
+- Added deterministic examples and tests for ready, warning, blocked registry /
+  publish / production writer, unsafe claims, panel rendering, tab boundaries,
+  ordinary user forbidden terms, docs, and project-state.
+
+What still cannot happen:
+
+- Acceptance Trial is not production readiness, not registry readiness, not
+  publish readiness, not fully automatic extraction, not final recognition, not
+  `UserAppTemplatePackage` mutation, and not User App Shell package replacement.
+- No registry write, registry mutation, publish, production writer, backend,
+  camera, AR, OpenAI/external API, training, real user photo storage, base64,
+  local photo path, personal data, or committed MediaPipe runtime assets.
+
+Why Phase 13A follows:
+
+The demo route and acceptance trial are now structured enough to prepare a
+founder-facing MVP trial content pack and founder demo review without resuming
+the registry write chain.
+
 ## Phase 12D
 
 Added Photo-to-Template Operator Workflow and Draft Preview QA on top of Phase

@@ -2,21 +2,18 @@
 
 ## Current Phase
 
-Phase 12D: Photo-to-Template Operator Workflow & Draft Preview QA is complete.
+Phase 12E: Photo-to-Template End-to-End Demo Script & Acceptance Trial is complete.
 
-Last completed business phase: Phase 12D.
+Last completed business phase: Phase 12E.
 
-Next recommended phase: Phase 12E, Photo-to-Template End-to-End Demo Script & Acceptance Trial.
+Next recommended phase: Phase 13A, MVP Trial Content Pack & Founder Demo Review.
 
-Phase 12D keeps the post-10U registry write chain paused and adds an
-operator-only workflow plus Draft Preview QA layer for the photo-to-template
-chain. The workflow connects Vision / FaceMesh, 12A Reality Check, 12B semantic
-candidates, 12C draft integration, human review editing, Draft QA, User App
-Draft Preview QA, and handoff. Draft Preview QA checks user-visible copy while
-blocking internal source metadata, confidence bands, evidence, limitations,
-reviewer notes, registry / publish / production writer wording, final claims,
-AI-confirmed claims, fully automatic extraction claims, medical claims, and
-product shade hard claims.
+Phase 12E keeps the post-10U registry write chain paused and packages the
+photo-to-template chain into an end-to-end demo script plus acceptance trial.
+The trial covers User App MVP, Vision Analysis, Template Studio Operator
+Workflow, Draft Preview QA, forbidden claim checks, privacy checks, and
+validation evidence. It remains operator-only, draft-preview-only,
+human-review-required, and not production readiness.
 
 Registry chain status: paused after Phase 10U. Phase 10V actual write
 authorization is not the active next phase.
@@ -25,6 +22,11 @@ authorization is not the active next phase.
 
 - Run real local MediaPipe FaceMesh when ignored local assets under
   `public/mediapipe/**` are present.
+- Run the Phase 12E Photo-to-Template Acceptance Trial over User App MVP,
+  Vision Analysis, Template Studio Operator Workflow, and Draft Preview QA.
+- Render the Template Studio Acceptance Trial panel with demo route status,
+  forbidden claim checks, privacy/boundary checks, validation evidence, and
+  next action.
 - Evaluate FaceMesh region QA and show whether the operator can enter Template
   Workbench.
 - Generate deterministic makeup attribute candidates, rule-based step drafts,
@@ -354,7 +356,7 @@ authorization is not the active next phase.
 
 ## Recent Validation
 
-Phase 12D validation must include:
+Phase 12E validation must include:
 
 ```bash
 npm run mediapipe:check
@@ -370,8 +372,8 @@ The latest completed validation is recorded in `project-state/test-status.json`.
 
 ## Next Phase Recommendation
 
-Proceed to Phase 12E: Photo-to-Template End-to-End Demo Script & Acceptance Trial.
+Proceed to Phase 13A: MVP Trial Content Pack & Founder Demo Review.
 
-Phase 12E should script and verify the full operator-led photo-to-template demo
-from Vision Analysis through Draft Preview QA while keeping the registry write
+Phase 13A should prepare founder-facing trial content and review materials
+using the 12E demo script and acceptance trial while keeping the registry write
 chain paused after Phase 10U.

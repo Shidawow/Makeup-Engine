@@ -804,3 +804,25 @@ Workflow, Draft Preview QA, sourceType, confidenceBand, evidence, limitations,
 reviewerDecision, reviewer notes, Template Studio, registry/write/publish/
 simulator/production writer, or automatic extraction operator terminology by
 default.
+
+## Phase 12E Photo-to-Template End-to-End Demo Script & Acceptance Trial
+
+Phase 12E is an operator/founder demo script and acceptance trial layer. It may
+show demo route status, checklist status, forbidden claim checks, privacy
+checks, validation evidence, and next action, but every output remains
+demo-readiness-only, draft-preview-only, and human-review-required.
+
+Phase 12E must not be treated as production readiness, registry readiness,
+publish readiness, fully automatic extraction, final recognition, or
+`UserAppTemplatePackage` mutation.
+
+Phase 12E must not resume Phase 10V, execute real registry writes, mutate
+registry state, publish, create a production writer, replace the current User
+App Shell package, add backend/database/login/payment/camera/AR/OpenAI or
+external API scope, upload real photos, store real user data, or train models.
+
+Phase 12E ordinary-user paths must not expose Acceptance Trial, Operator
+Workflow, Draft Preview QA, sourceType, confidenceBand, evidence, limitations,
+reviewerDecision, reviewerNote, humanReviewRequired, notFinal, Template Studio,
+registry/write/publish/simulator/production writer, Pipeline Trace, debug JSON,
+or automatic extraction operator terminology by default.

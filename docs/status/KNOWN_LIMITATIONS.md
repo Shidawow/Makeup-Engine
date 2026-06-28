@@ -227,3 +227,11 @@
   limitations, reviewerDecision, reviewer note, `humanReviewRequired`, and
   `notFinal` must remain in Template Studio only and must not appear in the
   ordinary User App path.
+- Phase 12E Photo-to-Template End-to-End Demo Script & Acceptance Trial is an
+  operator/founder demo readiness layer only. It is not production readiness,
+  not registry readiness, not publish readiness, not fully automatic makeup
+  extraction, and not real user data collection.
+- Phase 12E acceptance trial must keep registry write, registry mutation,
+  publish, production writer, User App Shell replacement, backend/API,
+  camera/AR, OpenAI/external AI, training, real photo storage, base64, local
+  photo paths, personal data, and biometric data blocked.

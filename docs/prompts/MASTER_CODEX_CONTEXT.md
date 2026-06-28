@@ -12,11 +12,11 @@ It produces templates, template evidence, correction records, review state, loca
 
 ## Current Phase
 
-- Current business phase: `Phase 12D completed`
-- Last completed phase: `Phase 12D`
-- Last completed phase name: `Phase 12D - Photo-to-Template Operator Workflow & Draft Preview QA`
-- Next recommended phase: `Phase 12E - Photo-to-Template End-to-End Demo Script & Acceptance Trial`
-- Strategic focus: registry chain paused after Phase 10U; active work is photo-to-template semantic evidence and human-reviewed draft integration.
+- Current business phase: `Phase 12E completed`
+- Last completed phase: `Phase 12E`
+- Last completed phase name: `Phase 12E - Photo-to-Template End-to-End Demo Script & Acceptance Trial`
+- Next recommended phase: `Phase 13A - MVP Trial Content Pack & Founder Demo Review`
+- Strategic focus: registry chain paused after Phase 10U; active work is photo-to-template demo acceptance, founder review preparation, and MVP trial content packaging.
 
 Historical recovery marker retained for Phase 10U tests: `Phase 10U completed`.
 Historical recovery marker retained for Phase 9C tests: `Phase 9C completed`.
@@ -741,3 +741,19 @@ Readiness panel. The registry chain remains paused after Phase 10U and Phase
 Photo-to-Template Draft Reality Check.
 
 Historical handoff marker retained for Phase 10T recovery tests: Phase 10T completed / lastCompletedPhase: 10T / nextRecommendedPhase: 10U / Real Write Approval Boundary / Guarded Simulator Review Gate.
+
+## Phase 12E Current Capability
+
+Phase 12E completed Photo-to-Template End-to-End Demo Script & Acceptance
+Trial. The current photo-to-template chain can be demonstrated through User App
+MVP, Vision Analysis, and Template Studio Operator Workflow routes. The
+Acceptance Trial panel checks demo route completion, correct Readiness Score
+labeling, operator workflow completion, semantic candidates not final, Human
+Review Editing, Draft Preview QA, ordinary user internal-term hiding,
+forbidden claim blocking, MediaPipe ignore state, and validation evidence.
+
+Acceptance Trial is not production readiness, not registry readiness, not
+publish readiness, not final recognition, and not fully automatic
+photo-to-template extraction. Registry chain remains paused after Phase 10U,
+Phase 10V is intentionally not the active next phase, and next recommended
+phase is Phase 13A - MVP Trial Content Pack & Founder Demo Review.

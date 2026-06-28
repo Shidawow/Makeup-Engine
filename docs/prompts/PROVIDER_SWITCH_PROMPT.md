@@ -6,11 +6,11 @@ Default to compact context. Do not copy full historical chat transcripts. Do not
 
 ## Current State
 
-- `lastCompletedPhase: 12D`
-- `nextRecommendedPhase: 12E`
-- `nextRecommendedPhaseName: Photo-to-Template End-to-End Demo Script & Acceptance Trial`
+- `lastCompletedPhase: 12E`
+- `nextRecommendedPhase: 13A`
+- `nextRecommendedPhaseName: MVP Trial Content Pack & Founder Demo Review`
 - Project role: Makeup template production system with a local contract-driven user app shell prototype, not a production user app.
-- Current capability: Phase 12D - Photo-to-Template Operator Workflow & Draft Preview QA keeps the registry chain paused after Phase 10U and shows an operator-only workflow from Vision / FaceMesh through Reality Check, Semantic Extraction, Draft Integration, Human Review Editing, Draft QA, User App Draft Preview QA, and handoff. Draft Preview QA checks user-visible draft preview copy while blocking sourceType, confidenceBand, evidence, limitations, reviewer notes, registry/write/publish terms, production writer wording, final claims, AI-confirmed claims, fully automatic extraction claims, medical claims, and product shade hard claims from ordinary user-facing preview copy.
+- Current capability: Phase 12E - Photo-to-Template End-to-End Demo Script & Acceptance Trial keeps the registry chain paused after Phase 10U and packages User App MVP, Vision Analysis, Template Studio Operator Workflow, Draft Preview QA, forbidden claim checks, privacy checks, and validation evidence into an operator/founder acceptance trial. Acceptance Trial is not production readiness, not registry readiness, not publish readiness, and not fully automatic high-quality makeup extraction.
 
 Historical handoff marker retained for Phase 10U recovery tests: `lastCompletedPhase: 10U`, `nextRecommendedPhase: 10V`.
 Historical handoff marker retained for Phase 10T recovery tests: `lastCompletedPhase: 10T`, `nextRecommendedPhase: 10U`.
@@ -675,5 +675,28 @@ nextRecommendedPhase: 12E
 Photo-to-Template End-to-End Demo Script & Acceptance Trial
 Photo-to-Template Operator Workflow & Draft Preview QA
 sourceType / confidenceBand / evidence / limitations remain hidden from the ordinary user path
+registry chain paused after Phase 10U
+Phase 10V is intentionally not the active next phase
+
+## Phase 12E Handoff Note
+
+Phase 12E completed Photo-to-Template End-to-End Demo Script & Acceptance
+Trial. The current chain can show User App MVP, Vision Analysis, Template
+Studio Operator Workflow, Draft Preview QA, and Acceptance Trial as separate
+demo routes for founder/operator review. `PhotoToTemplateAcceptanceTrialReport`
+and `PhotoToTemplateAcceptanceTrialPanel` capture the local acceptance-trial
+state. Acceptance Trial checks demo route
+completion, correct Readiness Score labeling, semantic candidates not final,
+Draft Preview QA, hidden internal terms, no registry write, no publish, no
+production writer, no User App Shell replacement, no fully automatic claim, no
+AI confirmed claim, no medical/product shade hard claim, no real user data
+storage, MediaPipe ignore state, and validation evidence.
+
+Current handoff:
+lastCompletedPhase: 12E
+nextRecommendedPhase: 13A
+MVP Trial Content Pack & Founder Demo Review
+Photo-to-Template End-to-End Demo Script & Acceptance Trial
+acceptance trial is not production readiness
 registry chain paused after Phase 10U
 Phase 10V is intentionally not the active next phase

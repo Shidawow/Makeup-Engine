@@ -92,3 +92,26 @@ active next phase.
 - Do not say the registry has been written.
 - Do not describe Readiness Score as model confidence.
 - Do not collect real user photos or personal data during the demo.
+
+## Phase 12E Photo-to-Template Demo Addendum
+
+Phase 12E adds a separate end-to-end photo-to-template demo script and
+acceptance trial. The ordinary User App MVP path remains Demo Route A, while
+Vision Analysis is Demo Route B and Template Studio Operator Workflow is Demo
+Route C.
+
+The acceptance trial checks whether a founder, tester, or operator can
+understand the full chain:
+
+```text
+User App MVP
++ Vision Analysis
++ Template Studio Operator Workflow
++ Draft Preview QA
++ Acceptance Trial
+```
+
+This is still not production readiness. It does not resume registry writes,
+does not publish, does not replace the User App Shell package, and does not
+claim fully automatic high-quality makeup extraction. Semantic candidates
+remain candidate-only and human-review-required.

@@ -2,39 +2,34 @@
 
 ## What To Do Next
 
-Proceed to Phase 12E: Photo-to-Template End-to-End Demo Script & Acceptance
-Trial.
+Proceed to Phase 13A: MVP Trial Content Pack & Founder Demo Review.
 
 ## Why
 
-Phase 12D turns the current photo-to-template chain into a clearer
-operator-led workflow:
+Phase 12E packages the current photo-to-template chain into an operator-readable
+demo and acceptance trial:
 
 ```text
-Vision Analysis / FaceMesh
--> Reality Check
--> Makeup Semantic Extraction
--> Draft Integration
--> Human Review Editing
--> Draft QA
--> User App Draft Preview QA
--> Phase 12E demo script handoff
+Demo Route A: User App MVP
+Demo Route B: Vision Analysis
+Demo Route C: Template Studio Operator Workflow
+-> Draft Preview QA
+-> Acceptance Trial
+-> Phase 13A Founder Demo Review
 ```
 
-The system can now show where a photo-to-template draft is ready, warning,
-blocked, or still needs review before any demo acceptance trial. Draft Preview
-QA also checks that ordinary user-facing preview copy does not leak source
-metadata, confidence bands, evidence, reviewer notes, registry terms, publish
-terms, production writer terms, or final/AI/fully-automatic claims.
+The system can now explain how to start the app, show the ordinary User App MVP,
+show local Vision Analysis, walk through the operator workflow, and verify that
+forbidden claims and internal terms stay blocked.
 
-## Recommended 12E Scope
+## Recommended 13A Scope
 
-- Create an end-to-end operator demo script for the photo-to-template flow.
-- Define acceptance trial steps for Vision Analysis, semantic extraction,
-  draft integration, human review editing, Draft QA, and Draft Preview QA.
-- Define pass/fail criteria for demo acceptance.
-- Keep all output local, operator-only, draft-only, and human-reviewed.
-- Keep the registry chain paused after Phase 10U.
+- Prepare a founder-facing MVP trial content pack.
+- Select demo templates and copy that are safe for review.
+- Create founder review checklist and feedback capture structure.
+- Keep the photo-to-template workflow semi-automatic, draft-only, and
+  human-review-required.
+- Keep registry writes paused after Phase 10U.
 
 ## What Not To Do
 
@@ -44,10 +39,10 @@ terms, production writer terms, or final/AI/fully-automatic claims.
 - Do not create or execute a production writer.
 - Do not publish to the user app.
 - Do not replace the current User App Shell package.
-- Do not generate or mutate a formal `UserAppTemplatePackage` from 12D output.
-- Do not treat semantic candidates, draft fields, or preview QA as final
-  recognition or AI-confirmed analysis.
+- Do not generate or mutate a formal `UserAppTemplatePackage` from 12E output.
+- Do not treat Acceptance Trial as production readiness.
 - Do not claim fully automatic high-quality makeup extraction.
+- Do not claim AI confirmed analysis.
 - Do not add backend, database, login, payment, analytics, camera capture, AR,
   OpenAI/external API calls, native app implementation, React Native, Flutter,
   App Store/TestFlight work, service worker, ecommerce, community, paid
@@ -67,23 +62,22 @@ Read these files first:
 5. `docs/status/CURRENT_PROJECT_STATUS.md`
 6. `docs/status/CURRENT_PHASE.md`
 7. `docs/status/NEXT_ACTION.md`
-8. `docs/product/photo-to-template-draft-reality-check.md`
-9. `docs/product/photo-to-template-field-source-matrix.md`
-10. `docs/product/makeup-semantic-extraction-baseline.md`
-11. `docs/product/makeup-semantic-field-evidence.md`
-12. `docs/product/photo-to-template-draft-integration.md`
-13. `docs/product/photo-to-template-human-review-editing.md`
-14. `docs/product/photo-to-template-operator-workflow.md`
-15. `docs/product/photo-to-template-draft-preview-qa.md`
-16. `docs/phases/phase-12A.md`
-17. `docs/phases/phase-12B.md`
-18. `docs/phases/phase-12C.md`
-19. `docs/phases/phase-12D.md`
-20. `project-state/project-state.snapshot.json`
-21. `project-state/latest-handoff.json`
-22. `project-state/provider-handoff.json`
-23. `project-state/active-task.json`
-24. `project-state/guardrails.json`
+8. `docs/product/user-app-demo-readiness.md`
+9. `docs/product/operator-qa-checklist.md`
+10. `docs/product/photo-to-template-e2e-demo-script.md`
+11. `docs/product/photo-to-template-acceptance-trial.md`
+12. `docs/product/photo-to-template-draft-reality-check.md`
+13. `docs/product/makeup-semantic-extraction-baseline.md`
+14. `docs/product/photo-to-template-draft-integration.md`
+15. `docs/product/photo-to-template-human-review-editing.md`
+16. `docs/product/photo-to-template-operator-workflow.md`
+17. `docs/product/photo-to-template-draft-preview-qa.md`
+18. `docs/phases/phase-12E.md`
+19. `project-state/project-state.snapshot.json`
+20. `project-state/latest-handoff.json`
+21. `project-state/provider-handoff.json`
+22. `project-state/active-task.json`
+23. `project-state/guardrails.json`
 
 Then run:
 

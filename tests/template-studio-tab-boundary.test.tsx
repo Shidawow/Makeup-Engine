@@ -67,6 +67,7 @@ describe('Template Studio tab boundary', () => {
     expect(html).not.toContain('Photo-to-Template Human Review Editing');
     expect(html).not.toContain('Photo-to-Template Operator Workflow');
     expect(html).not.toContain('Photo-to-Template Draft Preview QA');
+    expect(html).not.toContain('Photo-to-Template Acceptance Trial');
     expect(html).not.toContain('semantic candidate → draft field binding matrix');
   });
 
@@ -269,6 +270,10 @@ describe('Template Studio tab boundary', () => {
     expect(html).toContain('User-visible draft fields QA');
     expect(html).toContain('当前是 draft preview，不是 publish');
     expect(html).toContain('不会生成真实 UserAppTemplatePackage');
+    expect(html).toContain('Photo-to-Template Acceptance Trial');
+    expect(html).toContain('Acceptance Trial，不是发布');
+    expect(html).toContain('不能写 registry / 不能 publish');
+    expect(html).toContain('Demo Route A - User App MVP');
     expect(html).not.toContain('AI 已确认');
     expect(html).not.toContain('已生成正式用户模板包');
     expect(html).not.toContain('已生成正式 UserAppTemplatePackage');
@@ -353,8 +358,10 @@ describe('Template Studio tab boundary', () => {
     expect(userPath).not.toContain('Photo-to-Template Human Review Editing');
     expect(userPath).not.toContain('Photo-to-Template Operator Workflow');
     expect(userPath).not.toContain('Photo-to-Template Draft Preview QA');
+    expect(userPath).not.toContain('Photo-to-Template Acceptance Trial');
     expect(userPath).not.toContain('Operator Workflow');
     expect(userPath).not.toContain('Draft Preview QA');
+    expect(userPath).not.toContain('Acceptance Trial');
     expect(userPath).not.toContain('semantic candidate');
     expect(userPath).not.toContain('confidence band');
     expect(userPath).not.toContain('reviewer note');
