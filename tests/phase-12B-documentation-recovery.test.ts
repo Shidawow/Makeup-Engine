@@ -53,7 +53,7 @@ describe('Phase 12B documentation recovery', () => {
     expect(combined).toContain('not fully automatic');
   });
 
-  it('keeps 12B history while project-state advances to 12C without resuming registry writes', async () => {
+  it('keeps 12B history while project-state advances to 12D without resuming registry writes', async () => {
     const stateFiles = await Promise.all([
       read('project-state/project-state.snapshot.json'),
       read('project-state/latest-handoff.json'),
@@ -66,15 +66,17 @@ describe('Phase 12B documentation recovery', () => {
     ]);
     const combined = stateFiles.join('\n');
 
-    expect(combined).toContain('"lastCompletedPhase": "12C"');
-    expect(combined).toContain('"currentPhaseId": "12C"');
-    expect(combined).toContain('"nextRecommendedPhase": "12D"');
+    expect(combined).toContain('"lastCompletedPhase": "12D"');
+    expect(combined).toContain('"currentPhaseId": "12D"');
+    expect(combined).toContain('"nextRecommendedPhase": "12E"');
     expect(combined).toContain('Makeup Semantic Extraction Baseline');
     expect(combined).toContain('MakeupSemanticExtractionReport');
     expect(combined).toContain('MakeupSemanticCandidate');
     expect(combined).toContain('MakeupSemanticExtractionPanel');
     expect(combined).toContain('PhotoToTemplateDraftIntegrationReport');
     expect(combined).toContain('PhotoToTemplateHumanReviewEditingSession');
+    expect(combined).toContain('PhotoToTemplateOperatorWorkflowReport');
+    expect(combined).toContain('PhotoToTemplateDraftPreviewQaReport');
     expect(combined).toContain('candidate-only');
     expect(combined).toContain('registry chain paused after Phase 10U');
     expect(combined).not.toContain('Phase 10V actual write authorization is active');

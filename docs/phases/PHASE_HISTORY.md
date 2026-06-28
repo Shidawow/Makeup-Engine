@@ -2,6 +2,41 @@
 
 This history is a recovery summary based on current project reports, current source layout, tests, and documentation. Earlier phase details are summarized when exact original phase reports are not available.
 
+## Phase 12D
+
+Added Photo-to-Template Operator Workflow and Draft Preview QA on top of Phase
+12C.
+
+What changed:
+
+- Added `PhotoToTemplateOperatorWorkflowReport`, workflow steps, next actions,
+  issues, recommendations, and handoff boundaries.
+- Added `PhotoToTemplateDraftPreviewQaReport`, user-visible draft fields, QA
+  checks, blocked reasons, recommendations, and local-only privacy checks.
+- Connected Vision / FaceMesh, Reality Check, Semantic Extraction, Draft
+  Integration, Human Review Editing, Draft QA, User App Draft Preview QA, and
+  handoff into a Template Workbench workflow checklist.
+- Added Template Workbench panels for operator workflow and draft preview QA.
+- Added examples and tests covering ready, warning, blocked, internal term
+  leakage, unsafe claims, panel rendering, tab boundaries, ordinary user
+  forbidden terms, docs, and project-state.
+
+What still cannot happen:
+
+- Draft Preview QA is not final recognition, not AI confirmation, not fully
+  automatic extraction, not publication, not registry readiness, not production
+  readiness, not production writer output, not `UserAppTemplatePackage`
+  mutation, and not User App Shell package replacement.
+- No registry write, registry mutation, publish, production writer, current User
+  App Shell package replacement, backend, camera, AR, OpenAI/external API,
+  training, or committed MediaPipe runtime assets.
+
+Why Phase 12E follows:
+
+The operator workflow and draft preview QA are now structured enough to script
+and accept-test an end-to-end photo-to-template demo without pretending it is a
+production package or registry write.
+
 ## Phase 12C
 
 Added safe semantic-candidate-to-draft integration and human review editing on

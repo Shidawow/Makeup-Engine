@@ -1,12 +1,12 @@
 {
-  "phase": "12C",
+  "phase": "12D",
   "status": "completed",
   "lastValidation": {
-    "phase": "12C",
+    "phase": "12D",
     "mediapipeCheck": "passed",
     "typecheck": "passed",
     "test": "passed",
-    "scopedTests": "passed (15 files / 52 tests)",
+    "scopedTests": "passed (10 files / 30 tests)",
     "build": "passed",
     "projectStatus": "passed",
     "projectStatusJson": "passed",
@@ -14,17 +14,17 @@
     "contextPackJson": "passed",
     "browserVerification": "passed",
     "browserValidation": "passed",
-    "testFiles": 15,
-    "tests": 52,
-    "phase12CScopedTests": "passed",
+    "testFiles": 10,
+    "tests": 30,
+    "phase12DScopedTests": "passed",
     "browserValidationNotes": [
-      "User App ordinary path loads with local-only/no-upload/no-training copy and does not expose Phase 12C draft integration or human review editing terms.",
-      "Template Studio workbench shows Photo-to-Template Draft Integration, semantic candidate to draft field binding matrix, and Photo-to-Template Human Review Editing with draft-only/no-publish/no-registry copy.",
-      "Vision Analysis tab keeps FaceMesh, image/mask, MediaPipe recovery guidance, and readiness summary only; it does not show the 12C draft integration or human review editing panels.",
-      "Local MediaPipe assets are present, and the Vision Analysis page does not show mock fallback copy in the ready-assets state.",
-      "Browser console error log check returned zero errors during validation."
+      "User App ordinary path loads with local-only/no-upload/no-training copy and does not expose Phase 12D operator workflow, Draft Preview QA, sourceType, confidenceBand, evidence, limitations, reviewerDecision, humanReviewRequired, or notFinal terms.",
+      "Vision Analysis tab shows image/mask, FaceMesh, MediaPipe recovery guidance, and vision readiness copy while keeping Phase 12D Operator Workflow and Draft Preview QA out of the tab.",
+      "Template Workbench tab shows Photo-to-Template Operator Workflow and Photo-to-Template Draft Preview QA panels with workflow stepper/checklist, user-visible draft fields QA, next action, blocked reasons, and no publish/registry/production writer handoff.",
+      "Local MediaPipe assets are present, and the Vision Analysis page did not show mock fallback copy in the ready-assets state.",
+      "Browser plugin emitted external Statsig timeout noise while connecting, but DOM and screenshot validation completed successfully against the local dev server."
     ],
-    "summary": "Phase 12C validation passed: npm run mediapipe:check, scoped tests (15 files / 52 tests), npm run typecheck, npm run build, npm run project:status, npm run project:context, JSON status/context commands, and browser validation."
+    "summary": "Phase 12D validation passed: npm run mediapipe:check, scoped tests (10 files / 30 tests), npm run typecheck, npm run build, npm run project:status, npm run project:context, JSON status/context commands, and browser validation."
   },
   "lastKnownPreDoc0Validation": {
     "phase": "12B",
@@ -57,7 +57,8 @@
     "npm run project:context",
     "node scripts/project-status.mjs --json",
     "node scripts/context-pack.mjs --json",
-    "npm run test -- tests/photo-to-template-draft-integration.test.ts tests/photo-to-template-human-review-editing.test.ts tests/photo-to-template-draft-integration-panel.test.tsx tests/photo-to-template-human-review-editing-panel.test.tsx tests/phase-12C-documentation-recovery.test.ts tests/makeup-semantic-extraction.test.ts tests/makeup-semantic-extraction-panel.test.tsx tests/photo-to-template-reality-check.test.ts tests/photo-to-template-reality-validation.test.ts tests/user-app-demo-forbidden-terms.test.tsx tests/template-studio-tab-boundary.test.tsx tests/vision-readiness-score-label.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
+    "npm run test -- tests/photo-to-template-draft-integration.test.ts tests/photo-to-template-human-review-editing.test.ts tests/photo-to-template-draft-integration-panel.test.tsx tests/photo-to-template-human-review-editing-panel.test.tsx tests/phase-12C-documentation-recovery.test.ts tests/makeup-semantic-extraction.test.ts tests/makeup-semantic-extraction-panel.test.tsx tests/photo-to-template-reality-check.test.ts tests/photo-to-template-reality-validation.test.ts tests/user-app-demo-forbidden-terms.test.tsx tests/template-studio-tab-boundary.test.tsx tests/vision-readiness-score-label.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
+    "npm run test -- tests/photo-to-template-operator-workflow.test.ts tests/photo-to-template-draft-preview-qa.test.ts tests/photo-to-template-operator-workflow-panel.test.tsx tests/photo-to-template-draft-preview-qa-panel.test.tsx tests/phase-12D-documentation-recovery.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts tests/mediapipe-real-assets-check.test.ts"
   ],
   "notes": [
     "Phase 10U scoped validation pending final run.",
@@ -69,17 +70,17 @@
     "Phase 12C completed Photo-to-Template Draft Integration & Human Review Editing.",
     "Next recommended phase is Phase 12D - Photo-to-Template Operator Workflow & Draft Preview QA."
   ],
-  "lastCompletedPhase": "12C",
-  "currentPhase": "Phase 12C - Photo-to-Template Draft Integration & Human Review Editing",
-  "nextRecommendedPhase": "12D",
-  "updatedAt": "2026-06-28T00:00:00.000+08:00",
-  "summary": "Phase 12C completed: semantic candidates are bound into draft fields with source/confidence/evidence/limitations preserved, local human review editing is available, Draft QA and Reality Check boundaries remain enforced, and registry chain remains paused after Phase 10U.",
+  "lastCompletedPhase": "12D",
+  "currentPhase": "Phase 12D - Photo-to-Template Operator Workflow & Draft Preview QA",
+  "nextRecommendedPhase": "12E",
+  "updatedAt": "2026-06-28T11:10:00.105Z",
+  "summary": "Photo-to-Template Operator Workflow & Draft Preview QA is complete. Operator workflow and Draft Preview QA are Template Workbench only, draft-preview-only, and keep registry writes, publishing, production writers, UserAppTemplatePackage mutation, and User App Shell replacement blocked. Next: Phase 12E - Photo-to-Template End-to-End Demo Script & Acceptance Trial.",
   "validation": {
-    "phase": "12C",
+    "phase": "12D",
     "mediapipeCheck": "passed",
     "typecheck": "passed",
     "test": "passed",
-    "scopedTests": "passed (15 files / 52 tests)",
+    "scopedTests": "passed (10 files / 30 tests)",
     "build": "passed",
     "projectStatus": "passed",
     "projectStatusJson": "passed",
@@ -87,19 +88,19 @@
     "contextPackJson": "passed",
     "browserVerification": "passed",
     "browserValidation": "passed",
-    "testFiles": 15,
-    "tests": 52,
-    "phase12CScopedTests": "passed",
+    "testFiles": 10,
+    "tests": 30,
+    "phase12DScopedTests": "passed",
     "browserValidationNotes": [
-      "User App ordinary path loads with local-only/no-upload/no-training copy and does not expose Phase 12C draft integration or human review editing terms.",
-      "Template Studio workbench shows Photo-to-Template Draft Integration, semantic candidate to draft field binding matrix, and Photo-to-Template Human Review Editing with draft-only/no-publish/no-registry copy.",
-      "Vision Analysis tab keeps FaceMesh, image/mask, MediaPipe recovery guidance, and readiness summary only; it does not show the 12C draft integration or human review editing panels.",
-      "Local MediaPipe assets are present, and the Vision Analysis page does not show mock fallback copy in the ready-assets state.",
-      "Browser console error log check returned zero errors during validation."
+      "User App ordinary path loads with local-only/no-upload/no-training copy and does not expose Phase 12D operator workflow, Draft Preview QA, sourceType, confidenceBand, evidence, limitations, reviewerDecision, humanReviewRequired, or notFinal terms.",
+      "Vision Analysis tab shows image/mask, FaceMesh, MediaPipe recovery guidance, and vision readiness copy while keeping Phase 12D Operator Workflow and Draft Preview QA out of the tab.",
+      "Template Workbench tab shows Photo-to-Template Operator Workflow and Photo-to-Template Draft Preview QA panels with workflow stepper/checklist, user-visible draft fields QA, next action, blocked reasons, and no publish/registry/production writer handoff.",
+      "Local MediaPipe assets are present, and the Vision Analysis page did not show mock fallback copy in the ready-assets state.",
+      "Browser plugin emitted external Statsig timeout noise while connecting, but DOM and screenshot validation completed successfully against the local dev server."
     ],
-    "summary": "Phase 12C validation passed: npm run mediapipe:check, scoped tests (15 files / 52 tests), npm run typecheck, npm run build, npm run project:status, npm run project:context, JSON status/context commands, and browser validation."
+    "summary": "Phase 12D validation passed: npm run mediapipe:check, scoped tests (10 files / 30 tests), npm run typecheck, npm run build, npm run project:status, npm run project:context, JSON status/context commands, and browser validation."
   },
-  "nextRecommendedPhaseName": "Photo-to-Template Operator Workflow & Draft Preview QA",
+  "nextRecommendedPhaseName": "Photo-to-Template End-to-End Demo Script & Acceptance Trial",
   "results": {
     "phase": "12C",
     "mediapipeCheck": "passed",
@@ -113,8 +114,8 @@
     "contextPackJson": "passed",
     "browserVerification": "passed",
     "browserValidation": "passed",
-    "testFiles": 15,
-    "tests": 52,
+    "testFiles": "pending",
+    "tests": "pending",
     "phase12CScopedTests": "passed",
     "browserValidationNotes": [
       "User App ordinary path loads with local-only/no-upload/no-training copy and does not expose Phase 12C draft integration or human review editing terms.",
@@ -123,7 +124,7 @@
       "Local MediaPipe assets are present, and the Vision Analysis page does not show mock fallback copy in the ready-assets state.",
       "Browser console error log check returned zero errors during validation."
     ],
-    "summary": "Phase 12C validation passed: npm run mediapipe:check, scoped tests (15 files / 52 tests), npm run typecheck, npm run build, npm run project:status, npm run project:context, JSON status/context commands, and browser validation."
+    "summary": "Phase 12D validation passed: npm run mediapipe:check, scoped tests (15 files / 52 tests), npm run typecheck, npm run build, npm run project:status, npm run project:context, JSON status/context commands, and browser validation."
   },
   "requiredCommands": [
     "npm run mediapipe:check",
@@ -133,11 +134,12 @@
     "npm run project:context",
     "node scripts/project-status.mjs --json",
     "node scripts/context-pack.mjs --json",
-    "npm run test -- tests/photo-to-template-draft-integration.test.ts tests/photo-to-template-human-review-editing.test.ts tests/photo-to-template-draft-integration-panel.test.tsx tests/photo-to-template-human-review-editing-panel.test.tsx tests/phase-12C-documentation-recovery.test.ts tests/makeup-semantic-extraction.test.ts tests/makeup-semantic-extraction-panel.test.tsx tests/photo-to-template-reality-check.test.ts tests/photo-to-template-reality-validation.test.ts tests/user-app-demo-forbidden-terms.test.tsx tests/template-studio-tab-boundary.test.tsx tests/vision-readiness-score-label.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
+    "npm run test -- tests/photo-to-template-draft-integration.test.ts tests/photo-to-template-human-review-editing.test.ts tests/photo-to-template-draft-integration-panel.test.tsx tests/photo-to-template-human-review-editing-panel.test.tsx tests/phase-12C-documentation-recovery.test.ts tests/makeup-semantic-extraction.test.ts tests/makeup-semantic-extraction-panel.test.tsx tests/photo-to-template-reality-check.test.ts tests/photo-to-template-reality-validation.test.ts tests/user-app-demo-forbidden-terms.test.tsx tests/template-studio-tab-boundary.test.tsx tests/vision-readiness-score-label.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
+    "npm run test -- tests/photo-to-template-operator-workflow.test.ts tests/photo-to-template-draft-preview-qa.test.ts tests/photo-to-template-operator-workflow-panel.test.tsx tests/photo-to-template-draft-preview-qa-panel.test.tsx tests/phase-12D-documentation-recovery.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts tests/mediapipe-real-assets-check.test.ts"
   ],
   "validationStatus": "passed",
-  "lastUpdatedPhase": "12C",
-  "currentPhaseId": "12C",
+  "lastUpdatedPhase": "12D",
+  "currentPhaseId": "12D",
   "commands": {
     "phase": "12C",
     "mediapipeCheck": "passed",
@@ -161,12 +163,12 @@
       "Local MediaPipe assets are present, and the Vision Analysis page does not show mock fallback copy in the ready-assets state.",
       "Browser console error log check returned zero errors during validation."
     ],
-    "summary": "Phase 12C validation passed: npm run mediapipe:check, scoped tests (15 files / 52 tests), npm run typecheck, npm run build, npm run project:status, npm run project:context, JSON status/context commands, and browser validation."
+    "summary": "Phase 12D validation passed: npm run mediapipe:check, scoped tests (15 files / 52 tests), npm run typecheck, npm run build, npm run project:status, npm run project:context, JSON status/context commands, and browser validation."
   },
-  "currentPhaseName": "Photo-to-Template Draft Integration & Human Review Editing",
-  "lastCompletedBusinessPhase": "12C",
-  "lastUpdated": "2026-06-28T00:00:00.000+08:00",
-  "nextAction": "Proceed to Phase 12D - Photo-to-Template Operator Workflow & Draft Preview QA.",
+  "currentPhaseName": "Photo-to-Template Operator Workflow & Draft Preview QA",
+  "lastCompletedBusinessPhase": "12D",
+  "lastUpdated": "2026-06-28T11:10:00.105Z",
+  "nextAction": "Proceed to Phase 12E - Photo-to-Template End-to-End Demo Script & Acceptance Trial.",
   "taskStatus": "completed",
   "realWriteApprovalBoundaryDecision": {
     "nextPhase": "Phase 10V - Actual Write Authorization Request",
@@ -198,7 +200,8 @@
     "npm run project:context",
     "node scripts/project-status.mjs --json",
     "node scripts/context-pack.mjs --json",
-    "npm run test -- tests/photo-to-template-draft-integration.test.ts tests/photo-to-template-human-review-editing.test.ts tests/photo-to-template-draft-integration-panel.test.tsx tests/photo-to-template-human-review-editing-panel.test.tsx tests/phase-12C-documentation-recovery.test.ts tests/makeup-semantic-extraction.test.ts tests/makeup-semantic-extraction-panel.test.tsx tests/photo-to-template-reality-check.test.ts tests/photo-to-template-reality-validation.test.ts tests/user-app-demo-forbidden-terms.test.tsx tests/template-studio-tab-boundary.test.tsx tests/vision-readiness-score-label.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
+    "npm run test -- tests/photo-to-template-draft-integration.test.ts tests/photo-to-template-human-review-editing.test.ts tests/photo-to-template-draft-integration-panel.test.tsx tests/photo-to-template-human-review-editing-panel.test.tsx tests/phase-12C-documentation-recovery.test.ts tests/makeup-semantic-extraction.test.ts tests/makeup-semantic-extraction-panel.test.tsx tests/photo-to-template-reality-check.test.ts tests/photo-to-template-reality-validation.test.ts tests/user-app-demo-forbidden-terms.test.tsx tests/template-studio-tab-boundary.test.tsx tests/vision-readiness-score-label.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
+    "npm run test -- tests/photo-to-template-operator-workflow.test.ts tests/photo-to-template-draft-preview-qa.test.ts tests/photo-to-template-operator-workflow-panel.test.tsx tests/photo-to-template-draft-preview-qa-panel.test.tsx tests/phase-12D-documentation-recovery.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts tests/mediapipe-real-assets-check.test.ts"
   ],
   "userAppGuidedStepExperiencePolish": {
     "registryChainStatus": "registry chain paused after Phase 10U",
@@ -241,7 +244,7 @@
     "adminBoundary": "administrator trial, Template Studio, and registry safety tooling remain explicitly separated from the ordinary user path",
     "nextPhase": "Phase 11D - User App Demo Readiness & Operator QA"
   },
-  "currentTask": "Phase 12C - Photo-to-Template Draft Integration & Human Review Editing",
+  "currentTask": "Phase 12D - Photo-to-Template Operator Workflow & Draft Preview QA",
   "phase11CScopedTests": "passed",
   "scopedTestCommand": "npm run test -- tests/makeup-semantic-extraction.test.ts tests/makeup-semantic-lip-baseline.test.ts tests/makeup-semantic-blush-baseline.test.ts tests/makeup-semantic-eye-baseline.test.ts tests/makeup-semantic-extraction-panel.test.tsx tests/phase-12B-documentation-recovery.test.ts tests/photo-to-template-reality-check.test.ts tests/photo-to-template-reality-validation.test.ts tests/photo-to-template-reality-check-panel.test.tsx tests/user-app-demo-forbidden-terms.test.tsx tests/template-studio-tab-boundary.test.tsx tests/vision-readiness-score-label.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
   "testFiles": 12,
@@ -302,10 +305,10 @@
     "nextPhase": "Phase 12B - Makeup Semantic Extraction Baseline"
   },
   "phase12AScopedTests": "passed",
-  "taskId": "phase-12c-photo-to-template-draft-integration-human-review-editing",
-  "title": "Phase 12C - Photo-to-Template Draft Integration & Human Review Editing",
-  "nextRecommendedTask": "Phase 12D - Photo-to-Template Operator Workflow & Draft Preview QA",
-  "nextTask": "Phase 12D - Photo-to-Template Operator Workflow & Draft Preview QA",
+  "taskId": "phase-12d-photo-to-template-operator-workflow-draft-preview-qa",
+  "title": "Phase 12D - Photo-to-Template Operator Workflow & Draft Preview QA",
+  "nextRecommendedTask": "Phase 12E - Photo-to-Template End-to-End Demo Script & Acceptance Trial",
+  "nextTask": "Phase 12E - Photo-to-Template End-to-End Demo Script & Acceptance Trial",
   "filesToReadFirst": [
     "AGENTS.md",
     "START_HERE.md",
@@ -328,7 +331,10 @@
     "project-state/guardrails.json",
     "docs/product/photo-to-template-draft-integration.md",
     "docs/product/photo-to-template-human-review-editing.md",
-    "docs/phases/phase-12C.md"
+    "docs/phases/phase-12C.md",
+    "docs/product/photo-to-template-operator-workflow.md",
+    "docs/product/photo-to-template-draft-preview-qa.md",
+    "docs/phases/phase-12D.md"
   ],
   "nextRequiredReadFiles": [
     "AGENTS.md",
@@ -352,7 +358,10 @@
     "project-state/guardrails.json",
     "docs/product/photo-to-template-draft-integration.md",
     "docs/product/photo-to-template-human-review-editing.md",
-    "docs/phases/phase-12C.md"
+    "docs/phases/phase-12C.md",
+    "docs/product/photo-to-template-operator-workflow.md",
+    "docs/product/photo-to-template-draft-preview-qa.md",
+    "docs/phases/phase-12D.md"
   ],
   "requiredReadFiles": [
     "AGENTS.md",
@@ -390,7 +399,18 @@
     "PhotoToTemplateDraftIntegrationPanel",
     "PhotoToTemplateHumanReviewEditingPanel",
     "PhotoToTemplateSemanticCandidateBindingMatrix",
-    "SemanticCandidateIntegratedRealitySource"
+    "SemanticCandidateIntegratedRealitySource",
+    "PhotoToTemplateOperatorWorkflowReport",
+    "PhotoToTemplateOperatorWorkflowStep",
+    "PhotoToTemplateOperatorWorkflowHandoff",
+    "PhotoToTemplateDraftPreviewQaReport",
+    "PhotoToTemplateDraftPreviewQaCheck",
+    "PhotoToTemplateDraftPreviewQaIssue",
+    "PhotoToTemplateDraftPreviewQaUserVisibleField",
+    "PhotoToTemplateOperatorWorkflowPanel",
+    "PhotoToTemplateDraftPreviewQaPanel",
+    "PhotoToTemplateDraftPreviewQaBoundary",
+    "PhotoToTemplatePhase12EDemoScriptHandoff"
   ],
   "mainModules": [
     "src/vision/makeupSemanticExtraction.ts",
@@ -399,12 +419,18 @@
     "src/template-engine/photoToTemplateDraftIntegration.ts",
     "src/template-engine/photoToTemplateHumanReviewEditing.ts",
     "src/components/template-studio/PhotoToTemplateDraftIntegrationPanel.tsx",
-    "src/components/template-studio/PhotoToTemplateHumanReviewEditingPanel.tsx"
+    "src/components/template-studio/PhotoToTemplateHumanReviewEditingPanel.tsx",
+    "src/template-engine/photoToTemplateOperatorWorkflow.ts",
+    "src/template-engine/photoToTemplateDraftPreviewQa.ts",
+    "src/components/template-studio/PhotoToTemplateOperatorWorkflowPanel.tsx",
+    "src/components/template-studio/PhotoToTemplateDraftPreviewQaPanel.tsx"
   ],
   "knownLimitations": [
     "Phase 12B Makeup Semantic Extraction Baseline is candidate-only; it is not final recognition, not AI-confirmed extraction, not product shade matching, not medical or skin diagnosis, and not fully automatic high-quality makeup extraction.",
     "Phase 12B semantic candidates require human review and cannot mutate UserAppTemplatePackage, write registry state, publish, create a production writer, replace the current User App Shell package, upload real photos, store real user data, enter training datasets, or resume Phase 10V.",
-    "Phase 12C semantic candidate draft integration and human review editing are draft-only and operator-only; accepted candidates are not final recognition, registry readiness, publication, production writer output, UserAppTemplatePackage mutation, or User App Shell package replacement."
+    "Phase 12C semantic candidate draft integration and human review editing are draft-only and operator-only; accepted candidates are not final recognition, registry readiness, publication, production writer output, UserAppTemplatePackage mutation, or User App Shell package replacement.",
+    "Phase 12D Photo-to-Template Operator Workflow & Draft Preview QA is operator-only and draft-preview-only; it is not final recognition, AI-confirmed extraction, fully automatic extraction, registry readiness, publish readiness, production readiness, production writer output, UserAppTemplatePackage mutation, or User App Shell package replacement.",
+    "Phase 12D Draft Preview QA must keep sourceType, confidenceBand, evidence, limitations, reviewerDecision, reviewer notes, humanReviewRequired, and notFinal hidden from the ordinary User App path."
   ],
   "handoffNotes": [
     "Phase 12B completed Makeup Semantic Extraction Baseline.",
@@ -419,15 +445,16 @@
   "risks": [
     "Do not treat semantic candidates as final recognition or AI-confirmed extraction.",
     "Do not claim product shade matching, medical or skin diagnosis, or fully automatic high-quality makeup extraction.",
-    "Do not resume Phase 10V or execute registry writes."
+    "Do not resume Phase 10V or execute registry writes.",
+    "Operator workflow can be mistaken for production readiness if draft-preview-only boundary is removed."
   ],
   "phase12BScopedTests": "pending final run",
   "latestValidation": {
-    "phase": "12B",
+    "phase": "12D",
     "mediapipeCheck": "passed",
     "typecheck": "passed",
     "test": "passed",
-    "scopedTests": "passed (15 files / 48 tests)",
+    "scopedTests": "passed (10 files / 30 tests)",
     "build": "passed",
     "projectStatus": "passed",
     "projectStatusJson": "passed",
@@ -435,15 +462,17 @@
     "contextPackJson": "passed",
     "browserVerification": "passed",
     "browserValidation": "passed",
-    "testFiles": 15,
-    "tests": 48,
-    "phase12BScopedTests": "passed",
+    "testFiles": 10,
+    "tests": 30,
+    "phase12DScopedTests": "passed",
     "browserValidationNotes": [
-      "User App ordinary path does not expose Makeup Semantic Extraction Baseline or source labels.",
-      "Template Studio workbench shows Makeup Semantic Extraction Baseline with candidate-only and human-review copy.",
-      "Vision Analysis tab does not show the 12B semantic extraction panel."
+      "User App ordinary path loads with local-only/no-upload/no-training copy and does not expose Phase 12D operator workflow, Draft Preview QA, sourceType, confidenceBand, evidence, limitations, reviewerDecision, humanReviewRequired, or notFinal terms.",
+      "Vision Analysis tab shows image/mask, FaceMesh, MediaPipe recovery guidance, and vision readiness copy while keeping Phase 12D Operator Workflow and Draft Preview QA out of the tab.",
+      "Template Workbench tab shows Photo-to-Template Operator Workflow and Photo-to-Template Draft Preview QA panels with workflow stepper/checklist, user-visible draft fields QA, next action, blocked reasons, and no publish/registry/production writer handoff.",
+      "Local MediaPipe assets are present, and the Vision Analysis page did not show mock fallback copy in the ready-assets state.",
+      "Browser plugin emitted external Statsig timeout noise while connecting, but DOM and screenshot validation completed successfully against the local dev server."
     ],
-    "summary": "Phase 12B validation passed: npm run mediapipe:check, scoped tests (15 files / 48 tests), npm run typecheck, npm run build, npm run project:status, npm run project:context, JSON status/context commands, and browser validation."
+    "summary": "Phase 12D validation passed: npm run mediapipe:check, scoped tests (10 files / 30 tests), npm run typecheck, npm run build, npm run project:status, npm run project:context, JSON status/context commands, and browser validation."
   },
   "lastKnownValidation": {
     "phase": "12B",
@@ -490,5 +519,6 @@
       "Vision Analysis tab does not show the 12B semantic extraction panel."
     ],
     "summary": "Phase 12B validation passed: npm run mediapipe:check, scoped tests (15 files / 48 tests), npm run typecheck, npm run build, npm run project:status, npm run project:context, JSON status/context commands, and browser validation."
-  }
+  },
+  "fromPhase": "12D"
 }

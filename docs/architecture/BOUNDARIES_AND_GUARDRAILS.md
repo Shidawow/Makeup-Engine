@@ -776,3 +776,31 @@ Phase 12C ordinary-user paths must not expose semantic candidate source type,
 confidence band, evidence, limitations, reviewer notes, draft integration,
 human review editing, Template Studio, registry/write/publish/simulator/
 production writer, or automatic extraction operator terminology by default.
+
+## Phase 12D Photo-to-Template Operator Workflow & Draft Preview QA
+
+Phase 12D is an operator-only workflow and draft preview QA layer. It may show
+workflow step status, next action, blocked reasons, allowed handoff, forbidden
+destinations, and user-visible draft preview QA checks, but every output remains
+draft-preview-only and human-review-required.
+
+Phase 12D must block internal source type, confidence band, evidence,
+limitations, reviewer decision, reviewer note, `humanReviewRequired`, and
+`notFinal` from ordinary user-facing preview copy.
+
+Phase 12D must block final recognition claims, AI-confirmed claims, fully
+automatic high-quality extraction claims, product shade hard claims, medical or
+skin diagnosis claims, registry write claims, publish claims, production writer
+claims, User App Shell replacement claims, and `UserAppTemplatePackage`
+mutation markers.
+
+Phase 12D must not resume Phase 10V, execute real registry writes, mutate
+registry state, publish, create a production writer, replace the current User
+App Shell package, add backend/database/login/payment/camera/AR/OpenAI or
+external API scope, upload real photos, store real user data, or train models.
+
+Phase 12D ordinary-user paths must not expose Photo-to-Template Operator
+Workflow, Draft Preview QA, sourceType, confidenceBand, evidence, limitations,
+reviewerDecision, reviewer notes, Template Studio, registry/write/publish/
+simulator/production writer, or automatic extraction operator terminology by
+default.

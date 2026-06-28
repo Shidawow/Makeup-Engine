@@ -12,10 +12,10 @@ It produces templates, template evidence, correction records, review state, loca
 
 ## Current Phase
 
-- Current business phase: `Phase 12C completed`
-- Last completed phase: `Phase 12C`
-- Last completed phase name: `Phase 12C - Photo-to-Template Draft Integration & Human Review Editing`
-- Next recommended phase: `Phase 12D - Photo-to-Template Operator Workflow & Draft Preview QA`
+- Current business phase: `Phase 12D completed`
+- Last completed phase: `Phase 12D`
+- Last completed phase name: `Phase 12D - Photo-to-Template Operator Workflow & Draft Preview QA`
+- Next recommended phase: `Phase 12E - Photo-to-Template End-to-End Demo Script & Acceptance Trial`
 - Strategic focus: registry chain paused after Phase 10U; active work is photo-to-template semantic evidence and human-reviewed draft integration.
 
 Historical recovery marker retained for Phase 10U tests: `Phase 10U completed`.
@@ -110,6 +110,7 @@ Real Photo
 -> Photo-to-Template Draft Reality Check
 -> Makeup Semantic Extraction Baseline
 -> Photo-to-Template Draft Integration & Human Review Editing
+-> Photo-to-Template Operator Workflow & Draft Preview QA
 -> Phase 8 Roadmap / V1 Non-Goals
 -> User App Consumption Manifest
 -> Dataset Review
@@ -663,6 +664,28 @@ App Shell package replacement. The registry chain remains paused after Phase
 10U, and Phase 10V is intentionally not the active next phase.
 
 Next recommended phase: Phase 12D - Photo-to-Template Operator Workflow & Draft Preview QA.
+
+## Phase 12D Current Capability
+
+Phase 12D completed Photo-to-Template Operator Workflow & Draft Preview QA. The
+current chain can show an operator-only workflow from Vision / FaceMesh through
+Reality Check, Semantic Extraction, Draft Integration, Human Review Editing,
+Draft QA, User App Draft Preview QA, and handoff. Each workflow step has
+status, required inputs, produced outputs, issues, warnings, next action, and
+allowed / forbidden handoff destinations.
+
+Draft Preview QA checks user-visible title, summary, scenario, difficulty,
+estimated time, tool checklist, step guidance, beginner tips, common mistakes,
+correction tips, region guidance, and local-only privacy copy. It blocks
+sourceType, confidenceBand, evidence, limitations, reviewerDecision, reviewer
+notes, `humanReviewRequired`, `notFinal`, registry/write/publish terminology,
+production writer wording, final claims, AI-confirmed claims, fully automatic
+extraction claims, medical claims, and product shade hard claims from ordinary
+user-facing preview copy.
+
+The registry chain remains paused after Phase 10U, and Phase 10V is
+intentionally not the active next phase. Next recommended phase: Phase 12E -
+Photo-to-Template End-to-End Demo Script & Acceptance Trial.
 
 ## Phase 10T Current Capability
 

@@ -1029,3 +1029,31 @@ Phase 12C does not resume Phase 10V, execute registry writes, mutate registry
 state, publish, create production writers, replace the current User App Shell
 package, mutate `UserAppTemplatePackage`, add backend/API/camera/AR scope,
 upload real photos, store real user data, or train models.
+
+## Phase 12D Photo-to-Template Operator Workflow & Draft Preview QA
+
+Phase 12D adds two operator-only Template Workbench layers after Phase 12C.
+
+`src/template-engine/photoToTemplateOperatorWorkflow.ts` creates
+`PhotoToTemplateOperatorWorkflowReport` objects that order Vision / FaceMesh,
+Reality Check, Semantic Extraction, Draft Integration, Human Review Editing,
+Draft QA, User App Draft Preview QA, and handoff into a single checklist with
+status, required inputs, produced outputs, issues, warnings, next action, and
+allowed / forbidden destinations.
+
+`src/template-engine/photoToTemplateDraftPreviewQa.ts` creates
+`PhotoToTemplateDraftPreviewQaReport` objects that verify user-visible draft
+preview fields and block internal source metadata, confidence bands, evidence,
+limitations, reviewer notes, registry / publish / production writer wording,
+AI-confirmed claims, fully automatic extraction claims, medical claims,
+product shade hard claims, missing Draft QA, and blocked Draft QA.
+
+`src/components/template-studio/PhotoToTemplateOperatorWorkflowPanel.tsx` and
+`src/components/template-studio/PhotoToTemplateDraftPreviewQaPanel.tsx` render
+these reports in Template Workbench only. They do not appear in Vision Analysis
+and do not appear in the ordinary User App path.
+
+Phase 12D does not resume Phase 10V, execute registry writes, mutate registry
+state, publish, create production writers, replace the current User App Shell
+package, mutate `UserAppTemplatePackage`, add backend/API/camera/AR scope,
+upload real photos, store real user data, or train models.

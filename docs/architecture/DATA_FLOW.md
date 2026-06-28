@@ -695,7 +695,9 @@ does not train models.
 -> `PhotoToTemplateHumanReviewEditingSession`
 -> `TemplateDraftQaReport`
 -> `PhotoToTemplateRealityCheckReport`
--> next recommendation for Phase 12D operator workflow and draft preview QA.
+-> `PhotoToTemplateOperatorWorkflowReport`
+-> `PhotoToTemplateDraftPreviewQaReport`
+-> next recommendation for Phase 12E end-to-end demo script and acceptance trial.
 
 The 12C flow is operator-only, local, deterministic, and draft-only. It binds
 semantic candidates into editable draft fields while preserving source type,
@@ -707,3 +709,30 @@ Accepting a candidate only enters draft QA. It does not make the field final,
 does not publish, does not write or mutate registry state, does not generate or
 mutate `UserAppTemplatePackage`, does not replace the current User App Shell
 package, does not create a production writer, and does not train models.
+
+## Phase 12D Photo-to-Template Operator Workflow & Draft Preview QA Flow
+
+`VisionAnalysis`
+-> `FaceMeshRegionQaReport`
+-> `PhotoToTemplateRealityCheckReport`
+-> `MakeupSemanticExtractionReport`
+-> `PhotoToTemplateDraftIntegrationReport`
+-> `PhotoToTemplateHumanReviewEditingSession`
+-> `TemplateDraftQaReport`
+-> `PhotoToTemplateDraftPreviewQaReport`
+-> `PhotoToTemplateOperatorWorkflowReport`
+-> next recommendation for Phase 12E Photo-to-Template End-to-End Demo Script
+and Acceptance Trial.
+
+The 12D flow is operator-only, local, deterministic, and draft-preview-only. It
+shows workflow step status, next action, blocked reasons, allowed handoff, and
+forbidden destinations while checking that user-visible draft preview fields do
+not leak source type, confidence band, evidence, limitations, reviewer
+decision, reviewer note, `humanReviewRequired`, `notFinal`, registry terms,
+publish terms, production writer terms, final claims, AI-confirmed claims, or
+fully automatic extraction claims.
+
+Draft Preview QA does not publish, does not write or mutate registry state,
+does not generate or mutate `UserAppTemplatePackage`, does not replace the
+current User App Shell package, does not create a production writer, and does
+not train models.

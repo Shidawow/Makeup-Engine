@@ -65,6 +65,8 @@ describe('Template Studio tab boundary', () => {
     expect(html).not.toContain('real write approval boundary');
     expect(html).not.toContain('Photo-to-Template Draft Integration');
     expect(html).not.toContain('Photo-to-Template Human Review Editing');
+    expect(html).not.toContain('Photo-to-Template Operator Workflow');
+    expect(html).not.toContain('Photo-to-Template Draft Preview QA');
     expect(html).not.toContain('semantic candidate → draft field binding matrix');
   });
 
@@ -260,6 +262,13 @@ describe('Template Studio tab boundary', () => {
     expect(html).toContain('本地人工编辑草稿');
     expect(html).toContain('接受候选也只是进入草稿');
     expect(html).toContain('不能发布 / 不能写 registry');
+    expect(html).toContain('Photo-to-Template Operator Workflow');
+    expect(html).toContain('Workflow stepper / checklist');
+    expect(html).toContain('当前是 operator workflow，不是用户 App 页面');
+    expect(html).toContain('Photo-to-Template Draft Preview QA');
+    expect(html).toContain('User-visible draft fields QA');
+    expect(html).toContain('当前是 draft preview，不是 publish');
+    expect(html).toContain('不会生成真实 UserAppTemplatePackage');
     expect(html).not.toContain('AI 已确认');
     expect(html).not.toContain('已生成正式用户模板包');
     expect(html).not.toContain('已生成正式 UserAppTemplatePackage');
@@ -342,8 +351,19 @@ describe('Template Studio tab boundary', () => {
     expect(userPath).not.toContain('production writer');
     expect(userPath).not.toContain('Photo-to-Template Draft Integration');
     expect(userPath).not.toContain('Photo-to-Template Human Review Editing');
+    expect(userPath).not.toContain('Photo-to-Template Operator Workflow');
+    expect(userPath).not.toContain('Photo-to-Template Draft Preview QA');
+    expect(userPath).not.toContain('Operator Workflow');
+    expect(userPath).not.toContain('Draft Preview QA');
     expect(userPath).not.toContain('semantic candidate');
     expect(userPath).not.toContain('confidence band');
     expect(userPath).not.toContain('reviewer note');
+    expect(userPath).not.toContain('sourceType');
+    expect(userPath).not.toContain('confidenceBand');
+    expect(userPath).not.toContain('evidence');
+    expect(userPath).not.toContain('limitations');
+    expect(userPath).not.toContain('reviewerDecision');
+    expect(userPath).not.toContain('humanReviewRequired');
+    expect(userPath).not.toContain('notFinal');
   });
 });

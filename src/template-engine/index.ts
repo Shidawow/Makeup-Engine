@@ -76,6 +76,8 @@ export * from './photoToTemplateRealityValidation';
 export * from './photoToTemplateRealityHandoff';
 export * from './photoToTemplateDraftIntegration';
 export * from './photoToTemplateHumanReviewEditing';
+export * from './photoToTemplateDraftPreviewQa';
+export * from './photoToTemplateOperatorWorkflow';
 export * from './template-builder';
 export * from './template-builder/template-builder';
 export * from './convergence';

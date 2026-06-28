@@ -2,20 +2,21 @@
 
 ## Current Phase
 
-Phase 12C: Photo-to-Template Draft Integration & Human Review Editing is complete.
+Phase 12D: Photo-to-Template Operator Workflow & Draft Preview QA is complete.
 
-Last completed business phase: Phase 12C.
+Last completed business phase: Phase 12D.
 
-Next recommended phase: Phase 12D, Photo-to-Template Operator Workflow & Draft Preview QA.
+Next recommended phase: Phase 12E, Photo-to-Template End-to-End Demo Script & Acceptance Trial.
 
-Phase 12C keeps the post-10U registry write chain paused and safely connects
-Phase 12B semantic candidates into editable draft template fields. Every
-binding preserves source type, confidence band, evidence, limitations,
-human-review-required trace, not-final trace, original candidate value,
-editable draft value, reviewer decision, and reviewer note. Accepting a
-candidate only enters draft QA; it is not final recognition, not AI-confirmed,
-not a product shade claim, not a medical or skin diagnosis, not publication, and
-not registry readiness.
+Phase 12D keeps the post-10U registry write chain paused and adds an
+operator-only workflow plus Draft Preview QA layer for the photo-to-template
+chain. The workflow connects Vision / FaceMesh, 12A Reality Check, 12B semantic
+candidates, 12C draft integration, human review editing, Draft QA, User App
+Draft Preview QA, and handoff. Draft Preview QA checks user-visible copy while
+blocking internal source metadata, confidence bands, evidence, limitations,
+reviewer notes, registry / publish / production writer wording, final claims,
+AI-confirmed claims, fully automatic extraction claims, medical claims, and
+product shade hard claims.
 
 Registry chain status: paused after Phase 10U. Phase 10V actual write
 authorization is not the active next phase.
@@ -185,6 +186,18 @@ authorization is not the active next phase.
 - Update Photo-to-Template Reality Check to recognize
   `semantic_candidate_integrated` as a draft-source label that still requires
   human review and is not real photo final extraction.
+- Render operator-only Phase 12D Photo-to-Template Operator Workflow and Draft
+  Preview QA panels in Template Workbench. The workflow shows Vision / FaceMesh,
+  Reality Check, Semantic Extraction, Draft Integration, Human Review Editing,
+  Draft QA, User App Draft Preview QA, and handoff as ordered steps with
+  ready/warning/blocked status, required inputs, produced outputs, next
+  actions, and allowed/forbidden handoff destinations.
+- Run Draft Preview QA checks over user-visible title, summary, scenario,
+  difficulty, estimated time, tools, steps, beginner tips, common mistakes,
+  correction tips, region guidance, and local-only privacy notice while hiding
+  sourceType, confidenceBand, evidence, limitations, reviewerDecision,
+  reviewer notes, humanReviewRequired, and notFinal from the ordinary user
+  path.
 - Render compact Template Studio workflow, candidate package, candidate-to-app,
   user app package draft preview, official draft gate, and official draft
   builder, draft publish gate, registry preparation, and registry write gate
@@ -215,6 +228,11 @@ authorization is not the active next phase.
   review editing as final makeup recognition, AI-confirmed extraction, product
   shade matching, medical or skin diagnosis, fully automatic extraction,
   registry readiness, publish readiness, production readiness, production
+  writer creation, `UserAppTemplatePackage` mutation, or User App Shell package
+  replacement.
+- It cannot treat Phase 12D operator workflow or Draft Preview QA as final
+  makeup recognition, AI-confirmed extraction, fully automatic extraction,
+  publication readiness, registry readiness, production readiness, production
   writer creation, `UserAppTemplatePackage` mutation, or User App Shell package
   replacement.
 - It cannot publish drafts automatically.
@@ -336,7 +354,7 @@ authorization is not the active next phase.
 
 ## Recent Validation
 
-Phase 12C validation must include:
+Phase 12D validation must include:
 
 ```bash
 npm run mediapipe:check
@@ -352,8 +370,8 @@ The latest completed validation is recorded in `project-state/test-status.json`.
 
 ## Next Phase Recommendation
 
-Proceed to Phase 12D: Photo-to-Template Operator Workflow & Draft Preview QA.
+Proceed to Phase 12E: Photo-to-Template End-to-End Demo Script & Acceptance Trial.
 
-Phase 12D should review and polish the operator workflow from Vision Analysis
-through semantic extraction, draft integration, human review editing, and draft
-preview QA while keeping the registry write chain paused after Phase 10U.
+Phase 12E should script and verify the full operator-led photo-to-template demo
+from Vision Analysis through Draft Preview QA while keeping the registry write
+chain paused after Phase 10U.

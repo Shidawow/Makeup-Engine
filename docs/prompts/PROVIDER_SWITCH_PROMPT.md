@@ -6,11 +6,11 @@ Default to compact context. Do not copy full historical chat transcripts. Do not
 
 ## Current State
 
-- `lastCompletedPhase: 12C`
-- `nextRecommendedPhase: 12D`
-- `nextRecommendedPhaseName: Photo-to-Template Operator Workflow & Draft Preview QA`
+- `lastCompletedPhase: 12D`
+- `nextRecommendedPhase: 12E`
+- `nextRecommendedPhaseName: Photo-to-Template End-to-End Demo Script & Acceptance Trial`
 - Project role: Makeup template production system with a local contract-driven user app shell prototype, not a production user app.
-- Current capability: Phase 12C - Photo-to-Template Draft Integration & Human Review Editing keeps the registry chain paused after Phase 10U and binds Phase 12B semantic candidates into editable draft fields with source type, confidence band, evidence, limitations, human review requirement, not-final trace, original candidate value, editable draft value, reviewer decision, and reviewer note preserved. Accepted candidates enter draft QA only; the system cannot claim final recognition, AI-confirmed extraction, product shade matching, medical or skin diagnosis, publication, registry readiness, or fully automatic high-quality makeup extraction.
+- Current capability: Phase 12D - Photo-to-Template Operator Workflow & Draft Preview QA keeps the registry chain paused after Phase 10U and shows an operator-only workflow from Vision / FaceMesh through Reality Check, Semantic Extraction, Draft Integration, Human Review Editing, Draft QA, User App Draft Preview QA, and handoff. Draft Preview QA checks user-visible draft preview copy while blocking sourceType, confidenceBand, evidence, limitations, reviewer notes, registry/write/publish terms, production writer wording, final claims, AI-confirmed claims, fully automatic extraction claims, medical claims, and product shade hard claims from ordinary user-facing preview copy.
 
 Historical handoff marker retained for Phase 10U recovery tests: `lastCompletedPhase: 10U`, `nextRecommendedPhase: 10V`.
 Historical handoff marker retained for Phase 10T recovery tests: `lastCompletedPhase: 10T`, `nextRecommendedPhase: 10U`.
@@ -64,11 +64,11 @@ Historical handoff marker retained for Phase 9J recovery tests: `lastCompletedPh
 You are continuing Makeup Engine on native GPT / Codex Desktop.
 
 Current state:
-- lastCompletedPhase: 12C
-- nextRecommendedPhase: 12D
-- nextRecommendedPhaseName: Photo-to-Template Operator Workflow & Draft Preview QA
+- lastCompletedPhase: 12D
+- nextRecommendedPhase: 12E
+- nextRecommendedPhaseName: Photo-to-Template End-to-End Demo Script & Acceptance Trial
 - project role: Makeup template production system with a local contract-driven user app shell prototype, not a production user app
-- current capability: React Web / PWA MVP first is selected; Phases 8B through 9J and 10A through 10U are complete; Phase 11A pauses the registry chain after Phase 10U and resets the active user path to Home, Template Selection, Template Detail, Preparation, Step-by-step Guidance, and Completion. Phase 11B polishes preparation, step guidance, mobile actions, and completion summary. Phase 11C polishes Chinese template content, visual guidance, region guidance, intensity reminders, technique breakdowns, and completion-region summaries. Phase 11D packages the shell for local demo and operator QA. Phase 12A audits photo-to-template reality with field source labels. Phase 12B adds candidate-only Makeup Semantic Extraction Baseline with explicit source labels and human-review boundaries. Phase 12C binds those semantic candidates into editable draft fields and local human review editing while preserving all source/confidence/evidence/limitations traces. The current capability remains semi-automatic draft generation with human review, not fully automatic high-quality makeup extraction. The previous registry safety chain remains preserved for administrator review but Phase 10V is intentionally not the active next phase.
+- current capability: React Web / PWA MVP first is selected; Phases 8B through 9J and 10A through 10U are complete; Phase 11A pauses the registry chain after Phase 10U and resets the active user path to Home, Template Selection, Template Detail, Preparation, Step-by-step Guidance, and Completion. Phase 11B polishes preparation, step guidance, mobile actions, and completion summary. Phase 11C polishes Chinese template content, visual guidance, region guidance, intensity reminders, technique breakdowns, and completion-region summaries. Phase 11D packages the shell for local demo and operator QA. Phase 12A audits photo-to-template reality with field source labels. Phase 12B adds candidate-only Makeup Semantic Extraction Baseline with explicit source labels and human-review boundaries. Phase 12C binds those semantic candidates into editable draft fields and local human review editing while preserving all source/confidence/evidence/limitations traces. Phase 12D adds operator workflow and Draft Preview QA across the photo-to-template chain while keeping ordinary user paths free of internal traces. The current capability remains semi-automatic draft generation with human review, not fully automatic high-quality makeup extraction. The previous registry safety chain remains preserved for administrator review but Phase 10V is intentionally not the active next phase.
 
 Compact context:
 - Use repository documents as source of truth; do not copy full historical chat.
@@ -659,5 +659,21 @@ Photo-to-Template Operator Workflow & Draft Preview QA
 Photo-to-Template Draft Integration & Human Review Editing
 semantic candidate binding matrix
 source type / confidence band / evidence / limitations preserved
+registry chain paused after Phase 10U
+Phase 10V is intentionally not the active next phase
+
+## Phase 12D Handoff Note
+
+Phase 12D completed Photo-to-Template Operator Workflow & Draft Preview QA. The
+current chain can show workflow step status, next action, blocked reasons,
+allowed handoff, forbidden destinations, and user-visible Draft Preview QA in
+Template Workbench only.
+
+Current handoff:
+lastCompletedPhase: 12D
+nextRecommendedPhase: 12E
+Photo-to-Template End-to-End Demo Script & Acceptance Trial
+Photo-to-Template Operator Workflow & Draft Preview QA
+sourceType / confidenceBand / evidence / limitations remain hidden from the ordinary user path
 registry chain paused after Phase 10U
 Phase 10V is intentionally not the active next phase

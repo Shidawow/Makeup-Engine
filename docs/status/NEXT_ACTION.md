@@ -2,37 +2,39 @@
 
 ## What To Do Next
 
-Proceed to Phase 12D: Photo-to-Template Operator Workflow & Draft Preview QA.
+Proceed to Phase 12E: Photo-to-Template End-to-End Demo Script & Acceptance
+Trial.
 
 ## Why
 
-Phase 12C establishes a safe bridge from semantic candidates to editable draft
-fields:
+Phase 12D turns the current photo-to-template chain into a clearer
+operator-led workflow:
 
 ```text
-local photo analysis
--> FaceMesh / region QA
--> MakeupSemanticExtractionReport
--> semantic candidate to draft field binding
--> local human review editing
--> draft QA readiness
+Vision Analysis / FaceMesh
+-> Reality Check
+-> Makeup Semantic Extraction
+-> Draft Integration
+-> Human Review Editing
+-> Draft QA
+-> User App Draft Preview QA
+-> Phase 12E demo script handoff
 ```
 
-The system can now show an operator how candidate evidence may shape title,
-summary, style, scenario, difficulty, time, tools, steps, tips, mistakes,
-correction hints, region guidance, and user app preview notes. Every field
-remains candidate-only, not final, and human-review-required.
+The system can now show where a photo-to-template draft is ready, warning,
+blocked, or still needs review before any demo acceptance trial. Draft Preview
+QA also checks that ordinary user-facing preview copy does not leak source
+metadata, confidence bands, evidence, reviewer notes, registry terms, publish
+terms, production writer terms, or final/AI/fully-automatic claims.
 
-## Recommended 12D Scope
+## Recommended 12E Scope
 
-- Review the operator workflow from Vision Analysis to semantic extraction,
-  draft integration, human review editing, and draft QA.
-- Polish the draft preview QA surface so operators can see what is ready,
-  warning, blocked, or still needs review.
-- Confirm no duplicate panels, no unclear next step, and no internal terms in
-  the ordinary User App path.
-- Keep Reality Check source labels honest after `semantic_candidate_integrated`
-  fields enter the draft chain.
+- Create an end-to-end operator demo script for the photo-to-template flow.
+- Define acceptance trial steps for Vision Analysis, semantic extraction,
+  draft integration, human review editing, Draft QA, and Draft Preview QA.
+- Define pass/fail criteria for demo acceptance.
+- Keep all output local, operator-only, draft-only, and human-reviewed.
+- Keep the registry chain paused after Phase 10U.
 
 ## What Not To Do
 
@@ -42,9 +44,9 @@ remains candidate-only, not final, and human-review-required.
 - Do not create or execute a production writer.
 - Do not publish to the user app.
 - Do not replace the current User App Shell package.
-- Do not generate or mutate `UserAppTemplatePackage` from 12C output.
-- Do not treat semantic candidates as final recognition or AI-confirmed
-  analysis.
+- Do not generate or mutate a formal `UserAppTemplatePackage` from 12D output.
+- Do not treat semantic candidates, draft fields, or preview QA as final
+  recognition or AI-confirmed analysis.
 - Do not claim fully automatic high-quality makeup extraction.
 - Do not add backend, database, login, payment, analytics, camera capture, AR,
   OpenAI/external API calls, native app implementation, React Native, Flutter,
@@ -71,15 +73,17 @@ Read these files first:
 11. `docs/product/makeup-semantic-field-evidence.md`
 12. `docs/product/photo-to-template-draft-integration.md`
 13. `docs/product/photo-to-template-human-review-editing.md`
-14. `docs/product/vision-readiness-score.md`
-15. `docs/phases/phase-12A.md`
-16. `docs/phases/phase-12B.md`
-17. `docs/phases/phase-12C.md`
-18. `project-state/project-state.snapshot.json`
-19. `project-state/latest-handoff.json`
-20. `project-state/provider-handoff.json`
-21. `project-state/active-task.json`
-22. `project-state/guardrails.json`
+14. `docs/product/photo-to-template-operator-workflow.md`
+15. `docs/product/photo-to-template-draft-preview-qa.md`
+16. `docs/phases/phase-12A.md`
+17. `docs/phases/phase-12B.md`
+18. `docs/phases/phase-12C.md`
+19. `docs/phases/phase-12D.md`
+20. `project-state/project-state.snapshot.json`
+21. `project-state/latest-handoff.json`
+22. `project-state/provider-handoff.json`
+23. `project-state/active-task.json`
+24. `project-state/guardrails.json`
 
 Then run:
 

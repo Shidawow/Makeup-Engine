@@ -3,36 +3,37 @@ import { describe, expect, it } from 'vitest';
 
 const read = (file: string) => readFile(file, 'utf8');
 
-describe('Phase 12C documentation recovery', () => {
-  it('documents draft integration and human review editing boundaries', async () => {
-    const [integration, editing, phase] = await Promise.all([
-      read('docs/product/photo-to-template-draft-integration.md'),
-      read('docs/product/photo-to-template-human-review-editing.md'),
-      read('docs/phases/phase-12C.md'),
+describe('Phase 12D documentation recovery', () => {
+  it('documents operator workflow and draft preview QA boundaries', async () => {
+    const [workflow, previewQa, phase] = await Promise.all([
+      read('docs/product/photo-to-template-operator-workflow.md'),
+      read('docs/product/photo-to-template-draft-preview-qa.md'),
+      read('docs/phases/phase-12D.md'),
     ]);
-    const combined = `${integration}\n${editing}\n${phase}`;
+    const combined = `${workflow}\n${previewQa}\n${phase}`;
 
-    expect(combined).toContain('Photo-to-Template Draft Integration');
-    expect(combined).toContain('Photo-to-Template Human Review Editing');
-    expect(combined).toContain('PhotoToTemplateDraftIntegrationReport');
-    expect(combined).toContain('PhotoToTemplateDraftSemanticBinding');
-    expect(combined).toContain('PhotoToTemplateHumanReviewEditingSession');
+    expect(combined).toContain('Photo-to-Template Operator Workflow');
+    expect(combined).toContain('Photo-to-Template Draft Preview QA');
+    expect(combined).toContain('PhotoToTemplateOperatorWorkflowReport');
+    expect(combined).toContain('PhotoToTemplateDraftPreviewQaReport');
+    expect(combined).toContain('Vision / FaceMesh');
+    expect(combined).toContain('Makeup Semantic Extraction');
+    expect(combined).toContain('Human Review Editing');
+    expect(combined).toContain('Draft QA');
+    expect(combined).toContain('User App Draft Preview QA');
     expect(combined).toContain('sourceType');
     expect(combined).toContain('confidenceBand');
     expect(combined).toContain('evidence');
     expect(combined).toContain('limitations');
+    expect(combined).toContain('reviewerDecision');
     expect(combined).toContain('humanReviewRequired');
     expect(combined).toContain('notFinal');
-    expect(combined).toContain('original candidate');
-    expect(combined).toContain('editable draft');
-    expect(combined).toContain('reviewer decision');
-    expect(combined).toContain('reviewer note');
-    expect(combined).toContain('not final');
-    expect(combined).toContain('publish');
-    expect(combined).toContain('registry');
+    expect(combined).toContain('not a formal `UserAppTemplatePackage`');
+    expect(combined).toContain('not a registry write');
+    expect(combined).toMatch(/not\s+a publish step/);
   });
 
-  it('updates status and architecture docs to Phase 12C and Phase 12D', async () => {
+  it('updates status, architecture, and prompts to Phase 12D and Phase 12E', async () => {
     const docs = await Promise.all([
       read('START_HERE.md'),
       read('docs/status/CURRENT_PROJECT_STATUS.md'),
@@ -48,19 +49,19 @@ describe('Phase 12C documentation recovery', () => {
     ]);
     const combined = docs.join('\n');
 
-    expect(combined).toContain('Phase 12C');
-    expect(combined).toContain('Photo-to-Template Draft Integration & Human Review Editing');
     expect(combined).toContain('Phase 12D');
     expect(combined).toContain('Photo-to-Template Operator Workflow & Draft Preview QA');
-    expect(combined).toContain('semantic_candidate_integrated');
+    expect(combined).toContain('Phase 12E');
+    expect(combined).toContain('Photo-to-Template End-to-End Demo Script & Acceptance Trial');
+    expect(combined).toContain('PhotoToTemplateOperatorWorkflowReport');
+    expect(combined).toContain('PhotoToTemplateDraftPreviewQaReport');
+    expect(combined).toContain('ordinary user path');
     expect(combined).toContain('registry chain paused after Phase 10U');
     expect(combined).toContain('Phase 10V is intentionally not the active next phase');
-    expect(combined).toContain('candidate-only');
-    expect(combined).toContain('draft-only');
     expect(combined).toContain('fully automatic high-quality');
   });
 
-  it('keeps 12C history while project-state advances to 12D without resuming registry writes', async () => {
+  it('updates project-state to 12D without resuming registry writes', async () => {
     const stateFiles = await Promise.all([
       read('project-state/project-state.snapshot.json'),
       read('project-state/latest-handoff.json'),
@@ -76,14 +77,13 @@ describe('Phase 12C documentation recovery', () => {
     expect(combined).toContain('"lastCompletedPhase": "12D"');
     expect(combined).toContain('"currentPhaseId": "12D"');
     expect(combined).toContain('"nextRecommendedPhase": "12E"');
-    expect(combined).toContain('Photo-to-Template Draft Integration & Human Review Editing');
-    expect(combined).toContain('PhotoToTemplateDraftIntegrationReport');
-    expect(combined).toContain('PhotoToTemplateHumanReviewEditingSession');
-    expect(combined).toContain('PhotoToTemplateDraftIntegrationPanel');
-    expect(combined).toContain('PhotoToTemplateHumanReviewEditingPanel');
+    expect(combined).toContain('Photo-to-Template Operator Workflow & Draft Preview QA');
+    expect(combined).toContain('Photo-to-Template End-to-End Demo Script & Acceptance Trial');
     expect(combined).toContain('PhotoToTemplateOperatorWorkflowReport');
     expect(combined).toContain('PhotoToTemplateDraftPreviewQaReport');
-    expect(combined).toContain('candidate-only');
+    expect(combined).toContain('PhotoToTemplateOperatorWorkflowPanel');
+    expect(combined).toContain('PhotoToTemplateDraftPreviewQaPanel');
+    expect(combined).toContain('draft-preview-only');
     expect(combined).toContain('registry chain paused after Phase 10U');
     expect(combined).not.toContain('Phase 10V actual write authorization is active');
   });

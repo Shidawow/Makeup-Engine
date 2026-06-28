@@ -216,3 +216,14 @@
   band, evidence, limitations, original candidate value, editable draft value,
   reviewer decision, reviewer note, `humanReviewRequired`, and `notFinal`.
   These internal traces must remain hidden from the ordinary User App path.
+- Phase 12D Photo-to-Template Operator Workflow & Draft Preview QA is
+  operator-only and draft-preview-only. It can show step status, next action,
+  allowed handoff, blocked reasons, and user-visible draft preview QA, but it
+  cannot treat a preview as final recognition, AI-confirmed extraction,
+  fully automatic extraction, registry readiness, publish readiness, production
+  readiness, production writer output, `UserAppTemplatePackage` mutation, or
+  User App Shell package replacement.
+- Phase 12D internal traces such as sourceType, confidenceBand, evidence,
+  limitations, reviewerDecision, reviewer note, `humanReviewRequired`, and
+  `notFinal` must remain in Template Studio only and must not appear in the
+  ordinary User App path.

@@ -5,10 +5,10 @@ Makeup Engine is the makeup template production system for a future makeup coach
 ## Current Position
 
 - Project role: makeup template production system plus a local contract-driven user app shell prototype.
-- Last completed phase: `Phase 12C`.
-- Current completed business phase: `Phase 12C - Photo-to-Template Draft Integration & Human Review Editing`.
-- Next recommended phase: `Phase 12D - Photo-to-Template Operator Workflow & Draft Preview QA`.
-- Strategic focus: registry chain paused after Phase 10U; active work is photo-to-template semantic evidence and human-reviewed draft integration.
+- Last completed phase: `Phase 12D`.
+- Current completed business phase: `Phase 12D - Photo-to-Template Operator Workflow & Draft Preview QA`.
+- Next recommended phase: `Phase 12E - Photo-to-Template End-to-End Demo Script & Acceptance Trial`.
+- Strategic focus: registry chain paused after Phase 10U; active work is operator-led photo-to-template workflow, draft preview QA, and demo acceptance preparation.
 - Recent recovery milestones retained in phase docs: `Phase 6K`, `Phase 6L`, `Phase 6L-1`, `Phase 7A`, `Phase 7B`, `Phase 7C`, `Phase 7D`, `Phase 7E`, `Phase 7F`, `Phase 7G`, `Phase 7H`, and `Phase 8A`.
 - Historical route-planning milestone: `Phase 8A - Product Route Decision / App MVP Planning`.
 
@@ -80,6 +80,7 @@ SourceImagePackage manifest
 -> Photo-to-Template Draft Reality Check
 -> Makeup Semantic Extraction Baseline
 -> Photo-to-Template Draft Integration & Human Review Editing
+-> Photo-to-Template Operator Workflow & Draft Preview QA
 -> Phase 8 Roadmap / V1 Non-Goals
 -> Consumption Manifest
 -> Dataset Review
@@ -603,3 +604,20 @@ decision, and reviewer note. Accepting a candidate only enters draft review; it
 is not final, published, registry-written, or a `UserAppTemplatePackage`
 mutation. Registry chain remains paused after Phase 10U; Phase 10V is still not
 the active next phase. Next recommended phase: `Phase 12D - Photo-to-Template Operator Workflow & Draft Preview QA`.
+
+## Phase 12D Addendum
+
+- `docs/product/photo-to-template-operator-workflow.md`
+- `docs/product/photo-to-template-draft-preview-qa.md`
+- `docs/phases/phase-12D.md`
+
+Phase 12D adds an operator-only workflow and draft preview QA layer. It connects
+Vision / FaceMesh, 12A Reality Check, 12B semantic candidates, 12C draft
+integration, human review editing, Draft QA, User App Draft Preview QA, and
+handoff into a clear Template Workbench checklist. It blocks internal source
+metadata, confidence bands, evidence, limitations, reviewer notes, final claims,
+AI-confirmed claims, fully automatic extraction claims, registry/write/publish
+wording, production writer wording, and User App Shell replacement claims from
+the ordinary user path. Registry chain remains paused after Phase 10U; Phase
+10V is still not the active next phase. Next recommended phase:
+`Phase 12E - Photo-to-Template End-to-End Demo Script & Acceptance Trial`.

@@ -31,18 +31,18 @@ describe('project state snapshot', () => {
 
     expect(snapshot.projectName).toBe('Makeup Engine');
     expect(snapshot.projectRole).toContain('Makeup template production system');
-    expect(snapshot.lastCompletedPhase).toBe('12C');
-    expect(snapshot.lastCompletedBusinessPhase).toBe('12C');
-    expect(snapshot.currentPhaseId).toBe('12C');
+    expect(snapshot.lastCompletedPhase).toBe('12D');
+    expect(snapshot.lastCompletedBusinessPhase).toBe('12D');
+    expect(snapshot.currentPhaseId).toBe('12D');
     expect(snapshot.currentPhase).toBeTruthy();
     expect(snapshot.currentPhase).toContain(
-      'Photo-to-Template Draft Integration & Human Review Editing',
-    );
-    expect(snapshot.nextRecommendedPhase).toBe('12D');
-    expect(snapshot.nextRecommendedPhaseName).toContain(
       'Photo-to-Template Operator Workflow & Draft Preview QA',
     );
-    expect(snapshot.nextAction).toContain('Phase 12D');
+    expect(snapshot.nextRecommendedPhase).toBe('12E');
+    expect(snapshot.nextRecommendedPhaseName).toContain(
+      'Photo-to-Template End-to-End Demo Script & Acceptance Trial',
+    );
+    expect(snapshot.nextAction).toContain('Phase 12E');
     expect(snapshot.mainDataFlow).toEqual(
       expect.arrayContaining([
         'SourceImagePackage',
@@ -103,6 +103,16 @@ describe('project state snapshot', () => {
         'PhotoToTemplateHumanReviewEditingPanel',
         'PhotoToTemplateSemanticCandidateBindingMatrix',
         'SemanticCandidateIntegratedRealitySource',
+        'PhotoToTemplateOperatorWorkflowReport',
+        'PhotoToTemplateOperatorWorkflowStep',
+        'PhotoToTemplateOperatorWorkflowHandoff',
+        'PhotoToTemplateDraftPreviewQaReport',
+        'PhotoToTemplateDraftPreviewQaCheck',
+        'PhotoToTemplateDraftPreviewQaIssue',
+        'PhotoToTemplateDraftPreviewQaUserVisibleField',
+        'PhotoToTemplateOperatorWorkflowPanel',
+        'PhotoToTemplateDraftPreviewQaPanel',
+        'PhotoToTemplateDraftPreviewQaBoundary',
         'UserPhotoIntakePlaceholder',
         'UserPersonalizationPlaceholder',
         'UserPhotoPrivacyBoundary',
@@ -323,7 +333,10 @@ describe('project state snapshot', () => {
     expect(snapshot.knownLimitations.join('\n')).toContain('Phase 12A');
     expect(snapshot.knownLimitations.join('\n')).toContain('Phase 12B');
     expect(snapshot.knownLimitations.join('\n')).toContain('Phase 12C');
+    expect(snapshot.knownLimitations.join('\n')).toContain('Phase 12D');
     expect(snapshot.knownLimitations.join('\n')).toContain('Photo-to-Template Draft Integration');
+    expect(snapshot.knownLimitations.join('\n')).toContain('Photo-to-Template Operator Workflow');
+    expect(snapshot.knownLimitations.join('\n')).toContain('Draft Preview QA');
     expect(snapshot.knownLimitations.join('\n')).toContain('candidate-only');
     expect(snapshot.knownLimitations.join('\n')).toContain('not final recognition');
     expect(snapshot.knownLimitations.join('\n')).toContain('semi-automatic template draft generation');

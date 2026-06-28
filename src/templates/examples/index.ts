@@ -112,3 +112,4 @@ export * from './real-write-approval-handoff.example';
 export * from './photo-to-template-reality-check.example';
 export * from './makeup-semantic-extraction.example';
 export * from './photo-to-template-draft-integration.example';
+export * from './photo-to-template-operator-workflow.example';

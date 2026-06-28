@@ -2,32 +2,37 @@
 
 ## Phase State
 
-- `lastCompletedPhase`: `12C`
-- `lastCompletedBusinessPhase`: `12C`
-- `currentPhase`: `12C`
-- `currentPhaseName`: `Photo-to-Template Draft Integration & Human Review Editing`
-- `nextRecommendedPhase`: `12D`
-- `nextRecommendedPhaseName`: `Photo-to-Template Operator Workflow & Draft Preview QA`
+- `lastCompletedPhase`: `12D`
+- `lastCompletedBusinessPhase`: `12D`
+- `currentPhase`: `12D`
+- `currentPhaseName`: `Photo-to-Template Operator Workflow & Draft Preview QA`
+- `nextRecommendedPhase`: `12E`
+- `nextRecommendedPhaseName`: `Photo-to-Template End-to-End Demo Script & Acceptance Trial`
 - `phaseOwner`: `Codex implementation, validation, commit, and push pass`
 
 ## Phase Completion Definition
 
-Phase 12C is complete when:
+Phase 12D is complete when:
 
-- Phase 12B semantic candidates can bind into photo-to-template draft fields.
-- Every binding preserves source type, confidence band, evidence, limitations,
-  human review requirement, not-final status, original candidate value,
-  editable draft value, reviewer decision, and reviewer note.
-- Human review editing can accept, edit, reject, mark insufficient, require more
-  review, or block draft fields without making them final.
-- Draft QA blocks semantic candidates that lose candidate-only boundaries or
-  make fully automatic, AI-confirmed, product shade, medical, publish,
-  registry, production writer, or shell replacement claims.
-- Reality Check can label integrated draft fields as
-  `semantic_candidate_integrated` without calling them real photo extraction.
-- Template Workbench renders draft integration and human review editing panels.
-- The ordinary User App path hides semantic evidence, confidence bands, reviewer
-  notes, registry terms, simulator terms, and production writer terminology.
+- Template Workbench renders an operator-only workflow from Vision / FaceMesh
+  through Reality Check, Semantic Extraction, Draft Integration, Human Review
+  Editing, Draft QA, User App Draft Preview QA, and handoff.
+- The workflow clearly shows step status, required inputs, produced outputs,
+  blocking issues, warnings, next actions, and allowed / forbidden handoff
+  destinations.
+- Draft Preview QA checks user-visible title, summary, scenario, difficulty,
+  estimated time, tools, steps, beginner tips, common mistakes, correction
+  tips, region guidance, and local-only privacy copy.
+- Draft Preview QA blocks internal source metadata, confidence bands, evidence,
+  limitations, reviewer notes, registry / publish / production writer wording,
+  AI-confirmed claims, fully automatic extraction claims, medical claims,
+  product shade hard claims, missing Draft QA, and blocked Draft QA.
+- The ordinary User App path hides operator workflow, Draft Preview QA,
+  sourceType, confidenceBand, evidence, limitations, reviewerDecision,
+  reviewer note, humanReviewRequired, notFinal, registry terms, publish terms,
+  simulator terms, and production writer terminology.
+- Vision Analysis remains focused on FaceMesh, overlay / mask, region QA,
+  image quality, MediaPipe readiness, fallback status, and readiness summary.
 - Registry chain remains paused after Phase 10U, and Phase 10V is not the
   active next phase.
 - No real registry write, registry mutation, publication, production writer,

@@ -25,7 +25,9 @@ import {
   createRealWriteApprovalHandoff,
   createPhotoToTemplateRealityCheckReport,
   createPhotoToTemplateDraftIntegrationReport,
+  createPhotoToTemplateDraftPreviewQaReport,
   createPhotoToTemplateHumanReviewEditingSession,
+  createPhotoToTemplateOperatorWorkflowReport,
   createPhotoToTemplateRealityHandoff,
   createRealRegistryWriteImplementationChecklist,
   createRealRegistryWriteImplementationDraft,
@@ -100,7 +102,9 @@ import { RealWriteApprovalBoundaryPanel } from './RealWriteApprovalBoundaryPanel
 import { PhotoToTemplateRealityCheckPanel } from './PhotoToTemplateRealityCheckPanel';
 import { MakeupSemanticExtractionPanel } from './MakeupSemanticExtractionPanel';
 import { PhotoToTemplateDraftIntegrationPanel } from './PhotoToTemplateDraftIntegrationPanel';
+import { PhotoToTemplateDraftPreviewQaPanel } from './PhotoToTemplateDraftPreviewQaPanel';
 import { PhotoToTemplateHumanReviewEditingPanel } from './PhotoToTemplateHumanReviewEditingPanel';
+import { PhotoToTemplateOperatorWorkflowPanel } from './PhotoToTemplateOperatorWorkflowPanel';
 
 export interface FaceMeshMakeupIntelligencePanelProps {
   analysis?: MakeupAnalysisPipelineResult | null;
@@ -174,6 +178,23 @@ export function FaceMeshMakeupIntelligencePanel({
   });
 
   if (!regionQa || !attributeCandidates || !stepSequence || !templateDraft) {
+    const emptyPhotoToTemplateDraftPreviewQa =
+      createPhotoToTemplateDraftPreviewQaReport({
+        integration: photoToTemplateDraftIntegration,
+        humanReviewEditing: photoToTemplateHumanReviewEditing,
+        draftQa: draftQa ?? null,
+      });
+    const emptyPhotoToTemplateOperatorWorkflow =
+      createPhotoToTemplateOperatorWorkflowReport({
+        regionQa,
+        realityReport: photoToTemplateRealityReport,
+        semanticReport: makeupSemanticExtractionReport,
+        draftIntegration: photoToTemplateDraftIntegration,
+        humanReviewEditing: photoToTemplateHumanReviewEditing,
+        draftQa: draftQa ?? null,
+        draftPreviewQa: emptyPhotoToTemplateDraftPreviewQa,
+      });
+
     return (
       <section className="rounded-lg border border-stone-200 bg-white p-4 shadow-soft">
         <h2 className="text-base font-semibold">FaceMesh 妆容智能基线</h2>
@@ -664,6 +685,12 @@ export function FaceMeshMakeupIntelligencePanel({
           <PhotoToTemplateHumanReviewEditingPanel session={photoToTemplateHumanReviewEditing} />
         </div>
         <div className="mt-3">
+          <PhotoToTemplateOperatorWorkflowPanel report={emptyPhotoToTemplateOperatorWorkflow} />
+        </div>
+        <div className="mt-3">
+          <PhotoToTemplateDraftPreviewQaPanel report={emptyPhotoToTemplateDraftPreviewQa} />
+        </div>
+        <div className="mt-3">
           <PhotoToTemplateRealityCheckPanel
             handoff={photoToTemplateRealityHandoff}
             report={photoToTemplateRealityReport}
@@ -934,6 +961,22 @@ export function FaceMeshMakeupIntelligencePanel({
     boundary: realWriteApprovalBoundary,
     checklist: realWriteApprovalChecklist,
   });
+  const photoToTemplateDraftPreviewQa =
+    createPhotoToTemplateDraftPreviewQaReport({
+      integration: photoToTemplateDraftIntegration,
+      humanReviewEditing: photoToTemplateHumanReviewEditing,
+      draftQa: resolvedDraftQa,
+    });
+  const photoToTemplateOperatorWorkflow =
+    createPhotoToTemplateOperatorWorkflowReport({
+      regionQa,
+      realityReport: photoToTemplateRealityReport,
+      semanticReport: makeupSemanticExtractionReport,
+      draftIntegration: photoToTemplateDraftIntegration,
+      humanReviewEditing: photoToTemplateHumanReviewEditing,
+      draftQa: resolvedDraftQa,
+      draftPreviewQa: photoToTemplateDraftPreviewQa,
+    });
 
   return (
     <section className="grid gap-4">
@@ -1038,6 +1081,10 @@ export function FaceMeshMakeupIntelligencePanel({
       <PhotoToTemplateDraftIntegrationPanel report={photoToTemplateDraftIntegration} />
 
       <PhotoToTemplateHumanReviewEditingPanel session={photoToTemplateHumanReviewEditing} />
+
+      <PhotoToTemplateOperatorWorkflowPanel report={photoToTemplateOperatorWorkflow} />
+
+      <PhotoToTemplateDraftPreviewQaPanel report={photoToTemplateDraftPreviewQa} />
 
       <PhotoToTemplateRealityCheckPanel
         handoff={photoToTemplateRealityHandoff}
