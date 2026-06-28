@@ -5,9 +5,9 @@ Makeup Engine is the makeup template production system for a future makeup coach
 ## Current Position
 
 - Project role: makeup template production system plus a local contract-driven user app shell prototype.
-- Last completed phase: `Phase 12B`.
-- Current completed business phase: `Phase 12B - Makeup Semantic Extraction Baseline`.
-- Next recommended phase: `Phase 12C - Photo-to-Template Draft Integration & Human Review Editing`.
+- Last completed phase: `Phase 12C`.
+- Current completed business phase: `Phase 12C - Photo-to-Template Draft Integration & Human Review Editing`.
+- Next recommended phase: `Phase 12D - Photo-to-Template Operator Workflow & Draft Preview QA`.
 - Strategic focus: registry chain paused after Phase 10U; active work is photo-to-template semantic evidence and human-reviewed draft integration.
 - Recent recovery milestones retained in phase docs: `Phase 6K`, `Phase 6L`, `Phase 6L-1`, `Phase 7A`, `Phase 7B`, `Phase 7C`, `Phase 7D`, `Phase 7E`, `Phase 7F`, `Phase 7G`, `Phase 7H`, and `Phase 8A`.
 - Historical route-planning milestone: `Phase 8A - Product Route Decision / App MVP Planning`.
@@ -79,6 +79,7 @@ SourceImagePackage manifest
 -> User App Demo Readiness & Operator QA
 -> Photo-to-Template Draft Reality Check
 -> Makeup Semantic Extraction Baseline
+-> Photo-to-Template Draft Integration & Human Review Editing
 -> Phase 8 Roadmap / V1 Non-Goals
 -> Consumption Manifest
 -> Dataset Review
@@ -237,6 +238,9 @@ SourceImagePackage manifest
 146. `docs/product/guarded-simulator-review-checklist.md`
 147. `docs/product/guarded-simulator-review-handoff.md`
 148. `docs/phases/phase-10T.md`
+149. `docs/product/photo-to-template-draft-integration.md`
+150. `docs/product/photo-to-template-human-review-editing.md`
+151. `docs/phases/phase-12C.md`
 139. `docs/product/real-write-execution-plan.md`
 140. `docs/product/real-write-execution-plan-validation.md`
 141. `docs/product/real-write-execution-plan-handoff.md`
@@ -371,6 +375,11 @@ SourceImagePackage manifest
   checklist, or handoff as actual registry write authorization, registry write
   execution, production writer creation, publication, production readiness, or
   current User App Shell package replacement.
+- Do not treat Phase 12C semantic candidate draft integration or human review
+  editing as final recognition, fully automatic high-quality makeup extraction,
+  publication, registry write, production writer creation,
+  `UserAppTemplatePackage` mutation, or current User App Shell package
+  replacement.
 - Do not treat Phase 8B PWA metadata, mobile shell polish, PWA readiness, or MVP polish readiness as production PWA release approval.
 - Do not treat Phase 8C trial pack, feedback preview, or trial readiness as production release, backend form, analytics, App Store/TestFlight, or real user data collection approval.
 - Do not treat Phase 8D content QA, trial template selection, or trial content readiness as production release, App Store/TestFlight, backend, AI generation, camera, AR, analytics, or training approval.
@@ -579,3 +588,18 @@ source labels such as `region_pixel_derived`, `color_rule_derived`,
 remain candidate-only, not final recognition, and require human review. Registry
 chain remains paused after Phase 10U; Phase 10V is still not the active next
 phase. Next recommended phase: `Phase 12C - Photo-to-Template Draft Integration & Human Review Editing`.
+
+## Phase 12C Addendum
+
+- `docs/product/photo-to-template-draft-integration.md`
+- `docs/product/photo-to-template-human-review-editing.md`
+- `docs/phases/phase-12C.md`
+
+Phase 12C safely connects Phase 12B semantic candidates into draft template
+fields and adds local human review editing. Every binding preserves source
+type, confidence band, evidence, limitations, human review requirement,
+not-final status, original candidate value, editable draft value, reviewer
+decision, and reviewer note. Accepting a candidate only enters draft review; it
+is not final, published, registry-written, or a `UserAppTemplatePackage`
+mutation. Registry chain remains paused after Phase 10U; Phase 10V is still not
+the active next phase. Next recommended phase: `Phase 12D - Photo-to-Template Operator Workflow & Draft Preview QA`.

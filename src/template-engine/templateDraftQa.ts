@@ -1,5 +1,6 @@
 import type { FaceMeshRegionQaReport } from '../vision';
 import type { MakeupAttributeCandidateReport } from './makeupAttributeCandidates';
+import type { PhotoToTemplateDraftIntegrationReport } from './photoToTemplateDraftIntegration';
 import type { MakeupTemplateDraftReport } from './templateDraftGenerator';
 import type { RuleBasedStepSequence } from './ruleBasedStepGenerator';
 
@@ -17,9 +18,20 @@ export type TemplateDraftQaCheckId =
   | 'steps_have_beginner_guidance'
   | 'tools_checklist_present'
   | 'product_suggestions_are_placeholders'
+  | 'semantic_candidates_not_final'
+  | 'semantic_candidate_human_review_required'
+  | 'semantic_candidate_source_type_preserved'
+  | 'semantic_candidate_confidence_band_preserved'
+  | 'semantic_candidate_evidence_preserved'
+  | 'semantic_candidate_limitations_preserved'
   | 'no_final_claims'
+  | 'no_fully_automatic_extraction_claim'
+  | 'no_ai_confirmed'
   | 'no_medical_claims'
   | 'no_product_shade_claims'
+  | 'no_registry_write'
+  | 'no_publish'
+  | 'no_production_writer'
   | 'publish_blocked_is_true'
   | 'human_review_required'
   | 'user_app_contract_not_mutated'
@@ -63,12 +75,19 @@ export interface TemplateDraftQaInput {
   attributeCandidates: MakeupAttributeCandidateReport;
   stepSequence: RuleBasedStepSequence;
   templateDraft: MakeupTemplateDraftReport;
+  draftIntegration?: PhotoToTemplateDraftIntegrationReport | null;
 }
 
 const finalClaimPattern =
   /最终识别完成|最终识别为|最终结果|final result|final recognition|final approval|confirmed result|AI 已确认|识别完成|正式模板/i;
+const fullyAutomaticClaimPattern =
+  /fully automatic extraction|fully automatic high-quality|全自动高质量拆妆|自动高质量拆妆|任意照片自动拆妆/i;
+const aiConfirmedPattern = /AI 已确认|AI confirmed|auto confirmed|自动确认/i;
 const medicalClaimPattern = /治疗|修复皮肤病|痤疮治疗|过敏改善|medical|diagnos/i;
 const shadeClaimPattern = /色号|shade\s*#?|mac\s|nars\s|armani\s|dior\s|ysl\s|chanel\s/i;
+const registryWriteClaimPattern = /registry write|writeRegistry|写入 registry|已写入 registry|registry mutation/i;
+const publishClaimPattern = /已发布|发布到用户 App|published to user app|自动发布|上线/i;
+const productionWriterClaimPattern = /production writer|生产 writer|创建 production writer/i;
 const privacyRiskPattern =
   /data:image|blob:|object URL|faceEmbedding|biometricId|raw camera|base64|真实姓名|手机号|邮箱|健康信息/i;
 
@@ -79,6 +98,7 @@ const stringifyDraft = (input: TemplateDraftQaInput): string =>
       steps: input.stepSequence.steps,
       draft: input.templateDraft.draft,
       notes: input.templateDraft.notes,
+      draftIntegration: input.draftIntegration,
     },
     null,
     2,
@@ -134,6 +154,37 @@ export const evaluateTemplateDraftQa = (
   const toolChecklist = Array.from(new Set(steps.map((step) => step.tool))).filter(Boolean);
   const userAppContractMutated = /appTemplateId|packageId|generatedUserAppTemplatePackage/.test(
     draftText,
+  );
+  const semanticBindings = input.draftIntegration?.bindings ?? [];
+  const semanticCandidates = [
+    ...semanticBindings,
+    ...candidates
+      .filter((candidate) => candidate.semanticCandidate)
+      .map((candidate) => ({
+        notFinal: candidate.notFinal,
+        humanReviewRequired: candidate.humanReviewRequired,
+        sourceType: candidate.source,
+        confidenceBand: candidate.confidence > 0 ? 'attribute_confidence' : '',
+        evidence: candidate.evidence,
+        limitations: ['Attribute candidate inherits Phase 12B candidate-only boundary.'],
+      })),
+  ];
+  const hasSemanticCandidates = semanticCandidates.length > 0;
+  const semanticCandidatesFinal = semanticCandidates.some((candidate) => candidate.notFinal !== true);
+  const semanticCandidatesMissingReview = semanticCandidates.some(
+    (candidate) => candidate.humanReviewRequired !== true,
+  );
+  const semanticCandidatesMissingSource = semanticCandidates.some(
+    (candidate) => !candidate.sourceType,
+  );
+  const semanticCandidatesMissingConfidence = semanticCandidates.some(
+    (candidate) => !candidate.confidenceBand,
+  );
+  const semanticCandidatesMissingEvidence = semanticCandidates.some(
+    (candidate) => !candidate.evidence || candidate.evidence.length === 0,
+  );
+  const semanticCandidatesMissingLimitations = semanticCandidates.some(
+    (candidate) => !candidate.limitations || candidate.limitations.length === 0,
   );
 
   const checks: TemplateDraftQaCheck[] = [
@@ -198,11 +249,67 @@ export const evaluateTemplateDraftQa = (
       'Product suggestions must remain category placeholders, not brand or shade claims.',
     ),
     createCheck(
+      'semantic_candidates_not_final',
+      'Semantic candidates stay notFinal',
+      !hasSemanticCandidates || !semanticCandidatesFinal,
+      'blocking',
+      'Semantic candidates integrated into draft fields must keep notFinal=true.',
+    ),
+    createCheck(
+      'semantic_candidate_human_review_required',
+      'Semantic candidates require human review',
+      !hasSemanticCandidates || !semanticCandidatesMissingReview,
+      'blocking',
+      'Semantic candidates must keep humanReviewRequired=true after draft integration.',
+    ),
+    createCheck(
+      'semantic_candidate_source_type_preserved',
+      'Semantic candidate source type preserved',
+      !hasSemanticCandidates || !semanticCandidatesMissingSource,
+      'blocking',
+      'Semantic candidate sourceType must be preserved for draft QA.',
+    ),
+    createCheck(
+      'semantic_candidate_confidence_band_preserved',
+      'Semantic candidate confidence band preserved',
+      !hasSemanticCandidates || !semanticCandidatesMissingConfidence,
+      'blocking',
+      'Semantic candidate confidenceBand must be preserved for draft QA.',
+    ),
+    createCheck(
+      'semantic_candidate_evidence_preserved',
+      'Semantic candidate evidence preserved',
+      !hasSemanticCandidates || !semanticCandidatesMissingEvidence,
+      'blocking',
+      'Semantic candidate evidence must be preserved for draft QA.',
+    ),
+    createCheck(
+      'semantic_candidate_limitations_preserved',
+      'Semantic candidate limitations preserved',
+      !hasSemanticCandidates || !semanticCandidatesMissingLimitations,
+      'blocking',
+      'Semantic candidate limitations must be preserved for draft QA.',
+    ),
+    createCheck(
       'no_final_claims',
       'No final claims',
       !finalClaimPattern.test(draftText),
       'blocking',
       'Draft content must not claim final recognition or final approval.',
+    ),
+    createCheck(
+      'no_fully_automatic_extraction_claim',
+      'No fully automatic extraction claim',
+      !fullyAutomaticClaimPattern.test(draftText),
+      'blocking',
+      'Draft content must not claim fully automatic high-quality makeup extraction.',
+    ),
+    createCheck(
+      'no_ai_confirmed',
+      'No AI confirmed claim',
+      !aiConfirmedPattern.test(draftText),
+      'blocking',
+      'Draft content must not claim AI confirmation or automatic confirmation.',
     ),
     createCheck(
       'no_medical_claims',
@@ -217,6 +324,27 @@ export const evaluateTemplateDraftQa = (
       !shadeClaimPattern.test(draftText),
       'blocking',
       'Draft content must not contain brand-specific or shade-specific product claims.',
+    ),
+    createCheck(
+      'no_registry_write',
+      'No registry write',
+      !registryWriteClaimPattern.test(draftText),
+      'blocking',
+      'Draft QA must not perform or claim registry writes or registry mutation.',
+    ),
+    createCheck(
+      'no_publish',
+      'No publish',
+      !publishClaimPattern.test(draftText),
+      'blocking',
+      'Draft QA must not publish or claim publication.',
+    ),
+    createCheck(
+      'no_production_writer',
+      'No production writer',
+      !productionWriterClaimPattern.test(draftText),
+      'blocking',
+      'Draft QA must not create or claim a production writer.',
     ),
     createCheck(
       'publish_blocked_is_true',
@@ -258,9 +386,27 @@ export const evaluateTemplateDraftQa = (
     tools_checklist_present: 'Add tool categories through draft step generation.',
     product_suggestions_are_placeholders:
       'Replace brand or shade-specific wording with category-level placeholders.',
+    semantic_candidates_not_final:
+      'Keep semantic candidate bindings marked notFinal and block any final-template marker.',
+    semantic_candidate_human_review_required:
+      'Keep semantic candidate bindings human-review-required after draft integration.',
+    semantic_candidate_source_type_preserved:
+      'Preserve the semantic candidate sourceType through draft integration.',
+    semantic_candidate_confidence_band_preserved:
+      'Preserve the semantic candidate confidenceBand through draft integration.',
+    semantic_candidate_evidence_preserved:
+      'Preserve semantic candidate evidence through draft integration.',
+    semantic_candidate_limitations_preserved:
+      'Preserve semantic candidate limitations through draft integration.',
     no_final_claims: 'Replace final-result wording with candidate or draft wording.',
+    no_fully_automatic_extraction_claim:
+      'Replace automatic extraction claims with semi-automatic draft + human review wording.',
+    no_ai_confirmed: 'Replace AI-confirmed wording with human-review-required draft wording.',
     no_medical_claims: 'Remove medical or skin-health claims before review.',
     no_product_shade_claims: 'Remove brand and shade-specific claims before review.',
+    no_registry_write: 'Keep registry writes outside draft QA and blocked after Phase 10U.',
+    no_publish: 'Keep publication outside draft QA and blocked in this phase.',
+    no_production_writer: 'Do not create or claim a production writer in draft QA.',
     publish_blocked_is_true: 'Keep template draft output blocked from publishing.',
     human_review_required: 'Require human review before candidate handoff.',
     user_app_contract_not_mutated:

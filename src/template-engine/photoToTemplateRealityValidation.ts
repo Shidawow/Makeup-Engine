@@ -177,6 +177,7 @@ export const validatePhotoToTemplateRealityCheck = (
         sources.has('brightness_rule_derived') ||
         sources.has('saturation_rule_derived') ||
         sources.has('semantic_rule_derived') ||
+        sources.has('semantic_candidate_integrated') ||
         sources.has('template_rule_derived') ||
         sources.has('region_qa_derived'),
       'blocking',

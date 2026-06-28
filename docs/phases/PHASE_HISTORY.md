@@ -2,6 +2,46 @@
 
 This history is a recovery summary based on current project reports, current source layout, tests, and documentation. Earlier phase details are summarized when exact original phase reports are not available.
 
+## Phase 12C
+
+Added safe semantic-candidate-to-draft integration and human review editing on
+top of Phase 12B.
+
+What changed:
+
+- Added `PhotoToTemplateDraftIntegrationReport`,
+  `PhotoToTemplateDraftSemanticBinding`, field source tracing, edit state,
+  issues, and recommendations.
+- Added `PhotoToTemplateHumanReviewEditingSession`, editable fields, local
+  reviewer decisions, checklist, issues, and draft QA readiness.
+- Bound semantic candidates to draft fields while preserving source type,
+  confidence band, evidence, limitations, human review requirement, not-final
+  status, original candidate value, editable draft value, reviewer decision, and
+  reviewer note.
+- Extended Draft QA to block semantic candidate finalization, fully automatic
+  extraction claims, AI-confirmed claims, product shade hard claims, medical
+  claims, registry write, publication, production writer, and User App Shell
+  replacement wording.
+- Extended Photo-to-Template Reality Check with
+  `semantic_candidate_integrated` while preserving semi-automatic draft plus
+  human review boundaries.
+- Added Template Workbench panels for the binding matrix and local human review
+  editing. Ordinary User App paths do not expose these internal traces.
+
+What still cannot happen:
+
+- Accepted candidates are draft-only and not final.
+- No registry write, registry mutation, publish, production writer, current User
+  App Shell package replacement, `UserAppTemplatePackage` mutation, backend,
+  camera, AR, OpenAI/external API, training, or committed MediaPipe runtime
+  assets.
+
+Why Phase 12D follows:
+
+The candidate-to-draft bridge exists, so the next bottleneck is operator
+workflow and draft preview QA across Vision Analysis, semantic extraction,
+draft integration, human review editing, and draft QA.
+
 ## Phase 10D
 
 Added local Candidate-to-App Package Contract Preparation after Phase 10C

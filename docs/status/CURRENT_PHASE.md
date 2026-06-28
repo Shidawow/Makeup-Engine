@@ -2,29 +2,32 @@
 
 ## Phase State
 
-- `lastCompletedPhase`: `12B`
-- `lastCompletedBusinessPhase`: `12B`
-- `currentPhase`: `12B`
-- `currentPhaseName`: `Makeup Semantic Extraction Baseline`
-- `nextRecommendedPhase`: `12C`
-- `nextRecommendedPhaseName`: `Photo-to-Template Draft Integration & Human Review Editing`
+- `lastCompletedPhase`: `12C`
+- `lastCompletedBusinessPhase`: `12C`
+- `currentPhase`: `12C`
+- `currentPhaseName`: `Photo-to-Template Draft Integration & Human Review Editing`
+- `nextRecommendedPhase`: `12D`
+- `nextRecommendedPhaseName`: `Photo-to-Template Operator Workflow & Draft Preview QA`
 - `phaseOwner`: `Codex implementation, validation, commit, and push pass`
 
 ## Phase Completion Definition
 
-Phase 12B is complete when:
+Phase 12C is complete when:
 
-- A local deterministic `MakeupSemanticExtractionReport` exists for candidate
-  lip, blush, eye, brow, highlight, contour, and overall style semantic fields.
-- The semantic source labels distinguish region pixel, FaceMesh region, color,
-  brightness, saturation, semantic rule, insufficient evidence, and human
-  review sources.
-- All semantic outputs are candidate-only, not final recognition, not
-  AI-confirmed, not product shade claims, and not medical or skin diagnosis.
-- The Template Workbench renders the Makeup Semantic Extraction Baseline panel
-  without exposing operator-only terminology in the ordinary User App Shell.
-- Phase 12A reality-check source labels remain accurate and include the new
-  Phase 12B source types.
+- Phase 12B semantic candidates can bind into photo-to-template draft fields.
+- Every binding preserves source type, confidence band, evidence, limitations,
+  human review requirement, not-final status, original candidate value,
+  editable draft value, reviewer decision, and reviewer note.
+- Human review editing can accept, edit, reject, mark insufficient, require more
+  review, or block draft fields without making them final.
+- Draft QA blocks semantic candidates that lose candidate-only boundaries or
+  make fully automatic, AI-confirmed, product shade, medical, publish,
+  registry, production writer, or shell replacement claims.
+- Reality Check can label integrated draft fields as
+  `semantic_candidate_integrated` without calling them real photo extraction.
+- Template Workbench renders draft integration and human review editing panels.
+- The ordinary User App path hides semantic evidence, confidence bands, reviewer
+  notes, registry terms, simulator terms, and production writer terminology.
 - Registry chain remains paused after Phase 10U, and Phase 10V is not the
   active next phase.
 - No real registry write, registry mutation, publication, production writer,

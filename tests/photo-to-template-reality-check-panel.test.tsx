@@ -10,7 +10,10 @@ import {
   makeupTemplateDraftReadyExample,
   phase10aExampleAnalysis,
   photoToTemplateRealityHandoffReadyExample,
+  photoToTemplateRealityHandoffSemanticIntegratedExample,
   photoToTemplateRealityReadyExample,
+  photoToTemplateRealitySemanticIntegratedExample,
+  photoToTemplateRealityValidationSemanticIntegratedExample,
   photoToTemplateRealityValidationReadyExample,
   ruleBasedStepSequenceReadyExample,
   userAppMvpShellExamplePackage,
@@ -59,6 +62,21 @@ describe('PhotoToTemplateRealityCheckPanel', () => {
     expect(html).toContain('Readiness Score：规则型检测可用性评分，不是模型原始置信度');
     expect(html).toContain('Phase 10U 后继续暂停');
     expect(html).toContain('Phase 12B - Makeup Semantic Extraction Baseline');
+  });
+
+  it('renders semantic candidate integrated source separately from real photo evidence', () => {
+    const html = renderToStaticMarkup(
+      <PhotoToTemplateRealityCheckPanel
+        handoff={photoToTemplateRealityHandoffSemanticIntegratedExample}
+        report={photoToTemplateRealitySemanticIntegratedExample}
+        validation={photoToTemplateRealityValidationSemanticIntegratedExample}
+      />,
+    );
+
+    expect(html).toContain('语义候选接入草稿');
+    expect(html).toContain('Phase 12D - Photo-to-Template Operator Workflow &amp; Draft Preview QA');
+    expect(html).toContain('支持：半自动模板草稿 + 人工审核');
+    expect(html).toContain('不支持：全自动高质量拆妆');
   });
 
   it('is wired into the template workbench rather than the Vision Analysis or ordinary user path', () => {

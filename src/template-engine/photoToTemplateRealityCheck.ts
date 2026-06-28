@@ -1,5 +1,6 @@
 import type { FaceMeshRegionQaReport, MakeupAnalysisPipelineResult } from '../vision';
 import type { MakeupAttributeCandidateReport } from './makeupAttributeCandidates';
+import type { PhotoToTemplateDraftIntegrationReport } from './photoToTemplateDraftIntegration';
 import type { RuleBasedStepSequence } from './ruleBasedStepGenerator';
 import type { MakeupTemplateDraftReport } from './templateDraftGenerator';
 
@@ -13,6 +14,7 @@ export type PhotoToTemplateRealitySourceType =
   | 'brightness_rule_derived'
   | 'saturation_rule_derived'
   | 'semantic_rule_derived'
+  | 'semantic_candidate_integrated'
   | 'template_rule_derived'
   | 'demo_fixture'
   | 'placeholder'
@@ -120,7 +122,9 @@ export interface PhotoToTemplateRealityCheckReport {
   noPublish: true;
   noProductionWriter: true;
   noUserAppShellReplacement: true;
-  nextRecommendedPhase: 'Phase 12B - Makeup Semantic Extraction Baseline';
+  nextRecommendedPhase:
+    | 'Phase 12B - Makeup Semantic Extraction Baseline'
+    | 'Phase 12D - Photo-to-Template Operator Workflow & Draft Preview QA';
 }
 
 export interface PhotoToTemplateRealityCheckInput {
@@ -129,6 +133,7 @@ export interface PhotoToTemplateRealityCheckInput {
   attributeCandidates?: MakeupAttributeCandidateReport | null;
   stepSequence?: RuleBasedStepSequence | null;
   templateDraft?: MakeupTemplateDraftReport | null;
+  draftIntegration?: PhotoToTemplateDraftIntegrationReport | null;
   claims?: string[];
   reportId?: string;
 }
@@ -143,6 +148,7 @@ const sourceSummarySeed: Record<PhotoToTemplateRealitySourceType, number> = {
   brightness_rule_derived: 0,
   saturation_rule_derived: 0,
   semantic_rule_derived: 0,
+  semantic_candidate_integrated: 0,
   template_rule_derived: 0,
   demo_fixture: 0,
   placeholder: 0,
@@ -207,6 +213,7 @@ export const createPhotoToTemplateRealityCheckReport = ({
   attributeCandidates = null,
   stepSequence = null,
   templateDraft = null,
+  draftIntegration = null,
   claims = [
     'Current capability is semi-automatic template draft generation with human review.',
     'Readiness Score is rule-based detection usability scoring.',
@@ -214,6 +221,13 @@ export const createPhotoToTemplateRealityCheckReport = ({
   ],
   reportId = 'phase-12a-photo-to-template-reality-check',
 }: PhotoToTemplateRealityCheckInput): PhotoToTemplateRealityCheckReport => {
+  const integratedField = (
+    fieldName: string,
+  ): PhotoToTemplateRealitySourceType[] =>
+    draftIntegration?.bindings.some((binding) => binding.field === fieldName)
+      ? ['semantic_candidate_integrated']
+      : [];
+
   const fields: PhotoToTemplateRealityFieldEvidence[] = [
     field(
       'faceDetected',
@@ -378,45 +392,54 @@ export const createPhotoToTemplateRealityCheckReport = ({
     field(
       'templateTitle',
       'Template title',
-      ['template_rule_derived', 'human_required'],
-      ['Template title is generated from draft metadata, not directly recognized from the photo.'],
+      ['template_rule_derived', ...integratedField('title'), 'human_required'],
+      [
+        'Template title is generated from draft metadata and may include integrated semantic candidates.',
+        'It is not directly recognized from the photo and remains human-review-required.',
+      ],
       templateDraft?.draft?.name ?? 'draft title unavailable',
     ),
     field(
       'templateSummary',
       'Template summary',
-      ['template_rule_derived', 'human_required'],
-      ['Template summary is editor/reviewer copy derived from draft structure.'],
+      ['template_rule_derived', ...integratedField('summary'), 'human_required'],
+      [
+        'Template summary is editor/reviewer copy derived from draft structure and semantic candidates.',
+        'Integrated semantic candidates are still not final extraction.',
+      ],
     ),
     field(
       'suitableScenario',
       'Suitable scenario',
-      ['demo_fixture', 'placeholder', 'human_required'],
+      ['demo_fixture', 'placeholder', ...integratedField('suitableScenario'), 'human_required'],
       ['Suitable scenario is demo/user-app copy until a reviewer writes app-facing guidance.'],
     ),
     field(
       'difficulty',
       'Difficulty',
-      ['template_rule_derived', 'demo_fixture', 'human_required'],
+      ['template_rule_derived', 'demo_fixture', ...integratedField('difficulty'), 'human_required'],
       ['Difficulty is a local UX/rule estimate, not measured from the photo.'],
     ),
     field(
       'estimatedTime',
       'Estimated time',
-      ['template_rule_derived', 'demo_fixture', 'human_required'],
+      ['template_rule_derived', 'demo_fixture', ...integratedField('estimatedTime'), 'human_required'],
       ['Estimated time is derived from step count and demo copy.'],
       stepSequence ? `${stepSequence.steps.length} draft steps` : 'step count unavailable',
     ),
     field(
       'toolList',
       'Tool list',
-      ['template_rule_derived', 'human_required'],
-      ['Tool list comes from generated draft steps and must be reviewed.'],
+      ['template_rule_derived', ...integratedField('toolList'), 'human_required'],
+      [
+        'Tool list comes from generated draft steps and may be informed by semantic candidate integration.',
+        'It must be reviewed and stays category-level.',
+      ],
     ),
     field(
       'stepSequence',
       'Step sequence',
-      ['template_rule_derived', 'human_required'],
+      ['template_rule_derived', ...integratedField('stepSequence'), 'human_required'],
       [
         'Step sequence is generated by deterministic rules from candidate attributes.',
         'Every step is draft-only and requires human review.',
@@ -426,25 +449,25 @@ export const createPhotoToTemplateRealityCheckReport = ({
     field(
       'beginnerTips',
       'Beginner tips',
-      ['placeholder', 'demo_fixture', 'human_required'],
+      ['placeholder', 'demo_fixture', ...integratedField('beginnerTips'), 'human_required'],
       ['Beginner tips are UX copy placeholders until reviewed for the specific template.'],
     ),
     field(
       'commonMistakes',
       'Common mistakes',
-      ['placeholder', 'human_required'],
+      ['placeholder', ...integratedField('commonMistakes'), 'human_required'],
       ['Common mistakes are instructional copy, not extracted from the photo.'],
     ),
     field(
       'correctionTips',
       'Correction tips',
-      ['placeholder', 'human_required'],
+      ['placeholder', ...integratedField('correctionTips'), 'human_required'],
       ['Correction tips require human template editing and user-app copy review.'],
     ),
     field(
       'userAppPreview',
       'User App preview',
-      ['demo_fixture', 'template_rule_derived', 'human_required'],
+      ['demo_fixture', 'template_rule_derived', ...integratedField('userAppPreviewNotes'), 'human_required'],
       ['User App preview remains local/demo-facing and is not a published package.'],
     ),
   ];
@@ -505,9 +528,15 @@ export const createPhotoToTemplateRealityCheckReport = ({
       nextAction: 'continue_with_human_review',
     },
     {
-      id: 'phase_12b_semantic_baseline',
-      message: 'Next phase should build Makeup Semantic Extraction Baseline before claiming stronger photo understanding.',
-      nextAction: 'build_semantic_extraction_baseline',
+      id: draftIntegration
+        ? 'phase_12d_operator_workflow'
+        : 'phase_12b_semantic_baseline',
+      message: draftIntegration
+        ? 'Next phase should review the operator workflow and draft preview QA before any stronger product claim.'
+        : 'Next phase should build Makeup Semantic Extraction Baseline before claiming stronger photo understanding.',
+      nextAction: draftIntegration
+        ? 'continue_with_human_review'
+        : 'build_semantic_extraction_baseline',
     },
     {
       id: 'block_automatic_claim',
@@ -546,6 +575,8 @@ export const createPhotoToTemplateRealityCheckReport = ({
     noPublish: true,
     noProductionWriter: true,
     noUserAppShellReplacement: true,
-    nextRecommendedPhase: 'Phase 12B - Makeup Semantic Extraction Baseline',
+    nextRecommendedPhase: draftIntegration
+      ? 'Phase 12D - Photo-to-Template Operator Workflow & Draft Preview QA'
+      : 'Phase 12B - Makeup Semantic Extraction Baseline',
   };
 };

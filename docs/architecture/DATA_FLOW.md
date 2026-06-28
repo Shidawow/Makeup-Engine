@@ -15,6 +15,7 @@ Real Photo
 -> Vision Analysis
 -> FaceMesh Region QA / Attribute Candidates / Rule-based Template Draft
 -> Photo-to-Template Reality Check / Makeup Semantic Extraction Baseline
+-> Photo-to-Template Draft Integration / Human Review Editing
 -> Template Draft Review Workflow
 -> Template Library Candidate Package
 -> Candidate-to-App Package Contract Preparation
@@ -88,6 +89,13 @@ Real Photo
   and human-review required. They do not claim final recognition, write
   registry state, publish, replace the current User App Shell package, or train
   models.
+- `Photo-to-Template Draft Integration / Human Review Editing`: Phase 12C
+  operator-only layer for binding semantic candidates into editable draft
+  fields and recording local reviewer decisions. It preserves source type,
+  confidence band, evidence, limitations, original candidate value, editable
+  draft value, reviewer decision, reviewer note, `humanReviewRequired`, and
+  `notFinal`. Accepted candidates enter draft QA only; they are not final,
+  published, registry-written, or user-app-package-ready.
 - `Template Draft Review Workflow`: Phase 10B local administrator QA and human
   review branch for draft-only templates. Approval means template library
   candidate only.
@@ -676,3 +684,26 @@ human-required, or unsupported. It does not create production app data flow,
 does not write or mutate registry state, does not publish, does not replace
 the current User App Shell package, does not create a production writer, and
 does not train models.
+
+## Phase 12C Photo-to-Template Draft Integration & Human Review Editing Flow
+
+`VisionAnalysis`
+-> `FaceMeshRegionQaReport`
+-> `MakeupSemanticExtractionReport`
+-> `PhotoToTemplateDraftIntegrationReport`
+-> `PhotoToTemplateDraftSemanticBinding`
+-> `PhotoToTemplateHumanReviewEditingSession`
+-> `TemplateDraftQaReport`
+-> `PhotoToTemplateRealityCheckReport`
+-> next recommendation for Phase 12D operator workflow and draft preview QA.
+
+The 12C flow is operator-only, local, deterministic, and draft-only. It binds
+semantic candidates into editable draft fields while preserving source type,
+confidence band, evidence, limitations, original candidate value, editable
+draft value, reviewer decision, reviewer note, `humanReviewRequired`, and
+`notFinal`.
+
+Accepting a candidate only enters draft QA. It does not make the field final,
+does not publish, does not write or mutate registry state, does not generate or
+mutate `UserAppTemplatePackage`, does not replace the current User App Shell
+package, does not create a production writer, and does not train models.

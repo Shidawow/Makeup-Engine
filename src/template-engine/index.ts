@@ -74,6 +74,8 @@ export * from './realWriteApprovalHandoff';
 export * from './photoToTemplateRealityCheck';
 export * from './photoToTemplateRealityValidation';
 export * from './photoToTemplateRealityHandoff';
+export * from './photoToTemplateDraftIntegration';
+export * from './photoToTemplateHumanReviewEditing';
 export * from './template-builder';
 export * from './template-builder/template-builder';
 export * from './convergence';

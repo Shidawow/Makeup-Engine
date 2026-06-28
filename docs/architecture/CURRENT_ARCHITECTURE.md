@@ -993,3 +993,39 @@ readiness, or User App Shell package replacement. It does not resume Phase 10V,
 write or mutate registries, publish, create production writers, add
 backend/API/camera/AR scope, upload real photos, store real user data, or train
 models.
+
+## Phase 12C Photo-to-Template Draft Integration & Human Review Editing
+
+Phase 12C adds an operator-only bridge from Phase 12B semantic candidates into
+draft template fields.
+
+`src/template-engine/photoToTemplateDraftIntegration.ts` creates
+`PhotoToTemplateDraftIntegrationReport` objects with
+`PhotoToTemplateDraftSemanticBinding` rows for title, summary, style,
+scenario, difficulty, time, tools, steps, tips, mistakes, correction guidance,
+region guidance, and user app preview notes. Every binding preserves source
+type, confidence band, evidence, limitations, `humanReviewRequired`,
+`notFinal`, original candidate value, editable draft value, reviewer decision,
+and reviewer note.
+
+`src/template-engine/photoToTemplateHumanReviewEditing.ts` creates local
+`PhotoToTemplateHumanReviewEditingSession` records so operators can accept,
+edit, reject, mark insufficient, require more review, or block draft fields.
+Accepted and edited fields enter draft QA only; they are not final templates.
+
+`src/components/template-studio/PhotoToTemplateDraftIntegrationPanel.tsx` and
+`src/components/template-studio/PhotoToTemplateHumanReviewEditingPanel.tsx`
+render the Template Workbench binding matrix and editing summary. These panels
+do not appear in Vision Analysis or the ordinary User App path.
+
+Phase 12C also extends Draft QA and Photo-to-Template Reality Check. Draft QA
+blocks semantic candidates that lose candidate-only metadata or make final,
+fully automatic, AI-confirmed, product shade, medical, registry, publish,
+production writer, or shell replacement claims. Reality Check can now label
+draft fields as `semantic_candidate_integrated`, but those fields remain
+human-required and are not final real photo extraction.
+
+Phase 12C does not resume Phase 10V, execute registry writes, mutate registry
+state, publish, create production writers, replace the current User App Shell
+package, mutate `UserAppTemplatePackage`, add backend/API/camera/AR scope,
+upload real photos, store real user data, or train models.

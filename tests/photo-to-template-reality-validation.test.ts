@@ -9,6 +9,7 @@ import {
   photoToTemplateRealityModelConfidenceMislabelBlockedExample,
   photoToTemplateRealityReadyExample,
   photoToTemplateRealityRegistryClaimBlockedExample,
+  photoToTemplateRealitySemanticIntegratedExample,
   photoToTemplateRealityValidationFixtureAsRealBlockedExample,
   photoToTemplateRealityValidationFullyAutomaticBlockedExample,
   photoToTemplateRealityValidationLipColorRealBlockedExample,
@@ -111,5 +112,16 @@ describe('photo-to-template reality validation', () => {
 
     expect(validation.jsonRoundTripStable).toBe(true);
     expect(JSON.parse(JSON.stringify(validation))).toEqual(validation);
+  });
+
+  it('allows semantic candidate integrated source only as human-reviewed draft evidence', () => {
+    const validation = validatePhotoToTemplateRealityCheck(
+      photoToTemplateRealitySemanticIntegratedExample,
+    );
+
+    expect(validation.status).not.toBe('reality_check_blocked');
+    expect(validation.noFullyAutomaticExtractionClaim).toBe(true);
+    expect(validation.noRegistryWrite).toBe(true);
+    expect(photoToTemplateRealitySemanticIntegratedExample.sourceSummary.semantic_candidate_integrated).toBeGreaterThan(0);
   });
 });

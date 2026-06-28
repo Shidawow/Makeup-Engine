@@ -9,6 +9,7 @@ import {
   makeupTemplateDraftReadyExample,
   phase10aExampleAnalysis,
   photoToTemplateRealityReadyExample,
+  photoToTemplateRealitySemanticIntegratedExample,
   ruleBasedStepSequenceReadyExample,
 } from '../src/templates/examples';
 
@@ -115,5 +116,29 @@ describe('photo-to-template reality check', () => {
     expect(report.supportsSemiAutomaticDraft).toBe(true);
     expect(report.supportsFullyAutomaticExtraction).toBe(false);
     expect(JSON.parse(JSON.stringify(report))).toEqual(report);
+  });
+
+  it('labels Phase 12C semantic candidate draft integration without calling it real photo evidence', () => {
+    const title = photoToTemplateRealitySemanticIntegratedExample.fieldEvidence.find(
+      (candidate) => candidate.field === 'templateTitle',
+    );
+    const summary = photoToTemplateRealitySemanticIntegratedExample.fieldEvidence.find(
+      (candidate) => candidate.field === 'templateSummary',
+    );
+    const stepSequence = photoToTemplateRealitySemanticIntegratedExample.fieldEvidence.find(
+      (candidate) => candidate.field === 'stepSequence',
+    );
+
+    expect(title?.sourceTypes).toEqual(
+      expect.arrayContaining(['semantic_candidate_integrated', 'human_required']),
+    );
+    expect(summary?.sourceTypes).toContain('semantic_candidate_integrated');
+    expect(stepSequence?.sourceTypes).toContain('semantic_candidate_integrated');
+    expect(title?.sourceTypes).not.toContain('real_from_photo');
+    expect(photoToTemplateRealitySemanticIntegratedExample.sourceSummary.semantic_candidate_integrated).toBeGreaterThan(0);
+    expect(photoToTemplateRealitySemanticIntegratedExample.supportsFullyAutomaticExtraction).toBe(false);
+    expect(photoToTemplateRealitySemanticIntegratedExample.nextRecommendedPhase).toBe(
+      'Phase 12D - Photo-to-Template Operator Workflow & Draft Preview QA',
+    );
   });
 });

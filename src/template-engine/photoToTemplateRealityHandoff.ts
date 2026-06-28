@@ -3,6 +3,7 @@ import type { PhotoToTemplateRealityValidationResult } from './photoToTemplateRe
 
 export type PhotoToTemplateRealityNextAction =
   | 'ready_for_makeup_semantic_extraction_baseline'
+  | 'ready_for_operator_workflow_draft_preview_qa'
   | 'request_reality_source_labeling_revision'
   | 'request_fixture_vs_real_analysis_clarification'
   | 'request_human_review_workflow_improvement'
@@ -27,7 +28,7 @@ export interface PhotoToTemplateRealityHandoff {
   reportId: string;
   status: PhotoToTemplateRealityHandoffStatus;
   nextAction: PhotoToTemplateRealityNextAction;
-  nextRecommendedPhase: 'Phase 12B - Makeup Semantic Extraction Baseline';
+  nextRecommendedPhase: PhotoToTemplateRealityCheckReport['nextRecommendedPhase'];
   decisionSummary: string;
   items: PhotoToTemplateRealityHandoffItem[];
   validationStatus: PhotoToTemplateRealityValidationResult['status'];
@@ -72,6 +73,12 @@ const nextActionFor = (
   if (validation.status === 'reality_check_ready_with_warnings') {
     return 'request_reality_source_labeling_revision';
   }
+  if (
+    report.nextRecommendedPhase ===
+    'Phase 12D - Photo-to-Template Operator Workflow & Draft Preview QA'
+  ) {
+    return 'ready_for_operator_workflow_draft_preview_qa';
+  }
   return 'ready_for_makeup_semantic_extraction_baseline';
 };
 
@@ -99,10 +106,13 @@ export const createPhotoToTemplateRealityHandoff = ({
     reportId: report.reportId,
     status,
     nextAction,
-    nextRecommendedPhase: 'Phase 12B - Makeup Semantic Extraction Baseline',
+    nextRecommendedPhase: report.nextRecommendedPhase,
     decisionSummary:
       status === 'reality_handoff_ready'
-        ? 'Current chain can hand off to Phase 12B for semantic extraction baseline work; it is still semi-automatic draft generation with human review.'
+        ? report.nextRecommendedPhase ===
+          'Phase 12D - Photo-to-Template Operator Workflow & Draft Preview QA'
+          ? 'Current chain can hand off to Phase 12D for operator workflow and draft preview QA; semantic candidates remain draft-only and human-reviewed.'
+          : 'Current chain can hand off to Phase 12B for semantic extraction baseline work; it is still semi-automatic draft generation with human review.'
         : status === 'reality_handoff_ready_with_warnings'
           ? 'Reality labels need cleanup before stronger semantic extraction work, but no automatic extraction claim is allowed.'
           : status === 'reality_handoff_demo_only'

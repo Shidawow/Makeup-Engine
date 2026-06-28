@@ -24,6 +24,8 @@ import {
   createRealWriteApprovalChecklist,
   createRealWriteApprovalHandoff,
   createPhotoToTemplateRealityCheckReport,
+  createPhotoToTemplateDraftIntegrationReport,
+  createPhotoToTemplateHumanReviewEditingSession,
   createPhotoToTemplateRealityHandoff,
   createRealRegistryWriteImplementationChecklist,
   createRealRegistryWriteImplementationDraft,
@@ -97,6 +99,8 @@ import { GuardedSimulatorReviewGatePanel } from './GuardedSimulatorReviewGatePan
 import { RealWriteApprovalBoundaryPanel } from './RealWriteApprovalBoundaryPanel';
 import { PhotoToTemplateRealityCheckPanel } from './PhotoToTemplateRealityCheckPanel';
 import { MakeupSemanticExtractionPanel } from './MakeupSemanticExtractionPanel';
+import { PhotoToTemplateDraftIntegrationPanel } from './PhotoToTemplateDraftIntegrationPanel';
+import { PhotoToTemplateHumanReviewEditingPanel } from './PhotoToTemplateHumanReviewEditingPanel';
 
 export interface FaceMeshMakeupIntelligencePanelProps {
   analysis?: MakeupAnalysisPipelineResult | null;
@@ -142,12 +146,24 @@ export function FaceMeshMakeupIntelligencePanel({
     analysis,
     regionQa,
   });
+  const photoToTemplateDraftIntegration =
+    createPhotoToTemplateDraftIntegrationReport({
+      semanticReport: makeupSemanticExtractionReport,
+      attributeCandidates,
+      stepSequence,
+      templateDraft,
+    });
+  const photoToTemplateHumanReviewEditing =
+    createPhotoToTemplateHumanReviewEditingSession({
+      integration: photoToTemplateDraftIntegration,
+    });
   const photoToTemplateRealityReport = createPhotoToTemplateRealityCheckReport({
     analysis,
     regionQa,
     attributeCandidates,
     stepSequence,
     templateDraft,
+    draftIntegration: photoToTemplateDraftIntegration,
   });
   const photoToTemplateRealityValidation = validatePhotoToTemplateRealityCheck(
     photoToTemplateRealityReport,
@@ -642,6 +658,12 @@ export function FaceMeshMakeupIntelligencePanel({
           <MakeupSemanticExtractionPanel report={makeupSemanticExtractionReport} />
         </div>
         <div className="mt-3">
+          <PhotoToTemplateDraftIntegrationPanel report={photoToTemplateDraftIntegration} />
+        </div>
+        <div className="mt-3">
+          <PhotoToTemplateHumanReviewEditingPanel session={photoToTemplateHumanReviewEditing} />
+        </div>
+        <div className="mt-3">
           <PhotoToTemplateRealityCheckPanel
             handoff={photoToTemplateRealityHandoff}
             report={photoToTemplateRealityReport}
@@ -659,6 +681,7 @@ export function FaceMeshMakeupIntelligencePanel({
       attributeCandidates,
       stepSequence,
       templateDraft,
+      draftIntegration: photoToTemplateDraftIntegration,
     });
   const resolvedHumanReview =
     humanReview ?? evaluateTemplateDraftHumanReview({ qa: resolvedDraftQa });
@@ -1011,6 +1034,10 @@ export function FaceMeshMakeupIntelligencePanel({
       </section>
 
       <MakeupSemanticExtractionPanel report={makeupSemanticExtractionReport} />
+
+      <PhotoToTemplateDraftIntegrationPanel report={photoToTemplateDraftIntegration} />
+
+      <PhotoToTemplateHumanReviewEditingPanel session={photoToTemplateHumanReviewEditing} />
 
       <PhotoToTemplateRealityCheckPanel
         handoff={photoToTemplateRealityHandoff}

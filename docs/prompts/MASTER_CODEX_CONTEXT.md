@@ -12,10 +12,10 @@ It produces templates, template evidence, correction records, review state, loca
 
 ## Current Phase
 
-- Current business phase: `Phase 12B completed`
-- Last completed phase: `Phase 12B`
-- Last completed phase name: `Phase 12B - Makeup Semantic Extraction Baseline`
-- Next recommended phase: `Phase 12C - Photo-to-Template Draft Integration & Human Review Editing`
+- Current business phase: `Phase 12C completed`
+- Last completed phase: `Phase 12C`
+- Last completed phase name: `Phase 12C - Photo-to-Template Draft Integration & Human Review Editing`
+- Next recommended phase: `Phase 12D - Photo-to-Template Operator Workflow & Draft Preview QA`
 - Strategic focus: registry chain paused after Phase 10U; active work is photo-to-template semantic evidence and human-reviewed draft integration.
 
 Historical recovery marker retained for Phase 10U tests: `Phase 10U completed`.
@@ -109,6 +109,7 @@ Real Photo
 -> User App Demo Readiness & Operator QA
 -> Photo-to-Template Draft Reality Check
 -> Makeup Semantic Extraction Baseline
+-> Photo-to-Template Draft Integration & Human Review Editing
 -> Phase 8 Roadmap / V1 Non-Goals
 -> User App Consumption Manifest
 -> Dataset Review
@@ -135,6 +136,13 @@ Important boundary: `SourceImagePackage` can enter Vision Analysis through opera
   makeup semantic extraction baseline. It creates candidate-only
   `MakeupSemanticExtractionReport` and `MakeupSemanticCandidate` outputs with
   explicit source labels and human-review-required boundaries.
+- `src/template-engine/photoToTemplateDraftIntegration.ts` and
+  `src/template-engine/photoToTemplateHumanReviewEditing.ts`: Phase 12C local
+  draft integration and human review editing logic. They bind semantic
+  candidates to editable draft fields, preserve source type, confidence band,
+  evidence, limitations, original candidate value, editable draft value,
+  reviewer decision, reviewer note, `humanReviewRequired`, and `notFinal`, and
+  keep all accepted values draft-only.
 - `src/template-engine/templateLibraryCandidatePackage.ts`,
   `src/template-engine/templateLibraryCandidateValidation.ts`, and
   `src/template-engine/templateLibraryCandidateHandoff.ts`: Phase 10C local
@@ -624,6 +632,37 @@ field source matrix. The registry chain remains paused after Phase 10U and
 Phase 10V is still not the active next phase.
 
 Next recommended phase: Phase 12B - Makeup Semantic Extraction Baseline.
+
+## Phase 12B Current Capability
+
+Phase 12B completed Makeup Semantic Extraction Baseline. The current
+photo-to-template chain can produce local deterministic semantic candidates for
+lip color, lip finish, blush placement, blush intensity, eye makeup intensity,
+eyeshadow tone, brow definition, highlight signal, contour signal, and overall
+style. All semantic outputs are candidate-only, human-review-required, not
+final recognition, not AI-confirmed, not product shade matching, not medical or
+skin diagnosis, and not fully automatic high-quality extraction.
+
+Historical marker retained for Phase 12B recovery tests: Phase 12B completed.
+
+Next recommended phase: Phase 12C - Photo-to-Template Draft Integration & Human Review Editing.
+
+## Phase 12C Current Capability
+
+Phase 12C completed Photo-to-Template Draft Integration & Human Review Editing.
+The current chain can bind Phase 12B semantic candidates into editable draft
+fields and show a local human review editing session in Template Workbench. The
+binding matrix preserves source type, confidence band, evidence, limitations,
+original candidate value, editable draft value, reviewer decision, reviewer
+note, `humanReviewRequired`, and `notFinal`.
+
+Accepted or edited candidates enter draft QA only. They are not final
+recognition, not AI-confirmed, not published, not registry-written, not
+production writer output, not `UserAppTemplatePackage` mutation, and not User
+App Shell package replacement. The registry chain remains paused after Phase
+10U, and Phase 10V is intentionally not the active next phase.
+
+Next recommended phase: Phase 12D - Photo-to-Template Operator Workflow & Draft Preview QA.
 
 ## Phase 10T Current Capability
 

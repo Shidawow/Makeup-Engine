@@ -6,11 +6,11 @@ Default to compact context. Do not copy full historical chat transcripts. Do not
 
 ## Current State
 
-- `lastCompletedPhase: 12B`
-- `nextRecommendedPhase: 12C`
-- `nextRecommendedPhaseName: Photo-to-Template Draft Integration & Human Review Editing`
+- `lastCompletedPhase: 12C`
+- `nextRecommendedPhase: 12D`
+- `nextRecommendedPhaseName: Photo-to-Template Operator Workflow & Draft Preview QA`
 - Project role: Makeup template production system with a local contract-driven user app shell prototype, not a production user app.
-- Current capability: Phase 12B - Makeup Semantic Extraction Baseline keeps the registry chain paused after Phase 10U and adds local deterministic semantic candidates for lip, blush, eye, brow, highlight, contour, and overall style. The system remains semi-automatic template draft generation with human review and can explain candidate evidence, but cannot claim final recognition, AI-confirmed extraction, product shade matching, medical or skin diagnosis, or fully automatic high-quality makeup extraction.
+- Current capability: Phase 12C - Photo-to-Template Draft Integration & Human Review Editing keeps the registry chain paused after Phase 10U and binds Phase 12B semantic candidates into editable draft fields with source type, confidence band, evidence, limitations, human review requirement, not-final trace, original candidate value, editable draft value, reviewer decision, and reviewer note preserved. Accepted candidates enter draft QA only; the system cannot claim final recognition, AI-confirmed extraction, product shade matching, medical or skin diagnosis, publication, registry readiness, or fully automatic high-quality makeup extraction.
 
 Historical handoff marker retained for Phase 10U recovery tests: `lastCompletedPhase: 10U`, `nextRecommendedPhase: 10V`.
 Historical handoff marker retained for Phase 10T recovery tests: `lastCompletedPhase: 10T`, `nextRecommendedPhase: 10U`.
@@ -64,11 +64,11 @@ Historical handoff marker retained for Phase 9J recovery tests: `lastCompletedPh
 You are continuing Makeup Engine on native GPT / Codex Desktop.
 
 Current state:
-- lastCompletedPhase: 12B
-- nextRecommendedPhase: 12C
-- nextRecommendedPhaseName: Photo-to-Template Draft Integration & Human Review Editing
+- lastCompletedPhase: 12C
+- nextRecommendedPhase: 12D
+- nextRecommendedPhaseName: Photo-to-Template Operator Workflow & Draft Preview QA
 - project role: Makeup template production system with a local contract-driven user app shell prototype, not a production user app
-- current capability: React Web / PWA MVP first is selected; Phases 8B through 9J and 10A through 10U are complete; Phase 11A pauses the registry chain after Phase 10U and resets the active user path to Home, Template Selection, Template Detail, Preparation, Step-by-step Guidance, and Completion. Phase 11B polishes preparation, step guidance, mobile actions, and completion summary. Phase 11C polishes Chinese template content, visual guidance, region guidance, intensity reminders, technique breakdowns, and completion-region summaries. Phase 11D packages the shell for local demo and operator QA. Phase 12A audits photo-to-template reality with field source labels. Phase 12B adds candidate-only Makeup Semantic Extraction Baseline with explicit source labels and human-review boundaries. The current capability remains semi-automatic draft generation with human review, not fully automatic high-quality makeup extraction. The previous registry safety chain remains preserved for administrator review but Phase 10V is intentionally not the active next phase.
+- current capability: React Web / PWA MVP first is selected; Phases 8B through 9J and 10A through 10U are complete; Phase 11A pauses the registry chain after Phase 10U and resets the active user path to Home, Template Selection, Template Detail, Preparation, Step-by-step Guidance, and Completion. Phase 11B polishes preparation, step guidance, mobile actions, and completion summary. Phase 11C polishes Chinese template content, visual guidance, region guidance, intensity reminders, technique breakdowns, and completion-region summaries. Phase 11D packages the shell for local demo and operator QA. Phase 12A audits photo-to-template reality with field source labels. Phase 12B adds candidate-only Makeup Semantic Extraction Baseline with explicit source labels and human-review boundaries. Phase 12C binds those semantic candidates into editable draft fields and local human review editing while preserving all source/confidence/evidence/limitations traces. The current capability remains semi-automatic draft generation with human review, not fully automatic high-quality makeup extraction. The previous registry safety chain remains preserved for administrator review but Phase 10V is intentionally not the active next phase.
 
 Compact context:
 - Use repository documents as source of truth; do not copy full historical chat.
@@ -618,3 +618,46 @@ nextRecommendedPhase: 12B
 Makeup Semantic Extraction Baseline
 Photo-to-Template Draft Reality Check
 registry chain paused after Phase 10U
+
+## Phase 12B Handoff Note
+
+Phase 12B completed Makeup Semantic Extraction Baseline. The current
+photo-to-template chain can produce local deterministic semantic candidates for
+lip, blush, eye, brow, highlight, contour, and overall style. All semantic
+outputs remain candidate-only, human-review-required, not final recognition,
+not AI-confirmed, not product shade matching, not medical or skin diagnosis,
+and not fully automatic high-quality extraction.
+
+Current handoff:
+lastCompletedPhase: 12B
+nextRecommendedPhase: 12C
+Photo-to-Template Draft Integration & Human Review Editing
+Makeup Semantic Extraction Baseline
+candidate-only
+human-review
+semi-automatic template draft generation
+fully automatic high-quality makeup extraction remains forbidden
+
+## Phase 12C Handoff Note
+
+Phase 12C completed Photo-to-Template Draft Integration & Human Review Editing.
+The current chain can bind Phase 12B semantic candidates into editable draft
+fields and show local human review editing in Template Workbench. The binding
+matrix preserves source type, confidence band, evidence, limitations, original
+candidate value, editable draft value, reviewer decision, reviewer note,
+`humanReviewRequired`, and `notFinal`.
+
+Accepting a candidate only enters draft QA. It is not final recognition, not
+AI-confirmed extraction, not published, not registry-written, not production
+writer output, not `UserAppTemplatePackage` mutation, and not User App Shell
+package replacement.
+
+Current handoff:
+lastCompletedPhase: 12C
+nextRecommendedPhase: 12D
+Photo-to-Template Operator Workflow & Draft Preview QA
+Photo-to-Template Draft Integration & Human Review Editing
+semantic candidate binding matrix
+source type / confidence band / evidence / limitations preserved
+registry chain paused after Phase 10U
+Phase 10V is intentionally not the active next phase

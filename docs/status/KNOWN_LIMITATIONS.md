@@ -205,3 +205,14 @@
   writer, replace the current User App Shell package, add backend/camera/AR/API
   scope, upload real photos, store real user data, enter training datasets, or
   resume Phase 10V.
+- Phase 12C Photo-to-Template Draft Integration & Human Review Editing is
+  draft-only and operator-only. It can bind semantic candidates to draft fields
+  and simulate local human review editing, but it cannot treat accepted
+  candidates as final recognition, AI-confirmed extraction, product shade
+  matching, medical or skin diagnosis, fully automatic extraction, registry
+  readiness, publish readiness, production readiness, production writer output,
+  `UserAppTemplatePackage` mutation, or User App Shell package replacement.
+- Phase 12C binding and editing outputs must preserve source type, confidence
+  band, evidence, limitations, original candidate value, editable draft value,
+  reviewer decision, reviewer note, `humanReviewRequired`, and `notFinal`.
+  These internal traces must remain hidden from the ordinary User App path.

@@ -111,3 +111,4 @@ export * from './real-write-approval-checklist.example';
 export * from './real-write-approval-handoff.example';
 export * from './photo-to-template-reality-check.example';
 export * from './makeup-semantic-extraction.example';
+export * from './photo-to-template-draft-integration.example';

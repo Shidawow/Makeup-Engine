@@ -2,18 +2,20 @@
 
 ## Current Phase
 
-Phase 12B: Makeup Semantic Extraction Baseline is complete.
+Phase 12C: Photo-to-Template Draft Integration & Human Review Editing is complete.
 
-Last completed business phase: Phase 12B.
+Last completed business phase: Phase 12C.
 
-Next recommended phase: Phase 12C, Photo-to-Template Draft Integration & Human Review Editing.
+Next recommended phase: Phase 12D, Photo-to-Template Operator Workflow & Draft Preview QA.
 
-Phase 12B keeps the post-10U registry write chain paused and adds a local
-deterministic makeup semantic extraction baseline. The system can now produce
-candidate-only semantic fields for lip, blush, eye, brow, highlight, contour,
-and overall style evidence, but every output still requires human review and is
-not final recognition, not AI-confirmed, not a product shade claim, and not a
-medical or skin diagnosis.
+Phase 12C keeps the post-10U registry write chain paused and safely connects
+Phase 12B semantic candidates into editable draft template fields. Every
+binding preserves source type, confidence band, evidence, limitations,
+human-review-required trace, not-final trace, original candidate value,
+editable draft value, reviewer decision, and reviewer note. Accepting a
+candidate only enters draft QA; it is not final recognition, not AI-confirmed,
+not a product shade claim, not a medical or skin diagnosis, not publication, and
+not registry readiness.
 
 Registry chain status: paused after Phase 10U. Phase 10V actual write
 authorization is not the active next phase.
@@ -167,6 +169,22 @@ authorization is not the active next phase.
   `facemesh_region_derived`, `color_rule_derived`, `brightness_rule_derived`,
   `saturation_rule_derived`, `semantic_rule_derived`,
   `insufficient_evidence`, or `human_review_required`.
+- Render operator-only Phase 12C Photo-to-Template Draft Integration and Human
+  Review Editing panels in Template Workbench. The panels show the semantic
+  candidate to draft field binding matrix, source type, confidence band,
+  evidence, limitations, original candidate value, editable draft value,
+  reviewer decision, reviewer note, checklist, issues, and draft QA readiness.
+- Bind semantic candidates to draft fields for title, summary, style candidate,
+  scenario, difficulty, estimated time, tools, steps, beginner tips, common
+  mistakes, correction tips, region guidance, and user app preview notes while
+  keeping every binding `humanReviewRequired` and `notFinal`.
+- Run Draft QA checks that block semantic candidates being treated as final,
+  fully automatic, AI-confirmed, product shade hard claims, medical claims,
+  registry writes, publication, production writer output, or current User App
+  Shell package replacement.
+- Update Photo-to-Template Reality Check to recognize
+  `semantic_candidate_integrated` as a draft-source label that still requires
+  human review and is not real photo final extraction.
 - Render compact Template Studio workflow, candidate package, candidate-to-app,
   user app package draft preview, official draft gate, and official draft
   builder, draft publish gate, registry preparation, and registry write gate
@@ -193,6 +211,12 @@ authorization is not the active next phase.
   confirmed analysis, product shade matching, medical or skin diagnosis,
   fully automatic extraction, registry readiness, publish readiness, production
   readiness, or User App Shell package replacement.
+- It cannot treat Phase 12C semantic candidate draft integration or human
+  review editing as final makeup recognition, AI-confirmed extraction, product
+  shade matching, medical or skin diagnosis, fully automatic extraction,
+  registry readiness, publish readiness, production readiness, production
+  writer creation, `UserAppTemplatePackage` mutation, or User App Shell package
+  replacement.
 - It cannot publish drafts automatically.
 - It cannot treat candidate packages as published templates.
 - It cannot write candidate packages into the formal Template Library
@@ -312,7 +336,7 @@ authorization is not the active next phase.
 
 ## Recent Validation
 
-Phase 10U validation must include:
+Phase 12C validation must include:
 
 ```bash
 npm run mediapipe:check
@@ -328,6 +352,8 @@ The latest completed validation is recorded in `project-state/test-status.json`.
 
 ## Next Phase Recommendation
 
-Proceed to Phase 10V: Actual Write Authorization Request.
+Proceed to Phase 12D: Photo-to-Template Operator Workflow & Draft Preview QA.
 
-Phase 10V should request explicit owner authorization for any future actual write path while still preventing silent writes, registry mutation, publication, package replacement, backend work, production writer execution, or production readiness claims.
+Phase 12D should review and polish the operator workflow from Vision Analysis
+through semantic extraction, draft integration, human review editing, and draft
+preview QA while keeping the registry write chain paused after Phase 10U.

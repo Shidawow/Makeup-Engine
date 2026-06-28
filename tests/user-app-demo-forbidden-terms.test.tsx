@@ -20,6 +20,11 @@ const forbiddenOrdinaryUserTerms = [
   'AI 自动确认',
   'Confidence 95%',
   '模型原始置信度',
+  'Photo-to-Template Draft Integration',
+  'Photo-to-Template Human Review Editing',
+  'semantic candidate',
+  'confidence band',
+  'reviewer note',
 ];
 
 describe('User App demo forbidden terms QA', () => {

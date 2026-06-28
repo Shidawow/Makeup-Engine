@@ -749,3 +749,30 @@ Phase 12B ordinary-user paths must not expose Makeup Semantic Extraction
 Baseline, semantic candidate source labels, Template Studio, registry/write/
 publish/simulator/production writer, or automatic extraction operator
 terminology by default.
+
+## Phase 12C Photo-to-Template Draft Integration & Human Review Editing
+
+Phase 12C is an operator-only draft integration and human review editing layer.
+It may bind Phase 12B semantic candidates to draft fields and allow local
+review decisions, but every output remains candidate-only, draft-only,
+human-review-required, and not final.
+
+Phase 12C must preserve source type, confidence band, evidence, limitations,
+original candidate value, editable draft value, reviewer decision, reviewer
+note, `humanReviewRequired`, and `notFinal` for every bound field.
+
+Phase 12C must block final recognition claims, AI-confirmed claims, fully
+automatic high-quality extraction claims, product shade hard claims, medical or
+skin diagnosis claims, registry write claims, publish claims, production writer
+claims, User App Shell replacement claims, and `UserAppTemplatePackage`
+mutation markers.
+
+Phase 12C must not resume Phase 10V, execute real registry writes, mutate
+registry state, publish, create a production writer, replace the current User
+App Shell package, add backend/database/login/payment/camera/AR/OpenAI or
+external API scope, upload real photos, store real user data, or train models.
+
+Phase 12C ordinary-user paths must not expose semantic candidate source type,
+confidence band, evidence, limitations, reviewer notes, draft integration,
+human review editing, Template Studio, registry/write/publish/simulator/
+production writer, or automatic extraction operator terminology by default.

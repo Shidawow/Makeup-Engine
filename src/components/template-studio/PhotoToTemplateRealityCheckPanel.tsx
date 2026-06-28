@@ -21,6 +21,7 @@ const sourceLabel: Record<PhotoToTemplateRealitySourceType, string> = {
   brightness_rule_derived: '亮度规则推导',
   saturation_rule_derived: '饱和度规则推导',
   semantic_rule_derived: '语义规则推导',
+  semantic_candidate_integrated: '语义候选接入草稿',
   template_rule_derived: '模板规则推导',
   demo_fixture: 'Demo fixture',
   placeholder: 'Placeholder',
@@ -164,6 +165,7 @@ export function PhotoToTemplateRealityCheckPanel({
         <FieldGroup report={report} source="brightness_rule_derived" />
         <FieldGroup report={report} source="saturation_rule_derived" />
         <FieldGroup report={report} source="semantic_rule_derived" />
+        <FieldGroup report={report} source="semantic_candidate_integrated" />
         <FieldGroup report={report} source="template_rule_derived" />
         <FieldGroup report={report} source="demo_fixture" />
         <FieldGroup report={report} source="placeholder" />

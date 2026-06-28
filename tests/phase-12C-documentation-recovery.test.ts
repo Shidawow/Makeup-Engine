@@ -3,31 +3,36 @@ import { describe, expect, it } from 'vitest';
 
 const read = (file: string) => readFile(file, 'utf8');
 
-describe('Phase 12B documentation recovery', () => {
-  it('documents makeup semantic extraction baseline and field evidence boundaries', async () => {
-    const [baseline, fieldEvidence, phase] = await Promise.all([
-      read('docs/product/makeup-semantic-extraction-baseline.md'),
-      read('docs/product/makeup-semantic-field-evidence.md'),
-      read('docs/phases/phase-12B.md'),
+describe('Phase 12C documentation recovery', () => {
+  it('documents draft integration and human review editing boundaries', async () => {
+    const [integration, editing, phase] = await Promise.all([
+      read('docs/product/photo-to-template-draft-integration.md'),
+      read('docs/product/photo-to-template-human-review-editing.md'),
+      read('docs/phases/phase-12C.md'),
     ]);
-    const combined = `${baseline}\n${fieldEvidence}\n${phase}`;
+    const combined = `${integration}\n${editing}\n${phase}`;
 
-    expect(combined).toContain('Makeup Semantic Extraction Baseline');
-    expect(combined).toContain('lipColorCandidate');
-    expect(combined).toContain('blushPlacementCandidate');
-    expect(combined).toContain('eyeMakeupIntensityCandidate');
-    expect(combined).toContain('region_pixel_derived');
-    expect(combined).toContain('color_rule_derived');
-    expect(combined).toContain('brightness_rule_derived');
-    expect(combined).toContain('saturation_rule_derived');
-    expect(combined).toContain('human review');
-    expect(combined).toContain('candidate-only');
-    expect(combined).toContain('not final recognition');
-    expect(combined).toContain('no product shade claim');
-    expect(combined).toContain('no medical or skin diagnosis');
+    expect(combined).toContain('Photo-to-Template Draft Integration');
+    expect(combined).toContain('Photo-to-Template Human Review Editing');
+    expect(combined).toContain('PhotoToTemplateDraftIntegrationReport');
+    expect(combined).toContain('PhotoToTemplateDraftSemanticBinding');
+    expect(combined).toContain('PhotoToTemplateHumanReviewEditingSession');
+    expect(combined).toContain('sourceType');
+    expect(combined).toContain('confidenceBand');
+    expect(combined).toContain('evidence');
+    expect(combined).toContain('limitations');
+    expect(combined).toContain('humanReviewRequired');
+    expect(combined).toContain('notFinal');
+    expect(combined).toContain('original candidate');
+    expect(combined).toContain('editable draft');
+    expect(combined).toContain('reviewer decision');
+    expect(combined).toContain('reviewer note');
+    expect(combined).toContain('not final');
+    expect(combined).toContain('publish');
+    expect(combined).toContain('registry');
   });
 
-  it('updates status and architecture docs to Phase 12B and Phase 12C', async () => {
+  it('updates status and architecture docs to Phase 12C and Phase 12D', async () => {
     const docs = await Promise.all([
       read('START_HERE.md'),
       read('docs/status/CURRENT_PROJECT_STATUS.md'),
@@ -43,17 +48,19 @@ describe('Phase 12B documentation recovery', () => {
     ]);
     const combined = docs.join('\n');
 
-    expect(combined).toContain('Phase 12B');
-    expect(combined).toContain('Makeup Semantic Extraction Baseline');
     expect(combined).toContain('Phase 12C');
     expect(combined).toContain('Photo-to-Template Draft Integration & Human Review Editing');
+    expect(combined).toContain('Phase 12D');
+    expect(combined).toContain('Photo-to-Template Operator Workflow & Draft Preview QA');
+    expect(combined).toContain('semantic_candidate_integrated');
     expect(combined).toContain('registry chain paused after Phase 10U');
     expect(combined).toContain('Phase 10V is intentionally not the active next phase');
     expect(combined).toContain('candidate-only');
-    expect(combined).toContain('not fully automatic');
+    expect(combined).toContain('draft-only');
+    expect(combined).toContain('fully automatic high-quality');
   });
 
-  it('keeps 12B history while project-state advances to 12C without resuming registry writes', async () => {
+  it('updates project-state to 12C without resuming registry writes', async () => {
     const stateFiles = await Promise.all([
       read('project-state/project-state.snapshot.json'),
       read('project-state/latest-handoff.json'),
@@ -69,12 +76,11 @@ describe('Phase 12B documentation recovery', () => {
     expect(combined).toContain('"lastCompletedPhase": "12C"');
     expect(combined).toContain('"currentPhaseId": "12C"');
     expect(combined).toContain('"nextRecommendedPhase": "12D"');
-    expect(combined).toContain('Makeup Semantic Extraction Baseline');
-    expect(combined).toContain('MakeupSemanticExtractionReport');
-    expect(combined).toContain('MakeupSemanticCandidate');
-    expect(combined).toContain('MakeupSemanticExtractionPanel');
+    expect(combined).toContain('Photo-to-Template Draft Integration & Human Review Editing');
     expect(combined).toContain('PhotoToTemplateDraftIntegrationReport');
     expect(combined).toContain('PhotoToTemplateHumanReviewEditingSession');
+    expect(combined).toContain('PhotoToTemplateDraftIntegrationPanel');
+    expect(combined).toContain('PhotoToTemplateHumanReviewEditingPanel');
     expect(combined).toContain('candidate-only');
     expect(combined).toContain('registry chain paused after Phase 10U');
     expect(combined).not.toContain('Phase 10V actual write authorization is active');

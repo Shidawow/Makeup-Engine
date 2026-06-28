@@ -11,6 +11,7 @@ import {
   ruleBasedStepSequenceReadyExample,
 } from './makeup-attribute-candidates.example';
 import { faceMeshRegionQaReadyExample } from './facemesh-region-qa.example';
+import { photoToTemplateDraftIntegrationReadyExample } from './photo-to-template-draft-integration.example';
 
 const replaceField = (
   report: PhotoToTemplateRealityCheckReport,
@@ -36,6 +37,16 @@ export const photoToTemplateRealityReadyExample =
     attributeCandidates: makeupAttributeCandidatesReadyExample,
     stepSequence: ruleBasedStepSequenceReadyExample,
     templateDraft: makeupTemplateDraftReadyExample,
+  });
+
+export const photoToTemplateRealitySemanticIntegratedExample =
+  createPhotoToTemplateRealityCheckReport({
+    analysis: phase10aExampleAnalysis,
+    regionQa: faceMeshRegionQaReadyExample,
+    attributeCandidates: makeupAttributeCandidatesReadyExample,
+    stepSequence: ruleBasedStepSequenceReadyExample,
+    templateDraft: makeupTemplateDraftReadyExample,
+    draftIntegration: photoToTemplateDraftIntegrationReadyExample,
   });
 
 export const photoToTemplateRealityDemoOnlyExample =
@@ -88,6 +99,9 @@ export const photoToTemplateRealityMissingHumanRequiredBlockedExample = {
 export const photoToTemplateRealityValidationReadyExample =
   validatePhotoToTemplateRealityCheck(photoToTemplateRealityReadyExample);
 
+export const photoToTemplateRealityValidationSemanticIntegratedExample =
+  validatePhotoToTemplateRealityCheck(photoToTemplateRealitySemanticIntegratedExample);
+
 export const photoToTemplateRealityValidationWarningExample =
   validatePhotoToTemplateRealityCheck(
     photoToTemplateRealityMissingPlaceholderWarningExample,
@@ -127,6 +141,12 @@ export const photoToTemplateRealityHandoffReadyExample =
   createPhotoToTemplateRealityHandoff({
     report: photoToTemplateRealityReadyExample,
     validation: photoToTemplateRealityValidationReadyExample,
+  });
+
+export const photoToTemplateRealityHandoffSemanticIntegratedExample =
+  createPhotoToTemplateRealityHandoff({
+    report: photoToTemplateRealitySemanticIntegratedExample,
+    validation: photoToTemplateRealityValidationSemanticIntegratedExample,
   });
 
 export const photoToTemplateRealityHandoffBlockedExample =
