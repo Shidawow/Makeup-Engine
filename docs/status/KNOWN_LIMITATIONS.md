@@ -87,6 +87,14 @@
 - Phase 10A uses machine-local ignored MediaPipe assets under
   `public/mediapipe/**`; `.task`, `.wasm`, and large runtime files must remain
   uncommitted.
+- Phase 13A MVP Trial Content Pack & Founder Demo Review is founder-demo-only
+  local content preparation. It is not production readiness, not official
+  Template Library content, not registry readiness, not publication, not
+  production writer scope, and not User App Shell package replacement.
+- Phase 13A trial templates are local MVP trial content and require human
+  review; they cannot be claimed as fully automatic photo extraction, AI
+  confirmed final recognition, medical/product shade truth, registry-written
+  content, or published templates.
 - Phase 10B template draft QA and human review are local administrator workflow
   aids only; they are not final recognition, production publishing, backend
   workflow, AI approval, training approval, or production user app behavior.

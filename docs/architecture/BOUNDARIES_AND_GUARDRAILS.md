@@ -826,3 +826,26 @@ Workflow, Draft Preview QA, sourceType, confidenceBand, evidence, limitations,
 reviewerDecision, reviewerNote, humanReviewRequired, notFinal, Template Studio,
 registry/write/publish/simulator/production writer, Pipeline Trace, debug JSON,
 or automatic extraction operator terminology by default.
+
+## Phase 13A MVP Trial Content Pack & Founder Demo Review
+
+Phase 13A is a founder-demo-only content and review layer. Trial content can be
+shown as MVP demo content, but it is not official Template Library content and
+is not production readiness.
+
+Phase 13A must block ordinary user exposure of Founder Demo Review, trial
+content pack, sourceLabel, demo_fixture, notFromAutomaticExtraction,
+humanReviewRecommended, Acceptance Trial, Operator Workflow, Draft Preview QA,
+Template Studio, registry/write/publish/simulator/production writer, Pipeline
+Trace, debug JSON, or automatic extraction operator terminology by default.
+
+Phase 13A must block fully automatic high-quality extraction claims,
+AI-confirmed final recognition claims, product shade hard claims, medical or
+skin diagnosis claims, registry write claims, publish claims, production writer
+claims, User App Shell replacement claims, and `UserAppTemplatePackage`
+mutation markers.
+
+Phase 13A must not resume Phase 10V, execute real registry writes, mutate
+registry state, publish, create a production writer, replace the current User
+App Shell package, add backend/database/login/payment/camera/AR/OpenAI or
+external API scope, upload real photos, store real user data, or train models.

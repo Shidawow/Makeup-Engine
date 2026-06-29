@@ -1071,5 +1071,29 @@ not write registry state, does not publish, does not generate or mutate a
 formal `UserAppTemplatePackage`, does not replace the current User App Shell
 package, and does not create a production writer.
 
-The next recommended architecture step is Phase 13A - MVP Trial Content Pack &
-Founder Demo Review.
+## Phase 13A MVP Trial Content Pack & Founder Demo Review
+
+Phase 13A adds a local founder-demo content layer on top of the 12E acceptance
+trial.
+
+`src/template-engine/mvpTrialContentPack.ts` defines `MvpTrialContentPack`,
+`MvpTrialTemplate`, and `MvpTrialTemplateStep`. The current fixture includes
+新手通勤淡妆, 日系温柔约会妆, and 韩系清透低饱和妆.
+
+`src/template-engine/founderDemoReview.ts` defines
+`FounderDemoReviewReport`, `FounderDemoReviewCheck`,
+`FounderDemoReviewIssue`, `FounderDemoReviewRecommendation`,
+`FounderDemoReviewDecision`, and status values for ready, ready with warnings,
+and blocked.
+
+`src/components/template-studio/FounderDemoReviewPanel.tsx` renders the review
+in Template Studio operator area only. It does not appear in Vision Analysis and
+does not appear in the ordinary User App path.
+
+Phase 13A does not resume Phase 10V, execute registry writes, mutate registry
+state, publish, create production writers, replace the current User App Shell
+package, mutate `UserAppTemplatePackage`, add backend/API/camera/AR scope,
+upload real photos, store real user data, or train models.
+
+The next recommended architecture step is Phase 13B - Founder Trial Feedback
+Capture & MVP Gap Prioritization.

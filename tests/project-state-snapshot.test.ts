@@ -31,16 +31,16 @@ describe('project state snapshot', () => {
 
     expect(snapshot.projectName).toBe('Makeup Engine');
     expect(snapshot.projectRole).toContain('Makeup template production system');
-    expect(snapshot.lastCompletedPhase).toBe('12E');
-    expect(snapshot.lastCompletedBusinessPhase).toBe('12E');
-    expect(snapshot.currentPhaseId).toBe('12E');
+    expect(snapshot.lastCompletedPhase).toBe('13A');
+    expect(snapshot.lastCompletedBusinessPhase).toBe('13A');
+    expect(snapshot.currentPhaseId).toBe('13A');
     expect(snapshot.currentPhase).toBeTruthy();
     expect(snapshot.currentPhase).toContain(
-      'Photo-to-Template End-to-End Demo Script & Acceptance Trial',
+      'MVP Trial Content Pack & Founder Demo Review',
     );
-    expect(snapshot.nextRecommendedPhase).toBe('13A');
-    expect(snapshot.nextRecommendedPhaseName).toContain('MVP Trial Content Pack & Founder Demo Review');
-    expect(snapshot.nextAction).toContain('Phase 13A');
+    expect(snapshot.nextRecommendedPhase).toBe('13B');
+    expect(snapshot.nextRecommendedPhaseName).toContain('Founder Trial Feedback Capture & MVP Gap Prioritization');
+    expect(snapshot.nextAction).toContain('Phase 13B');
     expect(snapshot.mainDataFlow).toEqual(
       expect.arrayContaining([
         'SourceImagePackage',
@@ -122,6 +122,15 @@ describe('project state snapshot', () => {
         'PhotoToTemplateAcceptanceTrialRouteAUserAppMvp',
         'PhotoToTemplateAcceptanceTrialRouteBVisionAnalysis',
         'PhotoToTemplateAcceptanceTrialRouteCTemplateStudioOperatorWorkflow',
+        'MvpTrialContentPack',
+        'MvpTrialTemplate',
+        'MvpTrialTemplateStep',
+        'FounderDemoReviewReport',
+        'FounderDemoReviewCheck',
+        'FounderDemoReviewIssue',
+        'FounderDemoReviewRecommendation',
+        'FounderDemoReviewDecision',
+        'FounderDemoReviewPanel',
         'UserPhotoIntakePlaceholder',
         'UserPersonalizationPlaceholder',
         'UserPhotoPrivacyBoundary',
@@ -344,9 +353,12 @@ describe('project state snapshot', () => {
     expect(snapshot.knownLimitations.join('\n')).toContain('Phase 12C');
     expect(snapshot.knownLimitations.join('\n')).toContain('Phase 12D');
     expect(snapshot.knownLimitations.join('\n')).toContain('Phase 12E');
+    expect(snapshot.knownLimitations.join('\n')).toContain('Phase 13A');
     expect(snapshot.knownLimitations.join('\n')).toContain('Photo-to-Template Draft Integration');
     expect(snapshot.knownLimitations.join('\n')).toContain('Photo-to-Template Operator Workflow');
     expect(snapshot.knownLimitations.join('\n')).toContain('Photo-to-Template End-to-End Demo Script & Acceptance Trial');
+    expect(snapshot.knownLimitations.join('\n')).toContain('MVP Trial Content Pack & Founder Demo Review');
+    expect(snapshot.knownLimitations.join('\n')).toContain('founder-demo-only');
     expect(snapshot.knownLimitations.join('\n')).toContain('Draft Preview QA');
     expect(snapshot.knownLimitations.join('\n')).toContain('acceptance trial is not production readiness');
     expect(snapshot.knownLimitations.join('\n')).toContain('candidate-only');

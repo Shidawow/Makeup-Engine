@@ -29,6 +29,7 @@ import {
   createPhotoToTemplateHumanReviewEditingSession,
   createPhotoToTemplateOperatorWorkflowReport,
   createPhotoToTemplateAcceptanceTrialReport,
+  createFounderDemoReviewReport,
   createPhotoToTemplateRealityHandoff,
   createRealRegistryWriteImplementationChecklist,
   createRealRegistryWriteImplementationDraft,
@@ -74,6 +75,7 @@ import {
   validateUserAppTemplatePackageRegistryPreparation,
   validateTemplateLibraryCandidatePackage,
 } from '../../template-engine';
+import { mvpTrialContentPackReadyExample } from '../../templates/examples';
 import type {
   TemplateDraftHumanReview,
   TemplateDraftQaResult,
@@ -107,6 +109,7 @@ import { PhotoToTemplateDraftPreviewQaPanel } from './PhotoToTemplateDraftPrevie
 import { PhotoToTemplateHumanReviewEditingPanel } from './PhotoToTemplateHumanReviewEditingPanel';
 import { PhotoToTemplateOperatorWorkflowPanel } from './PhotoToTemplateOperatorWorkflowPanel';
 import { PhotoToTemplateAcceptanceTrialPanel } from './PhotoToTemplateAcceptanceTrialPanel';
+import { FounderDemoReviewPanel } from './FounderDemoReviewPanel';
 
 export interface FaceMeshMakeupIntelligencePanelProps {
   analysis?: MakeupAnalysisPipelineResult | null;
@@ -205,6 +208,12 @@ export function FaceMeshMakeupIntelligencePanel({
         readinessScoreCorrectlyLabeled: true,
         buildAndTestsPassed: false,
       });
+    const emptyFounderDemoReview = createFounderDemoReviewReport({
+      contentPack: mvpTrialContentPackReadyExample,
+      acceptanceTrial: emptyPhotoToTemplateAcceptanceTrial,
+      operatorWorkflowExplainable:
+        emptyPhotoToTemplateAcceptanceTrial.status !== 'acceptance_trial_blocked',
+    });
 
     return (
       <section className="rounded-lg border border-stone-200 bg-white p-4 shadow-soft">
@@ -705,6 +714,12 @@ export function FaceMeshMakeupIntelligencePanel({
           <PhotoToTemplateAcceptanceTrialPanel report={emptyPhotoToTemplateAcceptanceTrial} />
         </div>
         <div className="mt-3">
+          <FounderDemoReviewPanel
+            contentPack={mvpTrialContentPackReadyExample}
+            report={emptyFounderDemoReview}
+          />
+        </div>
+        <div className="mt-3">
           <PhotoToTemplateRealityCheckPanel
             handoff={photoToTemplateRealityHandoff}
             report={photoToTemplateRealityReport}
@@ -1000,6 +1015,12 @@ export function FaceMeshMakeupIntelligencePanel({
       readinessScoreCorrectlyLabeled: true,
       buildAndTestsPassed: false,
     });
+  const founderDemoReview = createFounderDemoReviewReport({
+    contentPack: mvpTrialContentPackReadyExample,
+    acceptanceTrial: photoToTemplateAcceptanceTrial,
+    operatorWorkflowExplainable:
+      photoToTemplateAcceptanceTrial.status !== 'acceptance_trial_blocked',
+  });
 
   return (
     <section className="grid gap-4">
@@ -1110,6 +1131,11 @@ export function FaceMeshMakeupIntelligencePanel({
       <PhotoToTemplateDraftPreviewQaPanel report={photoToTemplateDraftPreviewQa} />
 
       <PhotoToTemplateAcceptanceTrialPanel report={photoToTemplateAcceptanceTrial} />
+
+      <FounderDemoReviewPanel
+        contentPack={mvpTrialContentPackReadyExample}
+        report={founderDemoReview}
+      />
 
       <PhotoToTemplateRealityCheckPanel
         handoff={photoToTemplateRealityHandoff}

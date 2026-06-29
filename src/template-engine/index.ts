@@ -79,6 +79,8 @@ export * from './photoToTemplateHumanReviewEditing';
 export * from './photoToTemplateDraftPreviewQa';
 export * from './photoToTemplateOperatorWorkflow';
 export * from './photoToTemplateAcceptanceTrial';
+export * from './mvpTrialContentPack';
+export * from './founderDemoReview';
 export * from './template-builder';
 export * from './template-builder/template-builder';
 export * from './convergence';

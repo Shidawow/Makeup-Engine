@@ -130,3 +130,13 @@ Do not store real trial participant records in `project-state`.
 If the trial is ready or ready with warnings, the next recommended phase is
 Phase 13A - MVP Trial Content Pack & Founder Demo Review. If blocked, fix the
 blocking demo/script/copy boundary before founder review.
+## Phase 13A Founder Demo Review Handoff
+
+Acceptance Trial now hands off to Phase 13A Founder Demo Review. The founder
+review consumes the acceptance trial demo routes and combines them with the MVP
+trial content pack.
+
+The handoff remains local and operator-only. It does not write registry state,
+does not publish, does not create a production writer, does not replace the
+current User App Shell package, and does not generate or mutate a formal
+`UserAppTemplatePackage`.

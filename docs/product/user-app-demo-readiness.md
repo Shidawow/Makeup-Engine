@@ -115,3 +115,13 @@ This is still not production readiness. It does not resume registry writes,
 does not publish, does not replace the User App Shell package, and does not
 claim fully automatic high-quality makeup extraction. Semantic candidates
 remain candidate-only and human-review-required.
+## Phase 13A Founder Demo Review Addendum
+
+The User App demo path now feeds Phase 13A Founder Demo Review. The ordinary
+user path should show template discovery, template detail, preparation, guided
+steps, completion, and local-only privacy copy. It must not expose Founder Demo
+Review, MVP trial content pack, registry, publish, production writer, Draft
+Preview QA, Acceptance Trial, Template Studio, source labels, or debug terms.
+
+Founder review can use the three local MVP trial templates, but those templates
+remain demo content only and are not official Template Library content.

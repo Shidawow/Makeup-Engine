@@ -2,13 +2,13 @@
   "projectName": "Makeup Engine",
   "projectRole": "Makeup template production system with a local contract-driven user app shell prototype for a future separate user app MVP",
   "projectIsUserFacingApp": false,
-  "lastCompletedPhase": "12E",
-  "lastCompletedBusinessPhase": "12E",
-  "currentPhase": "Phase 12E - Photo-to-Template End-to-End Demo Script & Acceptance Trial",
-  "currentPhaseId": "12E",
-  "nextRecommendedPhase": "13A",
-  "nextRecommendedPhaseName": "MVP Trial Content Pack & Founder Demo Review",
-  "nextAction": "Proceed to Phase 13A - MVP Trial Content Pack & Founder Demo Review.",
+  "lastCompletedPhase": "13A",
+  "lastCompletedBusinessPhase": "13A",
+  "currentPhase": "Phase 13A - MVP Trial Content Pack & Founder Demo Review",
+  "currentPhaseId": "13A",
+  "nextRecommendedPhase": "13B",
+  "nextRecommendedPhaseName": "Founder Trial Feedback Capture & MVP Gap Prioritization",
+  "nextAction": "Proceed to Phase 13B - Founder Trial Feedback Capture & MVP Gap Prioritization.",
   "mainDataFlow": [
     "SourceImagePackage",
     "SourceImageEntry",
@@ -299,7 +299,18 @@
     "PhotoToTemplateE2eDemoScript",
     "PhotoToTemplateAcceptanceTrialRouteAUserAppMvp",
     "PhotoToTemplateAcceptanceTrialRouteBVisionAnalysis",
-    "PhotoToTemplateAcceptanceTrialRouteCTemplateStudioOperatorWorkflow"
+    "PhotoToTemplateAcceptanceTrialRouteCTemplateStudioOperatorWorkflow",
+    "MvpTrialContentPack",
+    "MvpTrialTemplate",
+    "MvpTrialTemplateStep",
+    "FounderDemoReviewReport",
+    "FounderDemoReviewCheck",
+    "FounderDemoReviewIssue",
+    "FounderDemoReviewRecommendation",
+    "FounderDemoReviewDecision",
+    "FounderDemoReviewPanel",
+    "FounderDemoReviewForbiddenClaimChecks",
+    "FounderDemoReviewPrivacyBoundaryChecks"
   ],
   "mainModules": [
     "src/vision",
@@ -346,7 +357,18 @@
     "docs/phases/phase-12E.md",
     "tests/photo-to-template-acceptance-trial.test.ts",
     "tests/photo-to-template-acceptance-trial-panel.test.tsx",
-    "tests/phase-12E-documentation-recovery.test.ts"
+    "tests/phase-12E-documentation-recovery.test.ts",
+    "src/template-engine/mvpTrialContentPack.ts",
+    "src/template-engine/founderDemoReview.ts",
+    "src/templates/examples/mvp-trial-content-pack.example.ts",
+    "src/components/template-studio/FounderDemoReviewPanel.tsx",
+    "docs/product/mvp-trial-content-pack.md",
+    "docs/product/founder-demo-review-script.md",
+    "docs/phases/phase-13A.md",
+    "tests/mvp-trial-content-pack.test.ts",
+    "tests/founder-demo-review.test.ts",
+    "tests/founder-demo-review-panel.test.tsx",
+    "tests/phase-13A-documentation-recovery.test.ts"
   ],
   "legacyFrozenModules": [
     "src/engine",
@@ -354,11 +376,11 @@
     "src/intelligence/runtime"
   ],
   "lastValidation": {
-    "phase": "12E",
+    "phase": "13A",
     "mediapipeCheck": "passed",
     "typecheck": "passed",
     "test": "passed",
-    "scopedTests": "passed (16 files / 61 tests)",
+    "scopedTests": "passed (13 files / 45 tests)",
     "build": "passed",
     "projectStatus": "passed",
     "projectStatusJson": "passed",
@@ -366,17 +388,17 @@
     "contextPackJson": "passed",
     "browserVerification": "passed",
     "browserValidation": "passed",
-    "testFiles": 16,
-    "tests": 61,
-    "phase12DScopedTests": "passed",
+    "testFiles": 13,
+    "tests": 45,
+    "phase13AScopedTests": "passed",
     "browserValidationNotes": [
-      "User App route A loads by default with local-only/no-upload/no-training copy and does not expose Photo-to-Template Acceptance Trial, sourceType, confidenceBand, humanReviewRequired, notFinal, registry, or production writer terms.",
-      "Vision Analysis route B shows image/mask, FaceMesh, MediaPipe readiness/recovery copy, and vision analysis content while keeping Acceptance Trial, Operator Workflow, and Draft Preview QA out of the tab; local MediaPipe assets are ready and no mock fallback copy is shown.",
-      "Template Studio route C shows Photo-to-Template Operator Workflow, Draft Preview QA, and one Photo-to-Template Acceptance Trial panel with Demo Route A/B/C, draft-preview-only, not-production-readiness, registry paused, publish blocked, production writer blocked, and User App Shell replacement blocked copy.",
-      "Template Studio route C does not show positive claims for formal UserAppTemplatePackage generation, publishing to User App, or registry write."
+      "User App default route loads with local-only/no-upload/no-training copy and does not expose Founder Demo Review, MVP trial content, trial content pack, sourceLabel, demo_fixture, notFromAutomaticExtraction, or humanReviewRecommended terms.",
+      "Vision Analysis route shows FaceMesh/MediaPipe readiness and does not show Founder Demo Review or Photo-to-Template Acceptance Trial panels; local MediaPipe assets are ready and no mock fallback copy is shown.",
+      "Template Studio route shows Founder Demo Review with trial content pack summary, 新手通勤淡妆, 日系温柔约会妆, 韩系清透低饱和妆, Founder Demo Review-not-publish copy, current MVP trial content copy, not-official-library copy, and no-registry/no-publish boundary.",
+      "Template Studio route does not show positive claims for formal UserAppTemplatePackage generation, publishing to User App, registry write, production writer creation, or registry mutation.",
+      "Page console errors: 0. Browser tool surfaced external Statsig network timeout noise during setup, unrelated to the local app page."
     ],
-    "summary": "Phase 12E validation passed: npm run mediapipe:check, scoped tests (16 files / 61 tests), npm run typecheck, npm run build, npm run project:status, npm run project:context, JSON status/context commands, and browser validation.",
-    "phase12EScopedTests": "passed"
+    "summary": "Phase 13A validation passed: npm run mediapipe:check, scoped tests (13 files / 45 tests), npm run typecheck, npm run build, npm run project:status, npm run project:context, JSON status/context commands, and browser validation."
   },
   "knownLimitations": [
     "SourceImagePackage is not a training dataset",
@@ -500,7 +522,10 @@
     "Phase 12E uses test/demo photo input only; it does not store real photos, base64 images, local absolute paths, object URLs, personal data, backend records, or training data.",
     "Phase 12E keeps fully automatic high-quality extraction, AI-confirmed recognition, medical claims, exact product shade claims, publish readiness, registry readiness, and production readiness blocked.",
     "Phase 13A - MVP Trial Content Pack & Founder Demo Review is the recommended next phase; Phase 10V remains intentionally paused.",
-    "acceptance trial is not production readiness"
+    "acceptance trial is not production readiness",
+    "Phase 13A MVP Trial Content Pack & Founder Demo Review is founder-demo-only local content preparation, not production readiness, official Template Library content, registry readiness, publication, production writer scope, or User App Shell package replacement.",
+    "Phase 13A trial templates are local MVP trial content and require human review; they cannot be claimed as fully automatic photo extraction, AI confirmed final recognition, medical/product shade truth, registry-written content, or published templates.",
+    "Phase 13A does not resume Phase 10V and keeps the registry chain paused after Phase 10U."
   ],
   "recoveryEntryFiles": [
     "START_HERE.md",
@@ -778,13 +803,13 @@
     "Do not treat Phase 12D Draft Preview QA as final recognition, publish readiness, registry readiness, production readiness, production writer output, UserAppTemplatePackage mutation, or User App Shell package replacement.",
     "Do not expose sourceType, confidenceBand, evidence, limitations, reviewerDecision, reviewer notes, humanReviewRequired, or notFinal in the ordinary User App path."
   ],
-  "currentPhaseName": "Photo-to-Template End-to-End Demo Script & Acceptance Trial",
+  "currentPhaseName": "MVP Trial Content Pack & Founder Demo Review",
   "validation": {
-    "phase": "12E",
+    "phase": "13A",
     "mediapipeCheck": "passed",
     "typecheck": "passed",
     "test": "passed",
-    "scopedTests": "passed (16 files / 61 tests)",
+    "scopedTests": "passed (13 files / 45 tests)",
     "build": "passed",
     "projectStatus": "passed",
     "projectStatusJson": "passed",
@@ -792,19 +817,19 @@
     "contextPackJson": "passed",
     "browserVerification": "passed",
     "browserValidation": "passed",
-    "testFiles": 16,
-    "tests": 61,
-    "phase12DScopedTests": "passed",
+    "testFiles": 13,
+    "tests": 45,
+    "phase13AScopedTests": "passed",
     "browserValidationNotes": [
-      "User App route A loads by default with local-only/no-upload/no-training copy and does not expose Photo-to-Template Acceptance Trial, sourceType, confidenceBand, humanReviewRequired, notFinal, registry, or production writer terms.",
-      "Vision Analysis route B shows image/mask, FaceMesh, MediaPipe readiness/recovery copy, and vision analysis content while keeping Acceptance Trial, Operator Workflow, and Draft Preview QA out of the tab; local MediaPipe assets are ready and no mock fallback copy is shown.",
-      "Template Studio route C shows Photo-to-Template Operator Workflow, Draft Preview QA, and one Photo-to-Template Acceptance Trial panel with Demo Route A/B/C, draft-preview-only, not-production-readiness, registry paused, publish blocked, production writer blocked, and User App Shell replacement blocked copy.",
-      "Template Studio route C does not show positive claims for formal UserAppTemplatePackage generation, publishing to User App, or registry write."
+      "User App default route loads with local-only/no-upload/no-training copy and does not expose Founder Demo Review, MVP trial content, trial content pack, sourceLabel, demo_fixture, notFromAutomaticExtraction, or humanReviewRecommended terms.",
+      "Vision Analysis route shows FaceMesh/MediaPipe readiness and does not show Founder Demo Review or Photo-to-Template Acceptance Trial panels; local MediaPipe assets are ready and no mock fallback copy is shown.",
+      "Template Studio route shows Founder Demo Review with trial content pack summary, 新手通勤淡妆, 日系温柔约会妆, 韩系清透低饱和妆, Founder Demo Review-not-publish copy, current MVP trial content copy, not-official-library copy, and no-registry/no-publish boundary.",
+      "Template Studio route does not show positive claims for formal UserAppTemplatePackage generation, publishing to User App, registry write, production writer creation, or registry mutation.",
+      "Page console errors: 0. Browser tool surfaced external Statsig network timeout noise during setup, unrelated to the local app page."
     ],
-    "summary": "Phase 12E validation passed: npm run mediapipe:check, scoped tests (16 files / 61 tests), npm run typecheck, npm run build, npm run project:status, npm run project:context, JSON status/context commands, and browser validation.",
-    "phase12EScopedTests": "passed"
+    "summary": "Phase 13A validation passed: npm run mediapipe:check, scoped tests (13 files / 45 tests), npm run typecheck, npm run build, npm run project:status, npm run project:context, JSON status/context commands, and browser validation."
   },
-  "updatedAt": "2026-06-28T16:54:28.109Z",
+  "updatedAt": "2026-06-29T12:27:11.590Z",
   "anonymousTrialDryRunDecision": {
     "phase9GResult": [
       "anonymous internal trial dry run pack with required scenarios",
@@ -867,7 +892,7 @@
     "publishBoundary": "Approval means template library candidate only; no automatic publish and no automatic UserAppTemplatePackage generation.",
     "nextPhase": "Phase 10C - Template Library Candidate Packaging"
   },
-  "summary": "Phase 12E - Photo-to-Template End-to-End Demo Script & Acceptance Trial is complete. It adds an end-to-end demo script and acceptance trial over User App route A, Vision Analysis route B, and Template Workbench route C while keeping registry writes, publishing, production writers, UserAppTemplatePackage mutation, User App Shell replacement, backend, camera/AR, external AI/API calls, and training blocked. Next: Phase 13A - MVP Trial Content Pack & Founder Demo Review.",
+  "summary": "Phase 13A - MVP Trial Content Pack & Founder Demo Review is complete. It adds a local MVP trial content pack and Founder Demo Review while keeping registry writes, publishing, production writers, UserAppTemplatePackage mutation, User App Shell replacement, backend, camera/AR, external AI/API calls, real user data collection, and training blocked. Next: Phase 13B - Founder Trial Feedback Capture & MVP Gap Prioritization.",
   "templateLibraryCandidatePackagingDecision": {
     "packageBoundary": "Candidate package is local, reviewable, and not a published template.",
     "validationBoundary": "Validation blocks missing approval, QA blocked state, privacy risk, raw image references, final/medical/shade claims, and UserAppTemplatePackage mutation markers.",
@@ -958,8 +983,8 @@
     "handoffBoundary": "Handoff does not write registry, publish, replace the current User App Shell package, or mark production readiness.",
     "nextPhase": "Phase 10K - Controlled UserAppTemplatePackage Registry Writer Draft"
   },
-  "phase": "12E",
-  "lastUpdatedPhase": "12E",
+  "phase": "13A",
+  "lastUpdatedPhase": "13A",
   "controlledRegistryWriterDraftDecision": {
     "draftBoundary": "Phase 10K creates dry-run write plan, diff preview, existing entry preview, and rollback plan only; it does not write registry.",
     "validationBoundary": "Phase 10K validation checks dry-run/no-write/no-publish/no-shell-replacement/no-production boundaries and does not write registry.",
@@ -1020,11 +1045,11 @@
     "handoffBoundary": "handoff cannot execute registry writes or mutate registry state"
   },
   "results": {
-    "phase": "12E",
+    "phase": "13A",
     "mediapipeCheck": "passed",
     "typecheck": "passed",
     "test": "passed",
-    "scopedTests": "passed (16 files / 61 tests)",
+    "scopedTests": "passed (13 files / 45 tests)",
     "build": "passed",
     "projectStatus": "passed",
     "projectStatusJson": "passed",
@@ -1032,17 +1057,17 @@
     "contextPackJson": "passed",
     "browserVerification": "passed",
     "browserValidation": "passed",
-    "testFiles": 16,
-    "tests": 61,
-    "phase12CScopedTests": "passed",
+    "testFiles": 13,
+    "tests": 45,
+    "phase13AScopedTests": "passed",
     "browserValidationNotes": [
-      "User App route A loads by default with local-only/no-upload/no-training copy and does not expose Photo-to-Template Acceptance Trial, sourceType, confidenceBand, humanReviewRequired, notFinal, registry, or production writer terms.",
-      "Vision Analysis route B shows image/mask, FaceMesh, MediaPipe readiness/recovery copy, and vision analysis content while keeping Acceptance Trial, Operator Workflow, and Draft Preview QA out of the tab; local MediaPipe assets are ready and no mock fallback copy is shown.",
-      "Template Studio route C shows Photo-to-Template Operator Workflow, Draft Preview QA, and one Photo-to-Template Acceptance Trial panel with Demo Route A/B/C, draft-preview-only, not-production-readiness, registry paused, publish blocked, production writer blocked, and User App Shell replacement blocked copy.",
-      "Template Studio route C does not show positive claims for formal UserAppTemplatePackage generation, publishing to User App, or registry write."
+      "User App default route loads with local-only/no-upload/no-training copy and does not expose Founder Demo Review, MVP trial content, trial content pack, sourceLabel, demo_fixture, notFromAutomaticExtraction, or humanReviewRecommended terms.",
+      "Vision Analysis route shows FaceMesh/MediaPipe readiness and does not show Founder Demo Review or Photo-to-Template Acceptance Trial panels; local MediaPipe assets are ready and no mock fallback copy is shown.",
+      "Template Studio route shows Founder Demo Review with trial content pack summary, 新手通勤淡妆, 日系温柔约会妆, 韩系清透低饱和妆, Founder Demo Review-not-publish copy, current MVP trial content copy, not-official-library copy, and no-registry/no-publish boundary.",
+      "Template Studio route does not show positive claims for formal UserAppTemplatePackage generation, publishing to User App, registry write, production writer creation, or registry mutation.",
+      "Page console errors: 0. Browser tool surfaced external Statsig network timeout noise during setup, unrelated to the local app page."
     ],
-    "summary": "Phase 12E validation passed: npm run mediapipe:check, scoped tests (16 files / 61 tests), npm run typecheck, npm run build, npm run project:status, npm run project:context, JSON status/context commands, and browser validation.",
-    "phase12EScopedTests": "passed"
+    "summary": "Phase 13A validation passed: npm run mediapipe:check, scoped tests (13 files / 45 tests), npm run typecheck, npm run build, npm run project:status, npm run project:context, JSON status/context commands, and browser validation."
   },
   "requiredValidationCommands": [
     "npm run mediapipe:check",
@@ -1081,7 +1106,7 @@
     "npm run test -- tests/photo-to-template-operator-workflow.test.ts tests/photo-to-template-draft-preview-qa.test.ts tests/photo-to-template-operator-workflow-panel.test.tsx tests/photo-to-template-draft-preview-qa-panel.test.tsx tests/phase-12D-documentation-recovery.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts tests/mediapipe-real-assets-check.test.ts tests/template-studio-tab-boundary.test.tsx tests/user-app-demo-forbidden-terms.test.tsx",
     "npm run test -- tests/photo-to-template-acceptance-trial.test.ts tests/photo-to-template-acceptance-trial-panel.test.tsx tests/phase-12E-documentation-recovery.test.ts tests/photo-to-template-operator-workflow.test.ts tests/photo-to-template-draft-preview-qa.test.ts tests/photo-to-template-draft-integration.test.ts tests/photo-to-template-human-review-editing.test.ts tests/makeup-semantic-extraction.test.ts tests/photo-to-template-reality-check.test.ts tests/photo-to-template-reality-validation.test.ts tests/user-app-demo-forbidden-terms.test.tsx tests/template-studio-tab-boundary.test.tsx tests/vision-readiness-score-label.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
   ],
-  "lastUpdated": "2026-06-28T16:54:28.109Z",
+  "lastUpdated": "2026-06-29T12:27:11.590Z",
   "guardedSimulatorReviewGateDecision": {
     "nextPhase": "Phase 10U - Real Write Approval Boundary",
     "boundary": "review-gate-only; no actual write, no registry mutation, no publish, no shell package replacement, no production writer",
@@ -1165,7 +1190,7 @@
     "adminBoundary": "administrator trial, Template Studio, and registry safety tooling remain explicitly separated from the ordinary user path",
     "nextPhase": "Phase 11D - User App Demo Readiness & Operator QA"
   },
-  "currentTask": "Phase 12E - Photo-to-Template End-to-End Demo Script & Acceptance Trial",
+  "currentTask": "Phase 13A - MVP Trial Content Pack & Founder Demo Review",
   "userAppDemoReadinessOperatorQa": {
     "registryChainStatus": "registry chain paused after Phase 10U",
     "realWriteAuthorizationPath": "Phase 10V intentionally paused; not the active next phase",
@@ -1212,8 +1237,8 @@
   },
   "taskId": "phase-12e-photo-to-template-e2e-demo-script-acceptance-trial",
   "title": "Phase 12E - Photo-to-Template End-to-End Demo Script & Acceptance Trial",
-  "nextRecommendedTask": "Phase 13A - MVP Trial Content Pack & Founder Demo Review",
-  "nextTask": "Phase 13A - MVP Trial Content Pack & Founder Demo Review",
+  "nextRecommendedTask": "Phase 13B - Founder Trial Feedback Capture & MVP Gap Prioritization",
+  "nextTask": "Phase 13B - Founder Trial Feedback Capture & MVP Gap Prioritization",
   "filesToReadFirst": [
     "AGENTS.md",
     "START_HERE.md",
@@ -1309,7 +1334,10 @@
     "Next recommended phase is Phase 12D - Photo-to-Template Operator Workflow & Draft Preview QA.",
     "Phase 12E completed Photo-to-Template End-to-End Demo Script & Acceptance Trial.",
     "Acceptance trial is not production readiness and keeps registry chain paused after Phase 10U.",
-    "Next recommended phase is Phase 13A - MVP Trial Content Pack & Founder Demo Review."
+    "Next recommended phase is Phase 13A - MVP Trial Content Pack & Founder Demo Review.",
+    "Phase 13A completed MVP Trial Content Pack & Founder Demo Review.",
+    "Founder Demo Review is founder-demo-only, not production readiness, registry readiness, publish readiness, or official Template Library content.",
+    "Next recommended phase is Phase 13B - Founder Trial Feedback Capture & MVP Gap Prioritization."
   ],
   "notes": [
     "Phase 12B completed Makeup Semantic Extraction Baseline.",
@@ -1319,7 +1347,9 @@
     "Phase 12C completed Photo-to-Template Draft Integration & Human Review Editing.",
     "Next recommended phase is Phase 12D - Photo-to-Template Operator Workflow & Draft Preview QA.",
     "Phase 12E completed Photo-to-Template End-to-End Demo Script & Acceptance Trial.",
-    "Next recommended phase is Phase 13A - MVP Trial Content Pack & Founder Demo Review."
+    "Next recommended phase is Phase 13A - MVP Trial Content Pack & Founder Demo Review.",
+    "Phase 13A completed MVP Trial Content Pack & Founder Demo Review.",
+    "Next recommended phase is Phase 13B - Founder Trial Feedback Capture & MVP Gap Prioritization."
   ],
   "risks": [
     "Do not treat semantic candidates as final recognition or AI-confirmed extraction.",
@@ -1352,11 +1382,11 @@
     "summary": "Phase 12B validation passed: npm run mediapipe:check, scoped tests (15 files / 48 tests), npm run typecheck, npm run build, npm run project:status, npm run project:context, JSON status/context commands, and browser validation."
   },
   "latestValidation": {
-    "phase": "12E",
+    "phase": "13A",
     "mediapipeCheck": "passed",
     "typecheck": "passed",
     "test": "passed",
-    "scopedTests": "passed (16 files / 61 tests)",
+    "scopedTests": "passed (13 files / 45 tests)",
     "build": "passed",
     "projectStatus": "passed",
     "projectStatusJson": "passed",
@@ -1364,17 +1394,17 @@
     "contextPackJson": "passed",
     "browserVerification": "passed",
     "browserValidation": "passed",
-    "testFiles": 16,
-    "tests": 61,
-    "phase12DScopedTests": "passed",
+    "testFiles": 13,
+    "tests": 45,
+    "phase13AScopedTests": "passed",
     "browserValidationNotes": [
-      "User App route A loads by default with local-only/no-upload/no-training copy and does not expose Photo-to-Template Acceptance Trial, sourceType, confidenceBand, humanReviewRequired, notFinal, registry, or production writer terms.",
-      "Vision Analysis route B shows image/mask, FaceMesh, MediaPipe readiness/recovery copy, and vision analysis content while keeping Acceptance Trial, Operator Workflow, and Draft Preview QA out of the tab; local MediaPipe assets are ready and no mock fallback copy is shown.",
-      "Template Studio route C shows Photo-to-Template Operator Workflow, Draft Preview QA, and one Photo-to-Template Acceptance Trial panel with Demo Route A/B/C, draft-preview-only, not-production-readiness, registry paused, publish blocked, production writer blocked, and User App Shell replacement blocked copy.",
-      "Template Studio route C does not show positive claims for formal UserAppTemplatePackage generation, publishing to User App, or registry write."
+      "User App default route loads with local-only/no-upload/no-training copy and does not expose Founder Demo Review, MVP trial content, trial content pack, sourceLabel, demo_fixture, notFromAutomaticExtraction, or humanReviewRecommended terms.",
+      "Vision Analysis route shows FaceMesh/MediaPipe readiness and does not show Founder Demo Review or Photo-to-Template Acceptance Trial panels; local MediaPipe assets are ready and no mock fallback copy is shown.",
+      "Template Studio route shows Founder Demo Review with trial content pack summary, 新手通勤淡妆, 日系温柔约会妆, 韩系清透低饱和妆, Founder Demo Review-not-publish copy, current MVP trial content copy, not-official-library copy, and no-registry/no-publish boundary.",
+      "Template Studio route does not show positive claims for formal UserAppTemplatePackage generation, publishing to User App, registry write, production writer creation, or registry mutation.",
+      "Page console errors: 0. Browser tool surfaced external Statsig network timeout noise during setup, unrelated to the local app page."
     ],
-    "summary": "Phase 12E validation passed: npm run mediapipe:check, scoped tests (16 files / 61 tests), npm run typecheck, npm run build, npm run project:status, npm run project:context, JSON status/context commands, and browser validation.",
-    "phase12EScopedTests": "passed"
+    "summary": "Phase 13A validation passed: npm run mediapipe:check, scoped tests (13 files / 45 tests), npm run typecheck, npm run build, npm run project:status, npm run project:context, JSON status/context commands, and browser validation."
   },
   "lastKnownValidation": {
     "phase": "12B",

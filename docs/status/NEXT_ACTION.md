@@ -2,12 +2,12 @@
 
 ## What To Do Next
 
-Proceed to Phase 13A: MVP Trial Content Pack & Founder Demo Review.
+Proceed to Phase 13B: Founder Trial Feedback Capture & MVP Gap Prioritization.
 
 ## Why
 
-Phase 12E packages the current photo-to-template chain into an operator-readable
-demo and acceptance trial:
+Phase 13A packages the current User App MVP demo into a local founder-review
+content pack:
 
 ```text
 Demo Route A: User App MVP
@@ -16,17 +16,18 @@ Demo Route C: Template Studio Operator Workflow
 -> Draft Preview QA
 -> Acceptance Trial
 -> Phase 13A Founder Demo Review
+-> Phase 13B Founder feedback capture and MVP gap prioritization
 ```
 
-The system can now explain how to start the app, show the ordinary User App MVP,
-show local Vision Analysis, walk through the operator workflow, and verify that
-forbidden claims and internal terms stay blocked.
+The system can now show three MVP trial templates, run founder-demo checks, keep
+ordinary users away from admin terms, and verify that registry, publish,
+production writer, automatic extraction, and privacy claims stay blocked.
 
-## Recommended 13A Scope
+## Recommended 13B Scope
 
-- Prepare a founder-facing MVP trial content pack.
-- Select demo templates and copy that are safe for review.
-- Create founder review checklist and feedback capture structure.
+- Capture founder feedback in a structured local model.
+- Prioritize MVP gaps from trial content, User App path, and operator workflow.
+- Decide what must be fixed before another founder/user trial.
 - Keep the photo-to-template workflow semi-automatic, draft-only, and
   human-review-required.
 - Keep registry writes paused after Phase 10U.
@@ -64,8 +65,8 @@ Read these files first:
 7. `docs/status/NEXT_ACTION.md`
 8. `docs/product/user-app-demo-readiness.md`
 9. `docs/product/operator-qa-checklist.md`
-10. `docs/product/photo-to-template-e2e-demo-script.md`
-11. `docs/product/photo-to-template-acceptance-trial.md`
+10. `docs/product/mvp-trial-content-pack.md`
+11. `docs/product/founder-demo-review-script.md`
 12. `docs/product/photo-to-template-draft-reality-check.md`
 13. `docs/product/makeup-semantic-extraction-baseline.md`
 14. `docs/product/photo-to-template-draft-integration.md`

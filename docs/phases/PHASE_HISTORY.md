@@ -1889,3 +1889,32 @@ Why Phase 12C follows:
 The semantic baseline is now explicit enough to integrate candidate evidence
 into photo-to-template draft editing. Phase 12C should focus on draft
 integration and human review editing, not automatic publication.
+
+## Phase 13A - MVP Trial Content Pack & Founder Demo Review
+
+Added a local founder-demo content pack and review gate while keeping the
+registry write chain paused after Phase 10U.
+
+What changed:
+
+- Added MVP trial templates for 新手通勤淡妆, 日系温柔约会妆, and 韩系清透低饱和妆.
+- Added `MvpTrialContentPack`, `MvpTrialTemplate`, and completeness counting.
+- Added `FounderDemoReviewReport`, checks, issues, recommendations, status, and
+  decision logic for founder demo readiness.
+- Added an operator-only `FounderDemoReviewPanel` in Template Studio, not Vision
+  Analysis and not the ordinary User App path.
+- Added product docs for the trial content pack and founder demo review script.
+
+What still cannot happen:
+
+- Phase 13A does not resume Phase 10V, execute registry writes, mutate registry
+  state, publish, create a production writer, replace the current User App Shell
+  package, add backend/database/login/payment/camera/AR/OpenAI or external API
+  scope, upload real photos, store real user data, or train models.
+- Phase 13A does not claim production readiness, official Template Library
+  content, or fully automatic high-quality makeup extraction.
+
+Why Phase 13B follows:
+
+Founder review now has enough local trial content and a review checklist to
+capture structured feedback and prioritize MVP gaps.

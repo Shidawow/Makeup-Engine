@@ -68,6 +68,7 @@ describe('Template Studio tab boundary', () => {
     expect(html).not.toContain('Photo-to-Template Operator Workflow');
     expect(html).not.toContain('Photo-to-Template Draft Preview QA');
     expect(html).not.toContain('Photo-to-Template Acceptance Trial');
+    expect(html).not.toContain('Founder Demo Review');
     expect(html).not.toContain('semantic candidate → draft field binding matrix');
   });
 
@@ -274,6 +275,14 @@ describe('Template Studio tab boundary', () => {
     expect(html).toContain('Acceptance Trial，不是发布');
     expect(html).toContain('不能写 registry / 不能 publish');
     expect(html).toContain('Demo Route A - User App MVP');
+    expect(html).toContain('Founder Demo Review');
+    expect(html).toContain('Founder Demo Review，不是发布');
+    expect(html).toContain('当前仍是 MVP trial content');
+    expect(html).toContain('当前内容可用于演示，不是正式模板库');
+    expect(html).toContain('不能写 registry / 不能 publish');
+    expect(html).toContain('新手通勤淡妆');
+    expect(html).toContain('日系温柔约会妆');
+    expect(html).toContain('韩系清透低饱和妆');
     expect(html).not.toContain('AI 已确认');
     expect(html).not.toContain('已生成正式用户模板包');
     expect(html).not.toContain('已生成正式 UserAppTemplatePackage');
@@ -359,6 +368,13 @@ describe('Template Studio tab boundary', () => {
     expect(userPath).not.toContain('Photo-to-Template Operator Workflow');
     expect(userPath).not.toContain('Photo-to-Template Draft Preview QA');
     expect(userPath).not.toContain('Photo-to-Template Acceptance Trial');
+    expect(userPath).not.toContain('Founder Demo Review');
+    expect(userPath).not.toContain('MVP trial content');
+    expect(userPath).not.toContain('trial content pack');
+    expect(userPath).not.toContain('sourceLabel');
+    expect(userPath).not.toContain('demo_fixture');
+    expect(userPath).not.toContain('notFromAutomaticExtraction');
+    expect(userPath).not.toContain('humanReviewRecommended');
     expect(userPath).not.toContain('Operator Workflow');
     expect(userPath).not.toContain('Draft Preview QA');
     expect(userPath).not.toContain('Acceptance Trial');

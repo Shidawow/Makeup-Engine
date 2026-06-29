@@ -2,18 +2,21 @@
 
 ## Current Phase
 
-Phase 12E: Photo-to-Template End-to-End Demo Script & Acceptance Trial is complete.
+Phase 13A: MVP Trial Content Pack & Founder Demo Review is complete.
 
-Last completed business phase: Phase 12E.
+Last completed business phase: Phase 13A.
 
-Next recommended phase: Phase 13A, MVP Trial Content Pack & Founder Demo Review.
+Next recommended phase: Phase 13B, Founder Trial Feedback Capture & MVP Gap Prioritization.
 
-Phase 12E keeps the post-10U registry write chain paused and packages the
-photo-to-template chain into an end-to-end demo script plus acceptance trial.
-The trial covers User App MVP, Vision Analysis, Template Studio Operator
-Workflow, Draft Preview QA, forbidden claim checks, privacy checks, and
-validation evidence. It remains operator-only, draft-preview-only,
-human-review-required, and not production readiness.
+Phase 13A keeps the post-10U registry write chain paused and adds a local MVP
+trial content pack plus founder demo review. The pack includes 新手通勤淡妆,
+日系温柔约会妆, and 韩系清透低饱和妆. Founder Demo Review checks User App first
+impression, template selection, detail, preparation, step guidance, completion,
+mobile demo usability, trial content quality, operator workflow explainability,
+photo-to-template boundary clarity, forbidden claims, privacy boundary, and next
+iteration readiness. It remains founder-demo-only, local, human-review-required,
+not official Template Library content, not registry readiness, and not
+production readiness.
 
 Registry chain status: paused after Phase 10U. Phase 10V actual write
 authorization is not the active next phase.
@@ -24,6 +27,12 @@ authorization is not the active next phase.
   `public/mediapipe/**` are present.
 - Run the Phase 12E Photo-to-Template Acceptance Trial over User App MVP,
   Vision Analysis, Template Studio Operator Workflow, and Draft Preview QA.
+- Render a Phase 13A Founder Demo Review panel in Template Studio operator area
+  with trial content pack summary, checklist, forbidden claim checks, privacy
+  boundary checks, demo route summary, and next iteration recommendation.
+- Evaluate the MVP trial content pack with three local demo templates while
+  keeping registry write, publish, production writer, and User App Shell
+  replacement blocked.
 - Render the Template Studio Acceptance Trial panel with demo route status,
   forbidden claim checks, privacy/boundary checks, validation evidence, and
   next action.

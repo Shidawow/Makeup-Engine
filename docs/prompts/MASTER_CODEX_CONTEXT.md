@@ -12,11 +12,11 @@ It produces templates, template evidence, correction records, review state, loca
 
 ## Current Phase
 
-- Current business phase: `Phase 12E completed`
-- Last completed phase: `Phase 12E`
-- Last completed phase name: `Phase 12E - Photo-to-Template End-to-End Demo Script & Acceptance Trial`
-- Next recommended phase: `Phase 13A - MVP Trial Content Pack & Founder Demo Review`
-- Strategic focus: registry chain paused after Phase 10U; active work is photo-to-template demo acceptance, founder review preparation, and MVP trial content packaging.
+- Current business phase: `Phase 13A completed`
+- Last completed phase: `Phase 13A`
+- Last completed phase name: `Phase 13A - MVP Trial Content Pack & Founder Demo Review`
+- Next recommended phase: `Phase 13B - Founder Trial Feedback Capture & MVP Gap Prioritization`
+- Strategic focus: registry chain paused after Phase 10U; active work is founder-demo feedback capture preparation and MVP gap prioritization.
 
 Historical recovery marker retained for Phase 10U tests: `Phase 10U completed`.
 Historical recovery marker retained for Phase 9C tests: `Phase 9C completed`.
@@ -98,6 +98,21 @@ Real Photo
 -> Real Registry Write Implementation Gate
 -> Real Registry Write Implementation Draft
 -> Final Real Write Review Gate
+-> Real Write Execution Authorization
+-> Real Write Execution Plan
+-> Guarded Real Write Execution Simulator
+-> Guarded Simulator Review Gate
+-> Real Write Approval Boundary
+-> User App MVP Experience Reset
+-> User App Guided Step Experience Polish
+-> User App Visual Guidance & Template Content Polish
+-> User App Demo Readiness & Operator QA
+-> Photo-to-Template Draft Reality Check
+-> Makeup Semantic Extraction Baseline
+-> Photo-to-Template Draft Integration & Human Review Editing
+-> Photo-to-Template Operator Workflow & Draft Preview QA
+-> Photo-to-Template End-to-End Demo Script & Acceptance Trial
+-> MVP Trial Content Pack & Founder Demo Review
 -> Real Write Execution Authorization
 -> Real Write Execution Plan
 -> Guarded Real Write Execution Simulator

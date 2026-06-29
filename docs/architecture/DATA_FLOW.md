@@ -759,3 +759,24 @@ Acceptance Trial does not publish, does not write or mutate registry state,
 does not generate or mutate `UserAppTemplatePackage`, does not replace the
 current User App Shell package, does not create a production writer, does not
 add backend/API/camera/AR scope, and does not train models.
+
+## Phase 13A MVP Trial Content Pack & Founder Demo Review Flow
+
+`MvpTrialContentPack`
+-> `MvpTrialTemplate`
+-> `UserAppMvpDemoRoute`
+-> `PhotoToTemplateAcceptanceTrialReport`
+-> `FounderDemoReviewReport`
+-> `FounderDemoReviewPanel`
+-> next recommendation for Phase 13B Founder Trial Feedback Capture & MVP Gap
+Prioritization.
+
+The 13A flow is local, founder-demo-only, and human-review-required. It checks
+trial content quality, ordinary User App path clarity, Template Studio operator
+workflow explainability, photo-to-template boundary clarity, forbidden claims,
+privacy boundary clarity, and next iteration readiness.
+
+Founder Demo Review does not publish, does not write or mutate registry state,
+does not generate or mutate `UserAppTemplatePackage`, does not replace the
+current User App Shell package, does not create a production writer, does not
+add backend/API/camera/AR scope, and does not train models.

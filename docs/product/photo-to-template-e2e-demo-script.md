@@ -120,3 +120,13 @@ Stop or pause the demo if:
   readiness.
 - A real user photo, base64 image, local photo path, personal data, biometric
   identifier, or face embedding appears in demo materials.
+## Phase 13A Founder Demo Review Addendum
+
+After the 12E acceptance trial route, the operator may show the Phase 13A
+Founder Demo Review panel in Template Studio. The panel summarizes the MVP
+trial content pack, founder checklist, forbidden claim checks, privacy boundary
+checks, and next iteration recommendation.
+
+This addendum does not change the 12E boundaries: the demo is not production
+readiness, not registry readiness, not publish readiness, and not fully
+automatic photo-to-template extraction.
