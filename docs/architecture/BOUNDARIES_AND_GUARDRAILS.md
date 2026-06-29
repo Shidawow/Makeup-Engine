@@ -849,3 +849,27 @@ Phase 13A must not resume Phase 10V, execute real registry writes, mutate
 registry state, publish, create a production writer, replace the current User
 App Shell package, add backend/database/login/payment/camera/AR/OpenAI or
 external API scope, upload real photos, store real user data, or train models.
+
+## Phase 13B Founder Trial Feedback Capture & MVP Gap Prioritization
+
+Phase 13B founder feedback is founder/internal-only. It must not be treated as
+real user research, analytics, public market validation, production readiness,
+or a final product roadmap.
+
+Phase 13B must not collect personal data, real user photos, base64 images,
+local photo paths, biometric data, backend records, analytics ids, or training
+data.
+
+Phase 13B must separate MVP demo gaps from production gaps. Production gaps can
+be recorded, but they are deferred and cannot become current registry, publish,
+production writer, backend, analytics, or User App Shell replacement work.
+
+Phase 13B ordinary-user paths must not expose Founder Trial Feedback, MVP Gap
+Prioritization, internal feedback categories, priority decisions, Template
+Studio, registry/write/publish/simulator/production writer, Pipeline Trace,
+debug JSON, or automatic extraction operator terminology by default.
+
+Phase 13B must not resume Phase 10V, execute real registry writes, mutate
+registry state, publish, create a production writer, replace the current User
+App Shell package, add backend/database/login/payment/camera/AR/OpenAI or
+external API scope, upload real photos, store real user data, or train models.

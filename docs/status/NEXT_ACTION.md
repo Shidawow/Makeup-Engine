@@ -2,12 +2,12 @@
 
 ## What To Do Next
 
-Proceed to Phase 13B: Founder Trial Feedback Capture & MVP Gap Prioritization.
+Proceed to Phase 13C: MVP Gap Resolution Sprint Planning.
 
 ## Why
 
-Phase 13A packages the current User App MVP demo into a local founder-review
-content pack:
+Phase 13B captures founder/internal demo feedback and turns it into prioritized
+MVP gaps:
 
 ```text
 Demo Route A: User App MVP
@@ -17,17 +17,19 @@ Demo Route C: Template Studio Operator Workflow
 -> Acceptance Trial
 -> Phase 13A Founder Demo Review
 -> Phase 13B Founder feedback capture and MVP gap prioritization
+-> Phase 13C MVP gap resolution sprint planning
 ```
 
-The system can now show three MVP trial templates, run founder-demo checks, keep
-ordinary users away from admin terms, and verify that registry, publish,
-production writer, automatic extraction, and privacy claims stay blocked.
+The system can now show three MVP trial templates, run founder-demo checks,
+record deterministic founder/internal feedback, convert it into MVP demo gaps
+and deferred production gaps, and keep ordinary users away from admin terms.
 
-## Recommended 13B Scope
+## Recommended 13C Scope
 
-- Capture founder feedback in a structured local model.
-- Prioritize MVP gaps from trial content, User App path, and operator workflow.
-- Decide what must be fixed before another founder/user trial.
+- Turn p0/p1 MVP demo gaps into a focused sprint plan.
+- Decide which content, interaction, privacy-copy, and photo-to-template trust
+  gaps must be fixed first.
+- Keep production gaps deferred unless explicitly pulled into a later phase.
 - Keep the photo-to-template workflow semi-automatic, draft-only, and
   human-review-required.
 - Keep registry writes paused after Phase 10U.
@@ -40,10 +42,10 @@ production writer, automatic extraction, and privacy claims stay blocked.
 - Do not create or execute a production writer.
 - Do not publish to the user app.
 - Do not replace the current User App Shell package.
-- Do not generate or mutate a formal `UserAppTemplatePackage` from 12E output.
-- Do not treat Acceptance Trial as production readiness.
+- Do not treat founder/internal feedback as real user research or analytics.
+- Do not generate or mutate a formal `UserAppTemplatePackage` from 12E/13A/13B
+  output.
 - Do not claim fully automatic high-quality makeup extraction.
-- Do not claim AI confirmed analysis.
 - Do not add backend, database, login, payment, analytics, camera capture, AR,
   OpenAI/external API calls, native app implementation, React Native, Flutter,
   App Store/TestFlight work, service worker, ecommerce, community, paid
@@ -63,22 +65,18 @@ Read these files first:
 5. `docs/status/CURRENT_PROJECT_STATUS.md`
 6. `docs/status/CURRENT_PHASE.md`
 7. `docs/status/NEXT_ACTION.md`
-8. `docs/product/user-app-demo-readiness.md`
-9. `docs/product/operator-qa-checklist.md`
-10. `docs/product/mvp-trial-content-pack.md`
-11. `docs/product/founder-demo-review-script.md`
-12. `docs/product/photo-to-template-draft-reality-check.md`
-13. `docs/product/makeup-semantic-extraction-baseline.md`
-14. `docs/product/photo-to-template-draft-integration.md`
-15. `docs/product/photo-to-template-human-review-editing.md`
-16. `docs/product/photo-to-template-operator-workflow.md`
-17. `docs/product/photo-to-template-draft-preview-qa.md`
-18. `docs/phases/phase-12E.md`
-19. `project-state/project-state.snapshot.json`
-20. `project-state/latest-handoff.json`
-21. `project-state/provider-handoff.json`
-22. `project-state/active-task.json`
-23. `project-state/guardrails.json`
+8. `docs/product/mvp-trial-content-pack.md`
+9. `docs/product/founder-demo-review-script.md`
+10. `docs/product/founder-trial-feedback-capture.md`
+11. `docs/product/mvp-gap-prioritization.md`
+12. `docs/product/photo-to-template-acceptance-trial.md`
+13. `docs/phases/phase-13A.md`
+14. `docs/phases/phase-13B.md`
+15. `project-state/project-state.snapshot.json`
+16. `project-state/latest-handoff.json`
+17. `project-state/provider-handoff.json`
+18. `project-state/active-task.json`
+19. `project-state/guardrails.json`
 
 Then run:
 

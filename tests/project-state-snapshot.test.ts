@@ -31,16 +31,16 @@ describe('project state snapshot', () => {
 
     expect(snapshot.projectName).toBe('Makeup Engine');
     expect(snapshot.projectRole).toContain('Makeup template production system');
-    expect(snapshot.lastCompletedPhase).toBe('13A');
-    expect(snapshot.lastCompletedBusinessPhase).toBe('13A');
-    expect(snapshot.currentPhaseId).toBe('13A');
+    expect(snapshot.lastCompletedPhase).toBe('13B');
+    expect(snapshot.lastCompletedBusinessPhase).toBe('13B');
+    expect(snapshot.currentPhaseId).toBe('13B');
     expect(snapshot.currentPhase).toBeTruthy();
     expect(snapshot.currentPhase).toContain(
-      'MVP Trial Content Pack & Founder Demo Review',
+      'Founder Trial Feedback Capture & MVP Gap Prioritization',
     );
-    expect(snapshot.nextRecommendedPhase).toBe('13B');
-    expect(snapshot.nextRecommendedPhaseName).toContain('Founder Trial Feedback Capture & MVP Gap Prioritization');
-    expect(snapshot.nextAction).toContain('Phase 13B');
+    expect(snapshot.nextRecommendedPhase).toBe('13C');
+    expect(snapshot.nextRecommendedPhaseName).toContain('MVP Gap Resolution Sprint Planning');
+    expect(snapshot.nextAction).toContain('Phase 13C');
     expect(snapshot.mainDataFlow).toEqual(
       expect.arrayContaining([
         'SourceImagePackage',
@@ -131,6 +131,12 @@ describe('project state snapshot', () => {
         'FounderDemoReviewRecommendation',
         'FounderDemoReviewDecision',
         'FounderDemoReviewPanel',
+        'FounderTrialFeedbackReport',
+        'FounderTrialFeedbackEntry',
+        'FounderTrialFeedbackPanel',
+        'MvpGapPrioritizationReport',
+        'MvpGap',
+        'MvpGapPrioritizationPanel',
         'UserPhotoIntakePlaceholder',
         'UserPersonalizationPlaceholder',
         'UserPhotoPrivacyBoundary',
@@ -354,6 +360,8 @@ describe('project state snapshot', () => {
     expect(snapshot.knownLimitations.join('\n')).toContain('Phase 12D');
     expect(snapshot.knownLimitations.join('\n')).toContain('Phase 12E');
     expect(snapshot.knownLimitations.join('\n')).toContain('Phase 13A');
+    expect(snapshot.knownLimitations.join('\n')).toContain('Phase 13B');
+    expect(snapshot.knownLimitations.join('\n')).toContain('not real user research');
     expect(snapshot.knownLimitations.join('\n')).toContain('Photo-to-Template Draft Integration');
     expect(snapshot.knownLimitations.join('\n')).toContain('Photo-to-Template Operator Workflow');
     expect(snapshot.knownLimitations.join('\n')).toContain('Photo-to-Template End-to-End Demo Script & Acceptance Trial');

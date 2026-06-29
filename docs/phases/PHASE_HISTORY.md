@@ -2,6 +2,54 @@
 
 This history is a recovery summary based on current project reports, current source layout, tests, and documentation. Earlier phase details are summarized when exact original phase reports are not available.
 
+## Phase 13B
+
+Added Founder Trial Feedback Capture and MVP Gap Prioritization on top of Phase
+13A.
+
+What changed:
+
+- Added `FounderTrialFeedbackReport`, entries, categories, sentiment, severity,
+  sources, recommendations, and privacy-safe local fixture records.
+- Added `MvpGapPrioritizationReport`, MVP gaps, p0-p3 priorities, impact,
+  effort, decision, recommendation, and MVP demo gap vs production gap
+  separation.
+- Added Template Studio operator-only Founder Trial Feedback and MVP Gap
+  Prioritization panels.
+- Added docs and tests for feedback capture, gap prioritization, panel wiring,
+  ordinary-user hidden internal terms, docs, and project-state.
+
+What still cannot happen:
+
+- Founder feedback is not real user research and not analytics.
+- No personal data, real user photos, base64, local photo paths, backend,
+  database, camera, AR, OpenAI/external API, training, registry write, registry
+  mutation, publish, production writer, or User App Shell package replacement.
+- Production readiness gaps are documented but deferred, not current must-do
+  work.
+
+Why Phase 13C follows:
+
+The founder/internal feedback and gap list are now structured enough to plan a
+focused MVP gap resolution sprint without resuming the registry write chain.
+
+## Phase 13A
+
+Added MVP Trial Content Pack and Founder Demo Review on top of Phase 12E.
+
+What changed:
+
+- Added `MvpTrialContentPack` and three local trial templates.
+- Added `FounderDemoReviewReport`, checks, issues, recommendations, decision,
+  and Template Studio operator-only panel.
+- Added founder demo and trial content docs and tests.
+
+What still cannot happen:
+
+- Founder Demo Review is not production readiness, not official Template
+  Library content, not registry readiness, not publish, not production writer
+  scope, and not User App Shell package replacement.
+
 ## Phase 12E
 
 Added Photo-to-Template End-to-End Demo Script and Acceptance Trial on top of

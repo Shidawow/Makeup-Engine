@@ -95,6 +95,16 @@
   review; they cannot be claimed as fully automatic photo extraction, AI
   confirmed final recognition, medical/product shade truth, registry-written
   content, or published templates.
+- Phase 13B Founder Trial Feedback Capture & MVP Gap Prioritization is
+  internal-only planning. It is not real user research, not analytics, not
+  production readiness, not a final product roadmap, and not public market
+  validation.
+- Phase 13B feedback and gap reports cannot collect personal data, real user
+  photos, base64 images, local photo paths, biometric data, backend records,
+  analytics ids, or training data.
+- Phase 13B keeps registry chain paused after Phase 10U: no registry write, no
+  registry mutation, no publish, no production writer, and no User App Shell
+  package replacement.
 - Phase 10B template draft QA and human review are local administrator workflow
   aids only; they are not final recognition, production publishing, backend
   workflow, AI approval, training approval, or production user app behavior.

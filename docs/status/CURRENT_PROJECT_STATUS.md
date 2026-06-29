@@ -2,21 +2,19 @@
 
 ## Current Phase
 
-Phase 13A: MVP Trial Content Pack & Founder Demo Review is complete.
+Phase 13B: Founder Trial Feedback Capture & MVP Gap Prioritization is complete.
 
-Last completed business phase: Phase 13A.
+Last completed business phase: Phase 13B.
 
-Next recommended phase: Phase 13B, Founder Trial Feedback Capture & MVP Gap Prioritization.
+Next recommended phase: Phase 13C, MVP Gap Resolution Sprint Planning.
 
-Phase 13A keeps the post-10U registry write chain paused and adds a local MVP
-trial content pack plus founder demo review. The pack includes 新手通勤淡妆,
-日系温柔约会妆, and 韩系清透低饱和妆. Founder Demo Review checks User App first
-impression, template selection, detail, preparation, step guidance, completion,
-mobile demo usability, trial content quality, operator workflow explainability,
-photo-to-template boundary clarity, forbidden claims, privacy boundary, and next
-iteration readiness. It remains founder-demo-only, local, human-review-required,
-not official Template Library content, not registry readiness, and not
-production readiness.
+Phase 13B keeps the post-10U registry write chain paused and adds
+founder/internal feedback capture plus MVP gap prioritization. Feedback entries
+record category, sentiment, severity, source, linked gap, and recommendation.
+Gap prioritization records priority, impact, effort, decision, recommendation,
+and whether the gap is an MVP demo gap or deferred production gap. It remains
+internal-only, local, not real user research, not analytics, not registry
+readiness, and not production readiness.
 
 Registry chain status: paused after Phase 10U. Phase 10V actual write
 authorization is not the active next phase.
@@ -30,6 +28,10 @@ authorization is not the active next phase.
 - Render a Phase 13A Founder Demo Review panel in Template Studio operator area
   with trial content pack summary, checklist, forbidden claim checks, privacy
   boundary checks, demo route summary, and next iteration recommendation.
+- Render Phase 13B Founder Trial Feedback and MVP Gap Prioritization panels in
+  Template Studio operator area with internal-only feedback entries, no-real-user
+  data notices, p0-p3 priorities, impact, effort, decision, MVP demo gap vs
+  production gap separation, and Phase 13C recommendation.
 - Evaluate the MVP trial content pack with three local demo templates while
   keeping registry write, publish, production writer, and User App Shell
   replacement blocked.

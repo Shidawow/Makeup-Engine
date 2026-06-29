@@ -115,3 +115,4 @@ export * from './photo-to-template-draft-integration.example';
 export * from './photo-to-template-operator-workflow.example';
 export * from './photo-to-template-acceptance-trial.example';
 export * from './mvp-trial-content-pack.example';
+export * from './founder-trial-feedback.example';

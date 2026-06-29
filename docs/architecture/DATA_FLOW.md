@@ -780,3 +780,25 @@ Founder Demo Review does not publish, does not write or mutate registry state,
 does not generate or mutate `UserAppTemplatePackage`, does not replace the
 current User App Shell package, does not create a production writer, does not
 add backend/API/camera/AR scope, and does not train models.
+
+## Phase 13B Founder Trial Feedback Capture & MVP Gap Prioritization Flow
+
+`FounderDemoReviewReport`
+-> `FounderTrialFeedbackReport`
+-> `FounderTrialFeedbackEntry`
+-> `FounderTrialFeedbackPanel`
+-> `MvpGapPrioritizationReport`
+-> `MvpGap`
+-> `MvpGapPrioritizationPanel`
+-> next recommendation for Phase 13C MVP Gap Resolution Sprint Planning.
+
+The 13B flow is local and founder/internal-only. It captures deterministic
+feedback categories, sentiment, severity, source, linked MVP gaps, and
+recommendations, then converts them into MVP demo gaps and deferred production
+gaps with priority, impact, effort, decision, and recommendation.
+
+Founder Trial Feedback and MVP Gap Prioritization do not collect personal data,
+real user photos, base64 image strings, local photo paths, analytics ids,
+backend records, or training data. They do not publish, write or mutate
+registry state, create a production writer, replace the User App Shell package,
+or claim fully automatic high-quality makeup extraction.

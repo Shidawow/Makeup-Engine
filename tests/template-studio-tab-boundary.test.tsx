@@ -69,6 +69,8 @@ describe('Template Studio tab boundary', () => {
     expect(html).not.toContain('Photo-to-Template Draft Preview QA');
     expect(html).not.toContain('Photo-to-Template Acceptance Trial');
     expect(html).not.toContain('Founder Demo Review');
+    expect(html).not.toContain('Founder Trial Feedback');
+    expect(html).not.toContain('MVP Gap Prioritization');
     expect(html).not.toContain('semantic candidate → draft field binding matrix');
   });
 
@@ -283,6 +285,14 @@ describe('Template Studio tab boundary', () => {
     expect(html).toContain('新手通勤淡妆');
     expect(html).toContain('日系温柔约会妆');
     expect(html).toContain('韩系清透低饱和妆');
+    expect(html).toContain('Founder Trial Feedback Capture');
+    expect(html).toContain('Founder/internal feedback，不是真实用户调研');
+    expect(html).toContain('不采集真实用户个人信息');
+    expect(html).toContain('不是 analytics');
+    expect(html).toContain('MVP Gap Prioritization');
+    expect(html).toContain('这是 MVP gap prioritization，不是 product roadmap final');
+    expect(html).toContain('不是 production readiness');
+    expect(html).toContain('Phase 13C - MVP Gap Resolution Sprint Planning');
     expect(html).not.toContain('AI 已确认');
     expect(html).not.toContain('已生成正式用户模板包');
     expect(html).not.toContain('已生成正式 UserAppTemplatePackage');
@@ -369,6 +379,10 @@ describe('Template Studio tab boundary', () => {
     expect(userPath).not.toContain('Photo-to-Template Draft Preview QA');
     expect(userPath).not.toContain('Photo-to-Template Acceptance Trial');
     expect(userPath).not.toContain('Founder Demo Review');
+    expect(userPath).not.toContain('Founder Trial Feedback');
+    expect(userPath).not.toContain('MVP Gap Prioritization');
+    expect(userPath).not.toContain('MVP gap');
+    expect(userPath).not.toContain('prioritization');
     expect(userPath).not.toContain('MVP trial content');
     expect(userPath).not.toContain('trial content pack');
     expect(userPath).not.toContain('sourceLabel');

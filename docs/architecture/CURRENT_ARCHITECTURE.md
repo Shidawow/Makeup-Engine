@@ -1095,5 +1095,33 @@ state, publish, create production writers, replace the current User App Shell
 package, mutate `UserAppTemplatePackage`, add backend/API/camera/AR scope,
 upload real photos, store real user data, or train models.
 
-The next recommended architecture step is Phase 13B - Founder Trial Feedback
-Capture & MVP Gap Prioritization.
+## Phase 13B Founder Trial Feedback Capture & MVP Gap Prioritization
+
+Phase 13B adds local founder/internal feedback capture and MVP gap
+prioritization on top of the 13A Founder Demo Review.
+
+`src/template-engine/founderTrialFeedback.ts` defines
+`FounderTrialFeedbackReport`, feedback entries, categories, sentiment,
+severity, source, linked MVP gap, and recommendations.
+
+`src/template-engine/mvpGapPrioritization.ts` defines
+`MvpGapPrioritizationReport`, MVP gaps, priority, impact, effort, decision,
+recommendation, and MVP demo gap vs production gap separation.
+
+`src/components/template-studio/FounderTrialFeedbackPanel.tsx` and
+`src/components/template-studio/MvpGapPrioritizationPanel.tsx` render the 13B
+operator-only panels in Template Studio. They do not appear in Vision Analysis
+and do not appear in the ordinary User App path.
+
+Phase 13B feedback is founder/internal-only, not real user research, not
+analytics, not production readiness, and not a final product roadmap. It cannot
+collect personal data, real user photos, base64, local photo paths, analytics
+ids, backend records, or training data.
+
+Phase 13B does not resume Phase 10V, execute registry writes, mutate registry
+state, publish, create production writers, replace the current User App Shell
+package, mutate `UserAppTemplatePackage`, add backend/API/camera/AR scope,
+upload real photos, store real user data, or train models.
+
+The next recommended architecture step is Phase 13C - MVP Gap Resolution Sprint
+Planning.

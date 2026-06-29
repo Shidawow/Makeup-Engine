@@ -30,6 +30,8 @@ import {
   createPhotoToTemplateOperatorWorkflowReport,
   createPhotoToTemplateAcceptanceTrialReport,
   createFounderDemoReviewReport,
+  createFounderTrialFeedbackReport,
+  createMvpGapPrioritizationReport,
   createPhotoToTemplateRealityHandoff,
   createRealRegistryWriteImplementationChecklist,
   createRealRegistryWriteImplementationDraft,
@@ -75,7 +77,10 @@ import {
   validateUserAppTemplatePackageRegistryPreparation,
   validateTemplateLibraryCandidatePackage,
 } from '../../template-engine';
-import { mvpTrialContentPackReadyExample } from '../../templates/examples';
+import {
+  founderTrialFeedbackEntriesReadyExample,
+  mvpTrialContentPackReadyExample,
+} from '../../templates/examples';
 import type {
   TemplateDraftHumanReview,
   TemplateDraftQaResult,
@@ -110,6 +115,8 @@ import { PhotoToTemplateHumanReviewEditingPanel } from './PhotoToTemplateHumanRe
 import { PhotoToTemplateOperatorWorkflowPanel } from './PhotoToTemplateOperatorWorkflowPanel';
 import { PhotoToTemplateAcceptanceTrialPanel } from './PhotoToTemplateAcceptanceTrialPanel';
 import { FounderDemoReviewPanel } from './FounderDemoReviewPanel';
+import { FounderTrialFeedbackPanel } from './FounderTrialFeedbackPanel';
+import { MvpGapPrioritizationPanel } from './MvpGapPrioritizationPanel';
 
 export interface FaceMeshMakeupIntelligencePanelProps {
   analysis?: MakeupAnalysisPipelineResult | null;
@@ -213,6 +220,12 @@ export function FaceMeshMakeupIntelligencePanel({
       acceptanceTrial: emptyPhotoToTemplateAcceptanceTrial,
       operatorWorkflowExplainable:
         emptyPhotoToTemplateAcceptanceTrial.status !== 'acceptance_trial_blocked',
+    });
+    const emptyFounderTrialFeedback = createFounderTrialFeedbackReport({
+      entries: founderTrialFeedbackEntriesReadyExample,
+    });
+    const emptyMvpGapPrioritization = createMvpGapPrioritizationReport({
+      feedback: emptyFounderTrialFeedback,
     });
 
     return (
@@ -720,6 +733,12 @@ export function FaceMeshMakeupIntelligencePanel({
           />
         </div>
         <div className="mt-3">
+          <FounderTrialFeedbackPanel report={emptyFounderTrialFeedback} />
+        </div>
+        <div className="mt-3">
+          <MvpGapPrioritizationPanel report={emptyMvpGapPrioritization} />
+        </div>
+        <div className="mt-3">
           <PhotoToTemplateRealityCheckPanel
             handoff={photoToTemplateRealityHandoff}
             report={photoToTemplateRealityReport}
@@ -1021,6 +1040,12 @@ export function FaceMeshMakeupIntelligencePanel({
     operatorWorkflowExplainable:
       photoToTemplateAcceptanceTrial.status !== 'acceptance_trial_blocked',
   });
+  const founderTrialFeedback = createFounderTrialFeedbackReport({
+    entries: founderTrialFeedbackEntriesReadyExample,
+  });
+  const mvpGapPrioritization = createMvpGapPrioritizationReport({
+    feedback: founderTrialFeedback,
+  });
 
   return (
     <section className="grid gap-4">
@@ -1136,6 +1161,10 @@ export function FaceMeshMakeupIntelligencePanel({
         contentPack={mvpTrialContentPackReadyExample}
         report={founderDemoReview}
       />
+
+      <FounderTrialFeedbackPanel report={founderTrialFeedback} />
+
+      <MvpGapPrioritizationPanel report={mvpGapPrioritization} />
 
       <PhotoToTemplateRealityCheckPanel
         handoff={photoToTemplateRealityHandoff}
