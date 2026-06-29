@@ -32,6 +32,8 @@ import {
   createFounderDemoReviewReport,
   createFounderTrialFeedbackReport,
   createMvpGapPrioritizationReport,
+  createMvpGapResolutionSprintPlan,
+  validateMvpGapResolutionSprintPlan,
   createPhotoToTemplateRealityHandoff,
   createRealRegistryWriteImplementationChecklist,
   createRealRegistryWriteImplementationDraft,
@@ -117,6 +119,7 @@ import { PhotoToTemplateAcceptanceTrialPanel } from './PhotoToTemplateAcceptance
 import { FounderDemoReviewPanel } from './FounderDemoReviewPanel';
 import { FounderTrialFeedbackPanel } from './FounderTrialFeedbackPanel';
 import { MvpGapPrioritizationPanel } from './MvpGapPrioritizationPanel';
+import { MvpGapResolutionSprintPlanPanel } from './MvpGapResolutionSprintPlanPanel';
 
 export interface FaceMeshMakeupIntelligencePanelProps {
   analysis?: MakeupAnalysisPipelineResult | null;
@@ -227,6 +230,11 @@ export function FaceMeshMakeupIntelligencePanel({
     const emptyMvpGapPrioritization = createMvpGapPrioritizationReport({
       feedback: emptyFounderTrialFeedback,
     });
+    const emptyMvpGapResolutionSprintPlan = createMvpGapResolutionSprintPlan({
+      gapReport: emptyMvpGapPrioritization,
+    });
+    const emptyMvpGapResolutionSprintValidation =
+      validateMvpGapResolutionSprintPlan(emptyMvpGapResolutionSprintPlan);
 
     return (
       <section className="rounded-lg border border-stone-200 bg-white p-4 shadow-soft">
@@ -739,6 +747,12 @@ export function FaceMeshMakeupIntelligencePanel({
           <MvpGapPrioritizationPanel report={emptyMvpGapPrioritization} />
         </div>
         <div className="mt-3">
+          <MvpGapResolutionSprintPlanPanel
+            plan={emptyMvpGapResolutionSprintPlan}
+            validation={emptyMvpGapResolutionSprintValidation}
+          />
+        </div>
+        <div className="mt-3">
           <PhotoToTemplateRealityCheckPanel
             handoff={photoToTemplateRealityHandoff}
             report={photoToTemplateRealityReport}
@@ -1046,6 +1060,12 @@ export function FaceMeshMakeupIntelligencePanel({
   const mvpGapPrioritization = createMvpGapPrioritizationReport({
     feedback: founderTrialFeedback,
   });
+  const mvpGapResolutionSprintPlan = createMvpGapResolutionSprintPlan({
+    gapReport: mvpGapPrioritization,
+  });
+  const mvpGapResolutionSprintValidation = validateMvpGapResolutionSprintPlan(
+    mvpGapResolutionSprintPlan,
+  );
 
   return (
     <section className="grid gap-4">
@@ -1165,6 +1185,11 @@ export function FaceMeshMakeupIntelligencePanel({
       <FounderTrialFeedbackPanel report={founderTrialFeedback} />
 
       <MvpGapPrioritizationPanel report={mvpGapPrioritization} />
+
+      <MvpGapResolutionSprintPlanPanel
+        plan={mvpGapResolutionSprintPlan}
+        validation={mvpGapResolutionSprintValidation}
+      />
 
       <PhotoToTemplateRealityCheckPanel
         handoff={photoToTemplateRealityHandoff}

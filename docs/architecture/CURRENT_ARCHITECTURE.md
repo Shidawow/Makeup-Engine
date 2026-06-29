@@ -2,6 +2,20 @@
 
 Makeup Engine is a local template production system for a future makeup coaching app. It is organized as deterministic local modules with explicit boundaries between source images, browser artifact binding, vision analysis, human correction, review, training, and export.
 
+## Phase 13C MVP Gap Resolution Sprint Planning
+
+Phase 13C adds a planning-only layer after founder/internal feedback:
+
+- `MvpGapResolutionSprintPlanReport`
+- `MvpGapResolutionSprintItem`
+- `MvpGapResolutionSprintValidationResult`
+- `MvpGapResolutionSprintPlanPanel`
+
+The layer maps Phase 13B gaps into Phase 13D items, Phase 13E/later items,
+deferred production gaps, and founder-decision-required items. It is not a
+final roadmap, not real user research, not analytics, and not production
+readiness.
+
 ## System Layers
 
 ### Source Image Import

@@ -83,6 +83,8 @@ export * from './mvpTrialContentPack';
 export * from './founderDemoReview';
 export * from './founderTrialFeedback';
 export * from './mvpGapPrioritization';
+export * from './mvpGapResolutionSprintPlan';
+export * from './mvpGapResolutionSprintValidation';
 export * from './template-builder';
 export * from './template-builder/template-builder';
 export * from './convergence';

@@ -253,3 +253,8 @@
   publish, production writer, User App Shell replacement, backend/API,
   camera/AR, OpenAI/external AI, training, real photo storage, base64, local
   photo paths, personal data, and biometric data blocked.
+- Phase 13C MVP gap resolution sprint planning is not final roadmap, not real
+  user research, not analytics, not production readiness, and cannot add
+  backend, registry write, registry mutation, publish, production writer, User
+  App Shell replacement, real user photos, base64, local photo paths, personal
+  data, or training data.

@@ -12,10 +12,10 @@ It produces templates, template evidence, correction records, review state, loca
 
 ## Current Phase
 
-- Current business phase: `Phase 13B completed`
-- Last completed phase: `Phase 13B`
-- Last completed phase name: `Phase 13B - Founder Trial Feedback Capture & MVP Gap Prioritization`
-- Next recommended phase: `Phase 13C - MVP Gap Resolution Sprint Planning`
+- Current business phase: `Phase 13C completed`
+- Last completed phase: `Phase 13C`
+- Last completed phase name: `Phase 13C - MVP Gap Resolution Sprint Planning`
+- Next recommended phase: `Phase 13D - MVP Demo Gap Resolution Sprint 1`
 - Strategic focus: registry chain paused after Phase 10U; active work is founder/internal feedback capture, MVP gap prioritization, and next sprint planning.
 
 Historical recovery marker retained for Phase 13A tests: `Phase 13A completed` / `Phase 13A - MVP Trial Content Pack & Founder Demo Review`.
@@ -115,6 +115,7 @@ Real Photo
 -> Photo-to-Template End-to-End Demo Script & Acceptance Trial
 -> MVP Trial Content Pack & Founder Demo Review
 -> Founder Trial Feedback Capture & MVP Gap Prioritization
+-> MVP Gap Resolution Sprint Planning
 -> Real Write Execution Authorization
 -> Real Write Execution Plan
 -> Guarded Real Write Execution Simulator

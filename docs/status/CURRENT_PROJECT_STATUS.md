@@ -2,19 +2,17 @@
 
 ## Current Phase
 
-Phase 13B: Founder Trial Feedback Capture & MVP Gap Prioritization is complete.
+Phase 13C: MVP Gap Resolution Sprint Planning is complete.
 
-Last completed business phase: Phase 13B.
+Last completed business phase: Phase 13C.
 
-Next recommended phase: Phase 13C, MVP Gap Resolution Sprint Planning.
+Next recommended phase: Phase 13D, MVP Demo Gap Resolution Sprint 1.
 
-Phase 13B keeps the post-10U registry write chain paused and adds
-founder/internal feedback capture plus MVP gap prioritization. Feedback entries
-record category, sentiment, severity, source, linked gap, and recommendation.
-Gap prioritization records priority, impact, effort, decision, recommendation,
-and whether the gap is an MVP demo gap or deferred production gap. It remains
-internal-only, local, not real user research, not analytics, not registry
-readiness, and not production readiness.
+Phase 13C keeps the post-10U registry write chain paused and converts Phase
+13B founder/internal MVP gaps into a local sprint plan. The plan separates 13D
+items, 13E/later items, deferred production gaps, and founder-decision-required
+items. It remains internal-only, local, not real user research, not analytics,
+not a final roadmap, not registry readiness, and not production readiness.
 
 Registry chain status: paused after Phase 10U. Phase 10V actual write
 authorization is not the active next phase.
@@ -32,6 +30,10 @@ authorization is not the active next phase.
   Template Studio operator area with internal-only feedback entries, no-real-user
   data notices, p0-p3 priorities, impact, effort, decision, MVP demo gap vs
   production gap separation, and Phase 13C recommendation.
+- Render a Phase 13C MVP Gap Resolution Sprint Plan panel in Template Studio
+  operator area with 13D items, 13E/later items, deferred production gaps,
+  founder decision items, owner roles, priority, impact, effort, acceptance
+  criteria, validation status, and Phase 13D recommendation.
 - Evaluate the MVP trial content pack with three local demo templates while
   keeping registry write, publish, production writer, and User App Shell
   replacement blocked.

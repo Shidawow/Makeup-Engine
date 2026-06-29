@@ -2,6 +2,33 @@
 
 This history is a recovery summary based on current project reports, current source layout, tests, and documentation. Earlier phase details are summarized when exact original phase reports are not available.
 
+## Phase 13C
+
+Added MVP Gap Resolution Sprint Planning on top of Phase 13B gap
+prioritization.
+
+What changed:
+
+- Added `MvpGapResolutionSprintPlanReport`, sprint items, owner roles,
+  acceptance criteria, risks, dependencies, and next actions.
+- Added `MvpGapResolutionSprintValidationResult` to block missing 13D
+  acceptance criteria, missing owner roles, production gaps forced into the MVP
+  sprint, registry write, publish, production writer, backend/analytics scope,
+  real user data collection, and fully automatic extraction claims.
+- Added Template Studio operator-only `MvpGapResolutionSprintPlanPanel`.
+- Added docs and tests for 13D candidate scope, deferred production gaps,
+  founder decision items, ordinary-user hidden internal terms, docs, and
+  project-state.
+
+What still cannot happen:
+
+- Sprint planning is not final roadmap, not real user research, not analytics,
+  and not production readiness.
+- No backend, database, camera, AR, OpenAI/external API, training, registry
+  write, registry mutation, publish, production writer, User App Shell package
+  replacement, personal data, real user photos, base64, or local photo paths.
+- Registry chain remains paused after Phase 10U.
+
 ## Phase 13B
 
 Added Founder Trial Feedback Capture and MVP Gap Prioritization on top of Phase

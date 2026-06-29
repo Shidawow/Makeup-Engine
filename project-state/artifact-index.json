@@ -461,10 +461,10 @@
     "Observation template documentation",
     "Outcome review documentation"
   ],
-  "phase": "13B",
-  "lastCompletedPhase": "13B",
-  "currentPhase": "Phase 13B - Founder Trial Feedback Capture & MVP Gap Prioritization",
-  "nextRecommendedPhase": "13C",
+  "phase": "13C",
+  "lastCompletedPhase": "13C",
+  "currentPhase": "Phase 13C - MVP Gap Resolution Sprint Planning",
+  "nextRecommendedPhase": "13D",
   "updatedAt": "2026-06-29T00:00:00.000Z",
   "artifacts": [
     "docs/product/internal-trial-learning-summary.md",
@@ -585,7 +585,7 @@
     "docs/product/internal-trial-evidence-quality-gate.md",
     "docs/phases/phase-9F.md"
   ],
-  "nextRecommendedPhaseName": "MVP Gap Resolution Sprint Planning",
+  "nextRecommendedPhaseName": "MVP Demo Gap Resolution Sprint 1",
   "userAppAnonymousTrialDryRunOutputs": [
     "src/user-app/userAppAnonymousTrialDryRunPack.ts",
     "src/user-app/userAppAnonymousTrialDryRunChecklist.ts",
@@ -673,14 +673,14 @@
     "docs/phases/phase-10H.md"
   ],
   "lastUpdatedPhase": "13B",
-  "currentPhaseId": "13B",
-  "currentPhaseName": "Founder Trial Feedback Capture & MVP Gap Prioritization",
+  "currentPhaseId": "13C",
+  "currentPhaseName": "MVP Gap Resolution Sprint Planning",
   "lastValidation": {
-    "phase": "13B",
+    "phase": "13C",
     "mediapipeCheck": "passed",
     "typecheck": "passed",
     "test": "passed",
-    "scopedTests": "passed (14 files / 46 tests)",
+    "scopedTests": "passed (13 files / 50 tests)",
     "build": "passed",
     "projectStatus": "passed",
     "projectStatusJson": "passed",
@@ -688,24 +688,24 @@
     "contextPackJson": "passed",
     "browserVerification": "passed",
     "browserValidation": "passed",
-    "testFiles": 14,
-    "tests": 46,
-    "phase13BScopedTests": "passed",
+    "testFiles": 13,
+    "tests": 50,
+    "phase13CScopedTests": "passed",
     "browserValidationNotes": [
-      "Ordinary User App path loads with local privacy copy and does not expose Founder Trial Feedback, MVP Gap Prioritization, Founder Demo Review, registry, or production writer terms.",
-      "Vision Analysis route shows FaceMesh/MediaPipe readiness, does not show mock fallback when local MediaPipe assets are ready, and does not show Founder/Gaps/Acceptance Trial panels.",
-      "Template Studio workbench shows Founder Demo Review, Founder Trial Feedback Capture, MVP Gap Prioritization, internal-only/no personal data/no real photo/no analytics notices, priority/impact/effort/decision fields, and Phase 13C recommendation.",
-      "Template Studio workbench does not show positive claims for registry write, publish, production writer creation, registry mutation, formal UserAppTemplatePackage generation, or User App Shell replacement.",
+      "Ordinary User App path loads with local privacy copy and does not expose MVP Gap Resolution Sprint Plan, Sprint Planning, Gap Resolution, roadmap, registry, or production writer terms.",
+      "Vision Analysis route shows FaceMesh/MediaPipe/readiness information, does not show mock fallback when local MediaPipe assets are ready, and does not show 13A/13B/13C planning panels.",
+      "Template Studio workbench shows Founder Demo Review, Founder Trial Feedback Capture, MVP Gap Prioritization, MVP Gap Resolution Sprint Plan, 13D items, 13E/later items, deferred production gaps, founder decision items, owner, priority, impact, effort, acceptance criteria, no analytics/backend/registry boundary, and Phase 13D recommendation.",
+      "Template Studio workbench does not show positive claims for registry write, publish, production writer creation, registry mutation, or User App Shell replacement.",
       "Page console errors: 0."
     ],
-    "summary": "Phase 13B validation passed: npm run mediapipe:check, scoped tests (14 files / 46 tests), npm run typecheck, npm run build, npm run project:status, npm run project:context, JSON status/context commands, and browser validation."
+    "summary": "Phase 13C validation passed: npm run mediapipe:check, scoped tests (13 files / 50 tests), npm run typecheck, npm run build, npm run project:status, npm run project:context, JSON status/context commands, and browser validation."
   },
   "validation": {
-    "phase": "13B",
+    "phase": "13C",
     "mediapipeCheck": "passed",
     "typecheck": "passed",
     "test": "passed",
-    "scopedTests": "passed (14 files / 46 tests)",
+    "scopedTests": "passed (13 files / 50 tests)",
     "build": "passed",
     "projectStatus": "passed",
     "projectStatusJson": "passed",
@@ -713,17 +713,17 @@
     "contextPackJson": "passed",
     "browserVerification": "passed",
     "browserValidation": "passed",
-    "testFiles": 14,
-    "tests": 46,
-    "phase13BScopedTests": "passed",
+    "testFiles": 13,
+    "tests": 50,
+    "phase13CScopedTests": "passed",
     "browserValidationNotes": [
-      "Ordinary User App path loads with local privacy copy and does not expose Founder Trial Feedback, MVP Gap Prioritization, Founder Demo Review, registry, or production writer terms.",
-      "Vision Analysis route shows FaceMesh/MediaPipe readiness, does not show mock fallback when local MediaPipe assets are ready, and does not show Founder/Gaps/Acceptance Trial panels.",
-      "Template Studio workbench shows Founder Demo Review, Founder Trial Feedback Capture, MVP Gap Prioritization, internal-only/no personal data/no real photo/no analytics notices, priority/impact/effort/decision fields, and Phase 13C recommendation.",
-      "Template Studio workbench does not show positive claims for registry write, publish, production writer creation, registry mutation, formal UserAppTemplatePackage generation, or User App Shell replacement.",
+      "Ordinary User App path loads with local privacy copy and does not expose MVP Gap Resolution Sprint Plan, Sprint Planning, Gap Resolution, roadmap, registry, or production writer terms.",
+      "Vision Analysis route shows FaceMesh/MediaPipe/readiness information, does not show mock fallback when local MediaPipe assets are ready, and does not show 13A/13B/13C planning panels.",
+      "Template Studio workbench shows Founder Demo Review, Founder Trial Feedback Capture, MVP Gap Prioritization, MVP Gap Resolution Sprint Plan, 13D items, 13E/later items, deferred production gaps, founder decision items, owner, priority, impact, effort, acceptance criteria, no analytics/backend/registry boundary, and Phase 13D recommendation.",
+      "Template Studio workbench does not show positive claims for registry write, publish, production writer creation, registry mutation, or User App Shell replacement.",
       "Page console errors: 0."
     ],
-    "summary": "Phase 13B validation passed: npm run mediapipe:check, scoped tests (14 files / 46 tests), npm run typecheck, npm run build, npm run project:status, npm run project:context, JSON status/context commands, and browser validation."
+    "summary": "Phase 13C validation passed: npm run mediapipe:check, scoped tests (13 files / 50 tests), npm run typecheck, npm run build, npm run project:status, npm run project:context, JSON status/context commands, and browser validation."
   },
   "summary": "Phase 13B completed local founder/internal feedback capture and MVP gap prioritization while keeping registry/publish/production boundaries blocked. Validation passed.",
   "status": "completed",
@@ -773,7 +773,8 @@
     "Next recommended phase is Phase 12D - Photo-to-Template Operator Workflow & Draft Preview QA.",
     "Phase 12E completed Photo-to-Template End-to-End Demo Script & Acceptance Trial.",
     "Next recommended phase is Phase 13A - MVP Trial Content Pack & Founder Demo Review.",
-    "Phase 13B completed Founder Trial Feedback Capture & MVP Gap Prioritization; next recommended phase is Phase 13C - MVP Gap Resolution Sprint Planning."
+    "Phase 13B completed Founder Trial Feedback Capture & MVP Gap Prioritization; next recommended phase is Phase 13C - MVP Gap Resolution Sprint Planning.",
+    "Phase 13C completed MVP Gap Resolution Sprint Planning; next recommended phase is Phase 13D - MVP Demo Gap Resolution Sprint 1."
   ],
   "files": [
     "src/template-engine/realRegistryWriteImplementationDraft.ts",
@@ -839,7 +840,7 @@
     "RealWriteExecutionAuthorizationHandoff future Phase 10R handoff metadata",
     "RealWriteExecutionAuthorizationPanel Template Workbench administrator UI"
   ],
-  "lastCompletedBusinessPhase": "13B",
+  "lastCompletedBusinessPhase": "13C",
   "realWriteExecutionPlanOutputs": [
     "RealWriteExecutionPlan local execution-plan-only metadata",
     "RealWriteExecutionPlanValidationResult source/safety/plan validation metadata",
@@ -922,7 +923,7 @@
     "npm run test -- tests/photo-to-template-acceptance-trial.test.ts tests/photo-to-template-acceptance-trial-panel.test.tsx tests/phase-12E-documentation-recovery.test.ts tests/photo-to-template-operator-workflow.test.ts tests/photo-to-template-draft-preview-qa.test.ts tests/photo-to-template-draft-integration.test.ts tests/photo-to-template-human-review-editing.test.ts tests/makeup-semantic-extraction.test.ts tests/photo-to-template-reality-check.test.ts tests/photo-to-template-reality-validation.test.ts tests/user-app-demo-forbidden-terms.test.tsx tests/template-studio-tab-boundary.test.tsx tests/vision-readiness-score-label.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
   ],
   "lastUpdated": "2026-06-29T00:00:00.000Z",
-  "nextAction": "Proceed to Phase 13C - MVP Gap Resolution Sprint Planning.",
+  "nextAction": "Proceed to Phase 13D - MVP Demo Gap Resolution Sprint 1.",
   "taskStatus": "completed",
   "realWriteApprovalBoundaryDecision": {
     "nextPhase": "Phase 10V - Actual Write Authorization Request",
@@ -1057,7 +1058,7 @@
     ],
     "nextPhase": "Phase 12A - Photo-to-Template Draft Reality Check"
   },
-  "currentTask": "Phase 13B - Founder Trial Feedback Capture & MVP Gap Prioritization",
+  "currentTask": "Phase 13C - MVP Gap Resolution Sprint Planning",
   "photoToTemplateRealityCheckDecision": {
     "registryChainStatus": "registry chain paused after Phase 10U",
     "realWriteAuthorizationPath": "Phase 10V intentionally paused; not the active next phase",
@@ -1257,7 +1258,11 @@
     "MvpGapImpact",
     "MvpGapDecision",
     "MvpGapRecommendation",
-    "MvpGapPrioritizationPanel"
+    "MvpGapPrioritizationPanel",
+    "MvpGapResolutionSprintPlanReport",
+    "MvpGapResolutionSprintItem",
+    "MvpGapResolutionSprintValidationResult",
+    "MvpGapResolutionSprintPlanPanel"
   ],
   "mainModules": [
     "src/vision/makeupSemanticExtraction.ts",
@@ -1292,7 +1297,18 @@
     "tests/mvp-gap-prioritization.test.ts",
     "tests/founder-trial-feedback-panel.test.tsx",
     "tests/mvp-gap-prioritization-panel.test.tsx",
-    "tests/phase-13B-documentation-recovery.test.ts"
+    "tests/phase-13B-documentation-recovery.test.ts",
+    "src/template-engine/mvpGapResolutionSprintPlan.ts",
+    "src/template-engine/mvpGapResolutionSprintValidation.ts",
+    "src/templates/examples/mvp-gap-resolution-sprint-plan.example.ts",
+    "src/components/template-studio/MvpGapResolutionSprintPlanPanel.tsx",
+    "docs/product/mvp-gap-resolution-sprint-plan.md",
+    "docs/product/mvp-gap-resolution-13d-candidate-scope.md",
+    "docs/phases/phase-13C.md",
+    "tests/mvp-gap-resolution-sprint-plan.test.ts",
+    "tests/mvp-gap-resolution-sprint-validation.test.ts",
+    "tests/mvp-gap-resolution-sprint-plan-panel.test.tsx",
+    "tests/phase-13C-documentation-recovery.test.ts"
   ],
   "knownLimitations": [
     "Phase 12B Makeup Semantic Extraction Baseline is candidate-only; it is not final recognition, not AI-confirmed extraction, not product shade matching, not medical or skin diagnosis, and not fully automatic high-quality makeup extraction.",
@@ -1306,7 +1322,8 @@
     "Phase 12E keeps fully automatic high-quality extraction, AI-confirmed recognition, medical claims, exact product shade claims, publish readiness, registry readiness, and production readiness blocked.",
     "Phase 13A - MVP Trial Content Pack & Founder Demo Review is the recommended next phase; Phase 10V remains intentionally paused.",
     "acceptance trial is not production readiness",
-    "Phase 13B founder/internal feedback and MVP gap prioritization are not real user research, not analytics, not production readiness, not registry readiness, and cannot collect personal data, real user photos, base64, local photo paths, backend records, or training data."
+    "Phase 13B founder/internal feedback and MVP gap prioritization are not real user research, not analytics, not production readiness, not registry readiness, and cannot collect personal data, real user photos, base64, local photo paths, backend records, or training data.",
+    "Phase 13C MVP gap resolution sprint planning is not final roadmap, not real user research, not analytics, not production readiness, and cannot add backend, registry write, registry mutation, publish, production writer, User App Shell replacement, real user photos, base64, local photo paths, personal data, or training data."
   ],
   "handoffNotes": [
     "Phase 12B completed Makeup Semantic Extraction Baseline.",
@@ -1320,14 +1337,16 @@
     "Phase 12E completed Photo-to-Template End-to-End Demo Script & Acceptance Trial.",
     "Acceptance trial is not production readiness and keeps registry chain paused after Phase 10U.",
     "Next recommended phase is Phase 13A - MVP Trial Content Pack & Founder Demo Review.",
-    "Phase 13B completed Founder Trial Feedback Capture & MVP Gap Prioritization; next recommended phase is Phase 13C - MVP Gap Resolution Sprint Planning."
+    "Phase 13B completed Founder Trial Feedback Capture & MVP Gap Prioritization; next recommended phase is Phase 13C - MVP Gap Resolution Sprint Planning.",
+    "Phase 13C completed MVP Gap Resolution Sprint Planning; next recommended phase is Phase 13D - MVP Demo Gap Resolution Sprint 1."
   ],
   "risks": [
     "Do not treat semantic candidates as final recognition or AI-confirmed extraction.",
     "Do not claim product shade matching, medical or skin diagnosis, or fully automatic high-quality makeup extraction.",
     "Do not resume Phase 10V or execute registry writes.",
     "Operator workflow can be mistaken for production readiness if draft-preview-only boundary is removed.",
-    "Do not treat founder/internal feedback as real user research, analytics, production readiness, or registry readiness."
+    "Do not treat founder/internal feedback as real user research, analytics, production readiness, or registry readiness.",
+    "Do not treat Phase 13C sprint planning as final roadmap, real user research, analytics, production readiness, or registry readiness."
   ],
   "scopedTestCommand": "npm run test -- tests/founder-trial-feedback.test.ts tests/mvp-gap-prioritization.test.ts tests/founder-trial-feedback-panel.test.tsx tests/mvp-gap-prioritization-panel.test.tsx tests/phase-13B-documentation-recovery.test.ts tests/founder-demo-review.test.ts tests/founder-demo-review-panel.test.tsx tests/photo-to-template-acceptance-trial.test.ts tests/user-app-demo-forbidden-terms.test.tsx tests/template-studio-tab-boundary.test.tsx tests/vision-readiness-score-label.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
   "lastKnownPreDoc0Validation": {
@@ -1368,11 +1387,11 @@
     "tests/phase-12B-documentation-recovery.test.ts"
   ],
   "latestValidation": {
-    "phase": "13B",
+    "phase": "13C",
     "mediapipeCheck": "passed",
     "typecheck": "passed",
     "test": "passed",
-    "scopedTests": "passed (14 files / 46 tests)",
+    "scopedTests": "passed (13 files / 50 tests)",
     "build": "passed",
     "projectStatus": "passed",
     "projectStatusJson": "passed",
@@ -1380,17 +1399,17 @@
     "contextPackJson": "passed",
     "browserVerification": "passed",
     "browserValidation": "passed",
-    "testFiles": 14,
-    "tests": 46,
-    "phase13BScopedTests": "passed",
+    "testFiles": 13,
+    "tests": 50,
+    "phase13CScopedTests": "passed",
     "browserValidationNotes": [
-      "Ordinary User App path loads with local privacy copy and does not expose Founder Trial Feedback, MVP Gap Prioritization, Founder Demo Review, registry, or production writer terms.",
-      "Vision Analysis route shows FaceMesh/MediaPipe readiness, does not show mock fallback when local MediaPipe assets are ready, and does not show Founder/Gaps/Acceptance Trial panels.",
-      "Template Studio workbench shows Founder Demo Review, Founder Trial Feedback Capture, MVP Gap Prioritization, internal-only/no personal data/no real photo/no analytics notices, priority/impact/effort/decision fields, and Phase 13C recommendation.",
-      "Template Studio workbench does not show positive claims for registry write, publish, production writer creation, registry mutation, formal UserAppTemplatePackage generation, or User App Shell replacement.",
+      "Ordinary User App path loads with local privacy copy and does not expose MVP Gap Resolution Sprint Plan, Sprint Planning, Gap Resolution, roadmap, registry, or production writer terms.",
+      "Vision Analysis route shows FaceMesh/MediaPipe/readiness information, does not show mock fallback when local MediaPipe assets are ready, and does not show 13A/13B/13C planning panels.",
+      "Template Studio workbench shows Founder Demo Review, Founder Trial Feedback Capture, MVP Gap Prioritization, MVP Gap Resolution Sprint Plan, 13D items, 13E/later items, deferred production gaps, founder decision items, owner, priority, impact, effort, acceptance criteria, no analytics/backend/registry boundary, and Phase 13D recommendation.",
+      "Template Studio workbench does not show positive claims for registry write, publish, production writer creation, registry mutation, or User App Shell replacement.",
       "Page console errors: 0."
     ],
-    "summary": "Phase 13B validation passed: npm run mediapipe:check, scoped tests (14 files / 46 tests), npm run typecheck, npm run build, npm run project:status, npm run project:context, JSON status/context commands, and browser validation."
+    "summary": "Phase 13C validation passed: npm run mediapipe:check, scoped tests (13 files / 50 tests), npm run typecheck, npm run build, npm run project:status, npm run project:context, JSON status/context commands, and browser validation."
   },
   "lastKnownValidation": {
     "phase": "12B",
@@ -1438,7 +1457,7 @@
     ],
     "summary": "Phase 12B validation passed: npm run mediapipe:check, scoped tests (15 files / 48 tests), npm run typecheck, npm run build, npm run project:status, npm run project:context, JSON status/context commands, and browser validation."
   },
-  "fromPhase": "13B",
+  "fromPhase": "13C",
   "phase12EAcceptanceTrial": {
     "phase": "12E",
     "title": "Photo-to-Template End-to-End Demo Script & Acceptance Trial",
@@ -1482,8 +1501,8 @@
     "tests/photo-to-template-acceptance-trial-panel.test.tsx",
     "tests/phase-12E-documentation-recovery.test.ts"
   ],
-  "toPhase": "13C",
-  "nextRecommendedPhaseLabel": "Phase 13C - MVP Gap Resolution Sprint Planning",
+  "toPhase": "13D",
+  "nextRecommendedPhaseLabel": "Phase 13D - MVP Demo Gap Resolution Sprint 1",
   "phase13AOutputs": [
     "MvpTrialContentPack local fixture metadata",
     "FounderDemoReviewReport local review metadata",
@@ -1511,8 +1530,8 @@
     "tests/mvp-gap-prioritization-panel.test.tsx",
     "tests/phase-13B-documentation-recovery.test.ts"
   ],
-  "testFiles": 14,
-  "tests": 46,
+  "testFiles": 13,
+  "tests": 50,
   "phase13BScopedTests": "passed",
   "mediapipeCheck": "passed",
   "typecheck": "passed",
@@ -1522,5 +1541,12 @@
   "projectStatusJson": "passed",
   "projectContext": "passed",
   "contextPackJson": "passed",
-  "browserVerification": "passed"
+  "browserVerification": "passed",
+  "mvpGapResolutionSprintPlanningDecision": {
+    "phase": "13C",
+    "status": "completed",
+    "nextRecommendedPhase": "Phase 13D - MVP Demo Gap Resolution Sprint 1",
+    "boundary": "Sprint planning is local and internal-only; it is not final roadmap, not real user research, not analytics, no backend, no registry write, no publish, no production writer, no User App Shell replacement."
+  },
+  "phase13CScopedTests": "passed"
 }

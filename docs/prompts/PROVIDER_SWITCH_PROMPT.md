@@ -6,12 +6,13 @@ Default to compact context. Do not copy full historical chat transcripts. Do not
 
 ## Current State
 
-- `lastCompletedPhase: 13B`
-- `nextRecommendedPhase: 13C`
-- `nextRecommendedPhaseName: MVP Gap Resolution Sprint Planning`
+- `lastCompletedPhase: 13C`
+- `nextRecommendedPhase: 13D`
+- `nextRecommendedPhaseName: MVP Demo Gap Resolution Sprint 1`
 - Project role: Makeup template production system with a local contract-driven user app shell prototype, not a production user app.
-- Current capability: Phase 13B - Founder Trial Feedback Capture & MVP Gap Prioritization keeps the registry chain paused after Phase 10U and adds local founder/internal feedback plus MVP gap prioritization panels in Template Studio. Feedback is not real user research, not analytics, and contains no personal data, real photos, base64, local paths, backend records, or training data. Gap prioritization separates MVP demo gaps from deferred production gaps and recommends Phase 13C.
+- Current capability: Phase 13C - MVP Gap Resolution Sprint Planning keeps the registry chain paused after Phase 10U and adds a local sprint plan panel in Template Studio. It separates 13D items, 13E/later items, deferred production gaps, and founder decision items. sprint planning is not final roadmap, not real user research, not analytics, and contains no personal data, real photos, base64, local paths, backend records, or training data.
 
+Historical handoff marker retained for Phase 13B recovery tests: `lastCompletedPhase: 13B`, `nextRecommendedPhase: 13C`, Founder Trial Feedback Capture & MVP Gap Prioritization.
 Historical handoff marker retained for Phase 13A recovery tests: `lastCompletedPhase: 13A`, `nextRecommendedPhase: 13B`.
 Historical handoff marker retained for Phase 10U recovery tests: `lastCompletedPhase: 10U`, `nextRecommendedPhase: 10V`.
 Historical handoff marker retained for Phase 12E recovery tests: `lastCompletedPhase: 12E`, `nextRecommendedPhase: 13A`.

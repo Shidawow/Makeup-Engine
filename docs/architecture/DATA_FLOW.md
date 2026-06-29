@@ -1,5 +1,21 @@
 # Data Flow
 
+## Phase 13C Sprint Planning Flow
+
+```text
+FounderTrialFeedbackReport
+-> MvpGapPrioritizationReport
+-> MvpGapResolutionSprintPlanReport
+-> MvpGapResolutionSprintValidationResult
+-> MvpGapResolutionSprintPlanPanel
+-> Phase 13D MVP Demo Gap Resolution Sprint 1
+```
+
+Production gaps remain deferred. Founder-decision items are marked explicitly.
+The flow does not write registry state, publish, create a production writer,
+replace the User App Shell package, add backend/analytics, collect real user
+data, or claim fully automatic high-quality makeup extraction.
+
 ## Main Flow
 
 ```text
@@ -40,6 +56,8 @@ Real Photo
 -> UserAppTemplatePackage
 -> User App Prototype Contract Consumer
 -> User App Shell
+-> Founder Trial Feedback Capture & MVP Gap Prioritization
+-> MVP Gap Resolution Sprint Planning
 -> Step Guidance UX Hardening
 -> User Photo Intake Placeholder / Personalization Boundary
 -> User App Local Preferences / Onboarding

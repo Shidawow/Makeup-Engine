@@ -40,15 +40,19 @@ describe('provider switching docs', () => {
     expect(combined).toContain('src/intelligence/runtime');
   });
 
-  it('provides phase 13B to 13C switch templates with historical 13A, 12E, 12D, 12C, 12B, 12A, 11D, 11C, 11B, 11A, 10U, and older markers', async () => {
+  it('provides phase 13C to 13D switch templates with historical 13B, 13A, 12E, 12D, 12C, 12B, 12A, 11D, 11C, 11B, 11A, 10U, and older markers', async () => {
     const prompt = await readFile('docs/prompts/PROVIDER_SWITCH_PROMPT.md', 'utf8');
 
     expect(prompt).toContain('Switch To Native GPT / Codex Desktop');
     expect(prompt).toContain('Switch To PackyAPI + CLI');
     expect(prompt).toContain('Return From PackyAPI To ChatGPT');
+    expect(prompt).toContain('lastCompletedPhase: 13C');
+    expect(prompt).toContain('nextRecommendedPhase: 13D');
+    expect(prompt).toContain('MVP Demo Gap Resolution Sprint 1');
+    expect(prompt).toContain('MVP Gap Resolution Sprint Planning');
+    expect(prompt).toContain('sprint planning is not final roadmap');
     expect(prompt).toContain('lastCompletedPhase: 13B');
     expect(prompt).toContain('nextRecommendedPhase: 13C');
-    expect(prompt).toContain('MVP Gap Resolution Sprint Planning');
     expect(prompt).toContain('Founder Trial Feedback Capture & MVP Gap Prioritization');
     expect(prompt).toContain('not real user research');
     expect(prompt).toContain('MVP Trial Content Pack & Founder Demo Review');

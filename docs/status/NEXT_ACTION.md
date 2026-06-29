@@ -2,12 +2,11 @@
 
 ## What To Do Next
 
-Proceed to Phase 13C: MVP Gap Resolution Sprint Planning.
+Proceed to Phase 13D: MVP Demo Gap Resolution Sprint 1.
 
 ## Why
 
-Phase 13B captures founder/internal demo feedback and turns it into prioritized
-MVP gaps:
+Phase 13C turns founder/internal MVP gaps into an executable sprint plan:
 
 ```text
 Demo Route A: User App MVP
@@ -18,18 +17,23 @@ Demo Route C: Template Studio Operator Workflow
 -> Phase 13A Founder Demo Review
 -> Phase 13B Founder feedback capture and MVP gap prioritization
 -> Phase 13C MVP gap resolution sprint planning
+-> Phase 13D MVP demo gap resolution sprint 1
 ```
 
 The system can now show three MVP trial templates, run founder-demo checks,
-record deterministic founder/internal feedback, convert it into MVP demo gaps
-and deferred production gaps, and keep ordinary users away from admin terms.
+record deterministic founder/internal feedback, convert it into MVP demo gaps,
+separate deferred production gaps, and produce a 13D/13E sprint plan.
 
-## Recommended 13C Scope
+## Recommended 13D Scope
 
-- Turn p0/p1 MVP demo gaps into a focused sprint plan.
-- Decide which content, interaction, privacy-copy, and photo-to-template trust
-  gaps must be fixed first.
-- Keep production gaps deferred unless explicitly pulled into a later phase.
+- Implement the Phase 13C `do_in_13d` items.
+- Improve User App first-run clarity.
+- Polish trial template content consistency.
+- Add step completion and correction cues without claiming automatic recognition.
+- Improve mobile demo touch targets and spacing.
+- Tighten operator workflow explanation for photo-to-template boundaries.
+- Keep founder-decision and production gaps out of Sprint 1 unless explicitly
+  re-scoped.
 - Keep the photo-to-template workflow semi-automatic, draft-only, and
   human-review-required.
 - Keep registry writes paused after Phase 10U.
@@ -42,7 +46,8 @@ and deferred production gaps, and keep ordinary users away from admin terms.
 - Do not create or execute a production writer.
 - Do not publish to the user app.
 - Do not replace the current User App Shell package.
-- Do not treat founder/internal feedback as real user research or analytics.
+- Do not treat founder/internal feedback or sprint planning as real user
+  research, analytics, production readiness, or final roadmap.
 - Do not generate or mutate a formal `UserAppTemplatePackage` from 12E/13A/13B
   output.
 - Do not claim fully automatic high-quality makeup extraction.
@@ -69,14 +74,17 @@ Read these files first:
 9. `docs/product/founder-demo-review-script.md`
 10. `docs/product/founder-trial-feedback-capture.md`
 11. `docs/product/mvp-gap-prioritization.md`
-12. `docs/product/photo-to-template-acceptance-trial.md`
-13. `docs/phases/phase-13A.md`
-14. `docs/phases/phase-13B.md`
-15. `project-state/project-state.snapshot.json`
-16. `project-state/latest-handoff.json`
-17. `project-state/provider-handoff.json`
-18. `project-state/active-task.json`
-19. `project-state/guardrails.json`
+12. `docs/product/mvp-gap-resolution-sprint-plan.md`
+13. `docs/product/mvp-gap-resolution-13d-candidate-scope.md`
+14. `docs/product/photo-to-template-acceptance-trial.md`
+15. `docs/phases/phase-13A.md`
+16. `docs/phases/phase-13B.md`
+17. `docs/phases/phase-13C.md`
+18. `project-state/project-state.snapshot.json`
+19. `project-state/latest-handoff.json`
+20. `project-state/provider-handoff.json`
+21. `project-state/active-task.json`
+22. `project-state/guardrails.json`
 
 Then run:
 

@@ -1,5 +1,25 @@
 # Boundaries And Guardrails
 
+## Phase 13C Guardrails
+
+Phase 13C sprint planning must remain local and planning-only:
+
+- sprint planning is not final roadmap
+- founder/internal feedback is not real user research
+- no analytics
+- no backend or database
+- no real user feedback collection
+- no real user photos, base64, local photo paths, personal data, or biometrics
+- no registry write or registry mutation
+- no publish
+- no production writer
+- no User App Shell package replacement
+- no camera, AR, OpenAI API, external AI API, or model training
+- no fully automatic high-quality makeup extraction claim
+
+Every `do_in_13d` item must keep owner role and acceptance criteria. Production
+gaps must remain deferred unless a future explicit phase re-scopes them.
+
 ## Required Guardrails
 
 - `SourceImagePackage` cannot directly become a training dataset.
