@@ -2,6 +2,40 @@
 
 This history is a recovery summary based on current project reports, current source layout, tests, and documentation. Earlier phase details are summarized when exact original phase reports are not available.
 
+## Phase 13D
+
+Resolved the first MVP demo gaps from Phase 13C.
+
+What changed:
+
+- Added `MvpDemoGapResolutionSprint1Report` with five resolved gap categories,
+  changed areas, acceptance criteria, evidence, remaining issues, and next
+  action.
+- Added Template Studio operator-only `MvpDemoGapResolutionSprint1Panel`.
+- Improved User App first-run clarity with local makeup guidance MVP copy and a
+  three-step how-to-start path.
+- Polished trial template fixture consistency across three MVP trial templates.
+- Added trust wording to guided steps so ordinary users do not think the system
+  is recognizing their photo or real makeup.
+- Improved mobile demo tap targets, template card height, and sticky action
+  spacing.
+- Tightened operator panel explanations for founder demo, gap prioritization,
+  sprint plan, and photo-to-template workflow.
+
+What still cannot happen:
+
+- Phase 13D is not production readiness, not real user research, not analytics,
+  not registry readiness, not publication, and not a final roadmap.
+- No backend, database, camera, AR, OpenAI/external API, training, registry
+  write, registry mutation, publish, production writer, User App Shell package
+  replacement, personal data, real user photos, base64, or local photo paths.
+- Registry chain remains paused after Phase 10U.
+
+Why Phase 14A follows:
+
+The first demo polish sprint is complete enough to run an internal founder demo
+before deciding whether Phase 13E is needed.
+
 ## Phase 13C
 
 Added MVP Gap Resolution Sprint Planning on top of Phase 13B gap

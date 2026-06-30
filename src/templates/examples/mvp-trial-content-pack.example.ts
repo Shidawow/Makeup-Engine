@@ -146,7 +146,7 @@ export const mvpTrialContentPackReadyExample: MvpTrialContentPack = {
       estimatedMinutes: 16,
       toolsChecklist: ['海绵粉扑', '小号眼影刷', '腮红刷', '睫毛夹', '唇刷可选'],
       productPlaceholders: ['清透底妆', '灰棕眼影', '低饱和腮红', '自然睫毛产品', '水润唇色'],
-      sourceLabel: 'demo_fixture',
+      sourceLabel: 'local_trial_content',
       notFromAutomaticExtraction: true,
       humanReviewRecommended: true,
       steps: [

@@ -85,6 +85,9 @@ export function UserAppStepGuide({
           <p className="mt-1 text-sm leading-6 text-stone-600">
             一次只看当前步骤。看清目标、工具和提示后，再完成本步骤。
           </p>
+          <p className="mt-2 rounded-md bg-stone-50 px-3 py-2 text-xs leading-5 text-stone-600">
+            当前步骤来自演示模板，可作为新手练习参考；请按模板建议上妆，页面不会识别你的照片或判断你的真实妆容。
+          </p>
         </div>
         <div className="flex flex-wrap gap-2">
           <span className="w-fit rounded bg-stone-100 px-3 py-1 text-xs text-stone-600">
@@ -139,7 +142,7 @@ export function UserAppStepGuide({
       ) : null}
 
       {step ? (
-        <article className="mt-4 grid gap-4">
+        <article className="mt-4 grid gap-4 pb-24 sm:pb-0">
           <div className="rounded-lg bg-teal-50 p-4">
             <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
               <div>
@@ -257,7 +260,7 @@ export function UserAppStepGuide({
             </div>
           </div>
 
-          <div className="sticky bottom-3 grid gap-2 rounded-lg border border-stone-200 bg-white/95 p-2 shadow-soft sm:static sm:grid-cols-3 sm:bg-transparent sm:p-0 sm:shadow-none">
+          <div className="sticky bottom-3 grid gap-2 rounded-lg border border-stone-200 bg-white/95 p-2 pb-[calc(0.5rem+env(safe-area-inset-bottom))] shadow-soft sm:static sm:grid-cols-3 sm:bg-transparent sm:p-0 sm:shadow-none">
             <button
               className="inline-flex min-h-12 items-center justify-center gap-2 rounded-md border border-stone-300 bg-white px-4 py-3 text-sm font-semibold text-stone-800 disabled:opacity-40"
               disabled={!template.previousStepId}

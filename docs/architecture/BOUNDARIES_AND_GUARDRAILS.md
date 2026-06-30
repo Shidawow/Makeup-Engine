@@ -1,5 +1,25 @@
 # Boundaries And Guardrails
 
+## Phase 13D Guardrails
+
+Phase 13D MVP demo gap resolution must remain local demo polish:
+
+- not production readiness
+- not real user research
+- not analytics
+- no backend or database
+- no real user feedback collection
+- no real user photos, base64, local photo paths, personal data, or biometrics
+- no registry write or registry mutation
+- no publish
+- no production writer
+- no User App Shell package replacement
+- no camera, AR, OpenAI API, external AI API, or model training
+- no fully automatic high-quality makeup extraction claim
+
+Every resolved item must stay tied to local evidence, visible changed areas,
+acceptance criteria, and no-registry/no-production boundaries.
+
 ## Phase 13C Guardrails
 
 Phase 13C sprint planning must remain local and planning-only:

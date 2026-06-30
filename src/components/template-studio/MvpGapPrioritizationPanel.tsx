@@ -25,7 +25,11 @@ export function MvpGapPrioritizationPanel({
             这是 MVP gap prioritization，不是 product roadmap final。
           </p>
           <p className="mt-1 text-xs leading-5 text-sky-900">
+            这个面板只把 founder/internal feedback 分成可演示修复、后续修复和延期生产范围。
             不是 production readiness；不能 publish / registry write。
+          </p>
+          <p className="mt-1 text-xs leading-5 text-sky-900">
+            优先级用于本地 demo 排期，不等于真实用户研究、analytics 或正式路线图。
           </p>
         </div>
         <span className="rounded-md border border-sky-200 bg-white px-2.5 py-1 text-xs font-semibold text-sky-900">

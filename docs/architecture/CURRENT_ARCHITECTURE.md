@@ -2,6 +2,20 @@
 
 Makeup Engine is a local template production system for a future makeup coaching app. It is organized as deterministic local modules with explicit boundaries between source images, browser artifact binding, vision analysis, human correction, review, training, and export.
 
+## Phase 13D MVP Demo Gap Resolution Sprint 1
+
+Phase 13D adds a local demo-polish layer after Phase 13C sprint planning:
+
+- `MvpDemoGapResolutionSprint1Report`
+- `MvpDemoGapResolutionItem`
+- `MvpDemoGapResolutionSprint1Panel`
+
+The layer records how Sprint 1 resolved first-run clarity, trial template
+consistency, trust wording, mobile demo usability, and operator workflow
+explanation. It is not production readiness, not real user research, not
+analytics, and not registry readiness. The next recommended architecture step
+is Phase 14A - Internal Founder Demo Run.
+
 ## Phase 13C MVP Gap Resolution Sprint Planning
 
 Phase 13C adds a planning-only layer after founder/internal feedback:
@@ -1137,5 +1151,5 @@ state, publish, create production writers, replace the current User App Shell
 package, mutate `UserAppTemplatePackage`, add backend/API/camera/AR scope,
 upload real photos, store real user data, or train models.
 
-The next recommended architecture step is Phase 13C - MVP Gap Resolution Sprint
-Planning.
+The next recommended architecture step after Phase 13B was Phase 13C - MVP Gap
+Resolution Sprint Planning.

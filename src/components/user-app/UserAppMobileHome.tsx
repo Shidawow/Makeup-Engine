@@ -47,14 +47,27 @@ export function UserAppMobileHome({
           <div className="flex items-start justify-between gap-3">
             <div>
               <p className="text-xs font-semibold text-teal-800">移动端练习入口</p>
-              <h2 className="mt-1 text-xl font-semibold text-stone-950">今天从哪套妆容开始？</h2>
+              <h2 className="mt-1 text-xl font-semibold text-stone-950">
+                化妆指导 MVP，从一套模板开始
+              </h2>
               <p className="mt-2 text-sm leading-6 text-stone-700">
-                先选妆容，再按步骤跟练。照片、相机和 AR 暂未启用，当前体验只在本地预览，
-                不上传，也不会用于训练。
+                选择一个妆容模板，查看工具准备，然后跟着步骤完成妆容练习。
+                当前是本地 MVP 演示，照片、相机和 AR 暂未启用，不上传，也不会用于训练。
               </p>
             </div>
             <Sparkles aria-hidden="true" className="shrink-0 text-teal-700" size={24} />
           </div>
+
+          <ol className="mt-4 grid gap-2 text-sm leading-6 text-stone-700 sm:grid-cols-3">
+            {['选择妆容模板', '查看工具和准备事项', '跟着步骤完成练习'].map((item, index) => (
+              <li className="rounded-md bg-white p-3" key={item}>
+                <span className="mr-2 inline-flex size-6 items-center justify-center rounded-full bg-teal-700 text-xs font-semibold text-white">
+                  {index + 1}
+                </span>
+                {item}
+              </li>
+            ))}
+          </ol>
 
           <div className="mt-4 rounded-lg border border-teal-100 bg-white p-3">
             <p className="text-xs font-semibold text-teal-700">当前推荐</p>
@@ -79,7 +92,7 @@ export function UserAppMobileHome({
 
         <div className="grid gap-2">
           <button
-            className="inline-flex min-h-11 items-center justify-center gap-2 rounded-md bg-teal-700 px-4 py-3 text-sm font-semibold text-white hover:bg-teal-800 disabled:opacity-40"
+            className="inline-flex min-h-12 items-center justify-center gap-2 rounded-md bg-teal-700 px-4 py-3 text-sm font-semibold text-white hover:bg-teal-800 disabled:opacity-40"
             disabled={!canStart}
             onClick={onStartGuidance}
             type="button"
@@ -88,7 +101,7 @@ export function UserAppMobileHome({
             开始跟练
           </button>
           <button
-            className="inline-flex min-h-11 items-center justify-center gap-2 rounded-md border border-stone-300 bg-white px-4 py-3 text-sm font-semibold text-stone-800"
+            className="inline-flex min-h-12 items-center justify-center gap-2 rounded-md border border-stone-300 bg-white px-4 py-3 text-sm font-semibold text-stone-800"
             onClick={onBrowseTemplates}
             type="button"
           >
@@ -96,7 +109,7 @@ export function UserAppMobileHome({
             浏览妆容
           </button>
           <button
-            className="inline-flex min-h-11 items-center justify-center gap-2 rounded-md border border-teal-200 bg-teal-50 px-4 py-3 text-sm font-semibold text-teal-900"
+            className="inline-flex min-h-12 items-center justify-center gap-2 rounded-md border border-teal-200 bg-teal-50 px-4 py-3 text-sm font-semibold text-teal-900"
             onClick={onOpenPrivacy}
             type="button"
           >

@@ -808,8 +808,8 @@ export function UserAppShell({
           <p className="text-xs font-semibold text-teal-700">User App MVP</p>
           <h1 className="text-xl font-semibold text-stone-950">今日妆容练习</h1>
           <p className="mt-1 max-w-2xl text-sm leading-6 text-stone-600">
-            选择妆容，查看准备工具，再按步骤完成一次本地跟练。当前不登录、不上传、不接后端、
-            不启用相机或 AR，也不会用于训练。
+            这是本地化妆指导 MVP：选择一个妆容模板，查看工具准备，然后跟着步骤完成练习。
+            当前不登录、不上传、不接后端、不启用相机或 AR，也不会用于训练。
           </p>
         </div>
         <div className="w-fit rounded-md bg-white px-3 py-2 text-xs text-stone-600">

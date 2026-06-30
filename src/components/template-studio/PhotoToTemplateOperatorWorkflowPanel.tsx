@@ -31,7 +31,11 @@ export function PhotoToTemplateOperatorWorkflowPanel({
             当前是 operator workflow，不是用户 App 页面。它把 12A Reality Check、12B Semantic Extraction、12C Draft Integration / Human Review Editing 和 12D Draft Preview QA 串成后台验收流程。
           </p>
           <p className="mt-1 text-xs leading-5 text-slate-700">
+            读法很简单：照片理解只产出候选和草稿，人工审核决定是否继续，最后只进入本地 demo 预览。
             当前是 draft preview QA，不是发布；仍需人工审核；不能写 registry / 不能 publish / 不能创建 production writer。
+          </p>
+          <p className="mt-1 text-xs leading-5 text-slate-700">
+            这里不会生成正式 UserAppTemplatePackage，也不会替换普通用户 App 的当前模板包。
           </p>
         </div>
         <span className={`rounded-md border px-2.5 py-1 text-xs font-semibold ${statusClass(report.status)}`}>

@@ -29,6 +29,8 @@ const forbiddenOrdinaryUserTerms = [
   'Founder Trial Feedback',
   'MVP Gap Prioritization',
   'MVP Gap Resolution Sprint Plan',
+  'MVP Demo Gap Resolution Sprint 1',
+  '13D resolution report',
   'MVP gap',
   'Gap Resolution',
   'Sprint Planning',

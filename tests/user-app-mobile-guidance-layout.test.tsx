@@ -36,7 +36,7 @@ describe('User App mobile guided layout', () => {
     );
 
     expect(selectionHtml).toContain('grid gap-3 md:grid-cols-3');
-    expect(selectionHtml).toContain('min-h-[180px]');
+    expect(selectionHtml).toContain('min-h-[196px]');
     expect(preparationHtml).toContain('grid gap-2 sm:grid-cols-3');
     expect(preparationHtml).toContain('min-h-12 w-full');
     expect(preparationHtml).toContain('可选工具和产品建议');
@@ -54,6 +54,7 @@ describe('User App mobile guided layout', () => {
     );
 
     expect(html).toContain('sticky bottom-3');
+    expect(html).toContain('pb-24 sm:pb-0');
     expect(html).toContain('min-h-12');
     expect(html).toContain('grid gap-2');
     expect(html).toContain('步骤 1');

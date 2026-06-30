@@ -32,6 +32,7 @@ import {
   createFounderDemoReviewReport,
   createFounderTrialFeedbackReport,
   createMvpGapPrioritizationReport,
+  createMvpDemoGapResolutionSprint1Report,
   createMvpGapResolutionSprintPlan,
   validateMvpGapResolutionSprintPlan,
   createPhotoToTemplateRealityHandoff,
@@ -120,6 +121,7 @@ import { FounderDemoReviewPanel } from './FounderDemoReviewPanel';
 import { FounderTrialFeedbackPanel } from './FounderTrialFeedbackPanel';
 import { MvpGapPrioritizationPanel } from './MvpGapPrioritizationPanel';
 import { MvpGapResolutionSprintPlanPanel } from './MvpGapResolutionSprintPlanPanel';
+import { MvpDemoGapResolutionSprint1Panel } from './MvpDemoGapResolutionSprint1Panel';
 
 export interface FaceMeshMakeupIntelligencePanelProps {
   analysis?: MakeupAnalysisPipelineResult | null;
@@ -235,6 +237,10 @@ export function FaceMeshMakeupIntelligencePanel({
     });
     const emptyMvpGapResolutionSprintValidation =
       validateMvpGapResolutionSprintPlan(emptyMvpGapResolutionSprintPlan);
+    const emptyMvpDemoGapResolutionSprint1 =
+      createMvpDemoGapResolutionSprint1Report({
+        sprintPlan: emptyMvpGapResolutionSprintPlan,
+      });
 
     return (
       <section className="rounded-lg border border-stone-200 bg-white p-4 shadow-soft">
@@ -753,6 +759,9 @@ export function FaceMeshMakeupIntelligencePanel({
           />
         </div>
         <div className="mt-3">
+          <MvpDemoGapResolutionSprint1Panel report={emptyMvpDemoGapResolutionSprint1} />
+        </div>
+        <div className="mt-3">
           <PhotoToTemplateRealityCheckPanel
             handoff={photoToTemplateRealityHandoff}
             report={photoToTemplateRealityReport}
@@ -1066,6 +1075,9 @@ export function FaceMeshMakeupIntelligencePanel({
   const mvpGapResolutionSprintValidation = validateMvpGapResolutionSprintPlan(
     mvpGapResolutionSprintPlan,
   );
+  const mvpDemoGapResolutionSprint1 = createMvpDemoGapResolutionSprint1Report({
+    sprintPlan: mvpGapResolutionSprintPlan,
+  });
 
   return (
     <section className="grid gap-4">
@@ -1190,6 +1202,7 @@ export function FaceMeshMakeupIntelligencePanel({
         plan={mvpGapResolutionSprintPlan}
         validation={mvpGapResolutionSprintValidation}
       />
+      <MvpDemoGapResolutionSprint1Panel report={mvpDemoGapResolutionSprint1} />
 
       <PhotoToTemplateRealityCheckPanel
         handoff={photoToTemplateRealityHandoff}

@@ -86,7 +86,11 @@ export function MvpGapResolutionSprintPlanPanel({
             Sprint plan，不是正式 roadmap。
           </p>
           <p className="mt-1 text-xs leading-5 text-lime-900">
+            这个面板只把 founder/internal gap 拆成 13D、13E、延期和需老板决定的工作项。
             不是 production readiness；不接 analytics / backend / registry；不能 publish / registry write。
+          </p>
+          <p className="mt-1 text-xs leading-5 text-lime-900">
+            执行前仍需人工确认范围：13D 只修演示体验，不恢复真实写入链路。
           </p>
         </div>
         <span className="rounded-md border border-lime-200 bg-white px-2.5 py-1 text-xs font-semibold text-lime-900">

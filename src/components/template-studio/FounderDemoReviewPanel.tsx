@@ -37,7 +37,11 @@ export function FounderDemoReviewPanel({
             Founder Demo Review，不是发布。当前仍是 MVP trial content。
           </p>
           <p className="mt-1 text-xs leading-5 text-rose-900">
+            这个面板用于给老板演示前检查三套本地试用模板、演示路线和禁止声明。
             当前内容可用于演示，不是正式模板库。不能写 registry / 不能 publish。
+          </p>
+          <p className="mt-1 text-xs leading-5 text-rose-900">
+            所有内容仍需人工审核；通过只代表可以继续本地 demo，不代表上线。
           </p>
         </div>
         <span className={`rounded-md border px-2.5 py-1 text-xs font-semibold ${statusClass(report.status)}`}>

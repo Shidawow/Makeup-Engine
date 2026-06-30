@@ -117,3 +117,4 @@ export * from './photo-to-template-acceptance-trial.example';
 export * from './mvp-trial-content-pack.example';
 export * from './founder-trial-feedback.example';
 export * from './mvp-gap-resolution-sprint-plan.example';
+export * from './mvp-demo-gap-resolution-sprint-1.example';

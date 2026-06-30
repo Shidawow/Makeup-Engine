@@ -31,16 +31,16 @@ describe('project state snapshot', () => {
 
     expect(snapshot.projectName).toBe('Makeup Engine');
     expect(snapshot.projectRole).toContain('Makeup template production system');
-    expect(snapshot.lastCompletedPhase).toBe('13C');
-    expect(snapshot.lastCompletedBusinessPhase).toBe('13C');
-    expect(snapshot.currentPhaseId).toBe('13C');
+    expect(snapshot.lastCompletedPhase).toBe('13D');
+    expect(snapshot.lastCompletedBusinessPhase).toBe('13D');
+    expect(snapshot.currentPhaseId).toBe('13D');
     expect(snapshot.currentPhase).toBeTruthy();
     expect(snapshot.currentPhase).toContain(
-      'MVP Gap Resolution Sprint Planning',
+      'MVP Demo Gap Resolution Sprint 1',
     );
-    expect(snapshot.nextRecommendedPhase).toBe('13D');
-    expect(snapshot.nextRecommendedPhaseName).toContain('MVP Demo Gap Resolution Sprint 1');
-    expect(snapshot.nextAction).toContain('Phase 13D');
+    expect(snapshot.nextRecommendedPhase).toBe('14A');
+    expect(snapshot.nextRecommendedPhaseName).toContain('Internal Founder Demo Run');
+    expect(snapshot.nextAction).toContain('Phase 14A');
     expect(snapshot.mainDataFlow).toEqual(
       expect.arrayContaining([
         'SourceImagePackage',
@@ -141,6 +141,9 @@ describe('project state snapshot', () => {
         'MvpGapResolutionSprintItem',
         'MvpGapResolutionSprintValidationResult',
         'MvpGapResolutionSprintPlanPanel',
+        'MvpDemoGapResolutionSprint1Report',
+        'MvpDemoGapResolutionItem',
+        'MvpDemoGapResolutionSprint1Panel',
         'UserPhotoIntakePlaceholder',
         'UserPersonalizationPlaceholder',
         'UserPhotoPrivacyBoundary',
@@ -366,6 +369,8 @@ describe('project state snapshot', () => {
     expect(snapshot.knownLimitations.join('\n')).toContain('Phase 13A');
     expect(snapshot.knownLimitations.join('\n')).toContain('Phase 13B');
     expect(snapshot.knownLimitations.join('\n')).toContain('Phase 13C');
+    expect(snapshot.knownLimitations.join('\n')).toContain('Phase 13D');
+    expect(snapshot.knownLimitations.join('\n')).toContain('MVP demo gap resolution sprint 1');
     expect(snapshot.knownLimitations.join('\n')).toContain('sprint planning is not final roadmap');
     expect(snapshot.knownLimitations.join('\n')).toContain('not real user research');
     expect(snapshot.knownLimitations.join('\n')).toContain('Photo-to-Template Draft Integration');

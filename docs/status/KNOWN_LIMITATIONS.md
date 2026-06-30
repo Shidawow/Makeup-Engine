@@ -258,3 +258,8 @@
   backend, registry write, registry mutation, publish, production writer, User
   App Shell replacement, real user photos, base64, local photo paths, personal
   data, or training data.
+- Phase 13D MVP demo gap resolution sprint 1 is local demo polish only; it is
+  not production readiness, not real user research, not analytics, not registry
+  readiness, and cannot add backend, registry write, registry mutation, publish,
+  production writer, User App Shell replacement, real user photos, base64, local
+  photo paths, personal data, or training data.

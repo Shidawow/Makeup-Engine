@@ -37,7 +37,8 @@ export function UserAppTemplateSelection({
           <p className="text-xs font-semibold text-teal-700">模板选择</p>
           <h2 className="text-lg font-semibold text-stone-950">选择今天要练的妆容</h2>
           <p className="mt-1 text-sm leading-6 text-stone-600">
-            先看风格、难度和预计时间，再选择一套进入详情。当前只使用本地示例内容。
+            先看风格、难度和预计时间，再选择一套进入详情。接下来会看到工具准备、
+            区域说明和分步骤跟练。当前只使用本地示例内容。
           </p>
         </div>
         <span className="w-fit rounded bg-stone-100 px-2 py-1 text-xs text-stone-600">
@@ -54,7 +55,7 @@ export function UserAppTemplateSelection({
       <div className="mt-4 grid gap-3 md:grid-cols-3">
         {visibleTemplates.map((template) => (
           <button
-            className={`min-h-[180px] rounded-lg border p-3 text-left transition ${
+            className={`min-h-[196px] rounded-lg border p-3 text-left transition ${
               selectedTemplateId === template.appTemplateId
                 ? 'border-teal-600 bg-teal-50'
                 : 'border-stone-200 bg-white hover:border-teal-300'

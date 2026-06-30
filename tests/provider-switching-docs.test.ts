@@ -40,15 +40,25 @@ describe('provider switching docs', () => {
     expect(combined).toContain('src/intelligence/runtime');
   });
 
-  it('provides phase 13C to 13D switch templates with historical 13B, 13A, 12E, 12D, 12C, 12B, 12A, 11D, 11C, 11B, 11A, 10U, and older markers', async () => {
+  it('provides phase 13D to 14A switch templates with historical 13C, 13B, 13A, 12E, 12D, 12C, 12B, 12A, 11D, 11C, 11B, 11A, 10U, and older markers', async () => {
     const prompt = await readFile('docs/prompts/PROVIDER_SWITCH_PROMPT.md', 'utf8');
 
     expect(prompt).toContain('Switch To Native GPT / Codex Desktop');
     expect(prompt).toContain('Switch To PackyAPI + CLI');
     expect(prompt).toContain('Return From PackyAPI To ChatGPT');
+    expect(prompt).toContain('lastCompletedPhase: 13D');
+    expect(prompt).toContain('nextRecommendedPhase: 14A');
+    expect(prompt).toContain('Internal Founder Demo Run');
+    expect(prompt).toContain('Current capability: Phase 13D - MVP Demo Gap Resolution Sprint 1');
+    expect(prompt).toContain('MVP Demo Gap Resolution Sprint 1');
+    expect(prompt).toContain('first-run clarity');
+    expect(prompt).toContain('trial template consistency');
+    expect(prompt).toContain('step guidance trust wording');
+    expect(prompt).toContain('operator workflow explanation');
+    expect(prompt).toContain('ordinary User App paths free of sprint/roadmap/admin terms');
+    expect(prompt).toContain('Historical handoff marker retained for Phase 13C recovery tests');
     expect(prompt).toContain('lastCompletedPhase: 13C');
     expect(prompt).toContain('nextRecommendedPhase: 13D');
-    expect(prompt).toContain('MVP Demo Gap Resolution Sprint 1');
     expect(prompt).toContain('MVP Gap Resolution Sprint Planning');
     expect(prompt).toContain('sprint planning is not final roadmap');
     expect(prompt).toContain('lastCompletedPhase: 13B');

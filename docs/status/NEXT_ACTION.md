@@ -2,11 +2,11 @@
 
 ## What To Do Next
 
-Proceed to Phase 13D: MVP Demo Gap Resolution Sprint 1.
+Proceed to Phase 14A: Internal Founder Demo Run.
 
 ## Why
 
-Phase 13C turns founder/internal MVP gaps into an executable sprint plan:
+Phase 13D resolves the first MVP demo gaps from the Phase 13C sprint plan:
 
 ```text
 Demo Route A: User App MVP
@@ -18,22 +18,23 @@ Demo Route C: Template Studio Operator Workflow
 -> Phase 13B Founder feedback capture and MVP gap prioritization
 -> Phase 13C MVP gap resolution sprint planning
 -> Phase 13D MVP demo gap resolution sprint 1
+-> Phase 14A internal founder demo run
 ```
 
-The system can now show three MVP trial templates, run founder-demo checks,
-record deterministic founder/internal feedback, convert it into MVP demo gaps,
-separate deferred production gaps, and produce a 13D/13E sprint plan.
+The system can now show a clearer ordinary-user User App MVP path, consistent
+three-template trial content, safer step guidance wording, mobile demo spacing,
+and tighter Template Studio operator explanations while preserving all
+no-registry/no-production boundaries.
 
-## Recommended 13D Scope
+## Recommended 14A Scope
 
-- Implement the Phase 13C `do_in_13d` items.
-- Improve User App first-run clarity.
-- Polish trial template content consistency.
-- Add step completion and correction cues without claiming automatic recognition.
-- Improve mobile demo touch targets and spacing.
-- Tighten operator workflow explanation for photo-to-template boundaries.
-- Keep founder-decision and production gaps out of Sprint 1 unless explicitly
-  re-scoped.
+- Run an internal founder demo using the local User App MVP, Vision Analysis,
+  and Template Studio operator flow.
+- Use the 13D resolution report as the demo readiness evidence.
+- Capture only internal/founder notes; do not treat them as analytics or real
+  user research.
+- Decide whether to proceed after demo, run Phase 13E for more polish, or
+  prepare a later validation plan.
 - Keep the photo-to-template workflow semi-automatic, draft-only, and
   human-review-required.
 - Keep registry writes paused after Phase 10U.
@@ -46,8 +47,8 @@ separate deferred production gaps, and produce a 13D/13E sprint plan.
 - Do not create or execute a production writer.
 - Do not publish to the user app.
 - Do not replace the current User App Shell package.
-- Do not treat founder/internal feedback or sprint planning as real user
-  research, analytics, production readiness, or final roadmap.
+- Do not treat founder/internal feedback, sprint planning, or founder demo notes
+  as real user research, analytics, production readiness, or final roadmap.
 - Do not generate or mutate a formal `UserAppTemplatePackage` from 12E/13A/13B
   output.
 - Do not claim fully automatic high-quality makeup extraction.
@@ -76,15 +77,18 @@ Read these files first:
 11. `docs/product/mvp-gap-prioritization.md`
 12. `docs/product/mvp-gap-resolution-sprint-plan.md`
 13. `docs/product/mvp-gap-resolution-13d-candidate-scope.md`
-14. `docs/product/photo-to-template-acceptance-trial.md`
-15. `docs/phases/phase-13A.md`
-16. `docs/phases/phase-13B.md`
-17. `docs/phases/phase-13C.md`
-18. `project-state/project-state.snapshot.json`
-19. `project-state/latest-handoff.json`
-20. `project-state/provider-handoff.json`
-21. `project-state/active-task.json`
-22. `project-state/guardrails.json`
+14. `docs/product/mvp-demo-gap-resolution-sprint-1.md`
+15. `docs/product/mvp-demo-gap-resolution-evidence.md`
+16. `docs/product/photo-to-template-acceptance-trial.md`
+17. `docs/phases/phase-13A.md`
+18. `docs/phases/phase-13B.md`
+19. `docs/phases/phase-13C.md`
+20. `docs/phases/phase-13D.md`
+21. `project-state/project-state.snapshot.json`
+22. `project-state/latest-handoff.json`
+23. `project-state/provider-handoff.json`
+24. `project-state/active-task.json`
+25. `project-state/guardrails.json`
 
 Then run:
 

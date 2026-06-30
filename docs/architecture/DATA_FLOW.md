@@ -1,5 +1,19 @@
 # Data Flow
 
+## Phase 13D Demo Gap Resolution Flow
+
+```text
+MvpGapResolutionSprintPlanReport
+-> MvpDemoGapResolutionSprint1Report
+-> MvpDemoGapResolutionSprint1Panel
+-> Phase 14A Internal Founder Demo Run
+```
+
+The flow records local demo polish evidence only. It does not write registry
+state, publish, create a production writer, replace the User App Shell package,
+add backend/analytics, collect real user data, or claim fully automatic
+high-quality makeup extraction.
+
 ## Phase 13C Sprint Planning Flow
 
 ```text
@@ -58,6 +72,7 @@ Real Photo
 -> User App Shell
 -> Founder Trial Feedback Capture & MVP Gap Prioritization
 -> MVP Gap Resolution Sprint Planning
+-> MVP Demo Gap Resolution Sprint 1
 -> Step Guidance UX Hardening
 -> User Photo Intake Placeholder / Personalization Boundary
 -> User App Local Preferences / Onboarding

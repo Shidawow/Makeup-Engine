@@ -85,6 +85,7 @@ export * from './founderTrialFeedback';
 export * from './mvpGapPrioritization';
 export * from './mvpGapResolutionSprintPlan';
 export * from './mvpGapResolutionSprintValidation';
+export * from './mvpDemoGapResolutionSprint1';
 export * from './template-builder';
 export * from './template-builder/template-builder';
 export * from './convergence';
