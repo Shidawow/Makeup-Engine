@@ -2027,3 +2027,36 @@ Why Phase 13B follows:
 
 Founder review now has enough local trial content and a review checklist to
 capture structured feedback and prioritize MVP gaps.
+
+## Phase 14A - Internal Founder Demo Run
+
+Added a local internal founder demo run while keeping the registry write chain
+paused after Phase 10U.
+
+What changed:
+
+- Added `InternalFounderDemoRunReport` with Route A User App MVP, Route B Vision
+  Analysis, Route C Template Studio operator workflow, Route D Mobile demo, and
+  Route E Boundary explanation.
+- Added `InternalFounderDemoRunValidationResult` for ready, ready with warnings,
+  and blocked outcomes.
+- Added an operator-only `InternalFounderDemoRunPanel` in Template Studio. It
+  does not appear in Vision Analysis and does not appear in the ordinary User
+  App path.
+- Added local deterministic examples and tests for ready, registry-blocked,
+  automation-claim-blocked, and ordinary-user-term-leak cases.
+
+What still cannot happen:
+
+- Phase 14A does not resume Phase 10V, execute registry writes, mutate registry
+  state, publish, create a production writer, replace the current User App Shell
+  package, add backend/database/login/payment/camera/AR/OpenAI or external API
+  scope, upload real photos, store real user data, collect analytics, or train
+  models.
+- Phase 14A does not claim production readiness, real user research, AI
+  confirmed recognition, or fully automatic high-quality makeup extraction.
+
+Why Phase 14B follows:
+
+The founder demo route is now structured enough to prepare a small internal
+trial without treating the demo as production readiness.

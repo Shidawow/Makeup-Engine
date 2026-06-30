@@ -130,3 +130,17 @@ checks, and next iteration recommendation.
 This addendum does not change the 12E boundaries: the demo is not production
 readiness, not registry readiness, not publish readiness, and not fully
 automatic photo-to-template extraction.
+
+## Phase 14A Internal Founder Demo Run Addendum
+
+The 12E route can now be shown as Route B and Route C inside Phase 14A:
+
+- Route B explains FaceMesh, masks, Region QA, MediaPipe readiness, and why
+  Readiness Score is a rule-based usability score rather than model raw
+  confidence.
+- Route C explains candidates, drafts, draft QA, human review, and handoff as an
+  operator workflow.
+
+The 14A demo still blocks registry write, publish, production writer creation,
+User App Shell replacement, real user photo collection, analytics, backend/API
+scope, and training.

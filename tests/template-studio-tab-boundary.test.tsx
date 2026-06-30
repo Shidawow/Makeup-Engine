@@ -73,6 +73,7 @@ describe('Template Studio tab boundary', () => {
     expect(html).not.toContain('MVP Gap Prioritization');
     expect(html).not.toContain('MVP Gap Resolution Sprint Plan');
     expect(html).not.toContain('MVP Demo Gap Resolution Sprint 1');
+    expect(html).not.toContain('Internal Founder Demo Run');
     expect(html).not.toContain('semantic candidate → draft field binding matrix');
   });
 
@@ -308,6 +309,9 @@ describe('Template Studio tab boundary', () => {
     expect(html).toContain('试用模板一致性');
     expect(html).toContain('步骤信任文案');
     expect(html).toContain('移动端演示');
+    expect(html).toContain('Internal Founder Demo Run');
+    expect(html).toContain('Internal Founder Demo Run，不是真实用户研究');
+    expect(html).toContain('Phase 14B - Internal Trial Prep');
     expect(html).toContain('后台流程说明');
     expect(html).toContain('Phase 14A - Internal Founder Demo Run');
     expect(html).not.toContain('AI 已确认');
@@ -400,6 +404,7 @@ describe('Template Studio tab boundary', () => {
     expect(userPath).not.toContain('MVP Gap Prioritization');
     expect(userPath).not.toContain('MVP Gap Resolution Sprint Plan');
     expect(userPath).not.toContain('MVP Demo Gap Resolution Sprint 1');
+    expect(userPath).not.toContain('Internal Founder Demo Run');
     expect(userPath).not.toContain('MVP gap');
     expect(userPath).not.toContain('Gap Resolution');
     expect(userPath).not.toContain('Sprint Planning');

@@ -31,9 +31,11 @@ import {
   createPhotoToTemplateAcceptanceTrialReport,
   createFounderDemoReviewReport,
   createFounderTrialFeedbackReport,
+  createInternalFounderDemoRunReport,
   createMvpGapPrioritizationReport,
   createMvpDemoGapResolutionSprint1Report,
   createMvpGapResolutionSprintPlan,
+  validateInternalFounderDemoRun,
   validateMvpGapResolutionSprintPlan,
   createPhotoToTemplateRealityHandoff,
   createRealRegistryWriteImplementationChecklist,
@@ -122,6 +124,7 @@ import { FounderTrialFeedbackPanel } from './FounderTrialFeedbackPanel';
 import { MvpGapPrioritizationPanel } from './MvpGapPrioritizationPanel';
 import { MvpGapResolutionSprintPlanPanel } from './MvpGapResolutionSprintPlanPanel';
 import { MvpDemoGapResolutionSprint1Panel } from './MvpDemoGapResolutionSprint1Panel';
+import { InternalFounderDemoRunPanel } from './InternalFounderDemoRunPanel';
 
 export interface FaceMeshMakeupIntelligencePanelProps {
   analysis?: MakeupAnalysisPipelineResult | null;
@@ -241,6 +244,12 @@ export function FaceMeshMakeupIntelligencePanel({
       createMvpDemoGapResolutionSprint1Report({
         sprintPlan: emptyMvpGapResolutionSprintPlan,
       });
+    const emptyInternalFounderDemoRun = createInternalFounderDemoRunReport({
+      sourceResolutionReport: emptyMvpDemoGapResolutionSprint1,
+      visionAnalysisExplainable: Boolean(regionQa),
+    });
+    const emptyInternalFounderDemoRunValidation =
+      validateInternalFounderDemoRun(emptyInternalFounderDemoRun);
 
     return (
       <section className="rounded-lg border border-stone-200 bg-white p-4 shadow-soft">
@@ -762,6 +771,12 @@ export function FaceMeshMakeupIntelligencePanel({
           <MvpDemoGapResolutionSprint1Panel report={emptyMvpDemoGapResolutionSprint1} />
         </div>
         <div className="mt-3">
+          <InternalFounderDemoRunPanel
+            report={emptyInternalFounderDemoRun}
+            validation={emptyInternalFounderDemoRunValidation}
+          />
+        </div>
+        <div className="mt-3">
           <PhotoToTemplateRealityCheckPanel
             handoff={photoToTemplateRealityHandoff}
             report={photoToTemplateRealityReport}
@@ -1078,6 +1093,12 @@ export function FaceMeshMakeupIntelligencePanel({
   const mvpDemoGapResolutionSprint1 = createMvpDemoGapResolutionSprint1Report({
     sprintPlan: mvpGapResolutionSprintPlan,
   });
+  const internalFounderDemoRun = createInternalFounderDemoRunReport({
+    sourceResolutionReport: mvpDemoGapResolutionSprint1,
+    visionAnalysisExplainable: regionQa.status !== 'region_qa_blocked',
+  });
+  const internalFounderDemoRunValidation =
+    validateInternalFounderDemoRun(internalFounderDemoRun);
 
   return (
     <section className="grid gap-4">
@@ -1203,6 +1224,10 @@ export function FaceMeshMakeupIntelligencePanel({
         validation={mvpGapResolutionSprintValidation}
       />
       <MvpDemoGapResolutionSprint1Panel report={mvpDemoGapResolutionSprint1} />
+      <InternalFounderDemoRunPanel
+        report={internalFounderDemoRun}
+        validation={internalFounderDemoRunValidation}
+      />
 
       <PhotoToTemplateRealityCheckPanel
         handoff={photoToTemplateRealityHandoff}

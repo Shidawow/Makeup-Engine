@@ -913,3 +913,30 @@ Phase 13B must not resume Phase 10V, execute real registry writes, mutate
 registry state, publish, create a production writer, replace the current User
 App Shell package, add backend/database/login/payment/camera/AR/OpenAI or
 external API scope, upload real photos, store real user data, or train models.
+
+## Phase 14A Internal Founder Demo Run
+
+Phase 14A is an internal founder demo run, not real user research, not
+analytics, not production readiness, not registry readiness, not publish
+readiness, and not a public trial launch.
+
+Phase 14A must keep the founder demo panel in Template Studio operator area. It
+must not appear in Vision Analysis and must not appear in the ordinary User App
+path.
+
+Phase 14A must block ordinary user exposure of Internal Founder Demo Run,
+demo_pass, demo_blocked, founder decision, Route A/B/C/D/E administration
+language, Template Studio, registry/write/publish/simulator/production writer,
+Pipeline Trace, debug JSON, or automatic extraction operator terminology by
+default.
+
+Phase 14A must block fully automatic high-quality extraction claims,
+AI-confirmed final recognition claims, registry write claims, publish claims,
+production writer claims, User App Shell replacement claims, analytics
+collection, and real user data collection.
+
+Phase 14A must not resume Phase 10V, execute real registry writes, mutate
+registry state, publish, create a production writer, replace the current User
+App Shell package, add backend/database/login/payment/camera/AR/OpenAI or
+external API scope, upload real photos, store real user data, collect analytics,
+or train models.

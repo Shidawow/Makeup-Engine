@@ -5,10 +5,10 @@ Makeup Engine is the makeup template production system for a future makeup coach
 ## Current Position
 
 - Project role: makeup template production system plus a local contract-driven user app shell prototype.
-- Last completed phase: `Phase 13D`.
-- Current completed business phase: `Phase 13D - MVP Demo Gap Resolution Sprint 1`.
-- Next recommended phase: `Phase 14A - Internal Founder Demo Run`.
-- Strategic focus: registry chain paused after Phase 10U; active work is executing the founder/internal MVP demo gap resolution sprint while keeping production gaps deferred.
+- Last completed phase: `Phase 14A`.
+- Current completed business phase: `Phase 14A - Internal Founder Demo Run`.
+- Next recommended phase: `Phase 14B - Internal Trial Prep`.
+- Strategic focus: registry chain paused after Phase 10U; active work is preparing an internal trial from the local founder demo run while keeping production gaps deferred.
 - Recent recovery milestones retained in phase docs: `Phase 6K`, `Phase 6L`, `Phase 6L-1`, `Phase 7A`, `Phase 7B`, `Phase 7C`, `Phase 7D`, `Phase 7E`, `Phase 7F`, `Phase 7G`, `Phase 7H`, and `Phase 8A`.
 - Historical route-planning milestone: `Phase 8A - Product Route Decision / App MVP Planning`.
 
@@ -86,6 +86,7 @@ SourceImagePackage manifest
 -> Founder Trial Feedback Capture & MVP Gap Prioritization
 -> MVP Gap Resolution Sprint Planning
 -> MVP Demo Gap Resolution Sprint 1
+-> Internal Founder Demo Run
 -> Phase 8 Roadmap / V1 Non-Goals
 -> Consumption Manifest
 -> Dataset Review

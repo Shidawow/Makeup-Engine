@@ -1153,3 +1153,28 @@ upload real photos, store real user data, or train models.
 
 The next recommended architecture step after Phase 13B was Phase 13C - MVP Gap
 Resolution Sprint Planning.
+
+## Phase 14A Internal Founder Demo Run
+
+Phase 14A adds a local operator-only founder demo run layer on top of the Phase
+13D gap resolution report.
+
+`src/template-engine/internalFounderDemoRun.ts` defines
+`InternalFounderDemoRunReport`, `InternalFounderDemoRoute`,
+`InternalFounderDemoCheck`, `InternalFounderDemoIssue`,
+`InternalFounderDemoRecommendation`, and `InternalFounderDemoDecision`.
+
+`src/template-engine/internalFounderDemoRunValidation.ts` defines
+`InternalFounderDemoRunValidationResult` and validates Route A/B/C/D/E,
+registry/publish/production writer boundaries, User App Shell replacement
+boundaries, real-user-data boundaries, automation overclaim boundaries, ordinary
+user terminology boundaries, and JSON round-trip stability.
+
+`src/components/template-studio/InternalFounderDemoRunPanel.tsx` renders the
+Phase 14A panel in Template Studio operator area only. It does not appear in
+Vision Analysis and does not appear in the ordinary User App path.
+
+Phase 14A remains a local MVP demo run. It does not resume Phase 10V, write
+registry state, publish, create a production writer, replace the User App Shell,
+collect real user data, add analytics/backend/API/camera/AR scope, or train
+models.

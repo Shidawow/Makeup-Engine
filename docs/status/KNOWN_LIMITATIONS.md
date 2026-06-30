@@ -105,6 +105,16 @@
 - Phase 13B keeps registry chain paused after Phase 10U: no registry write, no
   registry mutation, no publish, no production writer, and no User App Shell
   package replacement.
+- Phase 14A Internal Founder Demo Run is a local internal founder demo operation
+  only. It is not real user research, not analytics, not production readiness,
+  not registry readiness, not publish readiness, and not public trial launch.
+- Phase 14A cannot write or mutate registry state, publish templates, create a
+  production writer, replace the current User App Shell package, collect real
+  photos, collect personal data, store base64/local photo paths, add backend/API
+  scope, add camera/AR scope, call OpenAI/external APIs, or train models.
+- Phase 14A cannot claim fully automatic high-quality photo-to-template
+  extraction or AI-confirmed recognition; it remains semi-automatic draft flow
+  plus human review.
 - Phase 10B template draft QA and human review are local administrator workflow
   aids only; they are not final recognition, production publishing, backend
   workflow, AI approval, training approval, or production user app behavior.

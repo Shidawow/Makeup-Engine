@@ -1,5 +1,5 @@
 {
-  "phase": "13D",
+  "phase": "14A",
   "guardrails": [
     {
       "id": "source-image-not-training-data",
@@ -1064,7 +1064,23 @@
     "Phase 13B feedback is internal-only and not real user research or analytics.",
     "Phase 13B must not collect personal data, real user photos, base64, local photo paths, analytics ids, backend records, or training data.",
     "Phase 13B must not resume registry writes, publish, create a production writer, or replace the User App Shell package.",
-    "Phase 13C MVP gap resolution sprint planning is not final roadmap, not real user research, not analytics, not production readiness, and cannot add backend, registry write, registry mutation, publish, production writer, User App Shell replacement, real user photos, base64, local photo paths, personal data, or training data."
+    "Phase 13C MVP gap resolution sprint planning is not final roadmap, not real user research, not analytics, not production readiness, and cannot add backend, registry write, registry mutation, publish, production writer, User App Shell replacement, real user photos, base64, local photo paths, personal data, or training data.",
+    {
+      "id": "phase-14a-founder-demo-only",
+      "rule": "Phase 14A Internal Founder Demo Run is local founder-demo-only and is not real user research, analytics, production readiness, registry readiness, publication, or public trial launch."
+    },
+    {
+      "id": "phase-14a-no-registry-publish-production",
+      "rule": "Phase 14A must not write or mutate registry state, publish templates, create a production writer, or replace the current User App Shell package."
+    },
+    {
+      "id": "phase-14a-no-real-user-data",
+      "rule": "Phase 14A must not collect real photos, personal data, base64 images, local photo paths, analytics records, backend records, biometric data, or training data."
+    },
+    {
+      "id": "phase-14a-no-automation-overclaim",
+      "rule": "Phase 14A must not claim fully automatic high-quality photo-to-template extraction or AI-confirmed recognition."
+    }
   ],
   "legacyFrozenModules": [
     "src/engine",
@@ -1072,70 +1088,48 @@
     "src/intelligence/runtime"
   ],
   "externalApiUsageAllowedInDoc1": false,
-  "updatedAt": "2026-06-29T00:00:00.000Z",
-  "lastCompletedPhase": "13D",
-  "currentPhaseId": "13D",
-  "currentPhase": "Phase 13D - MVP Demo Gap Resolution Sprint 1",
-  "nextRecommendedPhase": "14A",
+  "updatedAt": "2026-06-30T00:00:00.000Z",
+  "lastCompletedPhase": "14A",
+  "currentPhaseId": "14A",
+  "currentPhase": "Phase 14A - Internal Founder Demo Run",
+  "nextRecommendedPhase": "14B",
   "validationStatus": "passed",
   "lastValidation": {
-    "phase": "13D",
-    "mediapipeCheck": "passed",
+    "phase": "14A",
+    "mediapipeCheck": "pending final run",
     "typecheck": "passed",
-    "test": "passed",
-    "scopedTests": "passed (17 files / 53 tests)",
-    "build": "passed",
-    "projectStatus": "passed",
-    "projectStatusJson": "passed",
-    "projectContext": "passed",
-    "contextPackJson": "passed",
-    "browserVerification": "passed",
-    "browserValidation": "passed",
-    "testFiles": 17,
-    "tests": 53,
-    "phase13DScopedTests": "passed",
-    "browserValidationNotes": [
-      "Ordinary User App path loads as the local MVP with clearer first-run copy, trial template cards, prep/detail/step/completion surfaces, and no sprint planning, roadmap, sourceType, confidenceBand, evidence, reviewerNote, registry, publish, or production writer terms in the ordinary path.",
-      "Step guidance frames instructions as template-based practice, says to follow template guidance, and does not imply recognizing the user photo or judging real makeup.",
-      "Mobile 390px validation showed first-run CTAs and step action buttons at 48px height, with sticky actions present and no touch targets below 44px.",
-      "Vision Analysis route shows FaceMesh/MediaPipe, image/mask, recovery hint, and readiness information; with local MediaPipe assets ready it does not show mock fallback and does not show the 13D resolution report.",
-      "Template Studio workbench shows Founder Demo Review, Founder Trial Feedback, MVP Gap Prioritization, MVP Gap Resolution Sprint Plan, and the new 13D resolution report with first-run clarity, trial template consistency, trust wording, mobile demo, operator workflow explanation, and Phase 14A recommendation.",
-      "Template Studio registry/publish/production writer terms appear only in blocked, forbidden, or negative boundary copy; the registry chain remains paused after Phase 10U.",
-      "Page console errors: 0."
-    ],
-    "summary": "Phase 13D validation passed: npm run mediapipe:check, scoped tests (17 files / 53 tests), npm run typecheck, npm run build, npm run project:status, npm run project:context, JSON status/context commands, and browser validation."
+    "test": "pending final scoped run",
+    "scopedTests": "pending final run",
+    "build": "pending final run",
+    "projectStatus": "pending final run",
+    "projectStatusJson": "pending final run",
+    "projectContext": "pending final run",
+    "contextPackJson": "pending final run",
+    "browserVerification": "pending final run",
+    "browserValidation": "pending final run",
+    "phase14AScopedTests": "pending final run",
+    "summary": "Phase 14A adds an Internal Founder Demo Run over User App MVP, Vision Analysis, Template Studio operator workflow, mobile demo, and boundary explanation while keeping registry write, publish, production writer, shell replacement, analytics, real user data, AI API, and training blocked."
   },
   "validation": {
-    "phase": "13D",
-    "mediapipeCheck": "passed",
+    "phase": "14A",
+    "mediapipeCheck": "pending final run",
     "typecheck": "passed",
-    "test": "passed",
-    "scopedTests": "passed (17 files / 53 tests)",
-    "build": "passed",
-    "projectStatus": "passed",
-    "projectStatusJson": "passed",
-    "projectContext": "passed",
-    "contextPackJson": "passed",
-    "browserVerification": "passed",
-    "browserValidation": "passed",
-    "testFiles": 17,
-    "tests": 53,
-    "browserValidationNotes": [
-      "Ordinary User App path loads as the local MVP with clearer first-run copy, trial template cards, prep/detail/step/completion surfaces, and no sprint planning, roadmap, sourceType, confidenceBand, evidence, reviewerNote, registry, publish, or production writer terms in the ordinary path.",
-      "Step guidance frames instructions as template-based practice, says to follow template guidance, and does not imply recognizing the user photo or judging real makeup.",
-      "Mobile 390px validation showed first-run CTAs and step action buttons at 48px height, with sticky actions present and no touch targets below 44px.",
-      "Vision Analysis route shows FaceMesh/MediaPipe, image/mask, recovery hint, and readiness information; with local MediaPipe assets ready it does not show mock fallback and does not show the 13D resolution report.",
-      "Template Studio workbench shows Founder Demo Review, Founder Trial Feedback, MVP Gap Prioritization, MVP Gap Resolution Sprint Plan, and the new 13D resolution report with first-run clarity, trial template consistency, trust wording, mobile demo, operator workflow explanation, and Phase 14A recommendation.",
-      "Template Studio registry/publish/production writer terms appear only in blocked, forbidden, or negative boundary copy; the registry chain remains paused after Phase 10U.",
-      "Page console errors: 0."
-    ],
-    "summary": "Phase 13D validation passed: npm run mediapipe:check, scoped tests (17 files / 53 tests), npm run typecheck, npm run build, npm run project:status, npm run project:context, JSON status/context commands, and browser validation.",
-    "phase13DScopedTests": "passed"
+    "test": "pending final scoped run",
+    "scopedTests": "pending final run",
+    "build": "pending final run",
+    "projectStatus": "pending final run",
+    "projectStatusJson": "pending final run",
+    "projectContext": "pending final run",
+    "contextPackJson": "pending final run",
+    "browserVerification": "pending final run",
+    "browserValidation": "pending final run",
+    "phase14AScopedTests": "pending final run",
+    "summary": "Phase 14A adds an Internal Founder Demo Run over User App MVP, Vision Analysis, Template Studio operator workflow, mobile demo, and boundary explanation while keeping registry write, publish, production writer, shell replacement, analytics, real user data, AI API, and training blocked."
   },
-  "summary": "Phase 13D validation passed: npm run mediapipe:check, scoped tests (17 files / 53 tests), npm run typecheck, npm run build, npm run project:status, npm run project:context, JSON status/context commands, and browser validation.",
-  "lastCompletedBusinessPhase": "13D",
-  "currentPhaseName": "MVP Demo Gap Resolution Sprint 1",
-  "nextRecommendedPhaseName": "Internal Founder Demo Run",
+  "summary": "Phase 14A adds an Internal Founder Demo Run over User App MVP, Vision Analysis, Template Studio operator workflow, mobile demo, and boundary explanation while keeping registry write, publish, production writer, shell replacement, analytics, real user data, AI API, and training blocked.",
+  "lastCompletedBusinessPhase": "14A",
+  "currentPhaseName": "Internal Founder Demo Run",
+  "nextRecommendedPhaseName": "Internal Trial Prep",
   "results": {
     "phase": "13A",
     "mediapipeCheck": "passed",
@@ -1171,7 +1165,8 @@
     "node scripts/context-pack.mjs --json",
     "npm run test -- tests/photo-to-template-draft-integration.test.ts tests/photo-to-template-human-review-editing.test.ts tests/photo-to-template-draft-integration-panel.test.tsx tests/photo-to-template-human-review-editing-panel.test.tsx tests/phase-12C-documentation-recovery.test.ts tests/makeup-semantic-extraction.test.ts tests/makeup-semantic-extraction-panel.test.tsx tests/photo-to-template-reality-check.test.ts tests/photo-to-template-reality-validation.test.ts tests/user-app-demo-forbidden-terms.test.tsx tests/template-studio-tab-boundary.test.tsx tests/vision-readiness-score-label.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
     "npm run test -- tests/photo-to-template-operator-workflow.test.ts tests/photo-to-template-draft-preview-qa.test.ts tests/photo-to-template-operator-workflow-panel.test.tsx tests/photo-to-template-draft-preview-qa-panel.test.tsx tests/phase-12D-documentation-recovery.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts tests/mediapipe-real-assets-check.test.ts",
-    "npm run test -- tests/photo-to-template-acceptance-trial.test.ts tests/photo-to-template-acceptance-trial-panel.test.tsx tests/phase-12E-documentation-recovery.test.ts tests/photo-to-template-operator-workflow.test.ts tests/photo-to-template-draft-preview-qa.test.ts tests/photo-to-template-draft-integration.test.ts tests/photo-to-template-human-review-editing.test.ts tests/makeup-semantic-extraction.test.ts tests/photo-to-template-reality-check.test.ts tests/photo-to-template-reality-validation.test.ts tests/user-app-demo-forbidden-terms.test.tsx tests/template-studio-tab-boundary.test.tsx tests/vision-readiness-score-label.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
+    "npm run test -- tests/photo-to-template-acceptance-trial.test.ts tests/photo-to-template-acceptance-trial-panel.test.tsx tests/phase-12E-documentation-recovery.test.ts tests/photo-to-template-operator-workflow.test.ts tests/photo-to-template-draft-preview-qa.test.ts tests/photo-to-template-draft-integration.test.ts tests/photo-to-template-human-review-editing.test.ts tests/makeup-semantic-extraction.test.ts tests/photo-to-template-reality-check.test.ts tests/photo-to-template-reality-validation.test.ts tests/user-app-demo-forbidden-terms.test.tsx tests/template-studio-tab-boundary.test.tsx tests/vision-readiness-score-label.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
+    "npm run test -- tests/internal-founder-demo-run.test.ts tests/internal-founder-demo-run-validation.test.ts tests/internal-founder-demo-run-panel.test.tsx tests/phase-14A-documentation-recovery.test.ts tests/mvp-demo-gap-resolution-sprint-1.test.ts tests/mvp-gap-resolution-sprint-plan.test.ts tests/founder-trial-feedback.test.ts tests/mvp-gap-prioritization.test.ts tests/user-app-demo-forbidden-terms.test.tsx tests/template-studio-tab-boundary.test.tsx tests/vision-readiness-score-label.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
   ],
   "requiredCommands": [
     "npm run mediapipe:check",
@@ -1183,7 +1178,8 @@
     "node scripts/context-pack.mjs --json",
     "npm run test -- tests/photo-to-template-draft-integration.test.ts tests/photo-to-template-human-review-editing.test.ts tests/photo-to-template-draft-integration-panel.test.tsx tests/photo-to-template-human-review-editing-panel.test.tsx tests/phase-12C-documentation-recovery.test.ts tests/makeup-semantic-extraction.test.ts tests/makeup-semantic-extraction-panel.test.tsx tests/photo-to-template-reality-check.test.ts tests/photo-to-template-reality-validation.test.ts tests/user-app-demo-forbidden-terms.test.tsx tests/template-studio-tab-boundary.test.tsx tests/vision-readiness-score-label.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
     "npm run test -- tests/photo-to-template-operator-workflow.test.ts tests/photo-to-template-draft-preview-qa.test.ts tests/photo-to-template-operator-workflow-panel.test.tsx tests/photo-to-template-draft-preview-qa-panel.test.tsx tests/phase-12D-documentation-recovery.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts tests/mediapipe-real-assets-check.test.ts",
-    "npm run test -- tests/photo-to-template-acceptance-trial.test.ts tests/photo-to-template-acceptance-trial-panel.test.tsx tests/phase-12E-documentation-recovery.test.ts tests/photo-to-template-operator-workflow.test.ts tests/photo-to-template-draft-preview-qa.test.ts tests/photo-to-template-draft-integration.test.ts tests/photo-to-template-human-review-editing.test.ts tests/makeup-semantic-extraction.test.ts tests/photo-to-template-reality-check.test.ts tests/photo-to-template-reality-validation.test.ts tests/user-app-demo-forbidden-terms.test.tsx tests/template-studio-tab-boundary.test.tsx tests/vision-readiness-score-label.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
+    "npm run test -- tests/photo-to-template-acceptance-trial.test.ts tests/photo-to-template-acceptance-trial-panel.test.tsx tests/phase-12E-documentation-recovery.test.ts tests/photo-to-template-operator-workflow.test.ts tests/photo-to-template-draft-preview-qa.test.ts tests/photo-to-template-draft-integration.test.ts tests/photo-to-template-human-review-editing.test.ts tests/makeup-semantic-extraction.test.ts tests/photo-to-template-reality-check.test.ts tests/photo-to-template-reality-validation.test.ts tests/user-app-demo-forbidden-terms.test.tsx tests/template-studio-tab-boundary.test.tsx tests/vision-readiness-score-label.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
+    "npm run test -- tests/internal-founder-demo-run.test.ts tests/internal-founder-demo-run-validation.test.ts tests/internal-founder-demo-run-panel.test.tsx tests/phase-14A-documentation-recovery.test.ts tests/mvp-demo-gap-resolution-sprint-1.test.ts tests/mvp-gap-resolution-sprint-plan.test.ts tests/founder-trial-feedback.test.ts tests/mvp-gap-prioritization.test.ts tests/user-app-demo-forbidden-terms.test.tsx tests/template-studio-tab-boundary.test.tsx tests/vision-readiness-score-label.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
   ],
   "commands": [
     "npm run mediapipe:check",
@@ -1196,12 +1192,13 @@
     "npm run test -- tests/photo-to-template-draft-integration.test.ts tests/photo-to-template-human-review-editing.test.ts tests/photo-to-template-draft-integration-panel.test.tsx tests/photo-to-template-human-review-editing-panel.test.tsx tests/phase-12C-documentation-recovery.test.ts tests/makeup-semantic-extraction.test.ts tests/makeup-semantic-extraction-panel.test.tsx tests/photo-to-template-reality-check.test.ts tests/photo-to-template-reality-validation.test.ts tests/user-app-demo-forbidden-terms.test.tsx tests/template-studio-tab-boundary.test.tsx tests/vision-readiness-score-label.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
     "npm run test -- tests/photo-to-template-operator-workflow.test.ts tests/photo-to-template-draft-preview-qa.test.ts tests/photo-to-template-operator-workflow-panel.test.tsx tests/photo-to-template-draft-preview-qa-panel.test.tsx tests/phase-12D-documentation-recovery.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts tests/mediapipe-real-assets-check.test.ts",
     "npm run test -- tests/photo-to-template-operator-workflow.test.ts tests/photo-to-template-draft-preview-qa.test.ts tests/photo-to-template-operator-workflow-panel.test.tsx tests/photo-to-template-draft-preview-qa-panel.test.tsx tests/phase-12D-documentation-recovery.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts tests/mediapipe-real-assets-check.test.ts tests/template-studio-tab-boundary.test.tsx tests/user-app-demo-forbidden-terms.test.tsx",
-    "npm run test -- tests/photo-to-template-acceptance-trial.test.ts tests/photo-to-template-acceptance-trial-panel.test.tsx tests/phase-12E-documentation-recovery.test.ts tests/photo-to-template-operator-workflow.test.ts tests/photo-to-template-draft-preview-qa.test.ts tests/photo-to-template-draft-integration.test.ts tests/photo-to-template-human-review-editing.test.ts tests/makeup-semantic-extraction.test.ts tests/photo-to-template-reality-check.test.ts tests/photo-to-template-reality-validation.test.ts tests/user-app-demo-forbidden-terms.test.tsx tests/template-studio-tab-boundary.test.tsx tests/vision-readiness-score-label.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
+    "npm run test -- tests/photo-to-template-acceptance-trial.test.ts tests/photo-to-template-acceptance-trial-panel.test.tsx tests/phase-12E-documentation-recovery.test.ts tests/photo-to-template-operator-workflow.test.ts tests/photo-to-template-draft-preview-qa.test.ts tests/photo-to-template-draft-integration.test.ts tests/photo-to-template-human-review-editing.test.ts tests/makeup-semantic-extraction.test.ts tests/photo-to-template-reality-check.test.ts tests/photo-to-template-reality-validation.test.ts tests/user-app-demo-forbidden-terms.test.tsx tests/template-studio-tab-boundary.test.tsx tests/vision-readiness-score-label.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts",
+    "npm run test -- tests/internal-founder-demo-run.test.ts tests/internal-founder-demo-run-validation.test.ts tests/internal-founder-demo-run-panel.test.tsx tests/phase-14A-documentation-recovery.test.ts tests/mvp-demo-gap-resolution-sprint-1.test.ts tests/mvp-gap-resolution-sprint-plan.test.ts tests/founder-trial-feedback.test.ts tests/mvp-gap-prioritization.test.ts tests/user-app-demo-forbidden-terms.test.tsx tests/template-studio-tab-boundary.test.tsx tests/vision-readiness-score-label.test.tsx tests/mediapipe-real-assets-check.test.ts tests/project-state-snapshot.test.ts tests/provider-switching-docs.test.ts"
   ],
-  "lastUpdated": "2026-06-29T00:00:00.000Z",
+  "lastUpdated": "2026-06-30T00:00:00.000Z",
   "status": "completed",
   "lastUpdatedPhase": "13B",
-  "nextAction": "Proceed to Phase 14A - Internal Founder Demo Run.",
+  "nextAction": "Proceed to Phase 14B - Internal Trial Prep.",
   "taskStatus": "completed",
   "realWriteApprovalBoundaryDecision": {
     "nextPhase": "Phase 10V - Actual Write Authorization Request",

@@ -835,3 +835,23 @@ real user photos, base64 image strings, local photo paths, analytics ids,
 backend records, or training data. They do not publish, write or mutate
 registry state, create a production writer, replace the User App Shell package,
 or claim fully automatic high-quality makeup extraction.
+
+## Phase 14A Internal Founder Demo Run Flow
+
+`MvpDemoGapResolutionSprint1Report`
+-> `InternalFounderDemoRunReport`
+-> `InternalFounderDemoRoute`
+-> `InternalFounderDemoRunValidationResult`
+-> `InternalFounderDemoRunPanel`
+-> next recommendation for Phase 14B Internal Trial Prep.
+
+The 14A flow is local and founder-demo-only. It checks Route A User App MVP,
+Route B Vision Analysis, Route C Template Studio operator workflow, Route D
+Mobile demo, Route E Boundary explanation, ordinary-user internal term hiding,
+registry/publish/production writer boundaries, User App Shell replacement
+boundaries, real-user-data boundaries, and overclaim boundaries.
+
+Internal Founder Demo Run does not collect real user data, does not publish,
+does not write or mutate registry state, does not create a production writer,
+does not replace the User App Shell package, and does not claim AI-confirmed or
+fully automatic extraction.

@@ -2,17 +2,18 @@
 
 ## Current Phase
 
-Phase 13D: MVP Demo Gap Resolution Sprint 1 is complete.
+Phase 14A: Internal Founder Demo Run is complete.
 
-Last completed business phase: Phase 13D.
+Last completed business phase: Phase 14A.
 
-Next recommended phase: Phase 14A, Internal Founder Demo Run.
+Next recommended phase: Phase 14B, Internal Trial Prep.
 
-Phase 13D keeps the post-10U registry write chain paused and resolves the first
-five MVP demo gaps from Phase 13C: first-run clarity, trial template content
-consistency, step guidance trust wording, mobile demo usability, and operator
-workflow explanation. It remains internal-only, local, not real user research,
-not analytics, not registry readiness, and not production readiness.
+Phase 14A keeps the post-10U registry write chain paused and adds an Internal
+Founder Demo Run over Route A User App MVP, Route B Vision Analysis, Route C
+Template Studio operator workflow, Route D Mobile demo, and Route E Boundary
+explanation. It remains internal-only, local, not real user research, not
+analytics, not registry readiness, not publish readiness, and not production
+readiness.
 
 Registry chain status: paused after Phase 10U. Phase 10V actual write
 authorization is not the active next phase.
@@ -37,6 +38,10 @@ authorization is not the active next phase.
 - Render a Phase 13D MVP Demo Gap Resolution Sprint 1 panel in Template Studio
   operator area with five resolved gap categories, changed areas, acceptance
   criteria, evidence, status, and Phase 14A recommendation.
+- Render a Phase 14A Internal Founder Demo Run panel in Template Studio
+  operator area with Route A/B/C/D/E, pass/warning/blocked states, evidence,
+  blockers, validation status, final founder decision, and Phase 14B
+  recommendation.
 - Render a clearer ordinary-user first-run path with local makeup guidance MVP
   copy, how-to-start steps, template practice wording, larger mobile CTAs, and
   trust copy that does not imply user photo recognition.

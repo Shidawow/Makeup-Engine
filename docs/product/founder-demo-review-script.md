@@ -58,3 +58,18 @@ If Founder Demo Review is ready or ready with warnings, the next phase is
 Phase 13B - Founder Trial Feedback Capture & MVP Gap Prioritization. Phase 13B
 should capture founder feedback and prioritize MVP gaps; it still must not
 resume Phase 10V or perform registry writes.
+
+## Phase 14A Addendum
+
+Phase 14A extends the founder demo into an Internal Founder Demo Run. The run
+uses five routes:
+
+- Route A - User App MVP.
+- Route B - Vision Analysis.
+- Route C - Template Studio operator workflow.
+- Route D - Mobile demo.
+- Route E - Boundary explanation.
+
+The 14A run remains internal-only and local. It is not real user research, not
+production readiness, not publication, not registry readiness, and not approval
+to resume Phase 10V.

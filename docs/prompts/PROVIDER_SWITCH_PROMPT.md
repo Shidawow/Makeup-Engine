@@ -6,12 +6,13 @@ Default to compact context. Do not copy full historical chat transcripts. Do not
 
 ## Current State
 
-- `lastCompletedPhase: 13D`
-- `nextRecommendedPhase: 14A`
-- `nextRecommendedPhaseName: Internal Founder Demo Run`
+- `lastCompletedPhase: 14A`
+- `nextRecommendedPhase: 14B`
+- `nextRecommendedPhaseName: Internal Trial Prep`
 - Project role: Makeup template production system with a local contract-driven user app shell prototype, not a production user app.
-- Current capability: Phase 13D - MVP Demo Gap Resolution Sprint 1 keeps the registry chain paused after Phase 10U and resolves first-run clarity, trial template consistency, step guidance trust wording, mobile demo usability, and operator workflow explanation. It adds a local 13D resolution report panel in Template Studio and keeps ordinary User App paths free of sprint/roadmap/admin terms. It is not production readiness, not real user research, not analytics, and contains no personal data, real photos, base64, local paths, backend records, or training data.
+- Current capability: Phase 14A - Internal Founder Demo Run keeps the registry chain paused after Phase 10U and adds a local founder demo route across Route A User App MVP, Route B Vision Analysis, Route C Template Studio operator workflow, Route D Mobile demo, and Route E Boundary explanation. It renders an operator-only Internal Founder Demo Run panel in Template Studio and keeps ordinary User App paths free of founder demo/admin terms. It is not production readiness, not real user research, not analytics, not registry readiness, and contains no personal data, real photos, base64, local paths, backend records, or training data.
 
+Historical handoff marker retained for Phase 13D recovery tests: `lastCompletedPhase: 13D`, `nextRecommendedPhase: 14A`, MVP Demo Gap Resolution Sprint 1, first-run clarity, trial template consistency, step guidance trust wording, operator workflow explanation, ordinary User App paths free of sprint/roadmap/admin terms.
 Historical handoff marker retained for Phase 13C recovery tests: `lastCompletedPhase: 13C`, `nextRecommendedPhase: 13D`, MVP Gap Resolution Sprint Planning; sprint planning is not final roadmap.
 Historical handoff marker retained for Phase 13B recovery tests: `lastCompletedPhase: 13B`, `nextRecommendedPhase: 13C`, Founder Trial Feedback Capture & MVP Gap Prioritization.
 Historical handoff marker retained for Phase 13A recovery tests: `lastCompletedPhase: 13A`, `nextRecommendedPhase: 13B`.
