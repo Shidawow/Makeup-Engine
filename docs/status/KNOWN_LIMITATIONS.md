@@ -115,6 +115,17 @@
 - Phase 14A cannot claim fully automatic high-quality photo-to-template
   extraction or AI-confirmed recognition; it remains semi-automatic draft flow
   plus human review.
+- Phase 14B Internal Trial Prep is local preparation only. It is not public
+  beta, not a real user research system, not analytics, not backend/database
+  work, not production readiness, not registry readiness, not publish readiness,
+  and not real trial execution.
+- Phase 14B participant profiles are role-only and cannot store real names,
+  phone numbers, emails, social media accounts, addresses, photos, health
+  information, sensitive identity information, biometric identifiers, face
+  embeddings, analytics ids, backend records, or training data.
+- Phase 14B keeps registry chain paused after Phase 10U: no registry write, no
+  registry mutation, no publish, no production writer, and no User App Shell
+  package replacement.
 - Phase 10B template draft QA and human review are local administrator workflow
   aids only; they are not final recognition, production publishing, backend
   workflow, AI approval, training approval, or production user app behavior.

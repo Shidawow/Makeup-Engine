@@ -2060,3 +2060,41 @@ Why Phase 14B follows:
 
 The founder demo route is now structured enough to prepare a small internal
 trial without treating the demo as production readiness.
+
+## Phase 14B - Internal Trial Prep
+
+Added a local internal trial prep pack while keeping the registry write chain
+paused after Phase 10U.
+
+What changed:
+
+- Added `InternalTrialPrepReport` with role-only participant profiles, internal
+  trial routes, checklist items, feedback prompts, risks, recommendations,
+  decision, and Phase 14C next action.
+- Added `InternalTrialPrepValidationResult` for ready, ready with warnings, and
+  blocked outcomes.
+- Added safe local feedback prompt fixtures and unsafe examples for validation
+  coverage.
+- Added an operator-only `InternalTrialPrepPanel` in Template Studio. It does
+  not appear in Vision Analysis and does not appear in the ordinary User App
+  path.
+- Added product docs for internal trial prep, feedback prompts, and safety
+  boundaries.
+
+What still cannot happen:
+
+- Phase 14B does not become a public beta, real user research system,
+  analytics pipeline, backend/database system, production readiness gate,
+  registry readiness gate, publish readiness gate, or real trial execution.
+- Phase 14B cannot collect real names, phone numbers, emails, social media
+  accounts, addresses, photos, health information, sensitive identity
+  information, biometric identifiers, face embeddings, analytics ids, backend
+  records, base64 images, local photo paths, or training data.
+- Phase 14B does not resume Phase 10V, execute registry writes, mutate registry
+  state, publish, create a production writer, replace the current User App
+  Shell package, add camera/AR/OpenAI or external API scope, or train models.
+
+Why Phase 14C follows:
+
+The internal trial preparation package is now structured enough to run a local
+dry run using role profiles and anonymous observations only.

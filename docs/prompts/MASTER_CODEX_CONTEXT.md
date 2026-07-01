@@ -12,10 +12,10 @@ It produces templates, template evidence, correction records, review state, loca
 
 ## Current Phase
 
-- Current business phase: `Phase 14A completed`
-- Last completed phase: `Phase 14A`
-- Last completed phase name: `Phase 14A - Internal Founder Demo Run`
-- Next recommended phase: `Phase 14B - Internal Trial Prep`
+- Current business phase: `Phase 14B completed`
+- Last completed phase: `Phase 14B`
+- Last completed phase name: `Phase 14B - Internal Trial Prep`
+- Next recommended phase: `Phase 14C - Internal Trial Dry Run`
 - Strategic focus: registry chain paused after Phase 10U; active work is preparing internal trial prep from the local founder demo run while keeping production gaps deferred.
 
 Historical recovery marker retained for Phase 13D tests: `Phase 13D completed` / `Phase 13D - MVP Demo Gap Resolution Sprint 1`.
@@ -120,6 +120,7 @@ Real Photo
 -> MVP Gap Resolution Sprint Planning
 -> MVP Demo Gap Resolution Sprint 1
 -> Internal Founder Demo Run
+-> Internal Trial Prep
 -> Real Write Execution Authorization
 -> Real Write Execution Plan
 -> Guarded Real Write Execution Simulator

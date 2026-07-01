@@ -1178,3 +1178,30 @@ Phase 14A remains a local MVP demo run. It does not resume Phase 10V, write
 registry state, publish, create a production writer, replace the User App Shell,
 collect real user data, add analytics/backend/API/camera/AR scope, or train
 models.
+
+## Phase 14B Internal Trial Prep
+
+Phase 14B adds a local operator-only internal trial prep layer on top of the
+Phase 14A founder demo run.
+
+`src/template-engine/internalTrialPrep.ts` defines
+`InternalTrialPrepReport`, `InternalTrialParticipantProfile`,
+`InternalTrialRoute`, `InternalTrialChecklistItem`,
+`InternalTrialFeedbackPrompt`, `InternalTrialRisk`,
+`InternalTrialRecommendation`, and `InternalTrialDecision`.
+
+`src/template-engine/internalTrialPrepValidation.ts` defines
+`InternalTrialPrepValidationResult` and validates role-only participant
+profiles, safe feedback prompts, no personal/contact/photo/image-payload data,
+no analytics/backend/database scope, registry/publish/production writer
+boundaries, User App Shell replacement boundaries, automation overclaim
+boundaries, route coverage, and JSON round-trip stability.
+
+`src/components/template-studio/InternalTrialPrepPanel.tsx` renders the Phase
+14B panel in Template Studio operator area only. It does not appear in Vision
+Analysis and does not appear in the ordinary User App path.
+
+Phase 14B remains local internal trial preparation. It does not create a real
+user research system, public beta, analytics pipeline, backend/database,
+registry write, publication flow, production writer, User App Shell replacement,
+camera/AR scope, OpenAI/external API scope, or training input.

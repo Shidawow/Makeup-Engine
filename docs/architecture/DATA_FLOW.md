@@ -855,3 +855,25 @@ Internal Founder Demo Run does not collect real user data, does not publish,
 does not write or mutate registry state, does not create a production writer,
 does not replace the User App Shell package, and does not claim AI-confirmed or
 fully automatic extraction.
+
+## Phase 14B Internal Trial Prep Flow
+
+`InternalFounderDemoRunReport`
+-> `InternalTrialPrepReport`
+-> `InternalTrialParticipantProfile`
+-> `InternalTrialRoute`
+-> `InternalTrialFeedbackPrompt`
+-> `InternalTrialPrepValidationResult`
+-> `InternalTrialPrepPanel`
+-> next recommendation for Phase 14C Internal Trial Dry Run.
+
+The 14B flow is local and preparation-only. It defines role-only participant
+profiles, internal trial routes, safe feedback prompts, privacy/data/scope
+checklist items, risks, validation, decision, and next action.
+
+Internal Trial Prep does not collect real names, contact information, photos,
+base64 images, local photo paths, health information, sensitive identity
+information, biometric identifiers, face embeddings, analytics ids, backend
+records, or training data. It does not publish, write or mutate registry state,
+create a production writer, replace the User App Shell package, or claim
+AI-confirmed or fully automatic extraction.

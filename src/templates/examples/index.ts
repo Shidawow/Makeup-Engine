@@ -119,3 +119,5 @@ export * from './founder-trial-feedback.example';
 export * from './mvp-gap-resolution-sprint-plan.example';
 export * from './mvp-demo-gap-resolution-sprint-1.example';
 export * from './internal-founder-demo-run.example';
+export * from './internal-trial-feedback-prompts.example';
+export * from './internal-trial-prep.example';

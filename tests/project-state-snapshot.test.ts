@@ -31,16 +31,16 @@ describe('project state snapshot', () => {
 
     expect(snapshot.projectName).toBe('Makeup Engine');
     expect(snapshot.projectRole).toContain('Makeup template production system');
-    expect(snapshot.lastCompletedPhase).toBe('14A');
-    expect(snapshot.lastCompletedBusinessPhase).toBe('14A');
-    expect(snapshot.currentPhaseId).toBe('14A');
+    expect(snapshot.lastCompletedPhase).toBe('14B');
+    expect(snapshot.lastCompletedBusinessPhase).toBe('14B');
+    expect(snapshot.currentPhaseId).toBe('14B');
     expect(snapshot.currentPhase).toBeTruthy();
     expect(snapshot.currentPhase).toContain(
-      'Internal Founder Demo Run',
+      'Internal Trial Prep',
     );
-    expect(snapshot.nextRecommendedPhase).toBe('14B');
-    expect(snapshot.nextRecommendedPhaseName).toContain('Internal Trial Prep');
-    expect(snapshot.nextAction).toContain('Phase 14B');
+    expect(snapshot.nextRecommendedPhase).toBe('14C');
+    expect(snapshot.nextRecommendedPhaseName).toContain('Internal Trial Dry Run');
+    expect(snapshot.nextAction).toContain('Phase 14C');
     expect(snapshot.mainDataFlow).toEqual(
       expect.arrayContaining([
         'SourceImagePackage',
@@ -148,6 +148,12 @@ describe('project state snapshot', () => {
         'InternalFounderDemoRoute',
         'InternalFounderDemoRunValidationResult',
         'InternalFounderDemoRunPanel',
+        'InternalTrialPrepReport',
+        'InternalTrialParticipantProfile',
+        'InternalTrialRoute',
+        'InternalTrialFeedbackPrompt',
+        'InternalTrialPrepValidationResult',
+        'InternalTrialPrepPanel',
         'UserPhotoIntakePlaceholder',
         'UserPersonalizationPlaceholder',
         'UserPhotoPrivacyBoundary',
@@ -376,6 +382,10 @@ describe('project state snapshot', () => {
     expect(snapshot.knownLimitations.join('\n')).toContain('Phase 13D');
     expect(snapshot.knownLimitations.join('\n')).toContain('Phase 14A');
     expect(snapshot.knownLimitations.join('\n')).toContain('Internal Founder Demo Run');
+    expect(snapshot.knownLimitations.join('\n')).toContain('Phase 14B');
+    expect(snapshot.knownLimitations.join('\n')).toContain('Internal Trial Prep');
+    expect(snapshot.knownLimitations.join('\n')).toContain('role-only');
+    expect(snapshot.knownLimitations.join('\n')).toContain('not public beta');
     expect(snapshot.knownLimitations.join('\n')).toContain('MVP demo gap resolution sprint 1');
     expect(snapshot.knownLimitations.join('\n')).toContain('sprint planning is not final roadmap');
     expect(snapshot.knownLimitations.join('\n')).toContain('not real user research');

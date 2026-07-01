@@ -88,6 +88,8 @@ export * from './mvpGapResolutionSprintValidation';
 export * from './mvpDemoGapResolutionSprint1';
 export * from './internalFounderDemoRun';
 export * from './internalFounderDemoRunValidation';
+export * from './internalTrialPrep';
+export * from './internalTrialPrepValidation';
 export * from './template-builder';
 export * from './template-builder/template-builder';
 export * from './convergence';

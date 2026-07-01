@@ -32,10 +32,12 @@ import {
   createFounderDemoReviewReport,
   createFounderTrialFeedbackReport,
   createInternalFounderDemoRunReport,
+  createInternalTrialPrepReport,
   createMvpGapPrioritizationReport,
   createMvpDemoGapResolutionSprint1Report,
   createMvpGapResolutionSprintPlan,
   validateInternalFounderDemoRun,
+  validateInternalTrialPrep,
   validateMvpGapResolutionSprintPlan,
   createPhotoToTemplateRealityHandoff,
   createRealRegistryWriteImplementationChecklist,
@@ -125,6 +127,7 @@ import { MvpGapPrioritizationPanel } from './MvpGapPrioritizationPanel';
 import { MvpGapResolutionSprintPlanPanel } from './MvpGapResolutionSprintPlanPanel';
 import { MvpDemoGapResolutionSprint1Panel } from './MvpDemoGapResolutionSprint1Panel';
 import { InternalFounderDemoRunPanel } from './InternalFounderDemoRunPanel';
+import { InternalTrialPrepPanel } from './InternalTrialPrepPanel';
 
 export interface FaceMeshMakeupIntelligencePanelProps {
   analysis?: MakeupAnalysisPipelineResult | null;
@@ -250,6 +253,11 @@ export function FaceMeshMakeupIntelligencePanel({
     });
     const emptyInternalFounderDemoRunValidation =
       validateInternalFounderDemoRun(emptyInternalFounderDemoRun);
+    const emptyInternalTrialPrep = createInternalTrialPrepReport({
+      sourceFounderDemoRunReport: emptyInternalFounderDemoRun,
+    });
+    const emptyInternalTrialPrepValidation =
+      validateInternalTrialPrep(emptyInternalTrialPrep);
 
     return (
       <section className="rounded-lg border border-stone-200 bg-white p-4 shadow-soft">
@@ -777,6 +785,12 @@ export function FaceMeshMakeupIntelligencePanel({
           />
         </div>
         <div className="mt-3">
+          <InternalTrialPrepPanel
+            report={emptyInternalTrialPrep}
+            validation={emptyInternalTrialPrepValidation}
+          />
+        </div>
+        <div className="mt-3">
           <PhotoToTemplateRealityCheckPanel
             handoff={photoToTemplateRealityHandoff}
             report={photoToTemplateRealityReport}
@@ -1099,6 +1113,10 @@ export function FaceMeshMakeupIntelligencePanel({
   });
   const internalFounderDemoRunValidation =
     validateInternalFounderDemoRun(internalFounderDemoRun);
+  const internalTrialPrep = createInternalTrialPrepReport({
+    sourceFounderDemoRunReport: internalFounderDemoRun,
+  });
+  const internalTrialPrepValidation = validateInternalTrialPrep(internalTrialPrep);
 
   return (
     <section className="grid gap-4">
@@ -1227,6 +1245,10 @@ export function FaceMeshMakeupIntelligencePanel({
       <InternalFounderDemoRunPanel
         report={internalFounderDemoRun}
         validation={internalFounderDemoRunValidation}
+      />
+      <InternalTrialPrepPanel
+        report={internalTrialPrep}
+        validation={internalTrialPrepValidation}
       />
 
       <PhotoToTemplateRealityCheckPanel

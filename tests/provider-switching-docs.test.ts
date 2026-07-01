@@ -40,21 +40,25 @@ describe('provider switching docs', () => {
     expect(combined).toContain('src/intelligence/runtime');
   });
 
-  it('provides phase 14A to 14B switch templates with historical 13D, 13C, 13B, 13A, 12E, 12D, 12C, 12B, 12A, 11D, 11C, 11B, 11A, 10U, and older markers', async () => {
+  it('provides phase 14B to 14C switch templates with historical 14A, 13D, 13C, 13B, 13A, 12E, 12D, 12C, 12B, 12A, 11D, 11C, 11B, 11A, 10U, and older markers', async () => {
     const prompt = await readFile('docs/prompts/PROVIDER_SWITCH_PROMPT.md', 'utf8');
 
     expect(prompt).toContain('Switch To Native GPT / Codex Desktop');
     expect(prompt).toContain('Switch To PackyAPI + CLI');
     expect(prompt).toContain('Return From PackyAPI To ChatGPT');
+    expect(prompt).toContain('lastCompletedPhase: 14B');
+    expect(prompt).toContain('nextRecommendedPhase: 14C');
+    expect(prompt).toContain('Internal Trial Dry Run');
+    expect(prompt).toContain('Current capability: Phase 14B - Internal Trial Prep');
+    expect(prompt).toContain('role-only participant profiles');
+    expect(prompt).toContain('internal trial routes');
+    expect(prompt).toContain('safe feedback prompts');
+    expect(prompt).toContain('privacy/data/scope checklist');
+    expect(prompt).toContain('Historical handoff marker retained for Phase 14A recovery tests');
     expect(prompt).toContain('lastCompletedPhase: 14A');
     expect(prompt).toContain('nextRecommendedPhase: 14B');
-    expect(prompt).toContain('Internal Trial Prep');
-    expect(prompt).toContain('Current capability: Phase 14A - Internal Founder Demo Run');
-    expect(prompt).toContain('Route A User App MVP');
-    expect(prompt).toContain('Route B Vision Analysis');
-    expect(prompt).toContain('Route C Template Studio operator workflow');
-    expect(prompt).toContain('Route D Mobile demo');
-    expect(prompt).toContain('Route E Boundary explanation');
+    expect(prompt).toContain('Internal Founder Demo Run');
+    expect(prompt).toContain('Route A/B/C/D/E');
     expect(prompt).toContain('Historical handoff marker retained for Phase 13D recovery tests');
     expect(prompt).toContain('lastCompletedPhase: 13D');
     expect(prompt).toContain('nextRecommendedPhase: 14A');

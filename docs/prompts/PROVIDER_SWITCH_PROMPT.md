@@ -6,11 +6,14 @@ Default to compact context. Do not copy full historical chat transcripts. Do not
 
 ## Current State
 
-- `lastCompletedPhase: 14A`
-- `nextRecommendedPhase: 14B`
-- `nextRecommendedPhaseName: Internal Trial Prep`
+- `lastCompletedPhase: 14B`
+- `nextRecommendedPhase: 14C`
+- `nextRecommendedPhaseName: Internal Trial Dry Run`
 - Project role: Makeup template production system with a local contract-driven user app shell prototype, not a production user app.
-- Current capability: Phase 14A - Internal Founder Demo Run keeps the registry chain paused after Phase 10U and adds a local founder demo route across Route A User App MVP, Route B Vision Analysis, Route C Template Studio operator workflow, Route D Mobile demo, and Route E Boundary explanation. It renders an operator-only Internal Founder Demo Run panel in Template Studio and keeps ordinary User App paths free of founder demo/admin terms. It is not production readiness, not real user research, not analytics, not registry readiness, and contains no personal data, real photos, base64, local paths, backend records, or training data.
+- Current capability: Phase 14B - Internal Trial Prep keeps the registry chain paused after Phase 10U and adds a local internal trial prep pack on top of the Phase 14A founder demo. It defines role-only participant profiles, internal trial routes, safe feedback prompts, privacy/data/scope checklist, validation, and an operator-only Internal Trial Prep panel in Template Studio. It keeps ordinary User App paths free of trial prep/admin terms. It is not public beta, not production readiness, not a real user research system, not analytics, not registry readiness, and contains no personal data, contacts, real photos, base64, local paths, backend records, analytics ids, or training data.
+- Boundary shorthand retained for recovery tests: not real user research, not analytics, not production readiness, no personal data, no real photos, no registry write.
+
+Historical handoff marker retained for Phase 14A recovery tests: `lastCompletedPhase: 14A`, `nextRecommendedPhase: 14B`, Internal Founder Demo Run, Route A/B/C/D/E, ordinary User App paths free of founder demo/admin terms.
 
 Historical handoff marker retained for Phase 13D recovery tests: `lastCompletedPhase: 13D`, `nextRecommendedPhase: 14A`, MVP Demo Gap Resolution Sprint 1, first-run clarity, trial template consistency, step guidance trust wording, operator workflow explanation, ordinary User App paths free of sprint/roadmap/admin terms.
 Historical handoff marker retained for Phase 13C recovery tests: `lastCompletedPhase: 13C`, `nextRecommendedPhase: 13D`, MVP Gap Resolution Sprint Planning; sprint planning is not final roadmap.

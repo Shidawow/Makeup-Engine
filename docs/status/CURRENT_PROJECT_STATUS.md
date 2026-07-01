@@ -2,16 +2,17 @@
 
 ## Current Phase
 
-Phase 14A: Internal Founder Demo Run is complete.
+Phase 14B: Internal Trial Prep is complete.
 
-Last completed business phase: Phase 14A.
+Last completed business phase: Phase 14B.
 
-Next recommended phase: Phase 14B, Internal Trial Prep.
+Next recommended phase: Phase 14C, Internal Trial Dry Run.
 
-Phase 14A keeps the post-10U registry write chain paused and adds an Internal
-Founder Demo Run over Route A User App MVP, Route B Vision Analysis, Route C
-Template Studio operator workflow, Route D Mobile demo, and Route E Boundary
-explanation. It remains internal-only, local, not real user research, not
+Phase 14B keeps the post-10U registry write chain paused and adds an Internal
+Trial Prep pack over the Phase 14A founder demo run. It defines role-only
+participant profiles, safe feedback prompts, internal trial routes, safety
+checklists, validation, and a Template Studio operator panel. It remains
+internal-only, local, not public beta, not a real user research system, not
 analytics, not registry readiness, not publish readiness, and not production
 readiness.
 
@@ -42,6 +43,10 @@ authorization is not the active next phase.
   operator area with Route A/B/C/D/E, pass/warning/blocked states, evidence,
   blockers, validation status, final founder decision, and Phase 14B
   recommendation.
+- Render a Phase 14B Internal Trial Prep panel in Template Studio operator area
+  with role-only participant profiles, internal trial routes, safe feedback
+  prompts, privacy/data boundary checklist, readiness validation, decision, and
+  Phase 14C recommendation.
 - Render a clearer ordinary-user first-run path with local makeup guidance MVP
   copy, how-to-start steps, template practice wording, larger mobile CTAs, and
   trust copy that does not imply user photo recognition.

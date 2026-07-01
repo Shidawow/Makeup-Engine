@@ -940,3 +940,36 @@ registry state, publish, create a production writer, replace the current User
 App Shell package, add backend/database/login/payment/camera/AR/OpenAI or
 external API scope, upload real photos, store real user data, collect analytics,
 or train models.
+
+## Phase 14B Internal Trial Prep
+
+Phase 14B is internal trial preparation, not public beta, not a real user
+research system, not analytics, not production readiness, not registry
+readiness, not publish readiness, and not trial execution.
+
+Phase 14B must keep the internal trial prep panel in Template Studio operator
+area. It must not appear in Vision Analysis and must not appear in the ordinary
+User App path.
+
+Phase 14B must block ordinary user exposure of Internal Trial Prep,
+trial_prep_ready, trial_prep_blocked, participant role profiles, safe feedback
+prompts, trial prep decision language, Template Studio,
+registry/write/publish/simulator/production writer, Pipeline Trace, debug JSON,
+or automatic extraction operator terminology by default.
+
+Phase 14B must block real names, contact information, email, phone, social
+accounts, precise address, photos, base64 images, object URLs, local photo
+paths, health information, sensitive identity information, biometric ids, face
+embeddings, analytics ids, backend records, database records, and training
+data.
+
+Phase 14B must block fully automatic high-quality extraction claims,
+AI-confirmed final recognition claims, registry write claims, publish claims,
+production writer claims, User App Shell replacement claims, analytics
+collection, backend/database scope, and real user data collection.
+
+Phase 14B must not resume Phase 10V, execute real registry writes, mutate
+registry state, publish, create a production writer, replace the current User
+App Shell package, add backend/database/login/payment/camera/AR/OpenAI or
+external API scope, upload real photos, store real user data, collect analytics,
+or train models.
